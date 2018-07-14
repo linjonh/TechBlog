@@ -24,7 +24,7 @@ github_username:  linjonh
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-leap-day
+theme: minima
 plugins:
   - jekyll-feed
 
