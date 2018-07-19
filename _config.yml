@@ -18,13 +18,62 @@ email: jaysen.lin@forxmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     Android 开发博客，各种实用知识
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://linjonh.github.io" # the base hostname & protocol for your site
 twitter_username: linjonh
 github_username:  linjonh
+user_name: Jaysen
+brief-intro: Front-end Dev Engineer & Android Developer
+permalink: /:year/:month/:day/:title/
+
+# other links
+twitter_username: linjonh
+facebook_username: jaysen
+github_username:  linjonh
+email: jaysen.lin@foxmail.com.com
+weibo_username: Mr_jaysen
+zhihu_username: jaysen
+linkedIn_username: linjonh
+dribbble_username: linjonh
+
+description_footer: 本站记录我前端开发成长之路！热衷于Android开发，追求极客精神！
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: #hygblog
+disqus_shortname: Mr_jaysen #gaohaoyang
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id:
+google_analytics_id:  # google 分析追踪id
+
 
 # Build settings
 markdown: kramdown
-theme: minima
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 6
+
+
+# theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
