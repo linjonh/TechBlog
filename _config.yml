@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Android 博客
+title: Developer技术博客
 email: jaysen.lin@forxmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-    Android 开发博客，各种实用知识
+    Developer技术博客，各种实用知识
 baseurl: "/TechBlog" # the subpath of your site, e.g. /blog
 url: "https://linjonh.github.io" # the base hostname & protocol for your site
 twitter_username: linjonh
@@ -66,10 +66,10 @@ category_dir: category/
 tag_dir: tag/
 
 # excerpt
-excerpt_separator: "\n\n\n\n"
+excerpt_separator: <!-- more -->
 
 # paginate
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate: 6
 
 
