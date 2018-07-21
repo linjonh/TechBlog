@@ -80,6 +80,7 @@
     .right {
         .wrap {
             .side {
+                border-radius: 3px;
                 margin-bottom: 20px;
                 padding-bottom: 0;
                 i {
@@ -96,7 +97,7 @@
                             display: block;
                             width: 100%;
                             padding: 2px 0;
-                            border-bottom: 1px solid #eee;
+                            //border-bottom: 1px solid #eee;
                             &:hover {
                                 background-color: #dbdfee;
                                 .badge {
