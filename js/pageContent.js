@@ -105,8 +105,8 @@ function ancherPostion(anchorBtn, rightDiv) {
             // console.log(top);
         var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
         if (scrollTop > 50) {
-            anchorBtn.style.top = '20px'
-            rightDiv.style.top = '20px'
+            anchorBtn.style.top = '60px'
+            rightDiv.style.top = '60px'
         } else {
             anchorBtn.style.top = '76px'
             rightDiv.style.top = '76px'
