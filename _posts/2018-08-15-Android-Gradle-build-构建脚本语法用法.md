@@ -6,7 +6,8 @@ categories: Android Gradle
 tags: Android Gradle groovy
 ---
 
-
+* content
+{:toc}
 
 ## Android 构建脚本简介
 
