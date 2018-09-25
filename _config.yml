@@ -49,7 +49,7 @@ disqus_shortname:  https-linjonh-github-io-techblog #gaohaoyang
 # xxxxx字符串
 baidu_tongji_id: b4b97907d1054f3dd41e607361c91895
 google_analytics_id: UA-56775175-4 # google 分析追踪id
-
+google_adsense_id: ca-pub-5363852791482518 #googleAdSense
 
 # Build settings
 markdown: kramdown
