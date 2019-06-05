@@ -21,7 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jaylin.top" # the base hostname & protocol for your site
 twitter_username: linjonh
 github_username:  linjonh
-user_name: l林建有
+user_name: 林建有
 brief-intro: DevEngineer
 permalink: /:year/:month/:day/:title/
 
