@@ -232,7 +232,7 @@ GEM
     ruby-enum (0.7.2)
       i18n
     ruby_dep (1.5.0)
-    rubyzip (1.2.1)
+    rubyzip (2.3.0)
     safe_yaml (1.0.4)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
@@ -253,7 +253,6 @@ GEM
     tzinfo-data (1.2018.5)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.4.0)
-    wdm (0.1.1)
 
 PLATFORMS
   java
@@ -266,7 +265,6 @@ DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.6)
   tzinfo-data
-  wdm (~> 0.1.0)
 
 BUNDLED WITH
    1.16.3
