@@ -115,7 +115,7 @@ public class MoveGestureDetector {
         return false;
     }
 ```
-
+<!-- more -->
 ## 控件位置计算
 
 ```java
@@ -536,7 +536,7 @@ protected FloatBuffer getPositionBuffer(BaseWatermarkItemEntity itemEntity) {
 
 # Open GL Android 知识
 
-### [OpenGL ES](https://developer.android.google.cn/guide/topics/graphics/opengl?hl=en)  
+### [OpenGL ES](https://developer.android.google.cn/guide/topics/graphics/opengl?hl=en)
 
 此链接的文档详细介绍了Android 如何使用OpenGL版本和如何转换坐标映射到屏幕，还有投影和相机视图矩阵变换来使得在手机屏幕上不会失真变形。
 

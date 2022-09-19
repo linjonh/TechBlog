@@ -4,7 +4,7 @@ title:  "Firebase 云消息传递"
 date:  2020-08-06 16:48:00 +0800
 categories: Firebase massage 云消息传递
 tags:  Firebase massage 云消息传递
-author：林建有
+author: 林建有
 ---
 * content
 {:toc}
@@ -40,7 +40,7 @@ allprojects {
   }
 }
 ```
-
+<!-- more -->
 > 在app module的grdle下添加
 
 ```java
