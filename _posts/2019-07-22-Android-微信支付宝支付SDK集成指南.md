@@ -67,7 +67,7 @@ VRecorder
 >微信SDK发起授权获取code--->通过请求微信官网的[链接接口](https://api.weixin.qq.com/sns/oauth2/access_token?appid=&secret=&code=&grant_type=authorization_code)进行验证授权返回openID--->请求服务接口获取所有订单购买情况
 
 
-
+<!-- more -->
 # 注意事项
 
 ### 微信支付注意事项

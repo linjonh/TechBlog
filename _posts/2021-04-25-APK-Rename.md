@@ -2,9 +2,9 @@
 layout:  post
 title:  "build.gradle里APK重命名方法"
 date:  2021-04-25 15:18:00 +0800
-categories:APK rename
+categories: APK rename
 tags:  APK rename
-author：林建有
+author: 林建有
 ---
 * content
 {:toc}
