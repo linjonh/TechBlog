@@ -1,0 +1,212 @@
+---
+layout:  post
+title:  "Android-微信支付-支付宝SDK集成指南"
+date:  2019-07-22 10:25:00 +0800
+categories:  Android Pay WeiXinPay AliPay 微信支付 支付宝
+tags:  Android  Pay WeiXinPay AliPay
+
+---
+* content
+{:toc}
+# 项目文件结构
+
+```java
+VRecorder
+		|--cnpay //支付模块
+		|	|--src
+		|	|--libs
+		|
+		|--staticanalysislib//数据打点探针模块
+        |	|--src
+        |	|--libs
+        |
+        |---themelibrary//主题配色、字符串资源模块
+        |	|-src
+        |	|-libs
+        |
+        |--App//主项目模块
+        	|-src
+        	|-libs
+```
+
+
+
+# 微信
+
+### 支付流程
+
+> 请求服务器接口下订单--->调用本地SDK支付--->SDK返回支付结果--->服务器验证查询订单支付结果
+
+### 微信支付服务器接口文档
+[文档]: 微信支付网络协议.md
+
+
+
+# 支付宝
+
+### 支付流程
+
+> 请求服务器接口下订单--->调用本地SDK支付--->SDK返回支付结果--->服务器验证查询订单支付结果
+
+### 支付宝服务器接口文档
+
+[文档]: 支付宝支付接口.md
+
+
+
+# 恢复购买
+
+- 支付宝恢复购买流程:
+
+> 请求服务器接口获得授权信息--->调用支付宝SDK对授权信息进行授权--->获得openID再请求服务器接口获取所有订单购买情况
+
+
+
+- 微信恢复购买流程：
+
+>微信SDK发起授权获取code--->通过请求微信官网的[链接接口](https://api.weixin.qq.com/sns/oauth2/access_token?appid=&secret=&code=&grant_type=authorization_code)进行验证授权返回openID--->请求服务接口获取所有订单购买情况
+
+
+
+# 注意事项
+
+### 微信支付注意事项
+
+对SDK回调响应的类名和包名是有要求的，必须是注册的`{包名.wxapi}.WXEntryActivity.java`
+
+对于支付回调的类名和包名是`{包名.wxapi}.WXPayEntryActivity.java`
+
+在类里面实现`IWXAPIEventHandler`接口，SDK会调用`onReq(BaseReq baseReq)`和`onResp(BaseResp baseResp)`方法
+
+如果类名和包名不一致会导致无法回调SDK接口。
+
+### 恢复购买注意事项
+
+每次APP启动都会访问网络查询VIP信息接口，获取当前APP是否已购买状态，同恢复购买接口一样只查询最后购买的支付方式的openID去查询VIP信息接口。两种支付方式的购买单项特权不叠加，即支付宝购买的特权在微信支付方式下未购买的情况下，用微信支付方式恢复购买则不会恢复支付宝已购买的特权。
+
+
+
+# 接入指南
+
+### 支付模块引用接入
+
+现已经将支付功能模块化成类库了，模块名称为`cnpay`。在需要用到支付功能的工程项目里在`setting.gradle`引用模块：
+
+```groovy
+include ':cnpay'
+```
+
+在`build.gradle`里添加依赖支付类库：
+
+```groovy
+dependencies {
+    ...
+    implementation project(':cnpay')
+}
+```
+
+### 主要入口
+
+#### 跳转到VIP界面
+
+VIP购买页：`VipPayActivity.java`
+
+VIP购买结果页：`BuyVipResultActivity.java`
+
+VIP状态页：`VipStatusActivity.java`
+
+```java
+/**
+ * 跳转到vip订阅界面
+ */
+public class LaunchVipBuyActivity {
+
+    public static void toVipBuyActivity(Context context, String type) {
+        toVipBuyActivity(context, type, false);
+    }
+ 	/**
+     * @param context context
+     * @param type            see {@link VipConstant}购买的项目
+     * @param isRestoreAction 是否为恢复购买操作
+     */
+    public static void toVipBuyActivity(Context context, String type, boolean isRestoreAction) {
+        if (!VipConstant.HOME.equals(type) && VipSharePreference.isVip(context)) {
+            return;
+        }
+    
+        Intent intent = new Intent(context, VipPayActivity.class);
+        intent.putExtra(VipConstant.TYPE_KEY, type);
+        intent.putExtra(VipConstant.KEY_IS_RESTORE_ACTION, isRestoreAction);
+        intent.putExtra(VipConstant.KEY_UUID, Installation.getUUID(context));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+        }
+    }
+```
+
+#### VIP 购买状态
+
+购买情况本地存储的类`VipSharePreference.java`
+
+#### VIP入口类型:
+
+购买项目跳转VIP入口类型常量`VipConstant.java`
+
+#### 订单ID
+
+订单ID常量`ProductIdConstant.java`
+
+#### 更新UI状态方式
+
+当购买成功够更新VIP UI状态的接收方法是通过`EventBus`收发的：
+
+```java
+@Subscribe(threadMode = ThreadMode.MAIN)
+public void onEvent(UpdateVipBuyEvent event) {
+    // update UI 
+}
+```
+
+### 代码混淆
+
+对gson的entity类做keep
+
+```text
+#gson-keep proguard-rules.pro
+-keep class com.enjoyglobal.cnpay.network.entity.**{*;}
+```
+
+# 支付模块框架介绍
+
+- 网络架构：`OKHttp3+Retrofit2+RxJava2`
+
+  ```groovy
+  dependencies {
+      implementation 'com.squareup.okhttp3:okhttp:4.0.0'
+      implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+      implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+      //主项目有用到该依赖，所有是api传递依赖
+      api 'com.squareup.retrofit2:converter-gson:2.6.0'
+  }
+  ```
+
+- 设计模式：`MVP模式`
+
+  ```groovy
+  dependencies {
+  	api 'com.github.linjonh:mvp-arch-android:1.0.2'
+  }
+  ```
+
+- 引用模块：
+
+  ```groovy
+  dependencies {
+      implementation project(':themelibrary')//主题模块
+      implementation project(':statisticanalysislib')//数据打点探针上报模块
+  }
+  ```
+
+  
+
+- CN VRecorder代码地址：http://192.168.0.233/svn/EnergyAVEditor/Branch/VRecorder/CN_VRecorder/CN_VRecorder_v3.2.1_re(100)
