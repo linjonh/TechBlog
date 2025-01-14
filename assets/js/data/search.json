@@ -4,8 +4,7 @@ swcache: true
 ---
 
 [
-  {% for post in site.posts %
-  }
+  {% for post in site.posts %}
   {
     "title": {
       { post.title | jsonify
@@ -24,10 +23,8 @@ swcache: true
       }
     },
     "date": "{{ post.date }}",
-    {% include no-linenos.html content=post.content %
-    }
-    {% assign _content = content | strip_html | strip_newlines %
-    }
+    {% include no-linenos.html content=post.content %}
+    {% assign _content = content | strip_html | strip_newlines %}
     "snippet": {
       { _content | truncate: 200 | jsonify
       }
@@ -36,10 +33,7 @@ swcache: true
       { _content | jsonify
       }
     }
-  }{% unless forloop.last %
-  },
-  {% endunless %
-  }
-  {% endfor %
-  }
+  }{% unless forloop.last %},
+  {% endunless %}
+  {% endfor %}
 ]
