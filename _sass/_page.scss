@@ -58,30 +58,32 @@
                 .categories {
                     padding: 0 15px;
                     i {
-                        color: #9e9d9d;
+                        color: #212020;
                     }
                     a {
-                        padding: 0 5px;
-                        background-color: #9e9d9d;
-                        color: #fff;
+                        padding: 3px 10px;
+                        background-color: #c6cbe9;
+                        border-radius: 20px;
+
+                        color: #212020;
                         font-size: 90%;
                         transition: 0.3s ease;
                         &:hover {
-                            background-color: #b6b6b9;
+                            background-color: #c0ddc7;
                         }
                     }
                 }
                 .pageTag {
                     i {
-                        color: #c6cbe9;
+                        color: #212020;
                     }
                     a {
 
                         // border: 1px solid #aaa;
-                        padding: 0 5px;
+                        padding: 3px 10px;
                         background-color: #c6cbe9;
-                        border-radius: 4px;
-                        color: #fff;
+                        border-radius: 20px;
+                        color: #212020;
                         font-size: 90%;
                         transition: 0.3s ease;
                         &:hover {
