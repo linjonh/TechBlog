@@ -69,13 +69,12 @@ tag_dir: tag/
 excerpt_separator: <!-- more -->
 
 # paginate
-plugins: [jekyll-paginate]
-paginate: 6
-
-
-# theme: jekyll-theme-leap-day
-plugins:
+plugins: 
+  - jekyll-paginate
+  # theme: jekyll-theme-leap-day
   - jekyll-feed
+paginate: 6
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
