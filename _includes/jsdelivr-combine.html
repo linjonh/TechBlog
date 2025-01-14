@@ -17,7 +17,7 @@
   {% elsif url contains '//' %}
     <script defer src="{{ url }}"></script>
   {% else %}
-    <script defer src="{{ url | relative_url }}"></script>
+    <script defer src="{{ url | pepend: site.base_url | relative_url }}"></script>
   {% endif %}
 {% endfor %}
 

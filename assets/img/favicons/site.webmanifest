@@ -2,7 +2,8 @@
 layout: compress
 ---
 
-{% assign favicon_path = "/assets/img/favicons" | relative_url %}
+{% assign favicon_path = "/assets/img/favicons" | pepend: site.base_url | relative_url %
+}
 
 {
   "name": "{{ site.title }}",
@@ -18,8 +19,9 @@ layout: compress
       "src": "{{ favicon_path }}/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }],
-  "start_url": "{{ '/index.html' | relative_url }}",
+    }
+  ],
+  "start_url": "{{ '/index.html' | pepend: site.base_url | relative_url }}",
   "theme_color": "#2a1e6b",
   "background_color": "#ffffff",
   "display": "fullscreen"

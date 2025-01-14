@@ -10,15 +10,15 @@ const swconf = {
 
     {%- comment -%} Resources added to the cache during PWA installation. {%- endcomment -%}
     resources: [
-      '{{ "/assets/css/:THEME.css" | replace: ':THEME', site.theme | relative_url }}',
-      '{{ "/" | relative_url }}',
+      '{{ "/assets/css/:THEME.css" | replace: ':THEME', site.theme | pepend: site.base_url | relative_url }}',
+      '{{ "/" | pepend: site.base_url | relative_url }}',
       {% for tab in site.tabs %}
-        '{{- tab.url | relative_url -}}',
+        '{{- tab.url | pepend: site.base_url | relative_url -}}',
       {% endfor %}
 
       {% assign cache_list = site.static_files | where: 'swcache', true %}
       {% for file in cache_list %}
-        '{{ file.path | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
+        '{{ file.path | pepend: site.base_url | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
       {% endfor %}
     ],
 
@@ -27,7 +27,7 @@ const swconf = {
       paths: [
         {% for path in site.pwa.cache.deny_paths %}
           {% unless path == empty %}
-            '{{ path | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
+            '{{ path | pepend: site.base_url | relative_url }}'{%- unless forloop.last -%},{%- endunless -%}
           {% endunless  %}
         {% endfor %}
       ],

@@ -15,7 +15,7 @@ layout: page
   <ul class="content ps-0">
     {% for post in page.posts %}
       <li class="d-flex justify-content-between px-md-3">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <a href="{{ post.url | pepend: site.base_url | relative_url }}">{{ post.title }}</a>
         <span class="dash flex-grow-1"></span>
         {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
       </li>
