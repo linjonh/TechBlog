@@ -77,7 +77,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       {% for post in relate_posts %}
         <article class="col">
-          <a href="{{ post.url | pepend: site.base_url | relative_url }}" class="post-preview card h-100">
+          <a href="{{ post.url | prepend: site.base_url | relative_url }}" class="post-preview card h-100">
             <div class="card-body">
               {% include datetime.html date=post.date lang=include.lang %}
               <h4 class="pt-0 my-2">{{ post.title }}</h4>

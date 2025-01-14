@@ -2,7 +2,7 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="{{ '/' | pepend: site.base_url | relative_url }}" id="avatar" class="rounded-circle">
+    <a href="{{ '/' | prepend: site.base_url | relative_url }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
         {%- capture avatar_url -%}
           {% include media-url.html src=site.avatar %}
@@ -11,7 +11,7 @@
       {%- endif -%}
     </a>
 
-    <a class="site-title d-block" href="{{ '/' | pepend: site.base_url | relative_url }}">{{ site.title }}</a>
+    <a class="site-title d-block" href="{{ '/' | prepend: site.base_url | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
   </header>
   <!-- .profile-wrapper -->
@@ -20,7 +20,7 @@
     <ul class="nav">
       <!-- home -->
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/' | pepend: site.base_url | relative_url }}" class="nav-link">
+        <a href="{{ '/' | prepend: site.base_url | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
           <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
         </a>
@@ -28,7 +28,7 @@
       <!-- the real tabs -->
       {% for tab in site.tabs %}
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | pepend: site.base_url | relative_url }}" class="nav-link">
+          <a href="{{ tab.url | prepend: site.base_url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
             {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
 
@@ -63,7 +63,7 @@
             javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
           {%- endcapture -%}
         {% when 'rss' %}
-          {% assign url = '/feed.xml' | pepend: site.base_url | relative_url %}
+          {% assign url = '/feed.xml' | prepend: site.base_url | relative_url %}
         {% else %}
           {% assign url = entry.url %}
       {% endcase %}

@@ -4,7 +4,7 @@
   <ul class="pagination align-items-center mt-4 mb-0">
     <!-- left arrow -->
     {% if paginator.previous_page %}
-      {% assign prev_url = paginator.previous_page_path | pepend: site.base_url | relative_url %}
+      {% assign prev_url = paginator.previous_page_path | prepend: site.base_url | relative_url %}
     {% else %}
       {% assign prev_url = '#' %}
     {% endif %}
@@ -47,7 +47,7 @@
         <li class="page-item {% if i == paginator.page %} active{% endif %}">
           <a
             class="page-link"
-            href="{% if i > 1 %}{{ site.paginate_path | replace: ':num', i | pepend: site.base_url | relative_url }}{% else %}{{ '/' | pepend: site.base_url | relative_url }}{% endif %}"
+            href="{% if i > 1 %}{{ site.paginate_path | replace: ':num', i | prepend: site.base_url | relative_url }}{% else %}{{ '/' | prepend: site.base_url | relative_url }}{% endif %}"
           >
             {{- i -}}
           </a>
@@ -76,7 +76,7 @@
 
     <!-- right arrow -->
     {% if paginator.next_page_path %}
-      {% assign next_url = paginator.next_page_path | pepend: site.base_url | relative_url %}
+      {% assign next_url = paginator.next_page_path | prepend: site.base_url | relative_url %}
     {% else %}
       {% assign next_url = '#' %}
     {% endif %}

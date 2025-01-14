@@ -62,13 +62,13 @@
 
 {% capture script %}/assets/js/dist/{{ js }}.min.js{% endcapture %}
 
-<script defer src="{{ script | pepend: site.base_url | relative_url }}"></script>
+<script defer src="{{ script | prepend: site.base_url | relative_url }}"></script>
 
 {% if page.math %}
   <!-- MathJax -->
-  <script async src="{{ '/assets/js/data/mathjax.js' | pepend: site.base_url | relative_url }}"></script>
+  <script async src="{{ '/assets/js/data/mathjax.js' | prepend: site.base_url | relative_url }}"></script>
   <script async src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="{{ site.data.origin[type].mathjax.js | pepend: site.base_url | relative_url }}"></script>
+  <script id="MathJax-script" async src="{{ site.data.origin[type].mathjax.js | prepend: site.base_url | relative_url }}"></script>
 {% endif %}
 
 <!-- Pageviews -->

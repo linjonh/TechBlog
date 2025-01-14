@@ -11,7 +11,7 @@ swcache: true
       }
     },
     "url": {
-      { post.url | pepend: site.base_url | relative_url | jsonify
+      { post.url | prepend: site.base_url | relative_url | jsonify
       }
     },
     "categories": {

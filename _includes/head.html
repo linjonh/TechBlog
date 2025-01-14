@@ -74,32 +74,32 @@
   {% endunless %}
 
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | pepend: site.base_url | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | prepend: site.base_url | relative_url }}">
 
   <!-- Web Font -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | pepend: site.base_url | relative_url }}">
+  <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | prepend: site.base_url | relative_url }}">
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | pepend: site.base_url | relative_url }}">
+  <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | prepend: site.base_url | relative_url }}">
 
   <!-- 3rd-party Dependencies -->
 
   {% if site.toc and page.toc %}
-    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | pepend: site.base_url | relative_url }}">
+    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | prepend: site.base_url | relative_url }}">
   {% endif %}
 
   {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' %}
-    <link rel="stylesheet" href="{{ site.data.origin[type]['lazy-polyfill'].css | pepend: site.base_url | relative_url }}">
+    <link rel="stylesheet" href="{{ site.data.origin[type]['lazy-polyfill'].css | prepend: site.base_url | relative_url }}">
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
     <!-- Image Popup -->
-    <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | pepend: site.base_url | relative_url }}">
+    <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | prepend: site.base_url | relative_url }}">
   {% endif %}
 
   <!-- Scripts -->
 
-  <script src="{{ '/assets/js/dist/theme.min.js' | pepend: site.base_url | relative_url }}"></script>
+  <script src="{{ '/assets/js/dist/theme.min.js' | prepend: site.base_url | relative_url }}"></script>
 
   {% include js-selector.html lang=lang %}
 
@@ -108,7 +108,7 @@
     {% if site.pwa.enabled %}
       <script
         defer
-        src="{{ '/app.min.js' | pepend: site.base_url | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
+        src="{{ '/app.min.js' | prepend: site.base_url | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
       ></script>
     {% endif %}
 
