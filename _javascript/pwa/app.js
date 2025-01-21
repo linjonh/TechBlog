@@ -6,7 +6,7 @@ if ('serviceWorker' in navigator) {
   const register = src.searchParams.get('register');
   const baseUrl = src.searchParams.get('baseurl');
   if (register) {
-    const swUrl = `/sw.min.js`;
+    const swUrl = `${baseUrl}/sw.min.js`;
     console.log(`swUrl=${swUrl}`)
     const notification = document.getElementById('notification');
     const btnRefresh = notification.querySelector('.toast-body>button');
