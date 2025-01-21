@@ -21,7 +21,7 @@ tagline: A text-focused Jekyll theme # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
-base_url: "/TechBlog/" # the subpath of your site, e.g. /blog
+base_url: "." # the subpath of your site, e.g. /blog
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://linjonh.github.io"
@@ -182,7 +182,7 @@ defaults:
       toc: true # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      permalink: /TechBlog/posts/:title/
+      permalink: ./posts/:title/
   - scope:
       path: _drafts
     values:
@@ -192,7 +192,7 @@ defaults:
       type: tabs # see `site.collections`
     values:
       layout: page
-      permalink: /TechBlog/:title/
+      permalink: ./:title/
 
 sass:
   style: compressed
@@ -223,5 +223,5 @@ jekyll-archives:
     category: category
     tag: tag
   permalinks:
-    tag: /TechBlog/tags/:name/
-    category: /TechBlog/categories/:name/
+    tag: ./tags/:name/
+    category: ./categories/:name/
