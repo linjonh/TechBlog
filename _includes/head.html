@@ -85,7 +85,7 @@
   <!-- 3rd-party Dependencies -->
 
   {% if site.toc and page.toc %}
-    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | prepend: site.base_url | relative_url }}">
+    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
   {% endif %}
 
   {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' %}
