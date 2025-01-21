@@ -20,8 +20,9 @@
 
 <script>
   {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
-  try {
+  
     document.addEventListener('DOMContentLoaded', () => {
+    try {
       SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('search-results'),
@@ -46,9 +47,10 @@
           }
         }
       });
+    } catch (error) {
+      console.log("获取搜索数据失败：");
+      console.log(error);
+    }
     });
-  } catch (error) {
-    console.log("获取搜索数据失败：");
-    console.log(error);
-  }
+ 
 </script>

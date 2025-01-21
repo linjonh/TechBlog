@@ -4,5 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+- 安卓开发工程师。上海。 I'm a android developer. Focus on media technology now.
+- 如果有任何问题，[可致邮电](mailto:jaysen.lin@foxmail.com)
+
 {: .prompt-tip }
