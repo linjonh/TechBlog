@@ -7,7 +7,9 @@
         {%- capture avatar_url -%}
           {% include media-url.html src=site.avatar %}
         {%- endcapture -%}
-        <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        <div style="background-image: url({{ '/assets/img/favicons/android-chrome-512x512.png' | prepend: site.base_url | relative_url }}); background-size: cover;"  width="112" height="112">
+          <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        </div>
       {%- endif -%}
     </a>
 
