@@ -62,7 +62,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-75ZRFNZ5Y8 # fill in your Google Analytics ID
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -105,7 +105,7 @@ avatar: https://api.vvhan.com/api/avatar/boy
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: ./commons/devices-mockup.png # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
