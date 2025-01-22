@@ -108,7 +108,7 @@
     {% if site.pwa.enabled %}
       <script
         defer
-        src="{{ '/app.min.js' | prepend: site.base_url | relative_url }}?baseurl={{ site.base_url | default: '' }}&register={{ site.pwa.cache.enabled }}"
+        src="{{ '/app.min.js' | prepend: site.base_url | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
       ></script>
     {% endif %}
 
