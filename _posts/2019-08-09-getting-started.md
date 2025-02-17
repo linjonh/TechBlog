@@ -7,8 +7,8 @@ author: cotes
 date: 2019-08-09 20:55:00 +0800
 categories: [Blogging, Tutorial]
 tags: [getting started]
-pin: true
-media_subpath: '/posts/20180809'
+
+media_subpath: "/posts/20180809"
 ---
 
 ## Creating a Site Repository
@@ -72,7 +72,7 @@ $ bundle exec jekyll s
 ```
 
 > If you are using Dev Containers, you must run that command in the **VS Code** Terminal.
-{: .prompt-info }
+> {: .prompt-info }
 
 After a few seconds, the local server will be available at <http://127.0.0.1:4000>.
 

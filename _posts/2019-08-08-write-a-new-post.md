@@ -22,12 +22,12 @@ Basically, you need to fill the [Front Matter](https://jekyllrb.com/docs/front-m
 title: TITLE
 date: YYYY-MM-DD HH:MM:SS +/-TTTT
 categories: [TOP_CATEGORIE, SUB_CATEGORIE]
-tags: [TAG]     # TAG names should always be lowercase
+tags: [TAG] # TAG names should always be lowercase
 ---
 ```
 
 > The posts' _layout_ has been set to `post` by default, so there is no need to add the variable _layout_ in the Front Matter block.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ### Timezone of Date
 
@@ -56,22 +56,23 @@ Adding author information in `_data/authors.yml` (If your website doesn't have t
   twitter: <twitter_of_author>
   url: <homepage_of_author>
 ```
-{: file="_data/authors.yml" }
+
+{: file="\_data/authors.yml" }
 
 And then use `author` to specify a single entry or `authors` to specify multiple entries:
 
 ```yaml
 ---
-author: <author_id>                     # for single entry
+author: <author_id> # for single entry
 # or
-authors: [<author1_id>, <author2_id>]   # for multiple entries
+authors: [<author1_id>, <author2_id>] # for multiple entries
 ---
 ```
 
 Having said that, the key `author` can also identify multiple entries.
 
 > The benefit of reading the author information from the file `_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
-{: .prompt-info }
+> {: .prompt-info }
 
 ### Post Description
 
@@ -120,7 +121,8 @@ From time to time we have to define duplicate URL prefixes for multiple resource
   ```yaml
   cdn: https://cdn.com
   ```
-  {: file='_config.yml' .nolineno }
+
+  {: file='\_config.yml' .nolineno }
 
 - To specify the resource path prefix for the current post/page range, set `media_subpath` in the _front matter_ of the post:
 
@@ -129,6 +131,7 @@ From time to time we have to define duplicate URL prefixes for multiple resource
   media_subpath: /path/to/media/
   ---
   ```
+
   {: .nolineno }
 
 The option `site.cdn` and `page.media_subpath` can be used individually or in combination to flexibly compose the final resource URL: `[site.cdn/][page.media_subpath/]file.ext`
@@ -143,6 +146,7 @@ Add italics to the next line of an image, then it will become the caption and ap
 ![img-description](/path/to/image)
 _Image Caption_
 ```
+
 {: .nolineno}
 
 #### Size
@@ -152,16 +156,18 @@ To prevent the page content layout from shifting when the image is loaded, we sh
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: width="700" height="400" }
 ```
+
 {: .nolineno}
 
 > For an SVG, you have to at least specify its _width_, otherwise it won't be rendered.
-{: .prompt-info }
+> {: .prompt-info }
 
 Starting from _Chirpy v5.0.0_, `height` and `width` support abbreviations (`height` → `h`, `width` → `w`). The following example has the same effect as the above:
 
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: w="700" h="400" }
 ```
+
 {: .nolineno}
 
 #### Position
@@ -169,7 +175,7 @@ Starting from _Chirpy v5.0.0_, `height` and `width` support abbreviations (`heig
 By default, the image is centered, but you can specify the position by using one of the classes `normal`, `left`, and `right`.
 
 > Once the position is specified, the image caption should not be added.
-{: .prompt-warning }
+> {: .prompt-warning }
 
 - **Normal position**
 
@@ -178,6 +184,7 @@ By default, the image is centered, but you can specify the position by using one
   ```markdown
   ![Desktop View](/assets/img/sample/mockup.png){: .normal }
   ```
+
   {: .nolineno}
 
 - **Float to the left**
@@ -185,6 +192,7 @@ By default, the image is centered, but you can specify the position by using one
   ```markdown
   ![Desktop View](/assets/img/sample/mockup.png){: .left }
   ```
+
   {: .nolineno}
 
 - **Float to the right**
@@ -192,6 +200,7 @@ By default, the image is centered, but you can specify the position by using one
   ```markdown
   ![Desktop View](/assets/img/sample/mockup.png){: .right }
   ```
+
   {: .nolineno}
 
 #### Dark/Light mode
@@ -210,6 +219,7 @@ The screenshots of the program window can be considered to show the shadow effec
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: .shadow }
 ```
+
 {: .nolineno}
 
 #### Preview Image
@@ -254,6 +264,7 @@ For normal images:
 ```markdown
 ![Image description](/path/to/image){: lqip="/path/to/lqip-file" }
 ```
+
 {: .nolineno }
 
 ### Video
@@ -342,7 +353,6 @@ You can pin one or more posts to the top of the home page, and the fixed posts a
 
 ```yaml
 ---
-pin: true
 ---
 ```
 
@@ -352,8 +362,9 @@ There are several types of prompts: `tip`, `info`, `warning`, and `danger`. They
 
 ```md
 > Example line for prompt.
-{: .prompt-info }
+> {: .prompt-info }
 ```
+
 {: .nolineno }
 
 ## Syntax
@@ -363,6 +374,7 @@ There are several types of prompts: `tip`, `info`, `warning`, and `danger`. They
 ```md
 `inline code part`
 ```
+
 {: .nolineno }
 
 ### Filepath Highlight
@@ -370,11 +382,12 @@ There are several types of prompts: `tip`, `info`, `warning`, and `danger`. They
 ```md
 `/path/to/a/file.extend`{: .filepath}
 ```
+
 {: .nolineno }
 
 ### Code Block
 
-Markdown symbols ```` ``` ```` can easily create a code block as follows:
+Markdown symbols ` ``` ` can easily create a code block as follows:
 
 ````md
 ```
@@ -384,7 +397,7 @@ This is a plaintext code snippet.
 
 #### Specifying Language
 
-Using ```` ```{language} ```` you will get a code block with syntax highlight:
+Using ` ```{language} ` you will get a code block with syntax highlight:
 
 ````markdown
 ```yaml
@@ -393,7 +406,7 @@ key: value
 ````
 
 > The Jekyll tag `{% highlight %}` is not compatible with this theme.
-{: .prompt-danger }
+> {: .prompt-danger }
 
 #### Line Number
 
@@ -403,6 +416,7 @@ By default, all languages except `plaintext`, `console`, and `terminal` will dis
 ```shell
 echo 'No more line numbers!'
 ```
+
 {: .nolineno }
 ````
 
@@ -414,6 +428,7 @@ You may have noticed that the code language will be displayed at the top of the 
 ```shell
 # content
 ```
+
 {: file="path/to/file" }
 ````
 
@@ -423,11 +438,13 @@ If you want to display the **Liquid** snippet, surround the liquid code with `{%
 
 ````markdown
 {% raw %}
+
 ```liquid
 {% if product.title contains 'Pack' %}
   This product's title contains the word Pack.
 {% endif %}
 ```
+
 {% endraw %}
 ````
 
@@ -484,7 +501,7 @@ Can be referenced as \eqref{eq:label_name}.
 
 > Starting with `v7.0.0`, configuration options for **MathJax** have been moved to file `assets/js/data/mathjax.js`{: .filepath }, and you can change the options as needed, such as adding [extensions][mathjax-exts].  
 > If you are building the site via `chirpy-starter`, copy that file from the gem installation directory (check with command `bundle info --path jekyll-theme-chirpy`) to the same directory in your repository.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 [mathjax-exts]: https://docs.mathjax.org/en/latest/input/tex/extensions/index.html
 
@@ -498,7 +515,7 @@ mermaid: true
 ---
 ```
 
-Then you can use it like other markdown languages: surround the graph code with ```` ```mermaid ```` and ```` ``` ````.
+Then you can use it like other markdown languages: surround the graph code with ` ```mermaid ` and ` ``` `.
 
 ## Learn More
 
