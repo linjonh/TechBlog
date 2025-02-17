@@ -29,5 +29,8 @@
   },
   "[liquid]": {
     "editor.defaultFormatter": "sissel.shopify-liquid"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
