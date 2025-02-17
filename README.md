@@ -82,3 +82,7 @@ This project is published under [MIT License][license].
 [lib]: https://github.com/cotes2020/chirpy-static-assets
 [vscode]: https://code.visualstudio.com/
 [jetbrains]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Bin-Huang/chatbox,linjonh/TechBlog.git&type=Date)](https://star-history.com/#Bin-Huang/chatbox&linjonh/TechBlog.git&Date)
