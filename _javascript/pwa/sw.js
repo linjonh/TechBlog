@@ -65,6 +65,15 @@ self.addEventListener('fetch', (event) => {
   if (event.request.headers.has('range')) {
     return;
   }
+  if (event.request.url.includes('csdnimg.cn')) {
+    event.request.headers.set('Referer', 'null');
+    event.request.headers.set('Origin', 'null');
+    // 打印headers
+    console.log('Request Headers:', [...event.request.headers.entries()]);
+
+    //打印referer和origin
+    console.log('Referer and Origin headers have been set to null');
+  }
 
   event.respondWith(
     caches.match(event.request).then((response) => {
