@@ -60,7 +60,6 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
-
 self.addEventListener('fetch', (event) => {
   let origin_request = event.request;
 
@@ -86,15 +85,15 @@ self.addEventListener('fetch', (event) => {
       integrity: origin_request.integrity
     });
 
-    cacheOrFetch(event, modifiedRequest);
-    // 打印headers
+    cacheOrFetch(event, modifiedRequest, originalUrl);
+    // 打印 headers
     console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
   } else {
     cacheOrFetch(event, origin_request);
   }
 });
 
-function cacheOrFetch(event, request) {
+function cacheOrFetch(event, request, originalUrl = null) {
   event.respondWith(
     caches.match(request).then((response) => {
       if (response) {
@@ -114,6 +113,20 @@ function cacheOrFetch(event, request) {
         caches.open(swconf.cacheName).then((cache) => {
           cache.put(request, responseToCache);
         });
+
+        // 修改响应对象的 URL 为原始请求的 URL
+        if (originalUrl) {
+          const modifiedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          });
+          Object.defineProperty(modifiedResponse, 'url', {
+            value: originalUrl
+          });
+          return modifiedResponse;
+        }
+
         return response;
       });
     })
