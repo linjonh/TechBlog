@@ -4,7 +4,7 @@ date: 2024-11-27 09:20:59 +0800
 categories: []
 tags: [android]
 image:
-  path: ../../assets/images/21dfac3b42ddea345510d0c1d35bb54b.png
+  path: /assets/images/21dfac3b42ddea345510d0c1d35bb54b.png
   alt: Android构建-Android-Automotive-OS适合初学者的指南
 ---
 <div class="blog-content-box">
@@ -25,7 +25,7 @@ image:
     <p>
     </p>
     <div style="text-align:center;">
-     <img alt="dd3f5d43598c2a98a8352180c00a09de.png" src="../../assets/images/b492706e3636f524d0ddccb965c0ee07.png">
+     <img alt="dd3f5d43598c2a98a8352180c00a09de.png" src="/assets/images/b492706e3636f524d0ddccb965c0ee07.png">
       <p>
        <strong>
         人不走空
@@ -69,7 +69,7 @@ image:
     <p>
     </p>
     <p>
-     <img alt="da14e5cf865a427ea959fca470d8245a.gif" src="../../assets/images/7b4062f0513814f68ce5b7f811548715.gif"/>
+     <img alt="da14e5cf865a427ea959fca470d8245a.gif" src="/assets/images/7b4062f0513814f68ce5b7f811548715.gif"/>
     </p>
     <p>
      <strong>
@@ -183,7 +183,7 @@ image:
     </p>
     <hr/>
     <p style="text-align:center;">
-     <img alt="e6f1ddc7e1ef49bda413a56ccd405744.png" src="../../assets/images/21dfac3b42ddea345510d0c1d35bb54b.png">
+     <img alt="e6f1ddc7e1ef49bda413a56ccd405744.png" src="/assets/images/21dfac3b42ddea345510d0c1d35bb54b.png">
      </img>
     </p>
     <h3>
