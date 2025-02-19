@@ -62,27 +62,35 @@ self.addEventListener('message', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.headers.has('range')) {
+  let origin_request = event.request;
+
+  if (origin_request.headers.has('range')) {
     return;
   }
-  if (event.request.url.includes('csdnimg.cn')) {
-    const newHeaders = new Headers(event.request.headers);
-    newHeaders.set('Referer', 'null');
-    newHeaders.set('Origin', 'null');
+  if (origin_request.url.includes('csdnimg.cn')) {
+    // 设置代理 URL
+    const proxyUrl = 'https://api.allorigins.win/raw?url=';
+    const originalUrl = origin_request.url;
+    const modifiedUrl = proxyUrl + encodeURIComponent(originalUrl);
 
-    const modifiedRequest = new Request(event.request, {
-      headers: newHeaders
+    // 创建新的请求对象，使用修改后的 URL
+    const modifiedRequest = new Request(modifiedUrl, {
+      method: origin_request.method,
+      headers: origin_request.headers,
+      body: origin_request.body,
+      mode: origin_request.mode,
+      credentials: origin_request.credentials,
+      cache: origin_request.cache,
+      redirect: origin_request.redirect,
+      referrer: origin_request.referrer,
+      integrity: origin_request.integrity
     });
 
     cacheOrFetch(event, modifiedRequest);
     // 打印headers
-    console.log('Request Headers:', [...event.request.headers.entries()]);
-
-    //打印referer和origin
-    console.log('Referer and Origin headers have been set to null');
+    console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
   } else {
-    let request = event.request.clone();
-    cacheOrFetch(event, request);
+    cacheOrFetch(event, origin_request);
   }
 });
 
