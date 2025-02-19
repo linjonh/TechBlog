@@ -60,15 +60,16 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
 self.addEventListener('fetch', (event) => {
   let origin_request = event.request;
 
   if (origin_request.headers.has('range')) {
     return;
   }
+  const proxyUrl = 'https://api.allorigins.win/raw?url=';
   if (origin_request.url.includes('csdnimg.cn')) {
     // 设置代理 URL
-    const proxyUrl = 'https://api.allorigins.win/raw?url=';
     const originalUrl = origin_request.url;
     const modifiedUrl = proxyUrl + encodeURIComponent(originalUrl);
 
@@ -85,15 +86,54 @@ self.addEventListener('fetch', (event) => {
       integrity: origin_request.integrity
     });
 
-    cacheOrFetch(event, modifiedRequest, originalUrl);
-    // 打印 headers
+    cacheOrFetch(event, modifiedRequest);
+    // 打印headers
     console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
+  } else if (
+    origin_request.url.includes(proxyUrl) &&
+    origin_request.url.endsWith('.ts')
+  ) {
+    let ts_file_name = origin_request.url.replace(proxyUrl, '');
+
+    // 处理 ts 的代理
+    caches.matchAll().then((cacheEntries) => {
+      cacheEntries.forEach((cacheEntry) => {
+        if (cacheEntry.url.endsWith('.m3u8')) {
+          cacheEntry.text().then((m3u8Content) => {
+            if (m3u8Content.includes(ts_file_name)) {
+              const m3u8Url = new URL(cacheEntry.url);
+              const tsUrl = new URL(
+                ts_file_name,
+                m3u8Url.origin +
+                  m3u8Url.pathname.substring(
+                    0,
+                    m3u8Url.pathname.lastIndexOf('/') + 1
+                  )
+              );
+              const modifiedRequest = new Request(tsUrl, {
+                method: origin_request.method,
+                headers: origin_request.headers,
+                body: origin_request.body,
+                mode: origin_request.mode,
+                credentials: origin_request.credentials,
+                cache: origin_request.cache,
+                redirect: origin_request.redirect,
+                referrer: origin_request.referrer,
+                integrity: origin_request.integrity
+              });
+
+              cacheOrFetch(event, modifiedRequest);
+            }
+          });
+        }
+      });
+    });
   } else {
     cacheOrFetch(event, origin_request);
   }
 });
 
-function cacheOrFetch(event, request, originalUrl = null) {
+function cacheOrFetch(event, request) {
   event.respondWith(
     caches.match(request).then((response) => {
       if (response) {
@@ -113,20 +153,6 @@ function cacheOrFetch(event, request, originalUrl = null) {
         caches.open(swconf.cacheName).then((cache) => {
           cache.put(request, responseToCache);
         });
-
-        // 修改响应对象的 URL 为原始请求的 URL
-        if (originalUrl) {
-          const modifiedResponse = new Response(response.body, {
-            status: response.status,
-            statusText: response.statusText,
-            headers: response.headers
-          });
-          Object.defineProperty(modifiedResponse, 'url', {
-            value: originalUrl
-          });
-          return modifiedResponse;
-        }
-
         return response;
       });
     })
