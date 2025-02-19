@@ -22,7 +22,10 @@ A minimal, responsive, and feature-rich Jekyll theme for technical writing.
 ## 开发调试 web 网页
 
 - 该项目使用了 npm 的 rollup.config.js 脚本配置编译 js，运行`npm run build`命令会编译项目。
-- 调试运行 web 网页，使用 `bundle exec jekyll s` 命令,此时运行的是 development 环境，生产环境是运行`JEKYLL_ENV=production bundle exec jekyll s`
+- 调试运行 web 网页，使用 `bundle exec jekyll s` 命令,此时运行的是 development 环境，生产环境是运行
+  > linux：`JEKYLL_ENV=production bundle exec jekyll s` ,
+  > windows powershell: `$env:JEKYLL_ENV="production"; bundle exec jekyll s`
+  > windows cmd: `set JEKYLL_ENV=production` 然后 `bundle exec jekyll s`
 
 ## Features
 

@@ -1,9 +1,11 @@
 ---
 title: 2024-12-26-Linux-Shell-脚本还不会写岂不是奥特了
 date: 2024-12-26 21:19:14 +0800
-author: linjianyou林建有
 categories: [Linux,Java高级,网络技术]
 tags: [linux,运维,shell]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj
+  alt: Linux-Shell-脚本还不会写岂不是奥特了
 ---
 <div class="blog-content-box">
  <div class="article-header-box">
@@ -675,8 +677,10 @@ mysqldump <span class="token parameter variable">-u</span> <span class="token va
 <span class="token comment"># mysql -u $DB_USER -p$DB_PASS $DB_NAME &lt; $BACKUP_FILE</span>
 </code></pre>
    </div>
-   <link href="../../assets/css/markdown_views-f23dff6052.css" rel="stylesheet"/>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
    <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
   </div>
  </article>
 </div>
+
+
