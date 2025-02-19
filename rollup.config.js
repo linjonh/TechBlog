@@ -99,7 +99,25 @@ function cp(task) {
 
 cleanup();
 cp('videoplayer');
-
+function test() {
+  const proxyUrl = 'https://api.allorigins.win/raw?url=';
+  const proxyHost = 'https://api.allorigins.win';
+  let url = 'https://api.allorigins.win/694738ac35ff4d545e8a09b330bdb051_0.ts';
+  let ts_file_name = url.replace(proxyHost + '/', '');
+  console.log('handle ts file：' + ts_file_name);
+  url =
+    'https://api.allorigins.win/raw?url=https%3A%2F%2Fv-blog.csdnimg.cn%2Fasset%2F43701219dc093fd2f52d68ebeb87cb52%2Fplay_video%2F694738ac35ff4d545e8a09b330bdb051.m3u8';
+  url = decodeURIComponent(url);
+  url = url.replace(proxyUrl, '');
+  const m3u8Url = new URL(url);
+  console.log(m3u8Url);
+  const tsUrl = new URL(
+    ts_file_name,
+    url.substring(0, url.lastIndexOf('/') + 1)
+  );
+  console.log(proxyUrl + tsUrl);
+}
+test();
 export default [
   build('commons'),
   build('home'),

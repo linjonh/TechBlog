@@ -60,19 +60,24 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
-
+const proxyUrl = 'https://api.allorigins.win/raw?url=';
+const proxyHost = 'https://api.allorigins.win';
+const cloudflare = 'https://www.cloudflare-terms-of-service-abuse.com/';
 self.addEventListener('fetch', (event) => {
   let origin_request = event.request;
 
   if (origin_request.headers.has('range')) {
     return;
   }
-  const proxyUrl = 'https://api.allorigins.win/raw?url=';
-  const proxyHost = 'https://api.allorigins.win';
-  if (origin_request.url.includes('csdnimg.cn')) {
+
+  if (
+    (origin_request.url.includes('csdnimg.cn') ||
+      origin_request.url.includes(cloudflare)) &&
+    !origin_request.url.includes(proxyHost)
+  ) {
     // 设置代理 URL
     const originalUrl = origin_request.url;
-    const modifiedUrl = proxyUrl + encodeURIComponent(originalUrl);
+    const modifiedUrl = proxyUrl + originalUrl;
 
     // 创建新的请求对象，使用修改后的 URL
     const modifiedRequest = new Request(modifiedUrl, {
@@ -83,7 +88,7 @@ self.addEventListener('fetch', (event) => {
       credentials: origin_request.credentials,
       cache: origin_request.cache,
       redirect: origin_request.redirect,
-      referrer: origin_request.referrer,
+      referrer: proxyHost,
       integrity: origin_request.integrity
     });
 
@@ -94,26 +99,43 @@ self.addEventListener('fetch', (event) => {
     origin_request.url.includes(proxyHost) &&
     origin_request.url.endsWith('.ts')
   ) {
-    let ts_file_name = origin_request.url.replace(proxyHost + '/', '');
-    console.log('handle ts file：' + ts_file_name);
-
     // 处理 ts 的代理
-    caches.matchAll().then((cacheEntries) => {
-      cacheEntries.forEach((cacheEntry) => {
-        if (cacheEntry.url.endsWith('.m3u8')) {
-          console.log('macth m3u8:' + cacheEntry.url);
-          cacheEntry.text().then((m3u8Content) => {
+    getAllCacheEntries(event, origin_request);
+  } else {
+    cacheOrFetch(event, origin_request);
+  }
+});
+function getAllCacheEntries(event, origin_request) {
+  event.waitUntil(
+    (async () => {
+      const response = await caches.match(origin_request);
+      if (response) {
+        return response;
+      }
+
+      let ts_file_name = origin_request.url.replace(proxyHost + '/', '');
+      console.log('handle ts file：' + ts_file_name);
+
+      const cacheNames = await caches.keys();
+      for (const cacheName of cacheNames) {
+        const cache = await caches.open(cacheName);
+        const requests = await cache.keys();
+        for (const request of requests) {
+          const response = await cache.match(request);
+          const m3u8Content = await response.text();
+          let url = request.url;
+          if (url.endsWith('.m3u8')) {
+            console.log('macth m3u8:' + url);
             if (m3u8Content.includes(ts_file_name)) {
-              const m3u8Url = new URL(cacheEntry.url);
-              const tsUrl = new URL(
+              let m3u8Url = decodeURIComponent(url);
+              console.log('m3u8Url: ' + m3u8Url);
+              m3u8Url = m3u8Url.replace(proxyUrl, '');
+              let tsUrl = new URL(
                 ts_file_name,
-                m3u8Url.origin +
-                  m3u8Url.pathname.substring(
-                    0,
-                    m3u8Url.pathname.lastIndexOf('/') + 1
-                  )
+                m3u8Url.substring(0, m3u8Url.lastIndexOf('/') + 1)
               );
-              console.log(tsUrl);
+              tsUrl = proxyUrl + tsUrl.href;
+              console.log('tsUrl:' + tsUrl);
               const modifiedRequest = new Request(tsUrl, {
                 method: origin_request.method,
                 headers: origin_request.headers,
@@ -122,20 +144,43 @@ self.addEventListener('fetch', (event) => {
                 credentials: origin_request.credentials,
                 cache: origin_request.cache,
                 redirect: origin_request.redirect,
-                referrer: origin_request.referrer,
+                referrer: proxyHost,
                 integrity: origin_request.integrity
               });
+              console.log(modifiedRequest);
+              let response;
+              const fetchResponse = await fetch(modifiedRequest);
+              if (fetchResponse.redirected) {
+                const finalUrl = proxyUrl + fetchResponse.url;
+                response = await fetch(finalUrl);
+                if (response.status === 200) {
+                  console.log('重定向的response：success,' + response.url);
+                } else {
+                  console.log('重定向的response：failed' + response.url);
+                }
+              } else {
+                response = fetchResponse;
+              }
+              const final_url = request.url;
+              if (purge || request.method !== 'GET' || !verifyUrl(final_url)) {
+                return response;
+              }
 
-              cacheOrFetch(event, modifiedRequest);
+              // See: <https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests>
+              let responseToCache = response.clone();
+
+              const cache = await caches.open(swconf.cacheName);
+              cache.put(request, responseToCache);
+
+              return response;
             }
-          });
+          }
         }
-      });
-    });
-  } else {
-    cacheOrFetch(event, origin_request);
-  }
-});
+      }
+      return fetch(origin_request);
+    })()
+  );
+}
 
 function cacheOrFetch(event, request) {
   event.respondWith(
