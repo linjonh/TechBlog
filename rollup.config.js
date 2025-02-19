@@ -3,9 +3,12 @@ import terser from '@rollup/plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import fs from 'fs';
 import pkg from './package.json';
+// const fs = require('fs');
+const path = require('path');
 
 const SRC_DEFAULT = '_javascript';
 const SRC_PWA = `${SRC_DEFAULT}/pwa`;
+const SRC_VIDEO_PLAYER = `${SRC_DEFAULT}/modules/videoplayer`;
 const DIST = 'assets/js/dist';
 
 const banner = `/*!
@@ -71,7 +74,31 @@ function build(
   };
 }
 
+function cp(task) {
+  switch (task) {
+    case 'videoplayer':
+      console.log(
+        `> copy videoplayer dir's .min.js files from ${SRC_VIDEO_PLAYER} to ${DIST}`
+      );
+
+      const files = fs.readdirSync(SRC_VIDEO_PLAYER);
+      console.log(files);
+      if (!fs.existsSync(DIST)) fs.mkdirSync(DIST);
+      files.forEach((file) => {
+        const srcPath = path.join(SRC_VIDEO_PLAYER, file);
+        const destPath = path.join(DIST, file);
+        fs.copyFileSync(srcPath, destPath);
+        console.log('copy:' + srcPath);
+      });
+      break;
+
+    default:
+      break;
+  }
+}
+
 cleanup();
+cp('videoplayer');
 
 export default [
   build('commons'),

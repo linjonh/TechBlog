@@ -68,6 +68,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   const proxyUrl = 'https://api.allorigins.win/raw?url=';
+  const proxyHost = 'https://api.allorigins.win';
   if (origin_request.url.includes('csdnimg.cn')) {
     // 设置代理 URL
     const originalUrl = origin_request.url;
@@ -90,15 +91,17 @@ self.addEventListener('fetch', (event) => {
     // 打印headers
     console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
   } else if (
-    origin_request.url.includes(proxyUrl) &&
+    origin_request.url.includes(proxyHost) &&
     origin_request.url.endsWith('.ts')
   ) {
-    let ts_file_name = origin_request.url.replace(proxyUrl, '');
+    let ts_file_name = origin_request.url.replace(proxyHost + '/', '');
+    console.log('handle ts file：' + ts_file_name);
 
     // 处理 ts 的代理
     caches.matchAll().then((cacheEntries) => {
       cacheEntries.forEach((cacheEntry) => {
         if (cacheEntry.url.endsWith('.m3u8')) {
+          console.log('macth m3u8:' + cacheEntry.url);
           cacheEntry.text().then((m3u8Content) => {
             if (m3u8Content.includes(ts_file_name)) {
               const m3u8Url = new URL(cacheEntry.url);
@@ -110,6 +113,7 @@ self.addEventListener('fetch', (event) => {
                     m3u8Url.pathname.lastIndexOf('/') + 1
                   )
               );
+              console.log(tsUrl);
               const modifiedRequest = new Request(tsUrl, {
                 method: origin_request.method,
                 headers: origin_request.headers,
