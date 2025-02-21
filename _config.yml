@@ -143,7 +143,7 @@ comments:
     category: "Announcements"
     category_id: "DIC_kwDON5YUqc4Cm9Ln"
     mapping: "pathname" # optional, default to 'pathname'
-    strict: "1" # optional, default to '0'
+    strict: "0" # optional, default to '0'
     input_position: "top" # optional, default to 'bottom'
     lang: "zh-CN" # optional, default to the value of `site.lang`
     reactions_enabled: "1" # optional, default to the value of `1`
