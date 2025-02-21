@@ -142,7 +142,7 @@ comments:
     repo_id: "R_kgDON5YUqQ"
     category: "Announcements"
     category_id: "DIC_kwDON5YUqc4Cm9Ln"
-    mapping: "title" # optional, default to 'pathname'
+    mapping: "pathname" # optional, default to 'pathname'
     strict: "1" # optional, default to '0'
     input_position: "top" # optional, default to 'bottom'
     lang: "zh-CN" # optional, default to the value of `site.lang`
