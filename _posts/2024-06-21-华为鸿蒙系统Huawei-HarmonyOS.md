@@ -1,15 +1,16 @@
 ---
 layout: post
-title: 2024-06-21-华为鸿蒙系统Huawei-HarmonyOS
+title: 华为鸿蒙系统Huawei-HarmonyOS
 date: 2024-06-21 09:34:04 +0800
 categories: [截图其他]
-tags: [华为,harmonyos,自然语言处理,百度,人工智能,云计算,数据库]
+tags: [自然语言处理,百度,数据库,华为,人工智能,云计算,harmonyos]
 image:
-  path: https://api.vvhan.com/api/bing?rand=sj&artid=138450604
-  alt: 华为鸿蒙系统Huawei-HarmonyOS
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=138450604
+    alt: 华为鸿蒙系统Huawei-HarmonyOS
 artid: 138450604
 render_with_liquid: false
 ---
+<p class="artid" style="display:none">$url</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -4053,4 +4054,3 @@ render_with_liquid: false
 </div>
 
 
-<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f735f736f73302f:61727469636c652f64657461696c732f313338343530363034</p>

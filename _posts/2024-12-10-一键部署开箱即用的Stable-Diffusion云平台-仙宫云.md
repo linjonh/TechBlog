@@ -1,0 +1,284 @@
+---
+layout: post
+title: 一键部署开箱即用的Stable-Diffusion云平台-仙宫云
+date: 2024-12-10 15:00:06 +0800
+categories: [stablediffusion]
+tags: [stablediffusion,AI作画]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=137525351
+    alt: 一键部署开箱即用的Stable-Diffusion云平台-仙宫云
+artid: 137525351
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     一键部署、开箱即用的Stable Diffusion云平台-仙宫云
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     <span style="font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+      1.
+     </span>
+     <strong style="font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+      重磅更新，解决核心问题
+     </strong>
+     <br/>
+    </p>
+    <p>
+     之前参加AI写真快闪活动时，教学视频只有几分钟，但自己实操时，仅准备环境、上传下载文件就要花几个小时，甚至一两天，苦不堪言。但近期
+     <strong>
+      仙宫云
+     </strong>
+     重磅上线的资源中心，完美解决了stable diffusion模型、Lora等大文件下载慢的问题，下载速度能稳定达到500M/s，5G左右的文件，10秒内搞定，加上其一键部署、开箱即用的优势，让学习者能在几分钟内就搭好环境，并下载好所需文件，有更多的时间花在核心操作和底层原理的学习上，让SD的学习效率再提速；这个功能真的太棒了，忍不住把这个云服务器平台详细研究了一波，发现还有很多惊艳的功能和丝滑的用户体验，强烈推荐；
+    </p>
+    <p>
+     现在新人注册就送5元赠送金额，被邀请的再加3元赠送金额；也就是说通过这个邀请链接：
+    </p>
+    <p>
+     https://www.xiangongyun.com/register/5RNRPH，注册就可以获得8元赠送金额，可以白嫖3个多小时的RTX 4090；先体验，好用再购买，很是良心。
+    </p>
+    <p>
+     <img alt="d90aecc2c622ff15978ae922f201c2fa.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/aef3c88efcf29c8b9ba924167112067b.jpeg"/>
+    </p>
+    <p>
+     2.
+     <strong>
+      为何选择仙宫云
+     </strong>
+    </p>
+    <p>
+     想学习stable diffusion碰到的第一个门槛就是硬件配置，全新购置太贵，动辄一万大几，着实有点肉疼；自己的老爷设备一般跑不动，就算勉强能跑起来，出个图也要几分钟、甚至更长，等得很是着急；此时云服务是个很不错的选择，能用最低的成本享受4090带来的丝滑体验，对入门学习而言性价比还是很高的。
+    </p>
+    <p>
+     前期因为学习需要使用了AutoAL算力云、青椒云等云平台，要么机器很难抢，要么启动时需要执行脚本、访问webUI时还需要做一系列操作，要么是个远程桌面，对原生系统不太友好；共性的问题是上传大的模型、Lora文件很慢，经常需要花很长时间；但仙宫云快速迭代完美的解决了这些问题；
+    </p>
+    <p>
+     2.1
+     <strong>
+      一键部署、开箱即用
+     </strong>
+    </p>
+    <p>
+     仙宫云的镜像部署很简单，基本上是一键部署、开箱即用，不需要执行任何的脚本，对没有编程基础的用户非常友好，GPU选择RTX4090，进行如下操作：
+    </p>
+    <p>
+     2.1.1
+     <strong>
+      公共镜像
+     </strong>
+    </p>
+    <p>
+     公共镜像是仙宫云官方提供的基础原版镜像，稳定可靠，全部是免费的。有WebUI的各个版本，还支持ForgeUI；
+    </p>
+    <p>
+     <img alt="d0f9011f1ce7d6ee074e8242ce35a761.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/e62241f18044503234c3e5abb9dd8af5.jpeg"/>
+    </p>
+    <p>
+     2.1.2
+     <strong>
+      社区镜像
+     </strong>
+    </p>
+    <p>
+     社区镜像是用户基于公共镜像调整后标价或免费公开的镜像，一般是实现了特定环境的部署，如安装了常用插件、上传了常用模型等，发布镜像用于教学是个很不错的场景，避免了环境不统一的来回折腾，能极大的提高效率；大家可以根据自己的需要选择合适的镜像，镜像费用归属于镜像发布者。
+    </p>
+    <p>
+     <img alt="4014e850da5687896eb5adaad2af4f4a.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/804d1329fe6de7d617edb620c7e38675.jpeg"/>
+    </p>
+    <p>
+     2.1.3
+     <strong>
+      私有镜像
+     </strong>
+    </p>
+    <p>
+     私有镜像是用户自己在进行安装、设置后储存的镜像，方便自己下次部署使用，避免每次都进行重复的安装和设置。
+    </p>
+    <p>
+     <img alt="94cf2bc2af56083960e52bbe7cb33dac.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/721b3437c2b764cd08efeceacd5b4915.jpeg"/>
+    </p>
+    <p>
+     2.1.4
+     <strong>
+      一键部署
+     </strong>
+    </p>
+    <p>
+     点击【确认部署】按钮开始部署，一般几秒钟可以部署完成，但比较大的私有镜像部署会比较慢，因为镜像部署速度的快慢取决于缓存，仙宫云每组设备是8张GPU，有非常多组设备，当该镜像在这组设备上已经有人部署过就会有该镜像的缓存，你再部署就会很快。如果这组设备上还没有部署过该镜像，就得新拉取镜像，这时需要的时间就会长一点。也就是说，使用频率越高的镜像，极速秒部署的概率就越高；实例状态为【运行中】时可以使用。
+    </p>
+    <p>
+     <img alt="c643514c90164400f8701f0a9a323129.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/7b65513c1657b7dd9091f61c42b2f8e7.jpeg"/>
+    </p>
+    <p>
+     点击【WebUI】，可以在本地的浏览器中打开WebUI页面，就可以使用SD绘图了，对原生系统非常友好；
+    </p>
+    <p>
+     <img alt="e59b23d29bbfab240f13425e989322df.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/f92e1cb2e3507f0088883f1dab233221.jpeg"/>
+    </p>
+    <p>
+     点击【仙宫云OS】下面的打开，可以打开仙宫云OS，就可以看到SD部署目录的可视化界面，手动上传文件、重启SD，都可以在这操作；具体操作可参考官方文档：https://www.xiangongyun.com/a/gkrk3ophjar4?r=5RNRPH
+    </p>
+    <p>
+     <img alt="f938eb43234f8ecd6ceba6eff2da93b4.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/78e2df72c0caff59b1a740e846220cfa.jpeg"/>
+    </p>
+    <p>
+     2.2
+     <strong>
+      重磅上线资源中心
+     </strong>
+    </p>
+    <p>
+     2.2.1
+     <strong>
+      收录资源多
+     </strong>
+    </p>
+    <p>
+     4月初上线的资源中心类似是对文件做了收录和转存，便于使用时能快速下载，基本上包含了常用的所有SD模型、Lora以及webUI插件，并且还贴心的根据SDXL 1.0和SD 1.5做了分类，便于筛选下载；文件来源包含C站、HuggingFace，以及国内的liblib等；目前收录的文件还在逐步增加，如果你喜欢的模型未收录，也可以联系客服收录，目前用到的文件基本上都能找到；
+    </p>
+    <p>
+     <img alt="1ad70c6ff1e7fcde8d070f84964e81be.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/2e75a09618bf36f3adb7bd3bf9db5b09.jpeg"/>
+    </p>
+    <p>
+     2.2.2
+     <strong>
+      下载操作简单
+     </strong>
+    </p>
+    <p>
+     2.2.2.1
+     <strong>
+      选择实例执行
+     </strong>
+    </p>
+    <p>
+     在资源中心中点击想要下载的文件，点击【选择实例执行】，选择已经部署的实例，点击【执行命令】，等待安装完成即可；相当优雅，相当丝滑；对没有编程基础的用户也非常友好；
+    </p>
+    <p>
+     <img alt="e2e43e2a599a8c7cc94e9bed935232bb.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/562005f2526181628acba791436765cd.jpeg"/>
+    </p>
+    <p>
+     <img alt="1b85c65e0c9d87c3054b1936f9157425.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/df754fb8ee637c80e522697b9d555457.jpeg"/>
+    </p>
+    <p>
+     2.2.2.2
+     <strong>
+      打开终端下载
+     </strong>
+    </p>
+    <p>
+     对于那些不需要全部下载的文件可以在仙宫云OS中双击打开【终端】，粘贴只需要下载的文件的命令，回车，等待下载完成即可；
+    </p>
+    <p>
+     <img alt="5224a417751b0c581c19e174c5298372.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/251821354619c5fe53802c7bce4ed2fa.jpeg"/>
+    </p>
+    <p>
+     <img alt="3c87842552b3e946bd992e2872a85c41.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/2d72b549bbc27c6c9936a5395f626810.jpeg"/>
+    </p>
+    <p>
+     2.2.3
+     <strong>
+      下载速度快
+     </strong>
+    </p>
+    <p>
+     从资源中心下载文件，下载速度可稳定达到500M/s，5G左右的文件，10秒内搞定，真的很给力；
+    </p>
+    <p>
+     <img alt="0fb874cd4d0782fba2cb8be428c903d5.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/06b21fd44b3dc7786bd525b77c83b98a.jpeg"/>
+    </p>
+    <p>
+     2.3
+     <strong>
+      SD目录介绍
+     </strong>
+    </p>
+    <p>
+     仙宫云上的SD是部署在Linux上的，目录结构跟windows上的类似，在仙宫云OS的桌面上有模型、插件、Lora和输出目录的快捷方式图标，双击即可打开对应目录，常用目录如下：
+    </p>
+    <p>
+     Stable-diffusion：用于放Checkpoint基础模型；
+    </p>
+    <p>
+     Lora：用于放Lora基础模型；
+    </p>
+    <p>
+     ControlNet：用于放ControlNet用到的模型；
+    </p>
+    <p>
+     <img alt="7feb6ac409e33e87bb8261e986184af3.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/b7ce3a852a8522c7160911a206bc8163.jpeg"/>
+    </p>
+    <p>
+     2.4
+     <strong>
+      关机销毁
+     </strong>
+    </p>
+    <p>
+     不用了一定记得在【操作】上进行关机操作，否则会一直计费；
+    </p>
+    <p>
+     2.4.1
+     <strong>
+      关机-销毁并停止计费
+     </strong>
+    </p>
+    <p>
+     相当于直接关机，本次开机所做的所有操作都不会保存；
+    </p>
+    <p>
+     2.4.2
+     <strong>
+      关机-存储镜像后销毁
+     </strong>
+    </p>
+    <p>
+     相当于把本次开机所做的所有操作保存为一个新的镜像，下次再【选择镜像】时，在【私有镜像】中就能选择这个镜像了；这样操作类似有了个云端的私有电脑，每次开机都能在之前操作的基础上继续操作，可以制作自己个性化的镜像，非常方便；私有镜像还能设置为公开收费，设置后其他人可以在【社区镜像】中搜索到并使用，镜像费用归属于镜像发布者，在学习过程中如果发布了很受欢迎镜像还能带来收益，是不是很nice。
+    </p>
+    <p>
+     结束计费后自动储存镜像，该方式的镜像储存时间是不计费的，就可以直接关掉浏览器了，不用等待镜像存储完成。但镜像存储只有30G的免费存储，超过免费储存大小的部分以¥0.00036 / GB / 小时的价格按需计费。
+    </p>
+    <p>
+     <img alt="c0c5a10f8e6ebd87d2358993cd9c1c56.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/faff0fdad5c54579652f20bfd3bf48d9.jpeg"/>
+    </p>
+    <p>
+     <img alt="d7877c425f3bef5f12bbec207718da85.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/dda6337438cfc1f38bbf1861aeee92e9.jpeg"/>
+    </p>
+    <p>
+     3.
+     <strong>
+      给力的官方群
+     </strong>
+    </p>
+    <p>
+     官方群也很有料，不仅仅解决云平台的使用问题，还能沟通、交流SD学习过程中碰到的一些问题，官方客服不管是工作时间还是节假日都一直在线，相当于加入了一个SD学习的陪伴群，这个体验还是很超预期的。
+    </p>
+    <p>
+     <img alt="2873d0e327c3e6c70bf6e17b3388e42f.jpeg" src="https://i-blog.csdnimg.cn/blog_migrate/19b80b50756f39bdbef1c24e308d0184.jpeg"/>
+    </p>
+    <p>
+     4.
+     <strong>
+      官方介绍文档
+     </strong>
+    </p>
+    <p>
+     https://www.xiangongyun.com/c/help?r=5RNRPH
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

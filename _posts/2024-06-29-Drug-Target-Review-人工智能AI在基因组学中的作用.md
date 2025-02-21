@@ -1,0 +1,199 @@
+---
+layout: post
+title: Drug-Target-Review-人工智能AI在基因组学中的作用
+date: 2024-06-29 10:36:31 +0800
+categories: [DrugAI]
+tags: []
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=104489310
+    alt: Drug-Target-Review-人工智能AI在基因组学中的作用
+artid: 104489310
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Drug Target Review | 人工智能(AI)在基因组学中的作用
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div id="js_content">
+     <p>
+      人工智能在包括基因组学在内的许多研究领域中都有应用。阿斯利康（AstraZeneca）的斯拉夫·彼得罗夫斯基（SlavéPetrovski）揭示了如何在人类基因组研究中使用AI及其在未来的发展。
+     </p>
+     <p>
+     </p>
+     <p style="text-align:center;">
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/c4bd8779033d29bd64fee0a11938f208.png"/>
+     </p>
+     <p>
+      基因组学领域产生了大型数据集，可用于发现和开发潜在的新疗法。人工智能（AI）在此研究领域中具有很高的价值，因为它可以加快从信息获取知识所需的时间。
+     </p>
+     <p>
+      Drug Target Review的Victoria Rees与阿斯利康基因组研究中心（CGR）的基因组分析和信息学负责人SlavéPetrovski进行了交谈，以了解AI在这一领域的使用方式。Petrovski将AI定义为“利用先进的分析方法来挖掘复杂的数据类型”，从而可以识别其他难以捉摸的模式。最终，他说AI可以用来推动“从数据到知识的发展”。
+     </p>
+     <p>
+     </p>
+     <h4>
+      <strong>
+       基因组学中使用AI
+      </strong>
+     </h4>
+     <p>
+      Petrovski首先解释说，该领域内AI的用途广泛。构成人类基因组的大约30亿个碱基对可以通过AI进行分析，以找到遗传变异。下一步是确定置入不同数据的置信度，以决定其是否代表生物学遗传变异。
+     </p>
+     <p>
+      他继续说道，“通常使用AI来帮助研究者更好地了解与遗传变异有关的生物学。” 这意味着AI的结果可用于确定变异是否良性或是否具有临床意义，应进一步研究。
+     </p>
+     <p>
+     </p>
+     <h4>
+      <strong>
+       使用AI的挑战
+      </strong>
+     </h4>
+     <p>
+      尽管AI是非常有用的工具，但它并非没有挑战。Petrovski认为，基因组学中AI的关键问题是规模-随着生成的基因组学数据量呈指数级增长。
+     </p>
+     <p>
+      他介绍了阿斯利康公司全公司的基因组计划如何旨在到2026年分析多达200万个基因组的计划。这项为期10年的计划包括必须准确、安全地存储来自临床试验的数十万个患者数据点。
+     </p>
+     <p>
+      但是，彼得罗夫斯基也看到了这一好处。“当达到如此规模时，它将带来巨大的机会，因为数据显然有价值，并且可以支持诸如AI和机器学习之类的高级方法。”
+     </p>
+     <p>
+      尽管拥有基础结构和资源来应对大型数据集并进行有效挖掘存在挑战，但如果管理得当，则可以解决此问题。
+     </p>
+     <p>
+     </p>
+     <h4>
+      <strong>
+       基因组AI的主要趋势
+      </strong>
+     </h4>
+     <p>
+      彼得罗夫斯基解释说，在基因组学中，人工智能的使用目前存在多种趋势。
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       整体方法
+      </strong>
+     </p>
+     <p>
+      使用AI的一种方法是将基因组分析产生的数据与文献中确定的关系结合起来，以帮助寻找潜在的临床相关基因。
+     </p>
+     <p>
+      彼得罗夫斯基说，这是一个令人感兴趣的领域，因为它减少了单个研究人员的影响，而不是使用一组标准信息客观地找到与疾病表型有关的基因。他还强调说，这使研究人员能够发现新的领域，专注于围绕这些靶标的药物发现和开发，从而满足临床需求。
+     </p>
+     <p>
+      他着重介绍了由阿斯利康进行的一项关键研究，该研究提出了一个多维机器学习框架，其中考虑了52个信息层，包括基因表达、人类疾病文献和小鼠表型。该方法被提议为“客观和定量地分类潜在的新型疾病靶基因的支持框架。”
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       高质量数据
+      </strong>
+     </p>
+     <p>
+      基因组AI的另一个重点是数据的增强。Petrovski指出，这一领域正在“不断发展”，但主要观察到的是，所采用的方法通常不如基础数据那么重要。这意味着输入到AI系统中的信息必须是高质量的，否则无法充分利用。
+     </p>
+     <p>
+      他解释说，在他的公司中，他们的目标是使数据“公平”。意味着它是可发现，可访问，可互操作和可重用的。公司的一项大型活动鼓励研究人员处理数据并将其应用于高级分析。尽管AI可能是一种处理信息的高级方法，但是如果没有高质量的数据集，那么奖励将不会出现。
+     </p>
+     <p style="text-align:center;">
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/a1ba65892e5a0735a1356b90b9486f61.png"/>
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       分层研究
+      </strong>
+     </p>
+     <p>
+      Petrovski观察到的另一趋势是，在基因组学中使用AI可以扩展到不同的组学研究中，例如转录组学，即将遗传密码转录成信使RNA。
+     </p>
+     <p>
+      根据Petrovski的说法，这种方法使研究人员能够从“一维视图转变为能够将多个维度放在一起，从而提供人类基因组的整体图”。因此，人工智能在基因组学中的主要趋势包括整体方法和利用人工智能挖掘文献，高度重视数据质量并使用许多研究来分层信息。
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       确定治疗靶标
+      </strong>
+     </p>
+     <p>
+      Petrovski解释说，人工智能在基因组学中的应用使研究人员可以对病例种群进行测序，以确定感兴趣的表型。这些可用于识别新型药物靶标。
+     </p>
+     <p>
+      彼得罗夫斯基描述说，通过研究原始基因组序列数据并应用最先进的深度学习和卷积网络，“先进的方法可以从原始数据中提取更多的价值”，而不是人类的解释。改善分析数据的方式可以成为推导识别药物靶标所需结果的有用工具。
+     </p>
+     <p>
+      阿斯利康（AstraZeneca）与纽约哥伦比亚大学（Columbia University）合作，于今年早些时候发表了一篇研究慢性肾脏疾病的论文。研究人员在总共3,315名患者的两个队列中进行了外显子组测序和诊断分析，发现了大量（约占9％）患者的潜在致病基因变异。结果为这种病的遗传原因和治疗机会提供了有价值的临床见解。
+     </p>
+     <p>
+     </p>
+     <h4>
+      <strong>
+       基因组学中AI的未来
+      </strong>
+     </h4>
+     <p style="text-align:center;">
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/423a655f3a95947466c0a9f50ec33e06.png"/>
+     </p>
+     <p>
+      彼得罗夫斯基说，机器学习不是静态的研究方法。未来可能会看到AI的许多变化和发展。
+     </p>
+     <p>
+      他认为，在“方法的先进性”方面，人工智能将有所进步。他说：“我们将能够定义更好的深度神经网络算法。”他补充说，它们将继续发展，并越来越重视高质量数据。
+     </p>
+     <p>
+      因此，Petrovski建议为数据添加结构以使其可用于AI。这是非常重要的，但是将主题专业知识整合进来也是如此，因为这将改善从AI分析得出的结论。这是Petrovski未来10年重点关注的地方。
+     </p>
+     <p>
+      他说，总体来说，人工智能为患者加速从数据集到医学的过程的机会将是使用机器学习的最重要结果。这不仅适用于基因组学，还适用于药物研发的所有方面。
+     </p>
+     <p>
+     </p>
+     <h4>
+      结论
+     </h4>
+     <p>
+      AI在基因组学中有许多用途，可以促进药物靶标的识别和潜在新疗法的开发。分析过程的整合帮助推动了基因组学的研究，尽管要实现其全部潜力还有很长的路要走。彼得罗夫斯基说，最终目标是“确保我们提取基础数据的全部价值”，并为此应用复杂的方法，这才是最大的收益。因此，下一步是确保将AI应用于高质量数据，以确保新的创新药物可以更快地到达患者。
+     </p>
+     <p>
+     </p>
+     <h4>
+      参考资料
+     </h4>
+     <p>
+      EventPilot Web [Internet]. Eventpilot.us. 2019 [cited 2 August 2019].
+     </p>
+     <p>
+      Diagnostic Utility of Exome Sequencing for Kidney Disease | NEJM [Internet]. New England Journal of Medicine. 2019 [cited 2 August 2019].
+     </p>
+     <p>
+      https://www.drugtargetreview.com/article/47942/uniting-humans-and-data-the-role-of-ai-in-genomics/
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,308 @@
+---
+layout: post
+title: 利用Amazon-Bedrock畅玩Claude-3等多种领先模型,抢占AI高地体验倒计时4小时
+date: 2024-03-10 20:09:06 +0800
+categories: [AmazonWebServices(AWS)]
+tags: [人工智能,亚马逊云科技,aws,Claude3,AWS]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=136607845
+    alt: 利用Amazon-Bedrock畅玩Claude-3等多种领先模型,抢占AI高地体验倒计时4小时
+artid: 136607845
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     利用Amazon Bedrock畅玩Claude 3等多种领先模型，抢占AI高地(体验倒计时4小时)
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-tomorrow-night-eighties" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/5ec4887680c844ed1b9b290fad148d4a.png"/>
+    </p>
+    <p>
+     快乐的时间总是短暂的，Claude 3 在亚马逊云科技上限时体验仅剩4小时，上次分享了入门级操作教程，本期给大家带来AWS Lambda + Amazon Bedrock一起构建可以便捷使用的Claude 3接口
+    </p>
+    <h2>
+     <a id="AWS_Lambda_4">
+     </a>
+     AWS Lambda
+    </h2>
+    <p>
+     AWS Lambda 是一项计算服务，可以运行您的代码以响应事件并自动管理计算资源，这使其成为将想法转化为现代生产无服务器应用程序的最快方式。
+     <br/>
+     用我们大众可理解的解释来讲，就是我们专注于代码层面，不考虑底层运行逻辑，类似的友商产品例如函数计算、云函数等
+    </p>
+    <h2>
+     <a id="Amazon_Bedrock_8">
+     </a>
+     Amazon Bedrock
+    </h2>
+    <p>
+     Amazon Bedrock 是一项完全托管的服务，通过单个 API 提供来自 AI21 Labs、Anthropic、Cohere、Meta、Stability AI 和 Amazon 等领先人工智能公司的高性能基础模型（FM），以及通过安全性、隐私性和负责任的 AI 构建生成式人工智能应用程序所需的一系列广泛功能。使用 Amazon Bedrock，您可以轻松试验和评估适合您的使用案例的热门 FM，通过微调和检索增强生成（RAG）等技术利用您的数据对其进行私人定制，并构建使用您的企业系统和数据来源执行任务的代理。由于 Amazon Bedrock 是无服务器的，因此您无需管理任何基础设施，并且可以使用已经熟悉的 AWS 服务将生成式人工智能功能安全地集成和部署到您的应用程序中。
+    </p>
+    <p>
+     <strong>
+      本次咱们的实验就会用到Amazon Bedrock服务，通过在lambda上面使用Amazon Bedrock调用Claude 3的api，最终以URL的形式对外暴露
+     </strong>
+    </p>
+    <h2>
+     <a id="_14">
+     </a>
+     动手实践
+    </h2>
+    <h3>
+     <a id="Amazon_Bedrock_15">
+     </a>
+     Amazon Bedrock设置
+    </h3>
+    <p>
+     首先我们要确保咱们自己的账户能够成功启用Amazon Bedrock服务，请检查是否有满足以下条件之一
+    </p>
+    <ol>
+     <li>
+      亚马逊云科技全球账户的billing账单地址设置是否是海外，因为在中国大陆是无法使用Claude 3模型的
+     </li>
+    </ol>
+    <p>
+     <a href="https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/paymentpreferences" rel="nofollow">
+      https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/paymentpreferences
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/dcb8539a2d5df6a35eb89b5e39567451.png"/>
+    </p>
+    <ol start="2">
+     <li>
+      可以设置Tax信息地址
+     </li>
+    </ol>
+    <p>
+     <a href="https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/tax-settings" rel="nofollow">
+      https://us-east-1.console.aws.amazon.com/billing/home?region=us-east-1#/tax-settings
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/dc1facf05c9d35c474fb3c720a8f5fb9.png"/>
+    </p>
+    <p>
+     确保能够满足以上条件后，按照之前文章的操作流程或者亚马逊云科技给出《限时使用Claude3》的教程进行Claude 3模型启用
+     <br/>
+     <a href="https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess" rel="nofollow">
+      https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/099be3a90c8c5c9fb3d34697eda2cde2.png"/>
+    </p>
+    <h3>
+     <a id="IAM__32">
+     </a>
+     创建IAM 角色
+    </h3>
+    <p>
+     分别添加如下权限
+    </p>
+    <ol>
+     <li>
+      AmazonBedrockFullAccess
+     </li>
+     <li>
+      AWSLambdaBasicExecutionRole
+     </li>
+    </ol>
+    <p>
+     <a href="https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/roles" rel="nofollow">
+      https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/roles
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/a597ae1475db93cc7ee584d1ed0db566.png">
+      <br/>
+      <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/9b249f5b2a3e6c521c103d8154198dec.png">
+       <br/>
+       <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/20f21b9db830087ca10ec6a821c89eff.png">
+        <br/>
+        <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/b2c60dc9d1f2ff52edcb5c918dad6c44.png">
+         <br/>
+         <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/f90782951739d1b73248d002c95f0f46.png"/>
+        </img>
+       </img>
+      </img>
+     </img>
+    </p>
+    <h3>
+     <a id="AWS_Lambda_44">
+     </a>
+     编写AWS Lambda函数
+    </h3>
+    <p>
+     <a href="https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions" rel="nofollow">
+      https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/6cf7d39424f7c544a4e8654d11e5e2f2.png"/>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/c81f927de103a06ea4edcb93737fabf9.png"/>
+    </p>
+    <h4>
+     <a id="_49">
+     </a>
+     代码填充
+    </h4>
+    <p>
+     参考:
+     <br/>
+     <a href="https://docs.aws.amazon.com/zh_cn/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html" rel="nofollow">
+      https://docs.aws.amazon.com/zh_cn/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html
+     </a>
+    </p>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> boto3
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> base64
+
+bedrock <span class="token operator">=</span> boto3<span class="token punctuation">.</span>client<span class="token punctuation">(</span><span class="token string">"bedrock-runtime"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">lambda_handler</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    user_message <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64decode<span class="token punctuation">(</span>event<span class="token punctuation">[</span><span class="token string">'body'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    body <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+        <span class="token string">"max_tokens"</span><span class="token punctuation">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+        <span class="token string">"messages"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> user_message<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"anthropic_version"</span><span class="token punctuation">:</span> <span class="token string">"bedrock-2023-05-31"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">#Call the claude3 on the Amazon Bedrock</span>
+    response <span class="token operator">=</span> bedrock<span class="token punctuation">.</span>invoke_model<span class="token punctuation">(</span>
+        body<span class="token operator">=</span>body<span class="token punctuation">,</span> 
+        modelId<span class="token operator">=</span><span class="token string">"anthropic.claude-3-sonnet-20240229-v1:0"</span>
+        <span class="token punctuation">)</span>
+
+    <span class="token comment">#Extract the response content in the json</span>
+    response_body <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>response<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    resp_to_user <span class="token operator">=</span> response_body<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"content"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'text'</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token string">'statusCode'</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+        <span class="token string">'body'</span><span class="token punctuation">:</span> resp_to_user
+    <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/712144221acd17bf49a67fc6cc1bfcc7.png"/>
+    </p>
+    <h4>
+     <a id="URL_82">
+     </a>
+     修改函数超时以及创建函数URL
+    </h4>
+    <p>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/b16e27561e52ad63775260ab91480d05.png"/>
+     <br/>
+     根据自身需求是否设置身份验证
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/2054e6abcdd347e226f55cc0ca0de8fd.png"/>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/b20d47201b805c5d15cc6e27ab974b25.png"/>
+    </p>
+    <h3>
+     <a id="_88">
+     </a>
+     本地测试代码
+    </h3>
+    <pre><code class="prism language-bash"><span class="token function">import</span> requests
+
+url <span class="token operator">=</span> <span class="token string">'你的AWS lambda函数URL'</span>
+
+payload <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">"User:"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> True:
+    resp <span class="token operator">=</span> requests.request<span class="token punctuation">(</span><span class="token string">"POST"</span>, url, <span class="token assign-left variable">data</span><span class="token operator">=</span>payload<span class="token punctuation">)</span>
+    print<span class="token punctuation">(</span>resp.text<span class="token punctuation">)</span>
+    payload <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">"User:"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> payload <span class="token operator">==</span> <span class="token string">"q"</span><span class="token builtin class-name">:</span>
+        <span class="token builtin class-name">break</span>
+</code></pre>
+    <p>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/5618364a5ecc19760fccae1029570b9b.png"/>
+    </p>
+    <p>
+     当然还有很多玩法，例如我们可以使用boto3包中的"invoke_model_with_response_stream"，同样可以实现对话功能，我们也可以通过调用接口，将多式联运消息中的图像和提示文本传递给AnthropicClaude 3 Sonnet模型
+    </p>
+    <p>
+     从这样一个小的实验，我们可以向后延申，例如
+    </p>
+    <ol>
+     <li>
+      构建一个前端页面，直接给用户页面，对接对应的接口，使用起来更优雅
+     </li>
+     <li>
+      联合更多的服务一起使用，例如结合Amazon API Gateway、AWS Lambda、Amazon Bedrock、Amazon Dynamo等一起构建一个带有记录的Claude3模型工作流
+     </li>
+    </ol>
+    <p>
+     更多精彩内容还是需要广大同学们一起去探索和发现，欢迎大家通过亚马逊云科技Amazon Bedrock访问包括Claude3在内的多种领先模型，以及学习上述所提到的服务，在构建工作流的时候实现全线Serverless化，降低运维成本！
+    </p>
+    <h2>
+     <a id="_115">
+     </a>
+     好课推荐
+    </h2>
+    <h3>
+     <a id="AWS_Lambda_Foundations_Simplified_Chinesehttpsexploreskillbuilderawslearncourseinternalviewelearning1604awslambdafoundationssimplifiedchinesezhongwenpeiyinbantrk7f7b63dd733b4a1e9ad611c2b57b54cesc_channelel_116">
+     </a>
+     <a href="https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1604/aws-lambda-foundations-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el" rel="nofollow">
+      AWS Lambda Foundations (Simplified Chinese)（中文配音版）
+     </a>
+    </h3>
+    <p>
+     <a href="https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1604/aws-lambda-foundations-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el" rel="nofollow">
+      https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1604/aws-lambda-foundations-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el
+     </a>
+    </p>
+    <p>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/a0c273de64a508d0f40536bfba804e6b.png"/>
+    </p>
+    <h3>
+     <a id="Amazon_API_Gateway_for_Serverless_Applications_Simplified_Chinesehttpsexploreskillbuilderawslearncourseinternalviewelearning1459amazonapigatewayforserverlessapplicationssimplifiedchinesezhongwenpeiyinbantrk7f7b63dd733b4a1e9ad611c2b57b54cesc_channelel_121">
+     </a>
+     <a href="https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1459/amazon-api-gateway-for-serverless-applications-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el" rel="nofollow">
+      Amazon API Gateway for Serverless Applications (Simplified Chinese)（中文配音版）
+     </a>
+    </h3>
+    <p>
+     <a href="https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1459/amazon-api-gateway-for-serverless-applications-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el" rel="nofollow">
+      https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1459/amazon-api-gateway-for-serverless-applications-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/e0c924df5545c4c0987805921c4fbd7f.png"/>
+    </p>
+    <h3>
+     <a id="Amazon_DynamoDB_for_Serverless_Architectures_Simplified_Chinesehttpsexploreskillbuilderawslearncourseinternalviewelearning1299amazondynamodbforserverlessarchitecturessimplifiedchinesezhongwenpeiyinbantrk7f7b63dd733b4a1e9ad611c2b57b54cesc_channelel_125">
+     </a>
+     <a href="https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1299/amazon-dynamodb-for-serverless-architectures-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el" rel="nofollow">
+      Amazon DynamoDB for Serverless Architectures (Simplified Chinese)（中文配音版）
+     </a>
+    </h3>
+    <p>
+     <a href="https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1299/amazon-dynamodb-for-serverless-architectures-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el" rel="nofollow">
+      https://explore.skillbuilder.aws/learn/course/internal/view/elearning/1299/amazon-dynamodb-for-serverless-architectures-simplified-chinesezhong-wen-pei-yin-ban?trk=7f7b63dd-733b-4a1e-9ad6-11c2b57b54ce&amp;sc_channel=el
+     </a>
+     <br/>
+     <img alt="image.png" src="https://i-blog.csdnimg.cn/blog_migrate/d6a07e3aa2e18fa7fb27a98e76e27729.png"/>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

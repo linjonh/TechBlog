@@ -1,0 +1,447 @@
+---
+layout: post
+title: 公司数据不泄露,DeepSeek-R1本地化部署web端访问个人知识库搭建与使用,喂饭级实操教程,老旧笔记本竟跑出企业级AI
+date: 2025-02-09 08:02:49 +0800
+categories: [大模型教程]
+tags: [大模型教程,大模型学习,大模型,人工智能,DeepSeek,AI大模型,AI]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=145404500
+    alt: 公司数据不泄露,DeepSeek-R1本地化部署web端访问个人知识库搭建与使用,喂饭级实操教程,老旧笔记本竟跑出企业级AI
+artid: 145404500
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     公司数据不泄露，DeepSeek R1本地化部署+web端访问+个人知识库搭建与使用，喂饭级实操教程，老旧笔记本竟跑出企业级AI
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     <strong>
+      1 Ollama PC本地化部署
+     </strong>
+    </p>
+    <p>
+     <strong>
+      1.1 下载Ollama
+     </strong>
+    </p>
+    <p>
+     https://ollama.com/
+    </p>
+    <p>
+     目前Ollama支持macOS、Linux、Windows，选择相应的系统，macOS和Windows直接下载，Linux系统需要执行下面命令：
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         curl -fsSL https://ollama.com/install.sh | sh
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/f58b25b20fcb4aa742ca04b578d85a75.png"/>
+    </p>
+    <p>
+     荣姐这次选择Windows本地下载，直接安装即可。
+    </p>
+    <p>
+     <strong>
+      1.2 选择模型
+     </strong>
+    </p>
+    <p>
+     点击Models，第一条就是deepseek-r1模型。或者搜索框输入模型名称进行搜索。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/9923a0091d983b6e58245fbb53079fef.png"/>
+    </p>
+    <p>
+     点击进去后，查看各个模型，不同模型执行的命令不同，最后部分看你选择的参数模型。
+    </p>
+    <p>
+     7b命令：ollama run deepseek-r1:7b
+    </p>
+    <p>
+     1.5b命令：ollama run deepseek-r1:1.5b
+    </p>
+    <p>
+     DeepSeek R1提供多个版本，参数量越大，模型通常越强大，但也需要更多的计算资源。
+    </p>
+    <p>
+     比如1.5B代表有15亿个参数。
+    </p>
+    <p>
+     <strong>
+      具体选择哪一个看你硬件设备了。
+     </strong>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/e610963f35eeadf4bab930e0ffb02143.png"/>
+    </p>
+    <p>
+     <strong>
+      1.3 运行命令
+     </strong>
+    </p>
+    <p>
+     荣姐用的电脑配置不高，选了1.5b。如果你配置高，可以选择更大的，毕竟越大效果越好。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/05861df33624fa3a3ade3eb78819a589.png"/>
+    </p>
+    <p>
+     <strong>
+      1.4 效果测试
+     </strong>
+    </p>
+    <p>
+     当界面出现success显示安装成功。
+    </p>
+    <p>
+     输入你是谁，看到deepseek的回答。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/6a9329dc0eb4b51e16ba97d6cebbd3e5.png"/>
+    </p>
+    <p>
+     实操演示视频：
+    </p>
+    <p>
+     <strong>
+      2 DeepSeek+Chatbox网页端
+     </strong>
+    </p>
+    <p>
+     本地命令行使用还是不太直观，可以选择Chatbox进行网页端访问，提高可交互性。
+    </p>
+    <p>
+     Chatbox AI 是一款 AI 客户端应用和智能助手，支持众多先进的 AI 模型和 API，可在 Windows、MacOS、Android、iOS、Linux 和网页版上使用。
+    </p>
+    <p>
+     本地使用Ollama部署完成后，可以使用Chatbox进行调用。
+    </p>
+    <p>
+     根据官方文档给出的步骤进行配置
+    </p>
+    <p>
+     https://chatboxai.app/zh/help-center/connect-chatbox-remote-ollama-service-guide
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/2988680f1c177cccc5f098ef66731c41.png"/>
+    </p>
+    <p>
+     <strong>
+      2.1 环境变量配置
+     </strong>
+    </p>
+    <p>
+     默认情况下，Ollama 服务仅在本地运行，不对外提供服务。
+    </p>
+    <p>
+     要使 Ollama 服务能够对外提供服务，你需要设置以下两个环境变量：
+    </p>
+    <p>
+     OLLAMA_HOST：0.0.0.0
+    </p>
+    <p>
+     OLLAMA_ORIGINS：*
+    </p>
+    <p>
+     在 Windows 上，Ollama 会继承你的用户和系统环境变量。
+    </p>
+    <p>
+     1、通过任务栏退出 Ollama。
+    </p>
+    <p>
+     2、打开设置（Windows 11）或控制面板（Windows 10），并搜索“环境变量”。
+    </p>
+    <p>
+     3、点击编辑你账户的环境变量。
+    </p>
+    <p>
+     4、为你的用户账户编辑或创建新的变量 OLLAMA_HOST，值为 0.0.0.0； 为你的用户账户编辑或创建新的变量 OLLAMA_ORIGINS，值为 *。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/0ccfb5912cfb213797f4bd7b15dc98ff.png"/>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/08890caeb2904a761cc589ac8f5329c5.png"/>
+    </p>
+    <p>
+     5、点击确定/应用以保存设置。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/91544f816dfefd7b20b54d806332dc9f.png"/>
+    </p>
+    <p>
+     6、从 Windows 开始菜单启动 Ollama 应用程序。
+    </p>
+    <p>
+     <strong>
+      2.2 chatbox设置
+     </strong>
+    </p>
+    <p>
+     1、打开官网：https://chatboxai.app/zh，选择启动网页版。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/8b1ccdf4aefc9e4ca6e2a3d67a3825a3.png"/>
+    </p>
+    <p>
+     2、选择本地模型，如果找不到，点击左侧的设置按钮。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/fb20e338d0126bab3b96d12797cfac3a.png"/>
+    </p>
+    <p>
+     3、选择Ollama API。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/843e72f1b3bc4da83dc01120f56ec473.png"/>
+    </p>
+    <p>
+     4、选择模型，本地运行Ollama后会自动出现模型的选项，直接选择即可。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/6b2f1045dde517f67879a70aaa3c3d2e.png"/>
+    </p>
+    <p>
+     5、点击DISPLAY，选择简体中文，点击保存按钮。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/ff1c10ce1ad01b77bc3bbe85e6e99e53.png"/>
+    </p>
+    <p>
+     6、在聊天窗口输入问题进行测试。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/95ecb2d33e8cb6b8224e55cacb8a8fe8.png"/>
+    </p>
+    <p>
+     <strong>
+      2.3 搭配GPTs使用
+     </strong>
+    </p>
+    <p>
+     1、点击左侧我的搭档
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/826268fb0f5a0502aa5077b36caa139a.png"/>
+    </p>
+    <p>
+     2、选择一个你喜欢的应用，本示例选择夸夸机2.0
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/28904830732d6208c3a9555c609eb110.png"/>
+    </p>
+    <p>
+     3、随便输入一个场景，看看大模型的回答。比如自嘲、尴尬、夸张的场景，看看他怎么花样夸你。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/6089f4310ad8870bfcbc6aa87a8bc386.png"/>
+    </p>
+    <p>
+     <strong>
+      实操演示视频：
+     </strong>
+    </p>
+    <p>
+     <strong>
+      3 DeepSeek知识库搭建
+     </strong>
+    </p>
+    <p>
+     我们还可以通过浏览器插件来访问本地部署的大模型，这个插件还支持本地知识库搭建。
+    </p>
+    <p>
+     1、安装插件Page Assist，搜索插件后添加至Chrome
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/37fdcf07bd2cdc3ee2377d0b544c1726.png"/>
+    </p>
+    <p>
+     2、选择本地搭建的模型，点击配置按钮，设置中文
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/8f384d1f7111b13dfba4453fa78c860c.png"/>
+    </p>
+    <p>
+     3、RAG设置，模型选择本地搭建的。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/966cf3f4bf478a3821f6b596d9b91498.png"/>
+    </p>
+    <p>
+     4、点击左侧管理知识，可以添加本地知识库。
+    </p>
+    <p>
+     填写知识标题及上传文件，点击提交按钮。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/7b505393e7418888c798c891eccfd403.png"/>
+    </p>
+    <p>
+     状态为已完成就可以使用了。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/7a5a1c8441202405e30b22de8f29e019.png"/>
+    </p>
+    <p>
+     新建聊天进行测试，在聊天窗口要记得点击右下角知识，选择刚才搭建的知识库名称，然后在上方看到就可以了。
+    </p>
+    <p>
+     对模型进行测试，看看是否可以根据知识库进行回答。
+    </p>
+    <p>
+     我问了一下知识库中的《量子纠缠通信：未来通信的革命》 价格是多少？
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/eaedf1f7c27a355f30218cef3ed3edaf.png"/>
+    </p>
+    <p>
+     思考完成后，模型给出了最终答案，价格是299元。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/d79f49f2bc9d34d153a314ec9a373db2.png"/>
+    </p>
+    <p>
+     荣姐上传知识库内容：为了测试方便，我只输入了5本虚构的书名和价格。
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         书名及价格：
+         <br/>
+         1. 《量子纠缠通信：未来通信的革命》 - 价格：¥299
+         <br/>
+         2. 《时间折叠理论：时间旅行的科学》 - 价格：¥349
+         <br/>
+         3. 《暗物质能源：宇宙的未知宝藏》 - 价格：¥399
+         <br/>
+         4. 《心灵感应网络：思维的直接交流》 - 价格：¥299
+         <br/>
+         5. 《生物计算机：生物技术与计算的融合》 - 价格：¥499
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     跟着荣姐的操作步骤，就可以在本地成功搭建自己的私有知识库了！
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/97f5caec8a054f5e8f337d731dfeae97.jpeg#pic_center"/>
+    </p>
+    <h3>
+     <a id="AI_191">
+     </a>
+     如何学习AI大模型？
+    </h3>
+    <p>
+     我在一线互联网企业工作十余年里，指导过不少同行后辈。帮助很多人得到了学习和成长。
+    </p>
+    <p>
+     我意识到有很多经验和知识值得分享给大家，也可以通过我们的能力和经验解答大家在人工智能学习中的很多困惑，所以在工作繁忙的情况下还是坚持各种整理和分享。但苦于知识传播途径有限，很多互联网行业朋友无法获得正确的资料得到学习提升，故此将并将重要的AI大模型资料包括AI大模型入门学习思维导图、精品AI大模型学习书籍手册、视频教程、实战学习等录播视频免费分享出来。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/26837cac94c3b677bad169b26a9e1e46.png"/>
+    </p>
+    <p>
+     第一阶段： 从大模型系统设计入手，讲解大模型的主要方法；
+    </p>
+    <p>
+     第二阶段： 在通过大模型提示词工程从Prompts角度入手更好发挥模型的作用；
+    </p>
+    <p>
+     第三阶段： 大模型平台应用开发借助阿里云PAI平台构建电商领域虚拟试衣系统；
+    </p>
+    <p>
+     第四阶段： 大模型知识库应用开发以LangChain框架为例，构建物流行业咨询智能问答系统；
+    </p>
+    <p>
+     第五阶段： 大模型微调开发借助以大健康、新零售、新媒体领域构建适合当前领域大模型；
+    </p>
+    <p>
+     第六阶段： 以SD多模态大模型为主，搭建了文生图小程序案例；
+    </p>
+    <p>
+     第七阶段： 以大模型平台应用与开发为主，通过星火大模型，文心大模型等成熟大模型构建大模型行业应用。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/542f58910ba9a5939dc266222e08e2ce.jpeg#pic_center"/>
+    </p>
+    <p>
+     👉学会后的收获：👈
+     <br/>
+     • 基于大模型全栈工程实现（前端、后端、产品经理、设计、数据分析等），通过这门课可获得不同能力；
+    </p>
+    <p>
+     • 能够利用大模型解决相关实际项目需求： 大数据时代，越来越多的企业和机构需要处理海量数据，利用大模型技术可以更好地处理这些数据，提高数据分析和决策的准确性。因此，掌握大模型应用开发技能，可以让程序员更好地应对实际项目需求；
+    </p>
+    <p>
+     • 基于大模型和企业数据AI应用开发，实现大模型理论、掌握GPU算力、硬件、LangChain开发框架和项目实战技能， 学会Fine-tuning垂直训练大模型（数据准备、数据蒸馏、大模型部署）一站式掌握；
+    </p>
+    <p>
+     • 能够完成时下热门大模型垂直领域模型训练能力，提高程序员的编码能力： 大模型应用开发需要掌握机器学习算法、深度学习框架等技术，这些技术的掌握可以提高程序员的编码能力和分析能力，让程序员更加熟练地编写高质量的代码。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c400d99382638099028a1e0493884952.jpeg#pic_center"/>
+    </p>
+    <blockquote>
+     <p>
+      <em>
+       <strong>
+        1.AI大模型学习路线图
+        <br/>
+        2.100套AI大模型商业化落地方案
+        <br/>
+        3.100集大模型视频教程
+        <br/>
+        4.200本大模型PDF书籍
+        <br/>
+        5.LLM面试题合集
+        <br/>
+        6.AI产品经理资源合集
+       </strong>
+      </em>
+     </p>
+    </blockquote>
+    <p>
+     👉获取方式：
+     <br/>
+     😝有需要的小伙伴，可以保存图片到wx扫描二v码免费领取【保证100%免费】🆓
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/3c3a284aea75af128b0d778ce659e582.jpeg#pic_center"/>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

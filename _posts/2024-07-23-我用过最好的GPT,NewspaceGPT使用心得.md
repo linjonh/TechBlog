@@ -1,0 +1,284 @@
+---
+layout: post
+title: 我用过最好的GPT,NewspaceGPT使用心得
+date: 2024-07-23 16:31:40 +0800
+categories: [NewspaceAI]
+tags: [计算机视觉,深度学习,机器学习,人工智能]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=139976831
+    alt: 我用过最好的GPT,NewspaceGPT使用心得
+artid: 139976831
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     我用过最好的GPT，NewspaceGPT使用心得
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <blockquote>
+     <p>
+      记住网址：https://newspace.ai0.cn
+     </p>
+    </blockquote>
+    <h3>
+     <a id="_2">
+     </a>
+     <strong>
+      前言
+     </strong>
+    </h3>
+    <blockquote>
+     <p>
+      只要你能表达明白，NewspaceGPT就不会让你失望。
+     </p>
+    </blockquote>
+    <h3>
+     <a id="Gpt4oGPT5_5">
+     </a>
+     Gpt4o预测GPT5
+    </h3>
+    <blockquote>
+     <p>
+      IT之家6月22日消息，在美国达特茅斯工程学院周四公布的采访中，OpenAI首席技术官米拉·穆拉蒂被问及GPT-5是否会在明年发布，给出了肯定答案并表示将在一年半后发布。此外，穆拉蒂在采访中还把GPT-4到GPT-5的飞跃描述为高中生到博士生的成长。“像 GPT-4 这样的系统则更像是聪明的高中生智力水平，在接下来的几年里，我们期待在特定任务上达到博士的智力水平。事情正在飞速变化、改善。”他强调“博士级”的智能仅适用于某些任务，并非全面达到甚至超越人类水平——“这些系统在特定任务中已经达到了人类水平，当然，在许多任务中，它们还达不到。”综合IT之家此前报道，科技界多位领袖，包括微软 CTO Kevin Scott 和阿里巴巴董事长蔡崇信，都曾表达过对 AI 系统发展之快的惊叹。新一代大语言模型GPT-5的即将登场，又将对我们的工作和日常生活产生怎样的影响呢？
+     </p>
+    </blockquote>
+    <h4>
+     <a id="gpt5__8">
+     </a>
+     <strong>
+      问题
+     </strong>
+     ：gpt5 的图片
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/4c7996dfc5b0406b5e59ad7fe6aad384.png"/>
+    </p>
+    <h4>
+     <a id="__12">
+     </a>
+     <strong>
+      问题
+     </strong>
+     ：瞻望科技 图片
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/d55c53683e40b64e58fbf41480a756d0.png"/>
+    </p>
+    <h4>
+     <a id="__16">
+     </a>
+     <strong>
+      问题
+     </strong>
+     ：科技和人类 图片
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/70cad1e155037c30477d41e946bd0daf.png"/>
+    </p>
+    <h3>
+     <a id="GPT_19">
+     </a>
+     看看GPT到底要怎么用才能如你我所想
+    </h3>
+    <p>
+     在使用 GPT 进行对话或任务处理时，明确表达需求是获得理想结果的关键。以下是一些技巧，帮助你更好地与 GPT 互动：
+    </p>
+    <h4>
+     <a id="_23">
+     </a>
+     在最前面说明需求
+    </h4>
+    <p>
+     将你的需求直接放在对话的开头，可以确保 GPT 立即理解你的期望。例如：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       需求
+      </strong>
+      ：请生成一篇关于环境保护的文章。
+     </li>
+     <li>
+      <strong>
+       参考资料
+      </strong>
+      ：环境保护的重要性、当前面临的挑战、可能的解决方案等。
+     </li>
+    </ul>
+    <h4>
+     <a id="_30">
+     </a>
+     在最后面总结需求
+    </h4>
+    <p>
+     如果你的请求涉及详细的背景信息或多项任务，可以在末尾总结需求，以确保 GPT 完整理解。例如：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       背景
+      </strong>
+      ：我需要一份有关环境保护的报告，重点讨论当前面临的挑战和可能的解决方案。
+     </li>
+     <li>
+      <strong>
+       需求
+      </strong>
+      ：请生成一篇关于环境保护的文章。
+     </li>
+    </ul>
+    <h4>
+     <a id="_37">
+     </a>
+     明确描述任务
+    </h4>
+    <p>
+     确保任务描述具体且清晰，避免含糊不清或过于宽泛。例如：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       不明确
+      </strong>
+      ：写一篇文章。
+     </li>
+     <li>
+      <strong>
+       明确
+      </strong>
+      ：请写一篇关于如何减少塑料污染的500字文章。
+     </li>
+    </ul>
+    <h4>
+     <a id="_44">
+     </a>
+     提供参考资料
+    </h4>
+    <p>
+     如果有特定的信息或背景资料，请明确指出这些资料。例如：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       需求
+      </strong>
+      ：写一篇关于减少塑料污染的文章。
+     </li>
+     <li>
+      <strong>
+       参考资料
+      </strong>
+      ：1) 塑料污染的现状；2) 已采取的措施及其效果；3) 未来的解决方案。
+     </li>
+    </ul>
+    <h3>
+     <a id="_51">
+     </a>
+     使用示例
+    </h3>
+    <p>
+     以下是一些具体的使用示例，展示如何清晰表达需求：
+    </p>
+    <h4>
+     <a id="_55">
+     </a>
+     示例一：文章生成
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       需求
+      </strong>
+      ：请写一篇关于人工智能对社会影响的文章。
+     </li>
+     <li>
+      <strong>
+       参考资料
+      </strong>
+      ：探讨人工智能在医疗、教育、商业等领域的应用及其潜在影响。
+     </li>
+    </ul>
+    <h4>
+     <a id="_60">
+     </a>
+     示例二：技术报告
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       背景
+      </strong>
+      ：我需要一份关于人工智能技术发展现状的报告。
+     </li>
+     <li>
+      <strong>
+       需求
+      </strong>
+      ：请提供一份详细的报告，内容包括当前技术进展、主要应用领域和未来发展趋势。
+     </li>
+    </ul>
+    <h4>
+     <a id="_65">
+     </a>
+     示例三：问题解答
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       需求
+      </strong>
+      ：请解释一下量子计算的基本原理。
+     </li>
+     <li>
+      <strong>
+       参考资料
+      </strong>
+      ：量子叠加、量子纠缠、量子计算在加密和优化问题中的应用。
+     </li>
+    </ul>
+    <h3>
+     <a id="_70">
+     </a>
+     总结
+    </h3>
+    <p>
+     通过在最前面或最后面明确表达你的需求，并提供详细的参考资料，你可以更有效地利用 GPT 达到预期目标。记住，清晰、具体的描述是成功的关键。
+    </p>
+    <pre><code class="prism language-python"><span class="token operator">//</span>python 因为爱，所以学
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello, Python!"</span><span class="token punctuation">)</span>
+</code></pre>
+    <h3>
+     <a id="_82">
+     </a>
+     关注我，不迷路，共学习，同进步
+    </h3>
+    <p>
+     <a href="https://blink.csdn.net/?spm=1010.2135.3001.5353">
+      关注我，不迷路，共学习，同进步
+     </a>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

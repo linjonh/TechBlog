@@ -1,0 +1,336 @@
+---
+layout: post
+title: Java-SEOpenJDKJava-EEJava-框架Java-ME-等概念之间的区别
+date: 2021-01-08 00:56:47 +0800
+categories: [概念辨析/科普,Java]
+tags: [jdk,javase,javame,javaee,OpenJDK]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=112342415
+    alt: Java-SEOpenJDKJava-EEJava-框架Java-ME-等概念之间的区别
+artid: 112342415
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Java SE、OpenJDK、Java EE、Java 框架、Java ME 等概念之间的区别
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atelier-sulphurpool-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#Java__3" rel="nofollow">
+        Java 的三大分支
+       </a>
+      </li>
+      <li>
+       <a href="#Java_SE_7" rel="nofollow">
+        Java SE
+       </a>
+      </li>
+      <li>
+       <a href="#JDK_15" rel="nofollow">
+        JDK
+       </a>
+      </li>
+      <li>
+       <a href="#OpenJDK_21" rel="nofollow">
+        OpenJDK
+       </a>
+      </li>
+      <li>
+       <a href="#Java_EE_25" rel="nofollow">
+        Java EE
+       </a>
+      </li>
+      <li>
+       <a href="#Java__57" rel="nofollow">
+        Java 框架
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#_69" rel="nofollow">
+          框架与库
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#Java_ME_79" rel="nofollow">
+        Java ME
+       </a>
+      </li>
+      <li>
+       <a href="#_93" rel="nofollow">
+        总结与补充
+       </a>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="Java__3">
+     </a>
+     Java 的三大分支
+    </h2>
+    <p>
+     很早以前，Java 被分成了三大分支，这分别叫 Java SE、Java EE、Java ME。不过，现在这些概念已经逐渐变得模糊，以至于不能引起注意了。现在，Java EE 已经被改名且融入到 Java 企业级框架之中，Java SE 已经成为 Java 的同义词，而 Java ME 已经逐渐被忘记了。
+    </p>
+    <h2>
+     <a id="Java_SE_7">
+     </a>
+     Java SE
+    </h2>
+    <p>
+     Java SE 中的 SE 指的是 Standard Edition（标准版）。顾名思义，Java SE 指的是 Java 的基础语法所涉及的内容。一般来说，Java SE 是学习 Java 时的必学内容。当我们说“下载 Java”的时候，也默认指的是下载 Java SE。
+    </p>
+    <p>
+     为什么有 Java SE 这个概念呢？可以想象，Java 涉及的技术是很庞大的，但并不是任何 Java 项目都会使用全部的 Java 相关技术。因此有必要对技术进行分类和划分。另外，早期的技术发明者在一定程度上都是缺乏远见及伴随商业利益的纠葛，已至于诞生了很多现在看来没有意义的概念。总而言之，Java SE 仅指 Java 技术中的基础部分，但这是一个历史遗留的概念，在很多有年代的文章中常常出现。现在不要使用这个名词了，直接使用 Java 一词即可。所以，当读者认为自己学会 Java 的时候，不要高兴得太早，这只是学完了 Java 中最基础的部分。
+    </p>
+    <p>
+     什么叫做“Java 中最基础的部分”呢？这在 Java 编程上的体现就是，如果一个 API 位于 Java SE 中，那么使用它将不需要额外引入任何 JAR 包依赖，否则需要下载额外的 JAR 包，并在 Java 应用运行前指明项目中所使用所有外部依赖。总而言之，不属于 Java SE 的部分属于外部依赖，JDK 不提供它们的实现，如果 Java 项目中需要用到则需要自行下载。
+    </p>
+    <h2>
+     <a id="JDK_15">
+     </a>
+     JDK
+    </h2>
+    <p>
+     JDK 全称 Java Development Kit，译为 Java 开发工具包。笔者并不想成为一个钻研概念的学者，这里只是简单的指出，Java SE 中肯定包含一些供大家使用的函数（接口）等等，这就是 JDK。如果不进行严格的区分，可以认为 JDK 与 Java SE 是一种等价的概念。很早以前，Java 中还有一个 JRE（Java Runtime Environment，Java 运行环境）的概念，而现在 JRE 已被合并到 JDK 中了。因此，以前下载 Java 还需要单独下载 JRE，而现在只需要下载 JDK。原因是，在 Java 9 时，Java 引入了模块化，将扩展类加载器（Extension Class Loader）换成了平台类加载器（Platform Class Loader），然后 JRE 可以通过
+     <code>
+      jlink
+     </code>
+     命令生成，因此没有必要将 JRE 独立出来。
+    </p>
+    <p>
+     简而言之，就下载来说，“下载 Java”、“下载 JDK”、“下载 Java SE”是同一个概念。当我们说 Java 的版本号的时候，也默认指 Java SE、JDK 的版本号。
+    </p>
+    <h2>
+     <a id="OpenJDK_21">
+     </a>
+     OpenJDK
+    </h2>
+    <p>
+     OpenJDK 是一种商业免费的 JDK。很多问题涉及商业后会变得非常麻烦。软件开源并不代表可以在商业上任意使用。有很多的开源协议，这里不详细探讨这个问题，这涉及法律和一些模棱两可的文字游戏以及无止境的争论。在商业上使用 JDK 会有商业隐患，因此诞生了 OpenJDK。OpenJDK 的开源协议是
+     <code>
+      GPL v2 + the Classpath exception
+     </code>
+     。一般认为，在商业上如果使用了并修改 OpenJDK 的源码，那么这个商业项目也必须开源且也实行 OpenJDK 的协议。但如果只是单纯使用 OpenJDK，则不需要开源。更多的信息，可见：
+     <a href="http://openjdk.java.net/faq/" rel="nofollow">
+      http://openjdk.java.net/faq/
+     </a>
+     。
+    </p>
+    <h2>
+     <a id="Java_EE_25">
+     </a>
+     Java EE
+    </h2>
+    <p>
+     Java EE 中的 EE 指的是 Enterprise Edition（企业版）。这个名称很容易让人误解，但请注意，
+     <strong>
+      Java EE 与 Java SE 并不是一种包含关系
+     </strong>
+     。Java EE 中的代码肯定涉及 Java SE。只能说，使用 Java EE 之前必定要先学 Java SE，但 Java SE 并不是 Java EE 的子集。它们是一种依赖关系，Java EE 依赖 Java SE。这个概念类似于手机依赖充电器，但手机这个概念本身不包含充电器。
+    </p>
+    <p>
+     Java EE 也包含一系列开发工具包，其中包含 JSP（Java Server Pages）和 Servlet 的 JAR 包等等。Java EE 中制定了一套企业级网络编程需要遵守的规范和提供了 Java EE 框架的底层实现。
+    </p>
+    <p>
+     很早以前，使用 Java EE 需要单独下载 Java EE 的工具包。但由于市场竞争、技术更替，现在 Java EE 早已被融入企业级开发的 Web 容器中（如 Tomcat 服务器等等）。现在单独下载 Java EE 已经没有任何意义，因为对于企业级开发，从零开始基本不可能。如果对于底层的“造轮子”技术，不使用统一的技术，这将对日后的开发带来沉重的负担。现在，Java EE 现在已经不支持单独下载了，而是被嵌入在各种商业 Web 容器中。在下载 Web 容器后，
+     <strong>
+      Web 容器已经内置了 Java EE 的开发工具包
+     </strong>
+     。
+    </p>
+    <p>
+     2018 年，
+     <a href="https://github.com/eclipse-ee4j/ee4j/issues/9">
+      Java EE 改名为 Jakarta EE
+     </a>
+     ，这是因为 2017 年 Oracle 将 Java EE 移交给了开源组织 Eclipse 基金会。至此，Oracle 只负责将 Java EE 更新至 Java EE 8。从 Jakarta EE 8 开始，将由 Eclipse 基金会负责维护。不过，由于 Java EE 这个名称已深入人心，这里还使用 Java EE 这个名称。
+    </p>
+    <hr/>
+    <p>
+     有读者反馈，笔者上面的解释过于抽象晦涩。确有不妥。这里，笔者可以从另一种角度粗糙地解释 Java EE 与 Java SE 之间的区别：Java EE 是企业级 Web 网络编程必用的技术，而 Java SE 是本地编程必用的技术。简单来说，如果使用 Java 编写的企业级应用需要（被动）进行网络通信，那就需要借助 Java EE。如果不需要联网，只作为一个单纯的算法语言，那就只需要 Java SE。
+    </p>
+    <p>
+     不过，严格来说并不是如此。应该说，Java 的商业高性能通信技术有两种，一种是 Java NIO，另一种就是 Java EE。前者是用于长连接通信且其属于 Java SE 的内容，后者是用于（被动）单向短连接通信。它们的区别解释起来需要很多篇幅，读者可以简单地将后者理解为与浏览器之间的通信。“被动”指的是与浏览器之间的通信中，通信的发起方只会是浏览器，Java 应用通常只是被动地与对方通信，而几乎不会主动发起连接。除了上述两者之外，Java SE 也有其它与网络相关的 API，但这些技术在商业标准面前已经濒临淘汰。如果读者不想失业的话，不要使用纯 Java SE 来完成网络编程的全部任务，而应该借助 Java 网络编程的框架来完成。
+    </p>
+    <hr/>
+    <p>
+     更多信息：
+    </p>
+    <ul>
+     <li>
+      <p>
+       Jakarta EE 官方地址：
+       <a href="https://jakarta.ee/" rel="nofollow">
+        https://jakarta.ee/
+       </a>
+      </p>
+     </li>
+     <li>
+      <p>
+       Java EE 官方地址：
+       <a href="https://www.oracle.com/java/technologies/java-ee-glance.html" rel="nofollow">
+        https://www.oracle.com/java/technologies/java-ee-glance.html
+       </a>
+      </p>
+     </li>
+     <li>
+      <p>
+       Java 官方博客，从 Java EE 到 Jakarta EE 的过渡：
+       <a href="https://blogs.oracle.com/javamagazine/post/transition-from-java-ee-to-jakarta-ee" rel="nofollow">
+        https://blogs.oracle.com/javamagazine/post/transition-from-java-ee-to-jakarta-ee
+       </a>
+      </p>
+     </li>
+     <li>
+      <p>
+       Java EE 为什么要改名为 Jakarta EE？Jakarta 不是印度尼西亚的首都吗？：
+       <a href="https://blog.csdn.net/wangpaiblog/article/details/114489538">
+        https://blog.csdn.net/wangpaiblog/article/details/114489538
+       </a>
+      </p>
+     </li>
+     <li>
+      <p>
+       Jakarta EE 与 JDK 版本对应：
+       <a href="https://en.wikipedia.org/wiki/Jakarta_EE#History" rel="nofollow">
+        https://en.wikipedia.org/wiki/Jakarta_EE#History
+       </a>
+      </p>
+     </li>
+    </ul>
+    <hr/>
+    <h2>
+     <a id="Java__57">
+     </a>
+     Java 框架
+    </h2>
+    <p>
+     框架是企业级开发必用的一项技术，是避免造轮子行为而必然诞生的产物。从可实现的角度来讲，框架并不是非用不可。但这里有一个不得不提及的人类社会的问题：尽管使用不同的技术都能解决同一问题，但使用不同技术可能会导致受到不同程度的歧视。这里不对这个现象作出评价，总之，不能光从“能否完成任务”的角度来决定是否应该使用这个技术。一般来说，企业级开发人员需要掌握很多的框架。在框架之上的编程并非就更有技术含量，不过这是开发人员无法摆脱的事情。
+    </p>
+    <p>
+     Java 的流行框架有很多，如 Java EE 框架、Java ORM 框架、Java 通信框架等等。但如果不加说明，Java 框架一般默认指 Java EE 的框架。
+    </p>
+    <p>
+     Java EE 的框架与 Java EE 也不是同一个概念，不过前者通常使用了后者的技术。确切地说，Java EE 的框架的开发工具包并不包含 Java EE，但其依赖 Java EE。依赖与包含的区别在于，依赖只是一种对某技术的引用。这有点类似于 Java EE 与 Java SE 之间的关系。比方说， Java EE 并不包含 Java SE，但其依赖 Java SE。一般来说，很多企业都有自己的一套框架，不过最好是使用 Java 公认流行的框架，这样有利于技术栈归一。因此，很多企业选择在已有的 Java 流行框架上再进行封装。
+    </p>
+    <p>
+     Java 的商业用途主要是作为服务器语言。在商业的刺激下，现在的主流 Java EE 框架已经很成熟，这就是为什么现在不再流行单独下载和学习 Java EE 了。因为 Java EE 框架中已经融入了这项技术，且屏蔽了它的实现。Java EE 只是作为 Java EE 框架开发者需要参考的一套规范。对于 Java EE 框架的使用者来说，已经逐渐变得不需要去深入了解这项技术了。
+    </p>
+    <p>
+     现在，Java 框架已经几乎被 Spring 家族垄断了市场，无可撼动。其中，Spring MVC 已经战胜 Struts 成为 Java EE 框架的首选。在 Java
+     <strong>
+      后端
+     </strong>
+     领域，Spring 已经成为 Java 开发者必学的一项技术。
+    </p>
+    <h3>
+     <a id="_69">
+     </a>
+     框架与库
+    </h3>
+    <p>
+     有些读者已经意识到了，框架并不是 Java 领域特有的事物，很多其它编程语言都会有这个概念。与之相似的还有另一个概念：
+     <code>
+      库
+     </code>
+     。
+    </p>
+    <p>
+     一般来说，框架是肯定会包含很多库的，但一般不提它们之间的包含关系。库是一种对外提供的一些函数 API 接口的集合。举个简单的例子，对于数组元素排序这种问题，如果不使用库，则需要自行编写排序算法，但如果使用库，很可能一行代码就搞定了，而且不需要掌握与排序相关的算法。因此，使用库可以大大降低开发成本和编程难度。
+    </p>
+    <p>
+     框架是什么？很难简短地对此下一个定义。它包含一些规范化的开发模式、开发流程和一些开箱即用的库，但使用框架的成本比一般的库要高的多。笔者前面已经介绍过框架了，这里只是作一个比喻。对开车自驾游来说，框架相当于车，库相当于车的零件。如果不使用库与框架，则自己需要造车，这包含制定车的设计图、车的各个零件等等。如果使用库，不使用框架，则需要制定车的设计图以及组装各个零件等等。如果使用框架，则只需要考驾照即可。
+    </p>
+    <p>
+     可以看出，即便是使用框架也不能让事情变得非常简单，至少还要学怎么开车。一个项目应不应该套用现成的框架呢？不能一概而论。对于大型商业项目，框架是必定要使用的。对于小型项目，使用框架有可能会让简单事情复杂化。应不应该使用框架，使用哪个框架？这不仅仅是一个技术问题，还是一个商业问题。有时候，这还是一个政治问题。用什么样的框架不仅需要考虑开发成本、运行效率，还要考虑技术的发展前景、现有软件生态、掌握该技术的人员数量、该技术的人力成本等等。笔者的意见是，需要根据自己项目的实际需要，实际测试各项指标来决定自己项目适合的技术，不应该死板市场上的经验教条。
+    </p>
+    <h2>
+     <a id="Java_ME_79">
+     </a>
+     Java ME
+    </h2>
+    <p>
+     Java ME 中的 ME 指的是 Micro Edition。Java ME 曾经在移动设备和嵌入式设备上使用。用它编写的界面很类似于一种不最追求界面美观，只追求基本功能的老人机的界面（实际上，它的默认界面还有点像在桌面操作系统上运行的 Java Swing。但很遗憾，Java Swing 似乎有和 Java ME 相似的结局）。Java ME 生不逢时，不仅遭遇手机时代的重大变革，而且还遭到自家产品 JavaFX Mobile 的挤压。它现在的最新版本是 2018 年 1 月发布的 Java ME 8.3.1，之后就再也没有更新过了。虽然 Oracle 一直没有正式声明弃用 Java ME，但参考 2014 年 4 月发布的 Java ME 8，2016 年 5 月发布的 Java ME 8.3，从版本号上都可以看出来，这已经是穷途末路了（如果读者参考 Java SE 的版本更替速度，就会知道笔者在此处所言非虚）。
+    </p>
+    <p>
+     值得一提的是，虽然安卓属于嵌入式设备，且安卓开发大多使用 Java（有些使用 Kotlin，但 Kotlin 与 Java 有非常密切的联系）。但
+     <strong>
+      安卓开发中使用的 Java 并不是 Java ME
+     </strong>
+     。现在，在 Java 的相关流行技术中，Java ME 早已销声匿迹，成为时代的眼泪。
+    </p>
+    <hr/>
+    <p>
+     更多信息：
+    </p>
+    <ul>
+     <li>
+      Java ME SDK 官方下载地址：
+      <a href="https://www.oracle.com/java/technologies/javameoverview.html#sdk" rel="nofollow">
+       https://www.oracle.com/java/technologies/javameoverview.html#sdk
+      </a>
+     </li>
+    </ul>
+    <hr/>
+    <h2>
+     <a id="_93">
+     </a>
+     总结与补充
+    </h2>
+    <ul>
+     <li>
+      <p>
+       “下载 Java”、“下载 JDK”、“下载 Java SE”这几个概念是同义词。
+      </p>
+     </li>
+     <li>
+      <p>
+       Java EE 不需要单独下载。对 Java EE 的学习将逐渐被对 Java EE 框架的学习所取代。
+      </p>
+     </li>
+     <li>
+      <p>
+       安卓开发中使用的 Java 并不是 Java ME。
+      </p>
+     </li>
+     <li>
+      <p>
+       Java SE、Java EE、Java ME 被称为 Java 的三大分支，不过，这三大分支并未涵盖 Java 领域的所有内容。Java 领域中还有很多技术既不属于 Java SE、Java EE，也不属于 Java ME，如上面提到的安卓，以及 JavaFX、JavaMail 等。因此，如果所建立的工程中需要这些库文件，则需要另外下载单独的 JAR 包。
+      </p>
+     </li>
+    </ul>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,432 @@
+---
+layout: post
+title: SpringBoot-中怎么链接数据库并获取数据
+date: 2025-01-06 17:12:42 +0800
+categories: [经验分享]
+tags: [经验分享,后端,springboot,spring,java]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=139031024
+    alt: SpringBoot-中怎么链接数据库并获取数据
+artid: 139031024
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     SpringBoot 中怎么链接数据库并获取数据
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     在Spring框架中，有多种方式可以链接数据库并获取数据。常见的方式包括使用Spring JDBC、Spring Data JPA和Spring Data JDBC。以下是每种方式的简要说明和示例代码。
+    </p>
+    <p>
+     ### 1. 使用Spring JDBC
+     <br/>
+     Spring JDBC提供了一组方便的类，用于简化数据库访问。以下是使用Spring JDBC的步骤：
+    </p>
+    <p>
+     #### 配置数据源
+     <br/>
+     首先，需要配置数据源。这可以在`application.properties`或`application.yml`中完成。
+    </p>
+    <p>
+     ```properties
+     <br/>
+     # application.properties
+     <br/>
+     spring.datasource.url=jdbc:mysql://localhost:3306/yourdatabase
+     <br/>
+     spring.datasource.username=yourusername
+     <br/>
+     spring.datasource.password=yourpassword
+     <br/>
+     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 配置JdbcTemplate Bean
+     <br/>
+     然后，在你的配置类中配置`JdbcTemplate` Bean。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.context.annotation.Bean;
+     <br/>
+     import org.springframework.context.annotation.Configuration;
+     <br/>
+     import org.springframework.jdbc.core.JdbcTemplate;
+     <br/>
+     import org.springframework.jdbc.datasource.DriverManagerDataSource;
+    </p>
+    <p>
+     import javax.sql.DataSource;
+    </p>
+    <p>
+     @Configuration
+     <br/>
+     public class DatabaseConfig {
+     <!-- -->
+    </p>
+    <p>
+     @Bean
+     <br/>
+     public DataSource dataSource() {
+     <!-- -->
+     <br/>
+     DriverManagerDataSource dataSource = new DriverManagerDataSource();
+     <br/>
+     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+     <br/>
+     dataSource.setUrl("jdbc:mysql://localhost:3306/yourdatabase");
+     <br/>
+     dataSource.setUsername("yourusername");
+     <br/>
+     dataSource.setPassword("yourpassword");
+     <br/>
+     return dataSource;
+     <br/>
+     }
+    </p>
+    <p>
+     @Bean
+     <br/>
+     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+     <!-- -->
+     <br/>
+     return new JdbcTemplate(dataSource);
+     <br/>
+     }
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 使用JdbcTemplate进行数据库操作
+     <br/>
+     最后，在你的服务类中使用`JdbcTemplate`进行数据库操作。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.beans.factory.annotation.Autowired;
+     <br/>
+     import org.springframework.jdbc.core.JdbcTemplate;
+     <br/>
+     import org.springframework.jdbc.core.RowMapper;
+     <br/>
+     import org.springframework.stereotype.Service;
+    </p>
+    <p>
+     import java.sql.ResultSet;
+     <br/>
+     import java.sql.SQLException;
+     <br/>
+     import java.util.List;
+    </p>
+    <p>
+     @Service
+     <br/>
+     public class UserService {
+     <!-- -->
+    </p>
+    <p>
+     @Autowired
+     <br/>
+     private JdbcTemplate jdbcTemplate;
+    </p>
+    <p>
+     public List&lt;User&gt; getAllUsers() {
+     <!-- -->
+     <br/>
+     String sql = "SELECT * FROM users";
+     <br/>
+     return jdbcTemplate.query(sql, new UserRowMapper());
+     <br/>
+     }
+    </p>
+    <p>
+     private static final class UserRowMapper implements RowMapper&lt;User&gt; {
+     <!-- -->
+     <br/>
+     @Override
+     <br/>
+     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+     <!-- -->
+     <br/>
+     User user = new User();
+     <br/>
+     user.setId(rs.getInt("id"));
+     <br/>
+     user.setName(rs.getString("name"));
+     <br/>
+     user.setEmail(rs.getString("email"));
+     <br/>
+     return user;
+     <br/>
+     }
+     <br/>
+     }
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     ### 2. 使用Spring Data JPA
+     <br/>
+     Spring Data JPA简化了JPA基于Hibernate等实现的持久层开发。
+    </p>
+    <p>
+     #### 配置数据源
+     <br/>
+     在`application.properties`或`application.yml`中配置数据源。
+    </p>
+    <p>
+     ```properties
+     <br/>
+     # application.properties
+     <br/>
+     spring.datasource.url=jdbc:mysql://localhost:3306/yourdatabase
+     <br/>
+     spring.datasource.username=yourusername
+     <br/>
+     spring.datasource.password=yourpassword
+     <br/>
+     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+     <br/>
+     spring.jpa.hibernate.ddl-auto=update
+     <br/>
+     spring.jpa.show-sql=true
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 创建实体类
+     <br/>
+     创建一个与数据库表对应的实体类。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import javax.persistence.Entity;
+     <br/>
+     import javax.persistence.GeneratedValue;
+     <br/>
+     import javax.persistence.GenerationType;
+     <br/>
+     import javax.persistence.Id;
+    </p>
+    <p>
+     @Entity
+     <br/>
+     public class User {
+     <!-- -->
+    </p>
+    <p>
+     @Id
+     <br/>
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     <br/>
+     private Long id;
+     <br/>
+     private String name;
+     <br/>
+     private String email;
+    </p>
+    <p>
+     // getters and setters
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 创建Repository接口
+     <br/>
+     创建一个继承自`JpaRepository`的Repository接口。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.data.jpa.repository.JpaRepository;
+    </p>
+    <p>
+     public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+     <!-- -->
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 使用Repository接口
+     <br/>
+     在服务类中使用`UserRepository`进行数据库操作。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.beans.factory.annotation.Autowired;
+     <br/>
+     import org.springframework.stereotype.Service;
+    </p>
+    <p>
+     import java.util.List;
+    </p>
+    <p>
+     @Service
+     <br/>
+     public class UserService {
+     <!-- -->
+    </p>
+    <p>
+     @Autowired
+     <br/>
+     private UserRepository userRepository;
+    </p>
+    <p>
+     public List&lt;User&gt; getAllUsers() {
+     <!-- -->
+     <br/>
+     return userRepository.findAll();
+     <br/>
+     }
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     ### 3. 使用Spring Data JDBC
+     <br/>
+     Spring Data JDBC是另一种简化数据库访问的方法。
+    </p>
+    <p>
+     #### 配置数据源
+     <br/>
+     同样，在`application.properties`或`application.yml`中配置数据源。
+    </p>
+    <p>
+     ```properties
+     <br/>
+     # application.properties
+     <br/>
+     spring.datasource.url=jdbc:mysql://localhost:3306/yourdatabase
+     <br/>
+     spring.datasource.username=yourusername
+     <br/>
+     spring.datasource.password=yourpassword
+     <br/>
+     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+     <br/>
+     spring.data.jdbc.repositories.enabled=true
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 创建实体类
+     <br/>
+     创建一个与数据库表对应的实体类。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.data.annotation.Id;
+     <br/>
+     import org.springframework.data.relational.core.mapping.Table;
+    </p>
+    <p>
+     @Table("users")
+     <br/>
+     public class User {
+     <!-- -->
+    </p>
+    <p>
+     @Id
+     <br/>
+     private Long id;
+     <br/>
+     private String name;
+     <br/>
+     private String email;
+    </p>
+    <p>
+     // getters and setters
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 创建Repository接口
+     <br/>
+     创建一个继承自`CrudRepository`的Repository接口。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.data.repository.CrudRepository;
+    </p>
+    <p>
+     public interface UserRepository extends CrudRepository&lt;User, Long&gt; {
+     <!-- -->
+     <br/>
+     }
+     <br/>
+     ```
+    </p>
+    <p>
+     #### 使用Repository接口
+     <br/>
+     在服务类中使用`UserRepository`进行数据库操作。
+    </p>
+    <p>
+     ```java
+     <br/>
+     import org.springframework.beans.factory.annotation.Autowired;
+     <br/>
+     import org.springframework.stereotype.Service;
+    </p>
+    <p>
+     import java.util.List;
+    </p>
+    <p>
+     @Service
+     <br/>
+     public class UserService {
+     <!-- -->
+    </p>
+    <p>
+     @Autowired
+     <br/>
+     private UserRepository userRepository;
+    </p>
+    <p>
+     public List&lt;User&gt; getAllUsers() {
+     <!-- -->
+     <br/>
+     return (List&lt;User&gt;) userRepository.findAll();
+     <br/>
+     }
+     <br/>
+     }
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,330 @@
+---
+layout: post
+title: python开发一般用什么工具,最常用的python开发工具
+date: 2022-09-20 13:02:10 +0800
+categories: [html]
+tags: [开发语言,python,java]
+image:
+    path: https://img-blog.csdnimg.cn/img_convert/cce5ab71825e193fa3a843913aa6472e.png?x-oss-process=image/resize,m_fixed,h_150
+    alt: python开发一般用什么工具,最常用的python开发工具
+artid: 126951039
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     python开发一般用什么工具,最常用的python开发工具
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/0798f55dd237f80375a1bad2a081a363.png"/>
+    </p>
+    <h3>
+     有哪些值得推荐的 Python 开发工具
+    </h3>
+    <p>
+     推荐5个非常适合Python小白的开发工具：1、Python TutorPython Tutor是由Philip Guo开发的一个免费教育工具，可帮助开发者攻克编程学习中的基础障碍，理解每一行源代码在程序执行时在计算机中的过程。
+    </p>
+    <p>
+     通过这个工具，开发者可以直接在Web浏览器中编写Python代码，并逐步可视化地运行程序。如果你不知道代码在内存中是如何运行的，不妨把它拷贝到Tutor里可视化执行一遍，加深理解。
+    </p>
+    <p>
+     2、IPythonIPython是一个for Humans的Python交互式shell，用了它之后你就不想再用自带的Python shell了，IPython支持变量自动补全，自动缩进，支持bash shell命令，内置了许多实用功能和函数，同时它也是科学计算和交互可视化的最佳平台。
+    </p>
+    <p>
+     3、Jupyter NotebookJupyter Notebook就像一个草稿本，能将文本注释、数学方程、代码和可视化内容全部组合到一个易于共享的文档中，以Web页面的方式展示。
+    </p>
+    <p>
+     它是数据分析、机器学习的必备工具。
+    </p>
+    <p>
+     4、AnacondaPython虽好，可总是会遇到各种包管理和Python版本问题，特别是Windows平台很多包无法正常安装，为了解决这些问题，Anaconda出现了，Anaconda包含了一个包管理工具和一个Python管理环境，同时附带了一大批常用数据科学包，也是数据分析的标配。
+    </p>
+    <p>
+     5、SkulptSkulpt是一个用JavaScript实现的在线Python执行环境，它可以让你轻松在浏览器中运行Python代码。
+    </p>
+    <p>
+     使用Skulpt结合CodeMirror编辑器即可实现一个基本的在线Python编辑和运行环境。
+    </p>
+    <p>
+     <strong>
+      谷歌人工智能写作项目：小发猫
+     </strong>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/142d579c2ca74aef7e129deab97bce97.png"/>
+    </p>
+    <h3>
+     python工具有哪些
+    </h3>
+    <p>
+     第一款：最强终端 Upterm它是一个全平台的终端，可以说是终端里的IDE，有着强大的自动补全功能，之前的名字叫作：BlackWindow
+     <a href="http://www.jzyst.cn/ke93m47u.html" rel="nofollow" title="用python爬取网站数据">
+      用python爬取网站数据
+     </a>
+     。
+    </p>
+    <p>
+     有人跟他说这个名字不利于社区推广，改名叫Upterm之后现在已经17000+Star了。
+    </p>
+    <p>
+     第二款：交互式解释器 PtPython一个交互式的Python解释器，支持语法高亮、提示，甚至是VIM和emacs的键入模式。第三款：包管理必备 Anaconda强烈推荐：Anaconda。
+    </p>
+    <p>
+     它能帮你安装许多麻烦的东西，包括：Python环境、pip包管理工具、常用的库、配置好环境路径等等。这些小事情小白自己一个个去做的话，容易遇到各种问题，也容易造成挫败感。
+    </p>
+    <p>
+     如果你想用Python搞数据方面的事情，安装它就可以了，它甚至开发了一套JIT的解释器Numba。所以Anaconda有了JIT之后，对线上科学计算效率要求比较高的东西也可以搞定了。
+    </p>
+    <p>
+     第四款：编辑器 Sublime3如果你是小白的话，推荐从PyCharm开始上手，但是有时候写一些轻量的小脚本，就会想到轻量级一点的工具。
+    </p>
+    <p>
+     Sublime3很多地方都有了极大的提升，并且用起来比原来还要简单，配合安装Anaconda或CodeIntel插件，可以让Sublime3拥有近乎IDE的体验。
+    </p>
+    <p>
+     第五款：前端在线编辑器 CodeSandbox虽然这个不算是真正意义上的Python开发工具，但如果后端工程师想要写前端的话，这个在线编辑器太方便了，节省了后端工程师的生命。
+    </p>
+    <p>
+     不用安装npm的几千个包了，它已经在云端完成了，才让你直接就可以上手写代码、看效果。对于React、Vue这些主流前端框架都支持。
+    </p>
+    <p>
+     第六款：Python TutorPython Tutor是一个免费教育工具，可帮助学生攻克编程学习中的基础障碍，理解每一行源代码在程序执行时在计算机中的过程。
+    </p>
+    <p>
+     通过这个工具，教师或学生可以直接在web浏览器中编写Python代码，并逐步可视化地运行程序。第七款：IPython如何进行交互式编程?没错，就是通过IPython。
+    </p>
+    <p>
+     IPython相对于Python自带的shell要好用的多，并且能够支持代码缩进、TAB键补全代码等功能。如果进行交互式编程，这是不可缺少的工具。
+    </p>
+    <p>
+     第八款：Jupyter NotebookJupyter Notebook就像一个草稿本，能将文本注释、数学方程、代码和可视化内容全部组合到一个易于共享的文档中，以Web页面的方式展示，它是数据分析、机器学习的必备工具。
+    </p>
+    <p>
+     第九款：PycharmPycharm是程序员常常使用的开发工具，简单、易用，并且能够设置不同的主题模式，根据自己的喜好来设置代码风格。
+    </p>
+    <p>
+     第十款：Python Tutor这个工具可能对初学者比较有用，而对于中高级程序员则用处较少。
+    </p>
+    <p>
+     这个工具的特色是能够清楚的理解每一行代码是如何在计算机中执行的，中高级程序员一般通过分步调试可以实现类似的功能。
+    </p>
+    <p>
+     这个工具对于最初接触Python、最初来学习编程的同学还是非常有用的，初学者可以体验一下。
+    </p>
+    <h3>
+     python一般用什么软件
+    </h3>
+    <p>
+     《Python 3.9.7软件》百度网盘资源免费下载:链接: ?pwd=nhfc 提取码: nhfcPython 3.9.7最新正式版是一种面向对象、直译式计算机程序设计语言，也是一种功能强大而完善的通用型语言，已经具有十多年的发展历史，成熟且稳定。
+    </p>
+    <p>
+     python具有非常简捷而清晰的语法特点，且几乎可以在所有的操作系统中运行，非常适合完成各种高层任务，随着不断的更新优化，逐渐被用于独立的、大型项目的开发，只为给用户更加完美的操作体验。
+    </p>
+    <h3>
+     python中用到哪些软件
+    </h3>
+    <p>
+     一、Python代码编辑器1、sublime Textsublime Text是一款非常流行的代码编辑器，支持Python代码编辑，同时兼容所有平台，并且丰富的插件扩展了语法和编辑功能，迅捷小巧，具有良好的兼容性，很受编程人士的喜爱。
+    </p>
+    <p>
+     2、VimVim和VI是一种模型编辑器，它将文本查看从文本编辑中分离，VIM在原始VI之上做了诸多改进，包括可扩展模型和就地代码构建，VIMScripts可用于各种Python开发任务。
+    </p>
+    <p>
+     3、Visual Studio CodeVisual Studio Code是一款兼容Linux、Mac OS X和Windows平台的全功能代码编辑器，可扩展并且可以对几乎所有任务进行配置，对于Python的支持可以在Visual Studio Code中安装插件，只需快速点击按钮即可成功安装，且可自动识别Python安装和库。
+    </p>
+    <p>
+     二、Python集成开发环境1、PyCharmPyCharm是唯一一款专门面向Python的全功能集成开发环境，同样拥有付费版和免费开源版，PyCharm不论是在Windows、Mac OS X系统中，还是在Linux系统中都支持快速安装和使用。
+    </p>
+    <p>
+     PyCharm直接支持Python开发环境，打开一个新的文件然后就可以开始编写代码，也可以在PyCharm中直接运行和调试Python程序，它还支持源码管理和项目，并且其拥有众多便利和支持社区，能够快速掌握学习使用。
+    </p>
+    <p>
+     2、SpyderSpyder是一款为了数据科学工作流做了优化的开源Python集成开发环境，它是附在Anaconda软件包管理器发行版中的，Spyder拥有大部分集成开发环境该具备的功能，如强大语法高亮功能的代码编辑器、Python代码补全以及集成文件浏览器，其还具有其他Python编辑环境中所不具备的变量浏览器功能，十分适合使用Python的数据科学家们。
+    </p>
+    <p>
+     3、ThonnyThonny是针对新手的一款集成开发环境，适用于全部主流平台，默认情况下，Thonny会和自带捆绑的Python版本一起安装，十分方便新手使用。
+    </p>
+    <h3>
+     python有哪些开发工具
+    </h3>
+    <p>
+     想要学会python，不仅要学习相关的基础知识和教程，对python各种工具的熟悉使用才能让你在工作中迅速成长！
+    </p>
+    <p>
+     有很多优秀的开发者前辈，为我们提供了好用的python工具，来帮我们更方便的实现开发想法，下面就给大家分享5个好用的python开发工具！
+    </p>
+    <p>
+     工具一：Anaconda这个工具就是用来解决Python 开发过程中遇到各种包管理和版本的问题，为了解决很多 Windows 平台的安装包无法正常使用，必须要有Anoconda，它包含了一个包管理工具、一个Python管理环境和常用数据科学包，是数据分析的标配！
+    </p>
+    <p>
+     工具二：Skulpt这个工具是用 Javascript 实现在线 Python 执行环境，实现了在浏览器中轻松运行 Python 代码。
+    </p>
+    <p>
+     搭配使用CodeMirror 编辑器就类似于一个基本的在线Python编辑&amp;运行环境。
+    </p>
+    <p>
+     工具三：Python Tutor这款工具是由 Philip Guo 开发的免费教育工具，适用于python小白，能够帮助小白解决一些编程学习中的基础障碍，还能帮助小白理解每一行源代码在程序执行时在计算机中的过程。
+    </p>
+    <p>
+     大部分被教师或学生使用，但也适用于python小白，可以直接在 Web 浏览器中编写 Python 代码，可以把不知道如何在内存中如何运行的代码，拷贝到Tutor里进行可视化执行，有助于小白对基础的扎实掌握。
+    </p>
+    <p>
+     工具四：IPython这款工具是for Humans 的 Python 交互式解释器，功能非常强大，能够支持变量自动补全，自动缩进，支持 bash shell 命令，内置了许多实用功能和函数，同时它也是科学计算和交互可视化的最佳平台。
+    </p>
+    <p>
+     它还具有以下特性：·更强的交互 shell（基于 Qt 的终端）；·一个基于浏览器的记事本，支持代码，纯文本，数学公式，内置图表和其他富媒体；·支持交互数据可视化和图形界面工具；·灵活，可嵌入解释器加载到任意一个自有工程里；·简单易用，用于并行计算的高性能工具。
+    </p>
+    <p>
+     工具五：Jupyter Notebook看名字就知道Notebook,这款工具就像一个草稿本，能储存文本注释、数学方程、代码和可视化内容等，然后以 Web 的方式呈现。
+    </p>
+    <p>
+     有数据分析、机器学习需求同学的必备工具。python学习网，大量的免费python视频教程，欢迎在线学习！
+    </p>
+    <h3>
+     有哪些值得推荐的 Python 开发工具
+    </h3>
+    <p>
+     第一种：PTVS，一个在github上的开源项目PTVS在 IronPython Tools for Visual Studio的代码基础上进行了增强并添加了对Cython、集群的支持，以及诸如Numpy和Scipy这样的新模块。
+    </p>
+    <p>
+     第二种：Eclipse，跨平台的自由集成开发环境主要用来Java语言开发，但也可以通过插件使其成为其他计算机编程语言的开发工具，比如Python、C++等。
+    </p>
+    <p>
+     Eclipse最初是由IBM公司开发的替代商业软件Visual Age for java的下一代IDE开发环境，2001年贡献给开源社区，由非营利软件供应商联盟Eclipse基金会管理。
+    </p>
+    <p>
+     第三种：PyCharm，由JetBrains打造的一款Python IDEPyCharm是一种Python IDE(Integrated Development Environment，集成开发环境)，带有一整套可以帮助用户在使用Python语言开发时提高其效率的工具，比如调试、语法高亮、项目管理、代码跳转、智能提示、自动完成、单元测试、版本控制。
+    </p>
+    <p>
+     此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。
+    </p>
+    <p>
+     第四种：IPython，是一个交互式计算系统IPython是Python的原生交互式shell的增强版，可以完成许多不同寻常的任务，比如帮助实现并行化计算;主要使用它提供的交互性帮助，比如代码着色、改进了命令行回调、制表符完成、宏功能以及改进了交互式帮助。
+    </p>
+    <p>
+     第五种：Eric5，一个集成了项目管理功能的 Python 集成开发环境Eric5提供无限制数量的编辑器、集成的Python shell、集成调试器、集成对包括 Subversion 和 Mercurial版本控制系统的支持，集成单元测试等。
+    </p>
+    <h3>
+     python的ide有哪些
+    </h3>
+    <p>
+     第一款：Eric6Eric6是一个用Python编写的Python IDE，虽然它使用Qt5UI框架提供一个比IDLE复杂很多的UI。
+    </p>
+    <p>
+     但是它的入门需要一些组件，因为Eric6不像传统的本地平台程序一样应用。它本质上是一个大的Python包和几个重量级依赖，例如Qt5的Python绑定。
+    </p>
+    <p>
+     结果是：Eric6入门需要对Python包管理的理解，因此它不太可能会吸引初学者用户。从这方面而言，安装程序脚本会提供反馈，以便您知道哪些包需要提取和安装以完成设置过程。
+    </p>
+    <p>
+     Eric6有着设备齐全的显著特点。它包含现代的IDE，如类浏览、版本控制等通常的实用工具，但它也集成了对Python专用功能如unittest、PyLint和cx_freeze应用程序分发系统的支持。
+    </p>
+    <p>
+     在Eric6创建的新项目，也可以建成PyQT4中/5GUI和控制台应用程序，因为底层库已安装，但额外的开发工具，如Qt的窗体设计器不包括在默认设置之内。
+    </p>
+    <p>
+     第二款：Wing IDE作为Python程序员的智能开发环境，WingIDE强调专门为Python用户设计的功能集成。这不仅仅是跨代码库的重构功能或使用多个Python解释器。
+    </p>
+    <p>
+     它还包括与许多流行的Python框架、包和第三方应用程序的详细集成。RaspberryPi用户也可以使用Wing IDE进行开发。不仅如此，Wing IDE是一个Python初学者非常好上手的工具。
+    </p>
+    <p>
+     第三款：PyzoPyzo是一个小IDE，主要针对科学计算的用户，有一个小工具集：编辑器、交互式shell、文件浏览器、源结构浏览器和一些其他的设施。
+    </p>
+    <p>
+     它主要用于与库的快速交互，您可以在Python的REPL中键入命令或执行单个文件，而不是正式的应用程序开发。
+    </p>
+    <p>
+     在这个意义上，它不太适合那些想要创建应用程序，更适合那些想要使用Python作为工作台环境的人。第四款：ThonnyThonny，一个专门为初学者使用该语言设计的小型的IDE，是一个更加简单的选择。
+    </p>
+    <p>
+     在Windows、Mac或Linux上可用，它还可以节省用户下载或配置的Python解释器。Python的最新版本与Thonny捆绑在一起，IDE默认开箱可用。
+    </p>
+    <p>
+     也就是说，你可以随时交换任何其他Pythonruntime。
+    </p>
+    <p>
+     第五款：NINJA-IDE作为一个独立的项目，NINJA-IDE可以像专业级开发工具，如ActiveState"s Komodo IDE或PyCharm，不仅在开发人员的经验，而且它的功能集是由Python用户构建和为了Python用户构建的。
+    </p>
+    <p>
+     例如，NINJA-IDE的首选项对话框有一个标签，用于选择在运行程序时使用的Python解释器，以及用户启动或设置解释器使用的所有各种命令行选项的复选框，这是非常方便地。
+    </p>
+    <p>
+     IDE中的另一个选项卡默认显示为Migration2to3，它可以分析为Python2.X编写的脚本并提出建议。
+    </p>
+    <p>
+     第六款：VisualStudio Code微软的简单和精益的代码编辑器从其支持不同语言的扩展的瀚海星系中获得力量。
+    </p>
+    <p>
+     Python开发人员有一堆VisualStudioCode扩展，但最流行，最容易，最重要的是DonJayamanne的扩展。
+    </p>
+    <p>
+     它与每一个最新版本的Python保持同步，它集成了所有你想要的好东西的支持：代码片段、代码静态分析、自动完成与科学工具集成，如Jupyter、重构、单元测试、调试以及更多更多。
+    </p>
+    <h3>
+     编写python的软件有哪些？
+    </h3>
+    <p>
+     《Python 3.9.7软件》百度网盘资源免费下载:链接: ?pwd=nhfc 提取码: nhfcPython 3.9.7最新正式版是一种面向对象、直译式计算机程序设计语言，也是一种功能强大而完善的通用型语言，已经具有十多年的发展历史，成熟且稳定。
+    </p>
+    <p>
+     python具有非常简捷而清晰的语法特点，且几乎可以在所有的操作系统中运行，非常适合完成各种高层任务，随着不断的更新优化，逐渐被用于独立的、大型项目的开发，只为给用户更加完美的操作体验。
+    </p>
+    <h3>
+     python编程有哪些开发软件?
+    </h3>
+    <p>
+     python相关软件免费下载   链接 提取码:l0p8  Python由荷兰数学和计算机科学研究学会的吉多·范罗苏姆于1990 年代初设计，作为一门叫做ABC语言的替代品。
+    </p>
+    <p>
+     Python提供了高效的高级数据结构，还能简单有效地面向对象编程。
+    </p>
+    <p>
+     Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言，随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、大型项目的开发。
+    </p>
+    <p>
+     <br/>
+     相关链接：
+     <br/>
+     1、
+     <a href="https://blog.csdn.net/mr_yu_an/article/details/126849519" title="JavaScript编程软件手机版,JavaScript编程软件">
+      JavaScript编程软件手机版,JavaScript编程软件
+     </a>
+     <br/>
+     2、
+     <a href="https://blog.csdn.net/aifans_bert/article/details/126754793" title="神经网络评价分类指标有,神经网络综合评价方法">
+      神经网络评价分类指标有,神经网络综合评价方法
+     </a>
+     <br/>
+     3、
+     <a href="https://blog.csdn.net/aifans_bert/article/details/126633653" title="卷积神经网络 图像识别,卷积神经网络图像融合">
+      卷积神经网络 图像识别,卷积神经网络图像融合
+     </a>
+     <br/>
+     4、
+     <a href="https://blog.csdn.net/vvccyyqq/article/details/126660206" title="医学图像分类 神经网络,神经科学与神经影像">
+      医学图像分类 神经网络,神经科学与神经影像
+     </a>
+     <br/>
+     5、
+     <a href="https://blog.csdn.net/mr_yu_an/article/details/126811915" title="vue组件间的参数传递过程,vue传递参数的几种方法">
+      vue组件间的参数传递过程,vue传递参数的几种方法
+     </a>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

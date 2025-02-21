@@ -1,15 +1,16 @@
 ---
 layout: post
-title: 2025-01-16-粉丝福利社鸿蒙之光HarmonyOS-NEXT原生应用开发入门
+title: 粉丝福利社鸿蒙之光HarmonyOS-NEXT原生应用开发入门
 date: 2025-01-16 03:38:02 +0800
 categories: [愚公系列-送书福利社]
-tags: [harmonyos,华为]
+tags: [华为,harmonyos]
 image:
-  path: https://api.vvhan.com/api/bing?rand=sj&artid=144895299
-  alt: 粉丝福利社鸿蒙之光HarmonyOS-NEXT原生应用开发入门
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=144895299
+    alt: 粉丝福利社鸿蒙之光HarmonyOS-NEXT原生应用开发入门
 artid: 144895299
 render_with_liquid: false
 ---
+<p class="artid" style="display:none">$url</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -314,4 +315,3 @@ render_with_liquid: false
 </div>
 
 
-<p class="artid" style="display:none">68747470733a2f2f626c:6f672e6373646e2e6e65742f6161323532383837373938372f:61727469636c652f64657461696c732f313434383935323939</p>

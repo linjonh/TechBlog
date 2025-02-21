@@ -1,0 +1,343 @@
+---
+layout: post
+title: 第一章HarmonyOS介绍01-HarmonyOS简介
+date: 2024-09-05 17:16:29 +0800
+categories: [鸿蒙/HarmonyOSNext应用开发教程]
+tags: [鸿蒙,华为,前端,harmonyos]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=140321150
+    alt: 第一章HarmonyOS介绍01-HarmonyOS简介
+artid: 140321150
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     《第一章、HarmonyOS介绍》01-HarmonyOS简介
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h2 id="%E5%89%8D%E8%A8%80">
+     1. 前言
+    </h2>
+    <p id="u29d096ab">
+     欢迎来到鸿蒙应用开发系列教程的第一课，在本单元，你将学习HarmonyOS的基本概念，熟悉HarmonyOS核心技术理念、开发语言、UI框架开发和测试工具，了解应用的上架与分发能力。
+    </p>
+    <h2 id="%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E7%9A%84%E6%9C%BA%E9%81%87%E3%80%81%E6%8C%91%E6%88%98%E5%92%8C%E8%B6%8B%E5%8A%BF">
+     2. 应用开发的机遇、挑战和趋势
+    </h2>
+    <p id="u08b43181">
+     随着万物互联时代的开启，应用的设备底座将从几十亿 手机扩展到数百亿的iot设备。
+    </p>
+    <p id="uaced1c1a">
+    </p>
+    <p class="img-center">
+     <img alt="" height="612" id="ua7f8f00a" src="https://i-blog.csdnimg.cn/blog_migrate/c204f29fb340ea1d38a1c2627cc6538f.png" width="630"/>
+    </p>
+    <p id="u3e8a7924">
+     但是更多的智能设备并没有带来更好的全场景体验，新的场景存在
+     <strong>
+      连接
+     </strong>
+     步骤复杂、
+     <strong>
+      数据
+     </strong>
+     难以互通、
+     <strong>
+      生态
+     </strong>
+     无法共享和
+     <strong>
+      能力
+     </strong>
+     难以协同等问题。
+    </p>
+    <p id="u97979364">
+     而这些问题给开发者带来了新的挑战。当前移动应用开发中遇到的主要挑战:
+    </p>
+    <blockquote>
+     <ul>
+      <li id="u3272df8c">
+       针对不同设备上的不同操作系统重复开发维护多套版本
+      </li>
+      <li id="ufff7d73b">
+       多种语言站对人员技能要求高
+      </li>
+      <li id="uf11e3e16">
+       多种开发框架，不同的编程范式
+      </li>
+      <li id="u44446d55">
+       命令式编程，需关注细节，变更频繁，维护成本高
+      </li>
+     </ul>
+    </blockquote>
+    <p id="ufea63bcd">
+     随着 AI 时代全面来临，智能化、轻量化可快速达成消费者意图，可独立执行完成单一功能的程序实体正成为新的趋势。为了更好地抓住机遇，应对万物互联所带来的一系列挑战，新的应用生态应该具备如下特征:
+    </p>
+    <blockquote>
+     <ul>
+      <li id="u7948e712">
+       单一设备延伸到多设备
+      </li>
+      <li id="u0d8b7d0c">
+       厚重应用模式到轻量化服务模式
+      </li>
+      <li id="uf2fb8361">
+       集中化分发到AI加持下的智慧分发
+      </li>
+      <li id="u47092935">
+       纯软件到软异星协同的AI能力
+      </li>
+     </ul>
+    </blockquote>
+    <p id="ucd0ffca2">
+     鸿蒙 OS 是新一代的智能终端操作系统，为不同设备的智能化互联与协同提供了统一的语言，为用户带来简洁、流畅、连续、安全、可靠的全场景交互体验。
+    </p>
+    <p id="u316806ac">
+    </p>
+    <p class="img-center">
+     <img alt="" height="496" id="u9163c201" src="https://i-blog.csdnimg.cn/blog_migrate/ff0bb4fb53e7a1e860b541b8ffb23f30.png" width="1200"/>
+    </p>
+    <h2 id="oQV7Q">
+     3. HarmonyOS核心技术理念
+    </h2>
+    <p id="uf1378891">
+     HarmonyOS 提出了三大技术理念 :
+    </p>
+    <blockquote>
+     <ol>
+      <li id="u9cfdeac7">
+       一次开发、多端部署
+      </li>
+      <li id="u93fcd367">
+       可分可合、自由流转
+      </li>
+      <li id="u1484b282">
+       统一生态、原生智能
+      </li>
+     </ol>
+    </blockquote>
+    <p id="u2e492436">
+    </p>
+    <p class="img-center">
+     <img alt="" height="730" id="u840b63ae" src="https://i-blog.csdnimg.cn/blog_migrate/69eba2cbf41a40dc98b03251e4ff35ef.png" width="1200"/>
+    </p>
+    <h3 id="IKh2C">
+     3.1. 一次开发、多端部署
+    </h3>
+    <p id="ua6b64c22">
+     一次开发、多端部署指的是一个工程一次开发上架，多端按需部署，目的是为了支撑开发者高效的开发多种终端设备上的应用。为了实现这一目的，HarmonyOS 提供了几个核心能力，包括
+     <strong>
+      多端开发环境
+     </strong>
+     、
+     <strong>
+      多端开发能力
+     </strong>
+     以及
+     <strong>
+      多端分发机制
+     </strong>
+     。
+    </p>
+    <p id="u323b8126">
+    </p>
+    <p class="img-center">
+     <img alt="" height="530" id="u73ae4c10" src="https://i-blog.csdnimg.cn/blog_migrate/955686705826c913e1dd597cb980f088.png" width="1200"/>
+    </p>
+    <h3 id="Mc5eL">
+     3.2. 可分可合、自由流转
+    </h3>
+    <p id="u68611f0e">
+     元服务是支撑可分可合、自由流转的轻量化程序实体，帮助开发者的服务更快触达用户。
+    </p>
+    <p id="uadf5a582">
+    </p>
+    <p class="img-center">
+     <img alt="" height="728" id="ub1581382" src="https://i-blog.csdnimg.cn/blog_migrate/b17631bfaa5a5a50186ff1936a31dd1e.png" width="780"/>
+    </p>
+    <h4 id="qxTAZ">
+     3.2.1. 可分可合
+    </h4>
+    <p id="ua0a22fd6">
+     可分可合是指在开发态，开发者通过业务解偶，把不同的业务拆分成多个模块。
+    </p>
+    <p id="ua14aa4b9">
+     在部署态，开发者可以将一个或多个模块自由组合打包成多个 App Pack，不同的 App Pack的包名是不一样的，每个 App Pack都需要单独上架。
+    </p>
+    <p id="u075b71e6">
+     在运行态，应用和元服务的生命周期完全独立。HarmonyOS 提供了自由流转的能力，使得开发者可以方便地开发出跨越多个设备的应用，用户也能够方便地使用这些功能。
+    </p>
+    <h4 id="BjPlT">
+     3.2.2. 自由流转
+    </h4>
+    <p id="u77c5ea48">
+     自由流转可分为
+     <strong>
+      跨端迁移
+     </strong>
+     和
+     <strong>
+      多端协同
+     </strong>
+     两种情况，它们分别是时间上的串型交互和时间上的并行交互。
+    </p>
+    <p id="uee197a92">
+     自由流转不仅带给用户全新的交互体验，也为开发者搭建了一座从单设备时代通往多设备时代的桥梁。
+    </p>
+    <p id="u97899b08">
+     HarmonyOS 支持业界主流跨平台开发框架，通过多层次的开放能力，提供统一接入标准，实现三方框架快速接入主流跨平台开发框架，已有版本正在适配HarmonyOS ，基于这些框架开发的应用可以以较低成本完成迁移。
+    </p>
+    <p id="u2b9f149d">
+    </p>
+    <p class="img-center">
+     <img alt="" height="297" id="yi7sM" src="https://i-blog.csdnimg.cn/blog_migrate/54ce639b84d64bc70a41061f0343df0f.png" width="1200"/>
+    </p>
+    <h3 id="h2LPn">
+     3.3. 统一生态、原生智能
+    </h3>
+    <p id="u347803ee">
+     HarmonyOS 内置强大的 AI 能力，面向HarmonyOS生态应用的开发，通过不同层次的AI能力开放，满足开发者的不同开发场景下的诉求，降低应用的开发门槛，帮助开发者快速实现应用智能化。
+    </p>
+    <p id="u12b83421">
+    </p>
+    <p class="img-center">
+     <img alt="" height="459" id="ud3f356e0" src="https://i-blog.csdnimg.cn/blog_migrate/9b54c661227ca63910ae0fe0c34f91bc.png" width="1136"/>
+    </p>
+    <p id="u12b83421">
+     MachineLearning Kit提供了场景化能力 : 包括通用卡证识别、实时语音识别等，提供AI控件能力，使系统控件融合文字识别等AI能力。
+    </p>
+    <p id="u7a709f9e">
+     意图框架提供了HarmonyOS系统级的意图标准体系，通过多维系统感知、大模型等能力构建全局意图范式，实现对用户显性与潜在意图的理解，并及时准确地将用户需求传递给生态伙伴，匹配合时宜的服务，为用户提供多模态、场景化进阶场景体验。
+    </p>
+    <p id="u8a149f0b">
+     Core AI API 提供了图像语义、语言语音解析、ocr文字识别等能力。
+    </p>
+    <p id="uf386b5fb">
+     Core DeepLearning API 提供了高性能、低功耗的端侧推理和端侧学习环境。
+    </p>
+    <h2 id="XvcD4">
+     4. 高效开发与测试
+    </h2>
+    <p id="ud0927f72">
+     下面介绍 HarmonyOS 应用的高效开发与测试。
+    </p>
+    <h3 id="ayNuU">
+     4.1. ArkUI
+    </h3>
+    <p id="uc003e518">
+     方舟开发框架为 HarmonyOS 应用的 UI 开发提供了完整的基础设施，包括简洁的 UI 语法、丰富的 UI 功能，如组件布局、动画、交互、事件等，以及实时界面预览工具等，可以支持开发者进行可视化界面开发。
+    </p>
+    <p id="u35ebbfba">
+     ArkUI 框架提供给开发者两种开发方式，基于
+     <span style="color:#4da8ee;">
+      ArkTs的声明式开发范式
+     </span>
+     和
+     <span style="color:#4da8ee;">
+      基于JavaScript 扩展的类web开发范式
+     </span>
+     。
+    </p>
+    <p id="ua77a895a">
+    </p>
+    <p class="img-center">
+     <img alt="" height="550" id="uf1501f50" src="https://i-blog.csdnimg.cn/blog_migrate/de385d0f8737e629c1b14c1d56c5ebf7.png" width="1129"/>
+    </p>
+    <h3 id="wvOM7">
+     4.2. DevEco Studio
+    </h3>
+    <p id="u1ef18090">
+     DevEco Studio 是面向 HarmonyOS 生态的集成开发环境，提供了一站式的 HarmonyOS 生态应用元服务开发能力，主要包括工程管理、代码编辑、界面预览、编译构建、代码调试、性能调优、设备模拟、命令行工具和端云一体化开发等功能。
+    </p>
+    <p id="ued076001">
+    </p>
+    <p class="img-center">
+     <img alt="" height="403" id="u0cf71862" src="https://i-blog.csdnimg.cn/blog_migrate/f2971ac527892787faf7eb3744a2984d.png" width="1065"/>
+    </p>
+    <h3 id="wNRha">
+     4.3. 测试套件
+    </h3>
+    <p id="ub4c0e751">
+     测试套件包括
+     <strong>
+      测试标准
+     </strong>
+     和
+     <strong>
+      测试工具
+     </strong>
+     两部分。
+    </p>
+    <blockquote>
+     <p id="ud3695bc8">
+      <span style="color:#fe2c24;">
+       <strong>
+        测试标准 :
+       </strong>
+      </span>
+      <strong>
+      </strong>
+      覆盖 HarmonyOS 生态应用性能、功耗、稳定性、兼容性、ux、安全、分布式游戏等测试规范，帮助开发者解决测什么的问题。
+     </p>
+     <p>
+     </p>
+     <p id="udae43868">
+      <span style="color:#fe2c24;">
+       <strong>
+        测试工具 :
+       </strong>
+      </span>
+      <strong>
+      </strong>
+      平台提供了 HarmonyOS 生态应用开发调试、单元测试、集成测试、上架测试等各开发阶段所需的测试工具集，支持多种设备，帮助开发者全面高效测试。
+     </p>
+    </blockquote>
+    <h2 id="NXOSq">
+     5. 上架与分发
+    </h2>
+    <p id="u03caf07a">
+     HUAWEI AppGallery Connect 为开发者提供全球化、全场景、一站式应用与服务分发能力，并为开发者提供质量、安全、工程管理等领域的能力，大幅降低应用开发与运维难度，提升版本质量，帮助开发者获得用户并实现收入的规模增长。
+    </p>
+    <p id="u1eae650a">
+    </p>
+    <p class="img-center">
+     <img alt="" height="708" id="u924e62af" src="https://i-blog.csdnimg.cn/blog_migrate/3c184cec37d567efd861bb5a4b7a262b.png" width="1086"/>
+    </p>
+    <p id="u220fff04">
+     快速上架 : 即 HUAWEI AppGallery Connect 作为开发者统一提交 HarmonyOS 生态应用与元服务的入口，集成证书管理、项目管理、版本管理等功能，支持 HarmonyOS 生态应用与元服务的快速上架予以分发。
+    </p>
+    <p id="u3e452bb6">
+     上架审核 : 是指为了给用户提供更安全且出色的体验，HUAWEI AppGallery Connect对开发者提交的 HarmonyOS 生态应用语言服务进行审核与测试。应用与服务分发是指 HUAWEI AppGallery Connect 提供了灵活的分发能力，支持按阶段、维度、场景等多种形式，高效精准的分发到用户设备上。
+    </p>
+    <p id="uec7f74b3">
+     HarmonyOS 作为万物互联时代泛终端服务的载体，面向跨设备、多终端环境，实现服务随身的跨设备无缝体验。
+    </p>
+    <p id="u01b0545d">
+     元服务与AI算法深度配合，实现多入口场景化分发。
+    </p>
+    <h2 id="cjDKN">
+     6. 课程总结
+    </h2>
+    <p id="u9956b5d6">
+     通过本次课程，相信大家已经了解了应用开发的机遇、挑战和趋势，熟悉了 HarmonyOS 的核心技术理念、开发语言、ArkUI框架、开发和测试工具，同时了解了 HarmonyOS 应用的一站式上架与分发能力。
+    </p>
+    <p id="u93891791">
+     更多的内容大家可以参考技术文章来继续学习。这节课我们就介绍到这里，谢谢大家！
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

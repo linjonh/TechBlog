@@ -1,0 +1,365 @@
+---
+layout: post
+title: 调用DeepSeek-API实现对本地数据库的AI管理
+date: 2025-02-15 15:06:16 +0800
+categories: [数据库]
+tags: [数据库,python,deeplearning]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=145441852
+    alt: 调用DeepSeek-API实现对本地数据库的AI管理
+artid: 145441852
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     调用DeepSeek API实现对本地数据库的AI管理
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     <strong>
+      <span style="color:#fe2c24">
+       场景描述：
+      </span>
+     </strong>
+     基于DeepSeek模型，实现对本地数据库的AI管理。
+    </p>
+    <p>
+     <strong>
+      <span style="color:#fe2c24">
+       实现思路：
+      </span>
+     </strong>
+    </p>
+    <p>
+     1、本地python+flask搭建个WEB，配置数据源。
+    </p>
+    <p>
+     2、通过DeepSeek模型根据用户输入的文字需求，自动生成SQL语句。
+    </p>
+    <p>
+     3、通过SQL执行按钮，实现对数据库的增删改查。
+    </p>
+    <p>
+     <strong>
+      <span style="color:#fe2c24">
+       前置条件：
+      </span>
+     </strong>
+     到DeepSeek官网的API开放平台注册，完成以下配置：
+    </p>
+    <pre><code class="language-python">DEEPSEEK_API_KEY=your-deepseek-api-key
+DEEPSEEK_API_URL=https://api.deepseek.com/v1/chat</code></pre>
+    <p>
+     <strong>
+      <span style="color:#fe2c24">
+       效果展示：
+      </span>
+     </strong>
+    </p>
+    <p>
+     <img alt="" height="1071" src="https://i-blog.csdnimg.cn/direct/efa38c936a9045a0a87e4b50c5f5479f.png" width="1749"/>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#fe2c24">
+       核心代码：
+      </span>
+     </strong>
+    </p>
+    <pre><code class="language-python">from flask import Blueprint, render_template, request, jsonify, current_app
+from .database import DatabaseManager
+from .config import DatabaseConfig
+import requests
+from .sql_generator import SQLGenerator  # 添加这行导入
+
+main = Blueprint('main', __name__)
+db_manager = DatabaseManager()
+
+@main.route('/')
+def index():
+    return render_template('index.html')
+
+@main.route('/connect', methods=['POST'])
+def connect_database():
+    try:
+        data = request.json
+        print(f"收到连接请求: {data}")  # 添加调试信息
+        
+        # 先创建一个没有指定数据库的连接
+        config = DatabaseConfig(
+            host=data.get('host'),
+            user=data.get('user'),
+            password=data.get('password'),
+            database='',  # 先不指定数据库
+            port=int(data.get('port', 3306))
+        )
+        
+        success, error_message = db_manager.connect(config)
+        if success:
+            # 获取数据库列表
+            databases = db_manager.get_databases()
+            print(f"成功获取数据库列表: {databases}")  # 添加调试信息
+            return jsonify({
+                'success': True,
+                'databases': databases
+            })
+        print(f"连接失败: {error_message}")  # 添加调试信息
+        return jsonify({
+            'success': False,
+            'message': error_message
+        })
+    except Exception as e:
+        error_message = f"发生错误: {str(e)}"
+        print(error_message)  # 添加调试信息
+        import traceback
+        print(traceback.format_exc())  # 打印完整的错误堆栈
+        return jsonify({
+            'success': False,
+            'message': error_message
+        })
+
+@main.route('/select-database', methods=['POST'])
+def select_database():
+    try:
+        data = request.json
+        database = data.get('database')
+        if not database:
+            return jsonify({
+                'success': False,
+                'message': '请选择数据库'
+            })
+            
+        print(f"切换到数据库: {database}")
+        
+        # 使用选择的数据库重新连接
+        config = DatabaseConfig(
+            host=db_manager.host,
+            user=db_manager.user,
+            password=db_manager.password,
+            database=database,
+            port=db_manager.port
+        )
+        
+        success, error_message = db_manager.connect(config)
+        if success:
+            print(f"成功切换到数据库: {database}")
+            return jsonify({
+                'success': True,
+                'message': f'成功切换到数据库: {database}'
+            })
+        else:
+            print(f"切换数据库失败: {error_message}")
+            return jsonify({
+                'success': False,
+                'message': f'切换数据库失败: {error_message}'
+            })
+            
+    except Exception as e:
+        error_message = f"选择数据库时发生错误: {str(e)}"
+        print(error_message)
+        import traceback
+        print(traceback.format_exc())
+        return jsonify({
+            'success': False,
+            'message': error_message
+        })
+
+@main.route('/generate-sql', methods=['POST'])
+def generate_sql():
+    try:
+        user_input = request.json.get('input')
+        model_type = request.json.get('model')  # 默认值
+        print(f"收到SQL生成请求，用户输入: {user_input}，选择模型: {model_type}")
+
+        if model_type == '':
+            # 使用本地 SQL 生成器
+            generated_sql = SQLGenerator.generate_sql(user_input)
+            return jsonify({
+                'success': True,
+                'sql': generated_sql
+            })
+        else:
+            # 使用其他模型的现有逻辑
+            model_config = current_app.config['AVAILABLE_MODELS'].get(model_type)
+            if not model_config:
+                return jsonify({
+                    'success': False,
+                    'message': '不支持的模型类型'
+                })
+            
+            # 通用提示词
+            prompt = f"""
+            作为一个SQL专家，请根据以下需求生成合适的SQL语句：
+            需求：{user_input}
+            
+            请只返回SQL语句，不需要其他解释。
+            如果是创建表，请包含合适的字段类型和必要的约束。
+            """
+
+            try:
+                headers = {
+                    'Authorization': f'Bearer {model_config["api_key"]}',
+                    'Content-Type': 'application/json'
+                }
+
+                if model_type == 'deepseek':
+                    payload = {
+                        'model': model_config['model_name'],
+                        'messages': [
+                            {'role': 'user', 'content': prompt}
+                        ],
+                        'temperature': 0.3
+                    }
+                else:  # OpenAI
+                    payload = {
+                        'model': model_config['model_name'],
+                        'messages': [
+                            {'role': 'system', 'content': 'You are a SQL expert. Only return SQL statements without any explanation.'},
+                            {'role': 'user', 'content': prompt}
+                        ],
+                        'temperature': 0.3
+                    }
+
+                response = requests.post(
+                    model_config['api_url'],
+                    headers=headers,
+                    json=payload,
+                    timeout=30
+                )
+
+                if response.status_code == 200:
+                    if model_type == 'deepseek':
+                        generated_sql = response.json()['choices'][0]['message']['content'].strip()
+                    else:  # OpenAI
+                        generated_sql = response.json()['choices'][0]['message']['content'].strip()
+                    
+                    print(f"生成的SQL: {generated_sql}")
+                    return jsonify({'success': True, 'sql': generated_sql})
+                else:
+                    error_message = f"API调用失败: {response.status_code} - {response.text}"
+                    print(error_message)
+                    return jsonify({
+                        'success': False,
+                        'message': error_message
+                    })
+
+            except requests.exceptions.RequestException as e:
+                error_message = f"API请求错误: {str(e)}"
+                print(error_message)
+                return jsonify({
+                    'success': False,
+                    'message': error_message
+                })
+
+    except Exception as e:
+        error_message = f"SQL生成错误: {str(e)}"
+        print(error_message)
+        import traceback
+        print(traceback.format_exc())
+        return jsonify({
+            'success': False,
+            'message': error_message
+        })
+
+@main.route('/execute-sql', methods=['POST'])
+def execute_sql():
+    try:
+        sql = request.json.get('sql')
+        if not sql or sql.strip().startswith('--'):
+            return jsonify({
+                'success': False,
+                'result': None,
+                'message': '请先生成有效的 SQL 语句'
+            })
+
+        print(f"执行SQL: {sql}")
+        result, error_message = db_manager.execute_query(sql)
+        
+        if result is None:
+            return jsonify({
+                'success': False,
+                'result': None,
+                'message': error_message or '执行失败，请确保已连接数据库并检查 SQL 语句是否正确'
+            })
+            
+        print(f"执行结果: {result}")
+        return jsonify({
+            'success': True,
+            'result': result
+        })
+        
+    except Exception as e:
+        error_message = f"SQL执行错误: {str(e)}"
+        print(error_message)
+        import traceback
+        print(traceback.format_exc())
+        return jsonify({
+            'success': False,
+            'result': None,
+            'message': error_message
+        })
+
+@main.route('/get-databases', methods=['GET'])
+def get_databases():
+    databases = db_manager.get_databases()
+    return jsonify({'databases': databases})
+
+@main.route('/test-connection', methods=['POST'])
+def test_connection():
+    try:
+        data = request.json
+        print(f"收到测试连接请求: {data}")
+        
+        # 创建一个没有指定数据库的连接配置
+        config = DatabaseConfig(
+            host=data.get('host'),
+            user=data.get('user'),
+            password=data.get('password'),
+            database='',  # 不指定数据库
+            port=int(data.get('port', 3306))
+        )
+        
+        success, error_message = db_manager.connect(config)
+        if success:
+            # 获取数据库列表
+            databases = db_manager.get_databases()
+            print(f"测试连接成功，获取到数据库列表: {databases}")
+            return jsonify({
+                'success': True,
+                'databases': databases
+            })
+        print(f"测试连接失败: {error_message}")
+        return jsonify({
+            'success': False,
+            'message': error_message
+        })
+    except Exception as e:
+        error_message = f"测试连接时发生错误: {str(e)}"
+        print(error_message)
+        import traceback
+        print(traceback.format_exc())
+        return jsonify({
+            'success': False,
+            'message': error_message
+        }) </code></pre>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

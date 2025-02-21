@@ -1,0 +1,302 @@
+---
+layout: post
+title: Jenkins集成TestNG-Junit自动化测试
+date: 2017-08-18 16:10:17 +0800
+categories: [Jenkins]
+tags: [自动化测试,testng,junit,jenkins,devops]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=77370097
+    alt: Jenkins集成TestNG-Junit自动化测试
+artid: 77370097
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Jenkins集成TestNG Junit自动化测试
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     <span style="color:#990000;">
+      自动化测试是Jenkins持续集成和部署的又一核心价值体现，我们先来做一个基于Junit 的  TestNG 测试。我们的实现步骤是：1、在Eclipse上安装TestNG插件；2、编写Junit测试及TestNG.xml配置；3、在Jenkins上安装xUnit插件；4、添加构建任务的测试及报告配置。另外除了Junit测试还有模拟浏览器测试的Selenium测试。
+     </span>
+    </p>
+    <h3>
+     在Eclipse上安装TestNG插件
+    </h3>
+    <p>
+     采用update URL方式进行安装：
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/598c8d20c5e701a7501256ea4d7c9352.png"/>
+    </p>
+    <p>
+     输入网址：http://beust.com/eclipse
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/f425d8d1aa0faef726b85d02117c7277.png"/>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/b28a65d9d277cdbc36a2fff19e7a3645.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     安装完成后重启eclipse后生效。查看TestNG是否安装成功：
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/79a8da9af5c17ccedb3bfabccc30209a.png">
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/ddf1418c3fde0c3005fc4331cbf2c355.png"/>
+     </img>
+    </p>
+    <p>
+    </p>
+    <p>
+     上面界面引用自：
+     <a href="http://www.cnblogs.com/testlurunxiu/p/5987949.html" rel="nofollow" title="JAVA+Maven+TestNG搭建接口测试框架及实例 - lurunxiu - 博客园">
+      JAVA+Maven+TestNG搭建接口测试框架及实例 - lurunxiu - 博客园
+     </a>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h3>
+     编写Junit测试及TestNG.xml配置
+    </h3>
+    <p>
+     首先，在maven项目上导入TestNG依赖环境：
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     导入TestNG依赖包
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/e2484c967acf1490bd89759b53c3d933.png"/>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/1132d7887520d0e42855d4c1cef3ba2b.png"/>
+    </p>
+    <p>
+     新建testng class文件
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/3d7ede3eaec22b251df2a34ad756e209.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     创建自己的Junit TestNG配置：
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818154405604"/>
+    </p>
+    <p>
+     此时会生成TestNG.xml和FirstTest.java到测试目录下。我们可以根据此方式添加其他的测试，如SecondTest.java和ThirdTest.java
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818154620562"/>
+    </p>
+    <p>
+     下面我们来看下TestNG.xml的配置：
+    </p>
+    <p>
+    </p>
+    <pre class="has"><code class="language-html">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;suite name="Suite" parallel="false"&gt;
+	&lt;test name="Test"&gt;
+		&lt;classes&gt;
+			&lt;class name="com.boonya.app.test.FirstTest" /&gt;
+			&lt;class name="com.boonya.app.test.SecondTest" /&gt;
+			&lt;class name="com.boonya.app.test.ThirdTest" /&gt;
+		&lt;/classes&gt;
+	&lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+</code></pre>
+    <p>
+     <br/>
+     <span style="color:#990000;">
+      注：SecondTest.java和ThirdTest.java是手动配置进去的，因为TestNG.xml只生成一次。
+     </span>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h3>
+     在Jenkins上安装xUnit插件
+    </h3>
+    <p>
+     xUnit：支持非Java以外的Junit测试。
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818153258493"/>
+    </p>
+    <p>
+     <span style="color:#990000;">
+      注：Jenkins 推荐插件安装已经装过Junit Plugin了。
+     </span>
+    </p>
+    <p>
+    </p>
+    <h3>
+     添加构建任务的测试及报告配置
+    </h3>
+    <p>
+     项目在编译打包的时候需要用到testng依赖包，在pom.xml内添加如下配置：
+    </p>
+    <p>
+    </p>
+    <pre class="has"><code class="language-html">&lt;!-- https://mvnrepository.com/artifact/org.testng/testng --&gt;
+		&lt;dependency&gt;
+		    &lt;groupId&gt;org.testng&lt;/groupId&gt;
+		    &lt;artifactId&gt;testng&lt;/artifactId&gt;
+		    &lt;version&gt;6.11&lt;/version&gt;
+		    &lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;</code></pre>
+    <p>
+     现在来配置Jenkins，因为我们之前项目没有添加Junit测试，所以构建命令直接使用：
+     <span style="color:#990000;">
+      mvn clean install
+     </span>
+     就可以了，加入Junit需要跳过测试命令为：
+     <span style="color:#990000;">
+      clean install -Dmaven.test.skip=true
+     </span>
+     ；当我们需要执行测试类的时候，我们需要配置单元测试命令(
+     <span style="color:#990000;">
+      mvn test
+     </span>
+     ) 或者 单元测试&amp;集成测试命令（
+     <span style="color:#990000;">
+      mvn verify
+     </span>
+     ）。如下图所示：
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818155411570"/>
+    </p>
+    <p>
+     目前阶段执行测试用例使用mvn  test和mvn verify都可以。接下来我们配置Test NG  Junit 测试报告（
+     <span style="color:#990000;">
+      Publish Junit tset result report 配置操作自动前置
+     </span>
+     ）：
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818155931812"/>
+    </p>
+    <p>
+     注意：TestNG版本6.x以上测试报告的地址为
+     <span style="color:#990000;">
+      **/target/surefire-reports/*.xml
+     </span>
+     而不是
+     <span style="color:#990000;">
+      ‘myproject/target/test-reports/*.xml’
+     </span>
+     ，您可以通过构建任务的工作空间去找到对应的测试报告路径，如下所示：
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818160336265"/>
+    </p>
+    <p>
+    </p>
+    <h3>
+     测试结果相关数据展示
+    </h3>
+    <p>
+     整体测试历史成功失败统计：
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818160807346"/>
+    </p>
+    <p>
+     点击彩色部分进入用例分析:
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818160835370"/>
+    </p>
+    <p>
+     进入测试报告目录进行查看：
+    </p>
+    <p>
+     <strong>
+      index.html
+     </strong>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818172733862"/>
+    </p>
+    <p>
+    </p>
+    <div>
+     <div>
+      <img alt="" src="https://img-blog.csdn.net/20170818173152035"/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <strong>
+      emailable-report.html
+     </strong>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20170818172750410"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     TestNG 自动化Junit测试到此已配置完成。
+    </p>
+    <p>
+     <span style="color:#990000;">
+      注意：如果现在eclipse运行TestNG测试用例只需要在TestNG.xml文件上右键执行Run as &gt;TestNG suite即可。
+     </span>
+    </p>
+    <p>
+     TestNG maven插件：
+     <a href="http://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html" rel="nofollow" title="Maven Surefire Plugin – Using TestNG">
+      Maven Surefire Plugin – Using TestNG
+     </a>
+    </p>
+    <p>
+     Selenium浏览器模拟测试介绍：
+     <a href="http://www.seleniumhq.org/" rel="nofollow" title="Selenium">
+      Selenium
+     </a>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

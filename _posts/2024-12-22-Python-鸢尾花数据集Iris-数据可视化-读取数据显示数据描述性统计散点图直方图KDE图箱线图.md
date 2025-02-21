@@ -1,0 +1,299 @@
+---
+layout: post
+title: Python-鸢尾花数据集Iris-数据可视化-读取数据显示数据描述性统计散点图直方图KDE图箱线图
+date: 2024-12-22 14:37:27 +0800
+categories: [人工智能与机器学习,Python]
+tags: [人工智能,python]
+image:
+    path: https://img-blog.csdnimg.cn/20200506192018629.png?x-oss-process&#61;image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDQzNjY3Nw&#61;&#61;,size_16,color_FFFFFF,t_70
+    alt: Python-鸢尾花数据集Iris-数据可视化-读取数据显示数据描述性统计散点图直方图KDE图箱线图
+artid: 105957179
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Python-鸢尾花数据集Iris 数据可视化 ：读取数据、显示数据、描述性统计、散点图、直方图、KDE图、箱线图
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     本博客运行环境为Jupyter Notebook、Python3。使用的数据集是鸢尾花数据集（Iris）。主要叙述的是数据可视化。
+     <br/>
+     IRIS数据集以鸢尾花的特征作为数据来源，数据集包含150个数据集，有4维，分为3 类，每类50个数据，每个数据包含4个属性，是在数据挖掘、数据分类中常用的测试集、训练集。
+    </p>
+    <p>
+     读取数据包括sklearn库引入和读取.csv文件保存的数据集。
+     <br/>
+     显示数据包括显示具体数据、查看整体数据信息、描述性统计。
+     <br/>
+     数据可视化包括散点图、直方图、KDE图、箱线图。
+     <br/>
+    </p>
+    <div class="toc">
+     <h4>
+      目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <a href="#_8" rel="nofollow">
+          读取数据
+         </a>
+        </li>
+        <li>
+         <a href="#_27" rel="nofollow">
+          显示数据
+         </a>
+        </li>
+        <li>
+         <a href="#_78" rel="nofollow">
+          数据可视化
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h3>
+     <a id="_8">
+     </a>
+     读取数据
+    </h3>
+    <p>
+     从sklearn库中读取：（我使用的是该种办法）
+     <br/>
+     <s>
+      ，因为文件运行起来总缺少一组数据，可文件本身打开显示数据是完整的，这个问题我还未解决。如有知道的同学欢迎帮忙指点一下。
+     </s>
+     此问题已解决，如有问题的小伙伴可以将文件读取改为这句代码！Iris = pd.read_csv(r’Iris.csv’,header = None)
+    </p>
+    <pre><code class="prism language-python"><span class="token keyword">from</span> sklearn <span class="token keyword">import</span> datasets
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+ 
+iris_datas <span class="token operator">=</span> datasets<span class="token punctuation">.</span>load_iris<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     从文件中读取：
+     <br/>
+     路径应该更为相应的的文件存储路径。
+    </p>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token comment">#Iris = pd.read_csv('iris.csv')</span>
+Iris <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">r'Iris.csv'</span><span class="token punctuation">,</span>header <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+</code></pre>
+    <h3>
+     <a id="_27">
+     </a>
+     显示数据
+    </h3>
+    <p>
+     显示所有数据：
+    </p>
+    <pre><code class="prism language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>iris_datas<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token comment"># 数据集中的数据</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>iris_datas<span class="token punctuation">.</span>target_name<span class="token punctuation">)</span> <span class="token comment">#  iris的种类</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/8ec1384724a866d9d3566285f00b1615.png">
+      <br/>
+      <strong>
+       读取前五行数据
+      </strong>
+     </img>
+    </p>
+    <pre><code class="prism language-python">iris <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>iris_datas<span class="token punctuation">.</span>data<span class="token punctuation">,</span> columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'SpealLength'</span><span class="token punctuation">,</span> <span class="token string">'Spealwidth'</span><span class="token punctuation">,</span> <span class="token string">'PetalLength'</span><span class="token punctuation">,</span> <span class="token string">'PetalLength'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+ 
+iris<span class="token punctuation">.</span>shape
+iris<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     SepaLengthCm: 花萼长度, 单位cm；SepalWidthCm: 花萼宽度, 单位cm；PetalLengthCm: 花瓣长度, 单位cm
+     <br/>
+     ；PetalWidthCm; 花瓣宽度, 单位cm
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/7d8db05cd99cdb780b4f61cc3fa42a7f.png">
+      <br/>
+      <strong>
+       读取后五行数据
+      </strong>
+     </img>
+    </p>
+    <pre><code class="prism language-python">iris<span class="token punctuation">.</span>tail<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/e9c88e5499f292b24e999166fe5804b9.png">
+      <br/>
+      <strong>
+       查看数据整体信息
+      </strong>
+     </img>
+    </p>
+    <pre><code class="prism language-python">iris<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     150行, 4个64位浮点数，数据中无缺失值。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/e4bea4c6f1b6a795a422a747f56042b7.png">
+      <br/>
+      <strong>
+       描述性统计
+      </strong>
+     </img>
+    </p>
+    <pre><code class="prism language-python">iris<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     花萼长度最小值4.30, 最大值7.90, 均值5.84, 中位数5.80, 右偏；花萼宽度最小值2.00, 最大值4.40, 均值3.05, 中位数3.00, 右偏；花瓣长度最小值1.00, 最大值6.90, 均值3.76, 中位数4.35, 左偏；花瓣宽度最小值0.10, 最大值2.50, 均值1.20, 中位数1.30, 左偏。
+     <br/>
+     按中位数来度量: 花萼长度 &gt; 花瓣长度 &gt; 花萼宽度 &gt; 花瓣宽度
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/4312d625fe19eaa418d47253a98d984f.png">
+      <br/>
+      <strong>
+       描述性统计转置
+      </strong>
+     </img>
+    </p>
+    <pre><code class="prism language-python">iris<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>T     
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9a83a427ee9eb72d9d652863cfb90d1e.png"/>
+    </p>
+    <h3>
+     <a id="_78">
+     </a>
+     数据可视化
+    </h3>
+    <p>
+     <strong>
+      花萼长度与宽度/花瓣长度与宽度的可视化
+     </strong>
+    </p>
+    <pre><code class="prism language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> Counter<span class="token punctuation">,</span> defaultdict
+<span class="token keyword">import</span> matplotlib
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+ matplotlib<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+ 
+style_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'^'</span><span class="token punctuation">,</span> <span class="token string">'s'</span><span class="token punctuation">]</span>       <span class="token comment"># 设置点的不同形状，不同形状默认颜色不同，也可自定义</span>
+data <span class="token operator">=</span> iris_datas<span class="token punctuation">.</span>data
+labels <span class="token operator">=</span> iris_datas<span class="token punctuation">.</span>target_names
+cc <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
+ 
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> d <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    cc<span class="token punctuation">[</span>labels<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">(</span>i<span class="token operator">/</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>d<span class="token punctuation">)</span> 
+p_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+c_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+ 
+<span class="token keyword">for</span> each <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> <span class="token punctuation">(</span>c<span class="token punctuation">,</span> ds<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>cc<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        draw_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>ds<span class="token punctuation">)</span>
+        p <span class="token operator">=</span> plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>draw_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> each<span class="token punctuation">]</span><span class="token punctuation">,</span> draw_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> each<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> style_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        p_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+        c_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+ 
+    plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> p_list<span class="token punctuation">)</span><span class="token punctuation">,</span> c_list<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'鸢尾花花瓣的长度和宽度'</span><span class="token punctuation">)</span> <span class="token keyword">if</span> each <span class="token keyword">else</span> plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'鸢尾花花萼的长度和宽度'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'花瓣的长度(cm)'</span><span class="token punctuation">)</span> <span class="token keyword">if</span> each <span class="token keyword">else</span> plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'花萼的长度(cm)'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'花瓣的宽度(cm)'</span><span class="token punctuation">)</span> <span class="token keyword">if</span> each <span class="token keyword">else</span> plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'花萼的宽度(cm)'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/26bf307d9b5f4f11e166115cecee5a47.png"/>
+    </p>
+    <p>
+     <strong>
+      数据直方图
+     </strong>
+     <br/>
+     之前已经使用过describe()计算出四个属性所对应的四分位数, 最大值以及最小值等统计量。这些均是以表格的形式展示。
+    </p>
+    <pre><code class="prism language-python">url <span class="token operator">=</span> <span class="token string">"https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"</span>  
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'sepal-length'</span><span class="token punctuation">,</span> <span class="token string">'sepal-width'</span><span class="token punctuation">,</span> <span class="token string">'petal-length'</span><span class="token punctuation">,</span> <span class="token string">'petal-width'</span><span class="token punctuation">,</span> <span class="token string">'class'</span><span class="token punctuation">]</span>  
+dataset <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>url<span class="token punctuation">,</span> names<span class="token operator">=</span>names<span class="token punctuation">)</span>
+dataset<span class="token punctuation">.</span>hist<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#数据直方图histograms</span>
+
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9b074d2fb82630b963e7f9080cf63feb.png">
+      <br/>
+      <strong>
+       散点图
+      </strong>
+      <br/>
+      x轴表示sepal-length花萼长度，y轴表示sepal-width花萼宽度
+     </img>
+    </p>
+    <pre><code class="prism language-python">dataset<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">'sepal-length'</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">'sepal-width'</span><span class="token punctuation">,</span> kind<span class="token operator">=</span><span class="token string">'scatter'</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f5d804c37c44037e4ec3c9509b71758d.png"/>
+    </p>
+    <p>
+     <strong>
+      KDE图
+     </strong>
+     <br/>
+     KDE图也被称作密度图(Kernel Density Estimate,核密度估计)。
+    </p>
+    <pre><code class="prism language-python">dataset<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind<span class="token operator">=</span><span class="token string">'kde'</span><span class="token punctuation">)</span> 
+</code></pre>
+    <p>
+     运行结果如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/04f1a7e8605bce223992fe21e72ee0e8.png">
+      <br/>
+      <strong>
+       箱线图
+      </strong>
+      <br/>
+      kind='box’绘制箱图,包含子图且子图的行列布局layout为2*2，子图共用x轴、y轴刻度，标签为False。
+     </img>
+    </p>
+    <pre><code class="prism language-python">dataset<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind<span class="token operator">=</span><span class="token string">'box'</span><span class="token punctuation">,</span> subplots<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> layout<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sharex<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> sharey<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/917ce18b0011b28658159c814a02871e.png"/>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

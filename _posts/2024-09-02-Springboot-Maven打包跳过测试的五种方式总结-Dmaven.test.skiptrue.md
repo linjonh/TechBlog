@@ -1,0 +1,209 @@
+---
+layout: post
+title: Springboot-Maven打包跳过测试的五种方式总结-Dmaven.test.skiptrue
+date: 2024-09-02 15:07:30 +0800
+categories: [maven]
+tags: [springboot,maven,junit]
+image:
+    path: https://img-blog.csdnimg.cn/339aec6300aa471c9004a17bba616d6a.png?x-oss-process=image/resize,m_fixed,h_150
+    alt: Springboot-Maven打包跳过测试的五种方式总结-Dmaven.test.skiptrue
+artid: 129396503
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Springboot Maven打包跳过测试的五种方式总结 -Dmaven.test.skip=true
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     使用Maven打包的时候，可能会因为单元测试打包失败，这时候就需要跳过单元测试。也为了加快打包速度，也需要跳过单元测试。
+    </p>
+    <h2>
+     <a id="Maven_2">
+     </a>
+     Maven跳过单元测试五种方法。
+    </h2>
+    <p>
+     在正式环境中运行Springboot应用，需要先打包，然后使用
+     <code>
+      java -jar xx.jar
+     </code>
+     就能运行我们的项目。
+    </p>
+    <p>
+     <img alt="Maven打包" src="https://i-blog.csdnimg.cn/blog_migrate/67b2bb8970b1c070d21dac3249717ce0.png"/>
+    </p>
+    <p>
+     我们平时使用的在开发中使用的是开发或测试的数据库，和生产上面的一般是隔离的，意味着打包的时候需要激活生产的配置文件，但是我们不一定有访问生产库的权限，此时我们直接打包就会出现问题。当我们直接点击上面的package的时候他会激活单元测试，需要测试通过以后才能打包，但是很显然测是不能通过的，因为我激活了生产的配置但是我并没有访问上产库的权限，此时就会陷入一直打包却打不完的感觉，这就需要我们打包时跳过测试。那怎么跳过测试呢？下面我们探讨一下此问题的解决方法：
+    </p>
+    <h3>
+     <a id="1_12">
+     </a>
+     1、命令行方式跳过测试
+    </h3>
+    <p>
+     我们可以通过使用命令将项目打包，添加跳过测试的命令就可以了，可以用两种命令来跳过测试：
+    </p>
+    <ul>
+     <li>
+      <p>
+       <code>
+        mvn package -DskipTests=true
+       </code>
+      </p>
+      <ul>
+       <li>
+        <code>
+         -DskipTests=true
+        </code>
+        不执行测试用例，但编译测试用例类生成相应的class文件至 target/test-classes 下。
+       </li>
+      </ul>
+     </li>
+     <li>
+      <p>
+       <code>
+        mvn package -Dmaven.test.skip=true
+       </code>
+      </p>
+      <ul>
+       <li>
+        <code>
+         -Dmaven.test.skip=true
+        </code>
+        不执行测试用例，也不编译测试用例类。
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <p>
+     在使用
+     <code>
+      mvn package
+     </code>
+     进行编译、打包时，Maven会执行
+     <code>
+      src/test/java
+     </code>
+     中的 JUnit 测试用例，有时为了跳过测试，会使用参数
+     <code>
+      -DskipTests=true
+     </code>
+     和
+     <code>
+      -Dmaven.test.skip=true
+     </code>
+     ，这两个参数的主要区别是：
+    </p>
+    <p>
+     使用
+     <code>
+      -Dmaven.test.skip=true
+     </code>
+     ，不但跳过单元测试的运行，也跳过测试代码的编译；
+     <br/>
+     使用
+     <code>
+      -DskipTests=true
+     </code>
+     跳过单元测试，但是会继续编译。
+    </p>
+    <h3>
+     <a id="2pomxml_31">
+     </a>
+     2、pom.xml中配置跳过测试
+    </h3>
+    <p>
+     可以在 pom.xml 中添加如下配置来跳过测试：
+    </p>
+    <pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;!-- maven 打包时跳过测试 --&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+                &lt;skip&gt;true&lt;/skip&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+    <h3>
+     <a id="3idea_50">
+     </a>
+     3、idea直接配置
+    </h3>
+    <p>
+     Maven命令栏的工具栏有下图中的图标，这个图标就是
+     <code>
+      Skip Tests
+     </code>
+     。点击选中，再用 LifeStyle 中的打包就会跳过测试。注：因为我的IDEA是2022的版本，图标可能和以前的版本有些许区别，以前的版本应该是一个蓝色的圆圈里面带一个闪电。
+    </p>
+    <p>
+     <img alt="idea直接配置" src="https://i-blog.csdnimg.cn/blog_migrate/b373b5e24750162e3b0e9d5be163b9ce.png"/>
+    </p>
+    <h3>
+     <a id="4Maven_56">
+     </a>
+     4、添加Maven配置参数
+    </h3>
+    <p>
+     打开配置，找到
+     <strong>
+      Build,Exxcution,Deployment –&gt; Maven Tools –&gt; Maven –&gt; Runner
+     </strong>
+     ，在 VM option 中添加
+     <code>
+      -Dmaven.test.skip=true
+     </code>
+     或者
+     <code>
+      -DskipTests=true
+     </code>
+     ，就能在打包是跳过测试。
+    </p>
+    <p>
+     <img alt="添加Maven配置参数" src="https://i-blog.csdnimg.cn/blog_migrate/29eb43ec3f3108f8715662a8b4af55e8.png"/>
+    </p>
+    <h3>
+     <a id="5_64">
+     </a>
+     5、通过更改设置
+    </h3>
+    <p>
+     打开配置，找到
+     <strong>
+      Build,Exxcution,Deployment –&gt; Maven Tools –&gt; Maven –&gt; Runner
+     </strong>
+     ，在 Properties 中勾选 Skip Test 选项。
+    </p>
+    <p>
+     <img alt="通过更改设置" src="https://i-blog.csdnimg.cn/blog_migrate/5ebdd16849a18f0b05d3fa62ce798131.png"/>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

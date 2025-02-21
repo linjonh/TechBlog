@@ -1,0 +1,249 @@
+---
+layout: post
+title: 3分钟快速搭建nodejs本地服务器运行测试htmljs
+date: 2024-12-30 18:12:22 +0800
+categories: [nodejs/nginx/tomcat]
+tags: [服务器,nodejs]
+image:
+    path: https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTYwMjIwMTIwMDAwOTEx?x-oss-process=image/format,png
+    alt: 3分钟快速搭建nodejs本地服务器运行测试htmljs
+artid: 50704331
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     3分钟快速搭建nodejs本地服务器运行测试html/js
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h3>
+     <a id="_0">
+     </a>
+     （前端工程师利器）
+    </h3>
+    <h4>
+     <a id="_3">
+     </a>
+     背景
+    </h4>
+    <p>
+     做前端的都知道，公司的项目在自己的电脑上搭建环境是挺麻烦的一件事情
+    </p>
+    <ol>
+     <li>
+      首先：一般个人电脑没公司的配置性能好，
+     </li>
+     <li>
+      其次：搭建公司项目在自己电脑涉及很多缓存环境，资源环境包，数据库等的限制，加起来够搞一天了（熟悉公司搭建的环境除外）
+     </li>
+    </ol>
+    <hr/>
+    <h4>
+     <a id="_12">
+     </a>
+     现状
+    </h4>
+    <p>
+     就我自身公司而言情况是这样，我作为前端工程师，
+     <br/>
+     前端目前是基于polymer——实现最近遇到的问题就是不知道自己写的页面有没有什么问题，但是要成功启动项目的tomcat才能看，因为这些页面无法直接打开，会包资源解析错误，
+    </p>
+    <hr/>
+    <h4>
+     <a id="_18">
+     </a>
+     步骤
+    </h4>
+    <p>
+     于是我在想，如何才能把前端页面不依赖tomcat这些蛋疼的部署服务器呢？
+     <br/>
+     于是百度看到了nodejs和nginx，带着对前端服务器的好奇开始了自己的实践，一个晚上也请教了一些同学，然后得到了一些启发
+     <br/>
+     步骤如下
+     <br/>
+     1、到nodejs官网下载安装包http://nodejs.cn/安装完成后自动映射了环境到系统中，不需要自己配置环境变量，然后打开控制台
+     <br/>
+     输入命令：node
+     <br/>
+     没有报错表示运行成功
+     <br/>
+     2、接着在与测试目录同级目录下面新建下面两个js文件
+     <br/>
+     http.js（服务器脚本配置文件）
+    </p>
+    <pre><code>var PORT = 3000;//
+
+var http = require('http');
+var url=require('url');
+var fs=require('fs');
+var mine=require('./mine').types;//
+var path=require('path');
+
+var server = http.createServer(function (request, response) {
+    var pathname = url.parse(request.url).pathname;
+    var realPath = path.join("webapp", pathname);    //这里设置自己的文件名称;
+
+    var ext = path.extname(realPath);
+    ext = ext ? ext.slice(1) : 'unknown';
+    fs.exists(realPath, function (exists) {
+        if (!exists) {
+            response.writeHead(404, {
+                'Content-Type': 'text/plain'
+            });
+
+            response.write("This request URL " + pathname + " was not found on this server.");
+            response.end();
+        } else {
+            fs.readFile(realPath, "binary", function (err, file) {
+                if (err) {
+                    response.writeHead(500, {
+                        'Content-Type': 'text/plain'
+                    });
+                    response.end(err);
+                } else {
+                    var contentType = mine[ext] || "text/plain";
+                    response.writeHead(200, {
+                        'Content-Type': contentType
+                    });
+                    response.write(file, "binary");
+                    response.end();
+                }
+            });
+        }
+    });
+});
+server.listen(PORT);
+console.log("Server runing at port: " + PORT + ".");
+</code></pre>
+    <p>
+     mine.js(引入对应的文件)
+    </p>
+    <pre><code>exports.types = {
+  "css": "text/css",
+  "gif": "image/gif",
+  "html": "text/html",
+  "ico": "image/x-icon",
+  "jpeg": "image/jpeg",
+  "jpg": "image/jpeg",
+  "js": "text/javascript",
+  "json": "application/json",
+  "pdf": "application/pdf",
+  "png": "image/png",
+  "svg": "image/svg+xml",
+  "swf": "application/x-shockwave-flash",
+  "tiff": "image/tiff",
+  "txt": "text/plain",
+  "wav": "audio/x-wav",
+  "wma": "audio/x-ms-wma",
+  "wmv": "video/x-ms-wmv",
+  "xml": "text/xml"
+};
+</code></pre>
+    <p>
+     上面两个js新建成功后，打开http.js，接着在里面找到路径设置，把我当前webapp改成你自己的名字项目名称
+    </p>
+    <hr/>
+    <p>
+     Friendship tips：（前提是跟js在同级个目录。如果测试项目在其他文件，那么路径可能要设置绝对路径了_这个我没尝试）
+     <br/>
+     下面是我的目录对应的文件，三个箭头是必备的其他无需设置
+    </p>
+    <hr/>
+    <p>
+     <img alt="这里写图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/67e11184e28bea0a69f4cff929b11ad7.png"/>
+    </p>
+    <hr/>
+    <h4>
+     <a id="_115">
+     </a>
+     运行
+    </h4>
+    <p>
+     3、控制台启动服务器测试是否成功
+     <br/>
+     见下图：
+     <br/>
+     打开项目所在目录输入node http.js
+     <br/>
+     接着提示端口启动成功，
+     <br/>
+     接着直接输入自己需要测试的文件地址就行了。比如我的
+     <br/>
+     http://localhost:3000/index.html
+    </p>
+    <hr/>
+    <p>
+     <strong>
+      到此全部部署完成！
+     </strong>
+    </p>
+    <hr/>
+    <p>
+     <img alt="这里写图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/5ff03f3ba21ad79820427ad894817336.png"/>
+    </p>
+    <hr/>
+    <h4>
+     <a id="_139">
+     </a>
+     常见问题
+    </h4>
+    <p>
+     这里注意：一定要在端口号后面加上自己文件路径才能运行成功。不然会报错因为http.js里面写的比较简单，暂时未直接映射
+     <br/>
+     http://localhost:3000
+     <br/>
+     如果出错了那么请重写启动服务
+     <br/>
+     即：node.js
+     <br/>
+     当然你有兴趣的话可以重写node.js完善它
+     <br/>
+     <img alt="这里写图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/104a9debff81fa06b270917e89d0755b.png"/>
+    </p>
+    <h4>
+     <a id="_148">
+     </a>
+     题外话
+    </h4>
+    <p>
+     最后表示：这两个js都是我在博客和百度上看到一些大牛写的，不过他们的写的教程不够清晰（本人水平不足不能跟上他们的思路），
+     <br/>
+     所以再次感谢这些博客大牛，
+     <br/>
+     接着尝试：
+    </p>
+    <ol>
+     <li>
+      在nginx上运行测试文件，
+     </li>
+     <li>
+      搭建nodejs+mangodb测试项目 迁移angularjs的树到polymer
+     </li>
+     <li>
+      angular的树是前任前端大牛写的，一直不太看懂，我也没去百度看其他大牛写的ng树（也许有更厉害的很多）
+      <br/>
+      趁着双休时间一边调试一遍看构建过程，虽然很艰难，不过想想自己实现polymer的tree，目前百度或者博客论坛我没找到，写完必须开源出来！
+     </li>
+    </ol>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

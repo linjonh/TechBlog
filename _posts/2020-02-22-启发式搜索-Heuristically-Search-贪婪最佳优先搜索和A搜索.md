@@ -1,0 +1,3611 @@
+---
+layout: post
+title: 启发式搜索-Heuristically-Search-贪婪最佳优先搜索和A搜索
+date: 2020-02-22 22:11:31 +0800
+categories: [博弈论]
+tags: [搜索引擎]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=104211475
+    alt: 启发式搜索-Heuristically-Search-贪婪最佳优先搜索和A搜索
+artid: 104211475
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     启发式搜索 (Heuristically Search)-【贪婪最佳优先搜索】和【A*搜索】
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-dracula" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     搜索是人工智能里面研究的一个核心问题，像强化学习其本质我也是理解为一种搜索算法，不过其用了一些值函数近似的方法，并做了进一步改良，使其功能更加强大。近些年来也有非常多学术研究者慢慢开始将两者融汇贯通发顶会了。比如像
+     <code>
+      Goog
+     </code>
+     的
+     <code>
+      planet
+     </code>
+     ，
+     <code>
+      Muzero
+     </code>
+     以及将熵用于蒙特卡洛树搜索中平衡探索和利用的关系等等。
+    </p>
+    <h3>
+     <a id="_3">
+     </a>
+     启发式搜索
+    </h3>
+    <p>
+     启发式搜索(
+     <strong>
+      Heuristically Search
+     </strong>
+     )又称为有信息搜索(
+     <strong>
+      Informed Search
+     </strong>
+     )，它是
+     <strong>
+      利用问题拥有的启发信息来引导搜索
+     </strong>
+     ，达到减少搜索范围、降低问题复杂度的目的，这种利用启发信息的搜索过程称为启发式搜索。其代表算法为：贪婪最佳优先搜索(
+     <strong>
+      Greedy best-first search
+     </strong>
+     )和
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     搜索。
+    </p>
+    <p>
+     人工智能中大量的问题都可以被描述为：在
+     <strong>
+      给定海量信息源
+     </strong>
+     以及
+     <strong>
+      一些约束条件
+     </strong>
+     和
+     <strong>
+      额外信息
+     </strong>
+     ，我们需要找到
+     <strong>
+      问题所对应的答案
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="问题建模" src="https://i-blog.csdnimg.cn/blog_migrate/8421c97177e810d67cacc78f5a1b85ce.png#pic_center"/>
+    </p>
+    <p>
+     问题的答案就在海量的信息源里面，关键就在于如何快速从信息源中学得模式，找到问题与答案的对应关系。这也是当今人工智能算法所研究的核心，越好的算法能够越快地找到对应的模式，找到更精准的模式关系，使其具备更强大的泛化能力。
+    </p>
+    <h4>
+     <a id="_15">
+     </a>
+     问题描述
+    </h4>
+    <p>
+     我们以寻找最优路径这个问题为例，如下图所示：
+    </p>
+    <p>
+     <img alt="研究问题" src="https://i-blog.csdnimg.cn/blog_migrate/71b70118d974ec43c276adab3071b90b.png#pic_center"/>
+    </p>
+    <p>
+     我们需要寻找到
+     <code>
+      Arad
+     </code>
+     到
+     <code>
+      Bucharest
+     </code>
+     这两个城市之间的一条最短路径。这里所谓的最短路径是一个泛称，依据具体问题本身而做相应地调整。比如时间最短、油耗最少、或者自定义函数做用户体验最佳等等。在本问题中指实际的距离。
+    </p>
+    <h5>
+     <a id="_27">
+     </a>
+     模型建立
+    </h5>
+    <p>
+     为了这个通俗的问题能够转化为算法可求解的问题，我们需要对这个问题建立一个基本的数学模型。大致定义如下五个变量：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       状态
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     在上述问题中，我们将每一个城市称之为一个状态。从起始城市转移到目标城市的过程就是从初始状态转移到终止状态的过程。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       动作
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     我们将从当前时刻转移到下一时刻所处的状态的操作称之为动作。在搜索算法中动作一般都是离散的。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       状态转移
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     从当前状态转移到下一时刻的状态我们称之为状态转移。有些城市之间不存在直接的连线，所以他们之间不存在状态转移。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       路径
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     路径是一系列状态的集合，对于这个问题而言就是从
+     <code>
+      Arad
+     </code>
+     到
+     <code>
+      Bucharest
+     </code>
+     所形成的一系列状态转移后得到的状态集合。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       测试目标
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     测试目标用于评估当前状态是否为所求解的目标状态。
+    </p>
+    <h4>
+     <a id="Greedy_BestFirst_Search_53">
+     </a>
+     Greedy Best-First Search
+    </h4>
+    <p>
+     贪婪最佳优先搜索需要在搜索过程中利用所求解问题相关的辅助信息，这里给出的
+     <strong>
+      辅助信息
+     </strong>
+     为：任意一个城市与
+     <code>
+      Bucharest
+     </code>
+     之间的直线距离。辅助信息必须是所求解问题以外的信息，不能是这个最短路径是啥。
+    </p>
+    <p>
+     <img alt="辅助信息：任意城市到 Bucharest 的直线距离" src="https://i-blog.csdnimg.cn/blog_migrate/7c367464966426b0f7ba9dea81bc5919.png#pic_center"/>
+    </p>
+    <p>
+     除此之外在启发式搜索中我们还需要定义两个函数：
+    </p>
+    <ul>
+     <li>
+      评价函数(
+      <strong>
+       evaluation function
+      </strong>
+      )
+     </li>
+    </ul>
+    <p>
+     评价函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        f 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        f(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.1076em;">
+          f
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     描述的是从当前节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     出发，根据评价函数来选择后续节点。这个评价函数就是怎么选择动作。
+    </p>
+    <ul>
+     <li>
+      启发函数(
+      <strong>
+       heuristic function
+      </strong>
+      )
+     </li>
+    </ul>
+    <p>
+     启发函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     描述的是从计算节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     到目标节点之间所形成路径的最小代价值。这里将两点之间的直线距离作为启发函数。
+    </p>
+    <p>
+     <strong>
+      在贪婪最佳优先搜索算法里面，评价函数
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         f 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+       
+         f(n)
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.1076em;">
+           f
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      等于启发函数
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         h 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+       
+         h(n)
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </strong>
+     。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       举例
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     <img alt="贪婪最佳搜索举例" src="https://i-blog.csdnimg.cn/blog_migrate/2b71e76208ab0201d7d1c21232e92dd7.png#pic_center"/>
+    </p>
+    <p>
+     从
+     <code>
+      Arad
+     </code>
+     开始，与其相邻的有三个城市，将其扩展得到(b)，依据评价函数，也就是启发函数选择
+     <code>
+      Sibiu
+     </code>
+     ，再将
+     <code>
+      Sibiu
+     </code>
+     展开依次进行下去即可。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       贪婪最佳优先搜索的不足
+      </strong>
+      ：
+     </li>
+    </ul>
+    <ol>
+     <li>
+      <strong>
+       贪婪最佳优先搜索不是最优的
+      </strong>
+      。经过
+      <code>
+       Sibiu
+      </code>
+      到
+      <code>
+       Fagaras
+      </code>
+      到
+      <code>
+       Buchares
+      </code>
+      t的路径(99+211 = 310)比经过
+      <code>
+       Rimnicu Vilces
+      </code>
+      到
+      <code>
+       Pitesti
+      </code>
+      到
+      <code>
+       Bucharest
+      </code>
+      的路径(80+97+101 = 278 )要长32公里。
+     </li>
+     <li>
+      <strong>
+       启发函数代价最小化这一目标会对错误的起点比较敏感
+      </strong>
+      。考虑从
+      <code>
+       Iasi
+      </code>
+      到
+      <code>
+       Fagaras
+      </code>
+      的问题，由启发式建议须先扩展
+      <code>
+       Neamt
+      </code>
+      ，就是因为其离
+      <code>
+       Fagaras
+      </code>
+      最近，导致其启发函数会较小，但是这是一条存在死循环路径。
+     </li>
+     <li>
+      <strong>
+       贪婪最佳优先搜索也是不完备的
+      </strong>
+      。所谓不完备指的是它可能沿着一条无限的路径走下去而不回来做其他的选择尝试，因此无法找到最佳路径。
+     </li>
+     <li>
+      在最坏的情况下，贪婪最佳优先搜索的时间复杂度和空间复杂度都是
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         O 
+         
+        
+          ( 
+         
+         
+         
+           b 
+          
+         
+           m 
+          
+         
+        
+          ) 
+         
+        
+       
+         O(b^{m})
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.0278em;">
+           O
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            b
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.6644em;">
+               <span class="" style="top: -3.063em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.7em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mathnormal mtight">
+                   m
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      (这个就理解成计算机要循环迭代多少次吧)，其中
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         b 
+         
+        
+       
+         b
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 0.6944em;">
+          </span>
+          <span class="mord mathnormal">
+           b
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      是节点的分支因子数目、
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         m 
+         
+        
+       
+         m
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 0.4306em;">
+          </span>
+          <span class="mord mathnormal">
+           m
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      是搜索空间的最大深度。
+     </li>
+    </ol>
+    <h4>
+     <a id="A_86">
+     </a>
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法
+    </h4>
+    <p>
+     我们来回顾一下上述问题用贪婪最佳优先搜索存在问题的根本原因是什么：就是因为它的启发函数设计地不好，它启发函数取的是城市之间的直线距离，和实际的道路会有偏差，导致直线上这个方向是没有路的。由此我们需要提出一个更好的启发函数。
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法就这么被提出来了。
+    </p>
+    <h5>
+     <a id="A_90">
+     </a>
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法-启发函数
+    </h5>
+    <p>
+     在
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法里面，其评价函数由两部分组成，定义如下：
+    </p>
+    <p>
+     <span class="katex--display">
+      <span class="katex-display">
+       <span class="katex">
+        <span class="katex-mathml">
+         f 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+          = 
+         
+        
+          g 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+          + 
+         
+        
+          h 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+       
+         f(n)=g(n)+h(n)
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.1076em;">
+           f
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+          <span class="mrel">
+           =
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.0359em;">
+           g
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+          <span class="mbin">
+           +
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </p>
+    <ul>
+     <li>
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         g 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+       
+         g(n)
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.0359em;">
+           g
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      表示的是从
+      <strong>
+       起始节点到当前的节点
+      </strong>
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         n 
+         
+        
+       
+         n
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 0.4306em;">
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      的开销的代价值；
+      <span class="katex--inline">
+       <span class="katex">
+        <span class="katex-mathml">
+         h 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+       
+         h(n)
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+      表示
+      <strong>
+       从当前节点
+       <span class="katex--inline">
+        <span class="katex">
+         <span class="katex-mathml">
+          n 
+          
+         
+        
+          n
+         </span>
+         <span class="katex-html">
+          <span class="base">
+           <span class="strut" style="height: 0.4306em;">
+           </span>
+           <span class="mord mathnormal">
+            n
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+       到目标节点
+      </strong>
+      路径中所估算的最小开销代价值。
+     </li>
+    </ul>
+    <p>
+     由此我们可以知道，评估函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        f 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        f(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.1076em;">
+          f
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     是由当前最小开销代价
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        g 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        g(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.0359em;">
+          g
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     ，与后续最小开销代价
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     的和。因此
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        f 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        f(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.1076em;">
+          f
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     可视为经过节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     ，具有最小开销代价值的路径。
+    </p>
+    <p>
+     那在新的评价函数中
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法是如何工作的呢？
+    </p>
+    <p>
+     为了保证
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法是最优(
+     <strong>
+      optimal
+     </strong>
+     )的(最优指的是不存在另外一个解法能得到比
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法所求得解法具有
+     <strong>
+      更小开销代价
+     </strong>
+     。)，也即搜索出来的路径是最短路径，需要在启发函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     上面下点功夫，需要启发函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     满足两点：1.
+     <strong>
+      可容的
+     </strong>
+     (
+     <strong>
+      admissible heuristic
+     </strong>
+     )和2.
+     <strong>
+      一致的
+     </strong>
+     (
+     <strong>
+      consistency
+     </strong>
+     ,或者称为单调性)。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       可容
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     可容是专门针对启发函数而言的，即启发函数不会过高估计(
+     <strong>
+      over-estimate
+     </strong>
+     )从节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     到目标结点之间 的实际开销代价（即小于等于实际开销）。比如：可将两点之间的直线距离作为启发函数，从而保证其不会过高估计，保证其可容性。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       一致性
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     假设节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     的后续节点是
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+         
+         
+          
+         
+           ′ 
+          
+         
+        
+       
+      
+        n^{'}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.9425em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.9425em;">
+              <span class="" style="top: -2.9425em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.5795em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  <span class="">
+                  </span>
+                  <span class="msupsub">
+                   <span class="vlist-t">
+                    <span class="vlist-r">
+                     <span class="vlist" style="height: 0.8278em;">
+                      <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                       <span class="pstrut" style="height: 2.5em;">
+                       </span>
+                       <span class="sizing reset-size3 size1 mtight">
+                        <span class="mord mtight">
+                         <span class="mord mtight">
+                          ′
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     ，则从
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     到目标节点之间的开销代价一定小于从
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     到
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+         
+         
+          
+         
+           ′ 
+          
+         
+        
+       
+      
+        n^{'}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.9425em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.9425em;">
+              <span class="" style="top: -2.9425em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.5795em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  <span class="">
+                  </span>
+                  <span class="msupsub">
+                   <span class="vlist-t">
+                    <span class="vlist-r">
+                     <span class="vlist" style="height: 0.8278em;">
+                      <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                       <span class="pstrut" style="height: 2.5em;">
+                       </span>
+                       <span class="sizing reset-size3 size1 mtight">
+                        <span class="mord mtight">
+                         <span class="mord mtight">
+                          ′
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     的开销再加上从
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+         
+         
+          
+         
+           ′ 
+          
+         
+        
+       
+      
+        n^{'}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.9425em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.9425em;">
+              <span class="" style="top: -2.9425em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.5795em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  <span class="">
+                  </span>
+                  <span class="msupsub">
+                   <span class="vlist-t">
+                    <span class="vlist-r">
+                     <span class="vlist" style="height: 0.8278em;">
+                      <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                       <span class="pstrut" style="height: 2.5em;">
+                       </span>
+                       <span class="sizing reset-size3 size1 mtight">
+                        <span class="mord mtight">
+                         <span class="mord mtight">
+                          ′
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     到目标节点之间的开销。如果用数学公式表达的话如下所示：
+    </p>
+    <p>
+     <span class="katex--display">
+      <span class="katex-display">
+       <span class="katex">
+        <span class="katex-mathml">
+         h 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+          ≤ 
+         
+        
+          c 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          , 
+         
+        
+          a 
+         
+        
+          , 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+          + 
+         
+        
+          h 
+         
+        
+          ( 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+       
+         h(n) \leq c(n,a,n^{'}) + h(n^{'})
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+          <span class="mrel">
+           ≤
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           c
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mpunct">
+           ,
+          </span>
+          <span class="mspace" style="margin-right: 0.1667em;">
+          </span>
+          <span class="mord mathnormal">
+           a
+          </span>
+          <span class="mpunct">
+           ,
+          </span>
+          <span class="mspace" style="margin-right: 0.1667em;">
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+          <span class="mbin">
+           +
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     其中的
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        c 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         , 
+        
+       
+         a 
+        
+       
+         , 
+        
+        
+        
+          n 
+         
+         
+          
+         
+           ′ 
+          
+         
+        
+       
+         ) 
+        
+       
+      
+        c(n,a,n^{'})
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1.1925em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          c
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mpunct">
+          ,
+         </span>
+         <span class="mspace" style="margin-right: 0.1667em;">
+         </span>
+         <span class="mord mathnormal">
+          a
+         </span>
+         <span class="mpunct">
+          ,
+         </span>
+         <span class="mspace" style="margin-right: 0.1667em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.9425em;">
+              <span class="" style="top: -2.9425em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.5795em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  <span class="">
+                  </span>
+                  <span class="msupsub">
+                   <span class="vlist-t">
+                    <span class="vlist-r">
+                     <span class="vlist" style="height: 0.8278em;">
+                      <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                       <span class="pstrut" style="height: 2.5em;">
+                       </span>
+                       <span class="sizing reset-size3 size1 mtight">
+                        <span class="mord mtight">
+                         <span class="mord mtight">
+                          ′
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     指的是经过行动
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        a 
+        
+       
+      
+        a
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          a
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     所抵达后续节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+         
+         
+          
+         
+           ′ 
+          
+         
+        
+       
+      
+        n^{'}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.9425em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.9425em;">
+              <span class="" style="top: -2.9425em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.5795em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  <span class="">
+                  </span>
+                  <span class="msupsub">
+                   <span class="vlist-t">
+                    <span class="vlist-r">
+                     <span class="vlist" style="height: 0.8278em;">
+                      <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                       <span class="pstrut" style="height: 2.5em;">
+                       </span>
+                       <span class="sizing reset-size3 size1 mtight">
+                        <span class="mord mtight">
+                         <span class="mord mtight">
+                          ′
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     与之前节点
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        n 
+        
+       
+      
+        n
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.4306em;">
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     之间的开销代价。
+    </p>
+    <h6>
+     <a id="_126">
+     </a>
+     举例
+    </h6>
+    <p>
+     <img alt="A* 算法" src="https://i-blog.csdnimg.cn/blog_migrate/81bac99b6549b85744e3853fb9ca0fa4.png#pic_center"/>
+    </p>
+    <p>
+     仍然从
+     <code>
+      Arad
+     </code>
+     到
+     <code>
+      Bucharest
+     </code>
+     为例，我们用
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     来寻找出这段距离。这里的评估函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        f 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        f(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.1076em;">
+          f
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     由当前最小开销代价
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        g 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        g(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.0359em;">
+          g
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     与后续最小开销代价
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     两部分组成。
+     <code>
+      Arad
+     </code>
+     与三个城市相邻，运用评估函数，选中
+     <code>
+      Sibiu
+     </code>
+     ，之后再依次展开即可得到上图。
+    </p>
+    <p>
+     到这里的话，其实就已经知道了整个
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法的工作流程，如果需要进一步了解相关知识以下知识点仅作参考：
+    </p>
+    <p>
+     1.
+     <code>
+      Tree-search
+     </code>
+     的
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法中，如果启发函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     是可容的，则
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法是最优的和完备的；在
+     <code>
+      Graph-search
+     </code>
+     的
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法中，如果启发函数
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     是一致的，
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        A 
+         
+        
+          ∗ 
+         
+        
+       
+      
+        A^{*}
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6887em;">
+         </span>
+         <span class="mord">
+          <span class="mord mathnormal">
+           A
+          </span>
+          <span class="msupsub">
+           <span class="vlist-t">
+            <span class="vlist-r">
+             <span class="vlist" style="height: 0.6887em;">
+              <span class="" style="top: -3.063em; margin-right: 0.05em;">
+               <span class="pstrut" style="height: 2.7em;">
+               </span>
+               <span class="sizing reset-size6 size3 mtight">
+                <span class="mord mtight">
+                 <span class="mord mtight">
+                  ∗
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     算法是最优的。
+    </p>
+    <p>
+     2. 如果函数满足一致性条件，则一定满足可容条件；反之不然。
+    </p>
+    <p>
+     3. 直线最短距离函数既是可容的，也是一致的。
+    </p>
+    <p>
+     4. 如果
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        h 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        h(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal">
+          h
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     是一致的(单调的)，那么
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        f 
+        
+       
+         ( 
+        
+       
+         n 
+        
+       
+         ) 
+        
+       
+      
+        f(n)
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+         </span>
+         <span class="mord mathnormal" style="margin-right: 0.1076em;">
+          f
+         </span>
+         <span class="mopen">
+          (
+         </span>
+         <span class="mord mathnormal">
+          n
+         </span>
+         <span class="mclose">
+          )
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     一定是非递减的(
+     <strong>
+      non-decreasing
+     </strong>
+     )。
+    </p>
+    <p>
+     <span class="katex--display">
+      <span class="katex-display">
+       <span class="katex">
+        <span class="katex-mathml">
+         f 
+         
+        
+          ( 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+          = 
+         
+        
+          g 
+         
+        
+          ( 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+          + 
+         
+        
+          h 
+         
+        
+          ( 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+          = 
+         
+        
+          g 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+          + 
+         
+        
+          c 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          , 
+         
+        
+          a 
+         
+        
+          , 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+          + 
+         
+        
+          h 
+         
+        
+          ( 
+         
+         
+         
+           n 
+          
+          
+           
+          
+            ′ 
+           
+          
+         
+        
+          ) 
+         
+        
+          ≥ 
+         
+        
+          g 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+          + 
+         
+        
+          h 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+          = 
+         
+        
+          f 
+         
+        
+          ( 
+         
+        
+          n 
+         
+        
+          ) 
+         
+        
+       
+         f(n^{'})=g(n^{'})+h(n^{'})=g(n)+c(n,a,n^{'})+h(n^{'}) \geq g(n) + h(n) = f(n)
+        </span>
+        <span class="katex-html">
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.1076em;">
+           f
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+          <span class="mrel">
+           =
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.0359em;">
+           g
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+          <span class="mbin">
+           +
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+          <span class="mrel">
+           =
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.0359em;">
+           g
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+          <span class="mbin">
+           +
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           c
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mpunct">
+           ,
+          </span>
+          <span class="mspace" style="margin-right: 0.1667em;">
+          </span>
+          <span class="mord mathnormal">
+           a
+          </span>
+          <span class="mpunct">
+           ,
+          </span>
+          <span class="mspace" style="margin-right: 0.1667em;">
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+          <span class="mbin">
+           +
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1.2425em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord">
+           <span class="mord mathnormal">
+            n
+           </span>
+           <span class="msupsub">
+            <span class="vlist-t">
+             <span class="vlist-r">
+              <span class="vlist" style="height: 0.9925em;">
+               <span class="" style="top: -2.9925em; margin-right: 0.05em;">
+                <span class="pstrut" style="height: 2.5795em;">
+                </span>
+                <span class="sizing reset-size6 size3 mtight">
+                 <span class="mord mtight">
+                  <span class="mord mtight">
+                   <span class="">
+                   </span>
+                   <span class="msupsub">
+                    <span class="vlist-t">
+                     <span class="vlist-r">
+                      <span class="vlist" style="height: 0.8278em;">
+                       <span class="" style="top: -2.931em; margin-right: 0.0714em;">
+                        <span class="pstrut" style="height: 2.5em;">
+                        </span>
+                        <span class="sizing reset-size3 size1 mtight">
+                         <span class="mord mtight">
+                          <span class="mord mtight">
+                           ′
+                          </span>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </span>
+                   </span>
+                  </span>
+                 </span>
+                </span>
+               </span>
+              </span>
+             </span>
+            </span>
+           </span>
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+          <span class="mrel">
+           ≥
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.0359em;">
+           g
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+          <span class="mbin">
+           +
+          </span>
+          <span class="mspace" style="margin-right: 0.2222em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal">
+           h
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+          <span class="mrel">
+           =
+          </span>
+          <span class="mspace" style="margin-right: 0.2778em;">
+          </span>
+         </span>
+         <span class="base">
+          <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+          </span>
+          <span class="mord mathnormal" style="margin-right: 0.1076em;">
+           f
+          </span>
+          <span class="mopen">
+           (
+          </span>
+          <span class="mord mathnormal">
+           n
+          </span>
+          <span class="mclose">
+           )
+          </span>
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+    </p>
+    <h5>
+     <a id="_149">
+     </a>
+     参考资料
+    </h5>
+    <p>
+     如果对这方面感兴趣的同学，进阶可参考如下：
+    </p>
+    <ul>
+     <li>
+      <a href="http://media.aiai.ed.ac.uk/Project/AIPLAN/" rel="nofollow">
+       AI Planning MOOC
+      </a>
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      我的
+      <strong>
+       微信公众号名称
+      </strong>
+      ：小小何先生
+      <br/>
+      <strong>
+       公众号介绍
+      </strong>
+      ：主要研究分享深度学习、机器博弈、强化学习等相关内容！期待您的关注，欢迎一起学习交流进步！
+     </p>
+    </blockquote>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

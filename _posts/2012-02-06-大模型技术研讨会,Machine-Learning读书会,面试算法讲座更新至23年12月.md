@@ -1,0 +1,2790 @@
+---
+layout: post
+title: 大模型技术研讨会,Machine-Learning读书会,面试算法讲座更新至23年12月
+date: 2012-02-06 17:07:42 +0800
+categories: [我的创业与读书史]
+tags: [读书,算法,搜索引擎,出版,system]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=7237351
+    alt: 大模型技术研讨会,Machine-Learning读书会,面试算法讲座更新至23年12月
+artid: 7237351
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     大模型技术研讨会,Machine Learning读书会,面试算法讲座(更新至23年12月)
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h3>
+     前言
+    </h3>
+    <p>
+     我是2015年正式创业做七月在线的，创业之前 我或组织或举办或分享过很多活动，比如
+    </p>
+    <ol>
+     <li>
+      影响力颇大的machine learning读书会
+     </li>
+     <li>
+      去近100所985/211分享算法的面试&amp;算法讲座
+     </li>
+     <li>
+      15年创业之后，因公司各种琐碎事情太多了(详见：
+      <a class="link-info" href="https://blog.csdn.net/v_july_v/category_835511.html" title="我的创业与读书史">
+       我的创业与读书史
+      </a>
+      )，更何况还有那么多在线课程、线下课程需要经营
+     </li>
+    </ol>
+    <p>
+     再后来，疫情又是三年，所以免费对外的活动基本都暂停了
+    </p>
+    <p>
+     再后来，2022年11月底ChatGPT横空出世，带来的影响力之大 远超2016年的AlphaGo，为探究其背后的一系列原理，以及基于大模型做各种开发应用，我写了大量的解读文章(详见：
+     <a class="link-info" href="https://blog.csdn.net/v_july_v/category_12306170.html?spm=1001.2014.3001.5482" title="大模型/AIGC/ChatGPT系列：原理、论文、代码、实战">
+      大模型/AIGC/ChatGPT系列：原理、论文、代码、实战
+     </a>
+     )
+    </p>
+    <p>
+     再后来，除了大量的大模型在线课程之外，我们还在各地开办了大模型项目开发线下营，比如北京、上海、深圳等，正因为这个线下营先后促进了线下研讨会、在线研讨会的诞生
+    </p>
+    <ul>
+     <li>
+      23年9.25日，在「大模型项目开发线下营 北京站」的学员支持下，正式成立京津冀、长三角、珠三角、武长昌、成都、西安等地区的「大模型线下研讨会」，对外免费，每次100人以内的规模
+     </li>
+     <li>
+      23年12.24日，原定在上海举办的线下研讨会改为在线形式，从而举办大模型在线研讨会第一期，
+      <strong>
+       在线研讨会 只要感兴趣 谁都可以参加，如果时间允许 可能每半月一次(对外免费)
+      </strong>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <h3>
+     第一部分 大模型在线研讨会，23年12月起
+    </h3>
+    <h4>
+     大模型在线研讨会第一期，23年12.24
+    </h4>
+    <p>
+     第一期计划23年12.24下午2点对外直播
+    </p>
+    <ol>
+     <li>
+      <strong>
+       钟博士，上海人工智能实验室青年科学家、OpenNLPLab负责人
+      </strong>
+      <br/>
+      专注于高效的大语言模型和视听语言多模态融合。在此之前，其在上海商汤智能科技有限公司担任高级经理职位，负责大语言模型、多轮对话以及多模态融合相关研究
+      <br/>
+      在国际顶级会议和权威期刊发表40余篇论文，并拥有多项美国专利，引用2000余次。曾获得了2023 ICCVW最佳论文奖、2014 ICIP最佳学生论文奖
+      <br/>
+      <br/>
+      分享议题为：
+      <strong>
+       高效大语言模型的架构演进
+      </strong>
+      <br/>
+      1. 大语言模型的发展
+      <br/>
+      2. 高效序列建模的演变
+      <br/>
+      3. 流行技术方案与Llama的对比评测：TransNormerLLM、MamBa、RetNet、HGRN 以及 TNN
+      <br/>
+      4. TransNormerLLM技术解析与Benchmark结果
+     </li>
+     <li>
+      <strong>
+       July，七月在线创始人、大模型项目开发团队负责人
+      </strong>
+      <br/>
+      微软AI MVP，北理工校外导师，Github上2万余star，CSDN 2000万PV博客『结构之法 算法之道』博主，其单篇平均阅读量达10w+，去过近百所985/211高校分享过算法，亦是华为云等数十个大会的演讲嘉宾
+      <br/>
+      2015年创办七月在线，并于2018年获得好未来千万投资，2022年带队打造了350+的大厂专家讲师团队，和150+的全球TOP 100高校研究员/博导的学术导师团队
+      <br/>
+      2023年兼管公司LLM项目开发团队(带队开发AIGC模特生成系统、论文审稿GPT、企业多文档知识库问答等LLM商用落地项目)
+      <br/>
+      <br/>
+      分享议题为：
+      <strong>
+       大模型项目的典型开发流程：以七月论文审稿GPT为例
+      </strong>
+      <br/>
+      1 paper和review的爬取、论文PDF的解析、处理数据
+      <br/>
+      2 review数据的进一步归纳与多聚一
+      <br/>
+      3 模型的选型与训练：从Mistral、Mistral-YaRN到LongLora LLaMA13B
+     </li>
+     <li>
+      <strong>
+       线上圆桌讨论：大模型时代下的热门技术与个人成长
+      </strong>
+      <br/>
+      1 大模型对程序员的学习效率、工作效率到底有多大的提升
+      <br/>
+      2 MamBa、transNormerLLM等到底是否可以替代transformer架构
+      <br/>
+      3 如何评价MoE(稀疏门控混合专家模型)
+      <br/>
+      4 有哪些好的Agent项目场景
+      <br/>
+      5 作为开发者，对新技术、新模型的层出不穷保持怎样的跟进
+      <br/>
+      6 大模型时代，个人的核心竞争力到底是哪几点
+     </li>
+    </ol>
+    <p>
+     有兴趣听的可以联系七月任意一位老师，或通过CSDN私信 私我
+    </p>
+    <hr/>
+    <h3>
+     第二部分
+     <span style="color:#fe2c24;">
+      大模型
+     </span>
+     线下研讨会，2023年11月
+    </h3>
+    <h4>
+     23年11.19北京站第一期(对外免费)
+    </h4>
+    <p>
+     <strong>
+      千人进千企之大模型技术研讨会
+     </strong>
+     <br/>
+     指导单位：北京市科学技术协会创新服务中心
+     <br/>
+     联合主办：七月在线、中关村数智人工智能产业联盟
+     <br/>
+     协办单位：北京图象图形学学会、北京秒如科技
+    </p>
+    <p>
+     <strong>
+      分享人及分享主题(当天下午2-5点)
+     </strong>
+    </p>
+    <ol>
+     <li>
+      July老师，七月在线创始人兼CEO、大模型技术专家
+      <br/>
+      微软AI MVP，北理工校外导师，Github上2万余star，CSDN 2000万PV博客『结构之法 算法之道』博主，单篇平均阅读量10w+
+      <br/>
+      兼管公司LLM项目开发团队(带队开发AIGC模特生成、论文审稿GPT、企业多文档知识库问答等LLM商用落地项目)
+      <br/>
+      <br/>
+      分享提纲
+      <br/>
+      1 如何最高效、最准确的理解ChatGPT的三阶段训练方式
+      <br/>
+      2 通过论文审稿GPT分享：数据处理、模型选型、模型训练等方面的落地经验
+      <br/>
+      3 如何快速改进langchain+LLM的效果(二次开发)
+     </li>
+     <li>
+      刘老师，大模型算法专家，具备大模型全流程的落地经验，目前负责国内一线互联网公司的大模型交互产品落地
+      <br/>
+      主导的智能客服模型日均线上用户交互量达80万次，提升智能场景满意度6%
+      <br/>
+      <br/>
+      分享提纲
+      <br/>
+      1.大模型相关基础与技术发展
+      <br/>
+      2.领域大模型的数据工程、指令微调、偏好对齐、评估
+      <br/>
+      3.大模型部署相关
+      <br/>
+      4.客服场景的大模型落地架构
+     </li>
+     <li>
+      石老师，商业银行NLP算法工程师，有着多年NLP开发与优化经验
+      <br/>
+      分享主题围绕大模型垂类领域应用场景、难点、解决方案展开探索
+     </li>
+     <li>
+      神秘嘉宾 现场揭晓
+      <br/>
+      此外，当然，​如果大家需要，最后我们还可以安排一个圆桌论坛，讨论下Agent
+      <br/>
+      <img alt="" height="563" src="https://i-blog.csdnimg.cn/blog_migrate/e0ca517233f07b8fe3702a44f568786a.jpeg" width="750">
+       <br/>
+       或其他大家感兴趣的内容
+      </img>
+     </li>
+    </ol>
+    <p>
+     10年来，我参加过很多技术会议，但大多都是扯概念、不深入、不谈技术细节(不管看起来宣传规格有多高，来的人title有多显摆，基本都是宏观层面的夸夸而谈)
+    </p>
+    <p>
+     明天的研讨会，会比较接地气，会特别注重技术细节，我这边会以我司的LLM项目为例，强调技术的落地，与大模型的实实在在的赋能业务场景，是一场属于一线开发者的研讨会
+    </p>
+    <p>
+     有兴趣报名的可以联系七月任意一位老师，或CSDN私信私我(目前已报名80人+，大部分是已工作的NLPer)
+    </p>
+    <hr/>
+    <h3>
+     第三部分、Machine Learning读书会，
+     <span style="color:#cc0000;">
+      2012
+     </span>
+     <span style="color:#cc0000;">
+      年~2013年
+     </span>
+    </h3>
+    <h4>
+     <u>
+      1、读书会第一期
+     </u>
+    </h4>
+    <p>
+     读书会的第一期以讲座讨论的形式开展，其相关时间，地点，主题如下：
+    </p>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2012年2月12日
+     </span>
+     下午2点准时开始
+     <br/>
+     地点：
+     <u>
+      清华园东门fit楼1区312室
+     </u>
+    </p>
+    <p>
+     主题：第一期已确定的主题如下：
+    </p>
+    <ul>
+     <li>
+      1、DeepQA基本框架，主讲人张栋；
+     </li>
+     <li>
+      2、Siri基本架构，主讲人张俊林；
+     </li>
+    </ul>
+    <p>
+     现存的唯一一张珍贵照片，图中为本人主持，图左侧为张栋博士：
+    </p>
+    <p>
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/3ecfa3728a7925b0c776fd6cda96d7ec.jpeg"/>
+    </p>
+    <p>
+     PPT下载
+    </p>
+    <p>
+     <span style="color:#333333;">
+      昨日读书会第一期，到场人数为160+，
+     </span>
+     PPT打包统一免积分下载地址为
+     <span style="color:#333333;">
+      ：
+     </span>
+     <a href="http://download.csdn.net/detail/v_july_v/4061067" title="http://download.csdn.net/detail/v_july_v/4061067">
+      http://download.csdn.net/detail/v_july_v/4061067
+     </a>
+     <span style="color:#333333;">
+      。02.13.17:20分。
+     </span>
+    </p>
+    <h4>
+     <u>
+      2、读书会第二期
+     </u>
+    </h4>
+    <p>
+     读书会第2期本周日清华举行，具体时间场地分享人如下：
+    </p>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2012年4月15日
+     </span>
+     下午1：30开始，
+    </p>
+    <p>
+     地点：
+     <u>
+      清华第4教学楼4102
+     </u>
+    </p>
+    <p>
+     主题：
+    </p>
+    <ul>
+     <li>
+      1、
+      <strong>
+       推荐系统简介
+      </strong>
+      @
+      <strong>
+       xlvector_Hulu
+      </strong>
+      ，其个人博客为：
+      <a href="http://xlvector.net/blog/" rel="nofollow" title="xlvector.net">
+       xlvector.net
+      </a>
+      。他的新书：&lt;&lt;推荐系统实践&gt;&gt;，6月初即将由图灵教育出版社出版。
+     </li>
+     <li>
+      2、
+      <strong>
+       写8年技术博客的体会和思维
+      </strong>
+      @
+      <strong>
+       刘未鹏
+      </strong>
+      pongba ，其CSDN博客地址为：
+      <a href="http://blog.csdn.net/pongba" title="pongba_C++,片面思考,杂感|生活-CSDN博客">
+       pongba_C++,片面思考,杂感|生活-CSDN博客
+      </a>
+      ，其个人博客地址为：
+      <a href="http://mindhacks.cn/" rel="nofollow" title="刘未鹏 | Mind Hacks – 思维改变生活">
+       刘未鹏 | Mind Hacks – 思维改变生活
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     PPT下载
+    </p>
+    <ul>
+     <li>
+      昨日读书会到场人数控制在100+，项亮之：Introduction to Recommender System：
+      <a href="http://xlvector.net/blog/?p=846" rel="nofollow" title="xlvector.net">
+       xlvector.net
+      </a>
+      。
+     </li>
+     <li>
+      我的话，粗制滥造的10页PPT，实在没什么内容，就不放出来了(给3个链接，1、
+      <a href="http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/" rel="nofollow" title="怎样花两年时间去面试一个人 – 刘未鹏 | Mind Hacks">
+       怎样花两年时间去面试一个人 – 刘未鹏 | Mind Hacks
+      </a>
+      ；2、三五个人：
+      <a href="http://blog.csdn.net/v_july_v/article/details/7307301" title="http://blog.csdn.net/v_july_v/article/details/7307301">
+       http://blog.csdn.net/v_july_v/article/details/7307301
+      </a>
+      ；3、stackoverflow：
+      <a href="http://stackoverflow.com/" rel="nofollow" title="Stack Overflow - Where Developers Learn, Share, &amp; Build Careers">
+       Stack Overflow - Where Developers Learn, Share, &amp; Build Careers
+      </a>
+      。PPT内容全都在这3个链接里)。谢谢大家。
+     </li>
+    </ul>
+    <h4>
+    </h4>
+    <h4>
+     <u>
+      3、读书会第三期
+     </u>
+    </h4>
+    <p>
+     本期读书会在北大举行，具体时间场地分享人如下：
+    </p>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2012年5月20日
+     </span>
+     下午2点准时开始
+     <br/>
+     地点：北大二教527
+    </p>
+    <p>
+     主题：第3期已确定的主题如下：
+    </p>
+    <p>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       几年、几本书、几点感想
+      </strong>
+      (围绕《大道至简》相关的几本书来聊聊读书写书)。主讲人：
+      <strong>
+       周爱民
+      </strong>
+      @aimingoo（大道至简/大道至易(即将出版)/JavaScript语言精髓与编程实践3本书的作者）。
+     </li>
+     <li>
+      <strong>
+       搜索引擎的意图识别技术
+      </strong>
+      。主讲人：搜狗自然语言处理部@搜狗
+      <strong>
+       张帆
+      </strong>
+      。
+     </li>
+    </ol>
+    <p>
+     嘉宾：@梁斌penny（走进搜索引擎 &amp; 深入搜索引擎作者，THUIRDB和微博寻人的Coder），主持人：July。
+    </p>
+    <p>
+     PPT分享
+    </p>
+    <p>
+     今日北大读书会第3期到场人数约为100人左右，现场PPT新浪微盘分享如下，
+    </p>
+    <p>
+    </p>
+    <ol>
+     <li>
+      周爱民之几年，几本书，几点感想(从做人谈到做架构，软件实践者的不断追寻与思考)： "years_by_aimingoo.zip"
+      <a href="http://vdisk.weibo.com/s/5FZ41" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      "搜索意图识别_搜狗张帆.pdf"
+      <a href="http://vdisk.weibo.com/s/5FZWO" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+    </ol>
+    <h4>
+    </h4>
+    <h4>
+     <u>
+      4、读书会第四期
+     </u>
+    </h4>
+    <p>
+     时隔半年，久违的读书会第4期终于来了(Machine Learning读书会·上海官方群：215665171，欢迎在上海的朋友们加入)：
+    </p>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2012年
+     </span>
+     <strong>
+      <span style="color:#cc0000;">
+       12月2日
+      </span>
+      下午2点-5点
+     </strong>
+     ，
+     <br/>
+     地点：上海交大徐汇校区工程馆107教室(近包兆龙图书馆)
+    </p>
+    <p>
+     主题：
+    </p>
+    <p>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       数据挖掘技术在推荐系统中的应用
+      </strong>
+      @清风运文 (陈运文，盛大智能推荐团队负责人，所率团队研发的推荐算法因优异的效果，获EMI Data Science Hackathon国际音乐推荐竞赛冠军及ACM KDD-Cup 2012国际数据挖掘大赛亚军)；
+     </li>
+     <li>
+      <strong>
+       做书的历史与未来
+      </strong>
+      @tinyfool  (郝培强，
+      <a href="http://iapp4me.com/" rel="nofollow" title="iApp4Me.com">
+       iApp4Me.com
+      </a>
+      创始人，程序员，Blogger，关于此次书的历史与未来的主题，这里有一篇文章可以先睹为快：
+      <a href="http://tiny4cocoa.com/home/s/13/" rel="nofollow" title="http://tiny4cocoa.com/home/s/13/">
+       http://tiny4cocoa.com/home/s/13/
+      </a>
+      )。
+     </li>
+    </ol>
+    <p>
+     <strong>
+      PPT下载
+     </strong>
+    </p>
+    <ol>
+     <li>
+      昨日读书会，陈运文博士从常用的推荐算法(Item/user-based，及LFM等)，到实践中的关键点(数据预处理/冷启动等问题)，相当精彩，PPT下载：
+      <a href="http://t.cn/zjf4vDg" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      郝培强则从书的历史讲到未来，不乏启发性和思考性，PPT：
+      <a href="http://t.cn/zjf4vDd" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+    </ol>
+    <p>
+    </p>
+    <h4>
+     <u>
+      5、读书会第五期
+     </u>
+    </h4>
+    <p>
+     读书会第5期本月在京举办，其具体时间、地点、主讲人、内容如下：
+    </p>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2013年4月14日
+     </span>
+     下午2-5点，
+    </p>
+    <p>
+     地点：北大国际数学研究中心2楼报告厅
+    </p>
+    <p>
+     主讲人：
+     <strong>
+      余凯
+     </strong>
+     （时任百度多媒体部技术副总监，机器学习专家）
+     <br/>
+     <img alt="" height="560" src="https://i-blog.csdnimg.cn/blog_migrate/93cb7fbc66a57812fc54dad2f8a98e76.png" width="750"/>
+    </p>
+    <p>
+     主题：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       probabilistic models for unsupervised learning—纪念Sam Roweis；
+      </strong>
+     </li>
+    </ul>
+    <p>
+     （感谢@1-0-1-0-1-0-1-0-1... 帮忙申请的场地，感谢清华、北大、北理工、北邮、北科大朋友的热心帮助，谢谢大家）
+    </p>
+    <p>
+     <strong>
+      PPT教程
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <a href="http://mlg.eng.cam.ac.uk/zoubin/nipstut.pdf" rel="nofollow" title="http://mlg.eng.cam.ac.uk/zoubin/nipstut.pdf">
+       http://mlg.eng.cam.ac.uk/zoubin/nipstut.pdf
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     参会者感想：邓亚峰-人脸识别说，今天在北大参加了@研究者July 组织的 @余凯_西二旗民工 主讲的probabilistic models for unsupervised learning，推荐一下余老师推崇的tutorial
+     <a href="http://mlg.eng.cam.ac.uk/zoubin/nipstut.pdf" rel="nofollow" title="http://mlg.eng.cam.ac.uk/zoubin/nipstut.pdf">
+      http://mlg.eng.cam.ac.uk/zoubin/nipstut.pdf
+     </a>
+     ，从一个统一的视角去理解： bayesian、MAP、ML，以及FA、EM、PCA、ICA、GMM、HMM等算法，可以帮助我们融会贯通。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <u>
+      6、读书会第6期
+     </u>
+    </h4>
+    <p>
+     读书会第6期报名通知，
+    </p>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2013年7月7日
+     </span>
+     下午2-5点
+    </p>
+    <p>
+     地点：
+     <u>
+      北航新主楼E座706室
+     </u>
+    </p>
+    <p>
+     主题：
+    </p>
+    <ol>
+     <li>
+      <strong>
+       The Golden Age of RTB
+      </strong>
+      @XuehuaOnAds（沈学华，品友互动CTO）；
+     </li>
+     <li>
+      <strong>
+       广告中有趣的计算问题
+      </strong>
+      @北冥乘海生 （刘鹏，前MediaV首席科学家, 前Yahoo!高级科学家）
+     </li>
+    </ol>
+    <p>
+     <strong>
+      PPT下载
+     </strong>
+    </p>
+    <ul>
+     <li>
+      第一个主题分享：The Golden Age of RTB@XuehuaOnAds，其PPT下载地址：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgyQFP" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      第2个主题分享：广告中有趣的计算问题@北冥乘海生，其PPT已公布，感兴趣的朋友可以前去下载了：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgLN2x" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     July、二零一三年七月九日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <u>
+      7、读书会第7期
+     </u>
+    </h4>
+    <p>
+     读书会第7期报名通知，
+     <br/>
+     时间：
+     <span style="color:#cc0000;">
+      2013年8月25日
+     </span>
+     下午2-5点，
+     <br/>
+     地点：中关村数字设计中心 4楼大厅（感谢@北京创客空间@王盛林Justin@小猴机器人提供的场地）
+     <br/>
+     主题：
+    </p>
+    <ol>
+     <li>
+      <strong>
+       IT 行业的创新 - 创新的迷思
+      </strong>
+      @程序员邹欣（邹欣，微软研发经理，《编程之美》第一作者，《移山之道》作者）
+     </li>
+     <li>
+      <strong>
+       信息检索中倒排索引的压缩技术初探
+      </strong>
+      @王斌_ICTIR（王斌，中国科学院计算技术研究所副研究员，博士生导师，已翻译并出版《信息检索导论》《大数据：互联网大规模数据挖掘与分布式处理》《机器学习实战》）
+     </li>
+    </ol>
+    <p>
+     PPT教程
+    </p>
+    <p>
+    </p>
+    <ol>
+     <li>
+      信息检索中倒排索引技术的压缩技术初探PPT：
+      <a href="http://vdisk.weibo.com/s/Ae48gDV55_xs/1377449535" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      IT行业的创新 - 创新的迷思：1-4
+      <a href="http://www.cnblogs.com/xinz/archive/2011/07/09/2102052.html" rel="nofollow" title="http://www.cnblogs.com/xinz/archive/2011/07/09/2102052.html">
+       http://www.cnblogs.com/xinz/archive/2011/07/09/2102052.html
+      </a>
+      ；5-6
+      <a href="http://www.cnblogs.com/xinz/archive/2011/07/10/2102310.html" rel="nofollow" title="IT 行业的创新 - 创新的迷思 (5-6) - SoftwareTeacher - 博客园">
+       IT 行业的创新 - 创新的迷思 (5-6) - SoftwareTeacher - 博客园
+      </a>
+      ；7-8
+      <a href="http://www.cnblogs.com/xinz/archive/2011/07/11/2102667.html" rel="nofollow" title="IT 行业的创新 - 创新的迷思 (7-8) - SoftwareTeacher - 博客园">
+       IT 行业的创新 - 创新的迷思 (7-8) - SoftwareTeacher - 博客园
+      </a>
+      。
+     </li>
+    </ol>
+    <h4>
+     <span style="color:#990000;">
+      <u>
+       8、读书会第8期
+      </u>
+     </span>
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：
+     <span style="color:#cc0000;">
+      本周日2013年12月8日
+     </span>
+     下午2-5点
+     <br/>
+     <strong>
+      地点
+     </strong>
+     ：中国科学院自动化研究所
+     <strong>
+      智能化大厦三层
+     </strong>
+     学术报告厅（北京市海淀区中关村东路95号）。公交：海淀交通支队；地铁：知春路站或知春里站。
+     <br/>
+     <strong>
+      主题
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      夏粉（百度联盟大数据机器学习技术负责人，主要研究方向为统计机器学习理论，大数据深度学习算法，计算广告学和排序学习。十年以上机器学习研究经验，曾在机器学习顶级会议杂志ICML, NIPS等发表多篇文章），分享内容主要是
+      <strong>
+       排序学习的理论和算法研究
+      </strong>
+      ，以排序学习为例介绍如何设计一个计算高效、效果有理论保证的机器学习算法。
+     </li>
+     <li>
+      沈志勇（现为百度深度学习技术研究院数据科学家，主要研究方向为大数据相关理论与应用。曾任百度音乐推荐系统负责人，惠普中国研究院研究员），分享内容主要是个人
+      <strong>
+       对主题模型的理解
+      </strong>
+      ，以及在该领域研究与应用中的一些经验及研究成果。
+     </li>
+    </ul>
+    <p>
+     <img alt="" class="has" height="400" src="https://i-blog.csdnimg.cn/blog_migrate/afe546b0fa00e10613e9281aa003af1f.jpeg" width="700"/>
+    </p>
+    <h5>
+     PPT
+    </h5>
+    <ol>
+     <li>
+      @夏粉_百度 排序学习的理论和算法研究：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgKMzJ" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      沈志勇 主题模型的理解：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgKMAf" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      July十分钟演讲：我们能做些什么？
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgKMK7" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+    </ol>
+    <p>
+     July、二零一三年十二月九日中午。
+    </p>
+    <hr/>
+    <h3>
+     第四部分、面试&amp;算法讲座，
+     <span style="color:#cc0000;">
+      2013年~2014年
+     </span>
+    </h3>
+    <p>
+    </p>
+    <h4>
+     第 1 次北理工面试&amp;算法讲座
+    </h4>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2013年9月15日
+     </span>
+     下午2-5点
+     <br/>
+     地点：北理工七号楼报告厅
+     <br/>
+     主讲人及主讲内容（
+     <a href="http://weibo.com/1580904460/A8N6oAFZ4" rel="nofollow" title="Sina Visitor System">
+      Sina Visitor System
+     </a>
+     ）：
+    </p>
+    <ol>
+     <li>
+      July、
+      <strong>
+       面试中常见的算法和典型题型；
+      </strong>
+     </li>
+     <li>
+      caopengcs，
+      <strong>
+       面试中出现频率极高的字符串一类算法
+      </strong>
+      ；
+     </li>
+    </ol>
+    <p>
+     <img alt="" class="has" height="450" src="https://i-blog.csdnimg.cn/blog_migrate/cf9d90aa087db6af5779d7c3bb9c64d9.jpeg" width="700"/>
+    </p>
+    <p>
+     PPT下载
+    </p>
+    <ol>
+     <li>
+      July的部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKg-MTB" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      caopengcs的部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKg-N92" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+    </ol>
+    <p>
+     最后，附上一听众的参会感想：
+     <a href="http://blog.csdn.net/masibuaa/article/details/11819947" title="2013年9月第1次面试&amp;算法讲座(主讲人：July &amp; 曹鹏博士)-CSDN博客">
+      2013年9月第1次面试&amp;算法讲座(主讲人：July &amp; 曹鹏博士)-CSDN博客
+     </a>
+     ，thanks。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第 2 次上海交大面试&amp;算法讲座
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：
+     <span style="color:#cc0000;">
+      2013年9月28日
+     </span>
+     下午2-5点
+     <br/>
+     <strong>
+      地点
+     </strong>
+     ：上海交大闵行校区东中院4-101教室
+     <br/>
+     <strong>
+      主讲人及主讲内容
+     </strong>
+     （
+     <a href="http://weibo.com/1580904460/AaWH1fD5f?mod=weibotime" rel="nofollow" title="Sina Visitor System">
+      Sina Visitor System
+     </a>
+     ）：
+    </p>
+    <ol>
+     <li>
+      July、结构之法算法之道blog博主
+      <br/>
+      主要分享历年校招笔试面试的重点，包括常考知识点，算法，和典型题型（以程序员编程艺术系列和秒杀99%的海量数据处理面试题为例），重点分享
+      <strong>
+       海量数据处理面试题的解决之道
+      </strong>
+      。
+     </li>
+     <li>
+      panda（@移山测试工作室黑灯老师），现任EMC技术经理，刷完国外面试题网站leetcode
+      <br/>
+      主要分享面试中常考的典型题目分析和面试辅导，如
+      <strong>
+       数组/链表查找，字符串匹配/逆序
+      </strong>
+      等等。
+     </li>
+     <li>
+      Ben（@BenLin_EYD），现在大众点评算法组，曾获ACM亚洲赛区第二
+      <br/>
+      主要分享面试中常见序列问题的解析，如，主要分享面试中常见序列问题的解析，如
+      <strong>
+       K序列合并、区间染色、 多序列求第k大元素
+      </strong>
+      。
+     </li>
+    </ol>
+    <p>
+     讲座PPT
+    </p>
+    <ul>
+     <li>
+      PPT下载：July部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKg_1me" rel="nofollow" title="http://vdisk.weibo.com/s/zrFL6OXKg_1me ">
+       http://vdisk.weibo.com/s/zrFL6OXKg_1me
+      </a>
+      ；
+     </li>
+     <li>
+      Ben部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKg_0Hp" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     有任何问题，欢迎随时留言评论指出
+     <strong>
+      。
+     </strong>
+     July、二零一三年十月三日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第
+     <em>
+      3
+     </em>
+     次北理工面试&amp;算法讲座
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：
+     <span style="color:#cc0000;">
+      2013年10月27日
+     </span>
+     晚上6-9点
+     <br/>
+     <strong>
+      地点
+     </strong>
+     ：北京理工大学研究生院101室
+     <br/>
+     <strong>
+      对象
+     </strong>
+     :2014/2015/2016届，或对算法感兴趣
+     <br/>
+     2位
+     <strong>
+      主讲人和主讲内容
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      ①July、主要分享今年各大互联网公司
+      <strong>
+       2014校招笔试面试热点的分析与解答
+      </strong>
+      ，包括笔试中常考的基础理论，以及面试中常见算法总结：如排序(快速排序/堆排序/归并排序)，查找(二分查找/二叉树查找)，排列组合，分治/Hash/递归/回溯，贪心算法和动态规划，海量数据处理。
+     </li>
+     <li>
+      ②caopengcs（中科院博士毕业，zoj排名第一）：重点分享面试中常考的
+      <strong>
+       搜索
+      </strong>
+      算法，包括二分查找/二叉树查找，BFS/DFS，时间允许，再讲讲动态规划。
+     </li>
+    </ul>
+    <p>
+     <strong>
+      PPT下载
+     </strong>
+    </p>
+    <ol>
+     <li>
+      July部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgThYv" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+     <li>
+      caopengcs@曹鹏博士 部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgTiD7" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+    </ol>
+    <p>
+     July、二零一三年十月二十八日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第 4 次中科院计算所面试&amp;算法讲座
+    </h4>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2013年11月24日下午2-5点
+     </span>
+    </p>
+    <p>
+     地点：中科院计算所一楼报告厅
+     <br/>
+     对象：找工作、换工作、或对算法感兴趣的朋友
+     <br/>
+     主题：
+    </p>
+    <ol>
+     <li>
+      July、主要梳理面试成功必备的10大要素，如基础知识、算法、不算优化算法能力，coding能力，手写代码能力，简历，项目，核心竞争力，潜力，平等交流心态，重点阐述不算优化算法能力，以《代码之美》和《程序员编程艺术》上的例子为例，如何写出简洁、高效、漂亮的代码。
+     </li>
+     <li>
+      caopengcs、主要分享O(N)时间内解决的问题，包括单调队列，单调堆栈，二叉树遍历（前、中、后），杨氏矩阵查找快排partition及变形，荷兰国旗，第一个缺失的正整数（排列判断），2-sum最长无重复字符的子串，字符串（KMP），最长回文子串，前缀相关等等
+      <br/>
+      <img alt="" class="has" height="450" src="https://i-blog.csdnimg.cn/blog_migrate/288c789d46faeee786820427d45fc78d.jpeg" width="700"/>
+     </li>
+    </ol>
+    <p>
+     PPT下载
+    </p>
+    <ol>
+     <li>
+      July部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgh7VM" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      caopengcs部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgh7Wh" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+    </ol>
+    <p>
+     再次感谢中科院计算所研究生会对我和曹鹏的邀请，辛苦！July、二零一三年十一月二十五日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第 5 次华中科技大学面试&amp;算法讲座
+    </h4>
+    <p>
+    </p>
+    <p>
+     受武汉光电国家实验室就业实践部的邀请，我将于2014年4月29日在华科大举办第5次面试&amp;算法讲座，具体时间和地点如下：
+    </p>
+    <p>
+     时间：
+     <span style="color:#ff0000;">
+      2014
+     </span>
+     年4月29日晚上7 - 9点
+    </p>
+    <p>
+     地点：武汉华中科技大学光电国家实验室A101会议室
+    </p>
+    <p>
+     主题：
+    </p>
+    <ul>
+     <li>
+      主要分享3个内容点：①笔试面试考什么，②解决编程面试题有哪些常见算法，③海量数据处理面试题的解决之道。
+      <img alt="" class="has" height="450" src="https://i-blog.csdnimg.cn/blog_migrate/1b004c513f6934ae3b60095fdf60b3c2.jpeg" width="700"/>
+     </li>
+    </ul>
+    <p>
+     PPT下载
+    </p>
+    <ul>
+     <li>
+      4月29日华科大面试&amp;算法讲座PPT下载地址为：
+      <a href="http://pan.baidu.com/s/1hqh1E9e" rel="nofollow" title="华科大 &amp; 湖南大学面试&amp;算法讲座综合PPT.ppt_免费高速下载|百度网盘-分享无限制">
+       华科大 &amp; 湖南大学面试&amp;算法讲座综合PPT.ppt_免费高速下载|百度网盘-分享无限制
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     July、二零一四年四月二十三日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第 6 次湖南大学面试&amp;算法讲座
+    </h4>
+    <p>
+     第6次面试&amp;算法讲座在湖南大学举办，具体时间地点如下：
+    </p>
+    <p>
+     时间：
+     <span style="color:#ff0000;">
+      2014年
+     </span>
+     4月30日晚7 - 9点
+    </p>
+    <p>
+     地点：湖南大学综合楼305（麓山南路口站旁的淡黄色建筑，202 106 913 902 905路等公交均可到达）
+    </p>
+    <p>
+     主题：
+    </p>
+    <ul>
+     <li>
+      主要分享如何学习编程和算法，及如何备战笔试面试。
+      <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/85b81094cec157a38b28dfb3aa17e4ba.jpeg"/>
+     </li>
+    </ul>
+    <p>
+     PPT 与视频
+    </p>
+    <ul>
+     <li>
+      4月30日湖南大学面试&amp;算法讲座PPT下载地址为：
+      <a href="http://pan.baidu.com/s/1hqh1E9e" rel="nofollow" title="华科大 &amp; 湖南大学面试&amp;算法讲座综合PPT.ppt_免费高速下载|百度网盘-分享无限制">
+       华科大 &amp; 湖南大学面试&amp;算法讲座综合PPT.ppt_免费高速下载|百度网盘-分享无限制
+      </a>
+      ；
+     </li>
+     <li>
+      视频：百度云地址：
+      <a href="http://pan.baidu.com/s/1hqEBDVe" rel="nofollow" title="百度网盘-链接不存在">
+       百度网盘-链接不存在
+      </a>
+      ；
+     </li>
+    </ul>
+    <p>
+     July、二零一四年四月二十四日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第 7 次东南大学（南京）面试&amp;算法讲座
+    </h4>
+    <p>
+     时间：
+     <span style="color:#cc0000;">
+      2014年7月16日晚6点半 - 9点
+     </span>
+    </p>
+    <p>
+     地点：东南大学四牌楼校区礼东101
+    </p>
+    <p>
+     内容：此第7次讲座将在前6次的基础上进一步提纲挈领，将相关知识点一次打尽。
+    </p>
+    <p>
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/8cf70c1ad3c7cbdf9a88d0178770454a.jpeg"/>
+    </p>
+    <p>
+     PPT下载
+    </p>
+    <p>
+     第7次面试&amp;算法讲座的
+     <strong>
+      PPT 下载
+     </strong>
+     地址为：
+     <a href="http://pan.baidu.com/s/1c0090Hi" rel="nofollow" title="2014年7月第7次东南大学面试&amp;算法讲座.ppt_免费高速下载|百度网盘-分享无限制">
+      2014年7月第7次东南大学面试&amp;算法讲座.ppt_免费高速下载|百度网盘-分享无限制
+     </a>
+     。此次PPT 在前7次讲座中最为全面，基本涵盖了笔试面试常考的绝大部分知识点。感谢@东南大学自动化研会 的邀请，及@黄洲荣 小叶等人的组织宣传，再次感谢昨晚所有来听讲座的朋友，thanks。
+    </p>
+    <p>
+     July、二零一四年七月十七日。
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      前 7 次讲座小结
+     </strong>
+    </p>
+    <p>
+     面试&amp;算法讲座目前已办7次，去了北理工（2次）、上海交大、中科院、华科大、湖南大学、东南大学，全部7次讲座的PPT 可在上文中找到下载地址。单从这7次的PPT来看，每一次都在前几次讲座的基础上不断深入递进，思路也逐步清晰。写代码也好，做事情也好，都在不断实践训练中优化。
+    </p>
+    <p>
+    </p>
+    <h4>
+     第
+     <em>
+      8
+     </em>
+     <em>
+     </em>
+     次西电面试&amp;算法讲座
+    </h4>
+    <p>
+     时间：2014年
+     <span style="color:#ff0000;">
+      9月3日
+     </span>
+     晚上7 - 9点
+    </p>
+    <p>
+     地点：西安电子科技大学北校区阶梯教室201（雁塔区太白南路2号，老校区足球场对面）
+    </p>
+    <p>
+     主题：
+    </p>
+    <ul>
+     <li>
+      面试，帮听众把笔试面试中常考的知识点串起来，建立知识体系；
+     </li>
+     <li>
+      算法，分享如何把一些算法思考明白的过程，比如KMP、红黑树、B树；
+     </li>
+     <li>
+      机器学习，如SVM的基本原理，与SMO算法的简单介绍。
+     </li>
+    </ul>
+    <p>
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/41bfea29d714aa15f5dbaf3fd0809b55.jpeg"/>
+    </p>
+    <p>
+     <strong>
+      PPT与视频
+     </strong>
+    </p>
+    <ul>
+     <li>
+      优酷
+      <span style="color:#ff0000;">
+       视频
+      </span>
+      观看地址：
+      <a href="http://v.youku.com/v_show/id_XNzc2MDYzNDg4.html" rel="nofollow" title="http://v.youku.com/v_show/id_XNzc2MDYzNDg4.html">
+       http://v.youku.com/v_show/id_XNzc2MDYzNDg4.html
+      </a>
+      （开始走“轻松有趣”的技术讲座路线，重点讲了下KMP，顺带讲了下SVM）；
+     </li>
+     <li>
+      PPT 下载地址：
+      <a href="http://pan.baidu.com/s/1pJ9HFqb" rel="nofollow" title="2014年9月3日第8次西电面试&amp;算法讲座.ppt_免费高速下载|百度网盘-分享无限制">
+       2014年9月3日第8次西电面试&amp;算法讲座.ppt_免费高速下载|百度网盘-分享无限制
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     感谢西电华为创新俱乐部的伙伴们 辛苦制作视频，前前后后每一个人都很给力，感谢来听讲座的所有朋友，最后把本讲座视频 + PPT 献给天南地北的朋友，中秋节快乐！July、二零一四年九月八日晚。
+    </p>
+    <hr/>
+    <h3>
+     第五部分、机器学习公开讲座，
+     <span style="color:#cc0000;">
+      2013年~2014年
+     </span>
+    </h3>
+    <p>
+    </p>
+    <h4>
+     第一期：SVM专题讲座
+    </h4>
+    <p>
+     时间：本周日2013年12月22日下午1点半-5点，
+     <br/>
+     地点：北航教学区主北楼303
+    </p>
+    <p>
+     内容：
+    </p>
+    <ol>
+     <li>
+      @jingdongc（百度码农，对机器学习和实时计算感兴趣）：
+      <strong>
+       大规模在线学习算法
+      </strong>
+      ，介绍通用的在线学习算法（SGD，mini-batch等），然后以此为基础介绍参数稀疏化方法，探讨建设大规模在线学习系统需要关注的要点。
+     </li>
+     <li>
+      July：
+      <strong>
+       理解SVM的三个步骤
+      </strong>
+      ，
+     </li>
+     <li>
+      @夏粉_百度 主持
+      <strong>
+       SVM现场问答，
+      </strong>
+      欢迎提前把SVM相关的问题私信给
+      <a href="http://weibo.com/julyweibo" rel="nofollow" title="@研究者July">
+       @研究者July
+      </a>
+      （提的问题越多越有质量，各位的现场收获越大）；
+     </li>
+     <li>
+      70多岁的季老先生：通俗简易讲解“变分问题”。
+     </li>
+    </ol>
+    <p>
+     PPT下载
+    </p>
+    <ol>
+     <li>
+      大规模在线学习算法@jingdongc：
+      <a href="http://pan.baidu.com/share/link?shareid=1374230561&amp;uk=4010619712" rel="nofollow" title="互联网应用下的大规模在线学习算法.pdf_免费高速下载|百度网盘-分享无限制">
+       互联网应用下的大规模在线学习算法.pdf_免费高速下载|百度网盘-分享无限制
+      </a>
+      ；
+     </li>
+     <li>
+      July的SVM部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgbDA-" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      季泉生老人通俗讲解“变分问题”：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXKgbDT-" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+    </ol>
+    <h4>
+    </h4>
+    <h4>
+     第二期：贝叶斯与EM算法
+    </h4>
+    <p>
+     时间 &amp; 地点：
+     <span style="color:#cc0000;">
+      待定
+     </span>
+    </p>
+    <p>
+     主题：
+    </p>
+    <ol>
+     <li>
+      极大似然估计、贝叶斯
+     </li>
+     <li>
+      SVD、PCA
+     </li>
+     <li>
+      EM、混合高斯模型
+     </li>
+    </ol>
+    <p>
+     本次讲座由北京10月机器学习班的部分讲师主讲，完全免费公开，欢迎对机器学习感兴趣的朋友们参加。
+    </p>
+    <p>
+     July、二零一四年十月六日
+    </p>
+    <hr/>
+    <h3>
+     第六部分、创业者之家俱乐部，
+     <span style="color:#cc0000;">
+      2013年~2014年
+     </span>
+    </h3>
+    <p>
+    </p>
+    <p>
+     2014年2月15日，和几个朋友利用业余时间一起创办了一创业俱乐部，名为：创业者之家俱乐部，我任俱乐部理事长，希望我们聚集起有想法、有眼光、有胸怀的创业者，抱团取暖聚人成事，让天下没有难创的业。
+    </p>
+    <p>
+     2014年2月22日，俱乐部第一次会员大会：
+    </p>
+    <p>
+     <img alt="" class="has" height="500" src="https://i-blog.csdnimg.cn/blog_migrate/60156096ddd6144d0e60f93340738fa7.jpeg" width="707"/>
+    </p>
+    <p>
+    </p>
+    <h4>
+     俱乐部第一次公开活动
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：2014年3月9日下午2-5点
+    </p>
+    <p>
+     <strong>
+      地点
+     </strong>
+     ：北苑路13号院1号楼领地OFFICE C座603室(地铁立水桥南站D口出)：
+    </p>
+    <p>
+     <strong>
+      流程
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      ①3个创业团队分享(金融、微电影、O2O)
+     </li>
+     <li>
+      ②idea宣讲
+     </li>
+    </ul>
+    <p>
+     <strong>
+      报名
+     </strong>
+     ：微博私信
+     <a href="http://weibo.com/julyweibo" rel="nofollow" title="@研究者July">
+      @研究者July
+     </a>
+     ：”姓名+状态(如创业中，或想创业)+参加目的(如寻找创业合伙人，或分享idea)"，我回复私信代表报名成功。
+    </p>
+    <p>
+     July、二零一四年三月四日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     俱乐部第二次公开活动
+    </h4>
+    <p>
+     时间：
+     <span style="color:#ff0000;">
+      2014年8月16日
+     </span>
+     下午2点
+    </p>
+    <p>
+     地点：西直门附近的高鹏会（地图：
+     <a href="http://www.gaopengclub.com/ContactUs/" rel="nofollow" title="宝马在线1211_最老登录入口">
+      宝马在线1211_最老登录入口
+     </a>
+     ）
+    </p>
+    <p>
+     主题：leader 宣讲与团队招人
+    </p>
+    <p>
+     免费
+     <strong>
+      报名
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      个人报名，微博私信
+      <a href="http://weibo.com/iamwuchao" rel="nofollow" title="@有鱼吴超">
+       @有鱼吴超
+      </a>
+      ：
+      <strong>
+       “
+      </strong>
+      姓名、学校或公司名、专业或职位、兴趣方向、想做的事情
+      <strong>
+       ”
+      </strong>
+      。（目前30多个个人报名参会）
+     </li>
+     <li>
+      宣讲leader报名，微博私信
+      <a href="http://weibo.com/iamwuchao" rel="nofollow" title="@有鱼吴超">
+       @有鱼吴超
+      </a>
+      ：
+      <strong>
+       “
+      </strong>
+      公司名字、宣讲主题、定位、目前进展、下步规划，需要什么人，待遇或可提供什么报酬
+      <strong>
+       ”
+      </strong>
+      （目前已有20个公司报名参会，不少公司都融资1到3轮，包括O2O行业精英）；
+     </li>
+    </ul>
+    <p>
+     July、二零一四年八月十五日
+    </p>
+    <p>
+    </p>
+    <hr/>
+    <h3>
+     第七部分、面试&amp;算法班，
+     <span style="color:#cc0000;">
+      2014年
+     </span>
+    </h3>
+    <p>
+    </p>
+    <h4>
+     <span style="color:#666666;">
+      第 1 期：北京算法班·周日班
+     </span>
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：每周日，2014年4月13日第一次课，
+     <span style="color:#cc0000;">
+      2014年6月15日第一期8次课全部结束
+     </span>
+     。
+    </p>
+    <p>
+     <strong>
+      地点
+     </strong>
+     ：北京（报名成功后私信告知具体地点）
+    </p>
+    <p>
+     算法班，50个人，我和1-3个朋友一起主讲，以数据结构、算法、面试为主。每周日一次，每次一个下午，约3个小时，2014年4月13日北京第一次课。
+    </p>
+    <p>
+     <strong>
+      PPT 下载
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       第3次课·树
+      </strong>
+      的PPT的下载地址：July 红黑树&amp;B树部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXJNfNVU" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；曹博 线段树部分：
+      <a href="http://vdisk.weibo.com/s/zrFL6OXJNfO4O" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      ；
+     </li>
+     <li>
+      <strong>
+       第6次课
+      </strong>
+      <strong>
+       ·贪心 DP 海量数据处理
+      </strong>
+      的PPT下载地址见：
+      <a href="http://yun.baidu.com/s/1kTuUdbp#dir/path=%252F%25E5%258C%2597%25E4%25BA%25AC4%25E6%259C%2588%25E7%25AE%2597%25E6%25B3%2595%25E7%258F%25AD%25E5%2591%25A8%25E6%2597%25A5%25E7%258F%25AD%25E7%25AC%25AC6%25E6%25AC%25A1%25E8%25AF%25BE4%25E4%25B8%25AAPPT" rel="nofollow" title="北京4月算法班周日班第6次课4个PPT_免费高速下载|百度网盘-分享无限制">
+       北京4月算法班周日班第6次课4个PPT_免费高速下载|百度网盘-分享无限制
+      </a>
+      。
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      <img alt="" class="has" height="478" src="https://i-blog.csdnimg.cn/blog_migrate/8bc029ac9472ad0e69629200582b851b.jpeg" width="707"/>
+     </p>
+    </blockquote>
+    <p>
+     学员反馈
+    </p>
+    <p>
+     一学员上完北京算法班·周日班8次课的感受为：“没有料到大学毕业之后，还能听到这样精彩的课堂，听起来十分过瘾！”，详情见：
+     <a href="http://weibo.com/1580904460/B9a7K2PrS" rel="nofollow" title="Sina Visitor System">
+      Sina Visitor System
+     </a>
+     。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <span style="color:#666666;">
+      第 2 期：北京算法班·周六班
+     </span>
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：每周六，2014年4月26日第一次课，2014年6月28日全部结课。
+    </p>
+    <p>
+     <strong>
+      地点
+     </strong>
+     ：北京（报名成功后私信告知具体地点）
+    </p>
+    <p>
+     因上述周日班开始报名后，不到3天名额便满，为满足更多朋友的听课需求，故新开周六班，8次课程，4大主题：
+    </p>
+    <ol>
+     <li>
+      数据结构（字符串、数组、链表、栈、堆、队列、哈希表、树、图）
+     </li>
+     <li>
+      算法（查找、排序、搜索：BFS和DFS、图论、贪心、动态规划、海量数据处理）
+     </li>
+     <li>
+      数学（概率组合数论统计）
+     </li>
+     <li>
+      系统协议（操作系统、网络协议）
+     </li>
+    </ol>
+    <p>
+     学员反馈
+    </p>
+    <ul>
+     <li>
+      一听课学员的感受：“讲师很赞，把自己放在空白的状态，然后和大家思考和理解完一个算法”，详情见：
+      <a href="http://weibo.com/1580904460/BbdDEmQvB?mod=weibotime" rel="nofollow" title="Sina Visitor System">
+       Sina Visitor System
+      </a>
+      。
+     </li>
+     <li>
+      另一学员的反馈：“今年上半年参加过July的算法班周六班，每节课都感觉收获颇丰，乐在其中，意犹未尽，我全身都热烈地燃起了对算法的热情、热爱。相信July的
+      <a href="http://blog.csdn.net/v_july_v/article/details/7237351#t61" title="机器学习班">
+       机器学习班
+      </a>
+      会带来一段更精彩的，不同寻常的学习之旅”。
+     </li>
+    </ul>
+    <p>
+    </p>
+    <h4>
+     <span style="color:#666666;">
+      第 3 期：上海算法班·周六班
+     </span>
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：每周六，2014年5月17日第一次课，还剩7.5和7.12日最后两次课。
+    </p>
+    <p>
+     <strong>
+      地点
+     </strong>
+     ：上海杨浦区复旦大学附近，具体地点在微博私信报名成功后告知。
+    </p>
+    <p>
+     July、二零一四年五月十四日。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <span style="color:#666666;">
+      第 4 期：北京7月暑假班
+     </span>
+    </h4>
+    <p>
+     时间：2014年7.19，7.20，7.26，7.27日上课，跨2个周末，4天，周六周日上午下午皆上课
+    </p>
+    <p>
+     地点：北京海淀区，具体地点在报名成功后告知。
+    </p>
+    <p>
+     北京7月暑假班的8次课程大纲如下：
+    </p>
+    <ul>
+     <li>
+      7月19日上午：算法综述（从各路数据结构谈到各种经典算法）
+     </li>
+     <li>
+      7月19日下午：字符串（讲解字符串相关的算法问题，比如最长回文子串，和极其精彩的KMP）
+      <ul>
+       <li>
+        第二次课字符串的
+        <strong>
+         PPT
+        </strong>
+        下载地址为：
+        <a href="http://yun.baidu.com/s/1mgFmw7u" rel="nofollow" title="北京7月暑假班第2次课：回文子串-KMP等若干问题的讨论_邹博.ppt_免费高速下载|百度网盘-分享无限制">
+         北京7月暑假班第2次课：回文子串-KMP等若干问题的讨论_邹博.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        ，邹博讲解KMP 的半小时
+        <strong>
+         视频
+        </strong>
+        地址见：
+        <a href="http://v.youku.com/v_show/id_XNzQzMjQ1OTYw.html" rel="nofollow" title="http://v.youku.com/v_show/id_XNzQzMjQ1OTYw.html">
+         http://v.youku.com/v_show/id_XNzQzMjQ1OTYw.html
+        </a>
+        （对应前面PPT 第30 - 36页）。
+       </li>
+      </ul>
+     </li>
+     <li>
+      7月20日上午：数组（比如完美洗牌问题）
+     </li>
+     <li>
+      7月20日下午：树（比如Trie树、红黑树、B树、R树、及最近公共祖先）
+     </li>
+     <li>
+      7月26日上午：图（比如DFS、BFS、最小生成树、最短路径算法）
+     </li>
+     <li>
+      7月26日下午：查找排序（比如二分、二叉树查找，快排、堆排，及O(1)空间的二叉树Morris遍历算法）
+     </li>
+     <li>
+      7月27日上午：贪心和动态规划（例如LCS）
+     </li>
+     <li>
+      7月27日下午：海量数据处理、操作系统、系统设计（例如Hash映射/分治、simhash，搜索智能提示）
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      <img alt="" class="has" height="478" src="https://i-blog.csdnimg.cn/blog_migrate/70f06b1be9a47c66780c1191b3813f21.jpeg" width="707"/>
+     </p>
+    </blockquote>
+    <p>
+     July、二零一四年六月三十日
+    </p>
+    <p>
+    </p>
+    <h4>
+     <span style="color:#666666;">
+      第 5 期：北京算法班·秋季班
+     </span>
+    </h4>
+    <p>
+     2014年的校招大潮即将来临，北京算法班秋季班2014年9月13日开班，在之前7月暑假班的基础上增加：有限状态自动机、SVD，及PCA、极大似然估计、贝叶斯、EM等机器学习相关的内容，具体上课时间及内容如下：
+    </p>
+    <ul>
+     <li>
+      9月13日上午：算法综述（从各路数据结构谈到各种经典算法）
+     </li>
+     <li>
+      9月13日下午：字符串（比如最长回文子串，和极其精彩的KMP、有限状态自动机）
+     </li>
+     <li>
+      9月14日下午：数组（比如完美洗牌问题、后缀数组）
+     </li>
+     <li>
+      9月14日晚上：树
+      <strong>
+       I
+      </strong>
+      （比如Trie树、后缀树、红黑树、B树、及最近公共祖先）
+     </li>
+     <li>
+      9月20日上午：查找排序（比如二分、二叉树查找，快排、堆排，及O(1)空间的二叉树Morris遍历算法）
+     </li>
+     <li>
+      9月20日下午：树
+      <strong>
+       II
+      </strong>
+      （2-3-4树、红黑树、B树）、图（比如DFS、BFS、最小生成树、最短路径算法）
+     </li>
+     <li>
+      9月21日上午：贪心和动态规划（例如LCS）
+     </li>
+     <li>
+      9月21日下午：机器学习（极大似然估计、贝叶斯、PCA、SVD、SVM、SMO）
+      <ul>
+       <li>
+        最后一次课
+        <strong>
+         机器学习的两个PPT
+        </strong>
+        已经公布，邹博之贝叶斯 PCA SVD见：
+        <a href="http://pan.baidu.com/s/1sjQ8RAd" rel="nofollow" title="北京9月秋季班：贝叶斯、PCA、SVD.ppt_免费高速下载|百度网盘-分享无限制">
+         北京9月秋季班：贝叶斯、PCA、SVD.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        ；July之SVM &amp; SMO见：
+        <a href="http://pan.baidu.com/s/1o60W458" rel="nofollow" title="北京9月秋季班：SVM &amp; SMO.ppt_免费高速下载|百度网盘-分享无限制">
+         北京9月秋季班：SVM &amp; SMO.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <p>
+     本次课程已经结束，学员们评价：“听的很爽”，并询问“有没有突击班三天直接砸晕我，每周一次不过瘾”，“之前一直疑惑动态规划和贪心在细节上的区别，今天基本上解惑了。深入浅出啊。”
+    </p>
+    <p>
+     九、十月是大家收获的季节，经常看到北京算法班的学员们在群里讨论签哪个offer，不是美团搜狗去哪儿，就是百度阿里腾讯等公司，个人建议：如果公司之间相差不太大，尽量选择自己更感兴趣的工作内容，做自己喜欢的。
+    </p>
+    <p>
+     OK，2015年上半年已推出
+     <span style="color:#ff0000;">
+      算法在线课程
+     </span>
+     ：
+     <a href="http://www.julyedu.com/" rel="nofollow" title="七月在线 - 智能时代在线职教平台">
+      七月在线 - 智能时代在线职教平台
+     </a>
+     ，thanks。July、二零一四年九月二十二日。
+    </p>
+    <hr/>
+    <h3>
+     第八部分、机器学习线下班，2014年
+    </h3>
+    <p>
+    </p>
+    <h4>
+     第 1 期：北京十月机器学习班（此班已经结束，最新在线课程详见：
+     <a href="http://www.julyedu.com/" rel="nofollow" title="julyedu.com">
+      julyedu.com
+     </a>
+     ）
+    </h4>
+    <p>
+     机器学习来了！
+     <span style="color:#cc0000;">
+      2014年10月份
+     </span>
+     ，将新开机器学习班，总计20次课，
+     <strong>
+      10月18日上
+     </strong>
+     第1、2次课，周末上课。因会特别注重模型中的数学推导，所以前4次课介绍机器学习中的数学基础，后16次课讲机器学习中的算法，具体的上课时间跟内容安排如下：
+    </p>
+    <ul>
+     <li>
+      第
+      <strong>
+       1~4
+      </strong>
+      次课，机器学习中的数学基础：
+      <ul>
+       <li>
+        机器学习综述、与微积分（函数与极限、导数与微分、不定积分与定积分）
+        <ul>
+         <li>
+          10月18日上午、机器学习综述PPT 见：
+          <a href="http://pan.baidu.com/s/1c0myCOo" rel="nofollow" title="1.1机器学习综述.ppt_免费高速下载|百度网盘-分享无限制">
+           1.1机器学习综述.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="http://blog.csdn.net/v_july_v/article/details/8308762" title="概率论与数理统计">
+         概率论与数理统计
+        </a>
+        （期望方差、大数定律、二项分布、中心极限定理、贝叶斯、最小二乘法、正态分布、极大似然估计、回归分析）
+       </li>
+       <li>
+        矩阵（正交矩阵、协方差矩阵、
+        <a href="http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/1939687.html" rel="nofollow" title="SVD">
+         SVD
+        </a>
+        ）
+       </li>
+       <li>
+        最优化（凸函数、
+        <a href="http://share.csdn.net/slides/8553" rel="nofollow" title="凸优化">
+         凸优化
+        </a>
+        、对偶问题）；
+        <ul>
+         <li>
+          10月19日下午、邹博之凸优化PPT 下载地址：
+          <a href="http://pan.baidu.com/s/1sjHMj2d" rel="nofollow" title="4.1凸优化初步.ppt_免费高速下载|百度网盘-分享无限制">
+           4.1凸优化初步.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。另，PPT 原理介绍 + 现场白板推导的上课体验很佳，部分学员的反馈详见：
+          <a href="http://weibo.com/1580904460/BsqHklRa5?mod=weibotime" rel="nofollow" title="Sina Visitor System">
+           Sina Visitor System
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      第
+      <strong>
+       5
+      </strong>
+      次课，线性回归、logistic回归、最小二乘、梯度下降、拟牛顿；
+      <ul>
+       <li>
+        10月26日上午、回归与最优化PPT（logistic回归的起源，以及与线性回归的对比讲得非常细致）：
+        <a href="http://pan.baidu.com/s/1k0VgU" rel="nofollow" title="5.1回归与最优化.ppt_免费高速下载|百度网盘-分享无限制">
+         5.1回归与最优化.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       6
+      </strong>
+      次课，熵、
+      <a href="http://blog.csdn.net/v_july_v/article/details/40508465" title="最大熵模型MaxEnt">
+       最大熵模型MaxEnt
+      </a>
+      、改进的迭代尺度法IIS；
+      <ul>
+       <li>
+        10月26日下午、最大熵模型PPT（熵的概念，为何要最大熵，最大熵的推导，以及求解参数的IIS方法，整个过程讲得非常流畅）：
+        <a href="http://pan.baidu.com/s/1qWLSehI" rel="nofollow" title="6.1最大熵模型.ppt_免费高速下载|百度网盘-分享无限制">
+         6.1最大熵模型.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       7
+      </strong>
+      次课，
+      <a href="http://blog.csdn.net/v_july_v/article/details/40738211" title="聚类">
+       聚类
+      </a>
+      （k-means、层次聚类、谱聚类等）；
+      <ul>
+       <li>
+        11月1日上午，聚类PPT 下载地址：
+        <a href="http://pan.baidu.com/s/1i3gOYJr" rel="nofollow" title="7.1聚类.ppt_免费高速下载|百度网盘-分享无限制">
+         7.1聚类.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       8~11
+      </strong>
+      次课，分类
+      <ul>
+       <li>
+        <a href="http://blog.csdn.net/v_july_v/article/details/8203674" title="K近邻">
+         K近邻
+        </a>
+        、
+        <a href="http://blog.csdn.net/v_july_v/article/details/7577684" title="决策树">
+         决策树
+        </a>
+        、
+        <a href="http://blog.csdn.net/v_july_v/article/details/40718799" title="Adaboot">
+         Adaboot
+        </a>
+        、
+        <a href="http://arxiv.org/pdf/1407.7502v1.pdf" rel="nofollow" title="随机森林">
+         随机森林
+        </a>
+        <ul>
+         <li>
+          11月1日下午，决策树与Adaboost PPT下载地址：
+          <a href="http://pan.baidu.com/s/1hqePkdY" rel="nofollow" title="8.决策树与Adaboost.ppt_免费高速下载|百度网盘-分享无限制">
+           8.决策树与Adaboost.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        贝叶斯、与
+        <a href="http://blog.csdn.net/v_july_v/article/details/40984699" title="贝叶斯网络">
+         贝叶斯网络
+        </a>
+        <ul>
+         <li>
+          11月9日上午，贝叶斯网络PPT 下载地址：
+          <a href="http://pan.baidu.com/s/1o69Lp1K" rel="nofollow" title="9.1贝叶斯网络.ppt_免费高速下载|百度网盘-分享无限制">
+           9.1贝叶斯网络.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="http://blog.csdn.net/v_july_v/article/details/7624837" title="支持向量机">
+         支持向量机
+        </a>
+        （最大间隔分类、拉格朗日乘值、对偶问题、损失函数、最优化理论、SMO、SGD）
+        <ul>
+         <li>
+          11月9日下午，支持向量机PPT 下载地址：
+          <a href="http://pan.baidu.com/s/1mgkgXtA" rel="nofollow" title="10.1支持向量机.ppt_免费高速下载|百度网盘-分享无限制">
+           10.1支持向量机.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        EM、混合高斯模型
+        <ul>
+         <li>
+          11月16日上午，EM &amp; GMM PPT 下载地址：
+          <a href="http://pan.baidu.com/s/1i3zgmzF" rel="nofollow" title="11.1EM_GMM.ppt_免费高速下载|百度网盘-分享无限制">
+           11.1EM_GMM.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       12
+      </strong>
+      次课，
+      <a href="http://blog.csdn.net/v_july_v/article/details/41209515" title="主题模型">
+       主题模型
+      </a>
+      （比如概率潜语义分析
+      <a href="http://cs.brown.edu/~th/papers/Hofmann-SIGIR99.pdf" rel="nofollow" title="PLSI">
+       PLSI
+      </a>
+      、隐含狄利克雷分布
+      <a href="http://emma.memect.com/t/9756da9a47744de993d8df13a26e04e38286c9bc1c5a0d2b259c4564c6613298/LDA" rel="nofollow" title="LDA">
+       LDA
+      </a>
+      (Latent Dirichlet allocation) ）；
+      <ul>
+       <li>
+        11月16日下午，主题模型LDA的PPT 下载地址：
+        <a href="http://pan.baidu.com/s/1jGghtQm" rel="nofollow" title="12.1主题模型LDA.ppt_免费高速下载|百度网盘-分享无限制">
+         12.1主题模型LDA.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       13~14
+      </strong>
+      次课，标注
+      <ul>
+       <li>
+        马尔科夫链、与
+        <a href="http://www.52nlp.cn/category/hidden-markov-model/page/3" rel="nofollow" title="隐马尔可夫HMM">
+         隐马尔可夫HMM
+        </a>
+        <ul>
+         <li>
+          12月7日，隐马尔科夫模型PPT 下载地址：
+          <a href="http://pan.baidu.com/s/1mgsUXEo" rel="nofollow" title="13-14.1隐马尔科夫模型.ppt_免费高速下载|百度网盘-分享无限制">
+           13-14.1隐马尔科夫模型.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        概率机器学习模型的综合理解（分享人：刘鹏，涉及内容有：ML-&gt;指数族-&gt;Mixture-&gt;EM-&gt;Bayes-&gt;共轭-&gt;Evidence Framwork-&gt;变分）；
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <ul>
+     <li>
+      第
+      <strong>
+       15
+      </strong>
+      次课，条件随机场CRF
+      <ul>
+       <li>
+        12月14日上午，条件随机场CRF PPT 下载地址：
+        <a href="http://pan.baidu.com/s/1qWBdOD2" rel="nofollow" title="15.1条件随机场CRF.ppt_免费高速下载|百度网盘-分享无限制">
+         15.1条件随机场CRF.ppt_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       16
+      </strong>
+      次课，2个问题
+      <ul>
+       <li>
+        SVD、主成分分析PCA
+        <ul>
+         <li>
+          12月14日下午，PCA &amp; SVD PPT下载地址：
+          <a href="http://pan.baidu.com/s/1gd9uu23" rel="nofollow" title="16.PCA_SVD.ppt_免费高速下载|百度网盘-分享无限制">
+           16.PCA_SVD.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        社区发现算法（分享人：sumnous）
+        <ul>
+         <li>
+          12月14日下午，社区发现算法PPT下载地址：
+          <a href="http://pan.baidu.com/s/1c0yBexU" rel="nofollow" title="16 社区发现算法工作简介by_@sumnous_t.pdf_免费高速下载|百度网盘-分享无限制">
+           16 社区发现算法工作简介by_@sumnous_t.pdf_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       17
+      </strong>
+      次课
+      <ul>
+       <li>
+        <a href="http://blog.csdn.net/zzwu/article/category/243067" title="神经网络">
+         神经网络
+        </a>
+        、深度学习（
+        <a href="http://www.36kr.com/p/208510.html" rel="nofollow" title="浅析">
+         浅析
+        </a>
+        、
+        <a href="http://blog.csdn.net/zouxy09/article/category/1387932" title="笔记">
+         笔记
+        </a>
+        、
+        <a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" rel="nofollow" title="深入">
+         深入
+        </a>
+        ）
+       </li>
+       <li>
+        变分推断方法（Variational Inference）
+        <ul>
+         <li>
+          邹博讲
+          <strong>
+           变分的部分视频
+          </strong>
+          ：
+          <a href="http://v.youku.com/v_show/id_XODY3OTgyODQw.html" rel="nofollow" title="http://v.youku.com/v_show/id_XODY3OTgyODQw.html">
+           http://v.youku.com/v_show/id_XODY3OTgyODQw.html
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        独立成分分析ICA、线性判别分析LDA（二分类、多分类）、因子分析
+       </li>
+       <li>
+        推荐系统、协同过滤、典型关联分析CCA
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       18
+      </strong>
+      次课
+      <ul>
+       <li>
+        再谈Adaboost（加法模型 + 指数损失函数的理解）
+        <ul>
+         <li>
+          <strong>
+           邹博讲Adaboost 的视频
+          </strong>
+          ：
+          <a href="http://v.youku.com/v_show/id_XODY4MTE3NzA0.html" rel="nofollow" title="第①部分">
+           第①部分
+          </a>
+          、
+          <a href="http://v.youku.com/v_show/id_XODY4MDE1MzA0.html" rel="nofollow" title="第②部分">
+           第②部分
+          </a>
+          、
+          <a href="http://v.youku.com/v_show/id_XODY4MDE1Njcy.html" rel="nofollow" title="第③部分">
+           第③部分
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        在线学习、增强学习、强迫学习
+        <ul>
+         <li>
+          12月28日，邹博讲变分原理 &amp; Adaboost的综合PPT 下载地址：
+          <a href="http://pan.baidu.com/s/1kTkkepD" rel="nofollow" title="17-18.1变分与AdaBoost.ppt_免费高速下载|百度网盘-分享无限制">
+           17-18.1变分与AdaBoost.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       19
+      </strong>
+      次课
+      <ul>
+       <li>
+        再谈随机森林（random decision forests）
+        <ul>
+         <li>
+          2015年1月11日，邹博讲决策树与随机森林的PPT 下载地址：
+          <a href="http://pan.baidu.com/s/10HQrG" rel="nofollow" title="19.决策树与随机森林.ppt_免费高速下载|百度网盘-分享无限制">
+           19.决策树与随机森林.ppt_免费高速下载|百度网盘-分享无限制
+          </a>
+          。
+         </li>
+        </ul>
+       </li>
+       <li>
+        微谈GBDT(Gradient Boost Decision Tree)
+       </li>
+       <li>
+        不同数据、场景下各个算法的综合选择和运用
+       </li>
+      </ul>
+     </li>
+     <li>
+      第
+      <strong>
+       20
+      </strong>
+      次课，计算广告。
+      <ul>
+       <li>
+        刘鹏讲计算广告的PPT：
+        <a href="http://pan.baidu.com/s/1kT5juqb" rel="nofollow" title="20.广告中的计算问题by刘鹏.pptx_免费高速下载|百度网盘-分享无限制">
+         20.广告中的计算问题by刘鹏.pptx_免费高速下载|百度网盘-分享无限制
+        </a>
+        。
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <p>
+     欢迎感兴趣的朋友微博私信
+     <a href="http://weibo.com/julyweibo" rel="nofollow" title="我">
+      我
+     </a>
+     应聘机器学习讲师（要求：理论推导透彻，实践经验丰富），每个人讲自己最擅长的部分，分工协作。
+    </p>
+    <p>
+    </p>
+    <p>
+     主讲老师
+    </p>
+    <p>
+     本次机器学习班的讲师团队阵容强大，下面简单介绍下部分讲师，如下（排名不分先后）：
+    </p>
+    <ol>
+     <li>
+      <strong>
+       邹博
+      </strong>
+      ，计算机科学博士毕业，超过10年的软件开发经验，七月算法（julyedu.com）资深讲师，给数千人讲过面试、算法、机器学习，好评如潮，讲课清晰易懂，推导机器学习细致透彻；
+     </li>
+     <li>
+      <strong>
+       刘鹏
+      </strong>
+      ，360商业产品首席架构师，前MediaV首席科学家，公开课程《计算广告学》的主讲者；
+     </li>
+     <li>
+      <strong>
+       leo_lq
+      </strong>
+      ，香港理工大学博士毕业，多年数据挖掘、数据分析经验，专注于机器学习、云计算、大数据平台的数据处理及大数据价值的提升，机器学习兼职讲师；
+     </li>
+     <li>
+      <strong>
+       Linton
+      </strong>
+      ，清华硕士毕业，熟练海量数据挖掘、Hadoop，带过技术团队，曾在百度、人人做数据挖掘，现在TCL任数据挖掘经理，多年的数据挖掘实战经验；
+     </li>
+     <li>
+      <strong>
+       Joeylee
+      </strong>
+      ，上海交通大学博士在读，熟悉图像分类和检索，从事过广告算法研发，之前在Intel从事Hadoop研发，即将去阿里工作；
+     </li>
+     <li>
+      <strong>
+       July
+      </strong>
+      ，结构之法算法之道blog之博主，编程艺术github作者，热爱数学、面试&amp;算法、机器学习、数据挖掘，组织过8期Machine Leaning读书会，博客中写的
+      <a href="http://blog.csdn.net/v_july_v/article/category/1061301" title="机器学习系列">
+       机器学习系列
+      </a>
+      阅读量高达80万，其中的《支持向量机通俗导论（理解SVM的三层境界）》阅读点击量近30万
+     </li>
+    </ol>
+    <p>
+    </p>
+    <p>
+     推荐资料
+    </p>
+    <p>
+     因此次机器学习的课程内容确实比较多，故建议欲报名机器学习班的朋友提前阅读如下资料：
+    </p>
+    <ol>
+     <li>
+      《高等数学·上下册》；
+     </li>
+     <li>
+      《概率论与数理统计·浙大版》、《数理统计学简史·陈希孺》；
+     </li>
+     <li>
+      《矩阵分析与应用·张贤达》；
+     </li>
+     <li>
+      《凸优化(
+      <span style="color:#111111;">
+       Convex Optimization)
+      </span>
+      · Stephen Boyd &amp; Lieven Vandenberghe著》；
+     </li>
+     <li>
+      《统计学习方法·李航》；
+     </li>
+     <li>
+      《Pattern Recognition And Machine Learning · Christopher M. Bishop著》，简称PRML；
+     </li>
+     <li>
+      斯坦福的机器学习课程，以及
+      <a href="http://www.cnblogs.com/jerrylead/tag/Machine%20Learning/" rel="nofollow" title="Jerrylead">
+       Jerrylead
+      </a>
+      做的课程笔记；
+     </li>
+     <li>
+      《支持向量机通俗导论（理解SVM的三层境界）》；
+     </li>
+     <li>
+      本博客中的机器学习系列：
+      <a href="http://blog.csdn.net/v_july_v/article/category/1061301" title="http://blog.csdn.net/v_july_v/article/category/1061301">
+       http://blog.csdn.net/v_july_v/article/category/1061301
+      </a>
+      。
+     </li>
+    </ol>
+    <p>
+    </p>
+    <p>
+     视频网站
+    </p>
+    <p>
+     最后，2014的下半年内准备组建好团队，并在2015年建个网站（把上课的部分视频放到
+     <strong>
+      网站
+     </strong>
+     上，方便全国各地的朋友学习观看），和社交APP（学习 &amp; 交友），故：
+    </p>
+    <ul>
+     <li>
+      除了寻找全国各地的面试&amp;算法讲师、数学讲师、机器学习讲师、计算机视觉讲师、深度学习讲师（这些讲师在北京的可以线下讲课，不在北京的可以线上讲课）
+     </li>
+     <li>
+      摄像师（要求有专业摄像机或DV或单反）
+     </li>
+     <li>
+      还寻求有
+      <strong>
+       网站开发
+      </strong>
+      经验（Js前端、PHP后端、产品、设计），移动Android/iOS开发，且愿不断迭代跟我一起做事的人。
+     </li>
+    </ul>
+    <p>
+     有意者欢迎在
+     <a href="http://weibo.com/1580904460/Bqa4loV1y?from=page_1005051580904460_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment" rel="nofollow" title="微博">
+      微博
+     </a>
+     <a href="http://weibo.com/julyweibo" rel="nofollow" title="@研究者July">
+      @研究者July
+     </a>
+     上私信联系我，thanks。
+    </p>
+    <p>
+     July、二零一四年八月二十四日。
+    </p>
+    <p>
+     <span style="color:#ff0000;">
+      update
+     </span>
+     ：网站已经发布：
+     <span style="color:#ff0000;">
+      面试&amp;算法&amp;机器学习在线课程
+     </span>
+     <a href="http://www.julyedu.com/" rel="nofollow" title="七月在线 - 智能时代在线职教平台">
+      七月在线 - 智能时代在线职教平台
+     </a>
+     ，感谢所有关注、支持的朋友。July团队、二零一五年一月二十四日
+    </p>
+    <hr/>
+    <h3>
+     第九部分、机器学习在线课程，2015年
+    </h3>
+    <p>
+    </p>
+    <h4>
+     在线公开课
+    </h4>
+    <p>
+     2015年起，将在此QQ群内：252422340，用群视频
+     <span style="color:#ff0000;">
+      在线
+     </span>
+     讲一系列Machine Learning在线公开课
+    </p>
+    <ul>
+     <li>
+      第1期：1月11日，邹博在线讲决策树与随机森林，PPT 下载地址：
+      <a href="http://pan.baidu.com/s/10HQrG" rel="nofollow" title="19.决策树与随机森林.ppt_免费高速下载|百度网盘-分享无限制">
+       19.决策树与随机森林.ppt_免费高速下载|百度网盘-分享无限制
+      </a>
+      。
+     </li>
+     <li>
+      第2期：本周六1月17日上午10-12点，@北冥乘海生 讲计算广告（ 侧重其中的机器学习模型和最优化问题），PPT 下载地址：
+      <a href="http://pan.baidu.com/s/1kT5juqb" rel="nofollow" title="20.广告中的计算问题by刘鹏.pptx_免费高速下载|百度网盘-分享无限制">
+       20.广告中的计算问题by刘鹏.pptx_免费高速下载|百度网盘-分享无限制
+      </a>
+      。
+     </li>
+     <li>
+      第3期：本周日1月18日晚7点半-9点半，浙大美女硕士@Rachel____Zhang 讲logistic回归，PPT 下载地址：
+      <a href="http://pan.baidu.com/s/1pJwnKtP" rel="nofollow" title="machine learning在线公开课第 3 期：Logistic Regression.ppt_免费高速下载|百度网盘-分享无限制">
+       machine learning在线公开课第 3 期：Logistic Regression.ppt_免费高速下载|百度网盘-分享无限制
+      </a>
+      。
+     </li>
+     <li>
+      第4期：本周日晚2.1日晚，邹博在线讲EM、GMM，被称赞为：“最清楚的一次GMM”，“老师讲的太好，太多人想听”等等。PPT下载地址请见：
+      <a href="http://ask.julyedu.com/question/64" rel="nofollow" title="Machine Learning在线公开课第 4 期：2.1日晚邹博讲EM、GMM结束，PPT帖内下载 - 七月在线">
+       Machine Learning在线公开课第 4 期：2.1日晚邹博讲EM、GMM结束，PPT帖内下载 - 七月在线
+      </a>
+      。
+     </li>
+    </ul>
+    <p>
+     谁有兴趣线上用QQ群视频或线下讲面试&amp;算法、机器学习、计算机视觉、深度学习、移动开发Android/iOS、C/C++、Java开发、产品、前端、UI设计等任意之一的，欢迎微博
+     <a href="http://weibo.com/julyweibo" rel="nofollow" title="私信">
+      私信
+     </a>
+     自荐或推荐。内容包括但不局限于这些，上课形式不限，线上线下均可。
+    </p>
+    <p>
+    </p>
+    <h4>
+     机器学习在线精品课程
+    </h4>
+    <p>
+     错过了公开课的没关系，
+     <strong>
+      2015年3月7日起，将有一系列机器学习在线精品课程
+     </strong>
+     ：
+     <a href="http://www.julyedu.com/course/newIndex?category=machinelearning" rel="nofollow" title="http://www.julyedu.com/course/newIndex?category=machinelearning">
+      http://www.julyedu.com/course/newIndex?category=machinelearning
+     </a>
+     。
+    </p>
+    <p>
+     <span style="color:#ff0000;">
+      更多在线精品课程详见：
+     </span>
+     <a href="http://www.julyedu.com/" rel="nofollow" title="七月在线 - 智能时代在线职教平台">
+      七月在线 - 智能时代在线职教平台
+     </a>
+     。
+    </p>
+    <p>
+     July教育团队、二零一五年三月五日
+    </p>
+    <hr/>
+    <h3>
+     第十部分、算法和创业讲座，2015年
+    </h3>
+    <p>
+    </p>
+    <h4>
+     <em>
+      1
+     </em>
+     华科大算法&amp;创业讲座
+    </h4>
+    <p>
+     时间：
+     <span style="color:#ff0000;">
+      2015年6月9日晚上7点
+     </span>
+    </p>
+    <p>
+     地点：
+     <span style="color:#ff0000;">
+      武汉
+     </span>
+     光电国家实验室A301
+    </p>
+    <p>
+     主题：算法和创业
+    </p>
+    <p>
+     过去5年，求学、写博、学算法、学机器学习、直到今年年初正式开始的创业、做产品、招人、带团队、做公司。5年，不长不短，但有彻彻底底的干货和经验分享给大家，比如如何准备算法求职等等。当然，我更会现场发挥一些段子，娱乐大家。
+    </p>
+    <p>
+     July、二零一五年五月二十七日凌晨。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <em>
+      2
+     </em>
+     北邮算法&amp;创业讲座
+    </h4>
+    <p>
+     时间：
+     <strong>
+      2015年6月17日晚上7点
+     </strong>
+     <br/>
+     地点：北京邮电大学本部教学楼三号楼136（400人的学术报告厅，欢迎拉身边伙伴们同来，校内校外皆可参加）
+     <br/>
+     <strong>
+      主题
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      算法和创业 by July（半小时）
+     </li>
+     <li>
+      面试、算法、机器学习技术分享 by 邹博（1个半小时）
+     </li>
+    </ul>
+    <p>
+     主讲人简介：
+    </p>
+    <ul>
+     <li>
+      July：七月在线科技创始人兼CEO，七月算法（julyedu.com）创办人，CSDN人气第一博客“结构之法，算法之道”作者，博客PV超过900万，专注面试、算法、机器学习，影响超过120万人。即将出版《编程之法：面试和算法心得》一书。
+     </li>
+     <li>
+      邹博：计算机科学博士毕业，超过10年的软件开发经验，七月算法（julyedu.com）资深讲师，给上千人讲过面试、算法、机器学习，好评如潮，讲课清晰易懂，推导机器学习细致透彻。
+     </li>
+    </ul>
+    <p>
+     欢迎北邮或北邮附近的同学朋友过来参加，thanks。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <em>
+      3
+     </em>
+     北航算法&amp;创业讲座
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：2015年10月21号晚7-9点
+     <br/>
+     <strong>
+      地点
+     </strong>
+     ：北航主楼M102（350人的大教室）
+    </p>
+    <p>
+     <strong>
+      主题
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      算法和创业 by July
+      <ul>
+       <li>
+        如何准备笔试面试
+       </li>
+       <li>
+        我们的创业故事 II
+       </li>
+      </ul>
+     </li>
+     <li>
+      面试、算法、机器学习 by 邹博
+      <ul>
+       <li>
+        2016校招笔试面试精讲
+       </li>
+       <li>
+        从线性回归深入参数学习
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      主讲人简介
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      July：七月在线科技创始人兼CEO，公司旗下两大产品：七月算法（julyedu.com）和七月题库APP（julyapp.com）。CSDN人气第一博客“结构之法 算法之道”作者，博客PV超过1000万，专注面试、算法、机器学习，影响超过120万人。著有新书《编程之法：面试和算法心得》。
+     </li>
+     <li>
+      邹博：计算机科学博士毕业，超过10年的软件开发经验，七月算法（julyedu.com）资深讲师，给数千人讲过面试、算法、机器学习，好评如潮，讲课清晰易懂，推导机器学习细致透彻。
+     </li>
+    </ul>
+    <p>
+     现场赠书
+     <br/>
+     届时，将在现场抽赠July新书《编程之法：面试和算法心得》7本，欢迎在北京的朋友们参加。
+     <br/>
+     <br/>
+     <strong>
+      现场签售
+     </strong>
+     <br/>
+     此外，讲座结束后，July现场签售新书《编程之法：面试和算法心得》！第一时间购买到新书签名版的绝佳机会。
+    </p>
+    <p>
+    </p>
+    <h4>
+     <em>
+      4
+     </em>
+     北理算法&amp;创业讲座
+    </h4>
+    <p>
+     <strong>
+      时间
+     </strong>
+     ：
+     <span style="color:#ff0000;">
+      2015年10月23号下午2
+     </span>
+     -5点
+     <br/>
+     <strong>
+      地点
+     </strong>
+     ：
+     <span style="color:#666666;">
+      北理工七号楼报告厅
+     </span>
+    </p>
+    <p>
+     <strong>
+      主题
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      算法和创业 by July
+      <ul>
+       <li>
+        如何准备笔试面试
+       </li>
+       <li>
+        我们的创业故事 III
+       </li>
+      </ul>
+     </li>
+     <li>
+      面试、算法、机器学习 by 邹博
+      <ul>
+       <li>
+        2016校招笔试面试精讲
+       </li>
+       <li>
+        <span style="color:#666666;">
+         贝叶斯网络与隐马尔科夫模型
+        </span>
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      主讲人简介
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      <span style="color:#666666;">
+       July：七月在线科技创始人兼CEO，公司旗下两大产品：七月算法（julyedu.com）和七月题库APP（julyapp.com）。CSDN人气第一博客“结构之法 算法之道”作者，博客PV超过1000万，专注面试、算法、机器学习，影响超过200万人。著有新书《编程之法：面试和算法心得》
+      </span>
+      。
+     </li>
+     <li>
+      邹博：计算机科学博士毕业，超过10年的软件开发经验，七月算法（julyedu.com）资深讲师，给数千人讲过面试、算法、机器学习，好评如潮，讲课清晰易懂，推导机器学习细致透彻。
+     </li>
+    </ul>
+    <p>
+     现场赠书
+     <br/>
+     <span style="color:#666666;">
+      届时，将在现场抽赠July新书《编程之法：面试和算法心得》7本，欢迎在北理和北京的朋友们参加
+     </span>
+     。
+    </p>
+    <hr/>
+    <p>
+     <span style="color:#333333;">
+      2015年，July团队正式创业，上半年推出在线教育网站：
+     </span>
+     <a href="http://www.julyedu.com/" rel="nofollow" title="七月在线 - 智能时代在线职教平台">
+      七月在线 - 智能时代在线职教平台
+     </a>
+     <span style="color:#333333;">
+      （面试、算法、机器学习在线课程）
+     </span>
+     <span style="color:#333333;">
+      ，敬请关注
+     </span>
+     <a href="http://weibo.com/julyweibo" rel="nofollow" title="@研究者July">
+      @研究者July
+     </a>
+     <span style="color:#333333;">
+      ），thanks。July、二零一五年七月九日
+     </span>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

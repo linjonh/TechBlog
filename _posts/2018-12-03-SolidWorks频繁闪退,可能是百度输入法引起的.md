@@ -1,0 +1,593 @@
+---
+layout: post
+title: SolidWorks频繁闪退,可能是百度输入法引起的
+date: 2018-12-03 01:03:50 +0800
+categories: [输入法]
+tags: [输入法,solidworks闪退]
+image:
+    path: https://img-blog.csdnimg.cn/20181203005904150.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpamlhbnpoaXJ1aQ==,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
+    alt: SolidWorks频繁闪退,可能是百度输入法引起的
+artid: 84730051
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     SolidWorks频繁闪退，可能是(百度)输入法引起的
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     我电脑的操作系统是Win 10 1803(17134.167)，硬件:i7-6700HQ，16GB DDR4内存，Intel HD 530+GTX 970M. 在自己电脑上装过SolidWorks 2017和2018，这两者闪退的频率都惊人的高。快的话，启动后几十秒就闪退了，慢的话也撑不过2小时，2小时内必有一次闪退。有时候是毫无征兆地闪退，有时则会先出现“您的桌面应用程序资源严重不足……”的提示，然后闪退。出现这个提示的时候，我无数次去任务管理器中查看CPU、GPU、内存、硬盘等的使用率，从未发现哪一个硬件使用率过高。所以我怀疑触发这个弹窗提示的逻辑有问题。
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/676986800d2936344aa96a89719d48ab.png"/>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/43f8cde877168208c61554294903a05e.png"/>
+    </p>
+    <p>
+     为减少SolidWorks的闪退，我做过不少尝试，下面逐个介绍。
+     <br/>
+     SolidWorks启动后，不要打开任何文件，点击主界面顶部的齿轮图标，打开“选项”窗口，“性能”子菜单下面有一项叫做“使用软件OpenGL”，
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/dab2df0552406e68258275e74194681d.png"/>
+    </p>
+    <p>
+     勾选以后，图形处理任务会全部交给CPU(既不用集显，又不用独显)，在任务管理器中可以看到GPU的使用率一直是0. 这时候哪怕处理简单的3D零件或者2D图纸，都会非常卡顿，能明显看到图形是一点点地绘制出来的。提供“使用软件OpenGL”这一选项的目的大概是改善兼容性，遇到SolidWorks不支持的显卡，还可以靠CPU勉强支撑。不过，究竟需要多么强大的CPU，才能流畅地处理较大的装配体？主频1000GHz的128核CPU么？
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/a17cc6fa1d38f7b6e3598420146f2df2.png"/>
+    </p>
+    <p>
+     我曾勾选“使用软件OpenGL”，希望能缓解SolidWorks频繁闪退的问题，但感觉勾选的后果(卡顿)比闪退更令人无法忍受，遂放弃此法。试过在设备管理器中禁用独显GTX 970M，只用集显Intel HD 530，或者相反，禁用集显而只用独显，均未能缓解频繁闪退的问题。(禁用集显后，还会出现开始菜单中的“睡眠”按钮消失的现象。)
+     <br/>
+     Win 10的“Windows Defender安全中心”有一些高级的防护功能，比如Exploit Protection.
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/dc33076e22058d12e543e3a8bc4f6e5f.png"/>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/bb19768ad7122b3216333c6ea271fb28.png"/>
+    </p>
+    <p>
+     为了安全，如果你不知道修改“系统设置”下面的选项意味着什么，那么请保持默认值不要修改。进入“程序设置”，单击“添加程序进行自定义”，选择SolidWorks的主程序SLDWORKS.exe(其所在路径可以通过在任务管理器中右键SolidWorks，选择“打开文件所在的位置”来获得。)有如下防护选项：任意代码防护(ACG)，阻止低完整性映像，阻止远程映像，阻止不受信任的字体，代码完整性防护，控制流防护(CFG)，数据执行保护 (DEP)，禁用扩展点，禁用Win32k系统调用，不允许子进程，导出地址筛选(EAF)，强制映像随机化(强制ASLR)，导入地址筛选(IAF)，随机化内存分配(自下而上ASLR)，模拟执行(SimExec)，验证API调用(CallerCheck)，验证异常链(SEHOP)，验证句柄使用情况，验证堆完整性，验证映像依赖项完整性，验证堆栈完整性(StackPivot).
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/64145474e6c1ddd8edbaceb01cba4ea5.png"/>
+    </p>
+    <p>
+     我所做的尝试就是将这些防护全部关掉。其中有不少选项默认就是关闭的，我没动这些。剩下的则先勾选“替代系统设置”，然后将其关闭。此处所做的修改只针对SLDWORKS.exe，不影响其它程序。但是很遗憾地告诉各位，这些更改也没能改善SolidWorks闪退的问题。我朋友在Win 7上装了SolidWorks 2012，他说用起来很稳定，极少遇到闪退。总之，我现在无法判断频繁闪退到底是谁的问题，是Win 10的bug？还是SolidWorks新版本的问题？或者OpenGL的缺陷？抑或独显驱动的漏洞？还有一种可能就是SolidWorks破解得不够完美，因破解不完美导致软件功能有问题的现象我见过一些，印象最深的是因破解不完美导致MATLAB 2014a/b的并行计算功能不可用。
+     <br/>
+     SolidWorks频繁闪退的问题已经困扰我很长时间了，目前只能靠比闪退更高频率地按Ctrl+S来应对，如果你发现了SolidWorks 2017和2018等较新版本在Win 10上闪退的原因及解决方案，请一定要写篇文章介绍一下。我之所以还坚持用它，是因为它确实有很多优点。我学习过CATIA、SolidWorks、Creo Parametric、AutoCAD，论三维实体建模功能的便利程度，我认为是SolidWorks&gt;Creo Parametric&gt;&gt;&gt;&gt;CATIA&gt;AutoCAD，这里不是说有什么奇形怪状的玩意用CATIA做不出来，而是说CATIA的界面设计有太多的智障之处，我会专门写一篇文章详述CATIA的界面设计问题。
+    </p>
+    <hr/>
+    <p>
+     20190713重要更新
+     <br/>
+     真是佛祖保佑，我大概找到引起SolidWorks高频闪退的根源了。就在前几天，SolidWorks和往常一样闪退了，同时百度输入法也弹出窗口说“程序遇到了意外问题”，
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" src="https://i-blog.csdnimg.cn/blog_migrate/4f2101df6ff9cde954468a1b90760279.png"/>
+    </p>
+    <p>
+     我没有在意，重启SolidWorks继续画图。然后，SolidWorks还是以平均40分钟一次的频率闪退了数十次，但是在某次闪退后，百度输入法再次弹出同样的错误提示窗口“程序遇到了意外问题”，我立刻意识到这应该不是巧合，这正是问题的核心。于是马上卸载掉百度输入法（之所以安装百度输入法，主要是因为它没有广告弹窗。搜狗的广告弹窗太多，所以我不会装搜狗，而是装了讯飞输入法），经过几天的测试，SolidWorks没有弹窗提示“您的桌面应用程序资源严重不足……”，也没有闪退过，我简直是太高兴了。不过令我仍然感到困惑的是，为什么SolidWorks闪退了成千上万次，而百度输入法的错误提示窗口最近才总共出现了两次？
+     <br/>
+     再多聊一点输入法的事情，我一直把百度设为默认输入法，即在多数能输入内容的窗口和文本框中，只要在键盘上敲字母，出来的都是百度输入法的中文内容，并不需要按Shift键由英文切换到中文，也不用Ctrl+Shift唤起输入法。而有些程序的“另存为”窗口，比如Photoshop，会自动把百度输入法转为英文状态，而且，此时按Shift键无法由英文切换到中文，必须手工点击任务栏托盘区“英”字，才能变成“中”字，
+    </p>
+    <p style="text-align:center;">
+     <img alt="" class="has" height="77" src="https://i-blog.csdnimg.cn/blog_migrate/ab2b8c7cca76bb6379f49f8f3bc1aa6c.png" width="320"/>
+    </p>
+    <p>
+     （因为我一直是隐藏输入法的状态栏，所以没有尝试在输入法状态栏上点击“英”字）。SolidWorks的“另存为”窗口偶尔也会出现上述现象。
+     <br/>
+     下面是百度输入法提供的崩溃现场内存dump文件，有兴趣的可以看看。
+    </p>
+    <pre class="has"><code>Process Basic Information:
+---------------------------------------------------------------------------------------------------------------
+       Process Create Time:2019/07/10 23:03:05
+        Process Crash Time:2019/07/10 23:23:53
+Free Amount Virtual Memory:7FF644BDC000
+          Count of Handles:20853
+      Count of GDI Objects:2408(Peak 2684)
+     Count of User Objects:10000(Peak 10000)
+Call Stack:
+---------------------------------------------------------------------------------------------------------------
+Child-SP         RetAddr          Args to Child                                                       Call Site
+00000000005FE428 000000003B77A5E4 FFFFFFFFFFFFFFFE 00000000FFFFFFFF 00000000000001B1 000000000AC75BE0 000000003B6AD3F0 SLDMFCU.dll
+00000000005FE430 FFFFFFFFFFFFFFFE 00000000FFFFFFFF 00000000000001B1 000000000AC75BE0 00000000FFFFFFFF 000000003B77A5E4 SLDMFCU.dll
+00000000005FE438 00000000FFFFFFFF 00000000000001B1 000000000AC75BE0 00000000FFFFFFFF 000000003B77A617 FFFFFFFFFFFFFFFE 
+00000000005FE440 00000000000001B1 000000000AC75BE0 00000000FFFFFFFF 000000003B77A617 00000000727058F0 00000000FFFFFFFF 
+00000000005FE448 000000000AC75BE0 00000000FFFFFFFF 000000003B77A617 00000000727058F0 00000000727058F0 00000000000001B1 
+00000000005FE450 00000000FFFFFFFF 000000003B77A617 00000000727058F0 00000000727058F0 00000000727058F0 000000000AC75BE0 
+00000000005FE458 000000003B77A617 00000000727058F0 00000000727058F0 00000000727058F0 0000000000000000 00000000FFFFFFFF 
+00000000005FE460 00000000727058F0 00000000727058F0 00000000727058F0 0000000000000000 0000000000000002 000000003B77A617 SLDMFCU.dll
+00000000005FE468 00000000727058F0 00000000727058F0 0000000000000000 0000000000000002 000000003B778F70 00000000727058F0 
+00000000005FE470 00000000727058F0 0000000000000000 0000000000000002 000000003B778F70 00000000727058F0 00000000727058F0 
+00000000005FE478 0000000000000000 0000000000000002 000000003B778F70 00000000727058F0 00000000727058F0 00000000727058F0 
+Module List([load address, loaded size] module path[version]):
+---------------------------------------------------------------------------------------------------------------
+[load address, size] path [version, md5]
+[0000000040000000,00101000] E:\Program Files\solidworks\SOLIDWORKS\SLDWORKS.exe [26.4.0.0075, 91e3daaac8c40cf54449879902644192]
+[00000000b8740000,001e1000] C:\WINDOWS\SYSTEM32\ntdll.dll [10.0.17134.1 (WinBuild.160101.0800), 09532388775fd69dc707fcaced2c3c46]
+[00000000b6f10000,000b2000] C:\WINDOWS\System32\KERNEL32.DLL [10.0.17134.1 (WinBuild.160101.0800), a8565440629ac87f6fef7d588fe3ff0f]
+[00000000b5050000,00273000] C:\WINDOWS\System32\KERNELBASE.dll [10.0.17134.1 (WinBuild.160101.0800), 5a33c4054aab5888e3b65ebd8486d2b0]
+[00000000b4c40000,000fa000] C:\WINDOWS\System32\ucrtbase.dll [10.0.17134.165 (WinBuild.160101.0800), b9351be05d332db2fe4f1d08d44bb343]
+[00000000b5bd0000,00190000] C:\WINDOWS\System32\USER32.dll [10.0.17134.407 (WinBuild.160101.0800), 1b795b9ec9e0eaadc5b37006bbe44646]
+[00000000b4f40000,00020000] C:\WINDOWS\System32\win32u.dll [10.0.17134.1 (WinBuild.160101.0800), f3bbd0e5fcc48794df55349f22fdb418]
+[00000000b6fd0000,00028000] C:\WINDOWS\System32\GDI32.dll [10.0.17134.1 (WinBuild.160101.0800), 6d261b1a4d49017da9318f90fc34be99]
+[00000000b4d40000,00192000] C:\WINDOWS\System32\gdi32full.dll [10.0.17134.112 (WinBuild.160101.0800), 0638ec5ea4825525169bb9531e1e34bf]
+[00000000b4f60000,0009f000] C:\WINDOWS\System32\msvcp_win.dll [10.0.17134.137 (WinBuild.160101.0800), 5f374af3c553740bc355cc391a2ba38a]
+[00000000b65b0000,000a1000] C:\WINDOWS\System32\ADVAPI32.dll [10.0.17134.407 (WinBuild.160101.0800), 21be8ade4c4e04d0819cac1e6fa1dbe9]
+[00000000b6b30000,0009e000] C:\WINDOWS\System32\msvcrt.dll [7.0.17134.1 (WinBuild.160101.0800), 7fcd4654fc7f16fda52848e2d0aafa9d]
+[00000000b6190000,0005b000] C:\WINDOWS\System32\sechost.dll [10.0.17134.1 (WinBuild.160101.0800), e554bd0eb4c0e9a067633ed72ae33f6f]
+[00000000b6480000,00124000] C:\WINDOWS\System32\RPCRT4.dll [10.0.17134.407 (WinBuild.160101.0800), f85a54ef8c33283a67c708d132ed285e]
+[00000000b85b0000,00151000] C:\WINDOWS\System32\ole32.dll [10.0.17134.407 (WinBuild.160101.0800), 020a9baa6a9619828eab9e37c3634292]
+[00000000b5dc0000,00323000] C:\WINDOWS\System32\combase.dll [10.0.17134.407 (WinBuild.160101.0800), b52200505767cd0819034cf220977439]
+[00000000b4b10000,0007a000] C:\WINDOWS\System32\bcryptPrimitives.dll [10.0.17134.1 (WinBuild.160101.0800), 211d98bdf8bb67866f169dc23ecaba5b]
+[00000000b6e30000,000c2000] C:\WINDOWS\System32\OLEAUT32.dll [10.0.17134.48 (WinBuild.160101.0800), e3a829c37ca00c58f04f495e22d333e9]
+[00000000a3510000,00015000] C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll [14.16.27024.1 built by: vcwrkspc, cafd6f3410af3b95968a1efb17ecee05]
+[0000000077b20000,00595000] C:\WINDOWS\SYSTEM32\mfc140u.dll [14.16.27024.1 built by: vcwrkspc, ae43ea9b29389eb96b58ff7d4156350e]
+[00000000b6db0000,00051000] C:\WINDOWS\System32\SHLWAPI.dll [10.0.17134.407 (WinBuild.160101.0800), 26961387eb5e1668f6d3e1453703f3db]
+[00000000b8570000,0002d000] C:\WINDOWS\System32\IMM32.dll [10.0.17134.1 (WinBuild.160101.0800), 9345a5d3801abe2909cb8ce8d6d90d79]
+[0000000045230000,00d0a000] E:\Program Files\solidworks\SOLIDWORKS\sldappu.dll [26.4.0.0075, cebc78d7f6f4f5d5441aba119adbf726]
+[000000003b670000,005f1000] E:\Program Files\solidworks\SOLIDWORKS\SLDMFCU.dll [26.4.0.0075, 42f3036b31ea576962d8c0e6a10212f5]
+[00000000b7070000,01440000] C:\WINDOWS\System32\SHELL32.dll [10.0.17134.407 (WinBuild.160101.0800), 7e554d404abfea74d95fc8e2493bc816]
+[00000000b5000000,00049000] C:\WINDOWS\System32\cfgmgr32.dll [10.0.17134.1 (WinBuild.160101.0800), 9ce572a0b0916d680d148ed714e19b47]
+[00000000b66e0000,0044b000] C:\WINDOWS\System32\SETUPAPI.dll [10.0.17134.407 (WinBuild.160101.0800), 126f2cf178680e63cab4944cff7923a9]
+[00000000b84b0000,000a9000] C:\WINDOWS\System32\shcore.dll [10.0.17134.407 (WinBuild.160101.0800), 9586e9db1b741bd40131385d390212ba]
+[00000000b54c0000,0070d000] C:\WINDOWS\System32\windows.storage.dll [10.0.17134.407 (WinBuild.160101.0800), 2e691444fed40dfd759da0c8f0732999]
+[00000000b4a60000,00011000] C:\WINDOWS\System32\kernel.appcore.dll [10.0.17134.112 (WinBuild.160101.0800), 51e940608a78a627d5231f32e518f745]
+[000000003bc70000,00461000] E:\Program Files\solidworks\SOLIDWORKS\sldutu.dll [26.4.0.0075, cefecb3e28f4e4f1eae40b8521c3cf48]
+[00000000b4af0000,0001f000] C:\WINDOWS\System32\profapi.dll [10.0.17134.1 (WinBuild.160101.0800), 91e3cbb214f208c0c72b4b621180b70a]
+[00000000b61f0000,000ed000] C:\WINDOWS\System32\COMDLG32.dll [10.0.17134.1 (WinBuild.160101.0800), fdbc4dd8b471a40c84a791b4eb717e76]
+[00000000b4a80000,0004c000] C:\WINDOWS\System32\powrprof.dll [10.0.17134.407 (WinBuild.160101.0800), 7658d29106996d3b2066728af30d2be6]
+[00000000b7000000,0006c000] C:\WINDOWS\System32\WS2_32.dll [10.0.17134.407 (WinBuild.160101.0800), 6013120b6b147b2584927639ee70fb4f]
+[00000000b4a50000,0000a000] C:\WINDOWS\System32\FLTLIB.DLL [10.0.17134.407 (WinBuild.160101.0800), 2f0387c78880d60d1d8a2ac32e964f79]
+[00000000b6f00000,00008000] C:\WINDOWS\System32\PSAPI.DLL [10.0.17134.1 (WinBuild.160101.0800), 9a088fef6efa3f08c3c9740daa3e18e3]
+[00000000b4ee0000,00057000] C:\WINDOWS\System32\WINTRUST.dll [10.0.17134.81 (WinBuild.160101.0800), e4d14c338d9381c91c3550901654b131]
+[00000000b4ad0000,00012000] C:\WINDOWS\System32\MSASN1.dll [10.0.17134.1 (WinBuild.160101.0800), 31f9783d0ec7c6ed7e7c1a964c4e3614]
+[00000000b52d0000,001e2000] C:\WINDOWS\System32\CRYPT32.dll [10.0.17134.407 (WinBuild.160101.0800), 04b1e9b60f8abdf718135bd62d8e554d]
+[00000000330e0000,00036000] E:\Program Files\solidworks\SOLIDWORKS\swccu.dll [26.4.0.0075, 8e222547581a44daf880f44585fb3b56]
+[00000000b2f10000,00098000] C:\WINDOWS\SYSTEM32\UxTheme.dll [10.0.17134.407 (WinBuild.160101.0800), 7e130d1f1126b2f0a0b273f27cfb03b5]
+[000000009a790000,0001c000] C:\WINDOWS\SYSTEM32\hlink.dll [10.0.17134.407 (WinBuild.160101.0800), b232ad25ee5a7f8097a6a098fadd2690]
+[00000000a2810000,0034f000] C:\WINDOWS\SYSTEM32\WININET.dll [11.00.17134.407 (WinBuild.160101.0800), 73ff1844030943e6d81a405ff419a245]
+[00000000aac40000,0000a000] C:\WINDOWS\SYSTEM32\VERSION.dll [10.0.17134.1 (WinBuild.160101.0800), 30ebac24a7d60dfb597576b46c9b82fb]
+[000000008e470000,00051000] C:\WINDOWS\SYSTEM32\CONCRT140.dll [14.16.27024.1 built by: vcwrkspc, 236f1317af810ce8afefe17acc45a482]
+[000000009ba80000,0001a000] C:\WINDOWS\SYSTEM32\MPR.dll [10.0.17134.407 (WinBuild.160101.0800), 5137cb19b1832866044102b5dd5c7aa9]
+[000000007c520000,00300000] E:\Program Files\solidworks\SOLIDWORKS\sldgridasu.dll [13.0.3.0, 5387eda7b93172b64dafbf453980522b]
+[00000000a2db0000,0009b000] C:\WINDOWS\SYSTEM32\MSVCP140.dll [14.16.27024.1 built by: vcwrkspc, 2f443a41e00a370754a50cfc02c2e470]
+[00000000b3f80000,00038000] C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL [10.0.17134.407 (WinBuild.160101.0800), 2a1aef9c495604b25d9a111508c8749b]
+[0000000097180000,00064000] C:\WINDOWS\SYSTEM32\mscoree.dll [10.0.17134.1 (WinBuild.160101.0800), 99c72e462b21a62f7e397e869e345b14]
+[00000000a0a80000,00269000] C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.167_none_fb4496d930639c5a\COMCTL32.dll [5.82 (WinBuild.160101.0800), dcc327863ae263115af79659e4d9c104]
+[00000000a5650000,0019a000] C:\WINDOWS\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17134.167_none_2c2f89be8af61628\gdiplus.dll [10.0.17134.167 (WinBuild.160101.0800), 2fd9ea2aa7bd9a3b4583842215370e8c]
+[000000006f340000,00026000] E:\Program Files\solidworks\SOLIDWORKS\NETAPI32.dll [, 69559dea95fb75855d47b07682d709b2]
+[0000000032d30000,00017000] E:\Program Files\solidworks\SOLIDWORKS\sldebu.dll [26.4.0.0075, 828fbfdd95df6b96e1c787af996ff0c2]
+[0000000033450000,0007d000] E:\Program Files\solidworks\SOLIDWORKS\sldmgu.dll [26.4.0.0075, 467b61a6e22693b1293423514fc222ad]
+[0000000080000000,00121000] E:\Program Files\solidworks\SOLIDWORKS\sldSettingsu.dll [26.4.0.0075, c9959fce854d79c790e14588f0f5bac4]
+[00000000a5640000,00007000] C:\WINDOWS\SYSTEM32\MSIMG32.dll [10.0.17134.1 (WinBuild.160101.0800), 4b874467477f3381496885b131fad7df]
+[00000000a87a0000,001c8000] C:\WINDOWS\SYSTEM32\urlmon.dll [11.00.17134.407 (WinBuild.160101.0800), 751a7105bc4ed2a513d933f141654401]
+[000000008fe80000,00120000] C:\WINDOWS\SYSTEM32\OPENGL32.dll [10.0.17134.1 (WinBuild.160101.0800), b8db21516b088afd9b0242741f435c71]
+[00000000ab7d0000,00084000] C:\WINDOWS\SYSTEM32\WINSPOOL.DRV [10.0.17134.407 (WinBuild.160101.0800), 45f4cc58e3a605fb9f58341da31d4063]
+[00000000b15f0000,00013000] C:\WINDOWS\SYSTEM32\WTSAPI32.dll [10.0.17134.1 (WinBuild.160101.0800), d740d50a374a3e334841773d9ca11b1a]
+[00000000b1310000,0003e000] E:\Program Files\solidworks\SOLIDWORKS\SWLoginClientCLR.dll [26.4.0.0075, ea9b8e42ed2869ef35a8f5d341472f22]
+[00000000a0e10000,003ea000] C:\WINDOWS\SYSTEM32\msi.dll [5.0.17134.81, 71a25f5901a58354eda73a500faba9ff]
+[00000000b2bc0000,00023000] C:\WINDOWS\SYSTEM32\WINMM.dll [10.0.17134.407 (WinBuild.160101.0800), 75139a91f351e7337fd4f4da633ce42b]
+[0000000033060000,00032000] E:\Program Files\solidworks\SOLIDWORKS\DockingPaneHelperU.dll [26.4.0.0075, 1f7fe48db8653dd2db4b24d84061b32d]
+[00000000330a0000,00038000] E:\Program Files\solidworks\SOLIDWORKS\sldarchiveu.dll [26.4.0.0075, 5d7211a298e6f410f89ef946438624c9]
+[0000000033020000,0003f000] E:\Program Files\solidworks\SOLIDWORKS\sldsessionu.dll [26.4.0.0075, 43438e6e182dd9c861770b4cfb773df0]
+[0000000067800000,00242000] E:\Program Files\solidworks\SOLIDWORKS\sldxtoolkitu.dll [25.0.0.1069, 12915358941b5e72a9ac683cfe1c0a82]
+[00000000ab170000,0001a000] C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL [10.0.17134.407 (WinBuild.160101.0800), c7a606e717a32450aecb922db8390ef1]
+[00000000b8560000,00008000] C:\WINDOWS\System32\NSI.dll [10.0.17134.1 (WinBuild.160101.0800), 705d925e09fe59bb92c724e3ba19e6dd]
+[0000000052960000,000de000] E:\Program Files\solidworks\SOLIDWORKS\sldsflasu.dll [12.0.0, 4d130632e232e738ff5fa0cdb5587d52]
+[0000000077a60000,000b4000] C:\WINDOWS\SYSTEM32\ODBC32.dll [10.0.17134.1 (WinBuild.160101.0800), 312247a16d201f948409943749037f68]
+[00000000a8de0000,002a2000] C:\WINDOWS\SYSTEM32\iertutil.dll [11.00.17134.407 (WinBuild.160101.0800), 659c644545ba6c7697d359d42a41500b]
+[00000000b13d0000,001b4000] C:\WINDOWS\SYSTEM32\PROPSYS.dll [7.0.17134.407 (WinBuild.160101.0800), 1e8f332eba870c440b2b039d7757c003]
+[0000000090670000,0002c000] C:\WINDOWS\SYSTEM32\GLU32.dll [10.0.17134.407 (WinBuild.160101.0800), 2050fee67b91479efac02ab4dc3958a4]
+[00000000b44e0000,00025000] C:\WINDOWS\SYSTEM32\bcrypt.dll [10.0.17134.407 (WinBuild.160101.0800), 7bab54ac2f062d1843dc7ba0b4af2b35]
+[00000000b2b90000,0002a000] C:\WINDOWS\SYSTEM32\WINMMBASE.dll [10.0.17134.1 (WinBuild.160101.0800), a42a183a1dff3e269d1cd53e69ea831f]
+[00000000b3e20000,0000a000] C:\WINDOWS\SYSTEM32\DPAPI.DLL [10.0.17134.1 (WinBuild.160101.0800), 5015eba00e2b1d3bb2559158f029d5ef]
+[00000000b43b0000,0000b000] C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL [10.0.17134.1 (WinBuild.160101.0800), 54750967f4cda0ece951cb3ecd43ac0c]
+[00000000001c0000,0000b000] E:\Program Files\solidworks\SOLIDWORKS\win7helperbaseu.dll [26.4.0.0075, 84e1922f7e5d72b210d4034ffc82a97f]
+[0000000000600000,00045000] E:\Program Files\solidworks\SOLIDWORKS\sldxtkitu.dll [25.0.0.1069, 0f1e1e447abc266d4236836c565ae38b]
+[0000000000e60000,00741000] E:\Program Files\solidworks\SOLIDWORKS\ToolkitProVC140x64U.dll [25.0.0.1069, 0a78f48b7d0314b839d31f24ca82954d]
+[0000000000650000,00026000] E:\Program Files\solidworks\SOLIDWORKS\RWUXThemeSU14.dll [12.0.0, f0bee365ac44db044ffe516b89242a45]
+[00000000b6e10000,0001d000] C:\WINDOWS\System32\imagehlp.dll [10.0.17134.1 (WinBuild.160101.0800), 67298566185893c864a5f99b5cf9e812]
+[00000000970e0000,0009c000] C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscoreei.dll [4.7.3056.0 built by: NET472REL1, d2c812fb24f81f9f88693cae7e4b6d78]
+[00000000a3ef0000,00017000] C:\WINDOWS\system32\netapi32.dll [10.0.17134.1 (WinBuild.160101.0800), 4e39d428308147a2f092319fb12393f3]
+[000000008fe70000,0000c000] C:\WINDOWS\SYSTEM32\davhlpr.dll [10.0.17134.1 (WinBuild.160101.0800), 56e59b7a2b7063296feb14c84c8169e4]
+[00000000ae3d0000,0003e000] C:\WINDOWS\SYSTEM32\LOGONCLI.DLL [10.0.17134.1 (WinBuild.160101.0800), 78e94042122d7926f0f3ec8df56374c4]
+[00000000b0f90000,0000a000] C:\WINDOWS\SYSTEM32\DSROLE.DLL [10.0.17134.1 (WinBuild.160101.0800), 8f9706451c65264b52be9a6a9a3dd55b]
+[00000000a38b0000,00026000] C:\WINDOWS\SYSTEM32\SRVCLI.DLL [10.0.17134.1 (WinBuild.160101.0800), 87b9bd1ae6fcfc9179143dabe947a128]
+[000000009a660000,00014000] C:\WINDOWS\SYSTEM32\DFSCLI.DLL [10.0.17134.1 (WinBuild.160101.0800), fcdf8a9d267d078546064bc38140744c]
+[00000000ae3a0000,00017000] C:\WINDOWS\SYSTEM32\WKSCLI.DLL [10.0.17134.1 (WinBuild.160101.0800), 16b8b3a1e7a475ec6f9b82f1f7c40bb8]
+[00000000b4080000,0000e000] C:\WINDOWS\SYSTEM32\NETUTILS.DLL [10.0.17134.1 (WinBuild.160101.0800), 76377e8a9dd63c40a19d7d84ef07b181]
+[00000000ab9e0000,0002c000] C:\WINDOWS\SYSTEM32\NETJOIN.DLL [10.0.17134.407 (WinBuild.160101.0800), 346157375d3eb85020a67f800fd00593]
+[00000000b4430000,00015000] C:\WINDOWS\SYSTEM32\NETPROVFW.DLL [10.0.17134.1 (WinBuild.160101.0800), 7d4025d803afb4ae0ef1a9a3f2314697]
+[00000000b23d0000,000b7000] C:\WINDOWS\SYSTEM32\DSREG.DLL [10.0.17134.1 (WinBuild.160101.0800), 80a4eddb5c01de63b6f01cd26575167d]
+[00000000b1d60000,00091000] C:\WINDOWS\SYSTEM32\msvcp110_win.dll [10.0.17134.1 (WinBuild.160101.0800), c1bee66c2cbda15629609b0e602b1aa3]
+[00000000b43c0000,00017000] C:\WINDOWS\SYSTEM32\cryptsp.dll [10.0.17134.1 (WinBuild.160101.0800), 336c40fa6e69b15a54ca319448aad7c1]
+[00000000ab5c0000,00018000] C:\WINDOWS\SYSTEM32\SAMCLI.DLL [10.0.17134.1 (WinBuild.160101.0800), df294bdb4e6a9803f88ac1a3dc987563]
+[00000000b2c80000,0000c000] C:\WINDOWS\SYSTEM32\SCHEDCLI.DLL [10.0.17134.1 (WinBuild.160101.0800), 2ae6f0a5769cbf8df68da1baef02777a]
+[00000000b3090000,00029000] C:\WINDOWS\SYSTEM32\dwmapi.dll [10.0.17134.407 (WinBuild.160101.0800), 4f74fbb3d00bb587cbeb4d0ffc43a089]
+[0000000078190000,00039000] C:\Program Files\Nahimic\Nahimic2\UserInterface\x64\Nahimic2DevProps.dll [, b91dc5e10626ba3325f6e769b1dcfd0a]
+[000000009d310000,00009000] C:\WINDOWS\SYSTEM32\wsock32.dll [10.0.17134.407 (WinBuild.160101.0800), 2afbb671a865f43c0476d685dc77b4df]
+[0000000078cc0000,0004e000] C:\Program Files\Nahimic\Nahimic2\UserInterface\x64\Nahimic2OSD.dll [2.3.21.42323, 76e10000b12d3b7a82dbb1e878773f78]
+[00000000b4200000,00066000] C:\WINDOWS\SYSTEM32\mswsock.dll [10.0.17134.407 (WinBuild.160101.0800), 68fa7e26636306c59a5c680862e4157e]
+[00000000b60f0000,000a0000] C:\WINDOWS\System32\clbcatq.dll [2001.12.10941.16384 (WinBuild.160101.0800), a112fb218386b213f4ee777a0dbe9078]
+[00000000a8460000,00076000] C:\WINDOWS\System32\MMDevApi.dll [10.0.17134.407 (WinBuild.160101.0800), 14c76dcccf34c41aec6aeed50c19fcd2]
+[00000000b4790000,00027000] C:\WINDOWS\System32\DEVOBJ.dll [10.0.17134.1 (WinBuild.160101.0800), 386f7cf4a07a9e8c3add9de3f66c746a]
+[00000000a3a70000,0012c000] C:\WINDOWS\SYSTEM32\AUDIOSES.DLL [10.0.17134.407 (WinBuild.160101.0800), edb79ecd4218fcd7573a891788fcfb9a]
+[00000000b0a10000,0014d000] C:\WINDOWS\SYSTEM32\wintypes.dll [10.0.17134.407 (WinBuild.160101.0800), bf6b1aaa89766e744decad80dbc0873a]
+[00000000b0100000,0000a000] C:\WINDOWS\SYSTEM32\AVRT.dll [10.0.17134.407 (WinBuild.160101.0800), b094533e37d516eb5bbd601b24a094a3]
+[00000000b2c50000,00007000] C:\WINDOWS\SYSTEM32\RICHED32.DLL [10.0.17134.1 (WinBuild.160101.0800), 8b4fa40fe3803cd45c52371bce380aac]
+[000000009c0c0000,00095000] C:\WINDOWS\SYSTEM32\RICHED20.dll [5.31.23.1231, 49c93c9f73635acbc1a7adccdf849e0f]
+[0000000091df0000,00019000] C:\WINDOWS\SYSTEM32\USP10.dll [10.0.17134.1 (WinBuild.160101.0800), 1daed1025a834618a7a1038a3a694792]
+[00000000a1bb0000,00038000] C:\WINDOWS\SYSTEM32\msls31.dll [3.10.349.0, 2490a040ddb79f1dc0af948dedb88a16]
+[00000000030f0000,00014000] E:\Program Files\solidworks\SOLIDWORKS\sldvistauiu.dll [26.4.0.0075, 90e0035ff064f08ca4427df3eebeb168]
+[0000000003090000,0000b000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\slderrresu.dll [26.4.0.0075, 6e3360ba18946e6f5d7817c45d61611e]
+[0000000003f90000,01437000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldresu.dll [26.4.0.0075, 6bca85b8edaa89d04d25f8b64a3187bb]
+[0000000045f40000,01f4b000] E:\Program Files\solidworks\SOLIDWORKS\lang\sldres1u.dll [26.4.0.0075, ff44f2936a414154c5c291495e91c18b]
+[00000000053d0000,01217000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\slddialogresu.dll [26.4.0.0075, 75a4b319be9a74baa92d486631436d0b]
+[0000000003110000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldrulesresu.dll [26.4.0.0075, 58d69e698bbeff02646ef534b08a1313]
+[00000000b6bd0000,00175000] C:\WINDOWS\System32\MSCTF.dll [10.0.17134.407 (WinBuild.160101.0800), e1b628cf831f2f98c10df3b0d4f082f4]
+[00000000b0270000,001ae000] C:\WINDOWS\SYSTEM32\WindowsCodecs.dll [10.0.17134.1 (WinBuild.160101.0800), fd1696e6f1cdbbec53f0a2ae9252af9f]
+[00000000a8030000,0031c000] C:\WINDOWS\SYSTEM32\DWrite.dll [10.0.17134.407 (WinBuild.160101.0800), a96774b27136caef9334e0f78da32ecf]
+[00000000aa300000,00098000] C:\WINDOWS\SYSTEM32\TextInputFramework.dll [10.0.17134.1 (WinBuild.160101.0800), d89d92a0caec527ab59e688ad90659f9]
+[00000000afbb0000,0031e000] C:\WINDOWS\SYSTEM32\CoreUIComponents.dll [10.0.17134.112, 193a6337bd40ffe8ae2192baa9eaadff]
+[00000000b2990000,000da000] C:\WINDOWS\SYSTEM32\CoreMessaging.dll [10.0.17134.1, ac89ec75d4e59cff2e8bafd70c6154af]
+[00000000b3ad0000,00031000] C:\WINDOWS\SYSTEM32\ntmarta.dll [10.0.17134.407 (WinBuild.160101.0800), ee5e894dca9643ede06bfeb83d3e8657]
+[00000000b4840000,0009a000] C:\WINDOWS\SYSTEM32\sxs.dll [10.0.17134.407 (WinBuild.160101.0800), 8ce0687456548dea5eb69d6a91ae6fc0]
+[0000000032cd0000,0000f000] E:\Program Files\solidworks\SOLIDWORKS\sldwin7helperu.dll [26.4.0.0075, 69c4e3b5e782ce957519bb3e2006dcea]
+[000000008f8d0000,00495000] C:\WINDOWS\system32\explorerframe.dll [10.0.17134.407 (WinBuild.160101.0800), 0680b95d1b9196adc94c5621888e76b3]
+[00000000434a0000,00b24000] E:\Program Files\solidworks\SOLIDWORKS\sldgcu.dll [26.4.0.0075, 56f6c0f67fa450276cac1868f395bc2f]
+[0000000034280000,00181000] E:\Program Files\solidworks\SOLIDWORKS\sldgciParau.dll [26.4.0.0075, 4dc71c6be6787e0f60b2194feea0ada0]
+[00000000b1300000,0000d000] E:\Program Files\solidworks\SOLIDWORKS\mfgviewhelper.dll [26.0.0.0246, ae064c27d89470ac140e1316bfb1f841]
+[0000000076530000,01031000] E:\Program Files\solidworks\SOLIDWORKS\GSSLFRMfgView.dll [2017, 1, 0, 0, 5c7a3c1465f38a48f2d7798584345bed]
+[0000000078830000,000ca000] C:\Program Files\Common Files\SolidWorks Shared\XceedZipX64.dll [6.5.17567.0, f7f1ed27dcffb5868b0035dadf1b71db]
+[0000000050130000,00161000] E:\Program Files\solidworks\SOLIDWORKS\dbghelp.dll [6.9.0003.113 (debuggers(dbg).080320-1812), cdb95f53012fb066e7e113ce01fdd8d4]
+[00000000a4670000,00064000] C:\WINDOWS\SYSTEM32\hnetcfg.dll [10.0.17134.407 (WinBuild.160101.0800), a7d587653aabdfa220f1e55c6aba742a]
+[00000000ae0f0000,0001d000] C:\WINDOWS\SYSTEM32\ATL.DLL [3.05.2284, 8dd954ddb4944587a5841bac5383a722]
+[00000000b4910000,00028000] C:\WINDOWS\SYSTEM32\USERENV.dll [10.0.17134.407 (WinBuild.160101.0800), 5c9cd98858c019e5ccdceb3390050be7]
+[00000000b3640000,00022000] C:\WINDOWS\SYSTEM32\GPAPI.dll [10.0.17134.407 (WinBuild.160101.0800), ffab7b0f987092f8b34fa1ac1086a95a]
+[00000000b2c60000,00008000] C:\WINDOWS\SYSTEM32\wshtcpip.dll [10.0.17134.407 (WinBuild.160101.0800), e5521586a7418d9e888a235540a9d1a6]
+[000000009e860000,000eb000] C:\WINDOWS\SYSTEM32\rasapi32.dll [10.0.17134.407 (WinBuild.160101.0800), c44d7591e9afe7647a9843c8ea88e7cc]
+[000000009ff20000,00033000] C:\WINDOWS\SYSTEM32\rasman.dll [10.0.17134.1 (WinBuild.160101.0800), 46520eb27686e7a197cf6140beef4b3c]
+[00000000a4630000,0003f000] C:\WINDOWS\SYSTEM32\tapi32.dll [10.0.17134.407 (WinBuild.160101.0800), f34f4bde92a9742e2eaa0130eb732ffb]
+[0000000098450000,0043a000] C:\Program Files (x86)\Baidu\BaiduPinyin\5.4.4920.0\UIPFullx64.dll [5.4.4920.0, fcef325ebbc89695490ea8ea4da3734a]
+[00000000983e0000,00064000] C:\Program Files (x86)\Baidu\BaiduPinyin\5.4.4920.0\configurex64.dll [4.0.1.1554, 4c4f5b5e3474e30e87a7976e3de67452]
+[0000000098290000,00059000] C:\Program Files (x86)\Baidu\BaiduPinyin\5.4.4920.0\imepngx64.dll [1.6.16, 6a02cfaf89d04fb29ca1e936b1076596]
+[00000000a5520000,0006b000] C:\WINDOWS\SYSTEM32\OLEACC.dll [7.2.17134.1 (WinBuild.160101.0800), b5ea6b1f5babf9b5eefa17e4fa46d03d]
+[00000000982f0000,000ef000] C:\Program Files (x86)\Baidu\BaiduPinyin\5.4.4920.0\imefreetypex64.dll [, 71fa1af8b80c5e5512de49fa764ab065]
+[00000000a46f0000,0003a000] C:\Program Files (x86)\Baidu\BaiduPinyin\5.4.4920.0\imezlibx64.dll [, 61dba1a4b2886311864a87320051c2b4]
+[00000000b48e0000,00030000] C:\WINDOWS\SYSTEM32\SspiCli.dll [10.0.17134.1 (WinBuild.160101.0800), fabe7a58d9b6353e4b02116294b0a556]
+[00000000b31d0000,001b8000] C:\Windows\System32\twinapi.appcore.dll [10.0.17134.407 (WinBuild.160101.0800), 974ce9057524ed34ca772389c6ca605c]
+[00000000b3170000,00021000] C:\Windows\System32\RMCLIENT.dll [10.0.17134.81 (WinBuild.160101.0800), 8b2b8ef9c11895383154f6804ca0caaa]
+[00000000b47e0000,00056000] C:\WINDOWS\SYSTEM32\WINSTA.dll [10.0.17134.1 (WinBuild.160101.0800), 57200098cf98df240f92294693ea77bd]
+[00000000ab190000,00016000] C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL [10.0.17134.407 (WinBuild.160101.0800), 35df7c3ae92a317b791ae265b818f357]
+[00000000b3fc0000,000be000] C:\WINDOWS\SYSTEM32\DNSAPI.dll [10.0.17134.407 (WinBuild.160101.0800), f4b9f200b9d7ebc8bd4c8e39f02a44e3]
+[00000000a83c0000,0000a000] C:\Windows\System32\rasadhlp.dll [10.0.17134.1 (WinBuild.160101.0800), c3f1c6de0f00bab78bfc8a0d84734805]
+[0000000075d90000,0079e000] E:\Program Files\solidworks\SOLIDWORKS\sldutu_libFNP.dll [26.4.0.75, 21e4e588e0c57cf63489d29f7f32a4c3]
+[000000008dd90000,0000c000] C:\WINDOWS\SYSTEM32\snmpapi.dll [10.0.17134.1 (WinBuild.160101.0800), e580dec4b6cc7d993a344d63b7e94c6f]
+[00000000b3de0000,00033000] C:\WINDOWS\system32\rsaenh.dll [10.0.17134.1 (WinBuild.160101.0800), eac236bbdb1865f315629eae9cf1fd10]
+[00000000a84e0000,00011000] C:\WINDOWS\system32\wbem\wbemprox.dll [10.0.17134.1 (WinBuild.160101.0800), e7fa370e9eef345e80bc2bc410e591ca]
+[00000000a83d0000,00083000] C:\WINDOWS\SYSTEM32\wbemcomn.dll [10.0.17134.1 (WinBuild.160101.0800), c0dc631907683e15443b288fc9efe9bb]
+[00000000a6e20000,00014000] C:\WINDOWS\system32\wbem\wbemsvc.dll [10.0.17134.1 (WinBuild.160101.0800), 4004199a7d48d8183e091c7ee69885c4]
+[00000000a7080000,000f2000] C:\WINDOWS\system32\wbem\fastprox.dll [10.0.17134.1 (WinBuild.160101.0800), 832652f16d7c8046bfe357eb895f9527]
+[0000000003370000,00003000] C:\WINDOWS\SYSTEM32\icmp.Dll [10.0.17134.1 (WinBuild.160101.0800), 225f69152008527eaf2b8f44a48fb95e]
+[0000000090650000,00016000] C:\WINDOWS\system32\napinsp.dll [10.0.17134.407 (WinBuild.160101.0800), a506ab7edd0d2d0a128feb479c506a14]
+[000000008edd0000,0001a000] C:\WINDOWS\system32\pnrpnsp.dll [10.0.17134.407 (WinBuild.160101.0800), 7f4dd9d57803c32fd66391b1813f198e]
+[00000000b1100000,00019000] C:\WINDOWS\system32\NLAapi.dll [10.0.17134.1 (WinBuild.160101.0800), 06a45dc3d6392ac2e9ab421ce48097dc]
+[0000000092090000,0000e000] C:\WINDOWS\System32\winrnr.dll [10.0.17134.1 (WinBuild.160101.0800), c59e990affea710aa1f615aa0cd3f039]
+[00000000aca60000,00015000] C:\WINDOWS\System32\wshbth.dll [10.0.17134.1 (WinBuild.160101.0800), 37d30636231cc642329689570812111b]
+[000000000f590000,021fe000] E:\Program Files\solidworks\SOLIDWORKS\lang\swstylecolordialogsmallu.Dll [26.4.0.0075, e5721f4dce8bd0d60569f62e25271976]
+[0000000011790000,022c5000] E:\Program Files\solidworks\SOLIDWORKS\lang\swstylebluedialogsmallu.Dll [26.4.0.0075, 8fecf55bf9858e86657e6c457f2190fc]
+[000000008fe10000,00058000] C:\WINDOWS\system32\dataexchange.dll [10.0.17134.1 (WinBuild.160101.0800), 4af2aa26f953008ddc3884063b4b18a8]
+[00000000b1a50000,0030b000] C:\WINDOWS\system32\d3d11.dll [10.0.17134.112 (WinBuild.160101.0800), e68a2e3101398ef874cbec3c39461084]
+[00000000b24b0000,0019c000] C:\WINDOWS\system32\dcomp.dll [10.0.17134.1 (WinBuild.160101.0800), eb432462f31c83fd45f9a37e87c9e9e7]
+[00000000b37a0000,000bb000] C:\WINDOWS\system32\dxgi.dll [10.0.17134.112 (WinBuild.160101.0800), 1cb14c76f967e5279779c19bdcc2c3a2]
+[000000000eb90000,003bf000] E:\Program Files\solidworks\SOLIDWORKS\swStyleColoru.Dll [26.4.0.0075, e13261f9e2fac6709b718ac34e47e005]
+[0000000036fa0000,04194000] E:\Program Files\solidworks\SOLIDWORKS\swStyleBlueu.Dll [26.4.0.0075, 62ca740062451b349418d01d6bbaf4aa]
+[00000000a4880000,0025d000] C:\Windows\System32\msxml6.dll [6.30.17134.112, 85f903b98812fb03eb79200bd975729d]
+[000000007dd70000,00c2b000] C:\Windows\System32\ieframe.dll [11.00.17134.407 (WinBuild.160101.0800), 9de63c73f61f77beadedd12f31e57446]
+[0000000032ea0000,00030000] E:\Program Files\solidworks\SOLIDWORKS\sldsearchu.dll [26.4.0.0075, 0186d88fccffa37d4eb7b880cee29248]
+[000000004ad00000,030fa000] E:\Program Files\solidworks\SOLIDWORKS\SLDMODU.dll [26.4.0.0075, c92aa675e7a4b782807984f3cbc67ed9]
+[00000000339a0000,000ca000] E:\Program Files\solidworks\SOLIDWORKS\sldsearchcommonu.dll [26.4.0.0075, 7a281e93b83d4d97c23a9e60657f934b]
+[00000000332d0000,00063000] E:\Program Files\solidworks\SOLIDWORKS\sldfgu.dll [26.4.0.0075, f25838e09f0ee2feb89c3c94b66fadbf]
+[0000000033340000,0007d000] E:\Program Files\solidworks\SOLIDWORKS\sldsv3u.dll [26.4.0.0075, 6b22e052603bd8452e4d4558a47da2db]
+[0000000032fa0000,00036000] E:\Program Files\solidworks\SOLIDWORKS\sldtessellationu.dll [26.4.0.0075, c40f7bf256a0b1e5d5c6053ca51fb145]
+[0000000078510000,00138000] E:\Program Files\solidworks\SOLIDWORKS\dcuaem52.dll [52.2.15.0, 0ace93e59bd4392ac5fbec2cc00b70fe]
+[0000000067c80000,004eb000] E:\Program Files\solidworks\SOLIDWORKS\dcud3e52.dll [52.2.15.0, 0552b734860997e23d9ac5e3fa62333b]
+[00000000b12e0000,00013000] E:\Program Files\solidworks\SOLIDWORKS\dcucdm52.dll [52.2.15.0, f459338b57a033e2919eb0fd025b1c56]
+[0000000032f60000,00036000] E:\Program Files\solidworks\SOLIDWORKS\sldsvu.dll [26.4.0.0075, 66d1663e26083bbecd303fb2c50a708f]
+[00000000672e0000,00997000] E:\Program Files\solidworks\SOLIDWORKS\dcu3d52.dll [52.2.15.0, 31445b2b169d38db1871fd890b8ecb19]
+[0000000066c60000,0067e000] E:\Program Files\solidworks\SOLIDWORKS\dcu2d67.dll [67.3.9.0, d06d7009a1c959d2eccbc3228cc2370e]
+[0000000078360000,001ae000] E:\Program Files\solidworks\SOLIDWORKS\dcupgm67.dll [67.3.9.0, 43ef0e138224807eb72efafe55c8c781]
+[00000000b1290000,0000d000] E:\Program Files\solidworks\SOLIDWORKS\CATCDSPlug2DItfSW.dll [6.216.0.13277, d737a6c14ed40b7084e095a0496e717b]
+[00000000b01f0000,0000e000] E:\Program Files\solidworks\SOLIDWORKS\CATCDSPlug3DSW.dll [6.216.0.13277, 93e8f71762cdf33b45f56c82249220b8]
+[0000000053d10000,000d2000] C:\WINDOWS\SYSTEM32\MSVCR100.dll [10.00.40219.325, 366fd6f3a451351b5df2d7c4ecf4c73a]
+[0000000013e10000,00049000] E:\Program Files\solidworks\SOLIDWORKS\sldBodyDiffu.dll [, 8b2b913153f9cf6ac8243eb9dd4c359c]
+[0000000013e60000,00106000] E:\Program Files\solidworks\SOLIDWORKS\sldhscdu.dll [26.4.0.0075, e76f75000e476edeab37d061dafbcc08]
+[0000000014190000,00d25000] E:\Program Files\solidworks\SOLIDWORKS\mkl_intel_thread.dll [10.3.6.1, 8cb37956a579c0bc46820572552f0299]
+[0000000014ec0000,00cd9000] E:\Program Files\solidworks\SOLIDWORKS\mkl_core.dll [10.3.6.1, f1c05c50912240eb1e651fc3a5690d20]
+[0000000015ba0000,000d8000] E:\Program Files\solidworks\SOLIDWORKS\libiomp5md.dll [20110606, f136f02046db250482004b3b62729d7f]
+[0000000078d10000,00050000] C:\WINDOWS\SYSTEM32\msIso.dll [11.00.17134.1 (WinBuild.160101.0800), 38ede7243e7f84d00e679f6b14be5213]
+[0000000065690000,015c6000] C:\Windows\System32\mshtml.dll [11.00.17134.407 (WinBuild.160101.0800), bb8ff8c383f04b5e4677c53982420ced]
+[0000000083af0000,00029000] C:\Windows\System32\srpapi.dll [10.0.17134.407 (WinBuild.160101.0800), c312959238c0115361408f0c5e1e5574]
+[0000000099500000,0003f000] C:\WINDOWS\system32\mlang.dll [10.0.17134.1 (WinBuild.160101.0800), 20015110c5066cc7a71d4b2c0f6361e5]
+[00000000b4450000,00014000] C:\WINDOWS\SYSTEM32\WLDP.DLL [10.0.17134.407 (WinBuild.160101.0800), 6277e7ef5bff7241e336b65587855a39]
+[000000007c2c0000,0018a000] C:\Windows\System32\ieapfltr.dll [11.00.17134.112, c11c1c025cbfe86323a76b90493e67be]
+[0000000033270000,00056000] E:\Program Files\solidworks\SOLIDWORKS\swPopupUtil.dll [26.4.0.0075, 410a709280d877eab09dec32e5fa9413]
+[00000000502a0000,026bd000] C:\WINDOWS\System32\DriverStore\FileRepository\nvmiui.inf_amd64_2edcf98c0cea5da6\nvoglv64.dll [25.21.14.2525, f170cf2a3edfdc8781d89ca7a69c157a]
+[000000007ec00000,002ae000] C:\WINDOWS\system32\nvspcap64.dll [3.18.0.94, 90d494c3bd0f42fae4f9cc974512a155]
+[0000000075080000,009ed000] C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll [4.7.3131.0 built by: NET472REL1LAST, 3ff3aca9c04d6a58f0084096b0a6f8aa]
+[0000000074c50000,000f7000] C:\WINDOWS\SYSTEM32\MSVCR120_CLR0400.dll [12.00.52519.0 built by: VSWINSERVICING, 99e982747b36af703209b734d9d05263]
+[0000000072740000,01588000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\mscorlib\b818384f6f636b55ba6f5af0c6a7784d\mscorlib.ni.dll [4.7.3131.0 built by: NET472REL1LAST, 6c80cd6fac0f95af613f205cb6512fe9]
+[000000006e120000,0012c000] C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clrjit.dll [4.7.3131.0 built by: NET472REL1LAST, 434f1bea76847d900647b2c4d9c1e176]
+[0000000071b00000,00c3f000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System\ecad7ae388cef8593aaf80bd2e354c40\System.ni.dll [4.7.3056.0 built by: NET472REL1, 7fcb5d8e922c99a12132be7e5242caa3]
+[000000006d760000,0088c000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Xml\1b1d43ddf8ad426d8b63cfc742d9fc5e\System.Xml.ni.dll [4.7.3056.0 built by: NET472REL1, 2f2f0ee1fcedc591466bbe357418a5c6]
+[00000000710b0000,00a50000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Core\c79ff69b8e787a0eab7528231903f272\System.Core.ni.dll [4.7.3110.0 built by: NET472REL1LAST_C, f8ed5b94e0d2433c77117dd56d2d91c4]
+[000000006dff0000,0012a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Configuration\e2a9148f660974bf6dd220e59c0c8dfc\System.Configuration.ni.dll [4.7.3056.0 built by: NET472REL1, 8886826de7581a1afa971f56dd56f22d]
+[0000000064460000,00fc1000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Web\e1e1a83117ac0b90f1738ec48d81d740\System.Web.ni.dll [4.7.3056.0 built by: NET472REL1, 869e3a2c17358a3cada3e8c67bd47a9b]
+[0000000047e90000,02e63000] E:\Program Files\solidworks\SOLIDWORKS\slduiu.dll [26.4.0.0075, cd81cbdd297096f6cb1a384a3b3ef26d]
+[0000000033120000,0005d000] E:\Program Files\solidworks\SOLIDWORKS\slddlgdatau.dll [26.4.0.0075, 9e8659690a2dc08f517d6a8c9762fe1d]
+[0000000034a00000,00338000] E:\Program Files\solidworks\SOLIDWORKS\sldgfxu.dll [26.4.0.0075, e465b06d2b67f6201b4bb6a0c9f640f5]
+[000000003c0e0000,007f0000] E:\Program Files\solidworks\SOLIDWORKS\sldsmmu.dll [26.4.0.0075, 3dfd2244a56c39ba7144fd14fbdb9503]
+[0000000035460000,002a4000] E:\Program Files\solidworks\SOLIDWORKS\sldmswiftu.dll [26.4.0.0075, 5c96dbd72ac5c09ec438c2d4ea541796]
+[0000000035710000,00423000] E:\Program Files\solidworks\SOLIDWORKS\sldrtmou.dll [26.4.0.0075, 4e1fd3c09054456a973fff661e490a34]
+[0000000032e70000,00023000] E:\Program Files\solidworks\SOLIDWORKS\sldadoconverteru.dll [26.4.0.0075, b0fbd9959312dad96cdbda99a16ef41a]
+[00000000336f0000,00081000] E:\Program Files\solidworks\SOLIDWORKS\sldrulesu.dll [26.4.0.0075, 7ce7e71900e10c2d9815aa6caca7ce33]
+[0000000034410000,0017a000] E:\Program Files\solidworks\SOLIDWORKS\slddataeditingu.dll [26.4.0.0075, 937572982d80812686f58de1b1debafa]
+[0000000075c30000,00157000] E:\Program Files\solidworks\SOLIDWORKS\slddimxpertclru.dll [26.4.0.0075, b6fbbc4163efae48da540bbf47d9c5b1]
+[0000000017a10000,0003f000] E:\Program Files\solidworks\SOLIDWORKS\sldSubDModelu.dll [26.4.0.0075, b107281fe7f06f0c563c025ea3031252]
+[000000001f270000,00638000] E:\Program Files\solidworks\SOLIDWORKS\sldMoPartu.dll [26.4.0.0075, 2aeea519165b76930f070f8d7c126268]
+[0000000017a50000,0009c000] E:\Program Files\solidworks\SOLIDWORKS\sldmoasmu.dll [26.4.0.0075, 940bf53ac85403d9e7648d6bbd3ad9a3]
+[000000001f8b0000,000d4000] E:\Program Files\solidworks\SOLIDWORKS\slddetailsu.dll [26.4.0.0075, 7944471dfa9653e0f63e0968c8f27fb5]
+[000000001f9d0000,00270000] E:\Program Files\solidworks\SOLIDWORKS\sldGcSubdDllu.dll [26.4.0.0075, fd78ad2c62b370b1242dbae0a2fe0e34]
+[0000000073cf0000,0324c000] E:\Program Files\solidworks\SOLIDWORKS\PSKERNEL.dll [30.00.310, 60a7b3d1df7f9344eacedac2a355c339]
+[00000000aa4c0000,00072000] C:\WINDOWS\System32\fwpuclnt.dll [10.0.17134.407 (WinBuild.160101.0800), 6a4db71c85a33ac26cbfb4e39ab58554]
+[00000000a0920000,00015000] C:\WINDOWS\SYSTEM32\ondemandconnroutehelper.dll [10.0.17134.1 (WinBuild.160101.0800), 8407a7f9202c64ed49b242cdf86f8fb9]
+[00000000af3c0000,000dc000] C:\WINDOWS\SYSTEM32\winhttp.dll [10.0.17134.407 (WinBuild.160101.0800), 939aa47a32afe2bc17eb39fb2ed1ddc2]
+[00000000ab4b0000,0000b000] C:\WINDOWS\SYSTEM32\WINNSI.DLL [10.0.17134.1 (WinBuild.160101.0800), 195ea198aab8cde2e33263dab5deecdf]
+[0000000097a50000,000a2000] C:\Windows\Microsoft.NET\Framework64\v4.0.30319\webengine4.dll [4.7.3056.0 built by: NET472REL1, adc9103e7ae1d8c05f2efc52f72feaef]
+[0000000096610000,009a0000] C:\Windows\Microsoft.NET\Framework64\v2.0.50727\mscorwks.dll [2.0.50727.8933 (WinRelRS4.050727-8900), 8debfdd4303cde06f8390851dccd99e7]
+[0000000052d00000,000c9000] C:\WINDOWS\WinSxS\amd64_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.9445_none_88df21dd2faf7c49\MSVCR80.dll [8.00.50727.9445, 9d27da2a615a37f3721d49c09059ff2a]
+[00000000a0180000,00014000] C:\WINDOWS\SYSTEM32\rtutils.dll [10.0.17134.1 (WinBuild.160101.0800), 92a4f83dd00cae45c7c2b8554084e48a]
+[0000000033b00000,0015c000] E:\Program Files\solidworks\SOLIDWORKS\sldvisualstateu.dll [26.4.0.0075, f83f7c7fc43260a36f964642e83d859c]
+[0000000033f00000,0021b000] E:\Program Files\solidworks\SOLIDWORKS\sldgraphicsuiu.dll [26.4.0.0075, 6c441da625cb97e9e368bbfa8527c94b]
+[00000000a3e00000,0000c000] C:\WINDOWS\SYSTEM32\Secur32.dll [10.0.17134.1 (WinBuild.160101.0800), 38c059f9cbec83ebb6b25ab3498eda46]
+[00000000a3530000,00012000] C:\WINDOWS\SYSTEM32\cscapi.dll [10.0.17134.1 (WinBuild.160101.0800), e66ac1b45fda70368a8d5186bf0d5f4a]
+[0000000032d50000,00028000] E:\Program Files\solidworks\SOLIDWORKS\sldwelcomeu.dll [26.4.0.0075, cefbba811d7659863d18717d08e4b511]
+[000000003da40000,00507000] E:\Program Files\solidworks\SOLIDWORKS\lang\sldpmru.dll [26.4.0.0075, 0e27712161b2c5800126d057645c2e46]
+[0000000034120000,00155000] E:\Program Files\solidworks\SOLIDWORKS\sldcontentu.dll [26.4.0.0075, eb5f44ede19a27e795a629df07e5e8da]
+[0000000033520000,00078000] E:\Program Files\solidworks\SOLIDWORKS\sldfileexploreru.dll [26.4.0.0075, 4d9b9c5a5bd9daf1bb84353292875c33]
+[00000000a1940000,00026000] C:\WINDOWS\SYSTEM32\MSDART.DLL [10.0.17134.1 (WinBuild.160101.0800), 485ca8e377db1c0ffb3b46556aa85fb0]
+[0000000077860000,000ed000] C:\Program Files\Common Files\System\Ole DB\oledb32.dll [10.0.17134.1 (WinBuild.160101.0800), a04797f2afd901cb593f2331f5f0c9a4]
+[00000000202e0000,00082000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldsearchcommonres.dll [26.4.0.0075, e013b77a1f89501f2c6fe80e0dd01722]
+[0000000033220000,00043000] E:\Program Files\solidworks\SOLIDWORKS\swScheduler\slddissecter.dll [26.4.0.0075, 34415e785cc1dd9f041ca9be32e1d184]
+[00000000b3d20000,00079000] C:\WINDOWS\system32\schannel.DLL [10.0.17134.407 (WinBuild.160101.0800), 86ee7eed17c9385b73aa6101e6481534]
+[0000000032d10000,0000d000] E:\Program Files\solidworks\SOLIDWORKS\sldtagsPropsu.dll [26.4.0.0075, 58c6e865a9fadd51e89c322968c83ff4]
+[0000000032da0000,00020000] E:\Program Files\solidworks\SOLIDWORKS\sldTagsPropscommonu.dll [26.4.0.0075, c06246effe81f66aca9e9046b310e40c]
+[0000000003550000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldtagspropscommonres.dll [26.4.0.0075, 47bbfd4a17e218a1da8fb38ccc28288e]
+[0000000032dc0000,00033000] E:\Program Files\solidworks\SOLIDWORKS\slddrawtabu.dll [26.4.0.0075, 1ee3e976f4eb6dd9ec6e6f4fca352c34]
+[000000003b140000,0052c000] E:\Program Files\solidworks\SOLIDWORKS\sldmatu.dll [26.4.0.0075, 277c0d4cb830daf352bd2b2bee6eca34]
+[0000000033180000,00043000] E:\Program Files\solidworks\SOLIDWORKS\sldcustompropsu.dll [26.4.0.0075, 7c016899257b4d50ab1331f3470d2566]
+[0000000020420000,00036000] E:\Program Files\solidworks\SOLIDWORKS\featurecplu.dll [26.4.0.0075, cf728aa7b6fcb5e1b69ae899cf22a5af]
+[0000000022c90000,000bd000] E:\Program Files\solidworks\SOLIDWORKS\CouplingBase.dll [26.4.0.0075, e70bd5a180751767ee698d92a46cfbb5]
+[0000000033c60000,00137000] E:\Program Files\solidworks\SOLIDWORKS\sldbasegeomu.dll [26.4.0.0075, 69108b3afe5d23a81c4e3e312a35da16]
+[0000000020f90000,00057000] E:\Program Files\solidworks\SOLIDWORKS\sldequationctrlu.dll [26.4.0.0075, 4fccdc1b1b7c00fb63bb7c18e0786520]
+[00000000979c0000,0005a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\featurecplu\836e3688fbb5b50822c4536468f379da\featurecplu.ni.dll [26.4.0.0075, c37db7531f60e446a98297eb29a8929b]
+[00000000642e0000,00180000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\couplingBase\de6751dc3cfb2acbc58cb14827048788\couplingBase.ni.dll [26.4.0.0075, 045e047493d5bf335e2189ee19dbbe71]
+[00000000aa7f0000,00012000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\CoreInterface\533cedebe0328de67a9ef0a1b615922e\CoreInterface.ni.dll [26.4.0.0075, e9afbb94f16f8af704cef07f3638d891]
+[00000000a4390000,00014000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\FeatureUI\d7b3f0df6b2f5eeb20a24a1f70d7b8b3\FeatureUI.ni.dll [26.4.0.0075, 03972b156142b33c020bee99407aac54]
+[00000000a1330000,0001e000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\FeatureWPF\47e24441c81aafcd66282b9d6966fb28\FeatureWPF.ni.dll [26.4.0.0075, e873fca332e130db68dd7ff126bd7931]
+[0000000070bc0000,004e8000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\WindowsBase\3bf5143f7a783d52d812b370f512de56\WindowsBase.ni.dll [4.7.3110.0 built by: NET472REL1LAST_C, 3caa56e7da18a89997247524fa5bd107]
+[000000006fde0000,00ddd000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\PresentationCore\6ee4acd8819ded28cd0c80c3f23703b9\PresentationCore.ni.dll [4.7.3110.0 built by: NET472REL1LAST_C, 19a9f232c2c58fa4fc1a4bd674065eeb]
+[000000006e780000,01653000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\Presentatio5ae0f00f#\9400560cd72feeffd90435f95aded8f8\PresentationFramework.ni.dll [4.7.3110.0, 890502446e20ad7c1c53cddfec69418a]
+[000000006e510000,0026a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Xaml\cf2a89660009ba997dc7b1a5bc6a4daa\System.Xaml.ni.dll [4.7.3110.0 built by: NET472REL1LAST_C, 42b31e36afff742ddbe468686a889450]
+[0000000063200000,001c9000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\WPFRes\1553e6f9b4c2360fc7be4e14d3819333\WPFRes.ni.dll [26.4.0.0075, 2bd11f3d09374246d5d0c4433a3f72f1]
+[00000000b0190000,0000b000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\FeatureOperation\9af78e0f77916024c71cf91f3918b8d3\FeatureOperation.ni.dll [26.4.0.0075, 86a8dbe5d9a5dfce93651a356bcb90da]
+[000000006e360000,001b0000] C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\wpfgfx_v0400.dll [4.7.3110.0 built by: NET472REL1LAST_C, d4660ff70cd4d34a7916b1455847c32b]
+[0000000074fd0000,000ae000] C:\WINDOWS\SYSTEM32\MSVCP120_CLR0400.dll [12.00.52519.0 built by: VSWINSERVICING, bb4477c9e4032fa06991fb3210b4c668]
+[000000006e250000,00110000] C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\PresentationNative_v0400.dll [4.7.3110.0 built by: NET472REL1LAST_C, 21d1b9c7bdc1109aa7ae84086422d6cc]
+[00000000787a0000,0008d000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\Controls\0e8a3db3eb8e2aa81e25c163f2d83746\Controls.ni.dll [26.4.0.0075, ad2ae072b6f45d06c7649725538a5d86]
+[000000009d890000,00028000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\UiBase\37a72403bd46dd3b5993a5a3e1ffa1cd\UiBase.ni.dll [26.4.0.0075, 157a2eed2ab6da838041ec450267bc93]
+[000000009bb60000,00034000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\CmdInterface\36a1d6bb400b5de1f4f3d5369591294f\CmdInterface.ni.dll [26.4.0.0075, ecf87999eaf16af55df51050765a71b7]
+[00000000775f0000,000c5000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\Presentatio1c968d57#\502a758300114260ae48d2e784f01dcb\PresentationFramework.Luna.ni.dll [4.7.3056.0 built by: NET472REL1, e5f775d612ab830f08949fbfc199e80f]
+[0000000062fc0000,0023e000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Deployment\2b542ff82325c2856ccba8fde9551343\System.Deployment.ni.dll [4.7.3056.0 built by: NET472REL1, 38d90fae355f3708e99fc6df2b1e5c77]
+[000000006d410000,001e8000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Drawing\af10d278d6c02fda2196fccad0624e15\System.Drawing.ni.dll [4.7.3056.0 built by: NET472REL1, da8e32ba2b36b6f260f1118598ef4436]
+[000000009d1f0000,0001b000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\DveSupport\4b6bb87aa85db2f7b012b76e5bd73012\DveSupport.ni.dll [26.4.0.0075, 26227873ce5bca021a0eb48fd99f1ce4]
+[000000009a6d0000,000a8000] C:\WINDOWS\SYSTEM32\mscms.dll [10.0.17134.407 (WinBuild.160101.0800), 26a7ac6d85c56722d904cb0ad5272ad8]
+[000000009a6c0000,00010000] C:\WINDOWS\SYSTEM32\ColorAdapterClient.dll [10.0.17134.1 (WinBuild.160101.0800), c3ed024c9f557518d56caab96e91c782]
+[000000008ea60000,0004a000] C:\WINDOWS\SYSTEM32\WindowsCodecsExt.dll [10.0.17134.1 (WinBuild.160101.0800), bf2a1d1f05ba1958708f227fd2367088]
+[000000009ba30000,00043000] C:\WINDOWS\SYSTEM32\icm32.dll [10.0.17134.1 (WinBuild.160101.0800), b8af0775af76cc68d334e17f0835f299]
+[00000000a3c50000,00014000] C:\WINDOWS\SYSTEM32\mskeyprotect.dll [10.0.17134.407 (WinBuild.160101.0800), e79b4bfa3f1e4e07bd40bc4aa5f6f738]
+[00000000b44b0000,00026000] C:\WINDOWS\SYSTEM32\ncrypt.dll [10.0.17134.407 (WinBuild.160101.0800), 879e3b579f4046dba005c37f3db9e7fe]
+[00000000b4470000,00036000] C:\WINDOWS\SYSTEM32\NTASN1.dll [10.0.17134.1 (WinBuild.160101.0800), 2a51e2830531ac97afb3324c2ec04082]
+[00000000aa730000,0002e000] C:\Windows\System32\cryptnet.dll [10.0.17134.1 (WinBuild.160101.0800), 6d42c4c29eda3b84140fe446112ae1ef]
+[00000000a3d80000,00021000] C:\WINDOWS\system32\ncryptsslp.dll [10.0.17134.137 (WinBuild.160101.0800), 0491e1d655e3f387e482fb59c571ae82]
+[000000006c420000,0009a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\Presentatioaec034ca#\dada5c3af81e9d38cb2bc3954525fa63\PresentationFramework.Aero2.ni.dll [4.7.3056.0 built by: NET472REL1, f591ce11cf64057803222eb6ebc0dde2]
+[0000000024c70000,0040e000] E:\Program Files\solidworks\SOLIDWORKS\sldcoreu.dll [26.4.0.0075, b02836d51b6958dafe88693f70bd4130]
+[0000000074d90000,000d4000] C:\WINDOWS\SYSTEM32\msvcr110.dll [11.00.51106.1 built by: Q11REL, 7c3b449f661d99a9b1033a14033d2987]
+[00000000208a0000,0000c000] E:\Program Files\solidworks\SOLIDWORKS\coreinterface.dll [26.4.0.0075, 7968c86636dd79ede3aeec13d2eec367]
+[0000000021000000,0002b000] E:\Program Files\solidworks\SOLIDWORKS\sld3dviewtabu.dll [26.4.0.0075, d221f56d4fc15d084a1fe5163b72843e]
+[0000000022de0000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\annotationoperation.dll [26.4.0.0075, b4056ed6d1e3e17d8725beabd5cd5d64]
+[0000000022df0000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\annotationui.dll [26.4.0.0075, 3ee2a923064db0c1461052c7b313a4ba]
+[0000000022e00000,0001c000] E:\Program Files\solidworks\SOLIDWORKS\annotationwpf.dll [26.4.0.0075, 9aaf1d49d7961c516e10e53f2d7372ed]
+[0000000022e20000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\asmfeatureoperation.dll [26.4.0.0075, 108d513ae06e250c9fbefa3ff37f8f9c]
+[0000000022e30000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\asmfeatureui.dll [26.4.0.0075, 03e787a8804cff60829d1aec52fa6219]
+[00000000235f0000,00012000] E:\Program Files\solidworks\SOLIDWORKS\CmdInterface.dll [26.4.0.0075, c04e59879aee543f54f662febfe24cbd]
+[0000000023610000,00050000] E:\Program Files\solidworks\SOLIDWORKS\fworks\fworks.dll [26.4.0.0075, d513ce8501b7410b0c14719dbfad5d35]
+[0000000026050000,0002b000] E:\Program Files\solidworks\SOLIDWORKS\fworks\FWSHARU.DLL [26.0.2018.61, 2c1844963856c9a3a2e3ddc2e23a8d22]
+[0000000026090000,001ab000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\FWRESU.DLL [26.4.0.0075, 19c54ee1681ac3fc4b091467bd9f8e9c]
+[0000000026250000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\ContentOperation.dll [26.4.0.0075, 76739f814ab31d5b58a8227dfb843ea6]
+[0000000026260000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\ContentUI.dll [26.4.0.0075, a46f0c8618ea05f0e2d3a18326e67cd8]
+[00000000262d0000,00024000] E:\Program Files\solidworks\SOLIDWORKS\Controls.dll [26.4.0.0075, 0d78c31056e89ea8a75d4aff12dec8c6]
+[0000000026310000,0000c000] E:\Program Files\solidworks\SOLIDWORKS\DebugControls.dll [26.4.0.0075, c7f831e32fa9b794f5b58d55242b5de7]
+[0000000026340000,0000c000] E:\Program Files\solidworks\SOLIDWORKS\DveSupport.dll [26.4.0.0075, 34b6b01346e7391bbec243703e4c9894]
+[0000000026350000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\EnvironmentCore.dll [26.4.0.0075, 4315df82cc9380219499b26f9a84e52f]
+[0000000026360000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\EnvironmentOperation.dll [26.4.0.0075, 55520f94d8c5670627b255b0df51e06f]
+[0000000026370000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\EnvironmentUI.dll [26.4.0.0075, 84a74cf6f34c24424f339710e8c8826c]
+[0000000026390000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\EnvironmentWPF.dll [26.4.0.0075, b64ffe5d394d01477edc8dbfd32b179f]
+[00000000263b0000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\FeatureOperation.dll [26.4.0.0075, 8f62e7f48a3116edddafb0312d148bee]
+[00000000263c0000,0000e000] E:\Program Files\solidworks\SOLIDWORKS\FeatureUI.dll [26.4.0.0075, a463510ac956ea94f9df14c5cb948a44]
+[00000000263d0000,00012000] E:\Program Files\solidworks\SOLIDWORKS\FeatureWPF.dll [26.4.0.0075, 493ff81ccca5b0973501998145d12195]
+[00000000263f0000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\Manipulator.dll [26.4.0.0075, 78db2c20e579c281592a2993bb29fb17]
+[0000000026410000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\OperationBase.dll [26.4.0.0075, ef47f5c9949bae109b47fe87c7796159]
+[0000000026440000,00090000] E:\Program Files\solidworks\SOLIDWORKS\propertiesManagerWPF.dll [26.4.0.0075, 1c729b1c2e5924c1782f3cf7929abe22]
+[00000000264f0000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\RefGeomOperation.dll [26.4.0.0075, 0cd55354bfed834ebfabc6ae2e9c9d6f]
+[0000000026510000,00014000] E:\Program Files\solidworks\SOLIDWORKS\RefGeomUI.dll [26.4.0.0075, 602cadd8eea2c54875aa3916c65acc16]
+[0000000026540000,00012000] E:\Program Files\solidworks\SOLIDWORKS\RefPlaneWPF.dll [26.4.0.0075, d1d179ecb561cf4a9b2a3cff7967e76d]
+[0000000026590000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\SheetMetalOperation.dll [26.4.0.0075, deef3bb32b99f0e15930236d2ef372d0]
+[00000000265a0000,0001c000] E:\Program Files\solidworks\SOLIDWORKS\SheetMetalUi.dll [26.4.0.0075, 1c7b3333d312ea1f0b553227372546d1]
+[00000000265c0000,00014000] E:\Program Files\solidworks\SOLIDWORKS\SheetMetalWPF.dll [26.4.0.0075, 15b5b3fe654d415e6a3f86a5f8b53ac4]
+[00000000265e0000,0000a000] E:\Program Files\solidworks\SOLIDWORKS\SketchOperation.dll [26.4.0.0075, 5405cfba99547d14a0dcd8a33d070acf]
+[00000000265f0000,0000c000] E:\Program Files\solidworks\SOLIDWORKS\SketchUI.dll [26.4.0.0075, c7077efb918fd2964bb14ce20ad3dfce]
+[0000000026600000,00010000] E:\Program Files\solidworks\SOLIDWORKS\SketchWPF.dll [26.4.0.0075, afeed1d1b96a98747d5577a3ae29e556]
+[0000000026610000,00012000] E:\Program Files\solidworks\SOLIDWORKS\UiBase.dll [26.4.0.0075, 5415a81557fba6b94594fdb828a72495]
+[0000000026630000,001b8000] E:\Program Files\solidworks\SOLIDWORKS\WPFRes.dll [26.4.0.0075, 3bff1a6db4940da235c95e7b8cd0f4e6]
+[00000000267f0000,00035000] E:\Program Files\solidworks\SOLIDWORKS\wpfsupport.dll [26.4.0.0075, 7ad0d8ae3295628ec9b88db2f9b3dcc2]
+[0000000026840000,0002d000] E:\Program Files\solidworks\SOLIDWORKS\annotationcplu.dll [26.4.0.0075, 96a183d6b7504d3bfcd1451f8ea692e6]
+[0000000026880000,00050000] E:\Program Files\solidworks\SOLIDWORKS\asmfeaturecplu.dll [26.4.0.0075, 762bdddb6d73b9ae058c11c3a6abe723]
+[00000000268e0000,0004d000] E:\Program Files\solidworks\SOLIDWORKS\contentcplu.dll [26.4.0.0075, e78393e40ba7c5ad87bd0eed63754822]
+[0000000026940000,00017000] E:\Program Files\solidworks\SOLIDWORKS\environmentcplu.dll [26.4.0.0075, 20faccd6ea1e76a81fb52eef032281fe]
+[0000000026970000,00026000] E:\Program Files\solidworks\SOLIDWORKS\refgeomcplu.dll [26.4.0.0075, 5f128f2b73e1f8bfebb368b22c0d2f6f]
+[00000000269b0000,00055000] E:\Program Files\solidworks\SOLIDWORKS\sheetmetalcplu.dll [26.4.0.0075, 1f3bc1f10a6cad630c243e3e2d27ad9e]
+[0000000034d40000,00339000] E:\Program Files\solidworks\SOLIDWORKS\sldSMUu.dll [26.4.0.0075, 83fccd28f7b10a89f9324e6914d21e4f]
+[0000000034590000,002e3000] E:\Program Files\solidworks\SOLIDWORKS\sldprtu.dll [26.4.0.0075, e4922193a8e5004c770b769e93bb0691]
+[0000000036b00000,00496000] E:\Program Files\solidworks\SOLIDWORKS\sldrefgeomu.dll [26.4.0.0075, 4a22fbf2494c1c964cd6aa59f0943260]
+[0000000041350000,01019000] E:\Program Files\solidworks\SOLIDWORKS\slddtlu.dll [26.4.0.0075, cbcb7718d40348ee3afed5d068c66af4]
+[000000003d190000,008a5000] E:\Program Files\solidworks\SOLIDWORKS\sldfuiu.dll [26.4.0.0075, 2c090c4f448b411e659e0fd30a466c68]
+[0000000020ab0000,00178000] E:\Program Files\solidworks\SOLIDWORKS\sldSubDUiu.dll [26.4.0.0075, c682754aeb8747ae3475198b5be25bb9]
+[0000000020c30000,00011000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldsmuresu.dll [26.4.0.0075, 99fb2d14dd4ce40fb93a2225c1955e7b]
+[0000000020c50000,000e9000] E:\Program Files\solidworks\SOLIDWORKS\sldUtils\SwLoaderSw.dll [26.4.0.0075, 6b05452842a8a06ace9869cb743c6d0f]
+[0000000020d50000,00036000] E:\Program Files\solidworks\SOLIDWORKS\sldUtils\UtilIDL.dll [26.4.0.0075, 87d4b0fbba765486200f2a65de78c0b4]
+[00000000a2f10000,0058c000] C:\WINDOWS\SYSTEM32\mfc140.dll [14.16.27024.1 built by: vcwrkspc, 512c74b9d1570e35dfc405d97cfa6334]
+[0000000020db0000,00087000] E:\Program Files\solidworks\SOLIDWORKS\Sketchcplu.dll [26.4.0.0075, 7dfbe631485af43cac9fae064e35d3a7]
+[0000000026a30000,00022000] E:\Program Files\solidworks\SOLIDWORKS\sldUtils\lang\chinese-simplified\SwLoaderSwResu.dll [26.4.0.0075, ec58c716e28c7c59dddaa6f8336a097a]
+[0000000026a70000,00019000] E:\Program Files\solidworks\SOLIDWORKS\clrloadu.dll [26.4.0.0075, 07b67e8c52ebfb55b45cc0fb30342b3b]
+[000000009bc20000,00020000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\clrloadu\91d8d6f03f03ac7da54aebcd5c442b84\clrloadu.ni.dll [26.4.0.0075, a0a97d2991a5eadbf444d05c21deac74]
+[0000000078b10000,00052000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\annotationcplu\67aeafcdb7d95cc91d0617ad3318a558\annotationcplu.ni.dll [26.4.0.0075, b5f72ece1145c73d14cccc5b8265c506]
+[00000000aa8d0000,00009000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\AnnotationUI\661a09390bde0a7fc234f9898ec5ec19\AnnotationUI.ni.dll [26.4.0.0075, 5ef56f0ad31ca29923cb676deaae8cd2]
+[000000007c4d0000,00041000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\AnnotationWPF\f334d764b7ffbcb80f15169761bb06bb\AnnotationWPF.ni.dll [26.4.0.0075, 2116c9b4287b08f386cc4c30c48cbc67]
+[00000000aa870000,00009000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\AnnotationOperation\c09976bb2490e3c8c8681931d2d6b98a\AnnotationOperation.ni.dll [26.4.0.0075, d30bf7dd35fbc1734474bfd936c4a187]
+[0000000062e60000,0015f000] E:\Program Files\MiSUMi RAPiD Design\Components\SW\bin\MisumiCatalogTools.dll [2.0.43.0, 1c26d1f400be3af8d2ac4bd99b91319a]
+[0000000053c70000,00098000] C:\WINDOWS\SYSTEM32\MSVCP100.dll [10.00.40219.325, d029339c0f59cf662094eddf8c42b2b5]
+[0000000050100000,0002b000] C:\WINDOWS\SYSTEM32\ATL100.DLL [10.00.40219.325, 53a3de22a97a40469fc6aeb54a151a61]
+[0000000077a90000,00563000] C:\WINDOWS\SYSTEM32\mfc100u.dll [10.00.40219.325, 85ed13922df97474af9979ca456c6748]
+[000000005d360000,00009000] C:\WINDOWS\SYSTEM32\MFC100CHS.DLL [10.00.40219.325, e4e0d9802f5953cea56e1d8087cd8ffa]
+[00000000780d0000,0009e000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\asmfeaturecplu\1adda0dd7c9f15f082f5c62ac22e32f5\asmfeaturecplu.ni.dll [26.4.0.0075, 2db4a75b12603c507083d9aab89dca04]
+[00000000a7630000,0000c000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\asmfeatureui\e7b28f0fa40fd3ef0816b37880a5082a\asmfeatureui.ni.dll [26.4.0.0075, 87c61e230ffa48793f7da3ef521607c6]
+[00000000a5980000,0000e000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\asmfeaturewpf\aba7cc7e63d3849a51349fbbe7361bda\asmfeaturewpf.ni.dll [26.4.0.0075, 504eecc99c6250a76ab01e78c3fe68c5]
+[00000000a3ba0000,0000a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\AsmFeatureOperation\e11b7da28d162837a830686073cc036b\AsmFeatureOperation.ni.dll [26.4.0.0075, e917d371577c55401e185a061a8ab656]
+[00000000779b0000,000a2000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\contentcplu\e77d86b65f68d73f315e67115a7ffb7f\contentcplu.ni.dll [26.4.0.0075, 1300ce3c8ad9d3dc2d22269db50f55a9]
+[00000000a1c20000,0000a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\ContentUI\cfb341ae8335643e81c467b810830235\ContentUI.ni.dll [26.4.0.0075, 6fd4d9d4d4c44a0ad6e0db2405e3c276]
+[00000000a1320000,0000b000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\ContentOperation\c0fe33e96f42dcc63aa7d1da4713cdac\ContentOperation.ni.dll [26.4.0.0075, 1f7f22feeac40d72e4dbacf3df9570d3]
+[000000009b930000,00038000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\refgeomcplu\f2325a5dea658425c82cc77cdc20e8e6\refgeomcplu.ni.dll [26.4.0.0075, e75746e66c2fb13cbb2bead5e0b0eea8]
+[00000000974e0000,00019000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\RefGeomUI\6899da7247156c611f7231954c382cd1\RefGeomUI.ni.dll [26.4.0.0075, 80d11affb934e7b127e2f6c466de3bc2]
+[0000000097430000,00016000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\RefPlaneWPF\c3aa493da125b188a34cae44671655a2\RefPlaneWPF.ni.dll [26.4.0.0075, 5a41c994a6896a3b229ae34fb5d4c8ca]
+[000000009d880000,00009000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\RefGeomOperation\ef0b1b5bd2dd74ae9446ca73297d60e7\RefGeomOperation.ni.dll [26.4.0.0075, 4a479dc2671e32c80a44e608cb05e238]
+[0000000065430000,000a4000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\sheetmetalcplu\dd41934698b0bf810e9bc14fbce3dc95\sheetmetalcplu.ni.dll [26.4.0.0075, 5582dd7d88340cd690db44daabd362a8]
+[0000000092fb0000,0002d000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\SheetMetalUi\e75d30a8a529fb1f5f3dad1efee65b4a\SheetMetalUi.ni.dll [26.4.0.0075, a6a1c334e60560b637a2b8b92c446c5c]
+[00000000902e0000,0001b000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\SheetMetalWPF\3895b5a07773281fb19e581298e65e37\SheetMetalWPF.ni.dll [26.4.0.0075, ee8e4bb03f69b970ca7db2b745e2118c]
+[000000009d380000,00009000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\SheetMetalOperation\48a19635207e01d2ac81bd1ef02110e9\SheetMetalOperation.ni.dll [26.4.0.0075, 322dee52608c69ac4616bceeeee692e2]
+[0000000062c60000,000eb000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\Sketchcplu\8c9f1127704d1ff6c27e5ad36514afb1\Sketchcplu.ni.dll [26.4.0.0075, 367c0886f13c25e84b29de4ccf0d5905]
+[0000000090270000,00011000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\SketchUI\dfb0013c7b7b2e8acf4be637c868b5e1\SketchUI.ni.dll [26.4.0.0075, bca0b9df806d6a04000b3bf8f299fedc]
+[000000008e450000,0001a000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\SketchWPF\49fff640c03040582d5b1299dd7c94a7\SketchWPF.ni.dll [26.4.0.0075, a430e8e8e2158f473d20fed07cd793f2]
+[000000009d1e0000,0000b000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\SketchOperation\285a124ebf15886acf80f8d64c82c481\SketchOperation.ni.dll [26.4.0.0075, d41c4226f73bde8f3e56f844f5b64170]
+[000000000cd90000,00019000] E:\Program Files\solidworks\SOLIDWORKS\SwAddinTolAnalyst.dll [26.4.0.0075, 294b1de2ddd229fef7e0ae51e14a4580]
+[000000006c4c0000,00f4d000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Windows.Forms\46cc21f2e6e3d23302f401cb2a4f55ad\System.Windows.Forms.ni.dll [4.7.3056.0 built by: NET472REL1, 8624fee6e92a49141ddf4f7274483011]
+[000000000d3d0000,000ca000] E:\Program Files\solidworks\SOLIDWORKS\dsgnchk\Dsgnchku.dll [26.4.0.0075, dbc6eb33d5ea31123891693baa69af70]
+[00000000275e0000,0029d000] E:\Program Files\solidworks\SOLIDWORKS\dsgnchk\Lang\chinese-simplified\Dsgnchkresu.dll [26.4.0.0075, 2d7bf34dfa6bc716deb381ebc3c6c966]
+[000000000d500000,00028000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldtodu.dll [26.4.0.0075, 9ed22ca368947f675dc17a70b25b033e]
+[000000006bf80000,001de000] C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\Microsoft.CSharp\d684840dc6581d7de1deb8e3d0fd4af1\Microsoft.CSharp.ni.dll [4.7.3056.0, 8da18dbf96934717d0f7b692127cf139]
+[00000000848d0000,00010000] C:\WINDOWS\system32\msimtf.dll [10.0.17134.407 (WinBuild.160101.0800), d7f843a4fa8df1b731630eda6f721863]
+[0000000099320000,0008a000] C:\Windows\System32\vbscript.dll [5.812.10240.16384, 5c1232c2e4f77caa3a152f01615beb13]
+[000000008e410000,00013000] C:\WINDOWS\SYSTEM32\amsi.dll [10.0.17134.1 (WinBuild.160101.0800), 28ce0099f0ffad21b386ff70835a841c]
+[000000005c550000,004ac000] C:\Windows\System32\jscript9.dll [11.00.17134.407 (WinBuild.160101.0800), 89bf61b09e3959803e79524b6f75076f]
+[00000000b1e00000,005c7000] C:\Windows\System32\d2d1.dll [10.0.17134.407 (WinBuild.160101.0800), b3c6f10b7c19c819ad290e2631daf4b0]
+[000000007d5f0000,0077e000] C:\WINDOWS\SYSTEM32\d3d10warp.dll [10.0.17134.112 (WinBuild.160101.0800), 132b8d6d6450a0eb0f81e5a3d0221892]
+[00000000b2d50000,0008b000] C:\WINDOWS\SYSTEM32\apphelp.dll [10.0.17134.407 (WinBuild.160101.0800), a0f6aefd22fc4b300a1716af5f2a7361]
+[0000000098890000,000a8000] C:\WINDOWS\system32\baiducnTSF.dll [5.4.4920.0, fb8116b7cc78be54d2ee376779d2caae]
+[00000000981f0000,0009b000] C:\Windows\System32\twinapi.dll [10.0.17134.407 (WinBuild.160101.0800), c8c22e2dddd5776f5da68198844061f4]
+[00000000b6660000,00073000] C:\WINDOWS\System32\coml2.dll [10.0.17134.1 (WinBuild.160101.0800), 135e5cb35361925cdf15771409b568e0]
+[000000007b9f0000,0000c000] C:\WINDOWS\SYSTEM32\atlthunk.dll [10.0.17134.1 (WinBuild.160101.0800), 860c909e59948cee59ab0df545a27f87]
+[0000000035080000,003d5000] E:\Program Files\solidworks\SOLIDWORKS\sldfuncfeat.dll [26.4.0.0075, 72ec815aeb285aa1563c4e4f2ea97621]
+[00000000008d0000,0003d000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldFuncFeatRes.dll [26.4.0.0075, a80e631867b2bbec60707ecdb8055708]
+[000000000e990000,001b2000] E:\Program Files\solidworks\SOLIDWORKS\sldOptimizationu.dll [26.4.0.0075, 1dc8083a44c078d9e3c5b5e1301c8142]
+[0000000036240000,003ee000] E:\Program Files\solidworks\SOLIDWORKS\sldanimateu.dll [26.4.0.0075, cbf11672305fe01fdd489091e5236038]
+[000000009a990000,00028000] E:\Program Files\solidworks\SOLIDWORKS\SWAxPLAN10u.dll [2.0.1.0, fa6a42c77e09b0174e9003cb2c9af944]
+[000000003df50000,00ae1000] E:\Program Files\solidworks\SOLIDWORKS\sldasmu.dll [26.4.0.0075, ffd7c4c68a958cb6a153527b71ee6ecc]
+[0000000090620000,00029000] C:\WINDOWS\SYSTEM32\MSVFW32.dll [10.0.17134.407 (WinBuild.160101.0800), 0baba70e08ca8f08605a80385d52a3d8]
+[00000000333c0000,00087000] E:\Program Files\solidworks\SOLIDWORKS\sldanimationengineu.dll [26.4.0.0075, 97f287f76d12fb8379c51e07490e91d1]
+[0000000034880000,0017e000] E:\Program Files\solidworks\SOLIDWORKS\sldcmmu.dll [26.4.0.0075, 9f6cbafed6d2410ec41125132689dcc4]
+[00000000a1970000,0001f000] C:\WINDOWS\SYSTEM32\AVIFIL32.dll [10.0.17134.407 (WinBuild.160101.0800), 7f4b8598f38b31b3c375e8c4ecf0779c]
+[000000009b9a0000,0001c000] C:\WINDOWS\SYSTEM32\MSACM32.dll [10.0.17134.407 (WinBuild.160101.0800), 34543756859113b86b4977d7d3015138]
+[000000002b9a0000,00dca000] E:\Program Files\solidworks\SOLIDWORKS\CMOTIONSW_WRAPPER.dll [26.0.0.1011, 7849d31efeecebdad3a721ea13507b5a]
+[00000000a45d0000,0000f000] E:\Program Files\solidworks\SOLIDWORKS\AsUtility.dll [2015.0.2.0, b8e7870ad2f52be13630781a9f59ab20]
+[00000000335a0000,00099000] E:\Program Files\solidworks\SOLIDWORKS\sldsmartcompu.dll [26.4.0.0075, dc7dd31e108b06ad421874f06e7ed529]
+[0000000033640000,000a2000] E:\Program Files\solidworks\SOLIDWORKS\sldconfigtableu.dll [26.4.0.0075, 191bd15032a7ef3b24e52c0c2bb0aad6]
+[0000000000ce0000,00087000] E:\Program Files\solidworks\SOLIDWORKS\sldabbrviewuiu.dll [26.4.0.0075, 562bac4d1cca8a1d32458daf0eceaad1]
+[0000000000d70000,000b1000] E:\Program Files\solidworks\SOLIDWORKS\sldcameradveu.dll [26.4.0.0075, 3a06b10124f811944042618f5c0e8c58]
+[0000000000a60000,0003c000] E:\Program Files\solidworks\SOLIDWORKS\assemblycplu.dll [26.4.0.0075, 9643e7e1785529ad7e22b31d852124ef]
+[0000000022ff0000,000e2000] E:\Program Files\solidworks\SOLIDWORKS\doccplu.dll [26.4.0.0075, 879deeb2293cffa7514133103e8cd0b7]
+[00000000afb40000,00065000] C:\WINDOWS\SYSTEM32\Ninput.dll [10.0.17134.1 (WinBuild.160101.0800), 3338373ac09d1e0f7cd6b71a60d15a53]
+[00000000b1080000,0007f000] C:\WINDOWS\SYSTEM32\policymanager.dll [10.0.17134.137 (WinBuild.160101.0800), b62f05987780d41624e231c89c474d22]
+[000000003c8d0000,008b7000] E:\Program Files\solidworks\SOLIDWORKS\slddrwu.dll [26.4.0.0075, 3b51daf31079f46355a8fec3d68bc1ad]
+[0000000036630000,004c6000] E:\Program Files\solidworks\SOLIDWORKS\sldsketchuiu.dll [26.4.0.0075, 4fa93a849b5e3f1e186a760c86488c83]
+[0000000040680000,00cc4000] E:\Program Files\solidworks\SOLIDWORKS\sldopendwgu.dll [26.4.0.0075, d393953c5bc3bcf4aa173b46c0e3889b]
+[0000000023160000,0001d000] E:\Program Files\solidworks\SOLIDWORKS\sldPerfDiagnosticsclru.dll [26.4.0.0075, e773a55f8119325fa5e6a94e71656d5c]
+[00000000232c0000,000c0000] E:\Program Files\solidworks\SOLIDWORKS\sldasmdiagu.dll [26.4.0.0075, ed0bcab2e86b22bd16e4db43b37ee9c6]
+[0000000042370000,01124000] E:\Program Files\solidworks\SOLIDWORKS\sldapiu.dll [26.4.0.0075, 1eb941b852a70efb86df4141d85bb6c3]
+[00000000331d0000,00045000] E:\Program Files\solidworks\SOLIDWORKS\sldrefpointdveu.dll [26.4.0.0075, 7f3a9c6c787e9a4d52a9467ae929d7a3]
+[0000000032e40000,0002e000] E:\Program Files\solidworks\SOLIDWORKS\sldedgemergeu.dll [26.4.0.0075, cd0f47c785b9b5c0d2366e28e6ba9dad]
+[0000000032e00000,00035000] E:\Program Files\solidworks\SOLIDWORKS\sldautotraceskpictureu.dll [26.4.0.0075, 70beb14ccd7066ddc1ecdb50bf5d8753]
+[0000000033da0000,00160000] E:\Program Files\solidworks\SOLIDWORKS\sldrglu.dll [26.4.0.0075, 0aba60cafd8910101a0f4dc9e461b4a2]
+[000000008e570000,000ee000] C:\WINDOWS\System32\DriverStore\FileRepository\nvmiui.inf_amd64_2edcf98c0cea5da6\nvldumdx.dll [25.21.14.2525, 00e22c1f43ed21889ae1b055a7b5738b]
+[0000000051510000,024c2000] C:\WINDOWS\System32\DriverStore\FileRepository\nvmiui.inf_amd64_2edcf98c0cea5da6\nvwgf2umx.dll [25.21.14.2525, 2c1be258437b80c773819ccda41c8de9]
+[00000000a6510000,00503000] C:\WINDOWS\system32\nvapi64.dll [25.21.14.2525, 4c92332c5ab552b9dd4995a43d627315]
+[00000000ae430000,00f5d000] C:\WINDOWS\SYSTEM32\igd10iumd64.dll [20.19.15.4835, 65bb51a200f0de295fc7d0cbce1b9a06]
+[00000000ad160000,00e71000] C:\WINDOWS\SYSTEM32\igc64.dll [20.19.15.4835, c2ff8bdfe6db9c70e9fde89af3dc9598]
+[000000002c830000,00062000] E:\Program Files\solidworks\SOLIDWORKS\sldsnapshotu.dll [26.4.0.0075, f80800fc16670458eb5c42892ea2d984]
+[000000000e8c0000,0002c000] E:\Program Files\solidworks\SOLIDWORKS\partcplu.dll [26.4.0.0075, 1fabd036b9e209a6041d7888381eed23]
+[00000000502f0000,008d6000] E:\Program Files\solidworks\SOLIDWORKS\gdtanalysis.net.dll [11.37.0.0, c10385ddd94a82abff78a1e0ba4ec3c3]
+[0000000052dd0000,006f4000] E:\Program Files\solidworks\SOLIDWORKS\sldhwizuiu.dll [26.4.0.0075, 112b53b9f68d3ba79578c90711f6c61e]
+[0000000014040000,0005f000] E:\Program Files\solidworks\SOLIDWORKS\mfuiu.dll [26.4.0.0075, 4798cf5883e9bad3280e5af25689b420]
+[00000000140a0000,0004f000] E:\Program Files\solidworks\SOLIDWORKS\mfdatau.dll [26.4.0.0075, f0568117bd1f58161fbfd21faee6a669]
+[00000000140f0000,0003a000] E:\Program Files\solidworks\SOLIDWORKS\mmepu.dll [26.4.0.0075, 44d25c50e7f375daa53e0e7a760e401c]
+[000000005d370000,00cc8000] C:\Program Files\Common Files\SOLIDWORKS Shared\swdocumentmgr.dll [26.4.0.0075, 0875138606ca8e375982289544157367]
+[0000000023860000,000c0000] E:\Program Files\solidworks\SOLIDWORKS\sldsmartinsertu.dll [26.4.0.0075, 0dec4b112d833e42d0cb77cf8318d130]
+[0000000000ae0000,000d4000] E:\Program Files\solidworks\SOLIDWORKS\sldanalysistoolsu.dll [26.4.0.0075, babba66e794eca94875c9071285af954]
+[0000000000bd0000,0000c000] E:\Program Files\solidworks\SOLIDWORKS\lang\chinese-simplified\sldanalysistoolsresu.dll [26.4.0.0075, 84eaa9d8f768179bac61d51f7073ba11]
+[0000000000c50000,00032000] E:\Program Files\solidworks\SOLIDWORKS\sldinkhostu.dll [26.4.0.0075, b78ff27b554489f56d3ef26f5af2f821]
+[0000000050ea0000,001ab000] C:\Windows\System32\Windows.UI.Input.Inking.dll [10.0.17134.1 (WinBuild.160101.0800), dfd9ecce2452f747d2b867e0bb418486]
+[00000000aa3a0000,00114000] C:\WINDOWS\SYSTEM32\windows.ui.dll [10.0.17134.1 (WinBuild.160101.0800), 31825aab541e3be148f222962b29a68d]
+[00000000aa110000,00079000] C:\WINDOWS\SYSTEM32\InputHost.dll [, bb1480586b5c174900a1051ceb2b462f]
+[0000000063770000,0003c000] C:\WINDOWS\system32\c_g18030.dll [10.0.17134.1 (WinBuild.160101.0800), 8a9142d352971931b5cf53cc6a259cdd]
+[0000000097eb0000,00339000] C:\WINDOWS\SYSTEM32\MSFTEDIT.DLL [10.0.17134.407 (WinBuild.160101.0800), 7c4cc6e5c98bb7b360e13974718245f3]
+[00000000a78a0000,00189000] C:\Windows\System32\Windows.Globalization.dll [10.0.17134.1 (WinBuild.160101.0800), 6037e546770c43ce641a2c34ddf19f41]
+[00000000aa6e0000,00050000] C:\Windows\System32\Bcp47Langs.dll [10.0.17134.1 (WinBuild.160101.0800), cd73d54bd6229a4b1bef2d1e4659ebc0]
+[00000000aa0a0000,00029000] C:\Windows\System32\bcp47mrm.dll [10.0.17134.1 (WinBuild.160101.0800), 4f0ac2316f3a39a1e762e9a98f9631bd]
+[00000000a47e0000,0002a000] C:\WINDOWS\SYSTEM32\globinputhost.dll [10.0.17134.1 (WinBuild.160101.0800), 8913e491244da695bcee02bc15f72fcd]
+[0000000032fe0000,00038000] E:\Program Files\solidworks\SOLIDWORKS\sldsavealldlgu.dll [26.4.0.0075, 0f9c2eda95299d3e1b15a8e4371ecf02]
+[00000000a4500000,00093000] C:\WINDOWS\SYSTEM32\DUser.dll [10.0.17134.407 (WinBuild.160101.0800), 367874fc277e7dfbe499bd71f07030bf]
+[000000004fe70000,00475000] C:\Windows\System32\Windows.UI.Input.Inking.Analysis.dll [, 9490d95b3069276479871f5f1f2f86a6]
+[0000000090530000,000ef000] C:\Windows\System32\inkobjcore.dll [10.0.17134.407 (WinBuild.160101.0800), 84fe84a0959e5e571b5391d533755df6]</code></pre>
+    <p>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
