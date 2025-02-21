@@ -9,6 +9,7 @@ categories: [Blogging, Tutorial]
 tags: [getting started]
 
 media_subpath: "/posts/20180809"
+render_with_liquid: false
 ---
 
 ## Creating a Site Repository

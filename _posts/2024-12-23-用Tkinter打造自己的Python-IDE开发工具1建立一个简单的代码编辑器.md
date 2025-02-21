@@ -7,8 +7,9 @@ image:
   path: https://img-blog.csdnimg.cn/84ceeeb5300a4ce7b73e7266b50da0df.png?x-oss-process&#61;image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6I236JKy,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center
   alt: 用Tkinter打造自己的Python-IDE开发工具1建立一个简单的代码编辑器
 artid: 122670324
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=687474:70733a2f2f626c6f672e6373646e2e6e65742f68657075382f:61727469636c652f64657461696c732f313232363730333234></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -156,3 +157,4 @@ root<span class="token punctuation">.</span><span class="token function">mainloo
 </div>
 
 
+<p class="artid" style="display:none">687474:70733a2f2f626c6f672e6373646e2e6e65742f68657075382f:61727469636c652f64657461696c732f313232363730333234

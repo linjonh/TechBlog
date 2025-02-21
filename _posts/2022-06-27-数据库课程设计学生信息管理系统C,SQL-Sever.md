@@ -8,8 +8,8 @@ image:
   path: https://img-blog.csdnimg.cn/fa88f2ac68ec4f56a0bdac11ef950aaf.png?x-oss-process=image/resize,m_fixed,h_150
   alt: 数据库课程设计学生信息管理系统C,SQL-Sever
 artid: 125084509
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34373430333637312f:61727469636c652f64657461696c732f313235303834353039></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -1893,3 +1893,4 @@ namespace SchoolManage
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34373430333637312f:61727469636c652f64657461696c732f313235303834353039</p>

@@ -8,8 +8,8 @@ image:
   path: https://img-blog.csdnimg.cn/20190716130502560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FsZXhjZWw=,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
   alt: FOC和SVPWM的C语言代码实现
 artid: 95227991
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470:733a2f2f626c6f672e6373646e2e6e65742f716c657863656c:2f61727469636c652f64657461696c732f3935323237393931></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -1782,3 +1782,4 @@ void FOC_Model(void)	  //电流环处理函数
 </div>
 
 
+<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f716c657863656c:2f61727469636c652f64657461696c732f3935323237393931</p>

@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=134853480
   alt: python可视化plotly-图例legend设置大全,值得收藏
 artid: 134853480
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f:672e6373646e2e6e65742f323330315f38303233393930382f:61727469636c652f64657461696c732f313334383533343830></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -688,3 +689,4 @@ fig.show()
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f:672e6373646e2e6e65742f323330315f38303233393930382f:61727469636c652f64657461696c732f313334383533343830

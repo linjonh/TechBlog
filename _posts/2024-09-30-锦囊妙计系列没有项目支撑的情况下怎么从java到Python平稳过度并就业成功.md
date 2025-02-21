@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=142648686
   alt: 锦囊妙计系列没有项目支撑的情况下怎么从java到Python平稳过度并就业成功
 artid: 142648686
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=687474:70733a2f2f626c6f672e6373646e2e6e65742f73697870702f:61727469636c652f64657461696c732f313432363438363836></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -429,3 +430,4 @@ artid: 142648686
 </div>
 
 
+<p class="artid" style="display:none">687474:70733a2f2f626c6f672e6373646e2e6e65742f73697870702f:61727469636c652f64657461696c732f313432363438363836

@@ -1,0 +1,283 @@
+---
+layout: post
+title: 2020-07-21-Python-ImportError-DLL-load-failed-...-找不到指定的模块-此类问题解决方法
+date: 2020-07-21 15:55:12 +0800
+categories: [Python]
+tags: [python,pycharm,开发语言]
+image:
+  path: https://img-blog.csdnimg.cn/20200721151947279.png?x-oss-process=image/resize,m_fixed,h_150
+  alt: Python-ImportError-DLL-load-failed-...-找不到指定的模块-此类问题解决方法
+artid: 107489393
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     [Python] ImportError: DLL load failed ... 找不到指定的模块 此类问题解决方法
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <a href="#_1" rel="nofollow">
+          问题
+         </a>
+        </li>
+        <li>
+         <a href="#_14" rel="nofollow">
+          定位
+         </a>
+        </li>
+        <li>
+         <a href="#_30" rel="nofollow">
+          结论
+         </a>
+        </li>
+        <li>
+         <a href="#_33" rel="nofollow">
+          补充
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h3>
+     <a id="_1">
+     </a>
+     问题
+    </h3>
+    <p>
+     最近升级 Python 项目，由
+     <strong>
+      Python2.7
+     </strong>
+     升级到
+     <strong>
+      Python3.8.3
+     </strong>
+     ，项目使用了
+     <strong>
+      PySide2
+     </strong>
+     ，对于较新的
+     <strong>
+      Python3.8.3
+     </strong>
+     ,
+     <strong>
+      PySide2
+     </strong>
+     可能存在些许不兼容问题，环境配置完成后，出现一连串的
+     <br/>
+     <code>
+      ImportError: DLL load failed 找不到指定模块
+     </code>
+     <br/>
+     对于很多 Python 开发者来说，这类问题最为头疼，不知道如何下手解决。
+    </p>
+    <p>
+     我是在
+     <strong>
+      virtualenv
+     </strong>
+     虚拟环境下配置
+     <strong>
+      Python3.8.3
+     </strong>
+     的开发环境。
+    </p>
+    <ul>
+     <li>
+      OS： Windows 7 x64
+     </li>
+     <li>
+      Python: 3.8.3
+     </li>
+    </ul>
+    <p>
+     各种依赖安装完毕后，运行项目，首先报出的是
+    </p>
+    <p>
+     <code>
+      from .shiboken2 import *
+     </code>
+     <br/>
+     <code>
+      ImportError: DLL load failed while importing shiboken2: 找不到指定的模块
+     </code>
+    </p>
+    <h3>
+     <a id="_14">
+     </a>
+     定位
+    </h3>
+    <p>
+     从提示上看，是加载 DLL 失败，是关于
+     <strong>
+      shiboken2
+     </strong>
+     模块的。
+     <br/>
+     第一反应是，这个库用到了某个 DLL， DLL 所在路径没有加到虚拟环境的变量 path 中。
+     <br/>
+     于是打开
+     <strong>
+      shiboken2
+     </strong>
+     的包目录查找，看到有一些 DLL 文件：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/8cc9fcc97759338ab6246eaff8006cfb.png">
+      <br/>
+      首先尝试把它们复制到 Python 虚拟环境的
+      <strong>
+       Scripts
+      </strong>
+      目录下。依然不行，看来路径正确还是不行，或许是缺少其它依赖的 DLL，网上下载、打开 DLL 依赖检查工具
+      <strong>
+       Dependency Walker
+      </strong>
+      ，将
+      <strong>
+       shiboken2.pyd
+      </strong>
+      拖入这个工具中，发现缺少
+      <strong>
+       python3.dll
+      </strong>
+      依赖：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/aaa810de28c8015971d040c60e8fdfd7.png">
+       <br/>
+       原来，在创建
+       <strong>
+        Python3.8.3
+       </strong>
+       虚拟环境时，只自动复制了
+       <strong>
+        python38.dll
+       </strong>
+       到
+       <strong>
+        Scripts
+       </strong>
+       目录，没有
+       <strong>
+        python3.dll
+       </strong>
+       ，于是手动复制
+       <strong>
+        python3.dll
+       </strong>
+       到虚拟环境的
+       <strong>
+        Scripts
+       </strong>
+       目录。再次运行项目，果然上面错误没有了。但报了另外一个错误：
+      </img>
+     </img>
+    </p>
+    <p>
+     <code>
+      from PySide2.QtCore import QObject, QSettings
+     </code>
+     <br/>
+     <code>
+      ImportError: DLL load failed while importing QtCore: 找不到指定的模块
+     </code>
+    </p>
+    <p>
+     继续使用
+     <strong>
+      Dependency Walker
+     </strong>
+     ，打开
+     <strong>
+      PySide2
+     </strong>
+     包目录下的
+     <strong>
+      QtCore.pyd
+     </strong>
+     ，发现缺少几个 DLL 文件：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/96c8c07cb79fb3ccf4e2c1a9b693bced.png">
+      <br/>
+      网上搜索并下载缺失的
+      <strong>
+       DLL
+      </strong>
+      文件，放到
+      <strong>
+       Scripts
+      </strong>
+      目录，再次运行项目，错误消失啦。
+     </img>
+    </p>
+    <h3>
+     <a id="_30">
+     </a>
+     结论
+    </h3>
+    <p>
+     <strong>
+      Dependency Walker
+     </strong>
+     真香！
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/140ab18757505175a1e7f1b0ca16d303.png"/>
+    </p>
+    <h3>
+     <a id="_33">
+     </a>
+     补充
+    </h3>
+    <p>
+     有时还会遇到
+     <code>
+      %1 不是有效的 win32 程序
+     </code>
+     这种对python开发者来说也是比较摸不着头脑的。
+     <br/>
+     通常这个问题都是由于某个包内的 pyd 或 dll 与 python 的版本(x86/x64)不匹配。如何查看 pyd 或 dll 是多少位的？Windows 下使用 dumpbin.exe 工具（安装了VS2019才有，或者网上下载吧）。
+     <br/>
+     比如我遇到的：安装了 PyQt5 后，导入 PyQt5时，报错： sip 不是有效的 win32 程序。
+    </p>
+    <pre><code class="prism language-bash">dumpbin.exe /HEADERS sip.pyd
+</code></pre>
+    <p>
+     执行后发现 sip.pyd 是x86的（32位），而我的Python是64位，而且其他装好的的QtGui.pyd, QtCore.pyd 等等都是 64位，难怪不匹配。只有sip.pyd 是 32 位，不清楚这情况是如何造成的。
+     <br/>
+     于是 pip uninstall 了 PyQt5_sip，pip 重新安装 ，版本正确了，错误消失了
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f776e303131322f:61727469636c652f64657461696c732f313037343839333933</p>

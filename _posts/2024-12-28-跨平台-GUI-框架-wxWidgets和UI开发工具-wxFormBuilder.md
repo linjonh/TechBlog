@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=11715095
   alt: 跨平台-GUI-框架-wxWidgets和UI开发工具-wxFormBuilder
 artid: 11715095
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f:2f626c6f672e6373646e2e6e65742f636e6561676c656c6565:2f61727469636c652f64657461696c732f3131373135303935></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -94,3 +95,4 @@ artid: 11715095
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f:2f626c6f672e6373646e2e6e65742f636e6561676c656c6565:2f61727469636c652f64657461696c732f3131373135303935

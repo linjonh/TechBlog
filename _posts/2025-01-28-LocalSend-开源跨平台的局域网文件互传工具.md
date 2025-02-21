@@ -1,0 +1,113 @@
+---
+layout: post
+title: 2025-01-28-LocalSend-开源跨平台的局域网文件互传工具
+date: 2025-01-28 00:01:47 +0800
+categories: [mac软件]
+tags: [macos,开源软件,文件传输]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=135363212
+  alt: LocalSend-开源跨平台的局域网文件互传工具
+artid: 135363212
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     LocalSend 开源跨平台的局域网文件互传工具
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     如果您需要在多平台设备之间进行文件传输，例如从Windows电脑到安卓手机，或者从安卓手机到macOS，通常会使用聊天工具或者U盘进行传输。为了简化这一过程，推荐使用一款全平台支持的文件共享传输工具：LocalSend。
+    </p>
+    <p>
+     LocalSend支持Windows、macOS、Linux、安卓和iOS，涵盖了绝大部分常见平台。
+    </p>
+    <ul>
+     <li>
+      github地址：
+      <a href="https://github.com/localsend/localsend" title="https://github.com/localsend/localsend">
+       https://github.com/localsend/localsend
+      </a>
+     </li>
+     <li>
+      官网：
+      <a href="https://localsend.org/" rel="nofollow" title="https://localsend.org/">
+       https://localsend.org/
+      </a>
+     </li>
+     <li>
+      苹果软件盒子：
+      <a href="https://www.macappbox.com/a/localsend.html" rel="nofollow" title="https://www.macappbox.com/a/localsend.html">
+       https://www.macappbox.com/a/localsend.html
+      </a>
+     </li>
+    </ul>
+    <h3>
+     LocalSend简介
+    </h3>
+    <p>
+     LocalSend能够方便地发送照片、文件、应用、文本等，不同平台下支持的资料类型略有差异。只需连接到同一WiFi网络，即可使用LocalSend进行数据传输，传输过程通过HTTPS进行保障。
+    </p>
+    <p>
+     该工具拥有简洁易用的界面，方便快捷。
+    </p>
+    <h3>
+     使用方法
+    </h3>
+    <p>
+     使用LocalSend的步骤如下：
+    </p>
+    <ol>
+     <li>
+      对于iOS用户，请确保已打开本地网络设备发现和WiFi的使用权限，以及相应的相册等权限，否则可能无法被其他设备发现。
+     </li>
+     <li>
+      默认生成一个别名，您可以在设置中进行修改，修改后只需重新启动服务器即可在其他设备上发现已更改的别名。
+     </li>
+     <li>
+      传输速度受网络状况影响，经测试可达到9MB/s，虽然在使用过程中可能会有波动，但传输2GB大小的电影也毫无压力，且没有出现失败的情况。
+     </li>
+    </ol>
+    <h3>
+     截图
+    </h3>
+    <p>
+     文件发送
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/b8a03b360a7721d7ccf7644a5751ce9d.jpeg" width="1200"/>
+    </p>
+    <p>
+     文件接收
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/8faec49c84f3c76dfb6888071ceb99a9.jpeg" width="1200"/>
+    </p>
+    <p>
+     接收完成
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/1872c52a6dd883fe8c764c9c551729cb.jpeg" width="1200"/>
+    </p>
+    <p>
+     设置
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/a3f98fa66d2fa1ca28e611d1bae1874f.jpeg" width="1200"/>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f:2f626c6f672e6373646e2e6e65742f66756b6169373732322f:61727469636c652f64657461696c732f313335333633323132</p>

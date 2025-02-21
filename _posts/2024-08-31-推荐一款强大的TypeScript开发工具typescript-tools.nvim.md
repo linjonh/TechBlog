@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=137669720
   alt: 推荐一款强大的TypeScript开发工具typescript-tools.nvim
 artid: 137669720
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f:672e6373646e2e6e65742f676974626c6f675f30303037342f:61727469636c652f64657461696c732f313337363639373230></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -171,3 +172,4 @@ artid: 137669720
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f:672e6373646e2e6e65742f676974626c6f675f30303037342f:61727469636c652f64657461696c732f313337363639373230

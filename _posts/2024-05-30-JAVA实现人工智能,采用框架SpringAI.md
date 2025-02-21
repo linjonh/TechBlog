@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=139311474
   alt: JAVA实现人工智能,采用框架SpringAI
 artid: 139311474
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=6874747073:3a2f2f626c6f672e6373646e2e6e65742f6c767975616e6a2f:61727469636c652f64657461696c732f313339333131343734></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -428,3 +429,4 @@ artid: 139311474
 </div>
 
 
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f6c767975616e6a2f:61727469636c652f64657461696c732f313339333131343734

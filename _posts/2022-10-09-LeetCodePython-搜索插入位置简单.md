@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=127224117
   alt: LeetCodePython-搜索插入位置简单
 artid: 127224117
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f36313636313137392f:61727469636c652f64657461696c732f313237323234313137></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -137,3 +138,4 @@ class Solution:
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f36313636313137392f:61727469636c652f64657461696c732f313237323234313137

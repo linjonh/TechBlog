@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=140555138
   alt: 轻松入门Python中的pip命令安装与使用
 artid: 140555138
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=6874747073:3a2f2f626c6f672e6373646e2e6e65742f43616e64797a372f:61727469636c652f64657461696c732f313430353535313338></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -455,3 +456,4 @@ print(response.text)</code></pre>
 </div>
 
 
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f43616e64797a372f:61727469636c652f64657461696c732f313430353535313338

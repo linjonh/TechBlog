@@ -1,0 +1,324 @@
+---
+layout: post
+title: 2025-02-20-HarmonyOS应用开发实践沙龙深度回顾从开发工具到元服务
+date: 2025-02-20 22:59:10 +0800
+categories: [资讯]
+tags: [harmonyos,华为,应用开发]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=141252605
+  alt: HarmonyOS应用开发实践沙龙深度回顾从开发工具到元服务
+artid: 141252605
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     HarmonyOS应用开发实践沙龙深度回顾：从开发工具到元服务
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     2024年8月11日，一场聚焦 HarmonyOS 应用开发实践的开发者系列沙龙在上海举行。本次活动沙龙由华为与CSDN联合举办，汇聚了华为开发者专家徐建国、HarmonyOS高级开发者认证乔汝嘉，上海市高等教育学会数字经济发展与研究专业委员会副主任费志明先生等技术专家。活动内容涵盖 HarmonyOS 的架构设计、开发工具、元服务、生态建设等多个方面，内容紧贴开发实战，为开发者们提供了宝贵的学习机会和交流平台。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p class="img-center">
+     <img alt="" height="720" src="https://i-blog.csdnimg.cn/direct/67eb3d53711d473d86408a23404feaa5.png" width="1078"/>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <h2 style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      华为HDE与坚果派的联合创始人徐建国：ArkWeb实践与三方库适配
+     </strong>
+    </h2>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     开场，华为开发者专家/坚果派联合创始人徐建国带来了《ArkWeb实践与三方库适配》的主题演讲，深入探讨了ArkWeb在实际应用中的实践经验，以及如何有效地实现与第三方库的适配。
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <img alt="" height="720" src="https://i-blog.csdnimg.cn/direct/4a6ddbb9f335488c924e9a9919386e73.png" width="1080"/>
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <strong>
+      <strong>
+       华为开发者专家/坚果派联合创始人徐建国
+      </strong>
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     徐建国首先详细介绍了ArkWeb的核心架构和技术特点。作为用于提升Web应用性能的框架，ArkWeb通过引入创新的异步处理机制和轻量级设计，解决传统Web框架在高并发场景下的瓶颈问题。具体来说，ArkWeb采用了一种异步非阻塞的IO模型，使其能够高效处理大量并发请求，显著缩短了页面加载时间，提升了用户体验。此外，ArkWeb的模块化设计使得开发者可以根据实际需求，灵活选用不同的组件，从而最大限度地减少不必要的资源消耗。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     在讲解ArkWeb的技术架构后，他进一步探讨了在实际应用中面临的挑战，尤其是在与第三方库的适配方面。由于现代Web开发中，前端框架如React、Vue、Angular等第三方库已广泛应用，而这些库往往依赖于不同的技术栈和处理方式，这给ArkWeb的集成带来了不小的挑战。为此，团队采取了一系列优化策略。例如，在与React和Vue的集成中，ArkWeb团队开发了一套动态加载与预编译技术，使得这些前端框架能够无缝运行于ArkWeb之上，既确保了系统的兼容性，又提升了整体运行效率。此外，徐建国还分享了一些在实际项目中积累的经验，例如处理不同库之间的依赖冲突，如何优化数据流以减少冗余处理等。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     演讲的最后，徐建国展望了ArkWeb未来的发展方向。他表示，随着Web应用场景的不断拓展，ArkWeb将在性能优化、跨平台支持以及与更多第三方库的兼容性方面持续发力。特别是在5G、物联网等新兴技术驱动下，ArkWeb将进一步提升其在低延迟、高并发环境中的表现，满足更加多样化的开发需求。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <h2 style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      HarmonyOS高级开发者认证/技术总监乔汝嘉：HarmonyOS应用测试实践
+     </strong>
+    </h2>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     随后，HarmonyOS高级开发者认证/技术总监乔汝嘉带来了《HarmonyOS应用测试实践》的主题演讲，主要分享了 HarmonyOS 应用测试的实战经验，并深入探讨了代码测试和 UI 测试的技巧。
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <img alt="" height="720" src="https://i-blog.csdnimg.cn/direct/622a7d168a404fcf896c57242c1c9fa6.png" width="1080"/>
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <strong>
+      HarmonyOS高级开发者认证/技术总监 乔汝嘉
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     乔汝嘉首先介绍了 HarmonyOS 代码测试的两种方式：Instrument Test 和 Local Test。Instrument Test 依赖手机或模拟器运行环境，适合运行 UI 自动化测试；Local Test 则不依赖手机或模拟器，适合运行单元测试。通过 DevEco Studio，开发者可以方便创建测试类，编写测试用例，进行代码覆盖率统计，从而有效地发现代码中的问题。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     演讲重点探讨了 UI 测试的实践技巧。例如通过获取 AbilityDelegator 和 bundleName，创建 want 并启动 want，从而找到最上层的 Ability；通过创建 Driver，用 Driver 查找元素、模拟点击、断言元素存在等操作，对应用界面进行自动化测试。此外，使用命令行工具进行 UI 测试，以录制用户操作和注入 UI 模拟操作等方式，也可以更灵活地进行 UI 测试。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     乔汝嘉在演讲中还介绍了覆盖率测试和测试类型筛选等高级测试技巧。通过覆盖率测试，可以了解代码的实际执行情况，从而发现潜在的代码缺陷；通过测试类型筛选，可以有针对性地执行特定类型的测试用例，提高测试效率。最后，乔汝嘉总结了 HarmonyOS 应用测试的关键要点，并鼓励开发者积极探索和实践，不断提升应用测试水平。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <h2 style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      上海市高等教育学会数字经济发展与研究专业委员会副主任费志明：元服务-缩短用户与场景之间的距离
+     </strong>
+    </h2>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     最后一位压轴嘉宾是上海市高等教育学会数字经济发展与研究专业委员会副主任费志明，他带来《元服务-缩短用户与场景之间的距离》的主题演讲，以开发者实际开发场景举例，深入浅出地介绍了 HarmonyOS 中元服务的概念、特点和价值，并结合金融领域应用场景，为开发者展示了元服务带来的独特优势。
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <img alt="" height="720" src="https://i-blog.csdnimg.cn/direct/c9c8d44bf3e641c8beacfe3bfb016b84.png" width="1082"/>
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <strong>
+      上海市高等教育学会数字经济发展与研究专业委员会副主任费志明
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     费志明首先阐述了元服务的定义和特点。 元服务并非取代原生应用，而是与其并存，共同构成 HarmonyOS 生态。元服务具有轻量化、跨端、服务直达等特点，能够为用户提供便捷、高效的服务体验。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     而对于开发者而言，元服务提供了套件化能力、灵活性和解耦设计，降低了开发成本，并增强了交互性。套件化能力使得开发者可以轻松获取各类功能和智能化能力，例如支付、语音识别等，无需从头开发，节省时间和精力。灵活性和解耦设计则使得开发者可以根据实际需求，灵活选用不同的组件，并进行模块化开发，从而最大限度地减少不必要的资源消耗，提高开发效率。此外，元服务还支持更强的交互性，例如手势操作、语音交互等，为用户提供更加丰富的交互体验。而HarmonyOS 应用程序包支持多模块开发，生成的应用程序包 (.app) 可以包含多个 HAP 或 HSP。元服务为了实现快速启动效果，对 HAP 和 HSP 文件大小做了限制，同时优化了元服务启动机制。这种多模块开发方式称为“分包”，为开发者提供了更大的灵活性和效率。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     最后费志明展望了元服务的未来发展，他表示，随着HarmonyOS生态的不断完善，元服务将在更多场景中发挥作用，为用户带来更加便捷、智能的服务体验。未来，元服务将重点发展以下几个方面：
+    </p>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       性能优化
+      </strong>
+      ： 持续优化元服务的性能，提升用户体验。
+     </li>
+    </ul>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       跨平台支持
+      </strong>
+      ： 支持更多平台的适配，扩大元服务的应用范围。
+     </li>
+    </ul>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       与更多第三方库的兼容性
+      </strong>
+      ： 与更多第三方库进行适配，丰富元服务的功能。
+     </li>
+    </ul>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       人工智能应用
+      </strong>
+      ： 将人工智能技术应用于元服务，实现更智能的服务体验。
+     </li>
+    </ul>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <h2 style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      现场提问Q&amp;A
+     </strong>
+    </h2>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     三位嘉宾的精彩演讲结束后，本次沙龙还特别设置了《专家面对面》环节。在这一环节中，现场开发者们积极提问，围绕 HarmonyOS 的开发实践、技术细节、生态建设等方面提出了许多问题，专家们则耐心解答，并结合自身经验和案例，为开发者们提供了宝贵的建议和指导。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:center;">
+     <img alt="" height="720" src="https://i-blog.csdnimg.cn/direct/41bd48d64c994b4083e38f7fa6e4744b.png" width="1080"/>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      Q：元服务在多端的兼容性问题？多端如何进行数据功能同步？
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      A：
+     </strong>
+     其实现在的话元服务和App这两个体系应用目前来说还不是直接互通的，想要实现互通建议走云端的方式。鸿蒙原生提供了比较多的是多端一次开发、多端部署的能力，但是Taro支持到什么程度，还是也看它的一个文化的进展。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      Q： HarmonyOS在未来如何利用 AI 大模型来增强用户体验？例如，通过智能助手、自然语言、图像识别等功能，如何在有限的设备硬件资源上高效地运行这些模型？此外，与安卓和iOS相比，AI加速 API 的开放程度可能较低，这给开发者带来了限制，华为将如何从一定程度上绕过这些现实限制？
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      A：关于 AI 大模型的应用可能有以下几个方向
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       智能助手小艺
+      </strong>
+      ： HarmonyOS 中的智能助手小艺已经开始利用 AI 技术简化用户操作。例如，用户可以通过语音指令直接进行酒店预订，而无需打开应用进行繁琐的步骤。未来，随着 HarmonyOS 的发展，小艺将能够实现更多复杂的交互，进一步提升用户体验。
+     </li>
+    </ul>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       鸿蒙原生开发
+      </strong>
+      ： 当前 HarmonyOS 原生开发平台在 AI 能力方面仍处于起步阶段，与安卓和 iOS 相比，仍存在一些差距。然而，华为已经意识到这一点，并在今年进行了跨越式的投资，致力于构建强大的 AI 大模型能力。预计在 9 月底发布的正式版本中，用户将能够体验到一系列基于 AI 大模型的应用，敬请期待。
+     </li>
+    </ul>
+    <ul>
+     <li style="text-align:left;">
+      <strong>
+       大数据应用
+      </strong>
+      ： HarmonyOS 将利用 AI 大模型在数据分析方面进行探索，例如通过用户行为分析，实现精准推荐、个性化服务等，进一步提升用户体验。
+     </li>
+    </ul>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      关于 AI 加速 API 的开放，
+     </strong>
+     目前 HarmonyOS 的 AI 加速 API 开放程度可能不如安卓和 iOS，这给开发者带来了一定的限制。在 621 事件中，HarmonyOS 已经展示了一些基于 AI 大模型的初步应用，例如智能推荐、个性化服务等。这些案例表明，HarmonyOS 在 AI 应用方面具有巨大的潜力。 华为正在积极提升 AI 加速 API 的开放程度，以更好地满足开发者的需求。开发者可以关注 HarmonyOS 的最新动态，以获取最新的 API 信息和技术支持。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      Q：很多应用场景在一般 App 上可能用不到，未来 HarmonyOS 在多设备开发方面的方向，以及相关的技术性问题。例如，现在手机折叠屏和平板的适配相对繁琐，是否可以推荐一种更简单快捷的方式，因为现在的方式可能需要编写大量代码。
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      A：关于多设备开发还可以使用路由跳转
+     </strong>
+     ： 目前，HarmonyOS 官方已经开放了新的路由跳转方式，取代了之前常用的
+     <span style="background-color:#eff0f1;">
+      root.replace
+     </span>
+     方式。新的方式更易于实现多设备适配，建议开发者参考官方文档进行学习和使用。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      多设备适配能力方面，
+     </strong>
+     HarmonyOS 提供了拉伸、延伸、均分等多种多设备适配能力，这些能力可以方便开发者实现应用的跨设备流转和界面适配。开发者可以参考 HarmonyOS 官网提供的多设备适配案例，学习如何高效地进行适配。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      Q：费老师之前提到，我们可以先开发一个元服务，再根据场景需要开发一个原子化服务。但这里面涉及到代码复用的问题，如何才能尽可能复用代码？例如，元服务和原生 APP 里面的一些功能代码是完全一样的，但如想复用这个代码。另外，如果两端都有了之后，要进行快速迭代，两边都要发布，如何能做到这一点？有什么好的实践方式？
+     </strong>
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     <strong>
+      A：
+     </strong>
+     首先回答
+     <strong>
+      API 兼容性问题。
+     </strong>
+     在 HarmonyOS SDK 文档中，开发者可以找到标明“元服务也可用”的 API，这些 API 在元服务和原生 APP 中都可以使用，方便开发者进行代码复用。以个人开发的“一月付”应用为例，我最初使用 API 9 开发了元服务，后来在 API 12 中将其代码 100% 复用，并将其改造成了原子化服务形式。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     另外可以尝试
+     <strong>
+      模块化设计，
+     </strong>
+     对于像美团这样功能模块较多的应用，可以将不同的模块拆分成不同的元服务进行开发，例如将打车功能拆分为一个元服务，将购物功能拆分为另一个元服务。这样既可以实现代码复用，又可以灵活地进行功能组合，最终打包成原子化服务或原生 App。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+     通过本次活动，技术专家与开发者分享讨论了 HarmonyOS 应用开发中多个技术方向的实战经验和开发问题。沙龙不仅为开发者们搭建了一个学习和交流的平台，还为他们提供了一个与业界专家面对面交流、答疑解惑的机会，希望帮助开发者高效完成开发。我们期待，在 HarmonyOS 生态持续发展的背景下，开发者们能够抓住机遇，勇于创新，为用户带来更多优质的应用和服务。相信随着 HarmonyOS 应用开发的不断深入，开发者们将实现更多的突破和成就。
+    </p>
+    <p style="margin-left:.0001pt;text-align:left;">
+    </p>
+   </div>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a:2f2f626c6f672e6373646e2e6e65742f6373646e6e6577732f:61727469636c652f64657461696c732f313431323532363035</p>

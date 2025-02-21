@@ -1,0 +1,469 @@
+---
+layout: post
+title: 2022-12-23-python实现大规模邻域搜索LNS求解旅行商问题TSP
+date: 2022-12-23 18:10:55 +0800
+categories: [运筹优化]
+tags: [python,启发式算法]
+image:
+  path: https://img-blog.csdnimg.cn/f7e60891c767470b9cc7977ce8b5cb13.png#pic_center?x-oss-process=image/resize,m_fixed,h_150
+  alt: python实现大规模邻域搜索LNS求解旅行商问题TSP
+artid: 128422539
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     python实现大规模邻域搜索(LNS)求解旅行商问题(TSP)
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-dracula" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#1__1" rel="nofollow">
+        1. 大规模邻域搜索算法
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#11_LNS_5" rel="nofollow">
+          1.1. LNS定义
+         </a>
+        </li>
+        <li>
+         <a href="#12_LNS_9" rel="nofollow">
+          1.2. LNS邻域
+         </a>
+        </li>
+        <li>
+         <a href="#13_LNS_19" rel="nofollow">
+          1.3. LNS框架
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#2_TSP_28" rel="nofollow">
+        2. 旅行商问题TSP
+       </a>
+      </li>
+      <li>
+       <a href="#3_python_34" rel="nofollow">
+        3. python代码示例及结果
+       </a>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="1__1">
+     </a>
+     1. 大规模邻域搜索算法
+    </h2>
+    <blockquote>
+     <p>
+      参考《Handbook of Metaheuristics (Third Edition)》中的Large neighborhood search章节, 建议直接阅读英文原版
+     </p>
+    </blockquote>
+    <h3>
+     <a id="11_LNS_5">
+     </a>
+     1.1. LNS定义
+    </h3>
+    <p>
+     <strong>
+      大规模邻域搜索(LNS) 属于超大邻域搜索(Very Large-Scale Neighborhood Search, VLNS)的一类
+     </strong>
+     ，随着算例规模的增大，邻域搜索算法的邻域规模呈指数增长或者当邻域太大而不能在实际中明确搜索时 (the neighborhood it searches grows exponentially with the instance size or if the neighborhood is simply too large to be searched explicitly in practice)，我们把这类邻域搜索算法(Neighborhood Search, NS)归类于VLNS;
+    </p>
+    <h3>
+     <a id="12_LNS_9">
+     </a>
+     1.2. LNS邻域
+    </h3>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        邻域搜索算法
+       </strong>
+       关键在于
+       <strong>
+        邻域结构
+       </strong>
+       的选择，即邻域定义的方式。通常来讲，邻域越大，局部最优解就越好，获得的全局最优解就越好。同时，邻域越大，每次迭代搜索邻域所需的时间也越长。
+      </p>
+     </li>
+     <li>
+      <p>
+       在大规模邻域搜索算法中，邻域由一种破坏（destroy）和一种修复（repair）算子隐式定义（the neighborhood is deﬁned implicitly by a destroy and a repair method）。
+       <strong>
+        destroy算子
+       </strong>
+       会破坏当前解的一部分（变成不可行解），
+       <strong>
+        repair算子
+       </strong>
+       会对被破坏的解进行重建（重新变成可行解），相当于一个邻域动作变换动作。破坏算子通常包含随机性的元素，以便在每次调用destroy方法时破坏解的不同部分（The destroy method typically contains an element of stochasticity such that different parts of the solution are destroyed in every invocation of the method）。
+      </p>
+     </li>
+     <li>
+      <p>
+       解
+       <span class="katex--inline">
+        <span class="katex">
+         <span class="katex-mathml">
+          x 
+          
+         
+        
+          x
+         </span>
+         <span class="katex-html">
+          <span class="base">
+           <span class="strut" style="height: 0.4306em;">
+           </span>
+           <span class="mord mathnormal">
+            x
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+       的邻域
+       <span class="katex--inline">
+        <span class="katex">
+         <span class="katex-mathml">
+          N 
+          
+         
+           ( 
+          
+         
+           x 
+          
+         
+           ) 
+          
+         
+        
+          N(x)
+         </span>
+         <span class="katex-html">
+          <span class="base">
+           <span class="strut" style="height: 1em; vertical-align: -0.25em;">
+           </span>
+           <span class="mord mathnormal" style="margin-right: 0.109em;">
+            N
+           </span>
+           <span class="mopen">
+            (
+           </span>
+           <span class="mord mathnormal">
+            x
+           </span>
+           <span class="mclose">
+            )
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+       就可以定义为：首先利用destroy算子破坏解
+       <span class="katex--inline">
+        <span class="katex">
+         <span class="katex-mathml">
+          x 
+          
+         
+        
+          x
+         </span>
+         <span class="katex-html">
+          <span class="base">
+           <span class="strut" style="height: 0.4306em;">
+           </span>
+           <span class="mord mathnormal">
+            x
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+       ，然后利用repair算子重建解
+       <span class="katex--inline">
+        <span class="katex">
+         <span class="katex-mathml">
+          x 
+          
+         
+        
+          x
+         </span>
+         <span class="katex-html">
+          <span class="base">
+           <span class="strut" style="height: 0.4306em;">
+           </span>
+           <span class="mord mathnormal">
+            x
+           </span>
+          </span>
+         </span>
+        </span>
+       </span>
+       ，从而得到的一系列解的集合（The neighborhood N(x) of a solution x is then deﬁned as the set of solutions that can be reached by ﬁrst applying the destroy method and then the repair method）。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        LNS算法不会搜索一个解的整个邻域（entire neighborhood），而只是对该邻域进行采样(samples)搜索
+       </strong>
+       ; (按照算法流程，只定义一种detory和repair方式，虽然detory里有随机部分，但也不包含整个邻域)
+      </p>
+     </li>
+    </ul>
+    <h3>
+     <a id="13_LNS_19">
+     </a>
+     1.3. LNS框架
+    </h3>
+    <ul>
+     <li>
+      伪代码
+     </li>
+    </ul>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/5268395c5da73efd38df4749ac6ed82a.png#pic_center"/>
+    </p>
+    <p>
+     在LNS中只定义一种破坏和修复算子，所以破坏和修复算子的定义很重要，直接决定了能搜索到的当前解x的邻域。如果邻域太小，那么局部最优解的质量就一般，因为有些空间没搜索到。如果邻域太大，又缺少带点启发式信息方向搜索。所以Ropke在论文《An adaptive large neighborhood search heuristic for the pickup and delivery problem with time windows》定义了多种破坏和修复算子，提出来自适应大规模邻域搜索（Adaptive Large Neighborhood Search, ALNS）的框架，有空总结写一篇关于ALNS的文章。
+    </p>
+    <h2>
+     <a id="2_TSP_28">
+     </a>
+     2. 旅行商问题TSP
+    </h2>
+    <ul>
+     <li>
+      旅行商问题（Travelling Salesman Problem, TSP），通俗而言它是指对于给定的一系列城市和每对城市之间的距离，找到访问每一座城市仅一次并回到起始城市的最短回路。建立不同的建模方式会有不同的求解方式，比如Dantzig-Fulkerson-Johnson模型、Miller-Tucker-Zemlin模型、Commodity Flow、最短路径等；(这里不再赘述，注意TSP问题各种形式的变种)
+     </li>
+    </ul>
+    <h2>
+     <a id="3_python_34">
+     </a>
+     3. python代码示例及结果
+    </h2>
+    <ul>
+     <li>
+      python代码
+     </li>
+    </ul>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> random
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token comment"># 使用符号编号表示一个访问路径route</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>route <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>cost <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 解对应的总成本</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Lns_tsp</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> distance<span class="token punctuation">,</span> num_node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>distance <span class="token operator">=</span> distance
+        self<span class="token punctuation">.</span>num_node <span class="token operator">=</span> num_node
+
+    <span class="token keyword">def</span> <span class="token function">get_route_cost</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> route<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 计算成本的函数</span>
+        cost <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>route<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cost <span class="token operator">+=</span> self<span class="token punctuation">.</span>distance<span class="token punctuation">[</span>route<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>route<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> cost
+
+    <span class="token keyword">def</span> <span class="token function">destroy_operator</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> solution<span class="token punctuation">,</span> num_destroy<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 破坏算子: 随机选择num_destroy个不重复的破坏点（即删除num_destroy个城市）</span>
+        destroy_node_bank <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># 保存被删除的城市节点</span>
+        <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>destroy_node_bank<span class="token punctuation">)</span> <span class="token operator">&lt;</span> num_destroy<span class="token punctuation">:</span>
+            n <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>num_node<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">while</span> n <span class="token keyword">in</span> destroy_node_bank<span class="token punctuation">:</span>
+                n <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>num_node<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            destroy_node_bank<span class="token punctuation">.</span>append<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+            solution<span class="token punctuation">.</span>route<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> solution<span class="token punctuation">,</span> destroy_node_bank
+
+    <span class="token keyword">def</span> <span class="token function">repair_operator</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> solution<span class="token punctuation">,</span> destroy_node_bank<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 修复算子: 贪婪插入，插入到成本最小的位置</span>
+        <span class="token keyword">for</span> n <span class="token keyword">in</span> destroy_node_bank<span class="token punctuation">:</span>
+            <span class="token comment">#计算将n插入各个位置的成本</span>
+            insert_list <span class="token operator">=</span> np<span class="token punctuation">.</span>full<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                insert_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>distance<span class="token punctuation">[</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>distance<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>distance<span class="token punctuation">[</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+            greedy_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>insert_list <span class="token operator">==</span> <span class="token builtin">min</span><span class="token punctuation">(</span>insert_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+            solution<span class="token punctuation">.</span>route<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>greedy_index<span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> solution
+
+<span class="token keyword">def</span> <span class="token function">plot_best_vales_iteration</span><span class="token punctuation">(</span>best_values_record<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 绘制最优解随着迭代变化的趋势</span>
+    plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>best_values_record<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> best_values_record<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'迭代次数'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'最优值'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">plot_route</span><span class="token punctuation">(</span>route<span class="token punctuation">,</span> city_location<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 绘制散点</span>
+    x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>city_location<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># 横坐标</span>
+    y <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>city_location<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 纵坐标</span>
+    plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+    <span class="token comment"># 绘制城市编号</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> txt <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>city_location<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>annotate<span class="token punctuation">(</span>txt<span class="token punctuation">,</span> <span class="token punctuation">(</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 绘制方向</span>
+    x0 <span class="token operator">=</span> x<span class="token punctuation">[</span>route<span class="token punctuation">]</span>
+    y0 <span class="token operator">=</span> y<span class="token punctuation">[</span>route<span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>city_location<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>quiver<span class="token punctuation">(</span>x0<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> y0<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> x0<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> x0<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> y0<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> y0<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">0.005</span><span class="token punctuation">,</span> angles<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                   scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>quiver<span class="token punctuation">(</span>x0<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y0<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x0<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> x0<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y0<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> y0<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">0.005</span><span class="token punctuation">,</span> angles<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+               scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">)</span>
+
+    plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'横坐标'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'纵坐标'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment">############## 算例和参数设置 ############################</span>
+    <span class="token comment"># 城市节点的位置信息，一行代表一个城市的横坐标及纵坐标</span>
+    city_location <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">94</span><span class="token punctuation">,</span>  <span class="token number">99</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">66</span><span class="token punctuation">,</span>  <span class="token number">67</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">14</span><span class="token punctuation">,</span>  <span class="token number">78</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">95</span><span class="token punctuation">,</span>  <span class="token number">56</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">68</span><span class="token punctuation">,</span>   <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">26</span><span class="token punctuation">,</span>  <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">51</span><span class="token punctuation">,</span>  <span class="token number">67</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">39</span><span class="token punctuation">,</span>  <span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span>  <span class="token number">5</span><span class="token punctuation">,</span>  <span class="token number">55</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">12</span><span class="token punctuation">,</span>  <span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">55</span><span class="token punctuation">,</span>  <span class="token number">85</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">98</span><span class="token punctuation">,</span>  <span class="token number">46</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">36</span><span class="token punctuation">,</span>  <span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">65</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">57</span><span class="token punctuation">,</span>  <span class="token number">89</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">88</span><span class="token punctuation">,</span>  <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">53</span><span class="token punctuation">,</span>  <span class="token number">96</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">91</span><span class="token punctuation">,</span>  <span class="token number">41</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">32</span><span class="token punctuation">,</span>  <span class="token number">69</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">38</span><span class="token punctuation">,</span>  <span class="token number">38</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">38</span><span class="token punctuation">,</span>  <span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span>  <span class="token number">7</span><span class="token punctuation">,</span>  <span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">85</span><span class="token punctuation">,</span>  <span class="token number">96</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">89</span><span class="token punctuation">,</span>  <span class="token number">48</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">85</span><span class="token punctuation">,</span>  <span class="token number">35</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">32</span><span class="token punctuation">,</span>  <span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">31</span><span class="token punctuation">,</span>  <span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">20</span><span class="token punctuation">,</span>  <span class="token number">17</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">75</span><span class="token punctuation">,</span>  <span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">74</span><span class="token punctuation">,</span>  <span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span>  <span class="token number">6</span><span class="token punctuation">,</span>  <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">20</span><span class="token punctuation">,</span>  <span class="token number">81</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">62</span><span class="token punctuation">,</span>   <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">11</span><span class="token punctuation">,</span>  <span class="token number">48</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span>  <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">69</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">99</span><span class="token punctuation">,</span>  <span class="token number">70</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">20</span><span class="token punctuation">,</span>  <span class="token number">27</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">25</span><span class="token punctuation">,</span>  <span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span>  <span class="token number">6</span><span class="token punctuation">,</span>  <span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">78</span><span class="token punctuation">,</span>  <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">42</span><span class="token punctuation">,</span>  <span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">83</span><span class="token punctuation">,</span>  <span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">94</span><span class="token punctuation">,</span>  <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">90</span><span class="token punctuation">,</span>  <span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">76</span><span class="token punctuation">,</span>  <span class="token number">73</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span>  <span class="token number">9</span><span class="token punctuation">,</span>  <span class="token number">56</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">39</span><span class="token punctuation">,</span>  <span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">74</span><span class="token punctuation">,</span>  <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span> <span class="token number">77</span><span class="token punctuation">,</span>  <span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+    num_node <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>city_location<span class="token punctuation">)</span>  <span class="token comment"># 城市节点的数量</span>
+    iter_num <span class="token operator">=</span> <span class="token number">300</span>  <span class="token comment"># 迭代次数</span>
+    random<span class="token punctuation">.</span>seed<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>  <span class="token comment"># 随机种子</span>
+    num_destroy <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>num_node<span class="token operator">*</span><span class="token number">0.2</span><span class="token punctuation">)</span> <span class="token comment"># 破坏程度</span>
+
+    <span class="token comment"># 计算距离成本矩阵 distance, 直接使用欧式距离</span>
+    distance <span class="token operator">=</span> np<span class="token punctuation">.</span>full<span class="token punctuation">(</span><span class="token punctuation">(</span>num_node<span class="token punctuation">,</span> num_node<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            distance<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>city_location<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">-</span>city_location<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token operator">+</span><span class="token punctuation">(</span>city_location<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>city_location<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">0.5</span>
+
+    <span class="token comment">############## 产生初始解 ############################</span>
+    solution <span class="token operator">=</span> Solution<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    solution<span class="token punctuation">.</span>route <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_node<span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># 按照节点编号依次相连构成初始解也可随机产生</span>
+    lns <span class="token operator">=</span> Lns_tsp<span class="token punctuation">(</span>distance<span class="token punctuation">,</span> num_node<span class="token punctuation">)</span>
+    solution<span class="token punctuation">.</span>cost <span class="token operator">=</span> lns<span class="token punctuation">.</span>get_route_cost<span class="token punctuation">(</span>solution<span class="token punctuation">.</span>route<span class="token punctuation">)</span> <span class="token comment"># 计算初始解对应的目标成本</span>
+    best_solution <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>solution<span class="token punctuation">)</span>  <span class="token comment"># 初始化最优解=初始解</span>
+    best_values_record <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>iter_num<span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># 初始化保存最优解的集合</span>
+
+    <span class="token comment">############## 执行LNS ############################</span>
+    <span class="token keyword">for</span> n_gen <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>iter_num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        tem_solution <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>solution<span class="token punctuation">)</span>
+        <span class="token comment"># 执行破坏修复算子，得到临时解</span>
+        tem_solution<span class="token punctuation">,</span> destroy_node_bank <span class="token operator">=</span> lns<span class="token punctuation">.</span>destroy_operator<span class="token punctuation">(</span>tem_solution<span class="token punctuation">,</span> num_destroy<span class="token punctuation">)</span>
+        tem_solution <span class="token operator">=</span> lns<span class="token punctuation">.</span>repair_operator<span class="token punctuation">(</span>tem_solution<span class="token punctuation">,</span> destroy_node_bank<span class="token punctuation">)</span>
+        <span class="token comment"># 计算临时解的目标值</span>
+        tem_solution<span class="token punctuation">.</span>cost <span class="token operator">=</span> lns<span class="token punctuation">.</span>get_route_cost<span class="token punctuation">(</span>tem_solution<span class="token punctuation">.</span>route<span class="token punctuation">)</span>
+
+        <span class="token comment"># 接受标准：如果临时解比当前解好，直接接受；且更新最优解</span>
+        <span class="token keyword">if</span> tem_solution<span class="token punctuation">.</span>cost <span class="token operator">&lt;</span> best_solution<span class="token punctuation">.</span>cost<span class="token punctuation">:</span>
+            solution <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>tem_solution<span class="token punctuation">)</span>
+            best_solution <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>tem_solution<span class="token punctuation">)</span>
+        best_values_record<span class="token punctuation">[</span>n_gen<span class="token punctuation">]</span> <span class="token operator">=</span> best_solution<span class="token punctuation">.</span>cost
+
+    <span class="token comment">############## 绘制结果 ############################</span>
+    plot_best_vales_iteration<span class="token punctuation">(</span>best_values_record<span class="token punctuation">)</span>
+    plot_route<span class="token punctuation">(</span>best_solution<span class="token punctuation">.</span>route<span class="token punctuation">,</span> city_location<span class="token punctuation">)</span>
+</code></pre>
+    <ul>
+     <li>
+      结果
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6870241886a35d68613b2739400cd13b.png#pic_center"/>
+     </li>
+    </ul>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/1139451bea6f869b01a83edd697b379f.png#pic_center"/>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f6c6a3631343433303633342f:61727469636c652f64657461696c732f313238343232353339</p>

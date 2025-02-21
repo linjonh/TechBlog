@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=89151738
   alt: CCJavaPython之间的区别
 artid: 89151738
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f71715f3430353138363731:2f61727469636c652f64657461696c732f3839313531373338></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -234,3 +235,4 @@ artid: 89151738
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f71715f3430353138363731:2f61727469636c652f64657461696c732f3839313531373338

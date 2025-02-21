@@ -1,0 +1,427 @@
+---
+layout: post
+title: 2021-07-24-pythonopencv--pyaudio--moviepy实现录制音视频文件并合并
+date: 2021-07-24 01:40:26 +0800
+categories: [Python]
+tags: [opencv,python,音视频]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=119048230
+  alt: pythonopencv--pyaudio--moviepy实现录制音视频文件并合并
+artid: 119048230
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     python（opencv + pyaudio + moviepy）实现录制音视频文件并合并
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h6>
+     <a id="opencv_0">
+     </a>
+     使用opencv录制视频文件
+    </h6>
+    <pre><code class="prism language-python"><span class="token keyword">def</span> <span class="token function">record_webcam</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+        cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        参数1：打开前置摄像头参数是0,打开后置摄像头参数是1,如果多个摄像头,需要测试2，3其他参数,参数是视频文件路径则打开视频，如cap = cv2.VideoCapture(“../test.avi”)
+        参数2： ***设置cv2.CAP_DSHOW参数初始化摄像头,否则无法使用更高分辨率
+        ***（win7需要使用cv2.CAP_DSHOW的方式初始化摄像头开始录屏，默认的方式（CAP_ANY），不能打开。win10和winserver可以使用默认的方式初始化摄像头）
+    """</span>
+    cap <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoCapture<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>CAP_DSHOW<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">"""
+       ***调用cv2.VideoWriter()方法保存视频之前需先设置摄像头，否则保存视频时设备的宽高不能生效
+    """</span>
+    cap<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">640</span><span class="token punctuation">)</span> <span class="token comment"># 视频流的帧的宽度</span>
+    cap<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">480</span><span class="token punctuation">)</span> <span class="token comment"># 在视频流的帧的高度</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'开始录屏'</span><span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">""" 
+    ***视频的帧率,即每秒传递的帧数。需要根据实现摄像头的帧率调整，达到最好的效果，否则，录制的视频可能偏快或者偏慢
+    """</span>
+    ftp <span class="token operator">=</span> <span class="token number">22</span> 
+    <span class="token triple-quoted-string string">"""
+    ***使用设摄像头录制高清视频的时候一定要设置为MJPG，别的格式无法支持高清
+    """</span>
+    cap<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>CAP_PROP_FOURCC<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>VideoWriter_fourcc<span class="token punctuation">(</span><span class="token operator">*</span><span class="token string">'MJPG'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+    aviFile <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoWriter<span class="token punctuation">(</span>filename<span class="token punctuation">,</span>
+                            cv2<span class="token punctuation">.</span>VideoWriter_fourcc<span class="token punctuation">(</span><span class="token operator">*</span><span class="token string">'MJPG'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                              ftp<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">640</span><span class="token punctuation">,</span> <span class="token number">480</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span> 
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"初始化好摄像头之后开始录屏"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        ret<span class="token punctuation">,</span> frame <span class="token operator">=</span> cap<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> ret<span class="token punctuation">:</span>
+            font <span class="token operator">=</span> cv2<span class="token punctuation">.</span>FONT_HERSHEY_SIMPLEX
+            datet <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span>
+            frame <span class="token operator">=</span> cv2<span class="token punctuation">.</span>putText<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> datet<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span> font<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+                                <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>LINE_AA<span class="token punctuation">)</span>  <span class="token comment"># 是视频里面显示时间或者文字</span>
+            aviFile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>frame<span class="token punctuation">)</span>
+            cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">'frame'</span><span class="token punctuation">,</span> frame<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"结束录屏"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    aviFile<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    cap<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     注意 *** 标注的地方
+    </p>
+    <hr/>
+    <h6>
+     <a id="pyaudio_46">
+     </a>
+     使用pyaudio录制音频文件
+    </h6>
+    <pre><code class="prism language-python"><span class="token triple-quoted-string string">"""
+chunk_size: 每个缓冲区的帧数
+channels: 单声道
+rate: 采样频率
+"""</span>
+CHUNK_SIZE <span class="token operator">=</span> <span class="token number">1024</span>
+CHANNELS <span class="token operator">=</span> <span class="token number">2</span>
+FORMAT <span class="token operator">=</span> pyaudio<span class="token punctuation">.</span>paInt16
+RATE <span class="token operator">=</span> <span class="token number">48000</span>
+allowRecording <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token keyword">def</span> <span class="token function">record_audio</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    p <span class="token operator">=</span> pyaudio<span class="token punctuation">.</span>PyAudio<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'开始录音'</span><span class="token punctuation">)</span>
+    stream <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token builtin">format</span><span class="token operator">=</span>FORMAT<span class="token punctuation">,</span>
+                    channels<span class="token operator">=</span>CHANNELS<span class="token punctuation">,</span>
+                    rate<span class="token operator">=</span>RATE<span class="token punctuation">,</span>
+                    <span class="token builtin">input</span><span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+                    frames_per_buffer<span class="token operator">=</span>CHUNK_SIZE
+                    <span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"stream"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    wf <span class="token operator">=</span> wave<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+    wf<span class="token punctuation">.</span>setnchannels<span class="token punctuation">(</span>CHANNELS<span class="token punctuation">)</span>
+    wf<span class="token punctuation">.</span>setsampwidth<span class="token punctuation">(</span>p<span class="token punctuation">.</span>get_sample_size<span class="token punctuation">(</span>FORMAT<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    wf<span class="token punctuation">.</span>setframerate<span class="token punctuation">(</span>RATE<span class="token punctuation">)</span>
+    <span class="token keyword">while</span> allowRecording<span class="token punctuation">:</span>
+        data <span class="token operator">=</span> stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span>CHUNK_SIZE<span class="token punctuation">)</span>
+        wf<span class="token punctuation">.</span>writeframes<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"streame结束"</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    wf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    stream<span class="token punctuation">.</span>stop_stream<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    stream<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>terminate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <hr/>
+    <h6>
+     <a id="moviepy_84">
+     </a>
+     使用moviepy合并文件
+    </h6>
+    <pre><code class="prism language-python"> <span class="token comment"># # # 实现音频视频合成</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"video audio merge!!!!!"</span><span class="token punctuation">)</span>
+audioclip <span class="token operator">=</span> AudioFileClip<span class="token punctuation">(</span>audio_filename<span class="token punctuation">)</span>
+videoclip <span class="token operator">=</span> VideoFileClip<span class="token punctuation">(</span>video_filename<span class="token punctuation">)</span>
+videoclip2 <span class="token operator">=</span> videoclip<span class="token punctuation">.</span>set_audio<span class="token punctuation">(</span>audioclip<span class="token punctuation">)</span>
+video <span class="token operator">=</span> CompositeVideoClip<span class="token punctuation">(</span><span class="token punctuation">[</span>videoclip2<span class="token punctuation">]</span><span class="token punctuation">)</span>
+ <span class="token triple-quoted-string string">""" *** bitrate 设置比特率，比特率越高， 合并的视频越清晰，视频文件也越大，合并的速度会很慢"""</span>
+video<span class="token punctuation">.</span>write_videofile<span class="token punctuation">(</span>video_name<span class="token punctuation">,</span> codec<span class="token operator">=</span><span class="token string">'mpeg4'</span><span class="token punctuation">,</span> bitrate<span class="token operator">=</span><span class="token string">'2000k'</span><span class="token punctuation">)</span>  
+</code></pre>
+    <p>
+     依赖的版本
+    </p>
+    <pre><code>	python==3.6.0
+	opencv-python==4.6.0.66  下载过程中会报错,但是可以使用
+	moviepy==1.0.3
+	PyAudio==0.2.11
+</code></pre>
+    <p>
+     完整的文件
+    </p>
+    <pre><code class="prism language-python"><span class="token comment"># !/usr/bin/env python</span>
+<span class="token comment"># -*-coding:utf-8 -*-</span>
+
+<span class="token triple-quoted-string string">"""
+# File       : manage.py
+# Time       ：2021/7/13 21:15
+# Author     ： JuanZi
+# version    ：python 3.6
+# Description：
+"""</span>
+
+<span class="token keyword">import</span> wave
+<span class="token keyword">import</span> threading
+<span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime<span class="token punctuation">,</span> date<span class="token punctuation">,</span> timedelta
+<span class="token keyword">import</span> pyaudio
+<span class="token keyword">import</span> cv2
+<span class="token keyword">from</span> moviepy<span class="token punctuation">.</span>editor <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> os
+<span class="token keyword">from</span> ftplib <span class="token keyword">import</span> FTP
+<span class="token keyword">import</span> socket  <span class="token comment"># 主要用于获取当前主机IP地址</span>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> multiprocessing <span class="token keyword">import</span> Process<span class="token punctuation">,</span> Queue
+
+<span class="token triple-quoted-string string">"""全局变量,主要控制录音和录屏的同步"""</span>
+allowRecording <span class="token operator">=</span> <span class="token boolean">False</span>
+Q <span class="token operator">=</span> Queue<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">run_test</span><span class="token punctuation">(</span>main_class<span class="token punctuation">,</span> file_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    marge <span class="token operator">=</span> main_class<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    marge<span class="token punctuation">.</span>run<span class="token punctuation">(</span>file_name<span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">AudioThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> event<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>p <span class="token operator">=</span> pyaudio<span class="token punctuation">.</span>PyAudio<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>event <span class="token operator">=</span> event
+        self<span class="token punctuation">.</span>FORMAT <span class="token operator">=</span> pyaudio<span class="token punctuation">.</span>paInt16
+        self<span class="token punctuation">.</span>stream <span class="token operator">=</span> self<span class="token punctuation">.</span>p<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token builtin">format</span><span class="token operator">=</span> pyaudio<span class="token punctuation">.</span>paInt16<span class="token punctuation">,</span>
+                                  channels<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>
+                                  rate<span class="token operator">=</span><span class="token number">48000</span><span class="token punctuation">,</span>
+                                  <span class="token builtin">input</span><span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+                                  frames_per_buffer<span class="token operator">=</span><span class="token number">1024</span>
+                                  <span class="token punctuation">)</span>  <span class="token comment"># 打开数据流</span>
+
+        self<span class="token punctuation">.</span>wf <span class="token operator">=</span> wave<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>wf<span class="token punctuation">.</span>setnchannels<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>wf<span class="token punctuation">.</span>setsampwidth<span class="token punctuation">(</span>self<span class="token punctuation">.</span>p<span class="token punctuation">.</span>get_sample_size<span class="token punctuation">(</span>self<span class="token punctuation">.</span>FORMAT<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>wf<span class="token punctuation">.</span>setframerate<span class="token punctuation">(</span><span class="token number">48000</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>event<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'初始化完成,开始录音'</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">while</span> allowRecording<span class="token punctuation">:</span>
+            data <span class="token operator">=</span> self<span class="token punctuation">.</span>stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">1024</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>wf<span class="token punctuation">.</span>writeframes<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>wf<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>stream<span class="token punctuation">.</span>stop_stream<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 关闭流</span>
+        self<span class="token punctuation">.</span>stream<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>p<span class="token punctuation">.</span>terminate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">VideoThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    out 是VideoWriter的实列对象，就是写入视频的方式，第一个参数是存放写入视频的位置，
+    第二个是编码方式，20是帧率，最后是视频的高宽，如果录入视频为灰度，则还需加一个false
+    """</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cap<span class="token punctuation">,</span> event<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>event <span class="token operator">=</span> event
+        self<span class="token punctuation">.</span>cap <span class="token operator">=</span> cap
+        self<span class="token punctuation">.</span>cap<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">640</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cap<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">480</span><span class="token punctuation">)</span>
+        fourcc <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoWriter_fourcc<span class="token punctuation">(</span><span class="token operator">*</span><span class="token string">'MJPG'</span><span class="token punctuation">)</span>  <span class="token comment"># 设置视频编码方式,如果设置CAP_DSHOW的方式打开摄像头必须设置*'MJPG'的便码方式</span>
+        fps <span class="token operator">=</span> <span class="token number">15</span> <span class="token operator">+</span> <span class="token number">0.000001</span> <span class="token operator">*</span> <span class="token number">15</span>
+        self<span class="token punctuation">.</span>out <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoWriter<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> fourcc<span class="token punctuation">,</span> fps<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">640</span><span class="token punctuation">,</span> <span class="token number">480</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        read()函数表示按帧读取视频，success，frame是read()的两个返回值，
+        ret是布尔值——如果读取帧是正确的则返回True，如果文件读取到结尾则返回False，Frame表示的是每一帧的图像，是一个三维矩阵
+        """</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'初始化完成,开始录屏 %s'</span><span class="token punctuation">,</span><span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">while</span> allowRecording<span class="token punctuation">:</span>
+            ret<span class="token punctuation">,</span> frame <span class="token operator">=</span> self<span class="token punctuation">.</span>cap<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> ret<span class="token punctuation">:</span>
+                font <span class="token operator">=</span> cv2<span class="token punctuation">.</span>FONT_HERSHEY_SIMPLEX
+                datet <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span>
+                frame <span class="token operator">=</span> cv2<span class="token punctuation">.</span>putText<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> datet<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span> font<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+                                    <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>LINE_AA<span class="token punctuation">)</span> <span class="token comment"># 是视频里面显示时间或者文字</span>
+                cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">'frame'</span><span class="token punctuation">,</span> frame<span class="token punctuation">)</span>  <span class="token comment"># 显示视频</span>
+                self<span class="token punctuation">.</span>out<span class="token punctuation">.</span>write<span class="token punctuation">(</span>frame<span class="token punctuation">)</span>  <span class="token comment"># 写视频到视频文件</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+        self<span class="token punctuation">.</span>out<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 使用线程的方式合并音视频</span>
+<span class="token keyword">class</span> <span class="token class-name">VideoMerge</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cur_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>path <span class="token operator">=</span> self<span class="token punctuation">.</span>cur_path <span class="token operator">+</span> <span class="token string">'\\static\\'</span>
+        self<span class="token punctuation">.</span>merge_path <span class="token operator">=</span> self<span class="token punctuation">.</span>path <span class="token operator">+</span> <span class="token string">'merge\\'</span>
+        self<span class="token punctuation">.</span>Lock <span class="token operator">=</span> threading<span class="token punctuation">.</span>Lock<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>need_video_merge <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">init</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>self<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>self<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>self<span class="token punctuation">.</span>merge_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>self<span class="token punctuation">.</span>merge_path<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            filename <span class="token operator">=</span> <span class="token boolean">None</span>
+            <span class="token keyword">with</span> self<span class="token punctuation">.</span>Lock<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>need_video_merge<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    filename <span class="token operator">=</span> self<span class="token punctuation">.</span>need_video_merge<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> filename <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                <span class="token keyword">try</span><span class="token punctuation">:</span>
+                    audio_filename <span class="token operator">=</span> self<span class="token punctuation">.</span>path <span class="token operator">+</span> filename <span class="token operator">+</span> <span class="token string">'.mp3'</span>
+                    video_filename <span class="token operator">=</span> self<span class="token punctuation">.</span>path <span class="token operator">+</span> filename <span class="token operator">+</span> <span class="token string">'.avi'</span>
+                    merge_filename <span class="token operator">=</span> self<span class="token punctuation">.</span>merge_path <span class="token operator">+</span> filename <span class="token operator">+</span> <span class="token string">'.avi'</span>
+                    audioclip <span class="token operator">=</span> AudioFileClip<span class="token punctuation">(</span>audio_filename<span class="token punctuation">)</span>
+                    videoclip <span class="token operator">=</span> VideoFileClip<span class="token punctuation">(</span>video_filename<span class="token punctuation">)</span>
+                    videoclip2 <span class="token operator">=</span> videoclip<span class="token punctuation">.</span>set_audio<span class="token punctuation">(</span>audioclip<span class="token punctuation">)</span>
+                    video <span class="token operator">=</span> CompositeVideoClip<span class="token punctuation">(</span><span class="token punctuation">[</span>videoclip2<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                    video<span class="token punctuation">.</span>write_videofile<span class="token punctuation">(</span>merge_filename<span class="token punctuation">,</span> codec<span class="token operator">=</span><span class="token string">'mpeg4'</span><span class="token punctuation">,</span> bitrate<span class="token operator">=</span><span class="token string">'2000k'</span><span class="token punctuation">)</span> <span class="token comment"># bitrate 设置比特率，比特率越高， 合并的视频越清晰，视频文件也越大</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"删除本地视频,音频文件……"</span><span class="token punctuation">)</span>
+                    os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>video_filename<span class="token punctuation">)</span>
+                    os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>audio_filename<span class="token punctuation">)</span>
+                    self<span class="token punctuation">.</span>need_video_merge<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"文件 %s 合并成功"</span> <span class="token operator">%</span> filename<span class="token punctuation">)</span>
+                <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"文件 %s 合并失败 %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>filename<span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">push_list</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> self<span class="token punctuation">.</span>Lock<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>need_video_merge<span class="token punctuation">.</span>append<span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+
+<span class="token comment"># 使用进程的方式合并音视频</span>
+<span class="token comment"># class VideoMerge():</span>
+<span class="token comment">#     def __init__(self):</span>
+<span class="token comment">#         self.cur_path = os.path.abspath(os.path.dirname(__file__))</span>
+<span class="token comment">#         self.path = self.cur_path + '\\static\\'</span>
+<span class="token comment">#         self.merge_path = self.path + 'merge\\'</span>
+<span class="token comment">#         self.Lock = threading.Lock()</span>
+<span class="token comment">#         self.need_video_merge = list()</span>
+<span class="token comment">#         self.init()</span>
+<span class="token comment">#</span>
+<span class="token comment">#     def init(self):</span>
+<span class="token comment">#         if not os.path.exists(self.path):</span>
+<span class="token comment">#             os.mkdir(self.path)</span>
+<span class="token comment">#         if not os.path.exists(self.merge_path):</span>
+<span class="token comment">#             os.mkdir(self.merge_path)</span>
+<span class="token comment">#</span>
+<span class="token comment">#     def run(self, filename):</span>
+<span class="token comment">#         if filename is not None:</span>
+<span class="token comment">#             try:</span>
+<span class="token comment">#                 audio_filename = self.path + filename + '.mp3'</span>
+<span class="token comment">#                 video_filename = self.path + filename + '.avi'</span>
+<span class="token comment">#                 merge_filename = self.merge_path + filename + '.avi'</span>
+<span class="token comment">#                 audioclip = AudioFileClip(audio_filename)</span>
+<span class="token comment">#                 videoclip = VideoFileClip(video_filename)</span>
+<span class="token comment">#                 videoclip2 = videoclip.set_audio(audioclip)</span>
+<span class="token comment">#                 video = CompositeVideoClip([videoclip2])</span>
+<span class="token comment">#                 video.write_videofile(merge_filename, codec='mpeg4', bitrate='2000k') # bitrate 设置比特率，比特率越高， 合并的视频越清晰，视频文件也越大</span>
+<span class="token comment">#                 print("删除本地视频,音频文件……")</span>
+<span class="token comment">#                 os.remove(video_filename)</span>
+<span class="token comment">#                 os.remove(audio_filename)</span>
+<span class="token comment">#                 # self.need_video_merge.pop(0)</span>
+<span class="token comment">#                 print("文件 %s 合并成功" % filename)</span>
+<span class="token comment">#             except Exception as e:</span>
+<span class="token comment">#                 print("文件 %s 合并失败 %s" % (filename, e))</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">CameraRecord</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>cap <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>p <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>video <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>audio <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>merge <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>event <span class="token operator">=</span> threading<span class="token punctuation">.</span>Event<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cur_time <span class="token operator">=</span> <span class="token string">''</span>
+        self<span class="token punctuation">.</span>filename <span class="token operator">=</span> <span class="token string">''</span>
+
+    <span class="token keyword">def</span> <span class="token function">init</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token triple-quoted-string string">"""
+            参数1：打开前置摄像头参数是0,打开后置摄像头参数是1,如果多个摄像头,需要测试2，3其他参数,参数是视频文件路径则打开视频，如cap = cv2.VideoCapture(“../test.avi”)
+            参数2： 设置cv2.CAP_DSHOW参数初始化摄像头,否则无法使用更高分辨率
+        """</span>
+        self<span class="token punctuation">.</span>cap <span class="token operator">=</span> cv2<span class="token punctuation">.</span>VideoCapture<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>CAP_DSHOW<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'打开系统摄像头'</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># 使用线程的方式合并音视频</span>
+        self<span class="token punctuation">.</span>merge <span class="token operator">=</span> VideoMerge<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>merge<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">start_record</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>video <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'摄像功能正在使用中'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        <span class="token keyword">global</span> allowRecording
+        allowRecording <span class="token operator">=</span> <span class="token boolean">True</span>
+        self<span class="token punctuation">.</span>filename <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">":"</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span>
+        audio_filename <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f'static\\</span><span class="token interpolation"><span class="token punctuation">{<!-- --></span>self<span class="token punctuation">.</span>filename<span class="token punctuation">}</span></span><span class="token string">.mp3'</span></span>
+        video_filename <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f'static\\</span><span class="token interpolation"><span class="token punctuation">{<!-- --></span>self<span class="token punctuation">.</span>filename<span class="token punctuation">}</span></span><span class="token string">.avi'</span></span>
+        <span class="token triple-quoted-string string">"""启用线程开始录音、录屏"""</span>
+        self<span class="token punctuation">.</span>video <span class="token operator">=</span> VideoThread<span class="token punctuation">(</span>self<span class="token punctuation">.</span>cap<span class="token punctuation">,</span> self<span class="token punctuation">.</span>event<span class="token punctuation">,</span> video_filename<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>audio <span class="token operator">=</span> AudioThread<span class="token punctuation">(</span>self<span class="token punctuation">.</span>event<span class="token punctuation">,</span> audio_filename<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> t <span class="token keyword">in</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>video<span class="token punctuation">,</span> self<span class="token punctuation">.</span>audio<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            t<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">stop_record</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""结束录屏"""</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>video <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'摄像功能没有在使用中'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        <span class="token keyword">global</span> allowRecording
+        allowRecording <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>video <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>audio <span class="token operator">=</span> <span class="token boolean">None</span>
+        <span class="token comment"># 使用进程的方式去处理音视频的合并</span>
+        self<span class="token punctuation">.</span>merge<span class="token punctuation">.</span>push_list<span class="token punctuation">(</span>self<span class="token punctuation">.</span>filename<span class="token punctuation">)</span>
+        <span class="token comment"># 使用进程的方法处理音视频的合并，进度的启用开销大</span>
+        <span class="token comment"># a = Process(target=run_test, args=(VideoMerge, self.filename))</span>
+        <span class="token comment"># a.start()</span>
+        <span class="token comment"># a.join()</span>
+
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'此次录屏结束, 录屏开始时间：%s,'</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>filename<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    camera <span class="token operator">=</span> CameraRecord<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    camera<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    camera<span class="token punctuation">.</span>start_record<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    count <span class="token operator">=</span> <span class="token number">30</span>
+    <span class="token keyword">while</span> count<span class="token punctuation">:</span>
+        count <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    camera<span class="token punctuation">.</span>stop_record<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+    <ul>
+     <li>
+      完整的文件做了封装处理，实现了控制开始录制、结束录制、合并文件过程
+     </li>
+     <li>
+      使用了三个线程，一个处理录音，一个处理录屏，使用threading.Event()方法实现同步录音录屏
+      <br/>
+      一个处理合并文件（线程处理合并文件，当有其他线程处理很多其他事情的时候，合并会很慢）
+      <br/>
+      同时也介绍了使用进程的方式合并文件（开启进程的开销大，合并快）
+     </li>
+     <li>
+      使用了 allowRecording 控制 音视频的开始录制和结束录制
+     </li>
+    </ul>
+    <pre><code>原创不易，有不对的地方望指正~
+</code></pre>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f33373833353636332f:61727469636c652f64657461696c732f313139303438323330</p>

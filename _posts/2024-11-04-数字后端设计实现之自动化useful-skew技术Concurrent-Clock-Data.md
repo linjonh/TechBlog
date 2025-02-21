@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=135457858
   alt: 数字后端设计实现之自动化useful-skew技术Concurrent-Clock-Data
 artid: 135457858
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f33373538343732382f:61727469636c652f64657461696c732f313335343537383538></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -124,3 +125,4 @@ artid: 135457858
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f33373538343732382f:61727469636c652f64657461696c732f313335343537383538

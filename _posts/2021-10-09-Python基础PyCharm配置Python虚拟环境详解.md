@@ -1,0 +1,250 @@
+---
+layout: post
+title: 2021-10-09-Python基础PyCharm配置Python虚拟环境详解
+date: 2021-10-09 10:16:58 +0800
+categories: [python,Anaconda]
+tags: [pycharm,python,flask]
+image:
+  path: https://img-blog.csdnimg.cn/ae232fef86d84ffab4a2d7a2f13da6e5.png?x-oss-process&#61;image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAd2VuZHlfeWE&#61;,size_30,color_FFFFFF,t_70,g_se,x_16
+  alt: Python基础PyCharm配置Python虚拟环境详解
+artid: 120664678
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【Python基础】PyCharm配置Python虚拟环境详解
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#_2" rel="nofollow">
+        一、基础介绍
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#11__3" rel="nofollow">
+          1.1 背景介绍
+         </a>
+        </li>
+        <li>
+         <a href="#12__10" rel="nofollow">
+          1.2 配置现状
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_18" rel="nofollow">
+        二、步骤详解
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#21__19" rel="nofollow">
+          2.1 新建项目
+         </a>
+        </li>
+        <li>
+         <a href="#22__29" rel="nofollow">
+          2.2 查看虚拟环境
+         </a>
+        </li>
+        <li>
+         <a href="#23__33" rel="nofollow">
+          2.3 安装需要的包
+         </a>
+        </li>
+        <li>
+         <a href="#24__41" rel="nofollow">
+          2.4 验证安装
+         </a>
+        </li>
+        <li>
+         <a href="#25__55" rel="nofollow">
+          2.5 保存和复制虚拟环境
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="_2">
+     </a>
+     一、基础介绍
+    </h2>
+    <h3>
+     <a id="11__3">
+     </a>
+     1.1 背景介绍
+    </h3>
+    <p>
+     Python的版本众多，而且其内部的库Package也五花八门，这就导致在同时进行几个项目时，对库的依赖存在很大的问题。这个时候就牵涉到对Python以及依赖库的版本管理，方便进行开发，就需要进行虚拟环境的配置。
+     <br/>
+     一方面：我们初学python的时候，下载第三方库的时候其实是在全局或者是整个系统中都可以使用，但对于一些项目来说，需要的库可能是与你电脑中安装的库不同版本的库，然而，一个系统不能包含两个不同版本的库，所以需要使用虚拟环境；
+     <br/>
+     另一方面：以后工作中你跟别人交接项目的时候会存在不同库的版本，所以我们需要使用虚拟环境，新手来说是不必在意的，但是最好早点学习。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/e7bd0d9d26232267651a2e6df4d7551f.png"/>
+    </p>
+    <h3>
+     <a id="12__10">
+     </a>
+     1.2 配置现状
+    </h3>
+    <p>
+     虽然网上关于如何配置虚拟环境的教程五花八门，但是大多数教程要么是要求在命令行窗口输入指令进行配置，要么是只给出部分配置方法，一知半解，对于新手非常不友好。本文将手把手介绍如何利用PyCharm配置Python虚拟环境。
+    </p>
+    <h2>
+     <a id="_18">
+     </a>
+     二、步骤详解
+    </h2>
+    <h3>
+     <a id="21__19">
+     </a>
+     2.1 新建项目
+    </h3>
+    <p>
+     打开PyCharm，选择新建项目，
+     <br/>
+     ①位置选择Desktop目录下的test文件夹
+     <br/>
+     ②Python解释器选择Virtualenv
+     <br/>
+     ③位置默认为test文件下的venv文件夹内
+     <br/>
+     ④如果想构建与本机Python版本不同的环境，则不选或选择一个invalid解释器，如果想构建与本机Python版本相同的环境，则选择本机的Python解释器
+     <br/>
+     ⑤勾选“可用于所有项目”
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/2db4cb4c2f273a960709db2e54940f0b.png">
+      <br/>
+      项目新建完成，等待一段时间系统自动配置，默认会创建一个main.py欢迎文件如下：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/666f3ecf9f9af7cdd00832f9b3c1c975.png"/>
+     </img>
+    </p>
+    <h3>
+     <a id="22__29">
+     </a>
+     2.2 查看虚拟环境
+    </h3>
+    <p>
+     选择“文件”（File）——&gt;“设置”（Settings）——&gt;“项目”（Project: test）——&gt;“Python解释器”（Python Interpreter）
+     <br/>
+     可以查看Python解释器的虚拟环境（venv为虚拟环境）
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/e10ffc64e2b211ab700f2a43c3aaa6c4.png"/>
+    </p>
+    <h3>
+     <a id="23__33">
+     </a>
+     2.3 安装需要的包
+    </h3>
+    <p>
+     可以看到，目前虚拟环境内只安装了pip和setuptools两个包，而我们往往需要安装其他包，安装方法如下：
+     <br/>
+     点击“+”：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f77f836f000829a9eddeec809966e498.png">
+      <br/>
+      比如说，我需要安装numpy包，则在上方搜索numpy，选中numpy点击“安装包”即可，如果想要制定版本，则在右侧指定相应的版本：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/0751ce6b2d1d6a91b2a86d20f908a979.png">
+       <br/>
+       安装完成后，下方出现已成功安装的标识：
+       <br/>
+       <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a46585d2db91b0059a8c100fa7800718.png"/>
+      </img>
+     </img>
+    </p>
+    <h3>
+     <a id="24__41">
+     </a>
+     2.4 验证安装
+    </h3>
+    <p>
+     此时返回Python解释器，可以看到解释器内已经添加了numpy包，如下：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/1fd2cd5511abda99f3039bde1d64d7a8.png">
+      <br/>
+      返回PyCharm，打开终端【下方第三个按钮】：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/850125ff91cf44362072fd7264fd345d.png">
+       <br/>
+       可以看到前侧有（venv）标识，表示在虚拟环境下运行
+       <br/>
+       <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a20c77a1c77833948a4149cc6bba6e27.png">
+        <br/>
+        这时输入python进入python编译器，然后输入
+       </img>
+      </img>
+     </img>
+    </p>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> numpy
+</code></pre>
+    <p>
+     若不弹出错误，则亦可证明安装完成。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/74938c9b11df5eddb8fff6333aae61c5.png"/>
+    </p>
+    <h3>
+     <a id="25__55">
+     </a>
+     2.5 保存和复制虚拟环境
+    </h3>
+    <p>
+     保存虚拟环境用到如下语句。
+     <br/>
+     将安装过的包以requirements的格式输出：
+    </p>
+    <pre><code class="prism language-bash">pip freeze
+</code></pre>
+    <p>
+     保存：
+    </p>
+    <pre><code class="prism language-bash">pip freeze <span class="token operator">&gt;</span> requirements.txt
+</code></pre>
+    <p>
+     安装相应的包：
+    </p>
+    <pre><code class="prism language-bash">pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt
+</code></pre>
+    <p>
+     ok，以上便是本文的全部内容了，后续可能会随时补充，如果对你有所帮助，记得点个赞哟~
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f646964695f79612f:61727469636c652f64657461696c732f313230363634363738</p>

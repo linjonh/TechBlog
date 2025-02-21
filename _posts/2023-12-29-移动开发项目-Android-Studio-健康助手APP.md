@@ -1,0 +1,195 @@
+---
+layout: post
+title: 2023-12-29-移动开发项目-Android-Studio-健康助手APP
+date: 2023-12-29 21:37:34 +0800
+categories: []
+tags: [androidstudio,android,ide]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=135298639
+  alt: 移动开发项目-Android-Studio-健康助手APP
+artid: 135298639
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     移动开发项目 Android Studio 健康助手APP
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h2 style="margin-left:0px;text-align:justify;">
+     题目说明
+    </h2>
+    <p style="margin-left:0;text-align:justify;">
+     健康助手系统是一款便捷软件，旨在通过提供多方面的的健康便捷的管理服务，让用户的生活更健康，更便捷。用户可以在健康助手APP上购买不同的体检套餐，预约医生，使用地图查找药房等的位置，浏览网页了解健康知识，传播健康文化。
+    </p>
+    <h2 style="margin-left:0;text-align:justify;">
+     需求描述
+    </h2>
+    <p style="margin-left:0;text-align:left;">
+     <span style="background-color:#fdfdfe;">
+      <span style="color:#000000;">
+       （1）为了更好地了解自己的身体健康状况，用户通常会选择进行体检，健康助手APP应该为用户提供方便的体检信息查询和预约功能，帮助他们更好地管理自己的健康。
+      </span>
+     </span>
+    </p>
+    <p style="margin-left:0;text-align:left;">
+     <span style="background-color:#fdfdfe;">
+      <span style="color:#000000;">
+       （2）用户发现自己身体状况存在问题时，会有预约医生看病的需要。
+      </span>
+     </span>
+    </p>
+    <p style="margin-left:0;text-align:left;">
+     <span style="background-color:#fdfdfe;">
+      <span style="color:#000000;">
+       （3）健康助手APP可以集成地图功能，为用户提供准确的地理位置和路线指引。
+      </span>
+     </span>
+    </p>
+    <p style="margin-left:0;text-align:left;">
+     <span style="background-color:#fdfdfe;">
+      <span style="color:#000000;">
+       （4）用户可以通过APP学习各种健康知识和技巧，了解如何保持健康的生活方式。
+      </span>
+     </span>
+    </p>
+    <h2 style="margin-left:0;text-align:justify;">
+     功能描述
+    </h2>
+    <p style="margin-left:0;text-align:justify;">
+     健康助手APP实现四大功能：
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （1）体检：用户可以通过体检了解自己的身体状况，及时发现潜在的健康问题。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （2）预约医生：用户根据个人需求和情况，在此平台提前预约医生进行诊疗、咨询或检查，可以节省时间，提高效率。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （3）查看地图：用户在医生看完病后，需要去买药，可以打开地图查看药房位置。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （4）体育网：用户可以在体育网冲浪，传播体育文化。
+    </p>
+    <h2 style="margin-left:0;text-align:justify;">
+     设计思路
+    </h2>
+    <p style="margin-left:0;text-align:justify;">
+     系统使用Sqlite数据库对信息进行保存，使用Listview控件以表单的形式展示信息，使用多个活动实现不同功能，申请百度API使用地图，使用webview控件和uri嵌入一个网页。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （1）用户注册和登录功能的设计：设计一张表对新注册的用户进行保存，用户登陆时和表中的数据核对，正确则将进入系统，否则提醒用户注册。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （2）体检功能的设计：布局主要使用ListView控件，对体检的不同套餐进行展示，用户可以选中合适的套餐，加入购物车，设计一个购物表对信息进行保存。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （3）地图功能的设计：系统采用的是百度地图，向百度申请API KEY，下载相关jar包，在项目中引用，地图主要使用Mapview控件进行显示，添加了Textview和button控件对地图中的信息进行检索。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （4）预约医生功能的设计：设计一个页面介绍医生的类别信息，一个页面介绍医生的详细信息，一个页面可以预约医生，设计一张表记录预约信息。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （5）网页功能的设计：使用webview控件，打开一个uri即可。
+    </p>
+    <p style="margin-left:0;text-align:justify;">
+     （6）登录时的安全性校验：用户注册时对密码进行要求（数字，大小写字母， 8位数据以上）。
+    </p>
+    <h2 style="margin-left:0px;text-align:justify;">
+     结果展示
+    </h2>
+    <p>
+     登录界面：
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/c5f0ce7f1b9fc164fc8f5474db09784e.jpeg" width="1080">
+      注册界面：
+     </img>
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/1f8e49881aed8cdaebce75a5c54650cd.jpeg" width="1080"/>
+    </p>
+    <p>
+     主菜单界面：
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/117749a0bbf29c96c1c9a130141ad313.jpeg" width="1080"/>
+    </p>
+    <p>
+     体检界面：
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/96ed9ef65a883b147829e4b231a9d077.jpeg" width="1080"/>
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/a1051d9b3b17be02a67d837a4d644bdb.jpeg" width="1080"/>
+    </p>
+    <p>
+     地图界面：
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/444b47d8a698d012cd1e1e53a3578340.jpeg" width="1080"/>
+    </p>
+    <p>
+     医生界面：
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/b2a527209d4870cd420b7ed1c1483477.jpeg" width="1080"/>
+    </p>
+    <p>
+     健身网界面：
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/226f2e97024336a4fa9f8bda4fa95044.jpeg" width="1080"/>
+    </p>
+    <p>
+     。。。。。。其它功能自己探索
+    </p>
+    <h2>
+     资源分享
+    </h2>
+    <p>
+     <a class="link-info" href="https://pan.baidu.com/s/1qOi5QuaCUFn4BS6E4DpLQQ?pwd=aw2o" rel="nofollow" title="源码">
+      源码
+     </a>
+    </p>
+    <p>
+     <a class="link-info" href="https://pan.baidu.com/s/1P33gfAKiHo8bl6AeMY5T_Q?pwd=rv9a" rel="nofollow" title="apk文件">
+      apk文件
+     </a>
+    </p>
+    <h2>
+     注意
+    </h2>
+    <p>
+     （如下图）AndroidManifest.xml此处需要自己去
+     <a class="link-info" href="https://lbsyun.baidu.com/apiconsole/key#/home" rel="nofollow" title="百度地图开放平台">
+      百度地图开放平台
+     </a>
+     申请AK（注意包名一致）
+    </p>
+    <p>
+     <img alt="" height="105" src="https://i-blog.csdnimg.cn/blog_migrate/0eb977558d225241cf1cc2309254e154.png" width="940"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f36373731343437352f:61727469636c652f64657461696c732f313335323938363339</p>

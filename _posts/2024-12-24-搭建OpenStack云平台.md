@@ -1,0 +1,805 @@
+---
+layout: post
+title: 2024-12-24-搭建OpenStack云平台
+date: 2024-12-24 13:15:52 +0800
+categories: []
+tags: [openstack,网络]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=134201709
+  alt: 搭建OpenStack云平台
+artid: 134201709
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     搭建OpenStack云平台
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+    </p>
+    <p>
+    </p>
+    <h3>
+     <a name="t0">
+     </a>
+     <strong>
+      一、前言
+     </strong>
+    </h3>
+    <p>
+     OpenStack云平台搭建需要两个节点，一个是controller（控制节点），另一个是compute（计算节点）。
+    </p>
+    <p>
+     <strong>
+      控制节点（controller）规划如下：
+     </strong>
+    </p>
+    <p>
+     一块200G的硬盘。两块网卡，第一块网卡IP地址使用192.168.100.10，第二块网卡IP地址使用192.168.200.10。
+    </p>
+    <p>
+     <strong>
+      计算节点（compute）规划如下：
+     </strong>
+    </p>
+    <p>
+     一块200G的硬盘和一块100G的硬盘。两块网卡，第一块网卡IP地址使用192.168.100.20，第二块网卡IP地址使用192.168.200.20。
+    </p>
+    <p>
+     云平台搭建需要使用centos7.5及7.0版本的镜像和chinaskills_cloud_iaas.iso镜像，镜像提供如下：
+    </p>
+    <p>
+     centos7.5镜像链接：https://pan.baidu.com/s/1stvdGLKTwVqrAyzTW-WQuA
+    </p>
+    <p>
+     提取码：yjsq
+    </p>
+    <p>
+     centos7.0镜像链接：https://pan.baidu.com/s/10zQAxkSqO37_EAX2wVyy9A
+    </p>
+    <p>
+     提取码：yjsq
+    </p>
+    <p>
+     iaas镜像链接：https://pan.baidu.com/s/11iAL7pQf31Kyer2UfVe2ZA
+    </p>
+    <p>
+     提取码：yjsq
+    </p>
+    <h3>
+     <a name="t1">
+     </a>
+     二、基础环境准备及安装系统
+    </h3>
+    <h4>
+     <a name="t2">
+     </a>
+     1、controller控制节点
+    </h4>
+    <p>
+     <img alt="" height="821" src="https://i-blog.csdnimg.cn/blog_migrate/83c4304201f8f455365701960a65b301.png" width="857"/>
+    </p>
+    <p>
+     <img alt="" height="821" src="https://i-blog.csdnimg.cn/blog_migrate/b6a70ff6d2a1678364ea3b3fbf8464f6.png" width="849"/>
+    </p>
+    <p>
+     <img alt="" height="833" src="https://i-blog.csdnimg.cn/blog_migrate/6cbca07dd80011cacca04613c549d49c.png" width="850"/>
+    </p>
+    <p>
+     <img alt="" height="839" src="https://i-blog.csdnimg.cn/blog_migrate/d2ce7743adbe8aa6c997ad71f8b3fcb9.png" width="853"/>
+    </p>
+    <p>
+     <img alt="" height="811" src="https://i-blog.csdnimg.cn/blog_migrate/b3f5495398e9bf8452f8585301f8c568.png" width="836"/>
+    </p>
+    <p>
+     <img alt="" height="822" src="https://i-blog.csdnimg.cn/blog_migrate/5453fddfff3220206380ca0d9daac413.png" width="857"/>
+    </p>
+    <p>
+     <img alt="" height="821" src="https://i-blog.csdnimg.cn/blog_migrate/9102d97755af0424c98abb3de4ce128e.png" width="853"/>
+    </p>
+    <p>
+     <img alt="" height="837" src="https://i-blog.csdnimg.cn/blog_migrate/bbe886bba82a807459144f0f98108c4c.png" width="850"/>
+    </p>
+    <p>
+     <img alt="" height="811" src="https://i-blog.csdnimg.cn/blog_migrate/c40e967c5620de2b9c2993f8e35f0dc4.png" width="852"/>
+    </p>
+    <p>
+     <img alt="" height="816" src="https://i-blog.csdnimg.cn/blog_migrate/88f07c94537bd1381c7f8b55b601b741.png" width="852"/>
+    </p>
+    <p>
+     <img alt="" height="854" src="https://i-blog.csdnimg.cn/blog_migrate/beb2782dfecf4dd51fe7aab85e7debdf.png" width="863"/>
+    </p>
+    <p>
+     <img alt="" height="820" src="https://i-blog.csdnimg.cn/blog_migrate/62b0e9522ae12901b5ee6489c92e7ce5.png" width="854"/>
+    </p>
+    <p>
+     <img alt="" height="825" src="https://i-blog.csdnimg.cn/blog_migrate/9a0d5a2dfeddc5668d2b08c3b8155325.png" width="859"/>
+    </p>
+    <p>
+     <img alt="" height="824" src="https://i-blog.csdnimg.cn/blog_migrate/3e7f3e6fe3d2f4bf8e54ec3f94cf066b.png" width="842"/>
+    </p>
+    <p>
+     <img alt="" height="812" src="https://i-blog.csdnimg.cn/blog_migrate/e730bd2fe3fde7872e45375f2a9e1ddb.png" width="667"/>
+    </p>
+    <p>
+     <img alt="" height="817" src="https://i-blog.csdnimg.cn/blog_migrate/7bd8a2ba92c48e13fdc566ee57f7aaf1.png" width="762"/>
+    </p>
+    <p>
+     <img alt="" height="566" src="https://i-blog.csdnimg.cn/blog_migrate/85d9a305199c4dca7f5cb2b19f26c7db.png" width="614"/>
+    </p>
+    <p>
+     <img alt="" height="849" src="https://i-blog.csdnimg.cn/blog_migrate/437bd0f9575ad458773413b647060fb9.png" width="728"/>
+    </p>
+    <p>
+     <img alt="" height="560" src="https://i-blog.csdnimg.cn/blog_migrate/6b8b313b9f71e3bfdc8e821bce1c0890.png" width="1026"/>
+    </p>
+    <p>
+     <img alt="" height="759" src="https://i-blog.csdnimg.cn/blog_migrate/30f2eeb8d9e553b214b0ead012086d70.png" width="1014"/>
+    </p>
+    <p>
+     <img alt="" height="766" src="https://i-blog.csdnimg.cn/blog_migrate/baed7f65b13d301f436582200f7b5a73.png" width="1028"/>
+    </p>
+    <p>
+     <img alt="" height="766" src="https://i-blog.csdnimg.cn/blog_migrate/0c3fe306f31c9e5c7c4a620d2ce547e0.png" width="1028"/>
+    </p>
+    <p>
+     <img alt="" height="755" src="https://i-blog.csdnimg.cn/blog_migrate/4a1e084ca8da86bf8d10157766e212d8.png" width="1019"/>
+    </p>
+    <p>
+     <img alt="" height="758" src="https://i-blog.csdnimg.cn/blog_migrate/c1be2b960c37b549690fd0735f39bb3d.png" width="1024"/>
+    </p>
+    <p>
+     <img alt="" height="766" src="https://i-blog.csdnimg.cn/blog_migrate/be4bd407f8435be71edd621222d7ab14.png" width="1022"/>
+    </p>
+    <p>
+     <img alt="" height="619" src="https://i-blog.csdnimg.cn/blog_migrate/f7f04aa8c9a079c6312cf2a57918ccce.png" width="837"/>
+    </p>
+    <p>
+     重启后使用root用户登录，然后修改主机名，配置网卡、内核。
+    </p>
+    <h5>
+     <a name="t3">
+     </a>
+     1、修改主机名。
+    </h5>
+    <p>
+     <img alt="" height="194" src="https://i-blog.csdnimg.cn/blog_migrate/cef75a5c0758aaed926e9fb38095c00e.png" width="1026"/>
+    </p>
+    <h5>
+     <a name="t4">
+     </a>
+     2、修改第一块网卡。
+    </h5>
+    <p>
+     <img alt="" height="413" src="https://i-blog.csdnimg.cn/blog_migrate/21a61420c0aa57e22fff9836b3978730.png" width="1200"/>
+    </p>
+    <p>
+     修改、添加内容如下 （注：按下i键进入插入模式，按下ESC键，然后输入冒号wq退出）。
+    </p>
+    <p>
+     <img alt="" height="722" src="https://i-blog.csdnimg.cn/blog_migrate/914d05a64e23fa705e2c93201e5c7837.png" width="1031"/>
+    </p>
+    <h5>
+     <a name="t5">
+     </a>
+     3、修改第二块网卡。
+    </h5>
+    <p>
+     <img alt="" height="122" src="https://i-blog.csdnimg.cn/blog_migrate/f297daf4091b6ab5520677518accaaea.png" width="1200"/>
+    </p>
+    <p>
+     修改、添加内容如下：
+    </p>
+    <p>
+     <img alt="" height="592" src="https://i-blog.csdnimg.cn/blog_migrate/3dbb1302e54bb962738faff8be6e51cc.png" width="1026"/>
+    </p>
+    <p>
+     重启网卡，使配置生效。
+    </p>
+    <p>
+     <img alt="" height="128" src="https://i-blog.csdnimg.cn/blog_migrate/1997d995c69db9a5e1b335fc4f0c8ccf.png" width="1182"/>
+    </p>
+    <p>
+     使用ip a 命令检验配置是否生效。
+    </p>
+    <p>
+     <img alt="" height="645" src="https://i-blog.csdnimg.cn/blog_migrate/0edc55adef1fd4f5a34765de6e1681de.png" width="1200"/>
+    </p>
+    <p>
+     4、修改内核。
+    </p>
+    <p>
+     <img alt="" height="130" src="https://i-blog.csdnimg.cn/blog_migrate/afa1d8fc6b6b8ee2deb927df22a0b47f.png" width="1000"/>
+    </p>
+    <p>
+     添加内容如下：
+    </p>
+    <p>
+     <img alt="" height="323" src="https://i-blog.csdnimg.cn/blog_migrate/b5d797e11b8c982c6b46b7b5546912c4.png" width="1200"/>
+    </p>
+    <p>
+     刷新内核，然后重启使配置生效。
+    </p>
+    <p>
+     <img alt="" height="329" src="https://i-blog.csdnimg.cn/blog_migrate/76666fc23e5e9494daf8b176ba070829.png" width="1200"/>
+    </p>
+    <p>
+     重启之后使用SecureCRT连上controller节点。（注：连接SecureCRT是为了方便）
+    </p>
+    <p>
+     <img alt="" height="1147" src="https://i-blog.csdnimg.cn/blog_migrate/8ac3a4e6b89198d617f563101850e51f.png" width="1200"/>
+    </p>
+    <p>
+     注意：
+     <strong>
+      VMnet8
+     </strong>
+     必须跟controller节点和compute节点在同一个网段才能连接上SecureCRT。
+    </p>
+    <p>
+     <img alt="" height="777" src="https://i-blog.csdnimg.cn/blog_migrate/3b05aadd502059e17de99384ad19df70.png" width="813"/>
+    </p>
+    <p>
+     输入密码后，点击“确定”即可连接上SecureCRT。
+    </p>
+    <p>
+     <img alt="" height="351" src="https://i-blog.csdnimg.cn/blog_migrate/ba32d3310978eae19e05edc4f0b7e490.png" width="631"/>
+    </p>
+    <p>
+     出现以下图示表示连接成功。
+    </p>
+    <p>
+     <img alt="" height="162" src="https://i-blog.csdnimg.cn/blog_migrate/c3c2ff6d329cc7f67741b17b400123a4.png" width="1034"/>
+    </p>
+    <h4>
+     2、compute计算节点
+    </h4>
+    <p>
+     说明：compute节点与controller节点基础环境及安装系统大致相同，可参考controller节点配置，以下是稍有不同的地方。
+    </p>
+    <p>
+     <img alt="" height="817" src="https://i-blog.csdnimg.cn/blog_migrate/9f90727de7d854d7e0326c6d353e3282.png" width="843"/>
+    </p>
+    <p>
+     <img alt="" height="1146" src="https://i-blog.csdnimg.cn/blog_migrate/013cc6b0c767676f122f37f0bf467197.png" width="1050"/>
+    </p>
+    <p>
+     <img alt="" height="783" src="https://i-blog.csdnimg.cn/blog_migrate/8bc48cdbc0c832e459d23af7b92cdf3c.png" width="884"/>
+    </p>
+    <p>
+     <img alt="" height="1147" src="https://i-blog.csdnimg.cn/blog_migrate/d390185d8e88d7c031507028384ead96.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="900" src="https://i-blog.csdnimg.cn/blog_migrate/6cf0d10913094eb9515b87ed796f33ed.png" width="1196"/>
+    </p>
+    <p>
+     <img alt="" height="275" src="https://i-blog.csdnimg.cn/blog_migrate/70811c2020c4ccf162c232653940e5bf.png" width="1200"/>
+    </p>
+    <p>
+     第一块网卡配置如下：
+    </p>
+    <p>
+     <img alt="" height="135" src="https://i-blog.csdnimg.cn/blog_migrate/a54a6185376cc9ea068fdb85092fe105.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="721" src="https://i-blog.csdnimg.cn/blog_migrate/0ff1beea5fbb45e26d9dabb002bf20aa.png" width="1052"/>
+    </p>
+    <p>
+     第二块网卡配置如下：
+    </p>
+    <p>
+     <img alt="" height="133" src="https://i-blog.csdnimg.cn/blog_migrate/d71dc2911e32b6b8af1cb1e7691e2005.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="654" src="https://i-blog.csdnimg.cn/blog_migrate/8af9dfbb3331b96c531c4bec405096cb.png" width="1051"/>
+    </p>
+    <p>
+     注意：compute节点也需要连上SecureCRT。
+    </p>
+    <h3>
+     <a name="t7">
+     </a>
+     三、正式搭建OpenStack云平台
+    </h3>
+    <h4>
+     <a name="t8">
+     </a>
+     controller节点配置：
+    </h4>
+    <h5>
+     <a name="t9">
+     </a>
+     1、上传centos7.0镜像和chinaskills_cloud_iaas.iso镜像至controller节点。
+    </h5>
+    <p>
+     <img alt="" height="851" src="https://i-blog.csdnimg.cn/blog_migrate/93206b685c459cd9aa5243857f7ac508.png" width="1200"/>
+    </p>
+    <p>
+     centos7.0镜像上传方式如上。
+    </p>
+    <h5>
+     <a name="t10">
+     </a>
+     2、关闭防火墙，selinux。
+    </h5>
+    <pre><code class="hljs">[root@controller ~]# systemctl stop firewalld        #关闭防火墙
+[root@controller ~]# systemctl disable firewalld        #设置防火墙开机不自启
+Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.
+Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
+[root@controller ~]# setenforce 0        #临时关闭selinux防火墙，0表示关闭，1表示开启
+[root@controller ~]# getenforce        #查看selinux防火墙的状态
+Permissive
+[root@controller ~]# vi /etc/selinux/config         #非临时性
+[root@controller ~]# </code></pre>
+    <p>
+     selinux配置文件内容修改如下：
+    </p>
+    <p>
+     <img alt="" height="530" src="https://i-blog.csdnimg.cn/blog_migrate/649dcd0a32575f349c3846e85bc90395.png" width="1200"/>
+    </p>
+    <h5>
+     <a name="t11">
+     </a>
+     3.挂载镜像
+    </h5>
+    <p>
+     查看镜像是否已上传。
+    </p>
+    <p>
+     <img alt="" height="181" src="https://i-blog.csdnimg.cn/blog_migrate/efc4e062384782e1938254ed556ab8f9.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="198" src="https://i-blog.csdnimg.cn/blog_migrate/b1743e628cb9c4dcfc99058fe1f3012b.png" width="1200"/>
+    </p>
+    <p>
+     挂载镜像。
+    </p>
+    <pre><code class="language-bash">[root@controller ~]# mount -o loop CentOS-7-x86_64-DVD-1804.iso /mnt/
+mount: /dev/loop0 写保护，将以只读方式挂载
+[root@controller ~]# mkdir /opt/centos
+[root@controller ~]# cp -rf /mnt/* /opt/centos/
+[root@controller ~]# umount /mnt/
+[root@controller ~]# mount -o loop chinaskills_cloud_iaas.iso /mnt/
+mount: /dev/loop0 写保护，将以只读方式挂载
+[root@controller ~]# cp -rf /mnt/* /opt/
+[root@controller ~]# umount /mnt/
+[root@controller ~]# </code></pre>
+    <h5>
+     4、yum源文件处理
+    </h5>
+    <p>
+     移除原yum源。
+    </p>
+    <pre><code class="language-bash">[root@controller ~]# cd /etc/yum.repos.d/
+[root@controller yum.repos.d]# mv * /media/
+[root@controller yum.repos.d]# ls
+[root@controller yum.repos.d]# </code></pre>
+    <p>
+     写yum源文件。
+    </p>
+    <pre><code class="language-bash">[root@controller yum.repos.d]# vi local.repo 
+[root@controller yum.repos.d]# cat local.repo 
+[centos]
+name=centos
+baseurl=file:///opt/centos
+gpgcheck=0
+enabled=1
+ 
+[iaas]
+name=iaas
+baseurl=file:///opt/iaas-repo
+gpgcheck=0
+enabled=1
+[root@controller yum.repos.d]# </code></pre>
+    <p>
+     清除yum源缓存，验证yum源，下载所需软件包。
+    </p>
+    <pre><code class="language-bash">[root@controller yum.repos.d]# yum clean all        #清除yum源缓存
+已加载插件：fastestmirror
+正在清理软件源： centos iaas
+Cleaning up everything
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+Cleaning up list of fastest mirrors
+[root@controller yum.repos.d]# yum repolist        #列出所有可用的yum源
+已加载插件：fastestmirror
+Determining fastest mirrors
+centos                                                                          | 3.6 kB  00:00:00     
+iaas                                                                            | 2.9 kB  00:00:00     
+(1/3): centos/group_gz                                                          | 166 kB  00:00:00     
+(2/3): centos/primary_db                                                        | 3.1 MB  00:00:00     
+(3/3): iaas/primary_db                                                          | 1.4 MB  00:00:00     
+源标识                                           源名称                                           状态
+centos                                           centos                                           3,971
+iaas                                             iaas                                             3,232
+repolist: 7,203
+[root@controller yum.repos.d]# yum install -y vim vsftpd iaas-xiandian   #安装所需的软件包</code></pre>
+    <h5>
+     5、配置vsftpd。
+    </h5>
+    <pre><code class="language-bash">[root@controller yum.repos.d]# echo anon_root=/opt/ &gt;&gt; /etc/vsftpd/vsftpd.conf #设置匿名访问
+[root@controller yum.repos.d]# systemctl restart vsftpd        #重启ftp服务
+[root@controller yum.repos.d]# systemctl enable vsftpd        #设置ftp服务开机自启
+Created symlink from /etc/systemd/system/multi-user.target.wants/vsftpd.service to /usr/lib/systemd/system/vsftpd.service.
+[root@controller yum.repos.d]# </code></pre>
+    <h5>
+     <a name="t14">
+     </a>
+     6.修改脚本。
+    </h5>
+    <pre><code>[root@controller ~]# vim /etc/xiandian/openrc.sh</code></pre>
+    <p>
+     注：在非插入模式下按下Ctrl+v——shift+g——D可删除注释符号。
+    </p>
+    <pre><code class="language-bash"> 
+#--------------------system Config--------------------##
+#Controller Server Manager IP. example:x.x.x.x
+HOST_IP=192.168.100.10        #controller节点的IP地址
+ 
+#Controller HOST Password. example:000000 
+HOST_PASS=000000
+ 
+#Controller Server hostname. example:controller
+HOST_NAME=controller
+ 
+#Compute Node Manager IP. example:x.x.x.x
+HOST_IP_NODE=192.168.100.20        #compute节点的IP地址
+ 
+#Compute HOST Password. example:000000 
+HOST_PASS_NODE=000000
+ 
+#Compute Node hostname. example:compute
+HOST_NAME_NODE=compute
+ 
+#--------------------Chrony Config-------------------##
+#Controller network segment IP.  example:x.x.0.0/16(x.x.x.0/24)
+network_segment_IP=192.168.100.0/24        #controller节点所在的网段
+ 
+#--------------------Rabbit Config ------------------##
+#user for rabbit. example:openstack
+RABBIT_USER=openstack
+ 
+#Password for rabbit user .example:000000
+RABBIT_PASS=000000
+ 
+#--------------------MySQL Config---------------------##
+#Password for MySQL root user . exmaple:000000
+DB_PASS=000000
+ 
+#--------------------Keystone Config------------------##
+#Password for Keystore admin user. exmaple:000000
+DOMAIN_NAME=demo        
+ADMIN_PASS=000000
+DEMO_PASS=000000
+ 
+#Password for Mysql keystore user. exmaple:000000
+KEYSTONE_DBPASS=000000
+ 
+#--------------------Glance Config--------------------##
+#Password for Mysql glance user. exmaple:000000
+GLANCE_DBPASS=000000
+ 
+#Password for Keystore glance user. exmaple:000000
+GLANCE_PASS=000000
+ 
+#--------------------Nova Config----------------------##
+#Password for Mysql nova user. exmaple:000000
+NOVA_DBPASS=000000
+ 
+#Password for Keystore nova user. exmaple:000000
+NOVA_PASS=000000
+ 
+#--------------------Neturon Config-------------------##
+#Password for Mysql neutron user. exmaple:000000
+NEUTRON_DBPASS=000000
+ 
+#Password for Keystore neutron user. exmaple:000000
+NEUTRON_PASS=000000
+ 
+#metadata secret for neutron. exmaple:000000
+METADATA_SECRET=000000
+ 
+#Tunnel Network Interface. example:x.x.x.x
+INTERFACE_IP=192.168.100.10        #本机IP地址
+ 
+#External Network Interface. example:eth1
+INTERFACE_NAME=eth1
+ 
+#External Network The Physical Adapter. example:provider
+Physical_NAME=provider
+ 
+#First Vlan ID in VLAN RANGE for VLAN Network. exmaple:101
+minvlan=101
+ 
+#Last Vlan ID in VLAN RANGE for VLAN Network. example:200
+maxvlan=200
+ 
+#--------------------Cinder Config--------------------##
+#Password for Mysql cinder user. exmaple:000000
+CINDER_DBPASS=000000
+ 
+#Password for Keystore cinder user. exmaple:000000
+CINDER_PASS=000000
+ 
+#Cinder Block Disk. example:md126p3
+BLOCK_DISK=sdb1        #compute节点的存储块
+ 
+#--------------------Swift Config---------------------##
+#Password for Keystore swift user. exmaple:000000
+SWIFT_PASS=000000
+ 
+#The NODE Object Disk for Swift. example:md126p4.
+OBJECT_DISK=sdb2        #compute节点的存储块
+ 
+#The NODE IP for Swift Storage Network. example:x.x.x.x.
+STORAGE_LOCAL_NET_IP=192.168.100.20    #compute节点的IP地址
+ 
+#--------------------Heat Config----------------------##
+#Password for Mysql heat user. exmaple:000000
+HEAT_DBPASS=000000
+ 
+#Password for Keystore heat user. exmaple:000000
+HEAT_PASS=000000
+ 
+#--------------------Zun Config-----------------------##
+#Password for Mysql Zun user. exmaple:000000
+ZUN_DBPASS=000000
+ 
+#Password for Keystore Zun user. exmaple:000000
+ZUN_PASS=000000
+ 
+#Password for Mysql Kuryr user. exmaple:000000
+KURYR_DBPASS=000000
+ 
+#Password for Keystore Kuryr user. exmaple:000000
+KURYR_PASS=000000
+ 
+#--------------------Ceilometer Config----------------##
+#Password for Gnocchi ceilometer user. exmaple:000000
+CEILOMETER_DBPASS=000000
+ 
+#Password for Keystore ceilometer user. exmaple:000000
+CEILOMETER_PASS=000000
+ 
+#--------------------AODH Config----------------##
+#Password for Mysql AODH user. exmaple:000000
+AODH_DBPASS=000000
+ 
+#Password for Keystore AODH user. exmaple:000000
+AODH_PASS=000000
+ 
+#--------------------Barbican Config----------------##
+#Password for Mysql Barbican user. exmaple:000000
+BARBICAN_DBPASS=000000
+ 
+#Password for Keystore Barbican user. exmaple:000000
+BARBICAN_PASS=000000</code></pre>
+    <h4>
+     compute节点配置：
+    </h4>
+    <h5>
+     <a name="t16">
+     </a>
+     1、关闭防火墙，selinux。
+    </h5>
+    <pre><code class="language-bash">[root@compute ~]# systemctl stop firewalld
+[root@compute ~]# systemctl disable firewalld
+Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.
+Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
+[root@compute ~]# setenforce 0
+[root@compute ~]# getenforce
+Permissive
+[root@compute ~]# vi /etc/selinux/config </code></pre>
+    <p>
+     <img alt="" height="290" src="https://i-blog.csdnimg.cn/blog_migrate/642f096e05a06efff052cc344282d224.png" width="1200"/>
+    </p>
+    <h5>
+     <a name="t17">
+     </a>
+     2、硬盘分区。
+    </h5>
+    <pre><code class="language-bash">[root@compute ~]# fdisk /dev/sdb
+欢迎使用 fdisk (util-linux 2.23.2)。
+ 
+更改将停留在内存中，直到您决定将更改写入磁盘。
+使用写入命令前请三思。
+ 
+Device does not contain a recognized partition table
+使用磁盘标识符 0x34bc5373 创建新的 DOS 磁盘标签。
+ 
+命令(输入 m 获取帮助)：n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): 
+Using default response p
+分区号 (1-4，默认 1)：
+起始 扇区 (2048-209715199，默认为 2048)：
+将使用默认值 2048
+Last 扇区, +扇区 or +size{K,M,G} (2048-209715199，默认为 209715199)：+25G
+分区 1 已设置为 Linux 类型，大小设为 25 GiB
+ 
+命令(输入 m 获取帮助)：n
+Partition type:
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended
+Select (default p): 
+Using default response p
+分区号 (2-4，默认 2)：
+起始 扇区 (52430848-209715199，默认为 52430848)：
+将使用默认值 52430848
+Last 扇区, +扇区 or +size{K,M,G} (52430848-209715199，默认为 209715199)：+25G
+分区 2 已设置为 Linux 类型，大小设为 25 GiB
+ 
+命令(输入 m 获取帮助)：w
+The partition table has been altered!
+ 
+Calling ioctl() to re-read partition table.
+正在同步磁盘。
+[root@compute ~]# lsblk 
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda               8:0    0  200G  0 disk 
+├─sda1            8:1    0    1G  0 part /boot
+└─sda2            8:2    0  199G  0 part 
+  ├─centos-root 253:0    0   50G  0 lvm  /
+  ├─centos-swap 253:1    0    2G  0 lvm  [SWAP]
+  └─centos-home 253:2    0  147G  0 lvm  /home
+sdb               8:16   0  100G  0 disk 
+├─sdb1            8:17   0   25G  0 part 
+└─sdb2            8:18   0   25G  0 part 
+sr0              11:0    1  4.2G  0 rom  
+[root@compute ~]# </code></pre>
+    <h5>
+     3、yum源文件处理。
+    </h5>
+    <p>
+     移除原yum源。
+    </p>
+    <pre><code class="language-bash">[root@compute ~]# cd /etc/yum.repos.d/
+[root@compute yum.repos.d]# mv * /media/
+[root@compute yum.repos.d]# ls
+[root@compute yum.repos.d]# </code></pre>
+    <p>
+     写yum源文件。
+    </p>
+    <pre><code class="language-bash">[root@compute yum.repos.d]# vi local.repo
+[root@compute yum.repos.d]# cat local.repo 
+[centos]
+name=centos
+baseurl=ftp://192.168.100.10/centos
+gpgcheck=0
+enabled=1
+ 
+[iaas]
+name=iaas
+baseurl=ftp://192.168.100.10/iaas-repo
+gpgcheck=0
+enabled=1
+[root@compute yum.repos.d]#</code></pre>
+    <p>
+     清除yum源缓存，验证yum源，下载所需软件包。
+    </p>
+    <pre><code class="language-bash">[root@compute yum.repos.d]# yum clean all
+已加载插件：fastestmirror
+正在清理软件源： centos iaas
+Cleaning up everything
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[root@compute yum.repos.d]# yum repolist
+已加载插件：fastestmirror
+Determining fastest mirrors
+centos                                                                          | 3.6 kB  00:00:00     
+iaas                                                                            | 2.9 kB  00:00:00     
+(1/3): centos/group_gz                                                          | 166 kB  00:00:00     
+(2/3): centos/primary_db                                                        | 3.1 MB  00:00:00     
+(3/3): iaas/primary_db                                                          | 1.4 MB  00:00:00     
+源标识                                           源名称                                           状态
+centos                                           centos                                           3,971
+iaas                                             iaas                                             3,232
+repolist: 7,203
+[root@compute yum.repos.d]# yum install -y vim iaas-xiandian</code></pre>
+    <h5>
+     4、修改脚本。
+    </h5>
+    <p>
+     将controller节点的脚本复制至compute节点。
+    </p>
+    <pre><code class="language-bash">[root@compute ~]# scp 192.168.100.10:/etc/xiandian/openrc.sh /etc/xiandian/openrc.sh 
+The authenticity of host '192.168.100.10 (192.168.100.10)' can't be established.
+ECDSA key fingerprint is SHA256:3fUEo7XuafRBPMtY2rSnpjKOdGSrLnE68O2aZAXEp6o.
+ECDSA key fingerprint is MD5:4b:73:20:24:30:ad:6a:31:86:fa:26:55:47:92:99:cc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.100.10' (ECDSA) to the list of known hosts.
+root@192.168.100.10's password: 
+openrc.sh                                                            100% 3820     1.9MB/s   00:00    
+[root@compute ~]# </code></pre>
+    <p>
+     需要修改compute节点的脚本。
+    </p>
+    <pre><code>[root@compute ~]# vim /etc/xiandian/openrc.sh</code></pre>
+    <p>
+     修改内容如下：
+    </p>
+    <p>
+     <img alt="" height="74" src="https://i-blog.csdnimg.cn/blog_migrate/96e88938f6a04b9609551c2a387c96b8.png" width="876"/>
+    </p>
+    <h3>
+     <a name="t20">
+     </a>
+     四、刷脚本
+    </h3>
+    <h5>
+     <a name="t21">
+     </a>
+     controller节点需要刷以下脚本。
+    </h5>
+    <pre><code class="language-bash">[root@controller ~]# iaas-pre-host.sh        #刷完该脚本后需要重启
+......
+ 
+[root@controller ~]# iaas-install-mysql.sh
+......
+ 
+[root@controller ~]# iaas-install-keystone.sh
+......
+[root@controller ~]# source /etc/keystone/admin-openrc.sh         #使环境生效
+ 
+[root@controller ~]# iaas-install-glance.sh
+......
+ 
+[root@controller ~]# iaas-install-nova-controller.sh
+......
+ 
+[root@controller ~]# iaas-install-neutron-controller.sh
+......
+ 
+[root@controller ~]# iaas-install-dashboard.sh
+......</code></pre>
+    <h5>
+     compute节点需要刷以下脚本。
+    </h5>
+    <pre><code class="language-bash">[root@compute ~]# iaas-pre-host.sh         #刷完该脚本后需要重启
+......
+ 
+[root@compute ~]# iaas-install-nova-compute.sh
+......
+ 
+[root@compute ~]# iaas-install-neutron-compute.sh
+......</code></pre>
+    <h3>
+     <a name="t23">
+     </a>
+     五、登录OpenStack云平台
+    </h3>
+    <p>
+     在浏览器中输入http://192.168.100.10/dashboard。
+    </p>
+    <p>
+     <img alt="" height="1093" src="https://i-blog.csdnimg.cn/blog_migrate/15b4cddc19fb497653d0a92f8cc16dd1.png" width="1200"/>
+    </p>
+    <p>
+     出现以下图示表示云平台搭建成功。
+    </p>
+    <p>
+     <img alt="" height="932" src="https://i-blog.csdnimg.cn/blog_migrate/b6a71bfead0d33862fcfc031a82ecde9.png" width="1200"/>
+    </p>
+    <p>
+     转自：
+     <a href="https://blog.csdn.net/m0_45692110/article/details/122628664" title="【精选】手把手教你搭建OpenStack云平台（超级详细）_openstack云平台搭建-CSDN博客">
+      【精选】手把手教你搭建OpenStack云平台（超级详细）_openstack云平台搭建-CSDN博客
+     </a>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f667568616e6768616e672f:61727469636c652f64657461696c732f313334323031373039</p>

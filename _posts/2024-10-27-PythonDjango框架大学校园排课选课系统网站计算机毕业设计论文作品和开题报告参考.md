@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 2024-10-27-PythonDjango框架大学校园排课选课系统网站计算机毕业设计论文作品和开题报告参考
 date: 2024-10-27 10:16:59 +0800
 categories: [计算机系统成品]
@@ -7,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=143224874
   alt: PythonDjango框架大学校园排课选课系统网站计算机毕业设计论文作品和开题报告参考
 artid: 143224874
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f753031333831383230352f:61727469636c652f64657461696c732f313433323234383734></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -922,3 +923,4 @@ artid: 143224874
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f753031333831383230352f:61727469636c652f64657461696c732f313433323234383734</p>

@@ -6,6 +6,7 @@ tags: [macos,ollama,deepseekr1,deepseek,AI编程]
 image:
   path: /assets/images/fec7ae270567357c22e1b61dfba57d84.png
   alt: 本地部署DeepSeek教程Mac版本
+render_with_liquid: false
 ---
 <div class="blog-content-box">
  <div class="article-header-box">

@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=138450604
   alt: 华为鸿蒙系统Huawei-HarmonyOS
 artid: 138450604
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470:733a2f2f626c6f672e6373646e2e6e65742f735f736f73302f:61727469636c652f64657461696c732f313338343530363034></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -4053,3 +4053,4 @@ artid: 138450604
 </div>
 
 
+<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f735f736f73302f:61727469636c652f64657461696c732f313338343530363034</p>

@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=144719976
   alt: 基于pythonDjangomysql旅游景区景点订票网站系统设计与实现
 artid: 144719976
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f753031333831383230352f:61727469636c652f64657461696c732f313434373139393736></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -191,3 +191,4 @@ artid: 144719976
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f753031333831383230352f:61727469636c652f64657461696c732f313434373139393736</p>

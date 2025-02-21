@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=131854200
   alt: OpenHarmony与HarmonyOS联系与区别
 artid: 131854200
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a:2f2f626c6f672e6373646e2e6e65742f676f6e676a6464652f:61727469636c652f64657461696c732f313331383534323030></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -261,3 +261,4 @@ artid: 131854200
 </div>
 
 
+<p class="artid" style="display:none">68747470733a:2f2f626c6f672e6373646e2e6e65742f676f6e676a6464652f:61727469636c652f64657461696c732f313331383534323030</p>

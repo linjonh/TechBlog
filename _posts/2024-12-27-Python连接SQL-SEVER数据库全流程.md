@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=133980334
   alt: Python连接SQL-SEVER数据库全流程
 artid: 133980334
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f33333930393738382f:61727469636c652f64657461696c732f313333393830333334></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -196,3 +197,4 @@ conn<span class="token punctuation">.</span>close<span class="token punctuation"
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f33333930393738382f:61727469636c652f64657461696c732f313333393830333334

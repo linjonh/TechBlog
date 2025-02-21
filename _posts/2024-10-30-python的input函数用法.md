@@ -8,8 +8,9 @@ image:
   path: https://img-blog.csdnimg.cn/33d80ad6c97a49609f6ca71fced5f5d4.png?x-oss-process=image/resize,m_fixed,h_150
   alt: python的input函数用法
 artid: 124978009
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f35303835333937392f:61727469636c652f64657461696c732f313234393738303039></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -198,3 +199,4 @@ print(c) #输出c</code></pre>
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f35303835333937392f:61727469636c652f64657461696c732f313234393738303039

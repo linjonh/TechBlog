@@ -4,6 +4,7 @@ date: 2018-09-23 23:21
 title: Public An aar library to JCenter and MavenCenter
 categories: Android Jcenter Maven
 tags: JCenter Maven Gradle
+render_with_liquid: false
 ---
 * content
 {:toc}

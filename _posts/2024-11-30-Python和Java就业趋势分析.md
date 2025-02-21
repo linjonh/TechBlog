@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=143671302
   alt: Python和Java就业趋势分析
 artid: 143671302
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=687474:70733a2f2f626c6f672e6373646e2e6e65742f73697870702f:61727469636c652f64657461696c732f313433363731333032></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -259,3 +260,4 @@ artid: 143671302
 </div>
 
 
+<p class="artid" style="display:none">687474:70733a2f2f626c6f672e6373646e2e6e65742f73697870702f:61727469636c652f64657461696c732f313433363731333032

@@ -8,8 +8,9 @@ image:
   path: https://img-blog.csdnimg.cn/94168380adcc408c8b92a3a8b650703b.png?x-oss-process&#61;image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6JOd5aSa5aSa55qE5bCP5LuT5bqT,size_15,color_FFFFFF,t_70,g_se,x_16
   alt: IntelliJ-IDEA安装教程以IDEA2020.1为例
 artid: 121928344
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34333535343333352f:61727469636c652f64657461696c732f313231393238333434></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -643,3 +644,4 @@ artid: 121928344
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34333535343333352f:61727469636c652f64657461696c732f313231393238333434

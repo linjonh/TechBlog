@@ -1,0 +1,36959 @@
+---
+layout: post
+title: 2022-05-07-前端面试HTML5CSS3JSTS4Vue3React18八股文手写项目笔试
+date: 2022-05-07 21:13:34 +0800
+categories: [前端,前端面试]
+tags: [javascript,前端,react,vue,算法]
+image:
+  path: https://img-blog.csdnimg.cn/img_convert/25c99bb73c39d3c2d29dad02584ef4d7.png?x-oss-process=image/resize,m_fixed,h_150
+  alt: 前端面试HTML5CSS3JSTS4Vue3React18八股文手写项目笔试
+artid: 124638456
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     前端面试HTML5+CSS3+JS+TS4+Vue3+React18+八股文+手写+项目+笔试
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+    </p>
+    <p>
+     <strong>
+      高频
+     </strong>
+     面试考点分集，适用于
+     <strong>
+      基础面
+     </strong>
+     <s>
+      和
+      <strong>
+       临时抱佛脚复习
+      </strong>
+     </s>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/131123751" title="前端面试高频考点HTML5+CSS3">
+      前端面试高频考点HTML5+CSS3
+     </a>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/131123824" title="前端面试高频考点ES6">
+      前端面试高频考点ES6
+     </a>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/131124075" title="前端面试高频考点之 通信（渲染、http、缓存、异步、跨域）">
+      前端面试高频考点之 通信（渲染、http、缓存、异步、跨域）
+     </a>
+    </p>
+    <p>
+     <strong>
+      分集
+     </strong>
+     方便专题学习（
+     <strong>
+      合集因码字过多，太卡，优先更新分集，合集与分集同步率最低98%
+     </strong>
+     ）
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D" title="前端面试题考点HTML5+CSS3+JS">
+      前端面试题考点HTML5+CSS3+JS
+     </a>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/129866463" title="前端面试题考点之 通信（渲染、http、缓存、异步、跨域、安全）">
+      前端面试题考点之 通信（渲染、http、缓存、异步、跨域、安全）
+     </a>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/129924504?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22129924504%22%2C%22source%22%3A%22qq_28838891%22%7D" title="Vue3前端面试题考点">
+      Vue3前端面试题考点
+     </a>
+    </p>
+    <p>
+     <a class="link-info" href="https://blog.csdn.net/qq_28838891/article/details/129924161" title="前端React18面试题考点">
+      前端React18面试题考点
+     </a>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/129951380?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22129951380%22%2C%22source%22%3A%22qq_28838891%22%7D" title="高频前端面试项目考点（npm，git，webpack，TS4，sass，瀑布流，懒加载）">
+      高频前端面试项目考点（npm，git，webpack，TS4，sass，瀑布流，懒加载）
+     </a>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/129828688" title="前端笔试常考设计模式，操作系统，数据结构，ACM模板，经典算法，正则表达式，常用方法">
+      前端笔试常考设计模式，操作系统，数据结构，ACM模板，经典算法，正则表达式，常用方法
+     </a>
+    </p>
+    <p id="main-toc">
+     ⭐表示手写 和 重要程度，*表示了解即可
+    </p>
+    <p>
+     为了简洁，相关文章参考链接在标题里
+    </p>
+    <p>
+     常考考点也写的很详细，因为面试官会顺着深挖，所以导致篇幅全又长，见谅
+    </p>
+    <p>
+     长文不易，码字卡死，如果有帮助到你，可以点个赞吗？Thanks♪(･ω･)ﾉ
+     <br/>
+     一开始就是在CSDN博客上写的，现在应部分同学的要求，我直接将博客内容复制成pdf，暂时没空整理格式，有的代码缺失还请见原文，见谅。
+     <br/>
+     <a class="link-info" href="https://download.csdn.net/download/qq_28838891/87761533" title="pdf版CSDN免费下载链接">
+      pdf版CSDN免费下载链接
+     </a>
+    </p>
+    <p>
+     <strong>
+      合集（方便检索，手机端有时文章会不显示目录，可以点下方的目录按钮）
+     </strong>
+    </p>
+    <p id="main-toc">
+     <strong>
+      目录
+     </strong>
+    </p>
+    <p id="HTML5-toc" style="margin-left:0px;">
+     <a href="#HTML5" rel="nofollow">
+      HTML5
+     </a>
+    </p>
+    <p id="%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E7%9A%84%E5%A5%BD%E5%A4%84-toc" style="margin-left:40px;">
+     <a href="#%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E7%9A%84%E5%A5%BD%E5%A4%84" rel="nofollow">
+      语义化标签的好处⭐⭐
+     </a>
+    </p>
+    <p id="web%E6%A0%87%E5%87%86%E5%92%8CW3C%E6%A0%87%E5%87%86-toc" style="margin-left:40px;">
+     <a href="#web%E6%A0%87%E5%87%86%E5%92%8CW3C%E6%A0%87%E5%87%86" rel="nofollow">
+      Web标准和W3C标准⭐
+     </a>
+    </p>
+    <p id="%E7%BD%91%E9%A1%B5%E7%BB%84%E6%88%90-toc" style="margin-left:80px;">
+     <a href="#%E7%BD%91%E9%A1%B5%E7%BB%84%E6%88%90" rel="nofollow">
+      网页组成
+     </a>
+    </p>
+    <p id="%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98-toc" style="margin-left:40px;">
+     <a href="#%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98" rel="nofollow">
+      浏览器的渲染过程⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E5%9B%9E%E6%B5%81%EF%BC%88%E9%87%8D%E6%8E%92%EF%BC%89%E5%92%8C%E9%87%8D%E7%BB%98%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#%E5%9B%9E%E6%B5%81%EF%BC%88%E9%87%8D%E6%8E%92%EF%BC%89%E5%92%8C%E9%87%8D%E7%BB%98%E2%AD%90%E2%AD%90" rel="nofollow">
+      回流（重排）和重绘⭐⭐
+     </a>
+    </p>
+    <p id="webworker-toc" style="margin-left:40px;">
+     <a href="#webworker" rel="nofollow">
+      常用手写⭐
+     </a>
+    </p>
+    <p id="%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE-toc" style="margin-left:80px;">
+     <a href="#%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE" rel="nofollow">
+      获取标签
+     </a>
+    </p>
+    <p id="js%E4%B8%AD%E6%8F%92%E5%85%A5%E6%A0%87%E7%AD%BE-toc" style="margin-left:80px;">
+     <a href="#js%E4%B8%AD%E6%8F%92%E5%85%A5%E6%A0%87%E7%AD%BE" rel="nofollow">
+      js中插入标签
+     </a>
+    </p>
+    <p id="%E8%8E%B7%E5%8F%96%E7%AC%ACn%E4%B8%AA%E6%A0%87%E7%AD%BE-toc" style="margin-left:80px;">
+     <a href="#%E8%8E%B7%E5%8F%96%E7%AC%ACn%E4%B8%AA%E6%A0%87%E7%AD%BE" rel="nofollow">
+      获取第n个标签
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6" rel="nofollow">
+      常用触发事件
+     </a>
+    </p>
+    <p id="%E8%8E%B7%E5%8F%96%E5%AE%BD%E9%AB%98-toc" style="margin-left:40px;">
+     <a href="#%E8%8E%B7%E5%8F%96%E5%AE%BD%E9%AB%98" rel="nofollow">
+      获取宽高
+     </a>
+    </p>
+    <p id="%E7%B3%BB%E7%BB%9F%E5%B1%8F%E5%B9%95%EF%BC%88window.screen.availHeight%EF%BC%8Cheight%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E7%B3%BB%E7%BB%9F%E5%B1%8F%E5%B9%95%EF%BC%88window.screen.availHeight%EF%BC%8Cheight%EF%BC%89" rel="nofollow">
+      系统屏幕（window.screen.availHeight，height）
+     </a>
+    </p>
+    <p id="%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%88window.outerHeight%EF%BC%8CinnerHeight%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%88window.outerHeight%EF%BC%8CinnerHeight%EF%BC%89" rel="nofollow">
+      浏览器（window.outerHeight，innerHeight）
+     </a>
+    </p>
+    <p id="%E5%85%83%E7%B4%A0%EF%BC%88clientHeight%2CoffsetHeight%2CscrollHeight%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%85%83%E7%B4%A0%EF%BC%88clientHeight%2CoffsetHeight%2CscrollHeight%EF%BC%89" rel="nofollow">
+      元素（clientHeight,offsetHeight,scrollHeight）
+     </a>
+    </p>
+    <p id="%E7%9B%B8%E5%AF%B9%E8%B7%9D%E7%A6%BB%E6%88%96%E4%BD%8D%E7%BD%AE-toc" style="margin-left:80px;">
+     <a href="#%E7%9B%B8%E5%AF%B9%E8%B7%9D%E7%A6%BB%E6%88%96%E4%BD%8D%E7%BD%AE" rel="nofollow">
+      相对距离或位置（offsetTop，scrollTop，getBoundingClientRect）
+     </a>
+    </p>
+    <p id="CSS3-toc" style="margin-left:0px;">
+     <a href="#CSS3" rel="nofollow">
+      CSS3
+     </a>
+    </p>
+    <p id="%E7%9B%92%E6%A8%A1%E5%9E%8B-toc" style="margin-left:40px;">
+     <a href="#%E7%9B%92%E6%A8%A1%E5%9E%8B" rel="nofollow">
+      盒模型⭐⭐⭐
+     </a>
+    </p>
+    <p id="content-box%20%E5%86%85%E5%AE%B9%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88W3C%E7%9B%92%EF%BC%89%C2%A0%20%E5%92%8C%20border-box%20%E8%BE%B9%E6%A1%86%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88IE%20%E7%9B%92%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#content-box%20%E5%86%85%E5%AE%B9%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88W3C%E7%9B%92%EF%BC%89%C2%A0%20%E5%92%8C%20border-box%20%E8%BE%B9%E6%A1%86%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88IE%20%E7%9B%92%EF%BC%89" rel="nofollow">
+      content-box 内容盒模型（W3C盒）  和 border-box 边框盒模型（IE 盒）
+     </a>
+    </p>
+    <p id="%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BD%A2%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BD%A2%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      实现梯形，三角形，扇形，圆形，半圆（⭐手写）
+     </a>
+    </p>
+    <p id="%E7%9B%92%E5%AD%90%E5%85%85%E6%BB%A1%E5%B1%8F%E5%B9%95%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E7%9B%92%E5%AD%90%E5%85%85%E6%BB%A1%E5%B1%8F%E5%B9%95%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      盒子充满屏幕 （⭐手写）
+     </a>
+    </p>
+    <p id="%EF%BC%9FCSS%E6%A0%B7%E5%BC%8F%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%EF%BC%9FCSS%E6%A0%B7%E5%BC%8F%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89" rel="nofollow">
+      选择器
+     </a>
+    </p>
+    <p id="ID%E9%80%89%E6%8B%A9%E5%99%A8%E3%80%81%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E3%80%81%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#ID%E9%80%89%E6%8B%A9%E5%99%A8%E3%80%81%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E3%80%81%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89" rel="nofollow">
+      ID选择器、类选择器、标签选择器（按优先级高到低排序）⭐⭐
+     </a>
+    </p>
+    <p id="%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8" rel="nofollow">
+      属性选择器
+     </a>
+    </p>
+    <p id="%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-toc" style="margin-left:80px;">
+     <a href="#%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8" rel="nofollow">
+      伪类和伪元素选择器（⭐手写）伪类和伪元素选择器
+     </a>
+    </p>
+    <p id="%E4%BC%98%E5%85%88%E7%BA%A7-toc" style="margin-left:80px;">
+     <a href="#%E4%BC%98%E5%85%88%E7%BA%A7" rel="nofollow">
+      优先级⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E6%A0%B7%E5%BC%8F%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E6%A0%B7%E5%BC%8F%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89" rel="nofollow">
+      样式方式（按优先级高到低排序）⭐⭐
+     </a>
+    </p>
+    <p id="%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8%E6%A0%87%E7%AD%BE%E5%86%85%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E7%9A%84%E6%A0%B7%E5%BC%8F%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8%E6%A0%87%E7%AD%BE%E5%86%85%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E7%9A%84%E6%A0%B7%E5%BC%8F%EF%BC%89" rel="nofollow">
+      内联样式表（在标签内设置元素的样式）
+     </a>
+    </p>
+    <p id="%E5%B5%8C%E5%85%A5%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8head%E6%A0%87%E7%AD%BE%E5%86%85%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%B5%8C%E5%85%A5%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8head%E6%A0%87%E7%AD%BE%E5%86%85%EF%BC%89" rel="nofollow">
+      嵌入样式表（在head标签内）
+     </a>
+    </p>
+    <p id="%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8head%E6%A0%87%E7%AD%BE%E5%86%85%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8head%E6%A0%87%E7%AD%BE%E5%86%85%EF%BC%89" rel="nofollow">
+      外部样式表（在head标签内）
+     </a>
+    </p>
+    <p id="pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none-toc" style="margin-left:40px;">
+     <a href="#pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none" rel="nofollow">
+      transform旋转，缩放，平移⭐⭐
+     </a>
+    </p>
+    <p id="position%E5%85%B3%E9%94%AE%E5%AD%97-toc" style="margin-left:40px;">
+     <a href="#position%E5%85%B3%E9%94%AE%E5%AD%97" rel="nofollow">
+      position关键字⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E5%8D%95%E4%BD%8D-toc" style="margin-left:40px;">
+     <a href="#%E5%8D%95%E4%BD%8D" rel="nofollow">
+      水平 &amp; 垂直对齐 （⭐手写）
+     </a>
+    </p>
+    <p id="%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD-toc" style="margin-left:80px;">
+     <a href="#%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD" rel="nofollow">
+      水平居中
+     </a>
+    </p>
+    <p id="%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      水平垂直居中
+     </a>
+    </p>
+    <p id="transform%3Atranslate-toc" style="margin-left:80px;">
+     <a href="#transform%3Atranslate" rel="nofollow">
+      transform:translate
+     </a>
+    </p>
+    <p id="flex%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#flex%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89" rel="nofollow">
+      flex（强烈推荐）
+     </a>
+    </p>
+    <p id="BFC%E8%A7%84%E8%8C%83-toc" style="margin-left:40px;">
+     <a href="#BFC%E8%A7%84%E8%8C%83" rel="nofollow">
+      flex布局⭐⭐⭐
+     </a>
+    </p>
+    <p id="align-items%E5%92%8Cjustify-content%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#align-items%E5%92%8Cjustify-content%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      align-items和justify-content的区别
+     </a>
+    </p>
+    <p id="flex%3A1-toc" style="margin-left:80px;">
+     <a href="#flex%3A1" rel="nofollow">
+      flex:1
+     </a>
+    </p>
+    <p id="BFC%E8%A7%84%E8%8C%83%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#BFC%E8%A7%84%E8%8C%83%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      BFC规范⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E9%97%AE%E9%A2%98-toc" style="margin-left:80px;">
+     <a href="#%E9%97%AE%E9%A2%98" rel="nofollow">
+      问题
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E8%A7%81%E8%A7%A6%E5%8F%91%E6%9D%A1%E4%BB%B6-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E8%A7%81%E8%A7%A6%E5%8F%91%E6%9D%A1%E4%BB%B6" rel="nofollow">
+      常见触发条件
+     </a>
+    </p>
+    <p id="%E8%A7%84%E5%88%99-toc" style="margin-left:80px;">
+     <a href="#%E8%A7%84%E5%88%99" rel="nofollow">
+      规则
+     </a>
+    </p>
+    <p id="overflow%3A%20hidden%E7%A4%BA%E4%BE%8B-toc" style="margin-left:80px;">
+     <a href="#overflow%3A%20hidden%E7%A4%BA%E4%BE%8B" rel="nofollow">
+      overflow: hidden示例
+     </a>
+    </p>
+    <p id="%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      *浮动
+     </a>
+    </p>
+    <p id="%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%20%EF%BC%9A%E5%B7%A6%E5%8F%B3%E5%9B%BA%E5%AE%9A%EF%BC%8C%E4%B8%AD%E9%97%B4%E8%87%AA%E9%80%82%E5%BA%94%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89%E2%80%8B%E7%BC%96%E8%BE%91-toc" style="margin-left:40px;">
+     <a href="#%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%20%EF%BC%9A%E5%B7%A6%E5%8F%B3%E5%9B%BA%E5%AE%9A%EF%BC%8C%E4%B8%AD%E9%97%B4%E8%87%AA%E9%80%82%E5%BA%94%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89%E2%80%8B%E7%BC%96%E8%BE%91" rel="nofollow">
+      三栏布局 ：左右固定，中间自适应（⭐手写）
+     </a>
+    </p>
+    <p id="flex%E5%B8%83%E5%B1%80%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#flex%E5%B8%83%E5%B1%80%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89" rel="nofollow">
+      flex布局（强烈推荐）
+     </a>
+    </p>
+    <p id="grid%E5%B8%83%E5%B1%80-toc" style="margin-left:80px;">
+     <a href="#grid%E5%B8%83%E5%B1%80" rel="nofollow">
+      grid布局
+     </a>
+    </p>
+    <p id="magin%E8%B4%9F%E5%80%BC%E6%B3%95-toc" style="margin-left:80px;">
+     <a href="#magin%E8%B4%9F%E5%80%BC%E6%B3%95" rel="nofollow">
+      margin负值法
+     </a>
+    </p>
+    <p id="%E8%87%AA%E8%BA%AB%E6%B5%AE%E5%8A%A8-toc" style="margin-left:80px;">
+     <a href="#%E8%87%AA%E8%BA%AB%E6%B5%AE%E5%8A%A8" rel="nofollow">
+      自身浮动
+     </a>
+    </p>
+    <p id="%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D-toc" style="margin-left:80px;">
+     <a href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D" rel="nofollow">
+      绝对定位
+     </a>
+    </p>
+    <p id="%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80-toc" style="margin-left:80px;">
+     <a href="#%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80" rel="nofollow">
+      圣杯布局 （⭐手写）
+     </a>
+    </p>
+    <p id="%E5%8D%95%E4%BD%8D%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#%E5%8D%95%E4%BD%8D%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      单位⭐⭐⭐
+     </a>
+    </p>
+    <p id="px%E8%BD%ACrem%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#px%E8%BD%ACrem%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      px转rem
+     </a>
+    </p>
+    <p id="px%20%E8%BD%ACvw%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#px%20%E8%BD%ACvw%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      px转vw
+     </a>
+    </p>
+    <p id="%C2%A0pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#%C2%A0pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      opacity: 0 、visibility: hidden、display: none⭐⭐⭐
+     </a>
+    </p>
+    <p id="%3Cimg%3E%E7%9A%84%20title%20%E5%92%8C%20alt%20%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB-toc" style="margin-left:40px;">
+     <a href="#%3Cimg%3E%E7%9A%84%20title%20%E5%92%8C%20alt%20%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" rel="nofollow">
+      img的 title 和 alt 有什么区别⭐
+     </a>
+    </p>
+    <p id="%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      行内素、块级元素和行内块元素⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E6%BA%A2%E5%87%BA%E8%BD%AC%E7%9C%81%E7%95%A5%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E6%BA%A2%E5%87%BA%E8%BD%AC%E7%9C%81%E7%95%A5%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      溢出转省略 （⭐手写）⭐⭐
+     </a>
+    </p>
+    <p id="%E5%8D%95%E8%A1%8C-toc" style="margin-left:80px;">
+     <a href="#%E5%8D%95%E8%A1%8C" rel="nofollow">
+      单行
+     </a>
+    </p>
+    <p id="%C2%A0%E5%A4%9A%E8%A1%8C-toc" style="margin-left:80px;">
+     <a href="#%C2%A0%E5%A4%9A%E8%A1%8C" rel="nofollow">
+      多行
+     </a>
+    </p>
+    <p id="%E9%9D%99%E6%80%81%E5%B8%83%E5%B1%80-toc" style="margin-left:0px;">
+     <a href="#%E9%9D%99%E6%80%81%E5%B8%83%E5%B1%80" rel="nofollow">
+      布局
+     </a>
+    </p>
+    <p id="%E9%9D%99%E6%80%81%E5%B8%83%E5%B1%80-toc" style="margin-left:40px;">
+     <a href="#%E9%9D%99%E6%80%81%E5%B8%83%E5%B1%80" rel="nofollow">
+      静态布局
+     </a>
+    </p>
+    <p id="%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E2%AD%90%E2%AD%90" rel="nofollow">
+      响应式布局⭐⭐
+     </a>
+    </p>
+    <p id="%E8%87%AA%E9%80%82%E5%BA%94%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#%E8%87%AA%E9%80%82%E5%BA%94%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8C%BA%E5%88%AB" rel="nofollow">
+      自适应和响应式区别
+     </a>
+    </p>
+    <p id="%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89" rel="nofollow">
+      弹性布局（flex布局）
+     </a>
+    </p>
+    <p id="%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80-toc" style="margin-left:80px;">
+     <a href="#%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80" rel="nofollow">
+      流式布局
+     </a>
+    </p>
+    <p id="%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%40media%EF%BC%88css3%EF%BC%89-toc" style="margin-left:0px;">
+     <a href="#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%40media%EF%BC%88css3%EF%BC%89" rel="nofollow">
+      媒体查询@media（css3）
+     </a>
+    </p>
+    <p id="%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B-toc" style="margin-left:40px;">
+     <a href="#%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B" rel="nofollow">
+      媒体类型
+     </a>
+    </p>
+    <p id="%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88logical%20operators%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88logical%20operators%EF%BC%89" rel="nofollow">
+      逻辑运算符（logical operators）
+     </a>
+    </p>
+    <p id="%E5%AA%92%E4%BD%93%E5%8A%9F%E8%83%BD-toc" style="margin-left:40px;">
+     <a href="#%E5%AA%92%E4%BD%93%E5%8A%9F%E8%83%BD" rel="nofollow">
+      媒体功能
+     </a>
+    </p>
+    <p id="%E5%85%B6%E4%BB%96%E5%8A%A0%E8%BD%BD%E6%96%B9%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E5%85%B6%E4%BB%96%E5%8A%A0%E8%BD%BD%E6%96%B9%E5%BC%8F" rel="nofollow">
+      其他加载方式
+     </a>
+    </p>
+    <p id="style%E6%A0%87%E7%AD%BE%E4%B8%8A%E5%8A%A0%E8%BD%BD-toc" style="margin-left:80px;">
+     <a href="#style%E6%A0%87%E7%AD%BE%E4%B8%8A%E5%8A%A0%E8%BD%BD" rel="nofollow">
+      style标签上加载
+     </a>
+    </p>
+    <p id="%40import%20%E4%BD%BF%E7%94%A8%E6%97%B6%E5%8A%A0%E8%BD%BD-toc" style="margin-left:80px;">
+     <a href="#%40import%20%E4%BD%BF%E7%94%A8%E6%97%B6%E5%8A%A0%E8%BD%BD" rel="nofollow">
+      @import 使用时加载
+     </a>
+    </p>
+    <p id="%3Cpicture%3E%E6%A0%87%E7%AD%BE-toc" style="margin-left:80px;">
+     <a href="#%3Cpicture%3E%E6%A0%87%E7%AD%BE" rel="nofollow">
+      标签
+     </a>
+    </p>
+    <p id="JavaScript-toc" style="margin-left:0px;">
+     <a href="#JavaScript" rel="nofollow">
+      JavaScript
+     </a>
+    </p>
+    <p id="%E8%AF%AD%E8%A8%80%E5%8C%BA%E5%88%AB-toc" style="margin-left:40px;">
+     <a href="#%E8%AF%AD%E8%A8%80%E5%8C%BA%E5%88%AB" rel="nofollow">
+      语言区别
+     </a>
+    </p>
+    <p id="DOM-toc" style="margin-left:40px;">
+     <a href="#DOM" rel="nofollow">
+      BOM，DOM，文档，对象，模型
+     </a>
+    </p>
+    <p id="ES6%E6%96%B0%E5%A2%9E-toc" style="margin-left:40px;">
+     <a href="#ES6%E6%96%B0%E5%A2%9E" rel="nofollow">
+      ES6新增
+     </a>
+    </p>
+    <p id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-toc" style="margin-left:40px;">
+     <a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B" rel="nofollow">
+      数据类型
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-toc" style="margin-left:80px;">
+     <a href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B" rel="nofollow">
+      基本数据类型
+     </a>
+    </p>
+    <p id="%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-toc" style="margin-left:80px;">
+     <a href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B" rel="nofollow">
+      引用数据类型
+     </a>
+    </p>
+    <p id="%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89-toc" style="margin-left:80px;">
+     <a href="#%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89" rel="nofollow">
+      声明和定义
+     </a>
+    </p>
+    <p id="Null%EF%BC%8CNaN%EF%BC%8CUndefined-toc" style="margin-left:80px;">
+     <a href="#Null%EF%BC%8CNaN%EF%BC%8CUndefined" rel="nofollow">
+      Null，NaN，Undefined
+     </a>
+    </p>
+    <p id="toString%EF%BC%8CvalueOf-toc" style="margin-left:80px;">
+     <a href="#toString%EF%BC%8CvalueOf" rel="nofollow">
+      toString，valueOf
+     </a>
+    </p>
+    <p id="%3D%3D%EF%BC%8C%3D%3D%3D%EF%BC%8CObject.is()-toc" style="margin-left:80px;">
+     <a href="#%3D%3D%EF%BC%8C%3D%3D%3D%EF%BC%8CObject.is%28%29" rel="nofollow">
+      ==，===，Object.is()
+     </a>
+    </p>
+    <p id="typeof%EF%BC%8Cinstance%20of%EF%BC%8Cconstructor%EF%BC%8CObject%20prototype-toc" style="margin-left:80px;">
+     <a href="#typeof%EF%BC%8Cinstance%20of%EF%BC%8Cconstructor%EF%BC%8CObject%20prototype" rel="nofollow">
+      判断数据类型：typeof运算符，instance of运算符，isPrototypeOf() 方法，constructor，Object prototype
+     </a>
+    </p>
+    <p id="%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2-toc" style="margin-left:80px;">
+     <a href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2" rel="nofollow">
+      instance of （⭐手写）
+     </a>
+    </p>
+    <p id="new%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#new%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      new （⭐手写）
+     </a>
+    </p>
+    <p id="%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2-toc" style="margin-left:80px;">
+     <a href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2" rel="nofollow">
+      类型转换
+     </a>
+    </p>
+    <p id="%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%B8%83%E5%B0%94%E5%80%BC-toc" style="margin-left:80px;">
+     <a href="#%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%B8%83%E5%B0%94%E5%80%BC" rel="nofollow">
+      转换为布尔值
+     </a>
+    </p>
+    <p id="type%20of%20null-toc" style="margin-left:80px;">
+     <a href="#type%20of%20null" rel="nofollow">
+      type of null
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6-toc" style="margin-left:40px;">
+     <a href="#%E4%BA%8B%E4%BB%B6" rel="nofollow">
+      事件
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6%E6%B5%81-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8B%E4%BB%B6%E6%B5%81" rel="nofollow">
+      DOM事件流（event flow ）
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98" rel="nofollow">
+      事件委托/代理（⭐手写）
+     </a>
+    </p>
+    <p id="%E5%B0%81%E8%A3%85%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A-toc" style="margin-left:80px;">
+     <a href="#%E5%B0%81%E8%A3%85%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A" rel="nofollow">
+      发布订阅模式（⭐手写）
+     </a>
+    </p>
+    <p id="%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      观察者模式（⭐手写）
+     </a>
+    </p>
+    <p id="Object.create%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#Object.create%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      封装事件绑定
+     </a>
+    </p>
+    <p id="%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%2F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E9%93%BE-toc" style="margin-left:40px;">
+     <a href="#%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%2F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E9%93%BE" rel="nofollow">
+      执行上下文/作用域和作用链
+     </a>
+    </p>
+    <p id="this-toc" style="margin-left:40px;">
+     <a href="#this" rel="nofollow">
+      this
+     </a>
+    </p>
+    <p id="let%C2%A0%E5%92%8C%C2%A0const%E5%85%B3%E9%94%AE%E5%AD%97-toc" style="margin-left:40px;">
+     <a href="#let%C2%A0%E5%92%8C%C2%A0const%E5%85%B3%E9%94%AE%E5%AD%97" rel="nofollow">
+      JS预解析（变量提升）
+     </a>
+    </p>
+    <p id="var%EF%BC%8Clet%C2%A0%E5%92%8C%C2%A0const%E5%85%B3%E9%94%AE%E5%AD%97-toc" style="margin-left:40px;">
+     <a href="#var%EF%BC%8Clet%C2%A0%E5%92%8C%C2%A0const%E5%85%B3%E9%94%AE%E5%AD%97" rel="nofollow">
+      var，let 和 const关键字
+     </a>
+    </p>
+    <p id="%E5%8E%9F%E5%9E%8Bprototype-toc" style="margin-left:40px;">
+     <a href="#%E5%8E%9F%E5%9E%8Bprototype" rel="nofollow">
+      原型链
+     </a>
+    </p>
+    <p id="%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E5%BC%8F%E7%BB%A7%E6%89%BF%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E5%BC%8F%E7%BB%A7%E6%89%BF%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      寄生组合式继承（⭐手写）
+     </a>
+    </p>
+    <p id="Iterator%EF%BC%88%E9%81%8D%E5%8E%86%E5%99%A8%EF%BC%89%20%E5%92%8C%20for%E2%80%A6of%C2%A0-toc" style="margin-left:40px;">
+     <a href="#Iterator%EF%BC%88%E9%81%8D%E5%8E%86%E5%99%A8%EF%BC%89%20%E5%92%8C%20for%E2%80%A6of%C2%A0" rel="nofollow">
+      Iterator，for in，for of，forEach，map循环遍历
+     </a>
+    </p>
+    <p id="Iterator-toc" style="margin-left:80px;">
+     <a href="#Iterator" rel="nofollow">
+      Iterator
+     </a>
+    </p>
+    <p id="for%20of-toc" style="margin-left:80px;">
+     <a href="#for%20of" rel="nofollow">
+      for of
+     </a>
+    </p>
+    <p id="for%20in-toc" style="margin-left:80px;">
+     <a href="#for%20in" rel="nofollow">
+      for in
+     </a>
+    </p>
+    <p id="forEach-toc" style="margin-left:80px;">
+     <a href="#forEach" rel="nofollow">
+      forEach
+     </a>
+    </p>
+    <p id="map-toc" style="margin-left:80px;">
+     <a href="#map" rel="nofollow">
+      map
+     </a>
+    </p>
+    <p id="%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E5%92%8C%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0-toc" style="margin-left:40px;">
+     <a href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E5%92%8C%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0" rel="nofollow">
+      匿名函数、箭头函数、构造函数
+     </a>
+    </p>
+    <p id="%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0" rel="nofollow">
+      匿名函数
+     </a>
+    </p>
+    <p id="%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0" rel="nofollow">
+      箭头函数
+     </a>
+    </p>
+    <p id="%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0" rel="nofollow">
+      构造函数
+     </a>
+    </p>
+    <p id="this-toc" style="margin-left:80px;">
+     <a href="#this" rel="nofollow">
+      this
+     </a>
+    </p>
+    <p id="call%E3%80%81apply%E3%80%81bind%E4%B8%89%E8%80%85%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB_hexinyu_1022%E7%9A%84%E5%8D%9A%E5%AE%A2-CSDN%E5%8D%9A%E5%AE%A2_callapplybind%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB-toc" style="margin-left:40px;">
+     <a href="#call%E3%80%81apply%E3%80%81bind%E4%B8%89%E8%80%85%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB_hexinyu_1022%E7%9A%84%E5%8D%9A%E5%AE%A2-CSDN%E5%8D%9A%E5%AE%A2_callapplybind%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB" rel="nofollow">
+      call、apply、bind改变this
+     </a>
+    </p>
+    <p id="bind%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#bind%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      call （⭐手写）
+     </a>
+    </p>
+    <p id="apply%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#apply%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      apply（⭐手写）
+     </a>
+    </p>
+    <p id="bind%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#bind%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      bind（⭐手写）
+     </a>
+    </p>
+    <p id="%E9%97%AD%E5%8C%85-toc" style="margin-left:40px;">
+     <a href="#%E9%97%AD%E5%8C%85" rel="nofollow">
+      闭包（closure）
+     </a>
+    </p>
+    <p id="%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8FRegular%20Expression(RegExp)%C2%A0-toc" style="margin-left:40px;">
+     <a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8FRegular%20Expression%28RegExp%29%C2%A0" rel="nofollow">
+      正则表达式Regular Expression(RegExp)
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E4%BF%AE%E9%A5%B0%E7%AC%A6-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E4%BF%AE%E9%A5%B0%E7%AC%A6" rel="nofollow">
+      常用修饰符
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6" rel="nofollow">
+      常用字符
+     </a>
+    </p>
+    <p id="%E5%90%88%E6%B3%95%E7%9A%84URL-toc" style="margin-left:80px;">
+     <a href="#%E5%90%88%E6%B3%95%E7%9A%84URL" rel="nofollow">
+      合法的URL （⭐手写）
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0-toc" style="margin-left:40px;">
+     <a href="#%E5%87%BD%E6%95%B0" rel="nofollow">
+      函数
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0%E7%9A%84length%E5%B1%9E%E6%80%A7-toc" style="margin-left:80px;">
+     <a href="#%E5%87%BD%E6%95%B0%E7%9A%84length%E5%B1%9E%E6%80%A7" rel="nofollow">
+      函数的length属性
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      函数声明与函数表达式的区别
+     </a>
+    </p>
+    <p id="%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%88iife%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%88iife%EF%BC%89" rel="nofollow">
+      立即执行函数（iife）
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-toc" style="margin-left:0px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95" rel="nofollow">
+      常用方法
+     </a>
+    </p>
+    <p id="Math-toc" style="margin-left:40px;">
+     <a href="#Math" rel="nofollow">
+      异或运算^
+     </a>
+    </p>
+    <p id="Math-toc" style="margin-left:40px;">
+     <a href="#Math" rel="nofollow">
+      Math
+     </a>
+    </p>
+    <p id="Number-toc" style="margin-left:40px;">
+     <a href="#Number" rel="nofollow">
+      Number
+     </a>
+    </p>
+    <p id="%E7%89%B9%E6%AE%8A%E5%80%BC-toc" style="margin-left:80px;">
+     <a href="#%E7%89%B9%E6%AE%8A%E5%80%BC" rel="nofollow">
+      特殊值
+     </a>
+    </p>
+    <p id="%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95-toc" style="margin-left:80px;">
+     <a href="#%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95" rel="nofollow">
+      科学计数法
+     </a>
+    </p>
+    <p id="Array-toc" style="margin-left:40px;">
+     <a href="#Array" rel="nofollow">
+      Map
+     </a>
+    </p>
+    <p id="Set-toc" style="margin-left:40px;">
+     <a href="#Set" rel="nofollow">
+      Set
+     </a>
+    </p>
+    <p id="set%E5%88%A4%E6%96%AD%E5%80%BC%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9C%BA%E5%88%B6-toc" style="margin-left:80px;">
+     <a href="#set%E5%88%A4%E6%96%AD%E5%80%BC%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9C%BA%E5%88%B6" rel="nofollow">
+      set判断值相等的机制
+     </a>
+    </p>
+    <p id="%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      数组去重 （⭐手写）
+     </a>
+    </p>
+    <p id="Array-toc" style="margin-left:40px;">
+     <a href="#Array" rel="nofollow">
+      Array
+     </a>
+    </p>
+    <p id="%E5%AD%97%E7%AC%A6%E4%B8%B2-toc" style="margin-left:80px;">
+     <a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2" rel="nofollow">
+      Array.filter（⭐手写）
+     </a>
+    </p>
+    <p id="Array.map%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#Array.map%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      Array.map（⭐手写）
+     </a>
+    </p>
+    <p id="Array.reduce%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#Array.reduce%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      Array.reduce（⭐手写）
+     </a>
+    </p>
+    <p id="String-toc" style="margin-left:40px;">
+     <a href="#String" rel="nofollow">
+      String
+     </a>
+    </p>
+    <p id="indexOf%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#indexOf%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      Class
+     </a>
+    </p>
+    <p id="%E7%B1%BB%E5%A3%B0%E6%98%8E-toc" style="margin-left:80px;">
+     <a href="#%E7%B1%BB%E5%A3%B0%E6%98%8E" rel="nofollow">
+      类声明
+     </a>
+    </p>
+    <p id="类表达式-toc" style="margin-left:80px;">
+     <a href="#%E7%B1%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F" rel="nofollow">
+      类表达式
+     </a>
+    </p>
+    <p id="使用_super_调用超类-toc" style="margin-left:80px;">
+     <a href="#%E4%BD%BF%E7%94%A8_super_%E8%B0%83%E7%94%A8%E8%B6%85%E7%B1%BB" rel="nofollow">
+      使用 super 调用超类
+     </a>
+    </p>
+    <p id="private-toc" style="margin-left:80px;">
+     <a href="#private" rel="nofollow">
+      private
+     </a>
+    </p>
+    <p id="static%C2%A0%E5%85%B3%E9%94%AE%E5%AD%97-toc" style="margin-left:80px;">
+     <a href="#static%C2%A0%E5%85%B3%E9%94%AE%E5%AD%97" rel="nofollow">
+      static 关键字
+     </a>
+    </p>
+    <p id="%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E5%BC%8F" rel="nofollow">
+      创建对象的方式
+     </a>
+    </p>
+    <p id="Object-toc" style="margin-left:40px;">
+     <a href="#Object" rel="nofollow">
+      Object
+     </a>
+    </p>
+    <p id="Object.create%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#Object.create%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      Object.create （⭐手写）
+     </a>
+    </p>
+    <p id="Object.freeze%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#Object.freeze%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      Object.freeze （⭐手写）
+     </a>
+    </p>
+    <p id="indexOf%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#indexOf%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      indexOf （⭐手写）
+     </a>
+    </p>
+    <p id="%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E7%8F%82%E9%87%8C%E5%8C%96-toc" style="margin-left:40px;">
+     <a href="#%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E7%8F%82%E9%87%8C%E5%8C%96" rel="nofollow">
+      高阶函数和函数的珂里化Currying
+     </a>
+    </p>
+    <p id="%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F" rel="nofollow">
+      Arguments对象
+     </a>
+    </p>
+    <p id="%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D-toc" style="margin-left:40px;">
+     <a href="#%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D" rel="nofollow">
+      深浅拷贝
+     </a>
+    </p>
+    <p id="%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      深拷贝（⭐手写）
+     </a>
+    </p>
+    <p id="%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      严格模式
+     </a>
+    </p>
+    <p id="%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81-toc" style="margin-left:40px;">
+     <a href="#%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81" rel="nofollow">
+      防抖 （⭐手写）
+     </a>
+    </p>
+    <p id="%E8%8A%82%E6%B5%81%C2%A0%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E8%8A%82%E6%B5%81%C2%A0%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      节流（⭐手写）
+     </a>
+    </p>
+    <p id="%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81%E5%BA%94%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81%E5%BA%94%E7%94%A8" rel="nofollow">
+      防抖、节流应用
+     </a>
+    </p>
+    <p id="%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-toc" style="margin-left:40px;">
+     <a href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6" rel="nofollow">
+      垃圾回收(GC)
+     </a>
+    </p>
+    <p id="%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5-toc" style="margin-left:80px;">
+     <a href="#%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5" rel="nofollow">
+      内存分配
+     </a>
+    </p>
+    <p id="%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5-toc" style="margin-left:80px;">
+     <a href="#%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5" rel="nofollow">
+      回收策略
+     </a>
+    </p>
+    <p id="%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F" rel="nofollow">
+      内存泄漏
+     </a>
+    </p>
+    <p id="%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1-toc" style="margin-left:40px;">
+     <a href="#%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1" rel="nofollow">
+      宏任务、微任务、Event-Loop
+     </a>
+    </p>
+    <p id="setImmediate%E4%B8%8EsetTimeout%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#setImmediate%E4%B8%8EsetTimeout%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      setImmediate与setTimeout的区别
+     </a>
+    </p>
+    <p id="JS%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%96%B9%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#JS%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%96%B9%E5%BC%8F" rel="nofollow">
+      JS延迟加载的方式
+     </a>
+    </p>
+    <p id="HTTP%E5%8D%8F%E8%AE%AE-toc" style="margin-left:0px;">
+     <a href="#HTTP%E5%8D%8F%E8%AE%AE" rel="nofollow">
+      服务器端渲染
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-toc" style="margin-left:80px;">
+     <a href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" rel="nofollow">
+      基本概念
+     </a>
+    </p>
+    <p id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93" rel="nofollow">
+      服务器端渲染SSR
+     </a>
+    </p>
+    <p id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93-toc" style="margin-left:80px;">
+     <a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93" rel="nofollow">
+      客户端渲染
+     </a>
+    </p>
+    <p id="GET%E5%92%8CPOST%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82-toc" style="margin-left:40px;">
+     <a href="#GET%E5%92%8CPOST%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82" rel="nofollow">
+      浏览器从输入url到渲染页面 过程⭐⭐⭐
+     </a>
+    </p>
+    <p id="OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCP%2FIP%E5%8D%8F%E8%AE%AE-toc" style="margin-left:40px;">
+     <a href="#OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCP%2FIP%E5%8D%8F%E8%AE%AE" rel="nofollow">
+      DNS
+     </a>
+    </p>
+    <p id="%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B%E2%AD%90%E2%AD%90" rel="nofollow">
+      解析过程⭐⭐
+     </a>
+    </p>
+    <p id="OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCP%2FIP%E5%8D%8F%E8%AE%AE%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCP%2FIP%E5%8D%8F%E8%AE%AE%E2%AD%90" rel="nofollow">
+      OSI模型和TCP/IP协议⭐
+     </a>
+    </p>
+    <p id="HTTP%E5%8D%8F%E8%AE%AE-toc" style="margin-left:0px;">
+     <a href="#HTTP%E5%8D%8F%E8%AE%AE" rel="nofollow">
+      HTTP协议
+     </a>
+    </p>
+    <p id="Http%E5%92%8CHttps%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#Http%E5%92%8CHttps%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89" rel="nofollow">
+      Http和Https区别⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F" rel="nofollow">
+      常见的请求方式
+     </a>
+    </p>
+    <p id="GET%E5%92%8CPOST%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#GET%E5%92%8CPOST%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      GET和POST发送请求⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E5%BC%82%E5%90%8C-toc" style="margin-left:80px;">
+     <a href="#%E5%BC%82%E5%90%8C" rel="nofollow">
+      异同
+     </a>
+    </p>
+    <p id="POST%E7%9A%84content-type%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81-toc" style="margin-left:80px;">
+     <a href="#POST%E7%9A%84content-type%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81" rel="nofollow">
+      POST的content-type数据编码
+     </a>
+    </p>
+    <p id="http%E6%8A%A5%E6%96%87-toc" style="margin-left:40px;">
+     <a href="#http%E6%8A%A5%E6%96%87" rel="nofollow">
+      http报文
+     </a>
+    </p>
+    <p id="HTTP%E8%AF%B7%E6%B1%82(Request)%E6%8A%A5%E6%96%87-toc" style="margin-left:80px;">
+     <a href="#HTTP%E8%AF%B7%E6%B1%82%28Request%29%E6%8A%A5%E6%96%87" rel="nofollow">
+      HTTP请求(Request)报文
+     </a>
+    </p>
+    <p id="HTTP%E5%93%8D%E5%BA%94(Response)%E6%8A%A5%E6%96%87-toc" style="margin-left:80px;">
+     <a href="#HTTP%E5%93%8D%E5%BA%94%28Response%29%E6%8A%A5%E6%96%87" rel="nofollow">
+      HTTP响应(Response)报文
+     </a>
+    </p>
+    <p id="http%E7%8A%B6%E6%80%81%E7%A0%81-toc" style="margin-left:40px;">
+     <a href="#http%E7%8A%B6%E6%80%81%E7%A0%81" rel="nofollow">
+      http版本⭐⭐⭐
+     </a>
+    </p>
+    <p id="http%E7%8A%B6%E6%80%81%E7%A0%81%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#http%E7%8A%B6%E6%80%81%E7%A0%81%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      http状态码⭐⭐⭐
+     </a>
+    </p>
+    <p id="TCP%E5%92%8CUDP-toc" style="margin-left:40px;">
+     <a href="#TCP%E5%92%8CUDP" rel="nofollow">
+      UDP⭐
+     </a>
+    </p>
+    <p id="TCP%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#TCP%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      TCP⭐⭐⭐
+     </a>
+    </p>
+    <p id="keep-alive%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5-toc" style="margin-left:80px;">
+     <a href="#keep-alive%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5" rel="nofollow">
+      三次握手
+     </a>
+    </p>
+    <p id="%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B-toc" style="margin-left:80px;">
+     <a href="#%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B" rel="nofollow">
+      四次挥手
+     </a>
+    </p>
+    <p id="%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-toc" style="margin-left:80px;">
+     <a href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6" rel="nofollow">
+      流量控制（滑动窗口机制）
+     </a>
+    </p>
+    <p id="%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-toc" style="margin-left:80px;">
+     <a href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6" rel="nofollow">
+      拥塞控制
+     </a>
+    </p>
+    <p id="keep-alive%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5-toc" style="margin-left:80px;">
+     <a href="#keep-alive%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5" rel="nofollow">
+      keep-alive持久连接
+     </a>
+    </p>
+    <p id="*%E7%B2%98%E5%8C%85-toc" style="margin-left:40px;">
+     <a href="#*%E7%B2%98%E5%8C%85" rel="nofollow">
+      *粘包
+     </a>
+    </p>
+    <p id="%E7%BC%93%E5%AD%98-toc" style="margin-left:0px;">
+     <a href="#%E7%BC%93%E5%AD%98" rel="nofollow">
+      缓存⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F" rel="nofollow">
+      存储方式
+     </a>
+    </p>
+    <p id="%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98-toc" style="margin-left:80px;">
+     <a href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98" rel="nofollow">
+      强制缓存
+     </a>
+    </p>
+    <p id="%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98-toc" style="margin-left:80px;">
+     <a href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98" rel="nofollow">
+      协商缓存
+     </a>
+    </p>
+    <p id="%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8-toc" style="margin-left:40px;">
+     <a href="#%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8" rel="nofollow">
+      本地存储
+     </a>
+    </p>
+    <p id="cookie-toc" style="margin-left:80px;">
+     <a href="#cookie" rel="nofollow">
+      cookie
+     </a>
+    </p>
+    <p id="session-toc" style="margin-left:80px;">
+     <a href="#session" rel="nofollow">
+      session
+     </a>
+    </p>
+    <p id="%E5%85%B1%E5%90%8C%E7%82%B9-toc" style="margin-left:80px;">
+     <a href="#%E5%85%B1%E5%90%8C%E7%82%B9" rel="nofollow">
+      共同点
+     </a>
+    </p>
+    <p id="Cookie%E3%80%81localStorage%E5%92%8CsessionStorage-toc" style="margin-left:80px;">
+     <a href="#Cookie%E3%80%81localStorage%E5%92%8CsessionStorage" rel="nofollow">
+      Cookie、localStorage和sessionStorage
+     </a>
+    </p>
+    <p id="%E5%AD%98%E5%82%A8%E5%9C%B0-toc" style="margin-left:40px;">
+     <a href="#%E5%AD%98%E5%82%A8%E5%9C%B0" rel="nofollow">
+      存储地
+     </a>
+    </p>
+    <p id="%E5%86%85%E5%AD%98%E7%BC%93%E5%AD%98(from%20memory%20cache)-toc" style="margin-left:80px;">
+     <a href="#%E5%86%85%E5%AD%98%E7%BC%93%E5%AD%98%28from%20memory%20cache%29" rel="nofollow">
+      内存缓存(from memory cache)
+     </a>
+    </p>
+    <p id="%E7%A1%AC%E7%9B%98%E7%BC%93%E5%AD%98(from%20disk%20cache)-toc" style="margin-left:80px;">
+     <a href="#%E7%A1%AC%E7%9B%98%E7%BC%93%E5%AD%98%28from%20disk%20cache%29" rel="nofollow">
+      硬盘缓存(from disk cache)
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="Token%E3%80%81JWT-toc" style="margin-left:0px;">
+     <a href="#Token%E3%80%81JWT" rel="nofollow">
+      Token、JWT
+     </a>
+    </p>
+    <p id="web%E5%AE%89%E5%85%A8%E5%8F%8A%E9%98%B2%E6%8A%A4-toc" style="margin-left:40px;">
+     <a href="#web%E5%AE%89%E5%85%A8%E5%8F%8A%E9%98%B2%E6%8A%A4" rel="nofollow">
+      认证（Authentication）
+     </a>
+    </p>
+    <p id="%E6%8E%88%E6%9D%83%EF%BC%88Authorization%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E6%8E%88%E6%9D%83%EF%BC%88Authorization%EF%BC%89" rel="nofollow">
+      授权（Authorization）
+     </a>
+    </p>
+    <p id="%E5%87%AD%E8%AF%81%EF%BC%88Credentials%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E5%87%AD%E8%AF%81%EF%BC%88Credentials%EF%BC%89" rel="nofollow">
+      凭证（Credentials）
+     </a>
+    </p>
+    <p id="Token%EF%BC%88%E4%BB%A4%E7%89%8C%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#Token%EF%BC%88%E4%BB%A4%E7%89%8C%EF%BC%89" rel="nofollow">
+      Token（令牌）
+     </a>
+    </p>
+    <p id="Acesss%20Token-toc" style="margin-left:80px;">
+     <a href="#Acesss%20Token" rel="nofollow">
+      Acesss Token
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E4%BA%8Etoken%E7%9A%84%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E5%9F%BA%E4%BA%8Etoken%E7%9A%84%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E2%AD%90%E2%AD%90" rel="nofollow">
+      基于token的登录流程⭐⭐
+     </a>
+    </p>
+    <p id="Refresh%20Token-toc" style="margin-left:80px;">
+     <a href="#Refresh%20Token" rel="nofollow">
+      Refresh Token
+     </a>
+    </p>
+    <p id="Token%20%E5%92%8C%20Session%20%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:40px;">
+     <a href="#Token%20%E5%92%8C%20Session%20%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      Token 和 Session 的区别
+     </a>
+    </p>
+    <p id="JSON%20Web%20Token%EF%BC%88JWT%EF%BC%89%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#JSON%20Web%20Token%EF%BC%88JWT%EF%BC%89%E2%AD%90" rel="nofollow">
+      JSON Web Token（JWT）⭐
+     </a>
+    </p>
+    <p id="%E5%86%85%E5%AE%B9-toc" style="margin-left:80px;">
+     <a href="#%E5%86%85%E5%AE%B9" rel="nofollow">
+      内容
+     </a>
+    </p>
+    <p id="%E6%96%B9%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E6%96%B9%E5%BC%8F" rel="nofollow">
+      方式
+     </a>
+    </p>
+    <p id="%E4%BC%98%E7%BC%BA%E7%82%B9-toc" style="margin-left:80px;">
+     <a href="#%E4%BC%98%E7%BC%BA%E7%82%B9" rel="nofollow">
+      优缺点
+     </a>
+    </p>
+    <p id="Token%20%E5%92%8C%20JWT%20%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#Token%20%E5%92%8C%20JWT%20%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      Token 和 JWT 的区别
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95-toc" style="margin-left:40px;">
+     <a href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" rel="nofollow">
+      常见的加密算法
+     </a>
+    </p>
+    <p id="%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%A0%BC%E5%BC%8F-toc" style="margin-left:0px;">
+     <a href="#%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%A0%BC%E5%BC%8F" rel="nofollow">
+      数据交换格式
+     </a>
+    </p>
+    <p id="HTML%E5%92%8CXML-toc" style="margin-left:40px;">
+     <a href="#HTML%E5%92%8CXML" rel="nofollow">
+      XML
+     </a>
+    </p>
+    <p id="HTML%E5%92%8CXML-toc" style="margin-left:80px;">
+     <a href="#HTML%E5%92%8CXML" rel="nofollow">
+      HTML和XML
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="JSON-toc" style="margin-left:80px;">
+     <a href="#JSON" rel="nofollow">
+      JSX
+     </a>
+    </p>
+    <p id="Babel-toc" style="margin-left:80px;">
+     <a href="#Babel" rel="nofollow">
+      Babel⭐
+     </a>
+    </p>
+    <p id="JSON-toc" style="margin-left:40px;">
+     <a href="#JSON" rel="nofollow">
+      JSON
+     </a>
+    </p>
+    <p id="JSON%E8%A7%A3%E6%9E%90%E5%92%8C%E7%94%9F%E5%AD%98-toc" style="margin-left:80px;">
+     <a href="#JSON%E8%A7%A3%E6%9E%90%E5%92%8C%E7%94%9F%E5%AD%98" rel="nofollow">
+      JSON解析和生成
+     </a>
+    </p>
+    <p id="%E5%BC%82%E6%AD%A5-toc" style="margin-left:0px;">
+     <a href="#%E5%BC%82%E6%AD%A5" rel="nofollow">
+      异步⭐⭐⭐
+     </a>
+    </p>
+    <p id="webworker%EF%BC%88%E5%88%9B%E5%BB%BA%E5%88%86%E7%BA%BF%E7%A8%8B%EF%BC%89%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#webworker%EF%BC%88%E5%88%9B%E5%BB%BA%E5%88%86%E7%BA%BF%E7%A8%8B%EF%BC%89%E2%AD%90" rel="nofollow">
+      webworker（创建分线程）⭐
+     </a>
+    </p>
+    <p id="%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9Afetch-toc" style="margin-left:40px;">
+     <a href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9Afetch" rel="nofollow">
+      AJAX
+     </a>
+    </p>
+    <p id="%E5%8E%9F%E7%94%9FAJAX%E5%88%9B%E5%BB%BA-toc" style="margin-left:80px;">
+     <a href="#%E5%8E%9F%E7%94%9FAJAX%E5%88%9B%E5%BB%BA" rel="nofollow">
+      原生AJAX创建⭐
+     </a>
+    </p>
+    <p id="jQuery%20ajax-toc" style="margin-left:80px;">
+     <a href="#jQuery%20ajax" rel="nofollow">
+      *jQuery ajax
+     </a>
+    </p>
+    <p id="Axios-toc" style="margin-left:40px;">
+     <a href="#Axios" rel="nofollow">
+      Axios⭐⭐
+     </a>
+    </p>
+    <p id="Axios%20API-toc" style="margin-left:80px;">
+     <a href="#Axios%20API" rel="nofollow">
+      Axios API
+     </a>
+    </p>
+    <p id="%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9APromise-toc" style="margin-left:40px;">
+     <a href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9APromise" rel="nofollow">
+      setTimeout()（倒）计时（手写）⭐
+     </a>
+    </p>
+    <p id="setTimeout()%E5%92%8CsetInterval()%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#setTimeout%28%29%E5%92%8CsetInterval%28%29%E2%AD%90" rel="nofollow">
+      setTimeout()和setInterval()⭐
+     </a>
+    </p>
+    <p id="Promise%EF%BC%88ES6%20%E8%A7%A3%E5%86%B3%E5%9C%B0%E7%8B%B1%E5%9B%9E%E8%B0%83%EF%BC%89%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:40px;">
+     <a href="#Promise%EF%BC%88ES6%20%E8%A7%A3%E5%86%B3%E5%9C%B0%E7%8B%B1%E5%9B%9E%E8%B0%83%EF%BC%89%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      Promise（ES6 解决地狱回调）⭐⭐⭐
+     </a>
+    </p>
+    <p id="promise%E8%B0%83%E7%94%A8then%EF%BC%8C-toc" style="margin-left:80px;">
+     <a href="#promise%E8%B0%83%E7%94%A8then%EF%BC%8C" rel="nofollow">
+      promise调用then，
+     </a>
+    </p>
+    <p id="%E5%85%BC%E5%AE%B9%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1-toc" style="margin-left:80px;">
+     <a href="#%E5%85%BC%E5%AE%B9%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1" rel="nofollow">
+      兼容同步任务
+     </a>
+    </p>
+    <p id="Promise.prototype.catch()-toc" style="margin-left:80px;">
+     <a href="#Promise.prototype.catch%28%29" rel="nofollow">
+      Promise.prototype.catch()
+     </a>
+    </p>
+    <p id="Promise.prototype.finally()-toc" style="margin-left:80px;">
+     <a href="#Promise.prototype.finally%28%29" rel="nofollow">
+      Promise.prototype.finally()
+     </a>
+    </p>
+    <p id="Promise.resolve()-toc" style="margin-left:80px;">
+     <a href="#Promise.resolve%28%29" rel="nofollow">
+      Promise.resolve()
+     </a>
+    </p>
+    <p id="Promise.reject()-toc" style="margin-left:80px;">
+     <a href="#Promise.reject%28%29" rel="nofollow">
+      Promise.reject()
+     </a>
+    </p>
+    <p id="Promise.all()-toc" style="margin-left:80px;">
+     <a href="#Promise.all%28%29" rel="nofollow">
+      Promise.all()
+     </a>
+    </p>
+    <p id="Promise.race()-toc" style="margin-left:80px;">
+     <a href="#Promise.race%28%29" rel="nofollow">
+      Promise.race()
+     </a>
+    </p>
+    <p id="Promise.all()%E5%93%AA%E6%80%95%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%A4%B1%E8%B4%A5%E4%BA%86%E4%B9%9F%E8%83%BD%E5%BE%97%E5%88%B0%E5%85%B6%E4%BD%99%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%AF%B7%E6%B1%82%E7%BB%93%E6%9E%9C%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#Promise.all%28%29%E5%93%AA%E6%80%95%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%A4%B1%E8%B4%A5%E4%BA%86%E4%B9%9F%E8%83%BD%E5%BE%97%E5%88%B0%E5%85%B6%E4%BD%99%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%AF%B7%E6%B1%82%E7%BB%93%E6%9E%9C%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%AD%90%E2%AD%90" rel="nofollow">
+      Promise.all()哪怕一个请求失败了也能得到其余正确的请求结果的解决方案⭐⭐
+     </a>
+    </p>
+    <p id="Mypromise-toc" style="margin-left:80px;">
+     <a href="#Mypromise" rel="nofollow">
+      Mypromise
+     </a>
+    </p>
+    <p id="fetch-toc" style="margin-left:40px;">
+     <a href="#fetch" rel="nofollow">
+      fetch（ES6 拉取网络资源）
+     </a>
+    </p>
+    <p id="*Generator-toc" style="margin-left:40px;">
+     <a href="#*Generator" rel="nofollow">
+      *Generator
+     </a>
+    </p>
+    <p id="async%2Fawait%E5%87%BD%E6%95%B0-toc" style="margin-left:40px;">
+     <a href="#async%2Fawait%E5%87%BD%E6%95%B0" rel="nofollow">
+      async/await函数
+     </a>
+    </p>
+    <p id="SPA%E5%92%8CMPA-toc" style="margin-left:40px;">
+     <a href="#SPA%E5%92%8CMPA" rel="nofollow">
+      SPA和MPA
+     </a>
+    </p>
+    <p id="URL-toc" style="margin-left:0px;">
+     <a href="#URL" rel="nofollow">
+      URL
+     </a>
+    </p>
+    <p id="URL%E5%92%8CURI-toc" style="margin-left:40px;">
+     <a href="#URL%E5%92%8CURI" rel="nofollow">
+      URL和URI
+     </a>
+    </p>
+    <p id="%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1-toc" style="margin-left:0px;">
+     <a href="#%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1" rel="nofollow">
+      跨域通信⭐⭐⭐
+     </a>
+    </p>
+    <p id="JSONP%E8%B7%A8%E5%9F%9F-toc" style="margin-left:40px;">
+     <a href="#JSONP%E8%B7%A8%E5%9F%9F" rel="nofollow">
+      JSONP跨域（⭐手写）
+     </a>
+    </p>
+    <p id="%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0-toc" style="margin-left:80px;">
+     <a href="#%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0" rel="nofollow">
+      原生实现
+     </a>
+    </p>
+    <p id="%E5%B0%81%E8%A3%85JSONP-toc" style="margin-left:80px;">
+     <a href="#%E5%B0%81%E8%A3%85JSONP" rel="nofollow">
+      封装JSONP
+     </a>
+    </p>
+    <p id="jQuery%E5%AE%9E%E7%8E%B0-toc" style="margin-left:80px;">
+     <a href="#jQuery%E5%AE%9E%E7%8E%B0" rel="nofollow">
+      jQuery实现
+     </a>
+    </p>
+    <p id="%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%88CORS%EF%BC%89-toc" style="margin-left:40px;">
+     <a href="#%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%88CORS%EF%BC%89" rel="nofollow">
+      跨域资源共享（CORS）（⭐手写）
+     </a>
+    </p>
+    <p id="%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82-toc" style="margin-left:80px;">
+     <a href="#%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82" rel="nofollow">
+      简单请求
+     </a>
+    </p>
+    <p id="%E6%99%AE%E9%80%9A%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82-toc" style="margin-left:80px;">
+     <a href="#%E6%99%AE%E9%80%9A%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82" rel="nofollow">
+      普通跨域请求
+     </a>
+    </p>
+    <p id="%E5%B8%A6cookie%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%A6cookie%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82" rel="nofollow">
+      带cookie跨域请求（⭐手写）
+     </a>
+    </p>
+    <p id="cors%E4%B8%AD%E9%97%B4%E4%BB%B6-toc" style="margin-left:80px;">
+     <a href="#cors%E4%B8%AD%E9%97%B4%E4%BB%B6" rel="nofollow">
+      cors中间件
+     </a>
+    </p>
+    <p id="%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82-toc" style="margin-left:80px;">
+     <a href="#%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82" rel="nofollow">
+      复杂请求
+     </a>
+    </p>
+    <p id="postMessage-toc" style="margin-left:80px;">
+     <a href="#postMessage" rel="nofollow">
+      postMessage
+     </a>
+    </p>
+    <p id="%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8-toc" style="margin-left:40px;">
+     <a href="#%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" rel="nofollow">
+      代理服务器
+     </a>
+    </p>
+    <p id="proxy-toc" style="margin-left:40px;">
+     <a href="#proxy" rel="nofollow">
+      proxy代理服务器（ES6）
+     </a>
+    </p>
+    <p id="Reflect%EF%BC%88ES6%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#Reflect%EF%BC%88ES6%EF%BC%89" rel="nofollow">
+      Reflect（ES6）
+     </a>
+    </p>
+    <p id="handler%E6%8B%A6%E6%88%AA%E5%B1%9E%E6%80%A7-toc" style="margin-left:80px;">
+     <a href="#handler%E6%8B%A6%E6%88%AA%E5%B1%9E%E6%80%A7" rel="nofollow">
+      handler拦截属性
+     </a>
+    </p>
+    <p id="get(target%2CpropKey%2Creceiver)-toc" style="margin-left:80px;">
+     <a href="#get%28target%2CpropKey%2Creceiver%29" rel="nofollow">
+      get(target,propKey,receiver)
+     </a>
+    </p>
+    <p id="set(target%2CpropKey%2Cvalue%2Creceiver)-toc" style="margin-left:80px;">
+     <a href="#set%28target%2CpropKey%2Cvalue%2Creceiver%29" rel="nofollow">
+      set(target,propKey,value,receiver)
+     </a>
+    </p>
+    <p id="deleteProperty(target%2CpropKey)-toc" style="margin-left:80px;">
+     <a href="#deleteProperty%28target%2CpropKey%29" rel="nofollow">
+      deleteProperty(target,propKey)
+     </a>
+    </p>
+    <p id="%E5%8F%96%E6%B6%88%E4%BB%A3%E7%90%86Proxy.revocable(target%2C%20handler)-toc" style="margin-left:80px;">
+     <a href="#%E5%8F%96%E6%B6%88%E4%BB%A3%E7%90%86Proxy.revocable%28target%2C%20handler%29" rel="nofollow">
+      取消代理Proxy.revocable(target, handler)
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-toc" style="margin-left:40px;">
+     <a href="#Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86" rel="nofollow">
+      Nginx反向代理
+     </a>
+    </p>
+    <p id="%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-toc" style="margin-left:80px;">
+     <a href="#%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86" rel="nofollow">
+      正向代理和反向代理
+     </a>
+    </p>
+    <p id="websocket%E5%8D%8F%E8%AE%AE-toc" style="margin-left:40px;">
+     <a href="#websocket%E5%8D%8F%E8%AE%AE" rel="nofollow">
+      websocket协议
+     </a>
+    </p>
+    <p id="web%E5%AE%89%E5%85%A8%E5%8F%8A%E9%98%B2%E6%8A%A4-toc" style="margin-left:0px;">
+     <a href="#web%E5%AE%89%E5%85%A8%E5%8F%8A%E9%98%B2%E6%8A%A4" rel="nofollow">
+      web安全及防护
+     </a>
+    </p>
+    <p id="XSS%E6%94%BB%E5%87%BB-toc" style="margin-left:40px;">
+     <a href="#XSS%E6%94%BB%E5%87%BB" rel="nofollow">
+      XSS攻击
+     </a>
+    </p>
+    <p id="CSRF%E6%94%BB%E5%87%BB%E2%AD%90%E2%AD%90%E2%AD%90%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B-toc" style="margin-left:40px;">
+     <a href="#CSRF%E6%94%BB%E5%87%BB%E2%AD%90%E2%AD%90%E2%AD%90%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B" rel="nofollow">
+      CSRF攻击⭐⭐⭐
+     </a>
+    </p>
+    <p id="SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B-toc" style="margin-left:40px;">
+     <a href="#SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B" rel="nofollow">
+      SQL注入攻击
+     </a>
+    </p>
+    <p id="DDoS%E6%94%BB%E5%87%BB-toc" style="margin-left:40px;">
+     <a href="#DDoS%E6%94%BB%E5%87%BB" rel="nofollow">
+      DDoS攻击
+     </a>
+    </p>
+    <p id="main-toc-toc" style="margin-left:0px;">
+     <a href="#main-toc" rel="nofollow">
+      考试范围收录
+     </a>
+    </p>
+    <p id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E9%80%89%E6%8B%A9%E9%A2%98%EF%BC%89-toc" style="margin-left:0px;">
+     <a href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E9%80%89%E6%8B%A9%E9%A2%98%EF%BC%89" rel="nofollow">
+      选择题
+     </a>
+    </p>
+    <p id="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-toc" style="margin-left:0px;">
+     <a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" rel="nofollow">
+      常用设计模式
+     </a>
+    </p>
+    <p id="%E5%8E%9F%E5%88%99-toc" style="margin-left:40px;">
+     <a href="#%E5%8E%9F%E5%88%99" rel="nofollow">
+      原则
+     </a>
+    </p>
+    <p id="%E5%88%9B%E5%BB%BA%E5%9E%8B-toc" style="margin-left:40px;">
+     <a href="#%E5%88%9B%E5%BB%BA%E5%9E%8B" rel="nofollow">
+      创建型
+     </a>
+    </p>
+    <p id="%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      单例模式
+     </a>
+    </p>
+    <p id="%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      工厂模式
+     </a>
+    </p>
+    <p id="%E7%BB%93%E6%9E%84%E5%9E%8B-toc" style="margin-left:40px;">
+     <a href="#%E7%BB%93%E6%9E%84%E5%9E%8B" rel="nofollow">
+      结构型
+     </a>
+    </p>
+    <p id="%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      代理模式
+     </a>
+    </p>
+    <p id="%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      装饰器模式
+     </a>
+    </p>
+    <p id="%E8%A1%8C%E4%B8%BA%E5%9E%8B-toc" style="margin-left:40px;">
+     <a href="#%E8%A1%8C%E4%B8%BA%E5%9E%8B" rel="nofollow">
+      行为型
+     </a>
+    </p>
+    <p id="%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      职责链模式
+     </a>
+    </p>
+    <p id="%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      观察者模式
+     </a>
+    </p>
+    <p id="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-toc" style="margin-left:0px;">
+     <a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" rel="nofollow">
+      操作系统
+     </a>
+    </p>
+    <p id="%E8%BF%9B%E7%A8%8B-toc" style="margin-left:40px;">
+     <a href="#%E8%BF%9B%E7%A8%8B" rel="nofollow">
+      进程
+     </a>
+    </p>
+    <p id="%E7%A8%8B%E5%BA%8F%E3%80%81%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E7%A8%8B%E5%BA%8F%E3%80%81%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      程序、进程、线程⭐
+     </a>
+    </p>
+    <p id="%E6%AD%BB%E9%94%81-toc" style="margin-left:80px;">
+     <a href="#%E6%AD%BB%E9%94%81" rel="nofollow">
+      死锁
+     </a>
+    </p>
+    <p id="%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C-toc" style="margin-left:80px;">
+     <a href="#%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C" rel="nofollow">
+      并发和并行
+     </a>
+    </p>
+    <p id="%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6-toc" style="margin-left:40px;">
+     <a href="#%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6" rel="nofollow">
+      处理机调度
+     </a>
+    </p>
+    <p id="%E8%B0%83%E5%BA%A6%E5%B1%82%E6%AC%A1-toc" style="margin-left:80px;">
+     <a href="#%E8%B0%83%E5%BA%A6%E5%B1%82%E6%AC%A1" rel="nofollow">
+      调度层次
+     </a>
+    </p>
+    <p id="%E8%B0%83%E5%BA%A6%E5%9F%BA%E6%9C%AC%E5%87%86%E5%88%99-toc" style="margin-left:80px;">
+     <a href="#%E8%B0%83%E5%BA%A6%E5%9F%BA%E6%9C%AC%E5%87%86%E5%88%99" rel="nofollow">
+      调度基本准则
+     </a>
+    </p>
+    <p id="%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F" rel="nofollow">
+      调度方式
+     </a>
+    </p>
+    <p id="%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      调度算法⭐
+     </a>
+    </p>
+    <p id="%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-toc" style="margin-left:40px;">
+     <a href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86" rel="nofollow">
+      内存管理
+     </a>
+    </p>
+    <p id="%E8%BF%9E%E7%BB%AD%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E8%BF%9E%E7%BB%AD%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      连续空间分配策略算法⭐
+     </a>
+    </p>
+    <p id="%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      页面置换算法⭐
+     </a>
+    </p>
+    <p id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-toc" style="margin-left:0px;">
+     <a href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" rel="nofollow">
+      数据结构
+     </a>
+    </p>
+    <p id="%E6%A0%91-toc" style="margin-left:40px;">
+     <a href="#%E6%A0%91" rel="nofollow">
+      链表
+     </a>
+    </p>
+    <p id="%E6%A0%88-toc" style="margin-left:40px;">
+     <a href="#%E6%A0%88" rel="nofollow">
+      栈
+     </a>
+    </p>
+    <p id="%E5%8E%8B%E6%A0%88%20%E7%9A%84%20%E5%87%BA%E5%85%A5%E5%BA%8F%E5%88%97-toc" style="margin-left:80px;">
+     <a href="#%E5%8E%8B%E6%A0%88%20%E7%9A%84%20%E5%87%BA%E5%85%A5%E5%BA%8F%E5%88%97" rel="nofollow">
+      压栈 的 出入序列
+     </a>
+    </p>
+    <p id="n%E4%B8%AA%E4%B8%8D%E5%90%8C%E5%85%83%E7%B4%A0%E8%BF%9B%E6%A0%88%EF%BC%8C%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#n%E4%B8%AA%E4%B8%8D%E5%90%8C%E5%85%83%E7%B4%A0%E8%BF%9B%E6%A0%88%EF%BC%8C%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E6%95%B0" rel="nofollow">
+      n个不同元素进栈，出栈序列数
+     </a>
+    </p>
+    <p id="%E6%A0%88%E6%8C%87%E9%92%88-toc" style="margin-left:80px;">
+     <a href="#%E6%A0%88%E6%8C%87%E9%92%88" rel="nofollow">
+      栈指针
+     </a>
+    </p>
+    <p id="%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC-toc" style="margin-left:80px;">
+     <a href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC" rel="nofollow">
+      表达式求值
+     </a>
+    </p>
+    <p id="%E9%98%9F%E5%88%97-toc" style="margin-left:40px;">
+     <a href="#%E9%98%9F%E5%88%97" rel="nofollow">
+      队列
+     </a>
+    </p>
+    <p id="%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8-toc" style="margin-left:80px;">
+     <a href="#%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8" rel="nofollow">
+      顺序存储
+     </a>
+    </p>
+    <p id="%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8-toc" style="margin-left:80px;">
+     <a href="#%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8" rel="nofollow">
+      链式存储
+     </a>
+    </p>
+    <p id="%E6%A0%91-toc" style="margin-left:40px;">
+     <a href="#%E6%A0%91" rel="nofollow">
+      树
+     </a>
+    </p>
+    <p id="%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      二叉树
+     </a>
+    </p>
+    <p id="%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      满二叉树
+     </a>
+    </p>
+    <p id="%E5%AE%8C%E5%85%A8%E5%9B%BE%EF%BC%9A-toc" style="margin-left:80px;">
+     <a href="#%E5%AE%8C%E5%85%A8%E5%9B%BE%EF%BC%9A" rel="nofollow">
+      哈夫曼树（最优二叉树）Huffman
+     </a>
+    </p>
+    <p id="%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91" rel="nofollow">
+      二叉排序树/二叉查找树BST（Binary Search/Sort Tree）
+     </a>
+    </p>
+    <p id="%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91AVL-toc" style="margin-left:80px;">
+     <a href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91AVL" rel="nofollow">
+      平衡二叉树AVL
+     </a>
+    </p>
+    <p id="%E5%A4%A7%E6%A0%B9%E5%A0%86-toc" style="margin-left:80px;">
+     <a href="#%E5%A4%A7%E6%A0%B9%E5%A0%86" rel="nofollow">
+      大根堆
+     </a>
+    </p>
+    <p id="%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91" rel="nofollow">
+      最小生成树
+     </a>
+    </p>
+    <p id="%E6%A3%AE%E6%9E%97-toc" style="margin-left:80px;">
+     <a href="#%E6%A3%AE%E6%9E%97" rel="nofollow">
+      森林
+     </a>
+    </p>
+    <p id="%E5%85%88%E5%BA%8F%20%E7%A1%AE%E5%AE%9A%E7%9A%84%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AA%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#%E5%85%88%E5%BA%8F%20%E7%A1%AE%E5%AE%9A%E7%9A%84%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AA%E6%95%B0" rel="nofollow">
+      先序 确定的 二叉树个数
+     </a>
+    </p>
+    <p id="%E5%B8%A6%E6%9D%83%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6WPL-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%A6%E6%9D%83%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6WPL" rel="nofollow">
+      带权路径长度WPL
+     </a>
+    </p>
+    <p id="%E5%9B%BE-toc" style="margin-left:40px;">
+     <a href="#%E5%9B%BE" rel="nofollow">
+      图
+     </a>
+    </p>
+    <p id="%E5%AE%8C%E5%85%A8%E5%9B%BE-toc" style="margin-left:80px;">
+     <a href="#%E5%AE%8C%E5%85%A8%E5%9B%BE" rel="nofollow">
+      完全图
+     </a>
+    </p>
+    <p id="%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84" rel="nofollow">
+      最短路径
+     </a>
+    </p>
+    <p id="%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F-toc" style="margin-left:80px;">
+     <a href="#%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F" rel="nofollow">
+      拓扑排序
+     </a>
+    </p>
+    <p id="%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84-toc" style="margin-left:80px;">
+     <a href="#%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84" rel="nofollow">
+      关键路径
+     </a>
+    </p>
+    <p id="%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D-toc" style="margin-left:40px;">
+     <a href="#%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D" rel="nofollow">
+      模式匹配
+     </a>
+    </p>
+    <p id="BF%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D-toc" style="margin-left:80px;">
+     <a href="#BF%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D" rel="nofollow">
+      BF模式匹配
+     </a>
+    </p>
+    <p id="KMP%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D-toc" style="margin-left:80px;">
+     <a href="#KMP%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D" rel="nofollow">
+      KMP模式匹配
+     </a>
+    </p>
+    <p id="%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-toc" style="margin-left:40px;">
+     <a href="#%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95" rel="nofollow">
+      内部排序算法
+     </a>
+    </p>
+    <p id="T(n)%E5%92%8CS(n)-toc" style="margin-left:80px;">
+     <a href="#T%28n%29%E5%92%8CS%28n%29" rel="nofollow">
+      T(n)和S(n)
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="%E9%80%92%E5%BD%92-toc" style="margin-left:40px;">
+     <a href="#%E9%80%92%E5%BD%92" rel="nofollow">
+      平均查找长度ASL
+     </a>
+    </p>
+    <p id="%E9%A1%BA%E5%BA%8F%20%2F%20%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE-toc" style="margin-left:80px;">
+     <a href="#%E9%A1%BA%E5%BA%8F%20%2F%20%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE" rel="nofollow">
+      顺序 / 线性查找
+     </a>
+    </p>
+    <p id="%E6%8A%98%E5%8D%8A%20%2F%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE-toc" style="margin-left:80px;">
+     <a href="#%E6%8A%98%E5%8D%8A%20%2F%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" rel="nofollow">
+      折半 / 二分查找
+     </a>
+    </p>
+    <p id="%E5%88%86%E5%9D%97%20%2F%20%E7%B4%A2%E5%BC%95%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE-toc" style="margin-left:80px;">
+     <a href="#%E5%88%86%E5%9D%97%20%2F%20%E7%B4%A2%E5%BC%95%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE" rel="nofollow">
+      分块 / 索引顺序查找
+     </a>
+    </p>
+    <p id="%E6%95%A3%E5%88%97(Hash)%E8%A1%A8-toc" style="margin-left:80px;">
+     <a href="#%E6%95%A3%E5%88%97%28Hash%29%E8%A1%A8" rel="nofollow">
+      散列(Hash)表
+     </a>
+    </p>
+    <p id="%E9%80%92%E5%BD%92-toc" style="margin-left:40px;">
+     <a href="#%E9%80%92%E5%BD%92" rel="nofollow">
+      递归
+     </a>
+    </p>
+    <p id="%E9%80%92%E5%BD%92%E5%92%8C%E9%80%92%E6%8E%A8%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#%E9%80%92%E5%BD%92%E5%92%8C%E9%80%92%E6%8E%A8%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      递归和递推的区别
+     </a>
+    </p>
+    <p id="%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6-toc" style="margin-left:80px;">
+     <a href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6" rel="nofollow">
+      十进制转换为二进制
+     </a>
+    </p>
+    <p id="%E8%BF%B7%E5%AE%AB%E6%B1%82%E8%A7%A3-toc" style="margin-left:80px;">
+     <a href="#%E8%BF%B7%E5%AE%AB%E6%B1%82%E8%A7%A3" rel="nofollow">
+      迷宫求解
+     </a>
+    </p>
+    <p id="%E7%AE%97%E6%B3%95%EF%BC%88%E7%BC%96%E7%A8%8B%E9%A2%98%EF%BC%89-toc" style="margin-left:0px;">
+     <a href="#%E7%AE%97%E6%B3%95%EF%BC%88%E7%BC%96%E7%A8%8B%E9%A2%98%EF%BC%89" rel="nofollow">
+      算法（编程题）
+     </a>
+    </p>
+    <p id="%E7%BB%8F%E9%AA%8C-toc" style="margin-left:40px;">
+     <a href="#%E7%BB%8F%E9%AA%8C" rel="nofollow">
+      经验
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E8%BE%93%E5%87%BA-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E8%BE%93%E5%87%BA" rel="nofollow">
+      常用输出
+     </a>
+    </p>
+    <p id="ACM%E6%A8%A1%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#ACM%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      考核方式
+     </a>
+    </p>
+    <p id="ACM%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#ACM%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      ACM模式
+     </a>
+    </p>
+    <p id="JavaScript(V8)-toc" style="margin-left:80px;">
+     <a href="#JavaScript%28V8%29" rel="nofollow">
+      JavaScript(V8)
+     </a>
+    </p>
+    <p id="JavaScript(Node)-toc" style="margin-left:80px;">
+     <a href="#JavaScript%28Node%29" rel="nofollow">
+      JavaScript(Node)
+     </a>
+    </p>
+    <p id="%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      核心代码模式
+     </a>
+    </p>
+    <p id="%E9%93%BE%E8%A1%A8-toc" style="margin-left:40px;">
+     <a href="#%E9%93%BE%E8%A1%A8" rel="nofollow">
+      链表
+     </a>
+    </p>
+    <p id="%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E6%9C%89%E7%8E%AF-toc" style="margin-left:80px;">
+     <a href="#%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E6%9C%89%E7%8E%AF" rel="nofollow">
+      判断链表是否有环
+     </a>
+    </p>
+    <p id="%EF%BC%88%E5%8F%8D%EF%BC%89%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:40px;">
+     <a href="#%EF%BC%88%E5%8F%8D%EF%BC%89%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      二叉树
+     </a>
+    </p>
+    <p id="(%E5%8F%8D)%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%28%E5%8F%8D%29%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      (反)序列化二叉树
+     </a>
+    </p>
+    <p id="%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%EF%BC%8C%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%EF%BC%8C%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%EF%BC%89" rel="nofollow">
+      前序遍历（迭代）
+     </a>
+    </p>
+    <p id="%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E8%BF%AD%E4%BB%A3%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E8%BF%AD%E4%BB%A3%EF%BC%89" rel="nofollow">
+      中序遍历（迭代）
+     </a>
+    </p>
+    <p id="%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E8%BF%AD%E4%BB%A3%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E8%BF%AD%E4%BB%A3%EF%BC%89" rel="nofollow">
+      后序遍历（迭代）
+     </a>
+    </p>
+    <p id="%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86-toc" style="margin-left:80px;">
+     <a href="#%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86" rel="nofollow">
+      层序遍历
+     </a>
+    </p>
+    <p id="%E5%88%A4%E6%96%AD%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E5%88%A4%E6%96%AD%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      判断对称二叉树
+     </a>
+    </p>
+    <p id="%E5%88%A4%E6%96%AD%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E5%88%A4%E6%96%AD%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      判断完全二叉树
+     </a>
+    </p>
+    <p id="%E5%88%A4%E6%96%AD%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E5%88%A4%E6%96%AD%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91" rel="nofollow">
+      判断平衡二叉树
+     </a>
+    </p>
+    <p id="%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F" rel="nofollow">
+      二叉树的镜像
+     </a>
+    </p>
+    <p id="%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88" rel="nofollow">
+      最近公共祖先
+     </a>
+    </p>
+    <p id="%E6%95%B0%E7%BB%84%E5%92%8C%E6%A0%91-toc" style="margin-left:40px;">
+     <a href="#%E6%95%B0%E7%BB%84%E5%92%8C%E6%A0%91" rel="nofollow">
+      数组和树
+     </a>
+    </p>
+    <p id="%E6%89%81%E5%B9%B3%E7%BB%93%E6%9E%84%E8%BD%AC%E6%A0%91-toc" style="margin-left:80px;">
+     <a href="#%E6%89%81%E5%B9%B3%E7%BB%93%E6%9E%84%E8%BD%AC%E6%A0%91" rel="nofollow">
+      扁平结构(一维数组)转树
+     </a>
+    </p>
+    <p id="%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96-toc" style="margin-left:80px;">
+     <a href="#%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96" rel="nofollow">
+      数组扁平化
+     </a>
+    </p>
+    <p id="%E6%8E%92%E5%BA%8F-toc" style="margin-left:40px;">
+     <a href="#%E6%8E%92%E5%BA%8F" rel="nofollow">
+      排序
+     </a>
+    </p>
+    <p id="%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F" rel="nofollow">
+      快速排序
+     </a>
+    </p>
+    <p id="%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F" rel="nofollow">
+      *归并排序
+     </a>
+    </p>
+    <p id="%E5%A0%86%E6%8E%92%E5%BA%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%A0%86%E6%8E%92%E5%BA%8F" rel="nofollow">
+      *堆排序
+     </a>
+    </p>
+    <p id="%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-toc" style="margin-left:40px;">
+     <a href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92" rel="nofollow">
+      回溯
+     </a>
+    </p>
+    <p id="%E5%85%A8%E6%8E%92%E5%88%97-toc" style="margin-left:80px;">
+     <a href="#%E5%85%A8%E6%8E%92%E5%88%97" rel="nofollow">
+      全排列
+     </a>
+    </p>
+    <p id="N%E7%9A%87%E5%90%8E-toc" style="margin-left:40px;">
+     <a href="#N%E7%9A%87%E5%90%8E" rel="nofollow">
+      N皇后
+     </a>
+    </p>
+    <p id="%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(Dynamic%20Programming%EF%BC%8CDP)-toc" style="margin-left:40px;">
+     <a href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%28Dynamic%20Programming%EF%BC%8CDP%29" rel="nofollow">
+      动态规划(Dynamic Programming，DP)
+     </a>
+    </p>
+    <p id="%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91(Fibonacci%EF%BC%89%E6%95%B0%E5%88%97%EF%BC%88%E9%80%92%E5%BD%92%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%28Fibonacci%EF%BC%89%E6%95%B0%E5%88%97%EF%BC%88%E9%80%92%E5%BD%92%EF%BC%89" rel="nofollow">
+      斐波那契(Fibonacci）数列（递归）
+     </a>
+    </p>
+    <p id="%E6%95%B0%E5%A1%94%EF%BC%88%E9%80%92%E6%8E%A8%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E6%95%B0%E5%A1%94%EF%BC%88%E9%80%92%E6%8E%A8%EF%BC%89" rel="nofollow">
+      数塔（递推）
+     </a>
+    </p>
+    <p id="%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97(LCS)-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%28LCS%29" rel="nofollow">
+      最长公共子序列(LCS)
+     </a>
+    </p>
+    <p id="%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2" rel="nofollow">
+      最长回文子串
+     </a>
+    </p>
+    <p id="%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C%C2%A0-toc" style="margin-left:80px;">
+     <a href="#%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C%C2%A0" rel="nofollow">
+      最小路径和
+     </a>
+    </p>
+    <p id="%E8%83%8C%E5%8C%85-toc" style="margin-left:40px;">
+     <a href="#%E8%83%8C%E5%8C%85" rel="nofollow">
+      背包
+     </a>
+    </p>
+    <p id="01%E8%83%8C%E5%8C%85-toc" style="margin-left:80px;">
+     <a href="#01%E8%83%8C%E5%8C%85" rel="nofollow">
+      01背包
+     </a>
+    </p>
+    <p id="%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85-toc" style="margin-left:80px;">
+     <a href="#%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85" rel="nofollow">
+      完全背包
+     </a>
+    </p>
+    <p id="%E6%95%A3%E5%88%97%2F%E5%93%88%E5%B8%8CHash-toc" style="margin-left:40px;">
+     <a href="#%E6%95%A3%E5%88%97%2F%E5%93%88%E5%B8%8CHash" rel="nofollow">
+      散列/哈希Hash
+     </a>
+    </p>
+    <p id="%E6%95%B0%E5%AD%97%E5%8D%83%E4%BD%8D%E5%88%86%E5%89%B2-toc" style="margin-left:40px;">
+     <a href="#%E6%95%B0%E5%AD%97%E5%8D%83%E4%BD%8D%E5%88%86%E5%89%B2" rel="nofollow">
+      数字千位分割
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-toc" style="margin-left:40px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95" rel="nofollow">
+      常用方法
+     </a>
+    </p>
+    <p id="%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97%5E-toc" style="margin-left:80px;">
+     <a href="#%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97%5E" rel="nofollow">
+      异或运算^
+     </a>
+    </p>
+    <p id="Math-toc" style="margin-left:80px;">
+     <a href="#Math" rel="nofollow">
+      Math
+     </a>
+    </p>
+    <p id="Number-toc" style="margin-left:80px;">
+     <a href="#Number" rel="nofollow">
+      Number
+     </a>
+    </p>
+    <p id="Map-toc" style="margin-left:80px;">
+     <a href="#Map" rel="nofollow">
+      Map
+     </a>
+    </p>
+    <p id="Set-toc" style="margin-left:80px;">
+     <a href="#Set" rel="nofollow">
+      Set
+     </a>
+    </p>
+    <p id="set%E5%88%A4%E6%96%AD%E5%80%BC%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9C%BA%E5%88%B6-toc" style="margin-left:80px;">
+     <a href="#set%E5%88%A4%E6%96%AD%E5%80%BC%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9C%BA%E5%88%B6" rel="nofollow">
+      set判断值相等的机制
+     </a>
+    </p>
+    <p id="%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      数组去重 （⭐手写）
+     </a>
+    </p>
+    <p id="Array-toc" style="margin-left:80px;">
+     <a href="#Array" rel="nofollow">
+      Array
+     </a>
+    </p>
+    <p id="String-toc" style="margin-left:80px;">
+     <a href="#String" rel="nofollow">
+      String
+     </a>
+    </p>
+    <p id="%E8%B7%A8%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1-toc" style="margin-left:0px;">
+     <a href="#%E8%B7%A8%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1" rel="nofollow">
+      正则表达式Regular Expression(RegExp)
+     </a>
+    </p>
+    <p id="%E5%AD%97%E9%9D%A2%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2-toc" style="margin-left:40px;">
+     <a href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2" rel="nofollow">
+      字面量和字符串
+     </a>
+    </p>
+    <p id="regexp.test%E5%92%8Cregexp.exec-toc" style="margin-left:40px;">
+     <a href="#regexp.test%E5%92%8Cregexp.exec" rel="nofollow">
+      regexp.test和regexp.exec
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E4%BF%AE%E9%A5%B0%E7%AC%A6-toc" style="margin-left:40px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E4%BF%AE%E9%A5%B0%E7%AC%A6" rel="nofollow">
+      常用修饰符
+     </a>
+    </p>
+    <p id="lastIndex-toc" style="margin-left:80px;">
+     <a href="#lastIndex" rel="nofollow">
+      lastIndex
+     </a>
+    </p>
+    <p id="%E5%88%86%E7%BB%84-toc" style="margin-left:40px;">
+     <a href="#%E5%88%86%E7%BB%84" rel="nofollow">
+      分组
+     </a>
+    </p>
+    <p id="%E5%9B%9E%E6%BA%AF%E5%BC%95%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%9B%9E%E6%BA%AF%E5%BC%95%E7%94%A8" rel="nofollow">
+      回溯引用
+     </a>
+    </p>
+    <p id="%E5%8C%B9%E9%85%8D-toc" style="margin-left:40px;">
+     <a href="#%E5%8C%B9%E9%85%8D" rel="nofollow">
+      匹配
+     </a>
+    </p>
+    <p id="%E9%80%89%E6%8B%A9%E5%8C%B9%E9%85%8D-toc" style="margin-left:80px;">
+     <a href="#%E9%80%89%E6%8B%A9%E5%8C%B9%E9%85%8D" rel="nofollow">
+      选择匹配：(子模式)|(子模式)
+     </a>
+    </p>
+    <p id="%E6%83%B0%E6%80%A7%E5%8C%B9%E9%85%8D-toc" style="margin-left:80px;">
+     <a href="#%E6%83%B0%E6%80%A7%E5%8C%B9%E9%85%8D" rel="nofollow">
+      惰性匹配：最小化匹配
+     </a>
+    </p>
+    <p id="articleContentId-toc" style="margin-left:80px;">
+     <a href="#articleContentId" rel="nofollow">
+      前/后向查找：匹配括号中的内容（不包含括号）
+     </a>
+    </p>
+    <p id="%E6%8A%80%E5%B7%A7-toc" style="margin-left:40px;">
+     <a href="#%E6%8A%80%E5%B7%A7" rel="nofollow">
+      技巧
+     </a>
+    </p>
+    <p id="%E5%8F%8D%E4%B9%89%E5%AD%97%E7%AC%A6-toc" style="margin-left:80px;">
+     <a href="#%E5%8F%8D%E4%B9%89%E5%AD%97%E7%AC%A6" rel="nofollow">
+      反义字符
+     </a>
+    </p>
+    <p id="%E8%BE%B9%E7%95%8C%E9%87%8F%E8%AF%8D-toc" style="margin-left:80px;">
+     <a href="#%E8%BE%B9%E7%95%8C%E9%87%8F%E8%AF%8D" rel="nofollow">
+      边界量词
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:40px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="str.split()-toc" style="margin-left:80px;">
+     <a href="#str.split%28%29" rel="nofollow">
+      str.split()
+     </a>
+    </p>
+    <p id="str.match()-toc" style="margin-left:80px;">
+     <a href="#str.match%28%29" rel="nofollow">
+      str.match()
+     </a>
+    </p>
+    <p id="%C2%A0str.replace()-toc" style="margin-left:80px;">
+     <a href="#%C2%A0str.replace%28%29" rel="nofollow">
+      str.replace()
+     </a>
+    </p>
+    <p id="str.serach()-toc" style="margin-left:80px;">
+     <a href="#str.serach%28%29" rel="nofollow">
+      str.serach()
+     </a>
+    </p>
+    <p id="%E5%90%88%E6%B3%95%E7%9A%84URL-toc" style="margin-left:80px;">
+     <a href="#%E5%90%88%E6%B3%95%E7%9A%84URL" rel="nofollow">
+      合法的URL
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6-toc" style="margin-left:40px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6" rel="nofollow">
+      常用字符
+     </a>
+    </p>
+    <p id="%E5%85%83%E5%AD%97%E7%AC%A6%E8%A1%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%85%83%E5%AD%97%E7%AC%A6%E8%A1%A8" rel="nofollow">
+      元字符表
+     </a>
+    </p>
+    <p id="%5BA-z%5D%E5%92%8C%5Ba-zA-Z%5D-toc" style="margin-left:80px;">
+     <a href="#%5BA-z%5D%E5%92%8C%5Ba-zA-Z%5D" rel="nofollow">
+      [A-z]和[a-zA-Z]
+     </a>
+    </p>
+    <p id="%C2%A0*%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83-toc" style="margin-left:0px;">
+     <a href="#%C2%A0*%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83" rel="nofollow">
+      规范
+     </a>
+    </p>
+    <p id="*%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83-toc" style="margin-left:40px;">
+     <a href="#*%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83" rel="nofollow">
+      *命名规范
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E9%87%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E9%87%8F" rel="nofollow">
+      常量
+     </a>
+    </p>
+    <p id="%E5%8F%98%E9%87%8F%EF%BC%8C%E5%87%BD%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#%E5%8F%98%E9%87%8F%EF%BC%8C%E5%87%BD%E6%95%B0" rel="nofollow">
+      变量，函数
+     </a>
+    </p>
+    <p id="%E7%B1%BB-toc" style="margin-left:80px;">
+     <a href="#%E7%B1%BB" rel="nofollow">
+      类
+     </a>
+    </p>
+    <p id="%E8%80%83%E6%A0%B8%E6%96%B9%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#%E8%80%83%E6%A0%B8%E6%96%B9%E5%BC%8F" rel="nofollow">
+      *注释
+     </a>
+    </p>
+    <p id="HTML-toc" style="margin-left:80px;">
+     <a href="#HTML" rel="nofollow">
+      HTML
+     </a>
+    </p>
+    <p id="CSS-toc" style="margin-left:80px;">
+     <a href="#CSS" rel="nofollow">
+      CSS
+     </a>
+    </p>
+    <p id="JS-toc" style="margin-left:80px;">
+     <a href="#JS" rel="nofollow">
+      JS
+     </a>
+    </p>
+    <p id="js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83-toc" style="margin-left:0px;">
+     <a href="#js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83" rel="nofollow">
+      模块化规范
+     </a>
+    </p>
+    <p id="%E6%87%92%E5%8A%A0%E8%BD%BD-toc" style="margin-left:40px;">
+     <a href="#%E6%87%92%E5%8A%A0%E8%BD%BD" rel="nofollow">
+      懒加载（性能优化）
+     </a>
+    </p>
+    <p id="scroll%E7%89%88-toc" style="margin-left:80px;">
+     <a href="#scroll%E7%89%88" rel="nofollow">
+      scroll版
+     </a>
+    </p>
+    <p id="%C2%A0IntersectionObserver%C2%A0%E7%89%88-toc" style="margin-left:80px;">
+     <a href="#%C2%A0IntersectionObserver%C2%A0%E7%89%88" rel="nofollow">
+      IntersectionObserver 版
+     </a>
+    </p>
+    <p id="require%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8(CommonJS%E8%A7%84%E8%8C%83%E5%92%8Ces6%E8%A7%84%E8%8C%83)-toc" style="margin-left:40px;">
+     <a href="#require%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%28CommonJS%E8%A7%84%E8%8C%83%E5%92%8Ces6%E8%A7%84%E8%8C%83%29" rel="nofollow">
+      require与import的区别和使用
+     </a>
+    </p>
+    <p id="js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83-toc" style="margin-left:0px;">
+     <a href="#js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83" rel="nofollow">
+      js的运行环境
+     </a>
+    </p>
+    <p id="NodeJS-toc" style="margin-left:40px;">
+     <a href="#NodeJS" rel="nofollow">
+      浏览器
+     </a>
+    </p>
+    <p id="Node-toc" style="margin-left:40px;">
+     <a href="#Node" rel="nofollow">
+      Node
+     </a>
+    </p>
+    <p id="%E7%89%B9%E7%82%B9-toc" style="margin-left:80px;">
+     <a href="#%E7%89%B9%E7%82%B9" rel="nofollow">
+      特点
+     </a>
+    </p>
+    <p id="npm-toc" style="margin-left:80px;">
+     <a href="#npm" rel="nofollow">
+      npm
+     </a>
+    </p>
+    <p id="%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8-toc" style="margin-left:0px;">
+     <a href="#%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8" rel="nofollow">
+      项目规范
+     </a>
+    </p>
+    <p id="%E5%91%BD%E4%BB%A4-toc" style="margin-left:0px;">
+     <a href="#%E5%91%BD%E4%BB%A4" rel="nofollow">
+      命令（创建运行）
+     </a>
+    </p>
+    <p id="%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84-toc" style="margin-left:0px;">
+     <a href="#%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" rel="nofollow">
+      项目文件结构
+     </a>
+    </p>
+    <p id="package.json-toc" style="margin-left:80px;">
+     <a href="#package.json" rel="nofollow">
+      package.json
+     </a>
+    </p>
+    <p id="package-lock.json-toc" style="margin-left:80px;">
+     <a href="#package-lock.json" rel="nofollow">
+      package-lock.json
+     </a>
+    </p>
+    <p id="node_modules-toc" style="margin-left:80px;">
+     <a href="#node_modules" rel="nofollow">
+      node_modules
+     </a>
+    </p>
+    <p id="git%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86-toc" style="margin-left:0px;">
+     <a href="#git%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86" rel="nofollow">
+      git代码管理
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4" rel="nofollow">
+      常用命令
+     </a>
+    </p>
+    <p id="%E5%88%86%E6%94%AF-toc" style="margin-left:80px;">
+     <a href="#%E5%88%86%E6%94%AF" rel="nofollow">
+      分支
+     </a>
+    </p>
+    <p id="git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8Cmerge%E5%86%B2%E7%AA%81-toc" style="margin-left:80px;">
+     <a href="#git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8Cmerge%E5%86%B2%E7%AA%81" rel="nofollow">
+      git多人协同merge冲突
+     </a>
+    </p>
+    <p id="*%E5%88%86%E6%94%AF%E4%B8%8A%E4%BB%A3%E7%A0%81%E6%B2%A1%E5%86%99%E5%AE%8C%E6%80%8E%E4%B9%88%E7%BC%93%E5%AD%98-toc" style="margin-left:80px;">
+     <a href="#*%E5%88%86%E6%94%AF%E4%B8%8A%E4%BB%A3%E7%A0%81%E6%B2%A1%E5%86%99%E5%AE%8C%E6%80%8E%E4%B9%88%E7%BC%93%E5%AD%98" rel="nofollow">
+      暂时保存更改
+     </a>
+    </p>
+    <p id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-toc" style="margin-left:80px;">
+     <a href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" rel="nofollow">
+      性能优化
+     </a>
+    </p>
+    <p id="webpack%E6%89%93%E5%8C%85%E7%AE%A1%E7%90%86-toc" style="margin-left:0px;">
+     <a href="#webpack%E6%89%93%E5%8C%85%E7%AE%A1%E7%90%86" rel="nofollow">
+      webpack打包管理
+     </a>
+    </p>
+    <p id="%E5%8E%9F%E7%90%86-toc" style="margin-left:40px;">
+     <a href="#%E5%8E%9F%E7%90%86" rel="nofollow">
+      原理
+     </a>
+    </p>
+    <p id="Babel-toc" style="margin-left:80px;">
+     <a href="#Babel" rel="nofollow">
+      Babel
+     </a>
+    </p>
+    <p id="loader-toc" style="margin-left:40px;">
+     <a href="#loader" rel="nofollow">
+      loader
+     </a>
+    </p>
+    <p id="plugin-toc" style="margin-left:40px;">
+     <a href="#plugin" rel="nofollow">
+      plugin
+     </a>
+    </p>
+    <p id="loader%E5%92%8Cplugin%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#loader%E5%92%8Cplugin%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      loader和plugin的区别
+     </a>
+    </p>
+    <p id="%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86-toc" style="margin-left:80px;">
+     <a href="#%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86" rel="nofollow">
+      热加载原理
+     </a>
+    </p>
+    <p id="%E5%85%B1%E6%80%A7-toc" style="margin-left:0px;">
+     <a href="#%E5%85%B1%E6%80%A7" rel="nofollow">
+      TS4 加分项
+     </a>
+    </p>
+    <p id="%E5%8C%BA%E5%88%AB-toc" style="margin-left:40px;">
+     <a href="#%E5%8C%BA%E5%88%AB" rel="nofollow">
+      区别
+     </a>
+    </p>
+    <p id="%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8TypeScript%EF%BC%9F-toc" style="margin-left:80px;">
+     <a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8TypeScript%EF%BC%9F" rel="nofollow">
+      为什么推荐使用TypeScript？
+     </a>
+    </p>
+    <p id="TypeScript%E5%92%8CJavaScript%E7%9A%84%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#TypeScript%E5%92%8CJavaScript%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      TypeScript和JavaScript的区别
+     </a>
+    </p>
+    <p id="*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-toc" style="margin-left:80px;">
+     <a href="#*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3" rel="nofollow">
+      控制类成员可见性的访问关键字有哪些？
+     </a>
+    </p>
+    <p id="%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D-toc" style="margin-left:80px;">
+     <a href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D" rel="nofollow">
+      接口interface与类型别名type
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E6%9C%AC-toc" style="margin-left:40px;">
+     <a href="#%E5%9F%BA%E6%9C%AC" rel="nofollow">
+      类型
+     </a>
+    </p>
+    <p id="never%EF%BC%8Cany%EF%BC%8Cunknown-toc" style="margin-left:80px;">
+     <a href="#never%EF%BC%8Cany%EF%BC%8Cunknown" rel="nofollow">
+      never，any，unknown
+     </a>
+    </p>
+    <p id="void-toc" style="margin-left:80px;">
+     <a href="#void" rel="nofollow">
+      类型断言as与非空断言!
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8Cvoid-toc" style="margin-left:80px;">
+     <a href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8Cvoid" rel="nofollow">
+      函数类型和void
+     </a>
+    </p>
+    <p id="%E6%B3%9B%E5%9E%8B-toc" style="margin-left:80px;">
+     <a href="#%E6%B3%9B%E5%9E%8B" rel="nofollow">
+      泛型
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:40px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="%E5%8F%98%E9%87%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%8F%98%E9%87%8F" rel="nofollow">
+      变量
+     </a>
+    </p>
+    <p id="%C2%A0*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-toc" style="margin-left:80px;">
+     <a href="#%C2%A0*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3" rel="nofollow">
+      *类型注解
+     </a>
+    </p>
+    <p id="%E6%95%B0%E7%BB%84-toc" style="margin-left:80px;">
+     <a href="#%E6%95%B0%E7%BB%84" rel="nofollow">
+      数组
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0-toc" style="margin-left:80px;">
+     <a href="#%E5%87%BD%E6%95%B0" rel="nofollow">
+      函数
+     </a>
+    </p>
+    <p id="%E5%AF%B9%E8%B1%A1-toc" style="margin-left:80px;">
+     <a href="#%E5%AF%B9%E8%B1%A1" rel="nofollow">
+      类
+     </a>
+    </p>
+    <p id="%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD-toc" style="margin-left:40px;">
+     <a href="#%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD" rel="nofollow">
+      类型判断
+     </a>
+    </p>
+    <p id="is-toc" style="margin-left:80px;">
+     <a href="#is" rel="nofollow">
+      is
+     </a>
+    </p>
+    <p id="Narrowing%20down%20sets-toc" style="margin-left:80px;">
+     <a href="#Narrowing%20down%20sets" rel="nofollow">
+      Narrowing down sets
+     </a>
+    </p>
+    <p id="%E6%A0%B7%E5%BC%8F-toc" style="margin-left:0px;">
+     <a href="#%E6%A0%B7%E5%BC%8F" rel="nofollow">
+      样式
+     </a>
+    </p>
+    <p id="Ant%20Design-toc" style="margin-left:40px;">
+     <a href="#Ant%20Design" rel="nofollow">
+      Ant Design
+     </a>
+    </p>
+    <p id="Css%E3%80%81less%E3%80%81Sass%C2%A0-toc" style="margin-left:40px;">
+     <a href="#Css%E3%80%81less%E3%80%81Sass%C2%A0" rel="nofollow">
+      Css、less、Sass （SCSS）
+     </a>
+    </p>
+    <p id="SCSS-toc" style="margin-left:0px;">
+     <a href="#SCSS" rel="nofollow">
+      Sass
+     </a>
+    </p>
+    <p id="%E5%B5%8C%E5%A5%97-toc" style="margin-left:40px;">
+     <a href="#%E5%B5%8C%E5%A5%97" rel="nofollow">
+      嵌套
+     </a>
+    </p>
+    <p id="%E9%80%89%E6%8B%A9%E5%99%A8%E5%B5%8C%E5%A5%97-toc" style="margin-left:80px;">
+     <a href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%B5%8C%E5%A5%97" rel="nofollow">
+      选择器嵌套
+     </a>
+    </p>
+    <p id="%E5%B1%9E%E6%80%A7%E5%B5%8C%E5%A5%97-toc" style="margin-left:80px;">
+     <a href="#%E5%B1%9E%E6%80%A7%E5%B5%8C%E5%A5%97" rel="nofollow">
+      属性嵌套
+     </a>
+    </p>
+    <p id="%E4%BC%AA%E7%B1%BB%E5%B5%8C%E5%A5%97-toc" style="margin-left:80px;">
+     <a href="#%E4%BC%AA%E7%B1%BB%E5%B5%8C%E5%A5%97" rel="nofollow">
+      伪类嵌套
+     </a>
+    </p>
+    <p id="%E5%8F%98%E9%87%8F-toc" style="margin-left:40px;">
+     <a href="#%E5%8F%98%E9%87%8F" rel="nofollow">
+      变量
+     </a>
+    </p>
+    <p id="%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F" rel="nofollow">
+      全局变量
+     </a>
+    </p>
+    <p id="%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F" rel="nofollow">
+      局部变量
+     </a>
+    </p>
+    <p id="%E9%BB%98%E8%AE%A4%E5%80%BC-toc" style="margin-left:80px;">
+     <a href="#%E9%BB%98%E8%AE%A4%E5%80%BC" rel="nofollow">
+      默认值
+     </a>
+    </p>
+    <p id="%E6%B7%B7%E5%85%A5%E6%8C%87%E4%BB%A4%2F%E6%B7%B7%E5%90%88%E6%8C%87%E4%BB%A4%2F%E5%AE%8F%E6%8C%87%E4%BB%A4%40mixin-toc" style="margin-left:40px;">
+     <a href="#%E6%B7%B7%E5%85%A5%E6%8C%87%E4%BB%A4%2F%E6%B7%B7%E5%90%88%E6%8C%87%E4%BB%A4%2F%E5%AE%8F%E6%8C%87%E4%BB%A4%40mixin" rel="nofollow">
+      混入指令/混合指令/宏指令@mixin
+     </a>
+    </p>
+    <p id="%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F-toc" style="margin-left:80px;">
+     <a href="#%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F" rel="nofollow">
+      不带参数混合宏
+     </a>
+    </p>
+    <p id="%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F" rel="nofollow">
+      带参数混合宏
+     </a>
+    </p>
+    <p id="%E5%B8%A6%E7%89%B9%E5%88%AB%E5%A4%9A%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F-toc" style="margin-left:80px;">
+     <a href="#%E5%B8%A6%E7%89%B9%E5%88%AB%E5%A4%9A%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F" rel="nofollow">
+      带特别多参数混合宏
+     </a>
+    </p>
+    <p id="%E8%B0%83%E7%94%A8%E6%B7%B7%E5%90%88%E5%AE%8F%40include-toc" style="margin-left:80px;">
+     <a href="#%E8%B0%83%E7%94%A8%E6%B7%B7%E5%90%88%E5%AE%8F%40include" rel="nofollow">
+      调用混合宏@include
+     </a>
+    </p>
+    <p id="%E7%BB%A7%E6%89%BF%40extend-toc" style="margin-left:40px;">
+     <a href="#%E7%BB%A7%E6%89%BF%40extend" rel="nofollow">
+      继承@extend
+     </a>
+    </p>
+    <p id="%E5%8D%A0%E4%BD%8D%E7%AC%A6%20%25placeholder-toc" style="margin-left:40px;">
+     <a href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6%20%25placeholder" rel="nofollow">
+      占位符 %placeholder
+     </a>
+    </p>
+    <p id="%E6%B7%B7%E5%90%88%E5%AE%8FVS%E7%BB%A7%E6%89%BFVS%E5%8D%A0%E4%BD%8D%E7%AC%A6-toc" style="margin-left:80px;">
+     <a href="#%E6%B7%B7%E5%90%88%E5%AE%8FVS%E7%BB%A7%E6%89%BFVS%E5%8D%A0%E4%BD%8D%E7%AC%A6" rel="nofollow">
+      混合宏VS继承VS占位符
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-toc" style="margin-left:40px;">
+     <a href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95" rel="nofollow">
+      基础语法
+     </a>
+    </p>
+    <p id="%E6%8F%92%E5%80%BC%23%7B%7D-toc" style="margin-left:80px;">
+     <a href="#%E6%8F%92%E5%80%BC%23%7B%7D" rel="nofollow">
+      插值#{}
+     </a>
+    </p>
+    <p id="%E6%B3%A8%E9%87%8A-toc" style="margin-left:80px;">
+     <a href="#%E6%B3%A8%E9%87%8A" rel="nofollow">
+      注释
+     </a>
+    </p>
+    <p id="%E5%8A%A0%E5%87%8F%E6%B3%95-toc" style="margin-left:80px;">
+     <a href="#%E5%8A%A0%E5%87%8F%E6%B3%95" rel="nofollow">
+      加减法
+     </a>
+    </p>
+    <p id="%E4%B9%98%E6%B3%95-toc" style="margin-left:80px;">
+     <a href="#%E4%B9%98%E6%B3%95" rel="nofollow">
+      乘法
+     </a>
+    </p>
+    <p id="%E9%99%A4%E6%B3%95-toc" style="margin-left:80px;">
+     <a href="#%E9%99%A4%E6%B3%95" rel="nofollow">
+      除法
+     </a>
+    </p>
+    <p id="%40if%EF%BC%8C%20%40else%20if%C2%A0%EF%BC%8C%40else%E6%9D%A1%E4%BB%B6-toc" style="margin-left:80px;">
+     <a href="#%40if%EF%BC%8C%20%40else%20if%C2%A0%EF%BC%8C%40else%E6%9D%A1%E4%BB%B6" rel="nofollow">
+      @if， @else if ，@else条件
+     </a>
+    </p>
+    <p id="%40for-toc" style="margin-left:80px;">
+     <a href="#%40for" rel="nofollow">
+      @for
+     </a>
+    </p>
+    <p id="%40while%E5%BE%AA%E7%8E%AF-toc" style="margin-left:80px;">
+     <a href="#%40while%E5%BE%AA%E7%8E%AF" rel="nofollow">
+      @while循环
+     </a>
+    </p>
+    <p id="%40each%E5%BE%AA%E7%8E%AF-toc" style="margin-left:80px;">
+     <a href="#%40each%E5%BE%AA%E7%8E%AF" rel="nofollow">
+      @each循环
+     </a>
+    </p>
+    <p id="%40import%E5%BC%95%E5%85%A5%20SCSS%20%E5%92%8C%20Sass-toc" style="margin-left:80px;">
+     <a href="#%40import%E5%BC%95%E5%85%A5%20SCSS%20%E5%92%8C%20Sass" rel="nofollow">
+      @import引入 SCSS 和 Sass
+     </a>
+    </p>
+    <p id="%E7%80%91%E5%B8%83%E6%B5%81-toc" style="margin-left:40px;">
+     <a href="#%E7%80%91%E5%B8%83%E6%B5%81" rel="nofollow">
+      瀑布流
+     </a>
+    </p>
+    <p id="css-toc" style="margin-left:80px;">
+     <a href="#css" rel="nofollow">
+      css
+     </a>
+    </p>
+    <p id="js-toc" style="margin-left:80px;">
+     <a href="#js" rel="nofollow">
+      js
+     </a>
+    </p>
+    <p id="%E5%85%B1%E6%80%A7-toc" style="margin-left:0px;">
+     <a href="#%E5%85%B1%E6%80%A7" rel="nofollow">
+      共性
+     </a>
+    </p>
+    <p id="%E9%97%AE%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E9%9A%BE%E7%82%B9%EF%BC%8C%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84-toc" style="margin-left:40px;">
+     <a href="#%E9%97%AE%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E9%9A%BE%E7%82%B9%EF%BC%8C%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84" rel="nofollow">
+      问项目中有哪些难点，怎么解决的
+     </a>
+    </p>
+    <p id="%E4%BB%A3%E7%A0%81%E9%81%87%E5%88%B0%E5%86%B2%E7%AA%81%E6%80%8E%E4%B9%88%E5%8A%9E-toc" style="margin-left:40px;">
+     <a href="#%E4%BB%A3%E7%A0%81%E9%81%87%E5%88%B0%E5%86%B2%E7%AA%81%E6%80%8E%E4%B9%88%E5%8A%9E" rel="nofollow">
+      代码遇到冲突怎么办
+     </a>
+    </p>
+    <p id="%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6-toc" style="margin-left:40px;">
+     <a href="#%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6" rel="nofollow">
+      业务系统的搭建过程
+     </a>
+    </p>
+    <p id="%E5%A4%8D%E7%9B%98%E8%BF%87%E7%A8%8B-toc" style="margin-left:40px;">
+     <a href="#%E5%A4%8D%E7%9B%98%E8%BF%87%E7%A8%8B" rel="nofollow">
+      复盘过程
+     </a>
+    </p>
+    <p id="%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6-toc" style="margin-left:40px;">
+     <a href="#%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6" rel="nofollow">
+      拆分组件
+     </a>
+    </p>
+    <p id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94%E9%A1%B5%E9%9D%A2-toc" style="margin-left:40px;">
+     <a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94%E9%A1%B5%E9%9D%A2" rel="nofollow">
+      如何实现自适应页面
+     </a>
+    </p>
+    <p id="%E4%B8%AA%E6%80%A7-toc" style="margin-left:0px;">
+     <a href="#%E4%B8%AA%E6%80%A7" rel="nofollow">
+      *个性
+     </a>
+    </p>
+    <p id="%E6%94%B6%E9%9B%86%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E5%AE%8C%E6%88%90%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD-toc" style="margin-left:0px;">
+     <a href="#%E6%94%B6%E9%9B%86%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E5%AE%8C%E6%88%90%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD" rel="nofollow">
+      介绍
+     </a>
+    </p>
+    <p id="%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD-toc" style="margin-left:0px;">
+     <a href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD" rel="nofollow">
+      实现功能
+     </a>
+    </p>
+    <p id="%E5%88%86%E9%A1%B5%E6%80%8E%E4%B9%88%E5%81%9A-toc" style="margin-left:40px;">
+     <a href="#%E5%88%86%E9%A1%B5%E6%80%8E%E4%B9%88%E5%81%9A" rel="nofollow">
+      后端接口
+     </a>
+    </p>
+    <p id="%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%91%E9%80%81token%E5%92%8C%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-toc" style="margin-left:40px;">
+     <a href="#%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%91%E9%80%81token%E5%92%8C%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF" rel="nofollow">
+      登陆注册
+     </a>
+    </p>
+    <p id="*0.0.0.0%EF%BC%8Clocalhost%EF%BC%8C127.0.0.1-toc" style="margin-left:80px;">
+     <a href="#*0.0.0.0%EF%BC%8Clocalhost%EF%BC%8C127.0.0.1" rel="nofollow">
+      *0.0.0.0，localhost，127.0.0.1
+     </a>
+    </p>
+    <p id="0.0.0.0-toc" style="margin-left:80px;">
+     <a href="#0.0.0.0" rel="nofollow">
+      0.0.0.0
+     </a>
+    </p>
+    <p id="localhost-toc" style="margin-left:80px;">
+     <a href="#localhost" rel="nofollow">
+      localhost
+     </a>
+    </p>
+    <p id="127.0.0.1-toc" style="margin-left:80px;">
+     <a href="#127.0.0.1" rel="nofollow">
+      127.0.0.1
+     </a>
+    </p>
+    <p id="%E5%88%86%E9%A1%B5-toc" style="margin-left:40px;">
+     <a href="#%E5%88%86%E9%A1%B5" rel="nofollow">
+      分页
+     </a>
+    </p>
+    <p id="%E6%80%8E%E6%A0%B7%E5%AE%9E%E7%8E%B0%E5%BC%B9%E7%AA%97%E7%BB%84%E4%BB%B6modal-toc" style="margin-left:40px;">
+     <a href="#%E6%80%8E%E6%A0%B7%E5%AE%9E%E7%8E%B0%E5%BC%B9%E7%AA%97%E7%BB%84%E4%BB%B6modal" rel="nofollow">
+      弹窗组件modal
+     </a>
+    </p>
+    <p id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E5%BC%B9%E7%AA%97%E5%A4%96%E9%9D%A2%E5%8C%BA%E5%9F%9F%EF%BC%8C%E5%BC%B9%E7%AA%97%E6%B6%88%E5%A4%B1-toc" style="margin-left:80px;">
+     <a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E5%BC%B9%E7%AA%97%E5%A4%96%E9%9D%A2%E5%8C%BA%E5%9F%9F%EF%BC%8C%E5%BC%B9%E7%AA%97%E6%B6%88%E5%A4%B1" rel="nofollow">
+      如何实现点击弹窗外面区域，弹窗消失
+     </a>
+    </p>
+    <p id="%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF-toc" style="margin-left:0px;">
+     <a href="#%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF" rel="nofollow">
+      相关技术
+     </a>
+    </p>
+    <p id="React-toc" style="margin-left:0px;">
+     <a href="#React" rel="nofollow">
+      React18
+     </a>
+    </p>
+    <p id="%E7%89%B9%E7%82%B9-toc" style="margin-left:40px;">
+     <a href="#%E7%89%B9%E7%82%B9" rel="nofollow">
+      特点
+     </a>
+    </p>
+    <p id="%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20Dom%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20Dom%EF%BC%89" rel="nofollow">
+      声明式编码
+     </a>
+    </p>
+    <p id="%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81%C2%A0-toc" style="margin-left:80px;">
+     <a href="#%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81%C2%A0" rel="nofollow">
+      单向数据流 ⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E7%BB%84%E4%BB%B6%E5%8C%96-toc" style="margin-left:80px;">
+     <a href="#%E7%BB%84%E4%BB%B6%E5%8C%96" rel="nofollow">
+      组件化⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20Dom%EF%BC%89%EF%BC%88%E5%90%8CVue%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20Dom%EF%BC%89%EF%BC%88%E5%90%8CVue%EF%BC%89" rel="nofollow">
+      虚拟DOM（Virtual Dom）（同Vue）⭐⭐⭐
+     </a>
+    </p>
+    <p id="Diff%E7%AE%97%E6%B3%95-toc" style="margin-left:80px;">
+     <a href="#Diff%E7%AE%97%E6%B3%95" rel="nofollow">
+      Diff算法（同Vue）⭐⭐⭐
+     </a>
+    </p>
+    <p id="*%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93-toc" style="margin-left:80px;">
+     <a href="#*%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93" rel="nofollow">
+      渲染原理⭐⭐
+     </a>
+    </p>
+    <p id="%E7%BB%84%E4%BB%B6%E5%B1%9E%E6%80%A7-toc" style="margin-left:40px;">
+     <a href="#%E7%BB%84%E4%BB%B6%E5%B1%9E%E6%80%A7" rel="nofollow">
+      组件属性
+     </a>
+    </p>
+    <p id="%E6%9E%84%E5%BB%BA%E7%BB%84%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E6%9E%84%E5%BB%BA%E7%BB%84%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F%E2%AD%90%E2%AD%90" rel="nofollow">
+      构建组件的方式⭐⭐
+     </a>
+    </p>
+    <p id="props-toc" style="margin-left:80px;">
+     <a href="#props" rel="nofollow">
+      props
+     </a>
+    </p>
+    <p id="%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87%E2%AD%90%E2%AD%90" rel="nofollow">
+      状态提升⭐⭐
+     </a>
+    </p>
+    <p id="state-toc" style="margin-left:80px;">
+     <a href="#state" rel="nofollow">
+      state
+     </a>
+    </p>
+    <p id="refs-toc" style="margin-left:80px;">
+     <a href="#refs" rel="nofollow">
+      refs
+     </a>
+    </p>
+    <p id="%E6%80%BB%E7%BB%93-toc" style="margin-left:80px;">
+     <a href="#%E6%80%BB%E7%BB%93" rel="nofollow">
+      总结
+     </a>
+    </p>
+    <p id="%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6%E5%92%8C%E9%9D%9E%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6-toc" style="margin-left:40px;">
+     <a href="#%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6%E5%92%8C%E9%9D%9E%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6" rel="nofollow">
+      受控组件和非受控组件⭐⭐⭐
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6event-toc" style="margin-left:40px;">
+     <a href="#%E4%BA%8B%E4%BB%B6event" rel="nofollow">
+      事件event
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6%E4%B8%ADthis%E7%9A%84%E5%A4%84%E7%90%86-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8B%E4%BB%B6%E4%B8%ADthis%E7%9A%84%E5%A4%84%E7%90%86" rel="nofollow">
+      事件处理的几种方法
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6%E4%B8%ADthis%E7%9A%84%E5%A4%84%E7%90%86-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8B%E4%BB%B6%E4%B8%ADthis%E7%9A%84%E5%A4%84%E7%90%86" rel="nofollow">
+      事件中this的处理
+     </a>
+    </p>
+    <p id="%E4%BA%8B%E4%BB%B6%E4%BC%A0%E5%8F%82%E5%A4%84%E7%90%86-toc" style="margin-left:80px;">
+     <a href="#%E4%BA%8B%E4%BB%B6%E4%BC%A0%E5%8F%82%E5%A4%84%E7%90%86" rel="nofollow">
+      事件传参处理
+     </a>
+    </p>
+    <p id="%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%20mouseenter%E4%B8%8Emouseover%E5%8C%BA%E5%88%AB-toc" style="margin-left:80px;">
+     <a href="#%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%20mouseenter%E4%B8%8Emouseover%E5%8C%BA%E5%88%AB" rel="nofollow">
+      鼠标事件 mouseenter与mouseover区别
+     </a>
+    </p>
+    <p id="%E8%B7%A8%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1-toc" style="margin-left:40px;">
+     <a href="#%E8%B7%A8%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1" rel="nofollow">
+      跨组件通信
+     </a>
+    </p>
+    <p id="%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-toc" style="margin-left:40px;">
+     <a href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" rel="nofollow">
+      生命周期
+     </a>
+    </p>
+    <p id="%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87-toc" style="margin-left:40px;">
+     <a href="#%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87" rel="nofollow">
+      状态提升⭐⭐
+     </a>
+    </p>
+    <p id="Hooks-toc" style="margin-left:40px;">
+     <a href="#Hooks" rel="nofollow">
+      复用组件
+     </a>
+    </p>
+    <p id="Render%20Props%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#Render%20Props%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      Render Props模式
+     </a>
+    </p>
+    <p id="HOC%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#HOC%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      HOC高阶组件模式⭐⭐
+     </a>
+    </p>
+    <p id="Hooks-toc" style="margin-left:40px;">
+     <a href="#Hooks" rel="nofollow">
+      Hooks
+     </a>
+    </p>
+    <p id="%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8Hooks%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8Hooks%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      为什么用Hooks⭐⭐⭐
+     </a>
+    </p>
+    <p id="useState-toc" style="margin-left:80px;">
+     <a href="#useState" rel="nofollow">
+      useState
+     </a>
+    </p>
+    <p id="useReducer-toc" style="margin-left:80px;">
+     <a href="#useReducer" rel="nofollow">
+      useReducer
+     </a>
+    </p>
+    <p id="useEffect-toc" style="margin-left:80px;">
+     <a href="#useEffect" rel="nofollow">
+      useEffect
+     </a>
+    </p>
+    <p id="useRef-toc" style="margin-left:80px;">
+     <a href="#useRef" rel="nofollow">
+      useRef
+     </a>
+    </p>
+    <p id="%E5%80%92%E8%AE%A1%E6%97%B6%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#%E5%80%92%E8%AE%A1%E6%97%B6%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89" rel="nofollow">
+      倒计时（⭐手写）
+     </a>
+    </p>
+    <p id="useCallback-toc" style="margin-left:80px;">
+     <a href="#useCallback" rel="nofollow">
+      useCallback和useMemo
+     </a>
+    </p>
+    <p id="%E8%87%AA%E5%AE%9A%E4%B9%89Hook-toc" style="margin-left:80px;">
+     <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89Hook" rel="nofollow">
+      自定义Hook
+     </a>
+    </p>
+    <p id="Redux-toc" style="margin-left:40px;">
+     <a href="#Redux" rel="nofollow">
+      StrictMode严格模式
+     </a>
+    </p>
+    <p id="Router-toc" style="margin-left:40px;">
+     <a href="#Router" rel="nofollow">
+      Router
+     </a>
+    </p>
+    <p id="%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F-toc" style="margin-left:80px;">
+     <a href="#%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      路由模式（同Vue）
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E7%A1%80%E8%B7%AF%E7%94%B1%E6%90%AD%E5%BB%BA-toc" style="margin-left:80px;">
+     <a href="#%E5%9F%BA%E7%A1%80%E8%B7%AF%E7%94%B1%E6%90%AD%E5%BB%BA" rel="nofollow">
+      基础路由搭建
+     </a>
+    </p>
+    <p id="%E9%87%8D%E5%AE%9A%E5%90%91%E8%B7%AF%E7%94%B1-toc" style="margin-left:80px;">
+     <a href="#%E9%87%8D%E5%AE%9A%E5%90%91%E8%B7%AF%E7%94%B1" rel="nofollow">
+      重定向路由
+     </a>
+    </p>
+    <p id="%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%A8%E5%B1%80%E5%AE%88%E5%8D%AB-toc" style="margin-left:80px;">
+     <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%A8%E5%B1%80%E5%AE%88%E5%8D%AB" rel="nofollow">
+      自定义全局守卫
+     </a>
+    </p>
+    <p id="%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1-toc" style="margin-left:80px;">
+     <a href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1" rel="nofollow">
+      动态路由
+     </a>
+    </p>
+    <p id="Redux%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E5%BA%93-toc" style="margin-left:40px;">
+     <a href="#Redux%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E5%BA%93" rel="nofollow">
+      Redux状态管理库
+     </a>
+    </p>
+    <p id="%E5%8D%95%E4%B8%80%E4%BA%8B%E5%AE%9E%E6%9D%A5%E6%BA%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#%E5%8D%95%E4%B8%80%E4%BA%8B%E5%AE%9E%E6%9D%A5%E6%BA%90%E2%AD%90" rel="nofollow">
+      单一事实来源⭐
+     </a>
+    </p>
+    <p id="Redux%20%E7%9A%84%E7%BB%84%E4%BB%B6%E2%AD%90%E2%AD%90%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#Redux%20%E7%9A%84%E7%BB%84%E4%BB%B6%E2%AD%90%E2%AD%90%E2%AD%90" rel="nofollow">
+      Redux 的组件⭐⭐⭐
+     </a>
+    </p>
+    <p id="Redux%E4%BC%98%E7%82%B9%E2%AD%90-toc" style="margin-left:80px;">
+     <a href="#Redux%E4%BC%98%E7%82%B9%E2%AD%90" rel="nofollow">
+      Redux优点⭐
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="React18%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7%E2%AD%90%E2%AD%90-toc" style="margin-left:0px;">
+     <a href="#React18%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7%E2%AD%90%E2%AD%90" rel="nofollow">
+      React18新增特性⭐⭐
+     </a>
+    </p>
+    <p id="%E8%87%AA%E5%8A%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A5%E5%87%8F%E5%B0%91%E6%B8%B2%E6%9F%93-toc" style="margin-left:40px;">
+     <a href="#%E8%87%AA%E5%8A%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A5%E5%87%8F%E5%B0%91%E6%B8%B2%E6%9F%93" rel="nofollow">
+      自动批处理以减少渲染
+     </a>
+    </p>
+    <p id="flushSync%E6%B8%85%E6%B4%97%E5%90%8C%E6%AD%A5-toc" style="margin-left:80px;">
+     <a href="#flushSync%E6%B8%85%E6%B4%97%E5%90%8C%E6%AD%A5" rel="nofollow">
+      flushSync清洗同步
+     </a>
+    </p>
+    <p id="%3CSuspense%20%3E%E7%BB%84%E4%BB%B6%E7%9A%84%20SSR%20%E6%94%AF%E6%8C%81-toc" style="margin-left:40px;">
+     <a href="#%3CSuspense%20%3E%E7%BB%84%E4%BB%B6%E7%9A%84%20SSR%20%E6%94%AF%E6%8C%81" rel="nofollow">
+      组件的 SSR 支持
+     </a>
+    </p>
+    <p id="startTransition-toc" style="margin-left:40px;">
+     <a href="#startTransition" rel="nofollow">
+      startTransition
+     </a>
+    </p>
+    <p id="%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E5%88%86%E7%B1%BB-toc" style="margin-left:80px;">
+     <a href="#%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E5%88%86%E7%B1%BB" rel="nofollow">
+      状态更新分类
+     </a>
+    </p>
+    <p id="%E4%BD%BF%E7%94%A8-toc" style="margin-left:80px;">
+     <a href="#%E4%BD%BF%E7%94%A8" rel="nofollow">
+      使用
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-toc" style="margin-left:80px;">
+     <a href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF" rel="nofollow">
+      应用场景
+     </a>
+    </p>
+    <p id="Angular%2CVue%2CReact-toc" style="margin-left:40px;">
+     <a href="#Angular%2CVue%2CReact" rel="nofollow">
+      React脚手架
+     </a>
+    </p>
+    <p id="Angular%2CVue%2CReact%E5%8C%BA%E5%88%AB-toc" style="margin-left:40px;">
+     <a href="#Angular%2CVue%2CReact%E5%8C%BA%E5%88%AB" rel="nofollow">
+      Angular,Vue,React对比⭐⭐
+     </a>
+    </p>
+    <p id="Angular-toc" style="margin-left:80px;">
+     <a href="#Angular" rel="nofollow">
+      Angular
+     </a>
+    </p>
+    <p id="React%E5%92%8CVue-toc" style="margin-left:80px;">
+     <a href="#React%E5%92%8CVue" rel="nofollow">
+      React和Vue
+     </a>
+    </p>
+    <p id="MVC%E3%80%81MVP%E3%80%81MVVM%E6%A8%A1%E5%BC%8F-toc" style="margin-left:40px;">
+     <a href="#MVC%E3%80%81MVP%E3%80%81MVVM%E6%A8%A1%E5%BC%8F" rel="nofollow">
+      MVC、MVP、MVVM模式⭐⭐⭐
+     </a>
+    </p>
+    <p id="MVC%20%EF%BC%88Model%20View%20Controller%EF%BC%89-React-toc" style="margin-left:80px;">
+     <a href="#MVC%20%EF%BC%88Model%20View%20Controller%EF%BC%89-React" rel="nofollow">
+      MVC （Model View Controller）
+     </a>
+    </p>
+    <p id="MVP%EF%BC%88Model%20View%20Presenter%EF%BC%89-toc" style="margin-left:80px;">
+     <a href="#MVP%EF%BC%88Model%20View%20Presenter%EF%BC%89" rel="nofollow">
+      MVP（Model View Presenter）
+     </a>
+    </p>
+    <p id="MVVM%20%EF%BC%88Model-View-ViewModel%EF%BC%89-Vue-toc" style="margin-left:80px;">
+     <a href="#MVVM%20%EF%BC%88Model-View-ViewModel%EF%BC%89-Vue" rel="nofollow">
+      MVVM （Model View View Model）
+     </a>
+    </p>
+    <p id="MVVM%20%EF%BC%88Model-View-ViewModel%EF%BC%89-Vue-toc" style="margin-left:80px;">
+    </p>
+    <h2 id="HTML5">
+     HTML5
+    </h2>
+    <p>
+     HTML5的设计目的是为了在
+     <strong>
+      移动设备
+     </strong>
+     上支持多媒体。
+    </p>
+    <p>
+     在HTML5出来之前，我们习惯于用没有语义的
+     <strong>
+      div
+     </strong>
+     来表示不同模块。
+    </p>
+    <p>
+     在HTML5中加入了一些
+     <strong>
+      语义化
+     </strong>
+     标签，来更清晰的表达
+     <strong>
+      文档结构
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="283" src="https://i-blog.csdnimg.cn/blog_migrate/4900f7294f749c6f158d94e48be7c86d.png" width="318"/>
+    </p>
+    <h3 id="%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E7%9A%84%E5%A5%BD%E5%A4%84">
+     语义化标签的好处⭐⭐
+    </h3>
+    <ol>
+     <li>
+      <strong>
+       用户
+      </strong>
+      ：提高
+      <strong>
+       体验
+      </strong>
+      ，比如：
+      <strong>
+       title，alt
+      </strong>
+      用于
+      <strong>
+       解释
+      </strong>
+      名词和图片信息
+     </li>
+     <li>
+      <strong>
+       非技术
+      </strong>
+      人员：能看懂代码，很好的呈现内容
+      <strong>
+       结构
+      </strong>
+      、代码结构
+     </li>
+     <li>
+      <strong>
+       技术
+      </strong>
+      人员：便于团队
+      <strong>
+       开发与维护
+      </strong>
+      ，
+      <strong>
+       语义化
+      </strong>
+      更具有
+      <strong>
+       可读性
+      </strong>
+     </li>
+     <li>
+      <strong>
+       搜索引擎
+      </strong>
+      ：利于
+      <strong>
+       SEO
+      </strong>
+      。语义化能和搜索引擎建立更好的联系，优化搜索
+     </li>
+    </ol>
+    <h3 id="web%E6%A0%87%E5%87%86%E5%92%8CW3C%E6%A0%87%E5%87%86">
+     Web标准和W3C标准⭐
+    </h3>
+    <h4 id="%E7%BD%91%E9%A1%B5%E7%BB%84%E6%88%90">
+     网页组成
+    </h4>
+    <p>
+     web标准
+    </p>
+    <p>
+     <img alt="image-20210513001146250" height="158" src="https://i-blog.csdnimg.cn/blog_migrate/d172dd1ef7e7671365812dcea1266c13.png" width="359"/>
+    </p>
+    <ul>
+     <li>
+      结构（骨架）：HTML用于描述页面的结构
+     </li>
+     <li>
+      表现（皮肤）：CSS用于控制页面中元素的样式
+     </li>
+     <li>
+      行为（交互）：JavaScript用于响应用户操作
+     </li>
+     <li>
+      W3C：World Wide Web（万维网） Consortium，对web标准提出了
+      <strong>
+       代码规范
+      </strong>
+      的要求
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <p>
+       对
+       <strong>
+        结构
+       </strong>
+       的要求
+      </p>
+      <p>
+       1、标签字母要
+       <strong>
+        小写
+       </strong>
+      </p>
+      <p>
+       2、标签要
+       <strong>
+        闭合
+       </strong>
+      </p>
+     </li>
+     <li>
+      <p>
+       对
+       <strong>
+        行为
+       </strong>
+       的要求
+      </p>
+      <p>
+       1、建议使用
+       <strong>
+        外链CSS和js脚本
+       </strong>
+       ，实现
+       <strong>
+        结构与表现分离
+       </strong>
+       、
+       <strong>
+        结构与行为分离
+       </strong>
+       ，能提高页面的
+       <strong>
+        渲染效率
+       </strong>
+       ，更快地显示网页内容
+      </p>
+     </li>
+    </ul>
+    <h3 id="%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98">
+     <strong>
+      浏览器的渲染过程
+     </strong>
+     ⭐⭐⭐
+    </h3>
+    <p>
+     <img alt="" height="208" src="https://i-blog.csdnimg.cn/blog_migrate/a0f5dbd5791ce54d7c77e033b56559db.png" width="855"/>
+    </p>
+    <p>
+     <img alt="" height="146" src="https://i-blog.csdnimg.cn/blog_migrate/877c25f25589e75d8e0ea1b67af91a81.png" width="153">
+      <img alt="" height="231" src="https://i-blog.csdnimg.cn/blog_migrate/4a1c7748edbdf93a9a4533094b5e0a81.png" width="229">
+       <img alt="在这里插入图片描述" height="338" src="https://i-blog.csdnimg.cn/blog_migrate/37f7afb7b524797f62dab7e1d1c9a7b7.png" width="273"/>
+      </img>
+     </img>
+    </p>
+    <p>
+     1.解析HTML的所有标签，深度遍历生成DOM Tree
+    </p>
+    <p>
+     <img alt="" height="215" src="https://i-blog.csdnimg.cn/blog_migrate/8b53f5e98369c2fa193053ddff949eb1.png" width="447"/>
+    </p>
+    <p>
+     2.解析CSS，构建层叠样式表模型CSSOM(CSS Object Model)
+    </p>
+    <p>
+     <img alt="" height="215" src="https://i-blog.csdnimg.cn/blog_migrate/d6faf4ee936440d96f3350220169a247.png" width="413"/>
+    </p>
+    <p>
+     2.5.JS脚本加载
+    </p>
+    <p>
+     a. 普通js/sync
+     <br/>
+     文档解析的过程中，如果遇到script脚本，就会停止页面的解析进行下载，当脚本都执行完毕后，才会继续解析页面。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a344e14907f77b4035eb458f539b145a.png"/>
+    </p>
+    <p>
+     （因为JS可以操作DOM和CSS，可能会改动DOM和CSS，所以继续解析会造成浪费）。
+    </p>
+    <p>
+     如果脚本是外部的，会等待脚本下载完毕，再继续解析文档。
+    </p>
+    <p>
+     所以常见的做法是将js放到页脚部分。
+    </p>
+    <p>
+     b. async（异步：HTML加载和解析，js加载）
+     <br/>
+     async脚本会在
+     <strong>
+      加载完毕后执行
+     </strong>
+     。
+    </p>
+    <p>
+     &lt;script type="text/javascript" src="x.min.js" async="async"&gt;&lt;/script&gt;
+     <br/>
+     async脚本的加载不计入DOMContentLoaded事件统计，也就是说下图两种情况都是有可能发生的：
+     <br/>
+     HTML 还没有被解析完的时候，async脚本已经加载完了，那么 HTML 停止解析，去执行脚本，脚本执行完毕后触发DOMContentLoaded事件。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6272157e38013b4e28090bea9d168f9f.png"/>
+    </p>
+    <p>
+     HTML 解析完了之后，async脚本才加载完，然后再执行脚本，那么在HTML解析完毕、async脚本还没加载完的时候就触发DOMContentLoaded事件
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/df4622aeb24bf4478882bd52676d9a9f.png"/>
+    </p>
+    <p>
+     c. defer(推迟)
+     <br/>
+     文档解析时，遇到设置了defer的脚本，就会在后台进行下载，但是并不会阻止文档的渲染，当页面解析和渲染完毕后，会等到所有的defer脚本加载完毕并按照顺序执行完毕才会触发
+    </p>
+    <p>
+     &lt;script type="text/javascript" src="x.min.js" defer="defer"&gt;&lt;/script&gt;
+    </p>
+    <p>
+     DOMContentLoaded事件，也就是说下图两种情况都是有可能发生的：
+     <br/>
+     HTML 还没有被解析完的时候，defer脚本已经加载完了，那么
+     <strong>
+      等待HTML 解析
+     </strong>
+     完成后执行脚本，脚本执行完毕后触发DOMContentLoaded事件。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/5afffc598c042591c48d4d3ffb175626.png"/>
+    </p>
+    <p>
+     HTML 解析完了之后，defer脚本才加载完，然后再执行脚本，脚本执行完毕后触发DOMContentLoaded事件。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6e84ca5634dd0eab7334f714ac835ee1.png"/>
+    </p>
+    <p>
+     <strong>
+      defer是“渲染完再执行”：
+     </strong>
+     依赖于页面中的DOM元素（文档是否解析完毕），或者被其他脚本文件依赖
+    </p>
+    <p>
+     <strong>
+      async是“下载完就执行”：
+     </strong>
+     并不关心页面中的DOM元素（文档是否解析完毕），并且也不会产生其他脚本需要的数据。
+    </p>
+    <p>
+     3.构建Render Tree（渲染树）
+    </p>
+    <p>
+     DOM和CSSOM根据一定的规则组合起来生成了Render Tree
+    </p>
+    <p>
+     <img alt="" height="208" src="https://i-blog.csdnimg.cn/blog_migrate/55b3ac02a633304b386bd0f974a0f5f2.png" width="903"/>
+    </p>
+    <p>
+     4.布局（Layout）
+    </p>
+    <p>
+     确定各个元素的位置，以及大小。浏览器使用一种
+     <strong>
+      流式
+     </strong>
+     处理的方法，只需要
+     <strong>
+      一次绘制
+     </strong>
+     操作就可以布局所有的元素。
+    </p>
+    <p>
+     5.绘制（Painting）
+    </p>
+    <p>
+     浏览器会遍历Render Tree渲染树，调用“paint”方法，将渲染树的各个节点绘制到屏幕上。
+    </p>
+    <h3 id="%E5%9B%9E%E6%B5%81%EF%BC%88%E9%87%8D%E6%8E%92%EF%BC%89%E5%92%8C%E9%87%8D%E7%BB%98%E2%AD%90%E2%AD%90">
+     回流（
+     <strong>
+      重排
+     </strong>
+     ）和重绘⭐⭐
+    </h3>
+    <p>
+     <strong>
+      回流（重排）
+     </strong>
+    </p>
+    <p>
+     元素
+     <strong>
+      改变 尺寸，宽高，边框，内容，位置 都会引起重排
+     </strong>
+     ，导致需要重新构建页面的时候
+    </p>
+    <ul>
+     <li>
+      <strong>
+       增删
+      </strong>
+      可见的 DOM 元素的时候
+     </li>
+     <li>
+      元素的
+      <strong>
+       位置
+      </strong>
+      发生改变
+     </li>
+     <li>
+      元素的
+      <strong>
+       尺寸
+      </strong>
+      发生改变
+     </li>
+     <li>
+      内容改变
+     </li>
+     <li>
+      页面
+      <strong>
+       第一次渲染
+      </strong>
+      的时候
+     </li>
+    </ul>
+    <p>
+     <strong>
+      重绘
+     </strong>
+    </p>
+    <p>
+     <strong>
+      外观
+     </strong>
+     发生改变，但没有改变
+     <strong>
+      布局
+     </strong>
+    </p>
+    <p>
+     列举一些相关的
+     <strong>
+      CSS 样式
+     </strong>
+     ：color、background、background-size、visibility、box-shadow
+    </p>
+    <h3 id="webworker">
+     常用手写⭐
+    </h3>
+    <h4 id="%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE">
+     获取标签
+    </h4>
+    <pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=utf-8&gt;
+        &lt;style type="text/css"&gt;
+            div{
+                color:#ff0000;
+                font-size:20px;
+            }
+            .green{
+                color:#008000;
+            }
+            #black{
+                color:#000000;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;红色&lt;/div&gt;
+        &lt;div class='green'&gt;绿色&lt;/div&gt;
+        &lt;div id='black'&gt;黑色&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <pre><code class="language-javascript">document.getElementById('id')//全局唯一
+document.getElementByClassName('className')//获得数组
+document.getElementByTagName('div')//获得数组</code></pre>
+    <h4 id="js%E4%B8%AD%E6%8F%92%E5%85%A5%E6%A0%87%E7%AD%BE">
+     js中插入标签
+    </h4>
+    <pre><code class="language-javascript">let head = document.head;
+let style = document.createElement("style");
+style.type = "text/css";
+style.innerHTML = "p {color: rgb(255,0,0);}";
+head.appendChild(style);</code></pre>
+    <h4 id="%E8%8E%B7%E5%8F%96%E7%AC%ACn%E4%B8%AA%E6%A0%87%E7%AD%BE">
+     获取第n个标签
+    </h4>
+    <pre><code class="language-javascript">let pArr = document.getElementsByTagName('p')
+for(let i = 0; i &lt; pArr.length; i++){
+    if(i===n-1){
+...
+}
+}</code></pre>
+    <pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=utf-8&gt;
+        &lt;style type="text/css"&gt;
+            ul li:nth-child(2) {
+                background-color: rgb(255,0,0);
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;2&lt;/li&gt;
+            &lt;li&gt;3&lt;/li&gt;
+            &lt;li&gt;4&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <h4 id="%E5%B8%B8%E7%94%A8%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6">
+     <a href="https://www.runoob.com/jsref/dom-obj-event.html" rel="nofollow" title="常用触发事件">
+      常用触发事件
+     </a>
+    </h4>
+    <pre><code class="language-html">&lt;input type="text" onkeyup="myFunction()"&gt;
+</code></pre>
+    <pre><code class="language-javascript">//不用 "on" 前缀。例如，使用 "click" 来取代 "onclick"。
+//true - 事件在捕获阶段执行
+//false- 默认。事件在冒泡阶段执行
+document.addEventListener(event, function[, useCapture])</code></pre>
+    <p>
+     鼠标事件
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        属性
+       </th>
+       <th>
+        描述
+       </th>
+       <th>
+        DOM
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onclick.html" rel="nofollow" title="onclick">
+         onclick
+        </a>
+       </td>
+       <td>
+        当用户点击某个对象时调用的事件句柄。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-ondblclick.html" rel="nofollow" title="ondblclick">
+         ondblclick
+        </a>
+       </td>
+       <td>
+        当用户双击某个对象时调用的事件句柄。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onmousedown.html" rel="nofollow" title="onmousedown">
+         onmousedown
+        </a>
+       </td>
+       <td>
+        鼠标按钮被按下。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onmousemove.html" rel="nofollow" title="onmousemove">
+         onmousemove
+        </a>
+       </td>
+       <td>
+        鼠标被移动。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onmouseover.html" rel="nofollow" title="onmouseover">
+         onmouseover
+        </a>
+       </td>
+       <td>
+        鼠标移到某元素之上。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onmouseout.html" rel="nofollow" title="onmouseout">
+         onmouseout
+        </a>
+       </td>
+       <td>
+        鼠标从某元素移开。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onmouseup.html" rel="nofollow" title="onmouseup">
+         onmouseup
+        </a>
+       </td>
+       <td>
+        鼠标按键被松开。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     键盘事件
+    </p>
+    <table id="table2">
+     <tbody>
+      <tr>
+       <th>
+        属性
+       </th>
+       <th>
+        描述
+       </th>
+       <th>
+        DOM
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onkeydown.html" rel="nofollow" title="onkeydown">
+         onkeydown
+        </a>
+       </td>
+       <td>
+        某个键盘按键被按下。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onkeypress.html" rel="nofollow" title="onkeypress">
+         onkeypress
+        </a>
+       </td>
+       <td>
+        某个键盘按键被按下并松开。
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onkeyup.html" rel="nofollow" title="onkeyup">
+         onkeyup
+        </a>
+       </td>
+       <td>
+        某个键盘按键被松开。
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     表单事件
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        属性
+       </th>
+       <th>
+        描述
+       </th>
+       <th>
+        DOM
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onchange.html" rel="nofollow" title="onchange">
+         onchange
+        </a>
+       </td>
+       <td>
+        该事件在表单元素的内容改变时触发( &lt;input&gt;, &lt;keygen&gt;, &lt;select&gt;, 和 &lt;textarea&gt;)
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onfocus.html" rel="nofollow" title="onfocus">
+         onfocus
+        </a>
+       </td>
+       <td>
+        元素获取焦点时触发
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onfocusin.html" rel="nofollow" title="onfocusin">
+         onfocusin
+        </a>
+       </td>
+       <td>
+        元素即将获取焦点时触发
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onfocusout.html" rel="nofollow" title="onfocusout">
+         onfocusout
+        </a>
+       </td>
+       <td>
+        元素即将失去焦点时触发
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-oninput.html" rel="nofollow" title="oninput">
+         oninput
+        </a>
+       </td>
+       <td>
+        元素获取用户输入时触发
+       </td>
+       <td>
+        3
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onreset.html" rel="nofollow" title="onreset">
+         onreset
+        </a>
+       </td>
+       <td>
+        表单重置时触发
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onsearch.html" rel="nofollow" title="onsearch">
+         onsearch
+        </a>
+       </td>
+       <td>
+        用户向搜索域输入文本时触发 ( &lt;input="search"&gt;)
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onselect.html" rel="nofollow" title="onselect">
+         onselect
+        </a>
+       </td>
+       <td>
+        用户选取文本时触发 ( &lt;input&gt; 和 &lt;textarea&gt;)
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <a href="https://www.runoob.com/jsref/event-onsubmit.html" rel="nofollow" title="onsubmit">
+         onsubmit
+        </a>
+       </td>
+       <td>
+        表单提交时触发
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3 id="%E8%8E%B7%E5%8F%96%E5%AE%BD%E9%AB%98">
+     <a href="https://juejin.cn/post/6995932249505923102" rel="nofollow" title="获取宽高">
+      获取宽高
+     </a>
+    </h3>
+    <h4 id="%E7%B3%BB%E7%BB%9F%E5%B1%8F%E5%B9%95%EF%BC%88window.screen.availHeight%EF%BC%8Cheight%EF%BC%89">
+     系统屏幕（
+     <strong>
+      window.screen.availHeight，height
+     </strong>
+     ）
+    </h4>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/c951ef07bf3978daccfff811857f95da.png"/>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       window.screen.height
+      </strong>
+     </li>
+    </ul>
+    <p>
+     这个是设备显示屏的高度，各个机型的显示屏高度都不一样，可以在系统设置中看
+    </p>
+    <ul>
+     <li>
+      <strong>
+       window.screen.availHeight
+      </strong>
+     </li>
+    </ul>
+    <p>
+     屏幕的可用高度，一般是显示屏高度减去显示屏任务栏的高度
+    </p>
+    <p>
+     <code>
+      screen.availHeight = screen.height - 任务栏高度
+     </code>
+    </p>
+    <p>
+     <strong>
+      注；
+     </strong>
+     更改显示器的缩放倍数，会影响到获取的值，比如屏幕放大125%，则原本1080高度的值，读取后为864。即1080 / 1.25 = 864
+    </p>
+    <h4 id="%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%88window.outerHeight%EF%BC%8CinnerHeight%EF%BC%89">
+     浏览器（
+     <strong>
+      window.outerHeight，innerHeight
+     </strong>
+     ）
+    </h4>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/9fdcc2c79dc6f7313a323d94500e54aa.png"/>
+    </p>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        window.outerHeight
+       </strong>
+      </p>
+      <p>
+       浏览器的高度，高度改变，会改变值的大小
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        window.innerHeight
+       </strong>
+      </p>
+      <p>
+       浏览器的
+       <strong>
+        可用
+       </strong>
+       高度 = 浏览器高度 - 顶部工具栏
+      </p>
+      <p>
+       若有调试面板还会再减去调
+       <strong>
+        度面板
+       </strong>
+       的高度，最后得出的才是可用高度
+      </p>
+     </li>
+    </ul>
+    <h4 id="%E5%85%83%E7%B4%A0%EF%BC%88clientHeight%2CoffsetHeight%2CscrollHeight%EF%BC%89">
+     元素（
+     <code>
+      clientHeight,offsetHeight,scrollHeight
+     </code>
+     ）
+    </h4>
+    <p>
+     获取body的高（不含边框）
+    </p>
+    <p>
+     <code>
+      element.clientHeight
+     </code>
+     ：body的高度
+     <br/>
+     <strong>
+      clientHeight = padding + height
+     </strong>
+    </p>
+    <p>
+     获取body的高（含边框）
+    </p>
+    <p>
+     <code>
+      element.offsetHeight
+     </code>
+     ：body的高度(包含border)
+     <br/>
+     <strong>
+      offsetHeight = padding + height + border
+     </strong>
+    </p>
+    <p>
+     <code>
+      element.scrollHeight
+     </code>
+     ，为可见高度加上未显示的高度（滚动条未显示部分）。
+    </p>
+    <h4 id="%E7%9B%B8%E5%AF%B9%E8%B7%9D%E7%A6%BB%E6%88%96%E4%BD%8D%E7%BD%AE">
+     相对距离或位置（
+     <code>
+      offsetTop，scrollTop，getBoundingClientRect
+     </code>
+     ）
+    </h4>
+    <ul>
+     <li>
+      获取到顶部或左部的距离
+      <code>
+       element.offsetTop
+      </code>
+      ，
+      <code>
+       element.offsetLeft
+      </code>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      offsetTop
+     </strong>
+     ：元素到
+     <strong>
+      offsetParent
+     </strong>
+     顶部的距离
+    </p>
+    <p>
+     <strong>
+      offsetParent
+     </strong>
+     ：距离元素最近的一个
+     <strong>
+      具有定位的父元素
+     </strong>
+     （
+     <strong>
+      relative，absolute，fixed
+     </strong>
+     ），
+    </p>
+    <p>
+     若
+     <strong>
+      父元素
+     </strong>
+     都不符合条件，offsetParent为
+     <strong>
+      body
+     </strong>
+     。
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/5a77533e1c4925db84d4da5cddcbf3be.png"/>
+    </p>
+    <ol>
+     <li>
+      注意：只有元素show（
+      <strong>
+       渲染完成
+      </strong>
+      ）才会计算入offsetTop，若是中间有元素数据需要异步获取，会导致最终获取的offsetTop值偏小
+     </li>
+    </ol>
+    <ul>
+     <li>
+      获取滚动条到top，left的距离：
+      <code>
+       element.scrollTop，element.scrollLeft
+      </code>
+     </li>
+     <li>
+      获取相对于视窗的
+      <strong>
+       位置集合
+      </strong>
+      <code>
+       element.getBoundingClientRect()
+      </code>
+     </li>
+    </ul>
+    <p>
+     集合中有top, right, bottom, left等属性。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       rectObject.top
+      </strong>
+      ：元素上边到视窗上边的距离;
+     </li>
+     <li>
+      <strong>
+       rectObject.right
+      </strong>
+      ：元素右边到视窗左边的距离;
+     </li>
+     <li>
+      <strong>
+       rectObject.bottom
+      </strong>
+      ：元素下边到视窗上边的距离;
+     </li>
+     <li>
+      <strong>
+       rectObject.left
+      </strong>
+      ：元素左边到视窗左边的距离;
+     </li>
+    </ul>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/0abfec56f9d79d7e21909ad138405842.png"/>
+    </p>
+    <h2 id="CSS3">
+     CSS3
+    </h2>
+    <h3 id="%E7%9B%92%E6%A8%A1%E5%9E%8B">
+     盒模型⭐⭐⭐
+    </h3>
+    <p>
+     内容(content)、内边距/填充(padding)、外边距/边界(margin)、 边框(border)；
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/4578df939d737f1da52df8e82117b6d8.png"/>
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/6fdd4b706feaf25330e614da49b9a54d.png"/>
+    </p>
+    <h4 id="content-box%20%E5%86%85%E5%AE%B9%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88W3C%E7%9B%92%EF%BC%89%C2%A0%20%E5%92%8C%20border-box%20%E8%BE%B9%E6%A1%86%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88IE%20%E7%9B%92%EF%BC%89">
+     content-box 内容盒模型（W3C盒）  和 border-box 边框盒模型（IE 盒）
+    </h4>
+    <p>
+     width = content宽度
+    </p>
+    <p>
+     width = content宽度 + padding + border
+    </p>
+    <pre><code class="language-html">&lt;div class="content-box"&gt;&lt;/div&gt;
+&lt;div class="border-box"&gt;&lt;/div&gt;</code></pre>
+    <h4 id="%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BD%A2%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     <a href="https://juejin.cn/post/6879741264166649863" rel="nofollow" title="实现梯形，三角形，扇形，圆形，半圆">
+      实现梯形，三角形，扇形，圆形，半圆
+     </a>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-html">/* HTML CODE: 
+    &lt;div class="square"&gt;正方形&lt;/div&gt;
+    */
+    
+    /* CSS CODE */
+   .square {
+      width: 100px;
+      height: 100px;
+      border-top: 50px solid red;&lt;!--solid: 定义实线边框--&gt;
+      border-right: 50px solid green;
+      border-bottom: 50px solid orangered;
+      border-left: 50px solid blue;
+    }
+</code></pre>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/0e70ce17e1880248bab80ae7736f97aa.png"/>
+    </p>
+    <p>
+     关键：
+    </p>
+    <p>
+     border: 50px solid transparent;         border-color设置为【透明】
+    </p>
+    <p>
+     border-radius: 50%;
+    </p>
+    <p>
+     border-top-left-radius: 50px;
+    </p>
+    <p>
+     详情：
+    </p>
+    <p>
+     <a href="https://juejin.cn/post/6879741264166649863" rel="nofollow" title="CSS实现各种图形 -- 梯形，三角形，扇形，圆形，半圆 - 掘金">
+      CSS实现各种图形 -- 梯形，三角形，扇形，圆形，半圆 - 掘金
+     </a>
+    </p>
+    <h4 id="%E7%9B%92%E5%AD%90%E5%85%85%E6%BB%A1%E5%B1%8F%E5%B9%95%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     盒子充满屏幕 （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p id="C.%E7%9B%B8%E5%AF%B9%E5%BD%93%E5%89%8D%E5%B1%8F%E5%B9%95%E9%AB%98%E5%BA%A6%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89">
+     相对当前屏幕高度
+    </p>
+    <pre><code class="language-css">div.test
+{
+   background-color:red;
+	width:100vw;
+	height:100vh;
+}</code></pre>
+    <h3 id="%EF%BC%9FCSS%E6%A0%B7%E5%BC%8F%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89">
+     选择器
+    </h3>
+    <h4 id="ID%E9%80%89%E6%8B%A9%E5%99%A8%E3%80%81%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E3%80%81%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89">
+     ID选择器、类选择器、标签选择器（按优先级高到低排序）⭐⭐
+    </h4>
+    <pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=utf-8&gt;
+        &lt;style type="text/css"&gt;
+            div{
+                color:#ff0000;
+                font-size:20px;
+            }
+            .green{
+                color:#008000;
+            }
+            #black{
+                color:#000000;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;红色&lt;/div&gt;
+        &lt;div class='green'&gt;绿色&lt;/div&gt;
+        &lt;div id='black'&gt;黑色&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h4 id="%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8">
+     <a href="https://www.runoob.com/css/css-attribute-selectors.html" rel="nofollow" title="属性选择器">
+      属性选择器
+     </a>
+    </h4>
+    <p>
+     属性选择元素
+    </p>
+    <pre><code class="language-html">[title]
+{
+    color:blue;
+}</code></pre>
+    <h4 id="%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8">
+     <a href="https://www.runoob.com/css/css-pseudo-classes.html" rel="nofollow" title="伪类和伪元素选择器">
+      伪类和伪元素选择器
+     </a>
+     （
+     <a href="#pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none" rel="nofollow">
+      ⭐
+     </a>
+     手写）
+     <a href="https://www.runoob.com/css/css-pseudo-classes.html" rel="nofollow" title="伪类和伪元素选择器">
+      伪类和伪元素选择器
+     </a>
+    </h4>
+    <p>
+     伪类
+     <strong>
+      选择器
+     </strong>
+     ：
+     <strong>
+      逻辑选择元素
+     </strong>
+    </p>
+    <pre><code class="language-html">selector:pseudo-class {property:value;}
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;style&gt;
+a:link {color:#000000;}      /* 未访问链接*/
+a:visited {color:#00FF00;}  /* 已访问链接 */
+a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+a:active {color:#0000FF;}  /* 鼠标点击时 */
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;b&gt;&lt;a href="/css/" target="_blank"&gt;这是一个链接&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;注意：&lt;/b&gt; a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;注意：&lt;/b&gt; a:active 必须在 a:hover 之后。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <ul>
+     <li>
+      nth-child(n)
+     </li>
+    </ul>
+    <p>
+     <strong>
+      nth-child(n)
+     </strong>
+     匹配属于其父元素的
+     <strong>
+      第n个子元素
+     </strong>
+     ，不论元素类型，n可以是数字、关键词、或公式。关键词odd和even是可用于匹配下标是奇数或偶数的子元素的关键词（第一个子元素的下标是 1）
+    </p>
+    <pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=utf-8&gt;
+        &lt;style type="text/css"&gt;
+            ul li:nth-child(even) {
+                background-color: rgb(255,0,0);
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;2&lt;/li&gt;
+            &lt;li&gt;3&lt;/li&gt;
+            &lt;li&gt;4&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <p>
+     <img alt="" height="113" src="https://i-blog.csdnimg.cn/blog_migrate/d334fa40e9264bbbaf1edf592372459b.png" width="97"/>
+    </p>
+    <ul>
+     <li id="%E4%BC%AA%E5%85%83%E7%B4%A0">
+      伪元素
+     </li>
+    </ul>
+    <pre><code class="language-html">&lt;head&gt;
+  &lt;meta charset=utf-8&gt;
+  &lt;style type="text/css"&gt;
+    div::after{
+      content:"";
+      width: 20px;
+      height: 20px;
+      background-color: rgb(255,0,0);
+      display: block;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <p>
+     html模块的div元素加一个后伪元素
+     <img alt="" height="54" src="https://i-blog.csdnimg.cn/blog_migrate/96eb7654bc1294f8a13519f32bb1162d.png" width="67"/>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       伪类
+      </strong>
+      只能使用“
+      <strong>
+       ：
+      </strong>
+      ”，
+      <strong>
+       伪元素
+      </strong>
+      既可以使用“
+      <strong>
+       :
+      </strong>
+      ”，也可以使用“
+      <strong>
+       ::
+      </strong>
+      ”
+     </li>
+     <li>
+      伪元素其实相当于伪造了一个元素，
+      <strong>
+       伪类没有伪造元素
+      </strong>
+      ，例如first-child只是给子元素添加样式而已。（本质区别就是
+      <strong>
+       是否抽象创造了新元素
+      </strong>
+      ）
+     </li>
+    </ul>
+    <h4 id="%E4%BC%98%E5%85%88%E7%BA%A7">
+     优先级⭐⭐⭐
+    </h4>
+    <ul>
+     <li>
+      在同一层级下：权值由高到低
+     </li>
+    </ul>
+    <ol>
+     <li>
+      !important  （
+      <em>
+       <strong>
+        会覆盖CSS的任何声明，其实与优先级毫无关系
+       </strong>
+      </em>
+      ）   权值
+     </li>
+     <li>
+      内联样式(style=“ ”)                                                                    1000
+     </li>
+     <li>
+      ID选择器（id=" “）                                                                      100
+     </li>
+     <li>
+      伪类选择器（如：hover)
+     </li>
+     <li>
+      属性选择器[title]{color:blue;}）
+     </li>
+     <li>
+      Class类选择器(class=” ")                                                              10
+     </li>
+     <li>
+      HTML标签选择器 (p{})                                                                   1
+     </li>
+     <li>
+      通用选择器（*）                                                                            0
+     </li>
+    </ol>
+    <ul>
+     <li>
+      不同层级下：
+     </li>
+    </ul>
+    <p>
+     正常来说权重值越高的优先级越高，但是一直以来没有具体的权重值划分，所以目前大多数开发中
+     <strong>
+      层级越深的优先级越高
+     </strong>
+    </p>
+    <h3 id="%E6%A0%B7%E5%BC%8F%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%EF%BC%89">
+     样式方式（按优先级高到低排序）⭐⭐
+    </h3>
+    <h4 id="%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8%E6%A0%87%E7%AD%BE%E5%86%85%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E7%9A%84%E6%A0%B7%E5%BC%8F%EF%BC%89">
+     <br/>
+     内联样式表（在标签内设置元素的样式）
+    </h4>
+    <p>
+     <br/>
+     写一次只能设置一个
+    </p>
+    <pre><code class="language-css">&lt;p style="background:red"&gt;&lt;/p&gt;</code></pre>
+    <h4 id="%E5%B5%8C%E5%85%A5%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8head%E6%A0%87%E7%AD%BE%E5%86%85%EF%BC%89">
+     <br/>
+     嵌入样式表（在head标签内）
+    </h4>
+    <pre><code class="language-css">&lt;head&gt;
+ 
+&lt;title&gt;&lt;/title&gt;
+ 
+&lt;style type="text/css"&gt;
+ 
+p{
+ 
+background-color:yellow;
+ 
+}
+ 
+&lt;/style&gt;
+ 
+&lt;/head&gt;</code></pre>
+    <h4 id="%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E5%9C%A8head%E6%A0%87%E7%AD%BE%E5%86%85%EF%BC%89">
+     <br/>
+     外部样式表（在head标签内）
+    </h4>
+    <pre><code class="language-css">rel=relationship
+
+href=hypertext Reference
+
+&lt;head&gt;
+ 
+&lt;title&gt;&lt;/title&gt;
+ 
+&lt;link href="xxx.css" rel="stylesheet" type="text/css"/&gt;
+ 
+&lt;/head&gt;</code></pre>
+    <p>
+     <br/>
+     通过 link 进行对外部CSS样式文件的引用，也可以引用网上别人写好的样式
+    </p>
+    <h3 id="pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" rel="nofollow" title="transform">
+      transform
+     </a>
+     旋转，缩放，平移⭐⭐
+    </h3>
+    <p>
+     修改 CSS 坐标空间，实现旋转，缩放，倾斜或平移
+    </p>
+    <p>
+     默认相对元素的中心点
+    </p>
+    <p>
+     <a href="https://c.runoob.com/codedemo/3391/" rel="nofollow" title="Css3 Transform 各种变形旋转 | 菜鸟工具">
+      Css3 Transform 各种变形旋转 | 菜鸟工具
+     </a>
+    </p>
+    <h3 id="position%E5%85%B3%E9%94%AE%E5%AD%97">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position" rel="nofollow" title="position">
+      position
+     </a>
+     关键字⭐⭐⭐
+    </h3>
+    <ul>
+     <li>
+      <strong>
+       <code>
+        static（默认）
+       </code>
+      </strong>
+     </li>
+    </ul>
+    <p>
+     该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时
+     <strong>
+      <code>
+       top
+      </code>
+      ,
+      <code>
+       right
+      </code>
+      ,
+      <code>
+       bottom
+      </code>
+      ,
+      <code>
+       left
+      </code>
+      和
+      <code>
+       z-index
+      </code>
+     </strong>
+     属性无效。
+    </p>
+    <p>
+     z-index 属性指定一个元素的
+     <strong>
+      堆叠顺序
+     </strong>
+     。
+    </p>
+    <p>
+     拥有更
+     <strong>
+      高
+     </strong>
+     堆叠顺序的元素总是会处于堆叠顺序较低的元素的
+     <strong>
+      前面
+     </strong>
+     。
+    </p>
+    <ul>
+     <li>
+      inherit
+     </li>
+    </ul>
+    <p>
+     从
+     <strong>
+      父元素继承 position
+     </strong>
+     属性的值。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       <code>
+        relative
+       </code>
+      </strong>
+     </li>
+    </ul>
+    <p>
+     相对于其
+     <strong>
+      正常位置
+     </strong>
+     进行定位。
+    </p>
+    <p>
+     元素
+     <strong>
+      先放置
+     </strong>
+     在
+     <strong>
+      未添加定位时的位置
+     </strong>
+     ，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。
+    </p>
+    <p>
+     <img alt="" height="52" src="https://i-blog.csdnimg.cn/blog_migrate/43f8c94bdd40641df5023d36489a0eaf.png" width="101"/>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       <code>
+        absolute
+       </code>
+      </strong>
+     </li>
+    </ul>
+    <p>
+     相对于
+     <strong>
+      static 定位以外
+     </strong>
+     的
+     <strong>
+      第一个父元素
+     </strong>
+     进行定位。
+    </p>
+    <p>
+     元素会被
+     <strong>
+      移出正常文档流
+     </strong>
+     ，并
+     <strong>
+      不为元素预留空间
+     </strong>
+     。绝对定位的元素可以设置外边距（margins），且不
+     <strong>
+      会与其他边距合并
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="54" src="https://i-blog.csdnimg.cn/blog_migrate/cd8809106b657deca44d16db0282010a.png" width="81"/>
+    </p>
+    <ul>
+     <li>
+      fixed：相对于浏览器
+      <strong>
+       窗口
+      </strong>
+      进行定位。在屏幕滚动时不会改变
+     </li>
+     <li>
+      sticky(
+      <strong>
+       CSS3新增
+      </strong>
+      ) ：基于用户
+      <strong>
+       滚动
+      </strong>
+      的位置，屏幕滚出时会粘住
+     </li>
+    </ul>
+    <h3 id="%E5%8D%95%E4%BD%8D">
+     <a href="https://www.runoob.com/css/css-align.html" rel="nofollow" title="水平 &amp; 垂直对齐">
+      水平 &amp; 垂直对齐
+     </a>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h3>
+    <h4 id="%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD">
+     <strong>
+      水平居中
+     </strong>
+    </h4>
+    <p>
+     指在
+     <strong>
+      水平
+     </strong>
+     方向上处于
+     <strong>
+      中间
+     </strong>
+     的位置。
+    </p>
+    <ul>
+     <li>
+      元素/图片：
+     </li>
+    </ul>
+    <p>
+     <strong>
+      margin: auto
+     </strong>
+     ;
+    </p>
+    <p>
+     行内元素会占整行，看不出来水平居中，所以需要：width: 50%;
+    </p>
+    <ul>
+     <li>
+      文本：
+     </li>
+    </ul>
+    <p>
+     文本标签除了&lt;p&gt;都是行内元素，
+     <strong>
+      text-align=center
+     </strong>
+     <br/>
+     <br/>
+     <strong>
+      垂直居中
+     </strong>
+    </p>
+    <ul>
+     <li>
+      单
+      <strong>
+       行
+      </strong>
+      文本:
+     </li>
+    </ul>
+    <p>
+     <strong>
+      line-height = height
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       图片
+      </strong>
+      :
+     </li>
+    </ul>
+    <p>
+     <strong>
+      vertical-align
+     </strong>
+     : middle;
+    </p>
+    <h3 id="%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E2%AD%90%E2%AD%90%E2%AD%90">
+     <strong>
+      水平垂直居中
+     </strong>
+    </h3>
+    <h4 id="transform%3Atranslate">
+     transform:translate
+    </h4>
+    <p>
+     top: 50%;left: 50%;， 是以元素
+     <strong>
+      左上角为原点
+     </strong>
+     ，故不处于中心位置，
+    </p>
+    <p>
+     <img alt="" height="104" src="https://i-blog.csdnimg.cn/blog_migrate/dfd5ea5e64a312f703249ad0fd476e3d.png" width="98"/>
+     <img alt="" height="101" src="https://i-blog.csdnimg.cn/blog_migrate/ce2b3887849a5dcd38f5220d4abe1515.png" width="99"/>
+    </p>
+    <p>
+     加上transform:translate(-50%,-50%) ，元素
+     <strong>
+      原点（中心点）
+     </strong>
+     往上（x轴）,左（y轴）移动自身长宽的 50%，
+    </p>
+    <h4 id="flex%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89">
+     flex（强烈推荐）
+    </h4>
+    <p>
+     只需要设置 align-items:center; 属性
+    </p>
+    <pre><code class="language-html">.wrap {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid blue;
+}</code></pre>
+    <h3 id="BFC%E8%A7%84%E8%8C%83">
+     <a href="https://www.runoob.com/w3cnote/flex-grammar.html" rel="nofollow" title="flex布局">
+      flex布局
+     </a>
+     ⭐⭐⭐
+    </h3>
+    <p>
+     布局的传统解决方案，基于
+     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model" rel="nofollow" title="盒状模型">
+      盒状模型
+     </a>
+     ，依赖
+     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" rel="nofollow" title="display">
+      display
+     </a>
+     属性 +
+     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" rel="nofollow" title="position">
+      position
+     </a>
+     属性 +
+     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" rel="nofollow" title="float">
+      float
+     </a>
+     属性。它对于那些特殊布局非常不方便，比如，
+     <a href="https://css-tricks.com/centering-css-complete-guide/" rel="nofollow" title="垂直居中">
+      垂直居中
+     </a>
+     就不容易实现。
+    </p>
+    <p>
+     关键是flex布局能触发
+     <strong>
+      BFC
+     </strong>
+     规范
+    </p>
+    <p>
+     Flexible box设置或检索弹性盒模型对象的子元素如何分配空间
+    </p>
+    <h4 id="align-items%E5%92%8Cjustify-content%E7%9A%84%E5%8C%BA%E5%88%AB">
+     <strong>
+      <strong>
+       <a href="https://juejin.cn/post/7063823914136256543#heading-5" rel="nofollow" title="align-items和justify-content的区别">
+        align-items和justify-content的区别
+       </a>
+      </strong>
+     </strong>
+    </h4>
+    <p>
+     水平的主轴（main axis）和垂直的交叉轴（cross axis）
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/7ea1dbb4a4f8c4e3e2ea28c957fbdce2.png"/>
+    </p>
+    <p>
+     flex-direction 属性决定主轴的方向（也就是排列方向）。有4个属性值可以设置。
+    </p>
+    <ul>
+     <li>
+      column：主轴为垂直方向，起点在上沿。
+     </li>
+     <li>
+      column-reverse：主轴为垂直方向，起点在下沿。
+     </li>
+     <li>
+      row（默认值）：主轴为水平方向，起点在左端。
+     </li>
+     <li>
+      row-reverse：主轴为水平方向，起点在右端。
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="233" src="https://i-blog.csdnimg.cn/blog_migrate/781ca2b4634af3d1d241f6a8eca120b9.png" width="937"/>
+    </p>
+    <ul>
+     <li>
+      align-items 属性定义项目在
+      <strong>
+       交叉轴
+      </strong>
+      上如何对齐。
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="635" src="https://i-blog.csdnimg.cn/blog_migrate/f2a1e548db30bcf3d2d0a4186d333e32.png" width="527"/>
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        baseline
+       </td>
+       <td>
+        <p>
+         元素位于容器的基线上。
+        </p>
+        <p>
+         如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        stretch
+       </td>
+       <td>
+        <p>
+         默认值。元素被拉伸以适应容器。
+        </p>
+        <p>
+         如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <img alt="" height="518" src="https://i-blog.csdnimg.cn/blog_migrate/957dc230e7be88d2895637e54e7014dd.gif" width="1134"/>
+    </p>
+    <ul>
+     <li>
+      justify-content 属性定义了项目在
+      <strong>
+       主轴
+      </strong>
+      上的对齐方式。
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="504" src="https://i-blog.csdnimg.cn/blog_migrate/0c0acb23e1980512174c7d39b4537446.png" width="443"/>
+    </p>
+    <p>
+     <img alt="" height="550" src="https://i-blog.csdnimg.cn/blog_migrate/650a45569b3f77082d58184169169ea2.gif" width="1106"/>
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        space-between
+       </td>
+       <td>
+        均匀排列每个元素，
+        <strong>
+         首个元素
+        </strong>
+        放置于
+        <strong>
+         起点
+        </strong>
+        ，
+        <strong>
+         末尾元素
+        </strong>
+        放置于
+        <strong>
+         终点
+        </strong>
+        。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        space-evenly
+       </td>
+       <td>
+        均匀排列每个元素，每个元素之间的
+        <strong>
+         间隔相等
+        </strong>
+        。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        space-around
+       </td>
+       <td>
+        均匀排列每个元素，每个元素
+        <strong>
+         周围分配相同的空间
+        </strong>
+        。
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <img alt="" height="249" src="https://i-blog.csdnimg.cn/blog_migrate/abd5caa853fefac1ff00d1dc5cd63cc1.png" width="1115"/>
+    </p>
+    <p>
+     <img alt="" height="288" src="https://i-blog.csdnimg.cn/blog_migrate/e54570b5da9612969ee7fdd1476944f6.png" width="1111"/>
+     <img alt="" height="402" src="https://i-blog.csdnimg.cn/blog_migrate/98c9955be8a9beadbf13d9be66ec0ebc.png" width="1128"/>
+    </p>
+    <h4 id="flex%3A1">
+     <strong>
+      flex:1
+     </strong>
+    </h4>
+    <p>
+     flex 属性是 flex-grow, flex-shrink 和 flex-basis 的简写，默认值为 0 1 auto。后两个属性可选。
+    </p>
+    <p>
+     flex 属性属性有两个快捷值：
+     <strong>
+      <code>
+       auto
+      </code>
+      (
+      <code>
+       1 1 auto
+      </code>
+      )
+     </strong>
+     和 none
+     <strong>
+      (
+      <code>
+       0 0 auto
+      </code>
+      )
+     </strong>
+     。
+    </p>
+    <p>
+     建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+    </p>
+    <pre><code class="language-html">/* 一个值，width/height: flex-basis */
+flex: 10em;
+flex: 30px;
+flex: min-content;
+
+/* 两个值：flex-grow | flex-basis */
+flex: 1 30px;
+
+/* 两个值：flex-grow | flex-shrink */
+flex: 2 2;
+
+/* 三个值：flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;</code></pre>
+    <p>
+     flex-grow 属性定义项目的
+     <strong>
+      放大
+     </strong>
+     比例，默认为0，即如果存在剩余空间，也不放大。
+    </p>
+    <p>
+     如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+    </p>
+    <p>
+     <img alt="" height="133" src="https://i-blog.csdnimg.cn/blog_migrate/69d6ecb8cdf216388c36f3f54e5e168d.png" width="570"/>
+    </p>
+    <p>
+     flex-shrink属性定义了项目的
+     <strong>
+      缩小
+     </strong>
+     比例，默认为1，即如果空间不足，该项目将缩小。
+    </p>
+    <p>
+     如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+    </p>
+    <p>
+     负值对该属性无效。
+    </p>
+    <p>
+     <img alt="" height="194" src="https://i-blog.csdnimg.cn/blog_migrate/c579eab8b1aff96c96bc0a1679536427.png" width="883"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小
+    </p>
+    <h3 id="BFC%E8%A7%84%E8%8C%83%E2%AD%90%E2%AD%90%E2%AD%90">
+     <a href="https://juejin.cn/post/6950082193632788493" rel="nofollow" title="BFC规范">
+      BFC规范
+     </a>
+     ⭐⭐⭐
+    </h3>
+    <h4 id="%E9%97%AE%E9%A2%98">
+     <strong>
+      问题
+     </strong>
+    </h4>
+    <ul>
+     <li>
+      外边距重叠：
+     </li>
+    </ul>
+    <p>
+     块的上外边距margin-top和下外边距margin-bottom会合并为单个边距（为单个边距的最大值）
+    </p>
+    <p>
+     <img alt="" height="542" src="https://i-blog.csdnimg.cn/blog_migrate/1c0d974f24e1af8662e67b64d7806bfa.png" width="1200"/>
+    </p>
+    <ul>
+     <li>
+      浮动导致父高度塌陷：
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="831" src="https://i-blog.csdnimg.cn/blog_migrate/4d24c49ac0de564b718f9043baca0e36.png" width="1200"/>
+    </p>
+    <ul>
+     <li>
+      不浮动的元素被浮动元素覆盖：
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="653" src="https://i-blog.csdnimg.cn/blog_migrate/d51183875dddfd00310ce2d06c2c8ca4.png" width="1200"/>
+    </p>
+    <p>
+     <strong>
+      BFC块级格式化上下文
+     </strong>
+     （Block Fromatting Context）
+    </p>
+    <p>
+     决定了元素如何对其
+     <strong>
+      内容
+     </strong>
+     进行
+     <strong>
+      定位
+     </strong>
+     ，以及与其它元素的关系和
+     <strong>
+      相互
+     </strong>
+     作用
+    </p>
+    <p>
+     <strong>
+      独立布局
+     </strong>
+     ，盒子内子元素样式
+     <strong>
+      不会影响到外面
+     </strong>
+     的元素。
+    </p>
+    <h4 id="%E5%B8%B8%E8%A7%81%E8%A7%A6%E5%8F%91%E6%9D%A1%E4%BB%B6">
+     常见触发条件
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       overflow
+      </strong>
+      : hidden
+     </li>
+     <li>
+      <strong>
+       display
+      </strong>
+      : flex | inline-block | table-cell
+     </li>
+     <li>
+      <strong>
+       position
+      </strong>
+      : absolute | fixed
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="769" src="https://i-blog.csdnimg.cn/blog_migrate/dee1dbdcc5a548021abd9d653450abf4.png" width="1200"/>
+    </p>
+    <h4 id="%E8%A7%84%E5%88%99">
+     规则
+    </h4>
+    <ul>
+     <li>
+      <code>
+       BFC
+      </code>
+      就是一个
+      <strong>
+       块级
+      </strong>
+      元素，块级元素会在
+      <strong>
+       垂直方向
+      </strong>
+      一个接一个的排列
+     </li>
+     <li>
+      <code>
+       BFC
+      </code>
+      就是页面中的一个隔离的独立容器，
+      <strong>
+       容器里的标签
+      </strong>
+      不会影响到外部标签
+     </li>
+     <li>
+      <strong>
+       垂直方向的距离
+      </strong>
+      由
+      <strong>
+       margin
+      </strong>
+      决定， 属于
+      <strong>
+       同一个
+       <code>
+        BFC
+       </code>
+      </strong>
+      的两个相邻的标签外边距会发生重叠
+     </li>
+     <li>
+      计算
+      <code>
+       BFC
+      </code>
+      的高度时，
+      <strong>
+       浮动元素也参与计算
+      </strong>
+     </li>
+    </ul>
+    <h4 id="overflow%3A%20hidden%E7%A4%BA%E4%BE%8B">
+     <strong>
+      overflow
+     </strong>
+     : hidden示例
+    </h4>
+    <p>
+     overflow属性指定如果内容溢出一个元素的框，会发生什么
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        值
+       </th>
+       <th>
+        描述
+       </th>
+      </tr>
+      <tr>
+       <td>
+        visible
+       </td>
+       <td>
+        默认值。内容不会被修剪，会呈现在元素框之外。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        hidden
+       </td>
+       <td>
+        内容会被修剪，并且其余内容是不可见的。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        scroll
+       </td>
+       <td>
+        内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        auto
+       </td>
+       <td>
+        如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        inherit
+       </td>
+       <td>
+        规定应该从父元素继承 overflow 属性的值。
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <strong>
+      overflow:hidden
+     </strong>
+    </p>
+    <ul>
+     <li>
+      避免外边距重叠
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="718" src="https://i-blog.csdnimg.cn/blog_migrate/49b5af389385f1e10fdb185fef9a2eef.png" width="1200"/>
+    </p>
+    <ul>
+     <li>
+      清除浮动
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="835" src="https://i-blog.csdnimg.cn/blog_migrate/285ce30dbf713dcf11610372035a49b6.png" width="1200"/>
+    </p>
+    <ul>
+     <li>
+      阻止元素被浮动元素覆盖：
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="638" src="https://i-blog.csdnimg.cn/blog_migrate/f1c4b5cb51422dad4aa8d98b47b0c137.png" width="1200"/>
+    </p>
+    <h3 id="%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     *
+     <a href="https://juejin.cn/post/6844903689094692871#comment" rel="nofollow" title="浮动">
+      浮动
+     </a>
+    </h3>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;float实现浮动&lt;/title&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    .z1{
+        height: 200px;
+        width: 200px;
+        float: left;
+        text-align: center;
+        line-height: 200px;
+        background: skyblue;
+    }
+    .fu {
+        width: 400px;
+    }
+&lt;/style&gt;
+&lt;body&gt;
+&lt;div class="fu clearfix"&gt;
+    &lt;div class="z1"&gt;设置了float为left的图片&lt;/div&gt;
+    &lt;div class="z2"&gt;你看，我没有被浮动哥哥挡住哦，这是一段神奇旅行，一天我遇上了白雪公主&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>
+     <img alt="" height="298" src="https://i-blog.csdnimg.cn/blog_migrate/1d30fe1b7ee83fcff22cf71396a204ca.png" width="366"/>
+     <img alt="" height="152" src="https://i-blog.csdnimg.cn/blog_migrate/47e520b3aee14162db1a3b2a4c5c4a15.png" width="288"/>
+    </p>
+    <p>
+     即使图片浮动了，
+     <strong>
+      破坏了文档流
+     </strong>
+     ，也覆盖在没有浮动的元素上了，但是其并没有将文本内容也覆盖掉 ，证明了被设计出来的主要目的：实现
+     <strong>
+      文字环绕图片
+     </strong>
+     排版功能
+    </p>
+    <p>
+     <code>
+      absolute
+     </code>
+     的容器，才是意义上的
+     <strong>
+      完全脱离
+     </strong>
+     文档流。
+     <strong>
+      覆盖
+     </strong>
+     在当前位置上的
+     <strong>
+      所有
+     </strong>
+     容器和文本内容之上。
+    </p>
+    <p>
+     <img alt="" height="216" src="https://i-blog.csdnimg.cn/blog_migrate/26471ad082e599df41593801a0cf3b4f.png" width="450"/>
+    </p>
+    <p>
+     <code>
+      absolute
+     </code>
+     和
+     <code>
+      float
+     </code>
+     都不会去覆盖掉在他们之前的正常文档流，这应该和浏览器渲染机制有关系，会从
+     <strong>
+      上到下依次渲染
+     </strong>
+     内容，渲染成功后，就不会因为后续元素浮动而使其被覆盖住(不考虑使用fix等强行覆盖的情况)。
+    </p>
+    <h3 id="%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%20%EF%BC%9A%E5%B7%A6%E5%8F%B3%E5%9B%BA%E5%AE%9A%EF%BC%8C%E4%B8%AD%E9%97%B4%E8%87%AA%E9%80%82%E5%BA%94%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89%E2%80%8B%E7%BC%96%E8%BE%91">
+     三栏布局 ：左右固定，中间自适应（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h3>
+    <p>
+     <img alt="" height="105" src="https://i-blog.csdnimg.cn/blog_migrate/9e056c65d02b68318a0926831a08f957.png" width="889"/>
+    </p>
+    <h4 id="flex%E5%B8%83%E5%B1%80%EF%BC%88%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%EF%BC%89">
+     flex布局（强烈推荐）
+    </h4>
+    <ul>
+     <li>
+      基础巩固
+     </li>
+    </ul>
+    <p>
+     flex 属性用于设置或检索弹性盒模型对象的子元素如何分配空间。
+    </p>
+    <p>
+     flex 属性是 flex-grow、flex-shrink 和 flex-basis 属性的简写属性。
+    </p>
+    <p>
+     <strong>
+      注意：
+     </strong>
+     如果元素不是弹性盒模型对象的子元素，则 flex 属性不起作用。
+    </p>
+    <p>
+     <img alt="" height="649" src="https://i-blog.csdnimg.cn/blog_migrate/e233db28c4674ee59d2a65e33bd65e03.png" width="1200"/>
+    </p>
+    <ul>
+     <li>
+      实现方法
+     </li>
+    </ul>
+    <p>
+     左右两栏设置宽度，中间栏设置 flex:1,占满余下部分
+    </p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ 
+&lt;head&gt;
+    &lt;title&gt;flex布局&lt;/title&gt;
+    &lt;style&gt;
+        .main{
+            height: 60px;
+            display: flex;
+        }
+ 
+        .left,
+        .right{
+            height: 100%;
+            width: 200px;
+            background-color: #ccc;
+        }
+ 
+        .content{
+            flex: 1;
+            background-color: #eee;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+ 
+&lt;body&gt;
+    &lt;div class="main"&gt;
+        &lt;div class="left"&gt;&lt;/div&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;div class="right"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;</code></pre>
+    <h4 id="grid%E5%B8%83%E5%B1%80">
+     grid布局
+    </h4>
+    <ul>
+     <li>
+      基础巩固
+     </li>
+    </ul>
+    <p>
+     grid：CSS 所有网格容器的简写属性
+    </p>
+    <p>
+     <em>
+      grid-template-rows / grid-template-columns ：
+     </em>
+     设置列和行的尺寸。
+    </p>
+    <ul>
+     <li>
+      实现方法
+     </li>
+    </ul>
+    <p>
+     左右两栏设置宽度，中间栏宽度auto
+    </p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ 
+&lt;head&gt;
+    &lt;title&gt;grid布局&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            grid-template-rows: 60px;
+        }
+ 
+        .left,
+        .right {
+            background-color: #ccc;
+        }
+ 
+        .content {
+            background-color: #eee;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+ 
+&lt;body&gt;
+    &lt;div class="left"&gt;&lt;/div&gt;
+    &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;div class="right"&gt;&lt;/div&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;</code></pre>
+    <h4 id="magin%E8%B4%9F%E5%80%BC%E6%B3%95">
+     margin负值法
+    </h4>
+    <ul>
+     <li>
+      <a href="https://blog.csdn.net/qq_46617584/article/details/124827056" title="原理解释">
+       原理解释
+      </a>
+     </li>
+     <li>
+      实现方法：
+     </li>
+    </ul>
+    <p>
+     左右两栏均左浮动，外层盒子左浮动，
+    </p>
+    <p>
+     中间栏设置左右两栏宽度的margin值，
+    </p>
+    <p>
+     左栏设置margin -100%（向左移动整个屏幕的距离），
+    </p>
+    <p>
+     右栏设置 margin值为负的盒子宽度。
+    </p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ 
+&lt;head&gt;
+    &lt;title&gt;margin负值&lt;/title&gt;
+ 
+    &lt;style&gt;
+        .left,
+        .right {
+            float: left;
+            width: 200px;
+            height: 60px;
+            background-color: #eee;
+        }
+ 
+        .left {
+             margin-left: -100%;
+        }
+ 
+        .right {
+            margin-left: -200px;
+        }
+ 
+        .main {
+            width: 100%;
+            float: left;
+            height: 60px;
+        }
+ 
+        .content {
+            height: 60px;
+            margin: 0 200px;
+            background-color: #ccc;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+ 
+&lt;body&gt;
+    &lt;div class="main"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="left"&gt;&lt;/div&gt;
+    &lt;div class="right"&gt;&lt;/div&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;</code></pre>
+    <h4 id="%E8%87%AA%E8%BA%AB%E6%B5%AE%E5%8A%A8">
+     自身浮动
+    </h4>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ 
+&lt;head&gt;
+    &lt;title&gt;自身浮动法&lt;/title&gt;
+    &lt;style&gt;
+        .left,
+        .right {
+            height: 60px;
+            width: 200px;
+            background-color: #eee;
+        }
+ 
+        .left {
+            float: left;
+        }
+ 
+        .right {
+            float: right;
+        }
+ 
+        .content{
+            height: 60px;
+            background-color: #ccc;
+            margin: 0 200px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+ 
+&lt;body&gt;
+    &lt;div class="left"&gt;&lt;/div&gt;
+    &lt;div class="right"&gt;&lt;/div&gt;
+    &lt;div class="content"&gt;&lt;/div&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;</code></pre>
+    <h4 id="%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D">
+     绝对定位
+    </h4>
+    <p>
+     左右两栏绝对定位，分别定位到盒子的两侧，中间栏采用margin值撑开盒子
+    </p>
+    <p>
+     <strong>
+      注意
+     </strong>
+     ：采用定位时，浏览器默认的padding或margin值会影响布局，需要初始化样式 margin:0;padding：0；
+    </p>
+    <h4 id="%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80">
+     圣杯布局 （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     两边固定，中间自适应，且中间栏放在文档流的前面，率先渲染
+    </p>
+    <p>
+     基本的dom结构（注意center需要排在第一个位置）
+    </p>
+    <pre><code class="language-html">&lt;div class="header"&gt;header&lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="center column"&gt;center&lt;/div&gt;
+        &lt;div class="left column" &gt;left&lt;/div&gt;
+        &lt;div class="right column" &gt;right&lt;/div&gt;
+    &lt;/div&gt;
+&lt;div class="footer"&gt;footer&lt;/div&gt;
+</code></pre>
+    <p>
+     或者
+    </p>
+    <pre><code class="language-html">&lt;section class="container"&gt;
+            &lt;article class="center"&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/article&gt;
+            &lt;article class="left"&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/article&gt;
+            &lt;article class="right"&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/article&gt;
+        &lt;/section&gt;</code></pre>
+    <p>
+     &lt;br&gt; 标签插入一个简单的换行符
+    </p>
+    <ul>
+     <li>
+      <strong>
+       定位+浮动
+      </strong>
+     </li>
+    </ul>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=utf-8&gt;
+        &lt;style type="text/css"&gt;
+        * {
+                margin: 0;
+                padding: 0;
+        }
+        .container {
+            border: 1px solid black;
+            /* 防止容器盒子高度塌陷和给之后的左、右浮动元素预留位置 */
+            overflow: hidden;
+            padding: 0px 100px;
+            min-width: 100px;
+        }
+
+        .left {
+            background-color: greenyellow;
+            /* 保证之后的"margin-left"属性可以将自身拉到上一行 */
+            float: left;
+            /* 固定宽度 */
+            width: 100px;
+            /* 将元素向左移动属性值的单位，100%相对于父容器计算 */
+            margin-left: -100%;
+            /* 相对定位，需要将自身再向左移动自身的宽度，进入容器的"padding-left"区域 */
+            position: relative;
+            /* 自身的宽度，刚好进入容器的"padding-left"区域 */
+            left: -100px;
+        }
+
+        .center {
+            background-color: darkorange;
+            float: left;
+            width: 100%;
+        }
+
+        .right {
+            background-color: darkgreen;
+            float: left;
+            width: 100px;
+            margin-left: -100px;
+            position: relative;
+            left: 100px;
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    	&lt;section class="container"&gt;
+            &lt;article class="center"&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/article&gt;
+            &lt;article class="left"&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/article&gt;
+            &lt;article class="right"&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/article&gt;
+        &lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>
+     magin-left:-100%
+    </p>
+    <p>
+     这个百分比是以父元素内容长度的百分比，该父元素内容长度需要去除padding magin border。由于长度设置为了100%，需要一整行的宽度补偿
+     <a href="https://so.csdn.net/so/search?q=margin&amp;spm=1001.2101.3001.7020" title="margin">
+      margin
+     </a>
+     ，则移到最左边。
+    </p>
+    <p>
+     magin-left：-100px
+    </p>
+    <p>
+     margin负值会改变元素占据的空间，及移到父元素的最左边，并且该子元素width即为100px
+    </p>
+    <h3 id="%E5%8D%95%E4%BD%8D%E2%AD%90%E2%AD%90%E2%AD%90">
+     单位⭐⭐⭐
+    </h3>
+    <ol>
+     <li>
+      绝对长度单位：
+      <strong>
+       px  像素
+      </strong>
+     </li>
+     <li>
+      百分比:
+      <strong>
+       %
+      </strong>
+     </li>
+     <li>
+      相对
+      <strong>
+       父
+      </strong>
+      元素字体大小单位:
+      <strong>
+       em
+      </strong>
+     </li>
+     <li>
+      相对于
+      <strong>
+       根
+      </strong>
+      元素字体大小的单位:
+      <strong>
+       rem
+      </strong>
+      （默认
+      <strong>
+       16px
+      </strong>
+      ）
+     </li>
+     <li>
+      相对于视口*宽度的百分比（100vw即视窗宽度的100%）:
+      <strong>
+       vw
+      </strong>
+     </li>
+     <li>
+      相对于视口*高度的百分比（100vh即视窗高度的100%）:
+      <strong>
+       vh
+      </strong>
+     </li>
+    </ol>
+    <h4 id="px%E8%BD%ACrem%E2%AD%90%E2%AD%90%E2%AD%90">
+     px转rem
+    </h4>
+    <p>
+     相对于
+     <strong>
+      根
+     </strong>
+     元素字体大小的单位:
+     <strong>
+      rem
+     </strong>
+     （默认16px）
+    </p>
+    <p>
+     <strong>
+      PostCss
+     </strong>
+     是一个用JavaScript工具和插件转换CSS代码的工具。
+     <code>
+      postcss-pxtorem
+     </code>
+    </p>
+    <h4 id="px%20%E8%BD%ACvw%E2%AD%90%E2%AD%90%E2%AD%90">
+     px转vw
+    </h4>
+    <blockquote>
+     <p>
+      网页宽度=1920px 网页高度=1080px
+     </p>
+     <p>
+      1920px = 100vw
+     </p>
+     <p>
+      1080px = 100vh
+     </p>
+     <p>
+      宽 300px 和 200px 的 div ，其所占的宽高，以 vw 和 vh 为单位
+     </p>
+     <p>
+      vwDiv = (300px / 1920px ) * 100vw
+     </p>
+     <p>
+      vhDiv = (200px / 1080px ) * 100vh
+     </p>
+     <p>
+      当屏幕放大或者缩小时，div 还是以 vw 和 vh 作为宽高的，就会自动适应不同分辨率的屏幕
+     </p>
+    </blockquote>
+    <p>
+     <strong>
+      可
+     </strong>
+     <strong>
+      自定义scss函数。
+     </strong>
+    </p>
+    <pre><code class="language-css">$vm_base: 1920;
+$vh_base: 1080;
+
+@function vw($px) {
+@return ($px / $vm_base) * 100vw;
+}
+@function vh($px) {
+@return ($px / $vh_base) * 100vh;
+}
+
+.head{
+font-size:vh(100);
+}</code></pre>
+    <h3 id="%C2%A0pacity%3A%200%E3%80%81visibility%3A%20hidden%E3%80%81display%3A%20none%E2%AD%90%E2%AD%90%E2%AD%90">
+     opacity: 0 、visibility: hidden、display: none⭐⭐⭐
+    </h3>
+    <table border="1" cellpadding="1" cellspacing="1">
+     <tbody>
+      <tr>
+       <td>
+        区别
+       </td>
+       <td>
+        opacity: 0
+       </td>
+       <td>
+        visibility: hidden
+       </td>
+       <td>
+        display: none
+       </td>
+      </tr>
+      <tr>
+       <td>
+        页面布局
+       </td>
+       <td>
+        不改变
+       </td>
+       <td>
+        不改变
+       </td>
+       <td>
+        改变
+       </td>
+      </tr>
+      <tr>
+       <td>
+        触发事件
+       </td>
+       <td>
+        能触发
+       </td>
+       <td>
+        不能触发
+       </td>
+       <td>
+        不能触发
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3 id="%3Cimg%3E%E7%9A%84%20title%20%E5%92%8C%20alt%20%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">
+     img的 title 和 alt 有什么区别⭐
+    </h3>
+    <ul>
+     <li>
+      通常当鼠标滑动到元素上的时候显示
+     </li>
+     <li>
+      <code>
+       alt（alternative）
+      </code>
+      是
+      <code>
+       &lt;img&gt;
+      </code>
+      的特有属性，是图片内容的
+      <strong>
+       等价
+      </strong>
+      描述，用于图片无法加载显示、读屏器阅读图片。可提图片高可访问性，除了纯装饰图片外都必须设置有意义的值，搜索引擎会重点分析。
+     </li>
+    </ul>
+    <h3 id="%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0%E2%AD%90%E2%AD%90%E2%AD%90">
+     行内素、块级元素和行内块元素⭐⭐⭐
+    </h3>
+    <pre><code class="language-css">display:inline;// 转换为行内元素
+display:block;// 转换为块级元素
+display:inline-block// 转换为行内块元素</code></pre>
+    <p>
+     从
+     <strong>
+      HTML
+     </strong>
+     的角度来讲，标签分为：
+    </p>
+    <blockquote>
+     <ul>
+      <li>
+       <strong>
+        文本级标签
+       </strong>
+       ：
+       <strong>
+        p
+       </strong>
+       、
+       <strong>
+        span
+       </strong>
+       、
+       <strong>
+        a
+       </strong>
+       、
+       <strong>
+        b
+       </strong>
+       、
+       <strong>
+        i
+       </strong>
+       、
+       <strong>
+        u
+       </strong>
+       、
+       <strong>
+        em
+       </strong>
+      </li>
+      <li>
+       <strong>
+        容器级标签
+       </strong>
+       ：
+       <strong>
+        div
+       </strong>
+       、
+       <strong>
+        h系列
+       </strong>
+       、
+       <strong>
+        li
+       </strong>
+       、
+       <strong>
+        dt
+       </strong>
+       、
+       <strong>
+        dd
+       </strong>
+      </li>
+     </ul>
+    </blockquote>
+    <p>
+     <strong>
+      行内元素
+     </strong>
+     ：除了p之外，所有的文本级标签，都是
+     <a href="https://so.csdn.net/so/search?q=%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0&amp;spm=1001.2101.3001.7020" title="行内元素">
+      行内元素
+     </a>
+     ，p是个文本级，但是是个块级元素
+    </p>
+    <p>
+     <strong>
+      块级元素
+     </strong>
+     ：所有的
+     <strong>
+      容器
+     </strong>
+     级标签都是
+     <a href="https://so.csdn.net/so/search?q=%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0&amp;spm=1001.2101.3001.7020" title="块级元素">
+      块级元素
+     </a>
+     ，还有p标签
+    </p>
+    <p>
+    </p>
+    <p>
+     块标签：div、h1~h6、ul、li、table、p、br、form。
+     <br/>
+     特征：独占一行，换行显示，可以设置
+     <strong>
+      宽高
+     </strong>
+     ，可以嵌套块和行
+    </p>
+    <p>
+     <br/>
+     行标签：span、a、img、textarea、select、option、input。
+     <br/>
+     特征：只有在行内显示，不会
+     <strong>
+      自动进行换行
+     </strong>
+     ，内容撑开宽、高，不可以设置宽、高（img、input、textarea等除外）。（设置float后可以设置宽、高）
+    </p>
+    <p>
+     对
+     <strong>
+      margin
+     </strong>
+     仅设置左右方向有效，上下无效，
+     <strong>
+      padding
+     </strong>
+     设置上下左右都有效
+    </p>
+    <h3 id="%E6%BA%A2%E5%87%BA%E8%BD%AC%E7%9C%81%E7%95%A5%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     溢出转省略 （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）⭐⭐
+    </h3>
+    <p>
+     单行多行，都要overflow: hidden;
+    </p>
+    <h4 id="%E5%8D%95%E8%A1%8C">
+     单行
+    </h4>
+    <p>
+     定元素内的
+     <strong>
+      空白处理
+     </strong>
+     ：
+     <strong>
+      white-space:nowrap; 文本不进行换行
+     </strong>
+     ；默认值normal
+    </p>
+    <pre><code class="language-css">overflow: hidden;
+text-overflow:ellipsis;  //ellipsis;省略
+white-space: nowrap;  //nowrap 不换行</code></pre>
+    <p>
+     <img alt="" height="296" src="https://i-blog.csdnimg.cn/blog_migrate/cca147886643ebc6de3207cd2c2706ee.png" width="659"/>
+    </p>
+    <h4 id="%C2%A0%E5%A4%9A%E8%A1%8C">
+     多行
+    </h4>
+    <p>
+     <img alt="" height="108" src="https://i-blog.csdnimg.cn/blog_migrate/d6c4f5c56296ba9c5adbe959ec83d508.png" width="906"/>
+    </p>
+    <p>
+     1.-webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
+     <br/>
+     2.display: -webkit-box; 必须结合的属性 ，将对象作为
+     <strong>
+      弹性伸缩盒
+     </strong>
+     子模型显示 。
+     <br/>
+     3.-webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
+    </p>
+    <p>
+     <img alt="" height="106" src="https://i-blog.csdnimg.cn/blog_migrate/61326658d219023c90b6f4efbb1046be.png" width="775"/>
+     IE不兼容
+    </p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;style&gt; 
+.text2{
+display: -webkit-box;    
+-webkit-box-orient: vertical;    
+-webkit-line-clamp: 3;    
+overflow: hidden;
+}
+&lt;/style&gt; 
+	
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="text2"&gt;
+    这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话
+    这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话
+    这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话这是一句话
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h2 id="%E9%9D%99%E6%80%81%E5%B8%83%E5%B1%80">
+     布局
+    </h2>
+    <h3>
+     静态布局
+    </h3>
+    <ul>
+     <li>
+      描述：就是
+      <strong>
+       设定
+      </strong>
+      好的
+      <strong>
+       长和宽
+      </strong>
+      ，大小不会改变，不管你多大的屏幕它都是那么大，分辨率是不会改变的
+     </li>
+     <li>
+      优点：这个对于开发者来说是最简单的一种布局方式，没有什么兼容性的问题
+     </li>
+     <li>
+      缺点：
+      <em>
+       <strong>
+        窗口
+       </strong>
+       的大小比
+       <strong>
+        显示
+       </strong>
+       的内容小
+      </em>
+      。，会展现出滚动条
+     </li>
+     <li>
+      场景：传统web网站
+     </li>
+    </ul>
+    <h3 id="%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E2%AD%90%E2%AD%90">
+     响应式布局⭐⭐
+    </h3>
+    <ul>
+     <li>
+      使用媒体
+      <strong>
+       查询
+      </strong>
+      （@media）
+     </li>
+     <li>
+      使用flex
+      <strong>
+       弹性
+      </strong>
+      布局
+     </li>
+     <li>
+      使用
+      <strong>
+       百分比
+      </strong>
+      单位：rem单位，VH、HW单位
+     </li>
+    </ul>
+    <h4 id="%E8%87%AA%E9%80%82%E5%BA%94%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8C%BA%E5%88%AB">
+     <a href="https://blog.csdn.net/weixin_45369499/article/details/102871213" title="自适应和响应式区别">
+      自适应和响应式区别
+     </a>
+    </h4>
+    <p>
+     pc端（&gt;1024）一套适配,平板（768-1024）一套适配，手机端（&lt;768）
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/1cba4e983001d3f6970ab38fd9eb902e.png"/>
+    </p>
+    <p>
+     自适应设计（AWD）：
+    </p>
+    <ul>
+     <li>
+      需要开发
+      <strong>
+       多套
+      </strong>
+      界面；
+     </li>
+     <li>
+      通过检测视口分辨率，来判断当前访问的设备是：pc端、平板、手机，
+     </li>
+     <li>
+      从而请求服务层，返回不同的页面；
+     </li>
+    </ul>
+    <p>
+     响应式设计（RWD）：
+    </p>
+    <ul>
+     <li>
+      只需开发
+      <strong>
+       一套
+      </strong>
+      界面。
+     </li>
+     <li>
+      通过检测视口分辨率，
+     </li>
+     <li>
+      针对不同客户端在客户端做代码处理，通过CSS
+      <strong>
+       Media Query
+      </strong>
+      ，Content - Based Breakpoint等技术展现不同的布局和内容。
+     </li>
+    </ul>
+    <h4 id="%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89">
+     弹性布局（flex布局）
+    </h4>
+    <ul>
+     <li>
+      描述：目前比较流行的一种布局，使用传统布局难以实现一些复杂的布局，使用flex布局实现就变得非常容易
+     </li>
+     <li>
+      优点：简便、完整、响应式地实现各种页面布局
+     </li>
+     <li>
+      缺点：
+      <strong>
+       只兼容IE10+
+      </strong>
+      的浏览器
+     </li>
+     <li>
+      场景：三栏式布局、垂直水平居中布局
+     </li>
+    </ul>
+    <h4 id="%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80">
+     流式布局
+    </h4>
+    <ul>
+     <li>
+      描述：页面元素的
+      <strong>
+       宽度
+      </strong>
+      按照
+      <strong>
+       屏幕分辨率进行适配调整
+      </strong>
+      ，但
+      <strong>
+       整体布局不变
+      </strong>
+      。主要特征是像瀑布一样往下流，
+      <strong>
+       有规律的无限遍历模块
+      </strong>
+      。
+     </li>
+     <li>
+      优点：灵活，充分利用浏览器的空间
+     </li>
+     <li>
+      缺点：宽度按照屏幕进行适配调整，对于大屏幕来说用户体验并不是特别好，有些布局元素会显得很长
+     </li>
+     <li>
+      场景：类似抖音视频、微博消息、微信朋友圈等布局
+     </li>
+    </ul>
+    <h2 id="%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%40media%EF%BC%88css3%EF%BC%89">
+     <a href="https://juejin.cn/post/6971013190524076069" rel="nofollow" title="媒体查询@media">
+      媒体查询@media
+     </a>
+     （css3）
+    </h2>
+    <p>
+     @media可以针对不同的屏幕尺寸设置不同的样式。 例如，可以缩小小型设备上的字体大小
+    </p>
+    <p>
+     <code>
+      @media
+     </code>
+     规则可置于代码的
+     <strong>
+      顶层
+     </strong>
+     或位于其它任何
+     <a href="https://link.juejin.cn/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FCSS%2FAt-rule%23%25E6%259D%25A1%25E4%25BB%25B6%25E8%25A7%2584%25E5%2588%2599%25E7%25BB%2584" rel="nofollow" title="@条件规则组">
+      @条件规则组
+     </a>
+     内
+    </p>
+    <pre><code class="language-css">/* 在 screen 类型 大于560px 小于 700px 加载 */
+    @media screen and (min-width: 560px) and (max-width: 700px) {
+      .box1 {
+        background-color: burlywood;
+      }
+    }</code></pre>
+    <h3 id="%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B">
+     媒体类型
+    </h3>
+    <p>
+     ① all，适用于所有设备。默认使用该值。
+    </p>
+    <p>
+     ② print，适用于在打印预览模式下在屏幕上查看的分页材料和文档。
+    </p>
+    <p>
+     ③ screen，主要屏幕设备，例如电脑屏幕，平板电脑，智能手机等。
+    </p>
+    <p>
+     ④ speech，主要用于语音合成器。
+    </p>
+    <h3 id="%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88logical%20operators%EF%BC%89">
+     逻辑运算符（logical operators）
+    </h3>
+    <p>
+     not, and, 似于逻辑或or运算符）,only
+    </p>
+    <p>
+     逗号分隔多个媒体查询来将它们合并为一个规则
+    </p>
+    <pre><code class="language-css">/* 在 screen 类型 大于560px 或 小于240px 加载  */
+    @media screen and (min-width: 560px), (max-width: 240px) {
+      .box {
+        background-color: red;
+      }
+    }
+    /* 在 screen 类型 小于 240px 或 大于360px 小于 700px 加载 */
+    @media screen and (max-width: 240px), (min-width: 360px) and (max-width: 700px) {
+      .box1 {
+        background-color: burlywood;
+      }
+    }</code></pre>
+    <p>
+     <img alt="" height="68" src="https://i-blog.csdnimg.cn/blog_migrate/f0af8cf56ef25fbb84fbb27f38f17ba0.png" width="398"/>
+    </p>
+    <h3 id="%E5%AA%92%E4%BD%93%E5%8A%9F%E8%83%BD">
+     <a href="https://juejin.cn/post/6995932249505923102" rel="nofollow" title="媒体功能">
+      媒体功能
+     </a>
+    </h3>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/6a876f42887099234e150e355964a9e0.png"/>
+    </p>
+    <ul>
+     <li>
+      <code>
+       height
+      </code>
+      输出设备中的页面可见区域高度。
+     </li>
+     <li>
+      <code>
+       width
+      </code>
+      输出设备中的页面可见区域宽度。
+     </li>
+    </ul>
+    <p>
+    </p>
+    <ul>
+     <li>
+      <code>
+       max-aspect-ratio
+      </code>
+      输出设备的
+      <strong>
+       页面
+      </strong>
+      可见宽度与高度的最大比率。
+     </li>
+     <li>
+      <code>
+       max-device-aspect-ratio
+      </code>
+      输出设备的屏幕可见宽度与高度的最大比率。
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <code>
+       max-device-height
+      </code>
+      输出设备的
+      <strong>
+       屏幕
+      </strong>
+      可见的最大高度。
+     </li>
+     <li>
+      <code>
+       max-device-width
+      </code>
+      输出设备的屏幕最大可见宽度。
+     </li>
+    </ul>
+    <p>
+    </p>
+    <ul>
+     <li>
+      <code>
+       max-height
+      </code>
+      输出设备中的
+      <strong>
+       页面
+      </strong>
+      最大可见区域高度。
+     </li>
+     <li>
+      <code>
+       max-width
+      </code>
+      输出设备中的页面最大可见区域宽度。
+     </li>
+     <li>
+      <code>
+       min-height
+      </code>
+      输出设备中的页面最小可见区域高度。
+     </li>
+     <li>
+      <code>
+       min-width
+      </code>
+      输出设备中的页面最小可见区域宽度。
+     </li>
+    </ul>
+    <h3 id="%E5%85%B6%E4%BB%96%E5%8A%A0%E8%BD%BD%E6%96%B9%E5%BC%8F">
+     其他加载方式
+    </h3>
+    <h4 id="style%E6%A0%87%E7%AD%BE%E4%B8%8A%E5%8A%A0%E8%BD%BD">
+     <code>
+      style
+     </code>
+     标签上加载
+    </h4>
+    <pre><code class="language-html">&lt;style media="(min-width: 500px)"&gt;
+  .box {
+    background-color: red;
+  }
+&lt;/style&gt;
+&lt;style media="(max-width: 500px"&gt;
+  .box {
+    background-color: burlywood;
+  }
+&lt;/style&gt;</code></pre>
+    <ul>
+     <li>
+      根据
+      <strong>
+       <code>
+        media属性
+       </code>
+      </strong>
+      定义的媒体查询判断加载那个样式。
+     </li>
+    </ul>
+    <h4 id="%40import%20%E4%BD%BF%E7%94%A8%E6%97%B6%E5%8A%A0%E8%BD%BD">
+     @import 使用时加载
+    </h4>
+    <pre><code class="language-css">@import url(./index.css) (min-width:350px);
+@import url(./home.css) (max-width:750px);</code></pre>
+    <ul>
+     <li>
+      在加载最后添加
+      <code>
+       ()
+      </code>
+      定义
+      <strong>
+       媒体查询
+      </strong>
+      判断加载那个样式。
+     </li>
+    </ul>
+    <h4 id="%3Cpicture%3E%E6%A0%87%E7%AD%BE">
+     <code>
+      &lt;picture&gt;
+     </code>
+     标签
+    </h4>
+    <pre><code class="language-html">&lt;picture&gt;
+  &lt;source media="(min-width: 650px)" srcset="demo1.jpg"&gt;
+  &lt;source media="(min-width: 465px)" srcset="demo2.jpg"&gt;
+  &lt;img src="img_girl.jpg"&gt;
+&lt;/picture&gt;</code></pre>
+    <ul>
+     <li>
+      根据屏幕匹配的不同尺寸显示不同图片，如果没有匹配到或浏览器不支持
+      <code>
+       picture
+      </code>
+      属性则使用
+      <code>
+       img
+      </code>
+      元素
+     </li>
+    </ul>
+    <h2 id="JavaScript">
+     JavaScript
+    </h2>
+    <h3 id="%E8%AF%AD%E8%A8%80%E5%8C%BA%E5%88%AB">
+     语言区别
+    </h3>
+    <ul>
+     <li>
+      面向过程：
+      <strong>
+       通过函数一步一步实现这些步骤，接着依次调用即可
+      </strong>
+     </li>
+    </ul>
+    <p>
+     优点：性能上它是优于面向对象的，因为类在调用的时候需要实例化，开销过大。
+    </p>
+    <p>
+     缺点：不易维护、复用、扩展
+    </p>
+    <p>
+     用途：单片机、嵌入式开发、Linux/Unix等对性能要求较高的地方
+    </p>
+    <ul>
+     <li>
+      面向对象：
+      <strong>
+       将数据与函数绑定到一起，进行封装减少了重复代码的重写过程
+      </strong>
+     </li>
+    </ul>
+    <p>
+     优点：易维护、易复用、易扩展，由于面向对象有
+     <strong>
+      封装、继承、多态性
+     </strong>
+     的特性，可以设计出
+     <strong>
+      低耦合
+     </strong>
+     的系统，使系统更加灵活、更加易于维护 。
+    </p>
+    <p>
+     缺点：性能比面向过程低
+    </p>
+    <p>
+     （多态：同类不同对象）
+    </p>
+    <ul>
+     <li>
+      基于原型的面向对象：js
+     </li>
+     <li>
+      比喻：原型（原始吸血鬼），被传染的吸血鬼
+     </li>
+    </ul>
+    <p>
+     前端，追求灵活性，
+    </p>
+    <ul>
+     <li>
+      基于类的面向对象：c++,Java,Python
+     </li>
+    </ul>
+    <p>
+     类是模具，对象是实体
+    </p>
+    <p>
+     多用于服务端，更追求稳定性
+    </p>
+    <p>
+     比喻：量产的机器人
+    </p>
+    <h3 id="DOM">
+     BOM，DOM，文档，对象，模型
+    </h3>
+    <p>
+     BOM,
+    </p>
+    <p>
+     Browser Object Model浏览器对象模型，是JavaScript的组成之一，它提供了独立于内容与浏览器窗口进行交互的对象，使用浏览器对象模型可以实现与HTML的交互。它的作用是将相关的元素组织包装起来，提供给程序设计人员使用，从而降低开发人员的劳动量，提高设计Web页面的能力。
+    </p>
+    <p>
+     window : alert() , prompt() , confirm() , setInterval() , clearInterval() , setTimeout() , clearTimeout() ;
+    </p>
+    <p>
+     history : go(参数) , back() , foward() ;
+    </p>
+    <p>
+     location : herf属性.
+    </p>
+    <p>
+     1、window.location.href = '你所要跳转到的页面'; 2、window.open('你所要跳转到的页面’); 2、window.history.back(-1):返回上一页 4、window.history.go(-1/1):返回上一页或下一页五、 3、history.go("baidu.com")；
+     <br/>
+     4、window.print() 直接掉用打印窗口可以用来拔面试题。
+     <br/>
+    </p>
+    <p>
+     DOM，全称Document Object Model 文档对象模型。JS中通过DOM来对HTML文档进行操作
+     <br/>
+     文档是整个的HTML网页文档
+     <br/>
+     将网页中的每一个部分都转换为了一个对象
+     <br/>
+     使用模型来表示对象之间的关系，方便获取对象
+    </p>
+    <h3 id="ES6%E6%96%B0%E5%A2%9E">
+     ES6新增
+    </h3>
+    <ol>
+     <li>
+      <strong>
+       数据类型：基本
+      </strong>
+      数据类型Symbol，
+      <strong>
+       引用
+      </strong>
+      数据类型Set ，Map
+     </li>
+     <li>
+      <strong>
+       运算符：变量
+      </strong>
+      的解构赋值，
+      <strong>
+       对象和数组
+      </strong>
+      新增了
+      <strong>
+       扩展运算符
+      </strong>
+     </li>
+     <li>
+      <strong>
+       字符串方法
+      </strong>
+      ：${ }，需要配合单反引号好完成
+      <a href="https://so.csdn.net/so/search?q=%E5%AD%97%E7%AC%A6%E4%B8%B2&amp;spm=1001.2101.3001.7020" title="字符串">
+       字符串
+      </a>
+      拼接的功能，eg：`http://localhost:3000/search/users?q=${keyWord}`
+     </li>
+     <li>
+      块级
+      <strong>
+       作用域：
+      </strong>
+      let,const
+     </li>
+     <li>
+      原生提供
+      <strong>
+       Proxy
+      </strong>
+      构造函数，用来生成 Proxy 实例
+     </li>
+     <li>
+      <strong>
+       定义类
+      </strong>
+      的语法糖(class)
+     </li>
+     <li>
+      <strong>
+       模块化
+      </strong>
+      import/export
+     </li>
+     <li>
+      <strong>
+       生成器(Generator)和遍历器(Iterator)
+      </strong>
+     </li>
+    </ol>
+    <h3 id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">
+     数据类型
+    </h3>
+    <h4 id="%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">
+     基本数据类型
+    </h4>
+    <p>
+     ES5：Null，Undefined，Number，String，Boolean
+    </p>
+    <p>
+     ES6新增：Symbol（仅有目的：作为
+     <strong>
+      对象属性
+     </strong>
+     的标识符，表示
+     <strong>
+      唯一
+     </strong>
+     的值）
+    </p>
+    <pre><code class="language-javascript">var obj = {};
+
+obj[Symbol("a")] = "a";
+
+//会根据给定的键 key，来从运行时的 symbol 注册表中找到对应的 symbol，
+//如果找到了，则返回它，
+//否则，新建一个与该键关联的 symbol，并放入全局 symbol 注册表中。
+Symbol.for(key);
+
+Symbol.for("bar") === Symbol.for("bar"); // true，证明了上面说的
+Symbol("bar") === Symbol("bar"); // false，Symbol() 函数每次都会返回新的一个 symbol</code></pre>
+    <p>
+     ES10新增：BigInt（表示任意的大整数）
+    </p>
+    <pre><code class="language-javascript">let bnum=1684424684321231561n  //方式1：数组后加n
+bunm=BigInt("1684424684321231561")//方式2：调用BigInt</code></pre>
+    <p>
+     存储在栈（大小固定，先进后出）
+    </p>
+    <h4 id="%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">
+     引用数据类型
+    </h4>
+    <p>
+     Object，function，Array，Date，RegExp，ES6新增：Set，MAP
+    </p>
+    <p>
+     地址存储在栈，内容存储在堆（树形结构，队列，先进先出）
+    </p>
+    <h4 id="%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89">
+     声明和定义
+    </h4>
+    <p>
+     <em>
+      变量声明不开辟内存,只是告诉编译器,要声明的部分存在,要预留部分的空间。var i;
+     </em>
+    </p>
+    <p>
+     <em>
+      变量定义开辟
+      <strong>
+       内存
+      </strong>
+     </em>
+     。 var i=123;
+    </p>
+    <h4 id="Null%EF%BC%8CNaN%EF%BC%8CUndefined">
+     Null，NaN，Undefined
+    </h4>
+    <ul>
+     <li>
+      null：空对象，一般作为对象的初值
+     </li>
+     <li>
+      Nan：浮点数中表示未定义或不可表示的值，例如0/0、
+      <a href="https://baike.baidu.com/item/%E2%88%9E?fromModule=lemma_inlink" rel="nofollow" title="∞">
+       ∞
+      </a>
+      /∞、∞/−∞、−∞/∞、−∞/−∞
+     </li>
+     <li>
+      undefined：未定义，声明但未定义，例如，形参未传参，获取return的函数返回，对象属性名不存在
+     </li>
+    </ul>
+    <h4 id="toString%EF%BC%8CvalueOf">
+     <a href="https://blog.csdn.net/qq_35577655/article/details/119685179?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=valueOf%E5%92%8CtoString&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-119685179.142%5Ev74%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;spm=1018.2226.3001.4187" title="toString，valueOf">
+      toString，valueOf
+     </a>
+    </h4>
+    <p>
+     javascript中所有数据类型都拥有valueOf和toString这两个方法，
+     <strong>
+      null和undefined除外
+     </strong>
+    </p>
+    <ul>
+     <li>
+      valueOf偏向于
+      <strong>
+       运算
+      </strong>
+      ，toString偏向于
+      <strong>
+       显示
+      </strong>
+     </li>
+    </ul>
+    <p>
+     对象字面量表达式是加 ()：({}).toString()
+    </p>
+    <p>
+     <img alt="" height="79" src="https://i-blog.csdnimg.cn/blog_migrate/8b6800f8285cc2b640eabe842f048e57.png" width="156"/>
+     <img alt="在这里插入图片描述" height="82" src="https://i-blog.csdnimg.cn/blog_migrate/279f7fa4cdb2298b6e98aa445c8bc8a3.png" width="215"/>
+     <img alt="在这里插入图片描述" height="84" src="https://i-blog.csdnimg.cn/blog_migrate/94089df26c55af7b1bafa399864f2e37.png" width="220"/>
+    </p>
+    <ul>
+     <li>
+      valueOf:除了
+      <strong>
+       Date
+      </strong>
+      其他的都是返回数据本身
+     </li>
+    </ul>
+    <p>
+     <img alt="在这里插入图片描述" height="88" src="https://i-blog.csdnimg.cn/blog_migrate/42583bc439ac7c2212e527722e0a440a.png" width="353"/>
+    </p>
+    <h4 id="%3D%3D%EF%BC%8C%3D%3D%3D%EF%BC%8CObject.is()">
+     ==，===，Object.is()
+    </h4>
+    <ul>
+     <li>
+      ==：自动数据类型转换
+     </li>
+    </ul>
+    <p>
+     强制转换规则
+    </p>
+    <ol>
+     <li>
+      string和number，string-&gt;number，
+     </li>
+     <li>
+      其他类型和boolean，bool-&gt;number
+     </li>
+     <li>
+      对象和非对象，对象先调用 ToPrimitive 抽象操作（调用
+      <code>
+       valueOf()或
+      </code>
+      <code>
+       toString()
+      </code>
+      ）
+     </li>
+     <li>
+      null==undefined值转为Boolean值false
+     </li>
+     <li>
+      NaN!=NaN
+     </li>
+    </ol>
+    <ul>
+     <li>
+      ===：严格模式，不进行自动数据类型转换，比较的是栈中值（即基本数据类型的值，或者引用数据类型的地址）
+     </li>
+     <li>
+      Object.is()：在===基础上特别处理了NaN,-0,+0,保证
+      <strong>
+       -0与+0不相等
+      </strong>
+      ，但
+      <strong>
+       NaN与NaN相等
+      </strong>
+     </li>
+    </ul>
+    <p>
+     Object.is(+0,-0) //false
+    </p>
+    <p>
+     Object.is(NaN,NaN) //true
+    </p>
+    <h4 id="typeof%EF%BC%8Cinstance%20of%EF%BC%8Cconstructor%EF%BC%8CObject%20prototype">
+     判断数据类型：typeof运算符，instance of运算符，
+     <code>
+      isPrototypeOf()
+     </code>
+     方法，constructor，Object prototype
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       typeof
+      </strong>
+      ：判断
+      <strong>
+       基本
+      </strong>
+      数据类型
+     </li>
+     <li>
+      <strong>
+       instance of
+      </strong>
+      ：判断
+      <strong>
+       引用
+      </strong>
+      数据类型，在其原型链中能否找到该类型的原型
+     </li>
+     <li>
+      <strong>
+       <code>
+        isPrototypeOf()
+       </code>
+      </strong>
+      ：在表达式 "
+      <code>
+       <strong>
+        object
+       </strong>
+       instanceof
+       <strong>
+        AFunction
+       </strong>
+      </code>
+      "中，
+      <code>
+       object
+      </code>
+      的原型链是针对
+      <strong>
+       <strong>
+        <code>
+         AFunction.prototype
+        </code>
+       </strong>
+      </strong>
+      进行检查的，而不是针对
+      <code>
+       AFunction
+      </code>
+      本身。
+     </li>
+    </ul>
+    <pre><code class="language-javascript">Foo.prototype.isPrototypeOf(baz)</code></pre>
+    <ul>
+     <li>
+      <strong>
+       constructor
+      </strong>
+      ：判断
+      <strong>
+       所有数据类型
+      </strong>
+      （
+      <strong>
+       不包含
+      </strong>
+      继承引用数据类型的
+      <strong>
+       自定义类型
+      </strong>
+      ）
+     </li>
+    </ul>
+    <p>
+     (
+     <strong>
+      数据
+     </strong>
+     ).constructor ===
+     <strong>
+      数据类型
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Object.prototype.toString.call()
+      </strong>
+      ：Object 对象的原型方法 toString 来判断数据类型：
+     </li>
+    </ul>
+    <h4 id="%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">
+     instance of （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     第一个实例参数是否在第二个函数参数的原型链上
+    </p>
+    <ol>
+     <li>
+      获取首个对象参数的原型对象
+     </li>
+     <li>
+      获取Fn函数的原型对象
+     </li>
+     <li>
+      进入死循环，当两个参数的原型对象相等时返回true
+     </li>
+     <li>
+      当两个参数的原型对象不相等时获取首个对象参数原型的原型并且循环该步骤直到null时返回false
+     </li>
+    </ol>
+    <pre><code class="language-javascript">const _instanceof = (target, Fn) =&gt; {
+    let proto = target.__proto__
+    let prototype = Fn.prototype
+    while(true) {
+        if(proto === Fn.prototype) return true
+        if(proto === null) return false
+        proto = proto.__proto__
+    }
+}
+
+ const _instanceof = (target, Fn) =&gt; {
+     return Fn.prototype.isPrototypeOf(target);
+          
+}</code></pre>
+    <h4 id="new%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     new （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     "_new"函数，该函数会返回一个对象，
+    </p>
+    <p>
+     该对象的
+     <strong>
+      构造函数为函数参数
+     </strong>
+     、原型对象为
+     <strong>
+      函数参数的原型
+     </strong>
+     ，核心步骤有：
+    </p>
+    <ol>
+     <li>
+      创建一个新对象
+     </li>
+     <li>
+      获取函数参数
+     </li>
+     <li>
+      将新对象的原型对象和函数参数的原型连接起来
+     </li>
+     <li>
+      将新对象和参数传给构造器执行
+     </li>
+     <li>
+      如果构造器返回的不是对象，那么就返回第一个新对象
+     </li>
+    </ol>
+    <pre><code class="language-javascript">const _new = function() {
+    const object1 = {}
+    const Fn = [...arguments].shift()
+    object1.__proto__ = Fn.prototype
+    const object2 = Fn.apply(object1, arguments)
+    return object2 instanceof Object ? object2 : object1
+}
+</code></pre>
+    <h4>
+     类型转换
+    </h4>
+    <ul>
+     <li>
+      转换为数字：
+     </li>
+    </ul>
+    <p>
+     Number()：可以把任意值转换成数字，如果要转换的字符串中有不是数字的值，则会返回NaN
+    </p>
+    <p>
+     parseInt(string,radix)：解析一个字符串并返回指定基数的十进制整数，radix是2-36之间的整数，表示被解析字符串的基数。
+    </p>
+    <p>
+     parseFloat(string)：解析一个参数并返回一个浮点数
+    </p>
+    <p>
+     隐式转换：
+    </p>
+    <ol>
+     <li>
+      <p>
+       let str = '123'
+      </p>
+     </li>
+     <li>
+      <p>
+       let res = str - 1 //122
+      </p>
+     </li>
+     <li>
+      <p>
+       str+1 // '1231'
+      </p>
+     </li>
+     <li>
+      <p>
+       +str+1 // 124
+      </p>
+     </li>
+    </ol>
+    <ul>
+     <li>
+      转换为字符串
+     </li>
+    </ul>
+    <p>
+     .toString()  ⚠️注意：null,undefined不能调用
+    </p>
+    <p>
+     String() 都能转
+    </p>
+    <p>
+     隐式转换：当+两边有一个是字符串，另一个是其它类型时，会先把其它类型转换为字符串再进行字符串拼接，返回字符串
+    </p>
+    <h4 id="%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%B8%83%E5%B0%94%E5%80%BC">
+     转换为布尔值
+    </h4>
+    <p>
+     Boolean()：0, ''(空字符串), null, undefined, NaN会转成false，其它都是true
+    </p>
+    <p>
+     隐式转换 !!
+    </p>
+    <h4 id="type%20of%20null">
+     type of null
+    </h4>
+    <p>
+     typeof null 的结果是Object。
+    </p>
+    <p>
+     <strong>
+      在 JavaScript 第一个版本中，所有值都存储在 32 位的单元中，每个单元包含一个小的 类型标签(1-3 bits)
+     </strong>
+    </p>
+    <p>
+     000: object   - 当前存储的数据指向一个对象。
+    </p>
+    <p>
+     null 的值是机器码 NULL 指针(null 指针的值全是 0)
+    </p>
+    <p>
+     那也就是说null的类型标签也是000，和Object的类型标签一样，所以会被判定为Object。
+    </p>
+    <h3 id="%E4%BA%8B%E4%BB%B6">
+     事件
+    </h3>
+    <p>
+     文档和浏览器窗口中发生的特定交互
+    </p>
+    <h4 id="%E4%BA%8B%E4%BB%B6%E6%B5%81">
+     <a href="https://juejin.cn/post/7192584563799883832" rel="nofollow" title="DOM事件流（event flow ）">
+      DOM事件流（event flow ）
+     </a>
+    </h4>
+    <p>
+     先捕获再冒泡。存在三个阶段：事件捕获阶段、处于目标阶段、事件冒泡阶段。
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/2d77702a4d12aa702c7ebd4ed22978e6.png"/>
+    </p>
+    <ul>
+     <li>
+      事件
+      <strong>
+       捕获
+      </strong>
+      ：由外往内，从事件发生的
+      <strong>
+       根节点
+      </strong>
+      开始，逐级往下查找，一直到
+      <strong>
+       目标
+      </strong>
+      元素。
+     </li>
+     <li>
+      事件
+      <strong>
+       冒泡
+      </strong>
+      ：由内往外，从具体的
+      <strong>
+       目标
+      </strong>
+      元素触发，逐级向上传递，直到
+      <strong>
+       根节点
+      </strong>
+      。
+     </li>
+    </ul>
+    <pre><code class="language-javascript">element.addEventListener(event, function[, useCapture]);
+//useCapture 默认为false，即冒泡阶段调用事件处理函数，
+//为ture时，在事件捕获阶段调用处理函数</code></pre>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/7ef2df802b482d6b3de12930ed6f8da1.png"/>
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/74329321d027afd078fca5a9790026dd.png"/>
+    </p>
+    <h4 id="%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98">
+     事件委托/
+     <strong>
+      代理
+     </strong>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     事件委托就是利用事件冒泡，就是把子元素的事件都绑定到父元素上。
+    </p>
+    <p>
+     <strong>
+      应用
+     </strong>
+     ：
+    </p>
+    <p>
+     <code>
+      1000
+     </code>
+     个
+     <code>
+      button
+     </code>
+     注册点击事件。如果循环给每个按钮添加点击事件，那么会增加内存损耗，影响性能
+    </p>
+    <p>
+     好处：
+    </p>
+    <ol>
+     <li>
+      <p>
+       替代循环绑定事件的操作，
+       <strong>
+        减少内存消耗，提高性能
+       </strong>
+       。比如：
+       <code>
+        ul
+       </code>
+       上代理所有
+       <code>
+        li
+       </code>
+       的
+       <code>
+        click
+       </code>
+       事件。
+      </p>
+     </li>
+     <li>
+      <p>
+       简化了
+       <code>
+        dom
+       </code>
+       节点更新时，相应事件的更新。比如：
+      </p>
+      <ul>
+       <li>
+        不用在新添加的
+        <code>
+         li
+        </code>
+        上
+        <strong>
+         绑定
+        </strong>
+        <code>
+         click
+        </code>
+        事件。
+       </li>
+       <li>
+        当删除某个
+        <code>
+         li
+        </code>
+        时，不用
+        <strong>
+         解绑
+        </strong>
+        上面的
+        <code>
+         click
+        </code>
+        事件。
+       </li>
+      </ul>
+     </li>
+    </ol>
+    <p>
+     <strong>
+      缺点
+     </strong>
+     ：
+    </p>
+    <ol>
+     <li>
+      事件委托基于冒泡，对于
+      <strong>
+       不冒泡
+      </strong>
+      的事件不支持。
+     </li>
+     <li>
+      层级过多，冒泡过程中，可能会被某层
+      <strong>
+       阻止掉
+      </strong>
+      。
+     </li>
+     <li>
+      理论上委托会导致浏览器
+      <strong>
+       频繁调用处理函数
+      </strong>
+      ，虽然很可能不需要处理。所以建议
+      <strong>
+       就近委托
+      </strong>
+      ，比如在
+      <code>
+       table
+      </code>
+      上代理
+      <code>
+       td
+      </code>
+      ，而不是在
+      <code>
+       document
+      </code>
+      上代理
+      <code>
+       td
+      </code>
+      。
+     </li>
+    </ol>
+    <p>
+     <strong>
+      阻止事件冒泡
+     </strong>
+     ：event.stopPropagation() .stop修饰符
+    </p>
+    <pre><code class="language-html">1. 给"ul"标签添加点击事件
+2. 当点击某"li"标签时，该标签内容拼接"."符号。如：某"li"标签被点击时，该标签内容为".."
+注意：
+1. 必须使用DOM0级标准事件（onclick）
+
+target表示当前触发事件的元素
+currentTarget是绑定处理函数的元素
+只有当事件处理函数绑定在自身的时候，target才会和currentTarget一样
+
+&lt;ul&gt;
+      &lt;li&gt;.&lt;/li&gt;
+      &lt;li&gt;.&lt;/li&gt;
+      &lt;li&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type="text/javascript"&gt;
+            document.querySelector('ul').onclick=event=&gt;{
+                event.target.innerText+='.'
+            }
+&lt;/script&gt;</code></pre>
+    <h4 id="%E5%B0%81%E8%A3%85%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A">
+     发布订阅模式（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     完成"EventEmitter"类实现发布订阅模式。
+     <br/>
+     1. 同一名称事件可能有多个不同的执行函数：构造函数中创建”events“对象变量存放所有的事件
+     <br/>
+     2. 通过"on"函数添加事件：订阅事件。当总事件中
+     <strong>
+      不存在
+     </strong>
+     此事件时
+     <strong>
+      创建新
+     </strong>
+     的
+     <strong>
+      事件数组
+     </strong>
+     ，当存在时将”fn“函数添加在该事件对应数组中
+     <br/>
+     3. 通过"emit"函数触发事件：发布事件，
+     <strong>
+      遍历
+     </strong>
+     该事件下的
+     <strong>
+      函数数组
+     </strong>
+     并
+     <strong>
+      全部执行
+     </strong>
+    </p>
+    <pre><code class="language-javascript">class EventEmitter {
+    constructor() {
+        this.events = {}//二维，events' funcs
+    }
+    //添加事件：订阅事件
+    on(event, fn) {
+        if(!this.events[event]) {//当总事件中不存在此事件时创建新的事件数组
+            this.events[event] = [fn]
+        } else {                 //当存在时将”fn“函数添加在该事件对应数组中
+            this.events[event].push(fn)
+        }
+    }
+   //触发事件：发布事件
+    emit(event) {
+        if(this.events[event]) {//遍历该事件下的函数数组并全部执行
+            this.events[event].forEach(callback =&gt; callback())
+        }
+    }
+}
+</code></pre>
+    <h4 id="%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     观察者模式（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     "Observerd"类实现观察者模式。要求如下：
+     <br/>
+     "Observer"为观察者，"Observerd"为被观察者
+    </p>
+    <ol>
+     <li>
+      <strong>
+       被观察者
+      </strong>
+      构造函数声明三个属性分别为"name"用于保存被观察者姓名、"state"用于保存被观察者状态、"observers"用于保存观察者们
+     </li>
+     <li>
+      被观察者创建"setObserver"函数，用于
+      <strong>
+       保存观察者们，
+      </strong>
+      该函数通过数组的push函数将观察者参数传入"observers"数组中
+     </li>
+     <li>
+      被观察者创建"setState"函数，
+      <strong>
+       设置该观察者"state"
+      </strong>
+      并且
+      <strong>
+       通知所有观察者
+      </strong>
+      ，该函数首先通过参数修改被观察者的"state"属性，然后通过遍历"observers"数组分别调用各个观察者的"update"函数并且将该被观察者作为参数传入
+     </li>
+     <li>
+      观察者创建"
+      <strong>
+       update"
+      </strong>
+      函数，用于
+      <strong>
+       被观察者进行消息通知
+      </strong>
+      ，该函数需要打印（console.log）数据，数据格式为：小明正在走路。其中"小明"为被观察者的"name"属性，"走路"为被观察者的"state"属性
+     </li>
+    </ol>
+    <pre><code class="language-javascript">//被观察者
+class Observerd {
+    constructor(name) {
+        this.name = name
+        this.state = '走路'
+        this.observers = []
+    }
+    setObserver(observer) {
+        this.observers.push(observer)
+    }
+    setState(state) {
+        this.state = state
+        this.observers.forEach(observer =&gt; observer.update(this))
+    }
+}
+//观察者
+class Observer {
+    constructor() {
+        
+    }
+    update(observerd) {
+        console.log(observerd.name + '正在' + observerd.state)
+    }
+}
+</code></pre>
+    <h4 id="Object.create%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     封装事件绑定
+    </h4>
+    <p>
+     绑定事件的元素.addEventListener(事件类型,执行函数,true/false) 默认值为false（即 使用事件冒泡）true 事件捕获
+    </p>
+    <pre><code class="language-css">document.addEventListener("click", function(){
+    document.getElementById("demo").innerHTML = "Hello World";
+});</code></pre>
+    <h3 id="%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%2F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E9%93%BE">
+     <strong>
+      执行上下文
+     </strong>
+     /作用域和作用链
+    </h3>
+    <p>
+     <strong>
+      作用域
+     </strong>
+     就是一个
+     <strong>
+      变量可以使用的范围
+     </strong>
+    </p>
+    <p>
+     C/C++中有块级作用域，变量在
+     <strong>
+      声明
+     </strong>
+     它们的代码段之外是不可见的
+    </p>
+    <p>
+     javascript的作用域是相对函数而言的，可以称为
+     <strong>
+      函数作用域
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      全局
+     </strong>
+     执行上下文：只有一个，浏览器中的全局对象就是
+     <strong>
+      window
+     </strong>
+     对象，this 指向这个
+     <strong>
+      全局
+     </strong>
+     对象。
+    </p>
+    <p>
+     <strong>
+      函数
+     </strong>
+     执行上下文：存在无数个，只有在函数
+     <strong>
+      被调用
+     </strong>
+     的时候才会被创建，每次调用函数都会创建一个新的执行上下文。
+    </p>
+    <p>
+     <strong>
+      js为每一个执行环境关联了一个变量对象。环境中 定义的 所有变量和函数 都保存在这个对象中。
+     </strong>
+     <br/>
+     全局执行环境被认为是window对象
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/9d63d533ce6e46aee9002fba3c216c29.png"/>
+    </p>
+    <p>
+     这样由多个执行上下文的变量对象构成的链表就叫做作用域链，从某种意义上很类似原型和原型链。
+    </p>
+    <p>
+    </p>
+    <p>
+     当前作用域外的变量都是自由变量，一个变量在当前作用域没有定义，但是被使用了，就会向上级作用域
+    </p>
+    <p>
+     作用域链和原型继承查找时的区别：
+    </p>
+    <p>
+     查找一个普通对象的属性，但是在当前对象和其原型中都找不到时，会返回
+     <strong>
+      undefined
+     </strong>
+     <br/>
+     查找的属性在作用域链中不存在的话就会抛出
+     <strong>
+      ReferenceError
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="447" src="https://i-blog.csdnimg.cn/blog_migrate/07ea8815195fef6ccfd79f8c98b14753.png" width="380"/>
+    </p>
+    <h3 id="this">
+     this
+    </h3>
+    <p>
+     若是在
+     <strong>
+      全局
+     </strong>
+     环境（例如，普通函数，匿名函数）中，则
+     <strong>
+      this
+     </strong>
+     指向
+     <strong>
+      window
+     </strong>
+     ；（ 严格模式下this会指向 undefined）
+    </p>
+    <p>
+     在
+     <strong>
+      对象
+     </strong>
+     里调用的this，指向调用函数的那个对象，
+    </p>
+    <h3 id="let%C2%A0%E5%92%8C%C2%A0const%E5%85%B3%E9%94%AE%E5%AD%97">
+     JS预解析（变量提升）
+    </h3>
+    <p>
+     <strong>
+      预编译/解析
+     </strong>
+     ：JS代码在执行前，浏览器会对js代码进行扫描，默认的把所有带
+     <strong>
+      var和function声明
+     </strong>
+     的变量进行定义，创建执行
+     <strong>
+      上下文
+     </strong>
+     ，初始化一些代码执行时需要用到的对象。
+    </p>
+    <h3 id="var%EF%BC%8Clet%C2%A0%E5%92%8C%C2%A0const%E5%85%B3%E9%94%AE%E5%AD%97">
+     <strong>
+      var，let
+     </strong>
+     和
+     <strong>
+      const
+     </strong>
+     关键字
+    </h3>
+    <p>
+     在 ES6 之前，JavaScript 只有两种作用域：
+     <strong>
+      全局变量
+     </strong>
+     与
+     <strong>
+      函数内的局部变量
+     </strong>
+     。
+    </p>
+    <p>
+     ES6新增，
+     <strong>
+      块级作用域
+     </strong>
+     （由大括号包裹，比如：if(){},for(){}等）
+    </p>
+    <ul>
+     <li>
+      var：可以跨块访问, 不能跨函数访问，允许
+      <strong>
+       重复
+      </strong>
+      声明，变量提升
+     </li>
+     <li>
+      let、const：只能在
+      <strong>
+       块作用域
+      </strong>
+      里访问，不允许在相同作用域中重复声明，
+      <strong>
+       不存在变量提升
+      </strong>
+     </li>
+     <li>
+      const ：声明一个
+      <strong>
+       只读
+      </strong>
+      的常量，使用时
+      <strong>
+       必须初始化
+      </strong>
+      (即必须赋值)，一旦声明，常量的值就不能改变，（即，
+      <strong>
+       栈中的值不能变
+      </strong>
+      ，引用类型，内存地址不能修改，可以修改里面的值。）。
+     </li>
+    </ul>
+    <h3 id="%E5%8E%9F%E5%9E%8Bprototype">
+     原型链
+    </h3>
+    <pre><code class="language-javascript">console.log(Person.prototype);
+// {constructor: ƒ}
+// 		constructor: ƒ Person()
+// 			arguments: null
+// 			caller: null
+// 			length: 0
+// 			name: "Person"
+// 			prototype: {constructor: ƒ}
+// 			__proto__: ƒ ()
+// 			[[FunctionLocation]]: 09-原型对象.html:8
+// 			[[Scopes]]: Scopes[1]
+// 		__proto__: Object</code></pre>
+    <p>
+     (引用类型统称为object类型)
+    </p>
+    <p>
+     所有
+     <strong>
+      <code>
+       引用类型
+      </code>
+     </strong>
+     都有一个
+     <code>
+      __proto__(隐式原型)
+     </code>
+     属性，属性值是一个普通的
+     <strong>
+      对象
+     </strong>
+     <br/>
+     所有
+     <code>
+      <strong>
+       函数
+      </strong>
+     </code>
+     都有一个
+     <code>
+      prototype(原型)
+     </code>
+     属性，属性值是一个普通的
+     <strong>
+      对象
+     </strong>
+    </p>
+    <p>
+     构造函数和类同名
+    </p>
+    <p>
+     <strong>
+      _ _ proto _ _
+     </strong>
+    </p>
+    <p>
+     person.prototype.isPrototypeOf(stu)
+     <br/>
+     只要调用对象在传入对象的原型链上都会返回true
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/2c287235cecf87a3d9b11a081a4e06c2.png"/>
+     <br/>
+     首先，fn的构造函数是Foo()。所以：
+     <br/>
+     <strong>
+      fn._ _ proto _ _=== Foo.prototype
+     </strong>
+     <br/>
+     又因为Foo.prototype是一个普通的对象，它的构造函数是Object，
+    </p>
+    <p>
+     <strong>
+      Foo.prototype=object
+     </strong>
+    </p>
+    <p>
+     所以：
+     <br/>
+     <strong>
+      Foo.prototype._ _ proto _ _=== Object.prototype
+     </strong>
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/xiaoermingn/article/details/80745117?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165001256616780366560731%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=165001256616780366560731&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-80745117.142%5Ev9%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE&amp;spm=1018.2226.3001.4187" title="【原型和原型链】什么是原型和原型链_TowYingWang的博客-CSDN博客_原型和原型链">
+      【原型和原型链】什么是原型和原型链_TowYingWang的博客-CSDN博客_原型和原型链
+     </a>
+     <img alt="这里写图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/d03083c51f790bb35a63f07abda4e4eb.png"/>
+    </p>
+    <h4 id="%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E5%BC%8F%E7%BB%A7%E6%89%BF%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     寄生组合式继承（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     通过寄生组合式继承使"Chinese"构造函数继承于"Human"构造函数。要求如下：
+     <br/>
+     1. 给"Human"构造函数的原型上添加"getName"函数，该函数返回调用该函数对象的"name"属性
+     <br/>
+     2. 给"Chinese"构造函数的原型上添加"getAge"函数，该函数返回调用该函数对象的"age"属性
+    </p>
+    <ol>
+     <li>
+      在"Human"构造函数的原型上添加"getName"函数
+     </li>
+     <li>
+      在”Chinese“构造函数中通过call函数借助”Human“的构造器来获得通用属性
+     </li>
+     <li>
+      Object.create函数返回一个对象，该对象的__proto__属性为对象参数的原型。此时将”Chinese“构造函数的原型和通过Object.create返回的实例对象联系起来
+     </li>
+     <li>
+      最后修复"Chinese"构造函数的原型链，即自身的"constructor"属性需要指向自身
+     </li>
+     <li>
+      在”Chinese“构造函数的原型上添加”getAge“函数
+     </li>
+    </ol>
+    <pre><code class="language-javascript">function Human(name) {
+    this.name = name
+    this.kingdom = 'animal'
+    this.color = ['yellow', 'white', 'brown', 'black']
+}
+Human.prototype.getName = function() {
+    return this.name
+}
+
+function Chinese(name,age) {
+    Human.call(this,name)//call函数借助”Human“的构造器来获得通用属性
+    this.age = age
+    this.color = 'yellow'
+}
+
+//返回的对象__proto__属性为对象参数的原型
+Chinese.prototype = Object.create(Human.prototype)//使用现有的对象来作为新创建对象的原型
+//修复"Chinese"构造函数的原型链，即自身的"constructor"属性需要指向自身
+Chinese.prototype.constructor = Chinese
+
+Chinese.prototype.getAge = function() {
+    return this.age
+}
+</code></pre>
+    <p>
+     <a href="https://blog.csdn.net/xiaoermingn/article/details/80745117?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165001256616780366560731%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=165001256616780366560731&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-80745117.142%5Ev9%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE&amp;spm=1018.2226.3001.4187" title="【原型和原型链】什么是原型和原型链_TowYingWang的博客-CSDN博客_原型和原型链">
+      【原型和原型链】什么是原型和原型链_TowYingWang的博客-CSDN博客_原型和原型链
+     </a>
+    </p>
+    <h3 id="Iterator%EF%BC%88%E9%81%8D%E5%8E%86%E5%99%A8%EF%BC%89%20%E5%92%8C%20for%E2%80%A6of%C2%A0">
+     <strong>
+      Iterator，
+     </strong>
+     for in，for of，forEach，map循环遍历
+    </h3>
+    <h4 id="Iterator">
+     <strong>
+      Iterator
+     </strong>
+    </h4>
+    <p>
+     一种
+     <strong>
+      接口
+     </strong>
+     ，为各种
+     <strong>
+      不同的数据结构
+     </strong>
+     提供
+     <strong>
+      统一
+     </strong>
+     的访问机制
+    </p>
+    <p>
+     例如Array.prototype[@@iterator]()
+    </p>
+    <p>
+     <code>
+      Array
+     </code>
+     对象的
+     <strong>
+      <code>
+       @@iterator
+      </code>
+     </strong>
+     方法实现了
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols" rel="nofollow" title="迭代协议">
+      迭代协议
+     </a>
+     ，并允许数组被大多数期望可迭代的语法所使用，例如
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax" rel="nofollow" title="展开语法">
+      展开语法
+     </a>
+     和
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of" rel="nofollow" title="for...of">
+      for...of
+     </a>
+     循环。它返回一个迭代器，生成数组中每个索引的值。
+    </p>
+    <h4 id="for%20of">
+     for of
+    </h4>
+    <p>
+     ["a", "b", "c", "d"];for…of 循环读取
+     <strong>
+      键值
+     </strong>
+     // a b c d
+    </p>
+    <p>
+     支持
+     <strong>
+      迭代协议
+     </strong>
+     的数据结构（
+     <strong>
+      数组、字符串、Set、Map
+     </strong>
+     等），
+     <strong>
+      不包括对象
+     </strong>
+     。
+    </p>
+    <p>
+     对于
+     <strong>
+      字符串，类数组，类型数组
+     </strong>
+     的迭代，循环内部调用的是数据结构的
+     <strong>
+      <code>
+       Symbol.iterator
+      </code>
+     </strong>
+     方法。
+    </p>
+    <p>
+     for...of 不能循环普通的对象，需要通过和 Object.keys()搭配使用
+    </p>
+    <pre><code class="language-javascript">const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]</code></pre>
+    <h4 id="for%20in">
+     for in
+    </h4>
+    <p>
+     ["a", "b", "c", "d"];for…in 循环读取
+     <strong>
+      键名
+     </strong>
+     // 0 1 2 3
+    </p>
+    <p>
+     适用于遍历
+     <strong>
+      对象
+     </strong>
+     的
+     <strong>
+      公有
+     </strong>
+     <strong>
+      可枚举属性，无法遍历 symbol 属性
+     </strong>
+    </p>
+    <p>
+     <strong>
+      hasOwnProperty()
+     </strong>
+     方法来判断属性是否来自对象本身，并避免遍历
+     <strong>
+      原型链
+     </strong>
+     上的属性。
+    </p>
+    <pre><code class="language-javascript">var triangle = {a: 1, b: 2, c: 3};
+
+function ColoredTriangle() {
+  this.color = 'red';
+}
+
+ColoredTriangle.prototype = triangle;
+
+var obj = new ColoredTriangle();
+
+for (var prop in obj) {
+  if (obj.hasOwnProperty(prop)) {
+    console.log(`obj.${prop} = ${obj[prop]}`);
+  }
+}
+
+// Output:
+// "obj.color = red"
+
+</code></pre>
+    <h4 id="forEach">
+     forEach
+    </h4>
+    <p>
+     arr.forEach（value[，index，默认隐藏参数arr]）
+    </p>
+    <p>
+     适用于需要知道
+     <strong>
+      索引值
+     </strong>
+     的
+     <strong>
+      数组
+     </strong>
+     <strong>
+      遍历
+     </strong>
+     ，但是
+     <strong>
+      不能中断（
+     </strong>
+     break 和 return
+     <strong>
+      ）
+     </strong>
+    </p>
+    <p>
+     如果需要跳出循环可以使用 some() 或 every() 方法
+    </p>
+    <pre><code class="language-javascript">
+const isBelowThreshold = (currentValue) =&gt; currentValue &lt; 30;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+array1.forEach(element =&gt; console.log(element));
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: false
+
+//是不是至少有 1 个元素
+console.log(array1.some(isBelowThreshold));//空数组,则返回false。
+// Expected output: true</code></pre>
+    <h4 id="map">
+     map
+    </h4>
+    <p>
+     <strong>
+      map
+     </strong>
+     方法，基本用法与 forEach 一致
+    </p>
+    <ol>
+     <li>
+      forEach()方法
+      <strong>
+       不会返回
+      </strong>
+      执行结果，而是undefined
+     </li>
+     <li>
+      map()方法会得到一个
+      <strong>
+       新的数组
+      </strong>
+      并返回
+     </li>
+     <li>
+      同样的一组数组，map()的执行速度优于 forEach()（
+      <strong>
+       map() 底层做了深度优化
+      </strong>
+      ）
+     </li>
+    </ol>
+    <h3 id="%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E5%92%8C%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">
+     <a href="https://juejin.cn/post/6936938080095961125" rel="nofollow" title="匿名函数、箭头函数、构造函数">
+      匿名函数、箭头函数、构造函数
+     </a>
+    </h3>
+    <h4 id="%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0">
+     匿名函数
+    </h4>
+    <p>
+     <strong>
+      有
+     </strong>
+     关键词
+     <strong>
+      function
+     </strong>
+     ，
+     <strong>
+      没有函数名
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">//声明匿名函数
+let  myFun = function( a,b ){
+    console.info( a+b);
+};
+//执行 
+myFun( 10,30 );
+
+//等同于  立即执行匿名函数
+
+(function(a,b){
+    console.info( a+b );
+})(10,30);
+ </code></pre>
+    <h4 id="%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">
+     箭头函数
+    </h4>
+    <p>
+     连function都没有的匿名函数，箭头函数不会创建自己的this,它只会从自己的作用域链的上一层继承this
+    </p>
+    <p>
+     箭头函数
+     <strong>
+      不绑定arguments
+     </strong>
+     ,取而代之用
+     <strong>
+      rest参数
+     </strong>
+     解决
+    </p>
+    <p>
+     <strong>
+      不可以使用yield
+     </strong>
+     ，因此箭头函数不能用作Generator函数。
+    </p>
+    <p>
+     <strong>
+      没有原型prototype
+     </strong>
+     ，没有super用于访问原型属性。
+    </p>
+    <pre><code class="language-javascript">//传递给getVal函数内的this并不是调用者自身，而是外部的this，即window
+this.val = 2;
+var obj = {
+    val: 1,
+    getVal: () =&gt; {
+        console.log(this.val);
+    }
+}
+
+obj.getVal(); // 2</code></pre>
+    <h4 id="%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">
+     构造函数
+    </h4>
+    <pre><code class="language-javascript">function Person(name,id)
+{
+     this.name=name;
+     this.id=id;
+     this.sayHi=function() {
+          alert("Hi")
+     }
+ } 
+
+var  p= new Person('参宿','7');     </code></pre>
+    <ul>
+     <li>
+      <strong>
+       习惯上首字母大写
+      </strong>
+     </li>
+     <li>
+      <strong>
+       使用new关键字进行调用
+      </strong>
+     </li>
+    </ul>
+    <h4>
+     this
+    </h4>
+    <p>
+     普通函数的this在
+     <strong>
+      运行
+     </strong>
+     时创建，匿名函数
+     <strong>
+      this指向window
+     </strong>
+     ，箭头函数的this是
+     <strong>
+      定义
+     </strong>
+     时确定。
+    </p>
+    <blockquote>
+     <p>
+      箭头函数不能用作构造函数：
+     </p>
+     <p>
+      因为构造函数的
+      <strong>
+       this
+      </strong>
+      指向
+      <strong>
+       实例对象
+      </strong>
+      ，但是箭头函数无法对创建出来的实例
+      <strong>
+       进行this绑定
+      </strong>
+     </p>
+     <p>
+      也不能使用call()、apply()、bind() 去
+      <strong>
+       改变this
+      </strong>
+      的指向。
+     </p>
+    </blockquote>
+    <h3 id="call%E3%80%81apply%E3%80%81bind%E4%B8%89%E8%80%85%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB_hexinyu_1022%E7%9A%84%E5%8D%9A%E5%AE%A2-CSDN%E5%8D%9A%E5%AE%A2_callapplybind%E7%9A%84%E7%94%A8%E6%B3%95%E5%92%8C%E5%8C%BA%E5%88%AB">
+     call、apply、bind改变this
+    </h3>
+    <p>
+     <code>
+      call()和apply()唯一区别：
+     </code>
+    </p>
+    <p>
+     <code>
+      call()
+     </code>
+     接受的是
+     <strong>
+      一个参数列表
+     </strong>
+    </p>
+    <p>
+     <code>
+      apply()
+     </code>
+     方法接受的是
+     <strong>
+      一个包含多个参数的数组
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">var obj1 = {
+    name: 1,
+    getName: function (num = '') {
+        return this.name + num;
+    }
+};
+
+var obj2 = {
+    name: 2,
+};
+// 可以理解成在 obj2的作用域下调用了 obj1.getName()函数
+console.log(obj1.getName()); // 1
+console.log(obj1.getName.call(obj2, 2)); // 2 + 2 = 4
+console.log(obj1.getName.apply(obj2, [2])); // 2 + 2 = 4
+</code></pre>
+    <p>
+     bind：语法和call一样，区别在于call
+     <strong>
+      立即执行
+     </strong>
+     ，bind
+     <strong>
+      等待执行
+     </strong>
+     ，bind不兼容IE6~8
+    </p>
+    <p>
+     <strong>
+      bind()
+     </strong>
+     方法创建一个
+     <strong>
+      新的函数
+     </strong>
+     ，在 bind() 被调用时，这个
+     <strong>
+      新函数的 this
+     </strong>
+     被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用
+    </p>
+    <h4 id="bind%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     call （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">    // 给function的原型上面添加一个 _call 方法
+    Function.prototype._call = function (context) {
+        //  判断调用者是否是一个函数  this 就是调用者
+        if (typeof this !== 'function') {
+                    throw new TypeError('what is to be a function')
+        }
+        // 如果有 context 传参就是传参者 没有就是window
+        context = context || window
+        // 保存当前调用的函数
+        context._this = this   
+        // 截取传过来的参数
+        /*
+          arguments
+                 a: 1
+                 fn: ƒ fns()
+        */
+        // 通过 slice 来截取传过来的参数
+        const local = [...arguments].slice(1)
+        // 传入参数调用函数
+        let result = context._this(...local)
+        // 删属性
+        delete context._this
+        return result
+    }
+
+    let obj = { a: 1 }
+    function fns(a, b) {
+        console.log(a, b);
+        console.log(this)
+    }
+    fns._call(obj, 23, 555)
+</code></pre>
+    <h4 id="apply%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     apply（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">    // 给function的原型上面添加一个 _apply 方法
+    Function.prototype._apply= function (context) {
+        //  判断调用者是否是一个函数  this 就是调用者
+        if (typeof this !== 'function') {
+                    throw new TypeError('what is to be a function')
+        }
+        // 如果有 context 传参就是传参者 没有就是window
+        context = context || window
+        // 保存当前调用的函数
+        context._this = this   
+        // 截取传过来的参数
+        /*
+          arguments
+                 a: 1
+                 fn: ƒ fns()
+        */
+        //！！！！！！！！！！！！！！与call的唯一区别！！！！！！！！！！！
+        // 这里开始判断传入的参数是否存在，此时参数是一个数组形式[thisArg,[传参]]
+        // 那么如果arguments[1]即传参存在的时候，就是需要传参调用保存的函数
+        // 如果不存在就直接调用函数
+        if (arguments[1]) {
+            result = context._this(...arguments[1])//！！！！将数组展开！！！！
+        } else {
+            result = context._this()
+        }
+        //！！！！！！！！！！！！！！与call的唯一区别！！！！！！！！！！！
+        // 删属性
+        delete context._this
+        return result
+    }
+
+    let obj = { a: 1 }
+    function fns(a, b) {
+        console.log(a, b);
+        console.log(this)
+    }
+    fns._call(obj, 23, 555)
+</code></pre>
+    <h4>
+     bind（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">Function.prototype._bind = function (context) {
+   if (typeof this !== 'function') {
+                    throw new TypeError('what is to be a function')
+    }
+    var _this = this; // 保存调用bind的函数
+    var context = context || window; // 确定被指向的this，如果context为空，执行作用域的this就需要顶上喽
+    return function(){
+        return _this.apply(context, [...arguments].slice(1)); // 如果只传context，则[...arguments].slice(1)为空数组
+    }
+};
+
+var obj = {
+    name: 1,
+    getName: function(){
+        console.log(this.name)
+    }
+};
+
+var func = function(){
+    console.log(this.name);
+}._bind(obj);
+
+func(); // 1
+</code></pre>
+    <h3 id="%E9%97%AD%E5%8C%85">
+     闭包（closure）
+    </h3>
+    <p>
+     类比背包，当一个函数被创建并
+     <strong>
+      传递
+     </strong>
+     或从另一个函数返回时，它会携带一个背包。背包中是函数
+     <strong>
+      声明时作用域内的所有变量
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">var name = '余光';
+
+function foo() {
+  console.log(name); // 余光
+}
+
+(function (func) {
+    var name = '老王';
+
+    func()
+})(foo); // 余光</code></pre>
+    <p>
+     因为js作用域生命周期在于
+     <strong>
+      内部脚本是否全部执行完毕才会销毁
+     </strong>
+     ，并且
+     <strong>
+      不会带到父级作用域
+     </strong>
+     ；
+    </p>
+    <p>
+     当
+     <strong>
+      函数内部返回一个函数
+     </strong>
+     ，子函数没在父级作用域内完成整个生命周期的话，父级函数是没办法完成一整个生命周期的，闭包正是利用这一点卡住了父级函数的作用域。
+    </p>
+    <p>
+     因为被
+     <strong>
+      下级作用域内引用
+     </strong>
+     ，而
+     <strong>
+      没有被释放
+     </strong>
+     。就导致上级作用域内的变量，等到下级作用域执行完以后才正常得到释放。
+    </p>
+    <p>
+     <strong>
+      面试
+     </strong>
+     的时候，直接回答
+     <strong>
+      函数嵌套函数
+     </strong>
+     ，且
+     <strong>
+      内部函数调用父级作用域的变量
+     </strong>
+     就可以称之为闭包了。
+    </p>
+    <pre><code class="language-javascript"> 1: function createCounter() {
+ 2:   let counter = 0
+ 3:   const myFunction = function() {
+ 4:     counter = counter + 1
+ 5:     return counter
+ 6:   }
+ 7:   return myFunction
+ 8: }
+ 9: const increment = createCounter()
+10: const c1 = increment()
+11: const c2 = increment()
+12: const c3 = increment()
+13: console.log('example increment', c1, c2, c3)</code></pre>
+    <ul>
+     <li>
+      闭包会使得函数中的变量都被保存在内存中，
+      <strong>
+       内存消耗
+      </strong>
+      很大，所以不能滥用闭包
+     </li>
+     <li>
+      滥用闭包容易
+      <strong>
+       内存泄漏
+      </strong>
+      。
+     </li>
+     <li>
+      使用场景 :
+      <strong>
+       防抖、节流
+      </strong>
+      、
+      <strong>
+       函数套函数
+      </strong>
+      避免
+      <strong>
+       全局污染
+      </strong>
+     </li>
+    </ul>
+    <h3 id="%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8FRegular%20Expression(RegExp)%C2%A0">
+     正则表达式Regular Expression(RegExp)
+    </h3>
+    <p>
+     <strong>
+      字符串搜索模式
+     </strong>
+     。
+    </p>
+    <pre>/正则表达式主体/修饰符(可选)</pre>
+    <p>
+     RegExp 对象是一个预定义了
+     <strong>
+      属性和方法
+     </strong>
+     的正则表达式对象
+    </p>
+    <p>
+     regexp.test(str)返回Bool
+    </p>
+    <p>
+     regexp.exec(str)返回匹配的子串 或者 null
+    </p>
+    <h4 id="%E5%B8%B8%E7%94%A8%E4%BF%AE%E9%A5%B0%E7%AC%A6">
+     常用修饰符
+    </h4>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        i
+       </td>
+       <td>
+        ignoreCase  执行对大小写不敏感的匹配。
+       </td>
+      </tr>
+      <tr>
+       <td>
+        g
+       </td>
+       <td>
+        global  执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6">
+     常用字符
+    </h4>
+    <p>
+     \标记下一个字符是特殊字符或文字。例如，"n”和字符"n”匹配。"\n"则和换行字符匹配。
+    </p>
+    <p>
+     ^匹配输入的开头.
+     <br/>
+     $匹配输入的末尾
+    </p>
+    <p>
+     <strong>
+      ·
+     </strong>
+     匹配除换行字符外的任何单个字符
+     <br/>
+     *匹配前一个字符零或多次。例如，"zo*”与"z”或"zoo”匹配。
+     <br/>
+     +匹配前一个字符一次或多次。例如，"zo+"与"zoo”匹配，但和"z”不匹配。
+     <br/>
+     ?匹配前一个字符零或一次。例如，"a?ve?”和"never"中的“"ve”匹配。
+     <br/>
+     x|y 匹配x或y
+     <br/>
+     {n}匹配n次。n是非负整数
+     <br/>
+     {n,} n是一个非负整数。至少匹配n次。例如，"o{2,)"和"Bob”中的"o”不匹配，但和"foooood"中的所有o匹配。"o{1}”与"o+”等效。"o{0,}”和"o*”等效。
+     <br/>
+     {n,m}m和n是非负整数。至少匹配n次而至多匹配 m次。例如，"o{1,3]"和"fooooood”中的前三个o匹配。"o{0,1}”和“o?”等效。
+     <br/>
+     [xyz]匹配括号内的任一字符。例如，"[abc]"和"plain”中的"a”匹配。
+    </p>
+    <p>
+     [^xyz]匹配非括号内的任何字符。例如，"[^abc]"和“plain”中的"p”匹配。
+     <br/>
+     [a-z]字符范围。和指定范围内的任一字符匹配。例如，"[a-z]”匹配"a"到"z"范围内的任一小写的字母表字符。
+     <br/>
+     [^m-z]否定字符范围。匹配不在指定范围内的任何字符。例如，"[m-z]”匹配不在"m"到"z"范围内的任何字符。
+    </p>
+    <p>
+     助记：digital
+    </p>
+    <p>
+     \d匹配数字字符。等价于[0-9]。
+     <br/>
+     \D匹配非数字字符。等价于[^0-9]。
+    </p>
+    <p>
+     助记：space
+    </p>
+    <p>
+     \s匹配任何空白，包括空格、制表、换页等。与"[ \fn\rlt\v]”等效。
+     <br/>
+     \S匹配任何非空白字符。与"[^ \fn\rlt\v]”等效。
+    </p>
+    <p>
+     <br/>
+     \w匹配包括下划线在内的任何字字符。与"[A-Za-z0-9
+     <strong>
+      _
+     </strong>
+     ]”等效。
+    </p>
+    <p>
+     \W匹配任何非字字符。与"[^A-Za-z0-9_]”等效。
+    </p>
+    <h4 id="%E5%90%88%E6%B3%95%E7%9A%84URL">
+     合法的URL （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     URL结构一般包括协议、主机名、主机端口、路径、请求信息、哈希
+    </p>
+    <ol>
+     <li>
+      首先必须是以http(s)开头并且可以不包含协议头部信息
+     </li>
+     <li>
+      主机名可以使用"-"符号，所以两种情况都要判断，包含"-"或不包含"-"
+     </li>
+     <li>
+      顶级域名很多，直接判断"."之后是否为字母即可
+     </li>
+     <li>
+      最后判断端口、路径和哈希，这些参数可有可无
+     </li>
+    </ol>
+    <p>
+     域名中只能包含以下字符
+     <br/>
+     1. 26个英文字母
+     <br/>
+     2. "0，1，2，3，4，5，6，7，8，9"十个数字
+     <br/>
+     3. "-"(英文中的连词号，但不能是第一个字符)
+    </p>
+    <pre><code class="language-javascript">https://www.bilibili.com/video/BV1F54y1N74E/?spm_id_from=333.337.search-card.all.click&amp;vd_source=6fd32175adc98c97cd87300d3aed81ea
+//开始:                     ^
+//协议:                     http(s)?:/\/\
+//域名:                     [A-z0-9]+-[A-z0-9]+|[A-z0-9]+
+//顶级域名 如com cn,2-6位:   [A-z]{2,6}
+//端口 数字:                (\d+)?
+//路径 任意字符 如 /login:   (\/.+)?
+//哈希 ? 和 # ，如?age=1:    (\?.+)?(#.+)?
+//结束:                      $
+//     https://           www.bilibili                com    /video/BV1F54y1N74E  ?spm..            
+/^(http(s)?:\/\/)?(([a-zA-Z0-9]+-[a-zA-Z0-9]+|[a-zA-Z0-9]+)\.)+([a-zA-Z]{2,6})(:\d+)?(\/.+)?(\?.+)?(#.+)?$/.test(url)</code></pre>
+    <h3 id="%E5%87%BD%E6%95%B0">
+     函数
+    </h3>
+    <h4 id="%E5%87%BD%E6%95%B0%E7%9A%84length%E5%B1%9E%E6%80%A7">
+     函数的
+     <code>
+      length
+     </code>
+     属性
+    </h4>
+    <p>
+     将返回没有指定默认值的参数个数。也就是说，指定了默认值后，
+     <code>
+      length
+     </code>
+     属性将失真。
+    </p>
+    <pre><code class="language-javascript">function fun(a = 1, b, c, d) { }
+​
+console.log(fun.length) // 0</code></pre>
+    <h4 id="%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB">
+     <strong>
+      函数声明与函数表达式的区别
+     </strong>
+    </h4>
+    <p>
+     函数声明会将那个函数提升到最前面（即使你写代码的时候在代码块最后才写这个函数），成为全局函数。
+    </p>
+    <p>
+     函数声明要
+     <strong>
+      指定函数名
+     </strong>
+     ，而
+     <strong>
+      函数表达式
+     </strong>
+     不用，可以用作
+     <strong>
+      匿名
+     </strong>
+     函数。
+    </p>
+    <h4 id="%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%88iife%EF%BC%89">
+     立即执行函数（iife）
+    </h4>
+    <p>
+     ( function( ){ })( )
+    </p>
+    <p>
+     <strong>
+      原理
+     </strong>
+     ：括号内部不能包含语句，当解析器对代码进行解释的时候，先碰到了()， 然后碰到function关键字
+    </p>
+    <p>
+     就会自动将()里面的代码识别为
+     <strong>
+      函数表达式
+     </strong>
+     而不是
+     <strong>
+      函数声明
+     </strong>
+     。
+    </p>
+    <p>
+     <strong>
+      作用：
+     </strong>
+     立即执行函数会形成一个
+     <strong>
+      单独的作用域
+     </strong>
+     ，我们可以
+     <strong>
+      封装
+     </strong>
+     一些临时变量或者局部变量，避免
+     <strong>
+      污染
+     </strong>
+     全局变量。
+    </p>
+    <h2 id="%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95">
+     常用方法
+    </h2>
+    <h3 id="Math">
+     异或运算^
+    </h3>
+    <p>
+     按位异或，相同为0，不同为1
+    </p>
+    <p>
+    </p>
+    <p>
+     运算法则：
+    </p>
+    <p>
+     1.交换律（随便换像乘一样）：a ^ b ^ c  === a ^ c ^ b
+    </p>
+    <p>
+     2.任何数于0异或为任何数 0 ^ n === n
+    </p>
+    <p>
+     3.相同的数异或为0: n ^ n === 0
+    </p>
+    <h4>
+     Math
+    </h4>
+    <pre><code class="language-javascript">//e=2.718281828459045
+Math.E;
+
+//绝对值
+Math.abs()
+
+//基数（base）的指数（exponent）次幂，即 base^exponent。
+Math.pow(base, exponent)
+
+
+//max,min不支持传递数组
+Math.max(value0, value1, /* … ,*/ valueN)
+Math.max.apply(null,array)
+apply会将一个数组装换为一个参数接一个参数
+null是因为没有对象去调用这个方法,只需要用这个方法运算
+
+
+//取整
+Math.floor()  向下取一个整数（floor地板）
+Math.ceil(x)  向上取一个整数（ceil天花板）
+
+Math.round() 返回一个四舍五入的值
+
+Math.trunc() 直接去除小数点后面的值</code></pre>
+    <h3 id="Number">
+     Number
+    </h3>
+    <p>
+     <strong>
+      0B，0O
+     </strong>
+     为
+     <strong>
+      ES6新增
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       二进制
+      </strong>
+      ：有前缀
+      <strong>
+       0b
+      </strong>
+      （或
+      <strong>
+       <code>
+        0B
+       </code>
+      </strong>
+      ）的数值，出现0,1以外的数字会
+      <strong>
+       报错
+      </strong>
+      （b：binary）
+     </li>
+     <li>
+      <strong>
+       八进制
+      </strong>
+      ：有前缀
+      <strong>
+       0o
+      </strong>
+      （或
+      <strong>
+       <code>
+        0O
+       </code>
+      </strong>
+      ）的数值，或者是以0后面再跟一个数字（0-7）。如果超出了前面所述的数值范围，则会忽略第一个数字0，视为十进制数（o：octonary）
+     </li>
+     <li>
+      注意：八进制字面量在严格模式下是无效的，会导致支持该模式的JavaScript引擎抛出错误
+     </li>
+     <li>
+      十六进制：有前缀
+      <strong>
+       0x
+      </strong>
+      ，后跟任何十六进制数字（0~9及A~F），字母大小写都可以，超出范围会
+      <strong>
+       报错
+      </strong>
+     </li>
+    </ul>
+    <h4 id="%E7%89%B9%E6%AE%8A%E5%80%BC">
+     <strong>
+      特殊值
+     </strong>
+    </h4>
+    <ul>
+     <li>
+      Number.MIN_VALUE：5e-324
+     </li>
+     <li>
+      Number.MAX_VALUE：1.7976931348623157e+308
+     </li>
+     <li>
+      Infinity ，代表无穷大，如果数字超过最大值，js会返回Infinity，这称为正向溢出(overflow)；
+     </li>
+     <li>
+      -Infinity ，代表无穷小，小于任何数值，如果等于或超过最小负值-1023（即非常接近0），js会直接把这个数转为0，这称为负向溢出(underflow)
+     </li>
+     <li>
+      NaN ，Not a number，代表一个非数值
+     </li>
+     <li>
+      isNaN()：用来判断一个变量是否为
+      <strong>
+       非数字
+      </strong>
+      的类型，如果是数字返回false;如果不是数字返回true。
+     </li>
+     <li>
+      isFinite()：数值是不是有穷的
+     </li>
+    </ul>
+    <pre><code class="language-javascript">var result = Number.MAX_VALUE + Number.MAX_VALUE;
+
+console.log(isFinite(result)); //false</code></pre>
+    <ul>
+     <li>
+      <strong>
+       <code>
+        typeof NaN // 'number'  ---
+        <code>
+         NaN
+        </code>
+        不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于
+        <code>
+         Number
+        </code>
+       </code>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <code>
+        NaN === NaN // false　　 ---
+        <code>
+         NaN
+        </code>
+        不等于任何值，包括它本身
+       </code>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <code>
+        (1 / +0) === (1 / -0) // false　　---除以正零得到
+        <code>
+         +Infinity
+        </code>
+        ，除以负零得到
+        <code>
+         -Infinity
+        </code>
+        ，这两者是不相等的
+       </code>
+      </strong>
+     </li>
+    </ul>
+    <h4 id="%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95">
+     <strong>
+      科学计数法
+     </strong>
+    </h4>
+    <p>
+     对于那些极大极小的数值，可以用e表示法（即科学计数法）表示的浮点数值表示。
+    </p>
+    <p>
+     等于e前面的数值乘以10的指数次幂
+    </p>
+    <pre><code class="language-javascript">numObj.toFixed(digits)//用定点表示法来格式化一个数值
+
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial('1.23e+5'));
+// Expected output: "123000.00"
+</code></pre>
+    <p>
+     取余是数学中的概念，
+    </p>
+    <p>
+     取模是计算机中的概念，
+    </p>
+    <p>
+     两者都是求
+     <strong>
+      两数相除的余数
+     </strong>
+    </p>
+    <p>
+     1.当两数符号相同时，结果相同，比如：7%4 与 7 Mod 4 结果都是3
+    </p>
+    <p>
+     2.当两数
+     <strong>
+      符号不同
+     </strong>
+     时，结果不同，比如   (-7)%4=-3和(-7)Mod4=1
+    </p>
+    <p>
+     取余运算，求商采用fix
+     <a href="http://www.fly63.com/tag/%E5%87%BD%E6%95%B0" rel="nofollow" title="函数">
+      函数
+     </a>
+     ，
+     <strong>
+      向0方向舍入
+     </strong>
+     ，取 -1。因此 (-7) % 4 商 -1 余数为 -3
+     <br/>
+     取模运算，求商采用 floor 函数，向
+     <strong>
+      无穷小
+     </strong>
+     方向舍入，取 -2。因此 (-7) Mod 4 商 -2 余数为 1
+    </p>
+    <p>
+     key：((n % m) + m) % m;
+    </p>
+    <pre><code class="language-javascript">Number.prototype.mod = function(n) {
+	return ((this % n) + n) % n;
+}
+// 或 
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}</code></pre>
+    <h3 id="Array">
+     Map
+    </h3>
+    <p>
+     保存键值对，任何值（对象或者
+     <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Primitive" rel="nofollow" title="基本类型">
+      基本类型
+     </a>
+     ）都可以作为一个键或一个值。
+    </p>
+    <p>
+     Map的键可以是任意值，包括函数、对象或任意基本类型。
+     <br/>
+     object的键必须是一个String或是Symbol 。
+    </p>
+    <pre><code class="language-javascript">const contacts = new Map()
+contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
+contacts.has('Jessie') // true
+contacts.get('Hilary') // undefined
+contacts.delete('Jessie') // true
+console.log(contacts.size) // 1
+
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([['foo', 3], ['bar', {}], ['baz', undefined]])
+  .forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+</code></pre>
+    <h3 id="Set">
+     Set
+    </h3>
+    <p>
+     值的集合，且值唯一
+    </p>
+    <p>
+     虽然NaN !== NaN，但set中NaN 被认为是相同的
+    </p>
+    <pre><code class="language-javascript">let setPos = new Set(); 
+setPos.add(value);//Boolean
+setPos.has(value);
+setPos.delete(value);
+
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"</code></pre>
+    <h4 id="set%E5%88%A4%E6%96%AD%E5%80%BC%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9C%BA%E5%88%B6">
+     set判断值相等的机制
+    </h4>
+    <pre><code class="language-javascript">//Set用===判断是否相等
+const set= new Set();
+const obj1={ x: 10, y: 20 },obj2={ x: 10, y: 20 }
+set.add(obj1).add(obj2);
+
+console.log(obj1===obj2);//false
+console.log(set.size);// 2
+
+set.add(obj1);
+console.log(obj1===obj1);//true
+console.log(set.size);//2</code></pre>
+    <h4 id="%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     数组去重 （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">// Use to remove duplicate elements from the array
+const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+console.log([...new Set(numbers)])
+// [2, 3, 4, 5, 6, 7, 32]
+</code></pre>
+    <h4>
+     Array
+    </h4>
+    <pre><code class="language-javascript">//创建字符串
+//join() 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串
+//如果数组只有一个元素，那么将返回该元素而不使用分隔符。
+Array.join()
+Array.join(separator)
+
+//################创建数组：
+//伪数组转成数组
+Array.from(arrayLike, mapFn)
+console.log(Array.from('foo'));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], x =&gt; x + x));
+// Expected output: Array [2, 4, 6]
+
+console.log( Array.from({length:3},(item, index)=&gt; index) );// 列的位置
+// Expected output:Array [0, 1, 2]
+
+
+//################原数组会改变：
+
+arr.reverse()//返回翻转后的数组
+
+// 无函数
+arr.sort()//默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16
+// 比较函数
+arr.sort(compareFn)
+function compareFn(a, b) {
+  if (在某些排序规则中，a 小于 b) {
+    return -1;
+  }
+  if (在这一排序规则下，a 大于 b) {
+    return 1;
+  }
+  // a 一定等于 b
+  return 0;
+}
+//升序
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+
+//固定值填充
+arr.fill(value)
+arr.fill(value, start)
+arr.fill(value, start, end)
+
+
+//去除
+array.shift() //从数组中删除第一个元素，并返回该元素的值。
+
+array.pop() //从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
+array.push() //将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+
+//unshift() 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度
+array.unshift(element0, element1, /* … ,*/ elementN)
+
+//粘接，通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。
+array.splice(start)
+array.splice(start, deleteCount)
+array.splice(start, deleteCount, item1)
+array.splice(start, deleteCount, item1, item2...itemN)
+
+//################原数组不会改变：
+
+//切片，浅拷贝（包括 begin，不包括end）。
+array.slice()
+array.slice(start)
+array.slice(start, end)
+
+//展平，按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
+array.flat()//不写参数默认一维
+array.flat(depth)
+
+//过滤器，函数体 为 条件语句
+// 箭头函数
+filter((element) =&gt; { /* … */ } )
+filter((element, index) =&gt; { /* … */ } )
+filter((element, index, array) =&gt; { /* … */ } )
+array.filter(str =&gt; str .length &gt; 6) 
+
+//遍历数组处理
+// 箭头函数
+map((element) =&gt; { /* … */ })
+map((element, index) =&gt; { /* … */ })
+map((element, index, array) =&gt; { /* … */ })
+array.map(el =&gt; Math.pow(el,2))
+//map和filter同参
+
+//接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
+// 箭头函数
+reduce((previousValue, currentValue) =&gt; { /* … */ } )
+reduce((previousValue, currentValue, currentIndex) =&gt; { /* … */ } )
+reduce((previousValue, currentValue, currentIndex, array) =&gt; { /* … */ } )
+reduce((previousValue, currentValue) =&gt; { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) =&gt; { /* … */ } , initialValue)
+array.reduce((previousValue, currentValue, currentIndex, array) =&gt; { /* … */ }, initialValue)
+
+//一个“reducer”函数，包含四个参数：
+//previousValue：上一次调用 callbackFn 时的返回值。
+//在第一次调用时，若指定了初始值 initialValue，其值则为 initialValue，
+//否则为数组索引为 0 的元素 array[0]。
+
+//currentValue：数组中正在处理的元素。
+//在第一次调用时，若指定了初始值 initialValue，其值则为数组索引为 0 的元素 array[0]，
+//否则为 array[1]。
+
+//currentIndex：数组中正在处理的元素的索引。
+//若指定了初始值 initialValue，则起始索引号为 0，否则从索引 1 起始。
+
+//array：用于遍历的数组。
+
+//initialValue 可选
+//作为第一次调用 callback 函数时参数 previousValue 的值。
+//若指定了初始值 initialValue，则 currentValue 则将使用数组第一个元素；
+//否则 previousValue 将使用数组第一个元素，而 currentValue 将使用数组第二个元素。
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) =&gt; accumulator + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial);
+// Expected output: 10</code></pre>
+    <h4 id="%E5%AD%97%E7%AC%A6%E4%B8%B2">
+     Array.filter（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">Array.prototype._filter = function(Fn) {
+    if (typeof Fn !== 'function') return
+    const array = this
+    const newArray = []
+    for (let i=0; i&lt;array.length; i++) {
+        const result = Fn.call(null, array[i], i, array)
+        result &amp;&amp; newArray.push(array[i])
+    }
+return newArray
+ }</code></pre>
+    <h4 id="Array.map%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     Array.map（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">Array.prototype._map = function(Fn) {
+    if (typeof Fn !== 'function') return
+    const array = this
+    const newArray = []
+    for (let i=0; i&lt;array.length; i++) {
+        const result = Fn.call(null, array[i], i, array)
+        //##########与filter的唯一不同
+        newArray.push(result)
+    }
+return newArray
+ }</code></pre>
+    <h4 id="Array.reduce%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     Array.reduce（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">
+Array.prototype._reduce = function(fn,initialValue = 0){
+  if(typeof fn !== 'function') return;
+  let res = initialValue
+  this.forEach((value,index,arr)=&gt;{
+	res = fn(res,value,index,arr)
+  })
+  return res
+}
+</code></pre>
+    <h3 id="String">
+     String
+    </h3>
+    <pre><code class="language-javascript">str.charAt(index)//获取第n位字符  
+str.charCodeAt(n)//获取第n位UTF-16字符编码 （Unicode）A是65，a是97
+String.fromCharCode(num1[, ...[, numN]])//根据UTF编码创建字符串
+
+String.fromCharCode('a'.charCodeAt(0))='a'
+
+str.trim()//返回去掉首尾的空白字符后的新字符串
+
+str.split(separator)//返回一个以指定分隔符出现位置分隔而成的一个数组，数组元素不包含分隔符
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words[3]);
+// Expected output: "fox"
+
+
+str.toLowerCase( )//字符串转小写；
+str.toUpperCase( )//字符串转大写；
+
+str.concat(str2, [, ...strN])
+
+
+str.substring(indexStart[, indexEnd])  //提取从 indexStart 到 indexEnd（不包括）之间的字符。
+str.substr(start[, length]) //没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。
+
+str.indexOf(searchString[, position]) //在大于或等于position索引处的第一次出现。
+str.match(regexp)//找到一个或多个正则表达式的匹配。
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+let regex = /[A-Z]/g;
+let found = paragraph.match(regex);
+console.log(found);
+// Expected output: Array ["T", "I"]
+regex = /[A-Z]/;
+found = paragraph.match(regex);
+console.log(found);
+// Expected output: Array ["T"]
+
+//match类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+var str = '123123000'
+str.match(/\w{3}/g).join(',') // 123,123,000
+
+str.search(regexp)//如果匹配成功，则 search() 返回正则表达式在字符串中首次匹配项的索引;否则，返回 -1
+const paragraph = '? The quick';
+
+// Any character that is not a word character or whitespace
+const regex = /[^\w\s]/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 0
+
+str.repeat(count)//返回副本
+str.replace(regexp|substr, newSubStr|function)//返回一个由替换值（replacement）替换部分或所有的模式（pattern）匹配项后的新字符串。
+const p = 'lazy dog.Dog lazy';//如果pattern是字符串，则仅替换第一个匹配项。
+console.log(p.replace('dog', 'monkey'));
+// "lazy monkey.Dog lazy"
+
+
+let regex = /dog/i;//如果非全局匹配，则仅替换第一个匹配项
+console.log(p.replace(regex, 'ferret'));
+//"lazy ferret.Dog lazy"
+
+regex = /d|Dog/g;
+console.log(p.replace(regex, 'ferret'));
+//"lazy ferretog.ferret lazy"
+
+//当使用一个 regex 时，您必须设置全局（“g”）标志， 否则，它将引发 TypeError：“必须使用全局 RegExp 调用 replaceAll”。
+const p = 'lazy dog.dog lazy';//如果pattern是字符串，则仅替换第一个匹配项。
+console.log(p.replaceAll('dog', 'monkey'));
+// "lazy monkey.monkey lazy"
+
+
+let regex = /dog/g;//如果非全局匹配，则仅替换第一个匹配项
+console.log(p.replaceAll(regex, 'ferret'));
+//"lazy ferret.ferret lazy"</code></pre>
+    <h3 id="indexOf%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     Class
+    </h3>
+    <h4 id="%E7%B1%BB%E5%A3%B0%E6%98%8E">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes#%E7%B1%BB%E5%A3%B0%E6%98%8E" rel="nofollow" title="类声明">
+      类声明
+     </a>
+    </h4>
+    <pre><code class="language-javascript">class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+</code></pre>
+    <h4 id="类表达式">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes#%E7%B1%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F" rel="nofollow" title="类表达式">
+      类表达式
+     </a>
+    </h4>
+    <pre><code class="language-javascript">// 未命名/匿名类
+let Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(Rectangle.name);
+// output: "Rectangle"
+
+// 命名类
+let Rectangle = class Rectangle2 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(Rectangle.name);
+// 输出："Rectangle2"
+</code></pre>
+    <h4 id="使用_super_调用超类">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes#%E4%BD%BF%E7%94%A8_super_%E8%B0%83%E7%94%A8%E8%B6%85%E7%B1%BB" rel="nofollow" title="使用 super 调用超类">
+      使用 super 调用超类
+     </a>
+    </h4>
+    <p>
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super" rel="nofollow" title="super">
+      super
+     </a>
+     关键字用于调用对象的父对象上的函数。
+    </p>
+    <pre><code class="language-javascript">class Cat {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(this.name + ' makes a noise.');
+  }
+}
+
+class Lion extends Cat {
+  constructor(name,id) {
+    super(name);
+    this.id = id;
+  }
+  speak() {
+    super.speak();
+    console.log(this.name + ' roars.');
+  }
+}
+</code></pre>
+    <h4 id="private">
+     private
+    </h4>
+    <p>
+     类属性在默认情况下是
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields" rel="nofollow" title="公有">
+      公有
+     </a>
+     的，但可以使用增加哈希前缀
+     <code>
+      #
+     </code>
+     的方法来定义私有类字段
+    </p>
+    <p>
+     从类外部引用私有字段是错误的。它们只能在类里面中读取或写入。
+    </p>
+    <pre><code class="language-javascript">class ClassWithPrivateField {
+  #privateField;
+}
+
+class ClassWithPrivateMethod {
+  #privateMethod() {
+    return 'hello world';
+  }
+}
+
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD;
+}
+
+class ClassWithPrivateStaticMethod {
+  static #privateStaticMethod() {
+    return 'hello world';
+  }
+}
+</code></pre>
+    <h4 id="static%C2%A0%E5%85%B3%E9%94%AE%E5%AD%97">
+     <strong>
+      static
+     </strong>
+     关键字
+    </h4>
+    <p>
+     定义静态方法和值。不能在类的实例上调用静态方法，而应该通过类本身调用
+    </p>
+    <p>
+     静态方法调用同一个类中的其他静态方法，可使用
+     <code>
+      this
+     </code>
+     关键字
+    </p>
+    <pre><code class="language-javascript">class StaticMethodCall {
+    static staticMethod() {
+        return 'Static method has been called';
+    }
+    static anotherStaticMethod() {
+        return this.staticMethod() + ' from another static method';
+    }
+}
+StaticMethodCall.staticMethod();
+// 'Static method has been called'
+
+StaticMethodCall.anotherStaticMethod();
+// 'Static method has been called from another static method'
+</code></pre>
+    <p>
+     非静态方法中，不能直接使用
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this" rel="nofollow" title="this">
+      this
+     </a>
+     关键字来访问静态方法。
+    </p>
+    <p>
+     而是要用类名来调用：
+     <code>
+      CLASSNAME.STATIC_METHOD_NAME()
+     </code>
+     ，
+    </p>
+    <p>
+     或者用构造函数的属性来调用该方法：
+     <code>
+      this.constructor.STATIC_METHOD_NAME()
+     </code>
+     .
+    </p>
+    <pre><code class="language-javascript">class StaticMethodCall {
+    constructor() {
+        console.log(StaticMethodCall.staticMethod());
+        // 'static method has been called.'
+        console.log(this.constructor.staticMethod());
+        // 'static method has been called.'
+    }
+    static staticMethod() {
+        return 'static method has been called.';
+    }
+}
+</code></pre>
+    <h4 id="%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E5%BC%8F">
+     <strong>
+      <strong>
+       <a href="https://blog.csdn.net/KANGCHUNHUANG/article/details/123819224" title="创建对象的方式">
+        创建对象的方式
+       </a>
+      </strong>
+     </strong>
+    </h4>
+    <blockquote>
+     <p>
+      <strong>
+       1、{}
+       <br/>
+       2、new Ｏbject()
+      </strong>
+     </p>
+     <pre><code class="language-javascript">    /**
+        使用{}创建对象，等同于 new Object();
+        **/
+        var o = {};</code></pre>
+     <p>
+      <strong>
+       3、使用字面量
+      </strong>
+     </p>
+     <pre><code class="language-javascript">var person = {name: 'zhang', age:20}</code></pre>
+     <p>
+      <strong>
+       4、工厂模式
+      </strong>
+     </p>
+     <pre><code class="language-javascript">        'use strict';
+
+        // 使用工厂模式创建对象
+        // 定义一个工厂方法
+        function createObject(name){
+            var o = new Object();
+            o.name = name;
+            o.sayName = function(){
+                alert(this.name);
+            };
+            return o;
+        }
+
+        var o1 = createObject('zhang');
+        var o2 = createObject('li');
+
+        //缺点：调用的还是不同的方法
+        //优点：解决了前面的代码重复的问题
+        alert(o1.sayName===o2.sayName);//false
+</code></pre>
+     <p>
+      <strong>
+       5、构造函数模式（constructor）
+      </strong>
+     </p>
+     <pre><code class="language-javascript"> &lt;script&gt;
+        'use strict';
+
+        /**
+         *  构造函数模式创建对象
+         **/
+        function Person(name){
+            this.name = name;
+            this.sayName = function(){
+                alert(this.name);
+            };
+        }
+
+        var p1 = new Person('zhang');
+        var p2 = new Person('li');
+
+        p1.sayName();
+        p2.sayName();
+
+        alert(p1.constructor === p2.constructor);//true
+        alert(p1.constructor === Person);//true
+
+        alert(typeof(p1));//object
+
+        alert(p1 instanceof Object); //true
+        alert(p2 instanceof Object); //trueb
+
+        alert(p1.sayName===p2.sayName);//false
+
+    &lt;/script&gt;
+</code></pre>
+     <p>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f5c5a7df7fc178cefa4635f1df936a8e.png"/>
+      <br/>
+      <strong>
+       6、原型模式（prototype）
+      </strong>
+     </p>
+     <pre><code class="language-javascript">  &lt;script&gt;
+        'use strict';
+
+        /*
+         *  原型模式创建对象
+         */
+        function Animal() { }
+
+        Animal.prototype.name = 'animal';
+        Animal.prototype.sayName = function () { alert(this.name); };
+
+        var a1 = new Animal();
+        var a2 = new Animal();
+
+        a1.sayName();
+
+        alert(a1.sayName === a2.sayName);//true
+        alert(Animal.prototype.constructor);//function Animal(){}
+        alert(Animal.prototype.constructor==Animal);//true
+    &lt;/script&gt;
+</code></pre>
+     <p>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/291bee7eba3a358736dad61d82098669.png"/>
+     </p>
+     <p>
+      如果往新建的对象中加入属性，那么这个属性是放在对象中，如果存在与原型同名的属性，也不会改变原型的值。但是访问这个属性，拿到的是对象的值。
+     </p>
+     <p>
+      访问的顺序：对象本身&gt;构造函数的prototype
+     </p>
+     <p>
+      如果对象中没有该属性，则去访问prototype，如果prototype中没有，继续访问父类，直到Object，如果都没有找到，返回undefined
+      <br/>
+     </p>
+     <pre><code class="language-javascript"> &lt;script&gt;
+        'use strict';
+        /*
+         *  原型模式创建对象
+         */
+        function Animal() { }
+        Animal.prototype.name = 'animal';
+        Animal.prototype.sayName = function () { alert(this.name); };
+
+        var a1 = new Animal();
+        var a2 = new Animal();
+        a1.sayName();
+        alert(a1.sayName === a2.sayName);//true
+        alert(Animal.prototype.constructor);//function Animal(){}
+        //修改a2.name，a1的name不会变
+        a2.name = 'dog';
+        a2.sayName();//dog
+        a1.sayName();//animal
+ &lt;/script&gt;
+</code></pre>
+     <p>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6fca06991f9c2f5162c1edfb542754ec.png"/>
+     </p>
+     <p>
+      假如原型中包含有
+      <strong>
+       引用类型的属性
+      </strong>
+      ，那么如果某个对象修改了该属性的值，所有的该原型创建的对象访问的值都会改变。
+     </p>
+     <pre><code class="language-javascript"> &lt;script&gt;
+        'use strict';
+
+        //原型模式2
+        //存在的问题：如果原型中含有引用类型
+        function Animal (){}
+        Animal.prototype = {
+            name: 'animal',
+            friends: ['dog','cat'],
+            sayName: function(){
+                alert(this.name);
+            }
+        };
+        var a1 = new Animal();
+        var a2 = new Animal();
+        a2.friends.push('snake');
+        alert(a2.friends);//[dog,cat,snake]
+        alert(a1.friends);//[dog,cat,snake]
+
+  &lt;/script&gt;
+</code></pre>
+     <p>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/89163cd0fc242823ed1ad4bc71e19f8a.png"/>
+      <br/>
+      <strong>
+       7、构造函数+原型模式
+      </strong>
+     </p>
+     <p>
+     </p>
+     <pre><code class="language-javascript"> &lt;script&gt;
+        'use strict';
+
+        function Animal(name){
+            this.name = name;
+            this.friends = ['dog','cat'];
+        }
+        Animal.prototype.sayName = function(){
+            alert(this.name);
+        };
+        var a1 = new Animal('d');
+        var a2 = new Animal('c');
+        a1.friends.push('snake');
+        alert(a1.friends);//[dog,cat,snake]
+        alert(a2.friends);//[dog,cat]
+
+  &lt;/script&gt;
+</code></pre>
+     <p>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/03724bb311ef38537496ed3e52c6dad3.png"/>
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+    </blockquote>
+    <h3 id="Object">
+     Object
+    </h3>
+    <pre><code class="language-javascript">//创建的新对象.prototype=proto（参数对象）
+Object.create(proto[, propertiesObject])
+</code></pre>
+    <blockquote>
+     <p>
+      propertiesObject 可选
+      <br/>
+      如果该参数被指定且不为 undefined，则该传入对象的
+      <strong>
+       自有 可枚举属性
+      </strong>
+      （即其自身定义的属性，而
+      <strong>
+       不是其原型链上的枚举属性
+      </strong>
+      ）将为新创建的对象添加指定的
+      <strong>
+       属性值
+      </strong>
+      和对应的
+      <strong>
+       属性描述符
+      </strong>
+      。这些属性对应于 Object.defineProperties() 的第二个参数。
+     </p>
+    </blockquote>
+    <p>
+     <strong>
+      描述符
+     </strong>
+    </p>
+    <blockquote>
+     <ul>
+      <li>
+       拥有布尔值的键
+       <code>
+        configurable
+       </code>
+       、
+       <code>
+        enumerable
+       </code>
+       和
+       <code>
+        writable
+       </code>
+       的
+       <strong>
+        默认值都是
+        <code>
+         false
+        </code>
+       </strong>
+       。
+      </li>
+      <li>
+       属性值和函数的键
+       <code>
+        value
+       </code>
+       、
+       <code>
+        get
+       </code>
+       和
+       <code>
+        set
+       </code>
+       字段的默认值为
+       <code>
+        undefined
+       </code>
+       。
+      </li>
+     </ul>
+     <p>
+      <strong>
+       数据描述符
+      </strong>
+      ：
+     </p>
+     <p>
+     </p>
+     <p>
+      <code>
+       configurable
+      </code>
+     </p>
+     <p>
+      <strong>
+       <code>
+        true
+       </code>
+      </strong>
+      时，描述符
+      <strong>
+       才能够被改变
+      </strong>
+      ，同时该属性也能从对应的对象上被
+      <strong>
+       删除
+      </strong>
+      。
+     </p>
+     <p>
+     </p>
+     <p>
+      enumerable 属性
+     </p>
+     <p>
+      定义了对象的属性是否可以在
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in" rel="nofollow" title="for...in">
+       for...in
+      </a>
+      循环和
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys" rel="nofollow" title="Object.keys()">
+       Object.keys()
+      </a>
+      中被枚举。
+     </p>
+     <p>
+     </p>
+     <p>
+      <code>
+       value
+      </code>
+     </p>
+     <p>
+      该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。
+     </p>
+     <p>
+     </p>
+     <p>
+      <code>
+       writable
+      </code>
+     </p>
+     <p>
+      当且仅当该属性的
+      <code>
+       writable
+      </code>
+      键值为
+      <code>
+       true
+      </code>
+      时，属性的值，也就是上面的
+      <code>
+       value
+      </code>
+      ，才能被
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators" rel="nofollow" title="赋值运算符 (en-US)">
+       赋值运算符 (en-US)
+      </a>
+      改变。
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       存取描述符
+      </strong>
+      ：
+     </p>
+     <p>
+      <code>
+       get
+      </code>
+     </p>
+     <p>
+      属性的 getter 函数，如果没有 getter，则为
+      <code>
+       undefined
+      </code>
+      。当访问该属性时，会调用此函数。执行时不传入任何参数，但是会传入
+      <code>
+       this
+      </code>
+      对象（由于继承关系，这里的
+      <code>
+       this
+      </code>
+      并不一定是定义该属性的对象）。该函数的返回值会被用作属性的值。
+     </p>
+     <p>
+      <code>
+       set
+      </code>
+     </p>
+     <p>
+      属性的 setter 函数，如果没有 setter，则为
+      <code>
+       undefined
+      </code>
+      。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是被赋予的新值），会传入赋值时的
+      <code>
+       this
+      </code>
+      对象。
+     </p>
+    </blockquote>
+    <p>
+     描述符可拥有的键值
+    </p>
+    <table>
+     <thead>
+      <tr>
+       <th>
+       </th>
+       <th>
+        <code>
+         configurable
+        </code>
+       </th>
+       <th>
+        <code>
+         enumerable
+        </code>
+       </th>
+       <th>
+        <code>
+         value
+        </code>
+       </th>
+       <th>
+        <code>
+         writable
+        </code>
+       </th>
+       <th>
+        <code>
+         get
+        </code>
+       </th>
+       <th>
+        <code>
+         set
+        </code>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        数据描述符
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        不可以
+       </td>
+       <td>
+        不可以
+       </td>
+      </tr>
+      <tr>
+       <td>
+        存取描述符
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        不可以
+       </td>
+       <td>
+        不可以
+       </td>
+       <td>
+        可以
+       </td>
+       <td>
+        可以
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     如果一个描述符不具有
+     <code>
+      value
+     </code>
+     、
+     <code>
+      writable
+     </code>
+     、
+     <code>
+      get
+     </code>
+     和
+     <code>
+      set
+     </code>
+     中的任意一个键，那么它将被认为是一个数据描述符。
+    </p>
+    <p>
+     如果一个描述符同时拥有
+     <code>
+      value
+     </code>
+     或
+     <code>
+      writable
+     </code>
+     和
+     <code>
+      get
+     </code>
+     或
+     <code>
+      set
+     </code>
+     键，则会产生一个
+     <strong>
+      异常
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">function Archiver() {
+  var temperature = null;
+  var archive = [];
+
+  Object.defineProperty(this, 'temperature', {
+    get: function() {
+      console.log('get!');
+      return temperature;
+    },
+    set: function(value) {
+      temperature = value;
+      archive.push({ val: temperature });
+    }
+  });
+
+  this.getArchive = function() { return archive; };
+}
+
+var arc = new Archiver();
+arc.temperature; // 'get!'
+arc.temperature = 11;
+arc.temperature = 13;
+arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+
+//在一个对象上定义一个新的属性或修改现有属性，并返回该对象
+Object.defineProperty(obj, prop, descriptor)
+
+const object1 = {};
+
+Object.defineProperty(object1, 'property1', {
+  value: 42,
+  writable: false
+});
+//用 Symbol 类型的值来做对象的 key 与常规的定义或修改不同
+
+//Object.defineProperty 是定义 key 为 Symbol 的属性的方法之一。
+Object.defineProperty(o, Symbol.for('e'), {
+  value: 5,
+  enumerable: true
+});
+
+//在一个对象上定义新的属性或修改现有属性，并返回该对象
+Object.defineProperties(obj, props) 
+
+var obj = {};
+Object.defineProperties(obj, {
+  'property1': {
+    value: true,
+    writable: true
+  },
+  'property2': {
+    value: 'Hello',
+    writable: false
+  }
+  // etc. etc.
+});
+
+//Object.prototype.hasOwnProperty()指示对象自身属性中是否具有指定的属性
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty('property1'));
+// Expected output: true
+
+console.log(object1.hasOwnProperty('hasOwnProperty'));
+// Expected output: false
+
+//Object.getPrototypeOf(object)返回对象原型
+
+const prototype1 = {};
+const object1 = Object.create(prototype1);
+
+console.log(Object.getPrototypeOf(object1) === prototype1);
+// Expected output: true
+
+//Object.keys() 方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致。
+
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+
+//Object.values() 方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用 for...in 循环的顺序相同（区别在于 for-in 循环枚举原型链中的属性）。
+var obj = { foo: 'bar', baz: 42 };
+console.log(Object.values(obj)); // ['bar', 42]
+
+// non-object argument will be coerced to an object
+console.log(Object.values('foo')); // ['f', 'o', 'o']
+</code></pre>
+    <h4>
+     Object.create （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     该函数创建一个新对象，使用现有的对象来提供新创建的对象的proto，核心步骤有：
+    </p>
+    <ol>
+     <li>
+      创建一个临时函数
+     </li>
+     <li>
+      将该临时函数的
+      <strong>
+       原型
+      </strong>
+      指向对象参数
+     </li>
+     <li>
+      返回该临时对象的
+      <strong>
+       实例
+      </strong>
+     </li>
+    </ol>
+    <p>
+     Object.create法创建一个新对象，使用现有的对象来提供新创建的对象的proto。
+    </p>
+    <pre><code class="language-javascript">const _objectCreate = proto =&gt; {
+    if(typeof proto !== 'object' || proto === null) return
+
+    const fn = function() {}
+    fn.prototype = proto
+
+    return new fn()
+}</code></pre>
+    <h4 id="Object.freeze%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     <a href="https://blog.nowcoder.net/n/46fded03ed7548199441501383b6bed4" rel="nofollow" title="Object.freeze ">
+      Object.freeze
+     </a>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     Object.freeze = writable: false + Object.seal = writable: false + Object.preventExtensions + configable: false
+    </p>
+    <ul>
+     <li>
+      Symbol 类型作为 key 值的情况，也要冻结
+     </li>
+     <li>
+      只冻结对象
+      <strong>
+       自有
+      </strong>
+      的属性（使用
+      <strong>
+       for ... in
+      </strong>
+      会把
+      <strong>
+       原型链
+      </strong>
+      上的可枚举属性遍历出来）。
+     </li>
+     <li>
+      注意不可扩展性（
+      <strong>
+       不能添加新属性
+      </strong>
+      ，使用 Object.preventExtensions() 或 Object.seal() 实现，同时也相当于把原型链冻结）。
+     </li>
+    </ul>
+    <p>
+     key：
+    </p>
+    <ol>
+     <li>
+      Object.get
+      <strong>
+       Own
+      </strong>
+      PropertyNames/Symbol
+     </li>
+     <li>
+      forEach
+     </li>
+     <li>
+      Object.
+      <strong>
+       define
+      </strong>
+      Property：
+      <strong>
+       configurable，writable
+      </strong>
+     </li>
+     <li>
+      Object.
+      <strong>
+       preventExtensions
+      </strong>
+      (object)
+     </li>
+    </ol>
+    <pre><code class="language-javascript">const _objectFreeze = object =&gt; {
+
+    if(typeof object !== 'object' || object === null) {
+        throw new TypeError(`the ${object} is not a object`)
+    }
+
+    const keys = Object.getOwnPropertyNames(object);
+    const symbols = Object.getOwnPropertySymbols(object);
+    
+    [...keys, ...symbols].forEach(key =&gt; {
+        Object.defineProperty(object, key, {
+            configurable: false,
+            writable: false,
+        })
+    })
+
+    Object.preventExtensions(object)
+}
+</code></pre>
+    <h4>
+     indexOf （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     在函数前加上波浪号，其作用是把函数声明转换为表达式，这样就可以直接运行
+    </p>
+    <pre><code class="language-javascript">~function sayHello(){
+    console.log('hello');
+}()
+
+//Expected output: hello</code></pre>
+    <pre><code class="language-javascript">    ~ function () {
+        function myIndexOf(searchStr) {
+            // 这个也可以正则实现 下面代码
+            // let reg = new RegExp(searchStr)
+            // res = reg.exec(this)
+            // return res === null ? -1 : res.index
+
+            let len = this.length
+            let searchLen=searchStr.length
+            if (searchLen &gt; len) return -1
+            // 如果输入的字符串大于要检测的字符串直接 -1
+            for (var i = 0; i &lt;= len-searchLen; i++) {
+                if (this.substring(i,searchLen+i) === searchStr) {
+                    return i
+                }
+            }
+            return -1
+        }
+        String.prototype.myIndexOf = myIndexOf
+    }()
+    let str = 'dwanlghMappaw'
+    let searchStr= 'hM'
+    console.log(str.myIndexOf(searchStr));
+</code></pre>
+    <h3 id="%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E7%8F%82%E9%87%8C%E5%8C%96">
+     高阶函数和函数的珂里化Currying
+    </h3>
+    <p>
+     <strong>
+      高阶函数
+     </strong>
+     ：
+     <strong>
+      参数
+     </strong>
+     或者
+     <strong>
+      返回值
+     </strong>
+     为函数
+    </p>
+    <p>
+     <strong>
+      函数
+      <strong>
+       <strong>
+        <strong>
+         <strong>
+          <strong>
+           <strong>
+            <strong>
+             <a href="https://so.csdn.net/so/search?q=%E6%9F%AF%E9%87%8C%E5%8C%96&amp;spm=1001.2101.3001.7020" title="柯里化">
+              柯里化
+             </a>
+            </strong>
+           </strong>
+          </strong>
+         </strong>
+        </strong>
+       </strong>
+      </strong>
+     </strong>
+     ：
+     <strong>
+      返回值
+     </strong>
+     为函数，实现多次接收参数最后统一处理的函数编码
+    </p>
+    <p>
+     作用：能进行
+     <strong>
+      部分传值
+     </strong>
+     ，而传统函数调用则需要预先确定所有实参。如果你在代码某一处只获取了部分实参，然后在另一处
+     <strong>
+      确定另一部分实参
+     </strong>
+     。
+    </p>
+    <p>
+     用途：延迟计算、参数复用、
+     <strong>
+      动态生成函数
+     </strong>
+     (都是闭包的用途)。
+    </p>
+    <pre><code class="language-javascript">function sum(a){
+	return(b)=&gt;{
+    	return (c)=&gt;{
+            return a+b+c
+        }
+    }
+}
+</code></pre>
+    <h3 id="%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F">
+     A
+     <code>
+      rguments
+     </code>
+     对象
+    </h3>
+    <p>
+     是所有（非箭头）函数中都可用的
+     <strong>
+      局部变量
+     </strong>
+     。类似于
+     <code>
+      Array
+     </code>
+     ，但除了 length 属性和索引元素之外没有任何
+     <code>
+      Array
+     </code>
+     属性。
+    </p>
+    <pre><code class="language-javascript">function add() {
+    var sum =0,
+        len = arguments.length;
+    for(var i=0; i&lt;len; i++){
+        sum += arguments[i];
+    }
+    return sum;
+}
+add()                           // 0
+add(1)                          // 1
+add(1,2,3,4);                   // 10
+</code></pre>
+    <h3 id="%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D">
+     深浅拷贝
+    </h3>
+    <p>
+     基本类型：内存区域存储的是值，不存在深拷贝和浅拷贝
+    </p>
+    <p>
+     引用类型：内存区域存储的是地址，浅拷贝只拷贝一层（内存地址），而深拷贝是层层拷贝（拷贝内容，新开辟内存）。
+    </p>
+    <h4 id="%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     深拷贝（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript"> function cloneDeep(arr = {}) {
+        // 终止递归 判断如果传进来的数据不是 object 或者 传进来的是一个 null 直接返回
+        if (!arr || typeof arr != 'object' || arr == null) return arr
+        // 用 instanceof 判断原型链上是否有该类型的原型 是 Array =&gt; [] ! Arrays =&gt;{}
+        let result=arr instanceof Array ?  [] :  {}
+        // forin 循环对象的key值
+        for (const key in arr) {
+            //  对象 key 赋值 result
+            result[key] = cloneDeep(arr[key])
+        }
+        return result
+   }
+</code></pre>
+    <h3 id="%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F">
+     严格模式
+    </h3>
+    <p>
+     严格模式通过
+     <strong>
+      抛出错误
+     </strong>
+     来消除了一些原有
+     <strong>
+      静默错误
+     </strong>
+     。
+    </p>
+    <ul>
+     <li>
+      严格模式下，不允许给未
+      <strong>
+       声明
+      </strong>
+      的变量赋值
+     </li>
+    </ul>
+    <p>
+     严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下
+     <strong>
+      运行得更快
+     </strong>
+     。
+    </p>
+    <p>
+     严格模式
+     <strong>
+      禁用了
+     </strong>
+     在 ECMAScript 的未来版本中可能会定义的一些语法。
+    </p>
+    <h3 id="%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81">
+     防抖 （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h3>
+    <p>
+     触发事件后在 n 秒内函数只能执行一次，如果在
+     <strong>
+      n 秒内又触发了
+     </strong>
+     事件，会
+     <strong>
+      重计算
+     </strong>
+     函数执行时间。
+    </p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    防抖： &lt;input id="input" type="text"&gt;
+&lt;/body&gt;
+&lt;script&gt;
+     // 防抖的核心代码
+    function debounce(fun,time) {
+        let flag // 定义状态
+        return function () {
+            clearTimeout(flag)// 在执行之前 清除 定时器的 flag 不让他执行
+            flag = setTimeout(() =&gt; {
+                fun.call(this,arguments)//拿到正确的this对象，即事件发生的dom
+            }, time)
+        }
+    }
+
+    let val = debounce(function (val) {
+        console.log(val)
+    },1000)
+    
+     // 监听拿到input输入的值
+    input.addEventListener('input', function (e) {
+        val(e.target.value)
+    })
+   
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+    <h3 id="%E8%8A%82%E6%B5%81%C2%A0%C2%A0%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     节流（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h3>
+    <p>
+     连续触发事件但是在
+     <strong>
+      n 秒中只执行一次
+     </strong>
+     函数。两种方式可以实现，分别是时间戳版和定时器版。
+    </p>
+    <pre><code class="language-javascript">&lt;body&gt;
+    &lt;button id="button"&gt;1秒执行一次&lt;/button&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    /*
+        定时器版本的
+          fns 回调函数
+          time 间隔时间
+        function throttle(fun, time) {
+        let flag // 定义一个空状态
+        return function () { // 内部函数访问外部函数形成闭包
+            if (!flag) { // 状态为空执行
+                flag = setTimeout(() =&gt; {
+                    fns.apply(this, arguments) // 改变this指向 把 event 事件对象传出去
+                    flag = null
+                }, time)
+            }
+        }
+       }
+    */
+
+    function throttle(fun, time) {
+        let last = 0
+        return function () {
+            let now = Date.now()
+            // 当前的值 减去上一次的值 &gt;= 传过来的事件 执行
+            if (now - last &gt;= time) {
+                fun.apply(this, arguments)
+                last = now
+            }
+        }
+    }
+
+
+
+    button.onclick = throttle((e) =&gt; {
+        console.log(e)
+    }, 1000)
+&lt;/script&gt;
+</code></pre>
+    <h4 id="%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81%E5%BA%94%E7%94%A8">
+     防抖、节流应用
+    </h4>
+    <p>
+     防止某一时间
+     <strong>
+      频繁触发
+     </strong>
+    </p>
+    <ul>
+     <li>
+      防抖debounce：
+      <strong>
+       time内只执行一次
+      </strong>
+      <ul>
+       <li>
+        search搜索联想，用户
+        <strong>
+         在不断输入值
+        </strong>
+        时，用防抖来
+        <strong>
+         节约请求资源
+        </strong>
+        。
+       </li>
+       <li>
+        window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次
+       </li>
+      </ul>
+     </li>
+     <li>
+      节流throttle：
+      <strong>
+       间隔time执行
+      </strong>
+      <ul>
+       <li>
+        <strong>
+         鼠标不断点击触发
+        </strong>
+        ，mousedown(单位时间内只触发一次)
+       </li>
+       <li>
+        监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <h3 id="%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6">
+     <a href="https://juejin.cn/post/6981588276356317214#heading-2" rel="nofollow" title="垃圾回收">
+      垃圾回收
+     </a>
+     (GC)
+    </h3>
+    <p>
+     <code>
+      GC
+     </code>
+     即
+     <code>
+      Garbage Collection
+     </code>
+    </p>
+    <p>
+     浏览器的js具有自动垃圾回收机制，
+     <strong>
+      垃圾回收机制
+     </strong>
+     也就是
+     <strong>
+      自动内存管理
+     </strong>
+     机制，垃圾收集器会
+     <strong>
+      定期
+     </strong>
+     的找出
+     <strong>
+      不可访问的值
+     </strong>
+     ，然后释放内存，所以将不需要的对象设为
+     <strong>
+      null
+     </strong>
+     即可。
+    </p>
+    <h4 id="%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5">
+     内存分配
+    </h4>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        <code>
+         First-fit
+        </code>
+       </strong>
+       ，找到
+       <strong>
+        第一个
+       </strong>
+       的大于等于
+       <code>
+        size
+       </code>
+       的块立即返回
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        <code>
+         Best-fit
+        </code>
+       </strong>
+       ，遍历整个空闲列表，返回
+       <strong>
+        大于等于
+        <code>
+         size
+        </code>
+        的最小分块
+       </strong>
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        <code>
+         Worst-fit
+        </code>
+       </strong>
+       ，遍历整个空闲列表，找到
+       <strong>
+        最大的分块
+       </strong>
+       ，然后切成两部分，一部分
+       <code>
+        size
+       </code>
+       大小，并将该部分返回
+      </p>
+     </li>
+    </ul>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/cb2d96c1186270521e2145a6cd4ffd5e.png"/>
+    </p>
+    <p>
+     <strong>
+      <code>
+       Worst-fit
+      </code>
+     </strong>
+     的
+     <strong>
+      空间利用率
+     </strong>
+     看起来是最合理，但实际上切分之后
+     <strong>
+      会造成更多的小块
+     </strong>
+     ，形成内存碎片，所以不推荐使用，
+    </p>
+    <p>
+     <code>
+      First-fit
+     </code>
+     和
+     <code>
+      Best-fit
+     </code>
+     来说，考虑到
+     <strong>
+      分配的速度和效率
+     </strong>
+     <strong>
+      <code>
+       First-fit
+      </code>
+     </strong>
+     是更为明智的选择
+    </p>
+    <h4 id="%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5">
+     回收策略
+    </h4>
+    <blockquote>
+     <p>
+      <strong>
+       标记清除
+      </strong>
+      （Mark-Sweep）：最常用
+     </p>
+     <p>
+      （根对象，在浏览器环境中包括
+      <code>
+       全局
+       <strong>
+        Window
+       </strong>
+       对象
+      </code>
+      、
+      <strong>
+       <code>
+        文档DOM树
+       </code>
+      </strong>
+      等）
+     </p>
+     <ul>
+      <li>
+       垃圾收集器在运行时会给内存中的所有变量都加上一个标记，假设内存中所有对象都是垃圾，
+       <strong>
+        全标记为0
+       </strong>
+      </li>
+      <li>
+       然后
+       <strong>
+        从各个根对象开始遍历
+       </strong>
+       ，把
+       <strong>
+        不是垃圾的节点改成1
+       </strong>
+      </li>
+      <li>
+       <strong>
+        清理所有标记为0
+       </strong>
+       的垃圾，销毁并回收它们所占用的内存空间
+      </li>
+      <li>
+       最后，把所有内存中对象标记修改
+       <strong>
+        为0
+       </strong>
+       ，等待下一轮垃圾回收
+      </li>
+     </ul>
+     <p>
+      <strong>
+       优点
+      </strong>
+     </p>
+     <p>
+      简单
+     </p>
+     <p>
+      <strong>
+       缺点
+      </strong>
+     </p>
+     <p>
+     </p>
+     <ul>
+      <li>
+       <strong>
+        内存碎片化
+       </strong>
+       ，清除之后，剩余的
+       <strong>
+        对象内存位置
+       </strong>
+       是
+       <strong>
+        不变
+       </strong>
+       的，也会导致空闲内存空间是
+       <strong>
+        不连续
+       </strong>
+       的，出现了
+       <strong>
+        <code>
+         内存碎片
+        </code>
+       </strong>
+       ，存在
+       <strong>
+        内存分配
+       </strong>
+       的问题
+      </li>
+      <li>
+       <strong>
+        分配速度慢
+       </strong>
+       ，因为即便是使用
+       <strong>
+        <code>
+         First-fit
+        </code>
+       </strong>
+       策略，其操作仍是一个
+       <strong>
+        <code>
+         O(n)
+        </code>
+       </strong>
+       的操作，最坏情况是每次都要遍历到最后，同时因为碎片化，
+       <strong>
+        大对象的分配效率
+       </strong>
+       会更慢
+      </li>
+     </ul>
+     <p class="img-center">
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d48cbf134af8685c5b2a5116579d4eb9.png"/>
+     </p>
+    </blockquote>
+    <blockquote>
+     <p>
+      <strong>
+       标记整理（Mark-Compact）
+      </strong>
+     </p>
+     <p>
+      <strong>
+       改善
+      </strong>
+      标记清除清除之后
+      <strong>
+       剩余的对象位置不变
+      </strong>
+      而导致的
+      <strong>
+       空闲内存不连续
+      </strong>
+     </p>
+     <p>
+      标记结束后，标记整理算法会将活着的对象（即不需要清理的对象）向内存的一端
+      <strong>
+       移动
+      </strong>
+      ，最后
+      <strong>
+       清理掉边界
+      </strong>
+      的内存
+     </p>
+     <p class="img-center">
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/078a723bd1bb0d8c2c48f7283c23c4fa.png"/>
+     </p>
+    </blockquote>
+    <blockquote>
+     <p>
+      <strong>
+       引用计数
+      </strong>
+      （Reference Counting），
+      <strong>
+       早
+      </strong>
+      的一种垃圾回收算法
+     </p>
+     <p>
+      它把
+      <code>
+       对象是否不再需要
+      </code>
+      简化定义为
+      <strong>
+       没有引用
+      </strong>
+      指向该对象（
+      <strong>
+       零引用
+      </strong>
+      ），对象将被垃圾回收机制回收，目前很少使用这种算法了，因为它的问题很多
+     </p>
+     <p>
+      跟踪记录每个变量值被使用的次数
+     </p>
+     <ul>
+      <li>
+       <p>
+        当声明了一个变量并且将一个引用类型赋值给该变量的时候这个值的引用次数就为 1
+       </p>
+      </li>
+      <li>
+       <p>
+        如果同一个值又被赋给另一个变量，那么引用数加 1
+       </p>
+      </li>
+      <li>
+       <p>
+        如果该变量的值被其他的值覆盖了，则引用次数减 1
+       </p>
+      </li>
+      <li>
+       <p>
+        当这个值的引用次数变为 0 的时候，说明没有变量在使用，这个值没法被访问了，回收空间，垃圾回收器会在运行的时候清理掉引用次数为 0 的值占用的内存
+       </p>
+      </li>
+     </ul>
+     <p>
+      <strong>
+       优点
+      </strong>
+     </p>
+     <p>
+      引用值为 0 时，可以
+      <strong>
+       立即回收
+      </strong>
+      垃圾
+     </p>
+     <p>
+      <strong>
+       缺点
+      </strong>
+     </p>
+     <p>
+      <strong>
+       计数器
+      </strong>
+      需要
+      <strong>
+       占内存
+      </strong>
+     </p>
+     <p>
+      不知道被引用数量的
+      <strong>
+       上限
+      </strong>
+     </p>
+     <p>
+      无法解决
+      <strong>
+       循环引用
+      </strong>
+      无法回收的问题，这也是最严重的
+     </p>
+    </blockquote>
+    <h3>
+     内存泄漏
+    </h3>
+    <p>
+     如果 那些不再使用的变量，它们所占用的内存 不去清除的话就会造成内存泄漏
+    </p>
+    <p>
+     <strong>
+      造成系统内存的浪费导致程序运行速度减慢甚至系统崩溃等严重后果
+     </strong>
+     。
+    </p>
+    <p>
+     比如说：
+    </p>
+    <p>
+     1、闭包：在闭包中引入
+     <strong>
+      闭包外部的变量
+     </strong>
+     时，当闭包结束时此对象无法被垃圾回收（GC）。
+    </p>
+    <p>
+     2、DOM：当原有的DOM被移除时，
+     <strong>
+      子结点引用
+     </strong>
+     没有被移除则无法回收
+    </p>
+    <p>
+     JS中拥有自动的垃圾回收机制，
+    </p>
+    <h3 id="%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1">
+     <a href="https://juejin.cn/post/6844903657264136200" rel="nofollow" title="宏任务、微任务、Event-Loop">
+      宏任务、微任务、Event-Loop
+     </a>
+    </h3>
+    <p>
+     js引擎
+     <strong>
+      会优先执行微任务
+     </strong>
+     ，例如：网页加载完毕，但是图片没加载出来
+    </p>
+    <ul>
+     <li>
+      <strong>
+       微任务
+      </strong>
+      microtask(异步)：可以理解为
+      <strong>
+       task
+      </strong>
+      执行完后立刻执行，Promise async/await。
+     </li>
+     <li>
+      <strong>
+       宏任务
+      </strong>
+      macrotask： setTimeout,setInterval一类的
+      <strong>
+       定时
+      </strong>
+      事件，Ajax,DOM事件，script 脚本的执行、
+      <strong>
+       I/O 操作、UI 渲
+      </strong>
+      <strong>
+       染
+      </strong>
+      等。
+     </li>
+    </ul>
+    <p>
+     <code>
+      例如：new Promise
+     </code>
+     <strong>
+      实例化是同步
+     </strong>
+     ，而
+     <code>
+      then
+     </code>
+     中
+     <strong>
+      注册的回调
+     </strong>
+     才是
+     <strong>
+      异步
+     </strong>
+     执行的。
+    </p>
+    <p>
+     例如：等待的客户为宏任务，他的每个业务为微任务
+    </p>
+    <p>
+     每办理完一个业务，柜员就会问当前的客户，是否还有其他需要办理的业务。
+     <em>
+      <strong>
+       （检查还有没有微任务需要处理）
+      </strong>
+     </em>
+     <br/>
+     而客户明确告知说没有事情以后，柜员就去查看后边还有没有等着办理业务的人。
+     <em>
+      <strong>
+       （结束本次宏任务、检查还有没有宏任务需要处理）
+      </strong>
+     </em>
+     <br/>
+     这个检查的过程是持续进行的，
+     <strong>
+      每完成一个任务都会进行一次
+     </strong>
+     ，而这样的
+     <strong>
+      操作就被称为
+      <code>
+       Event Loop
+      </code>
+     </strong>
+    </p>
+    <h4 id="setImmediate%E4%B8%8EsetTimeout%E7%9A%84%E5%8C%BA%E5%88%AB">
+     setImmediate与setTimeout的区别
+    </h4>
+    <p>
+     <code>
+      setImmediate
+     </code>
+     为一次
+     <code>
+      Event Loop
+     </code>
+     执行完毕后调用。
+     <br/>
+     <code>
+      setTimeout
+     </code>
+     则是通过计算一个延迟时间后进行执行。
+    </p>
+    <p>
+     如果在主进程中直接执行这两个操作，很难保证哪个会先触发。
+     <br/>
+     当注册这两个任务耗时超过
+     <code>
+      delay(s)
+     </code>
+     ，定时器处于可执行回调的状态，会先执行定时器，
+    </p>
+    <p>
+     执行完定时器以后才是结束了一次
+     <code>
+      Event Loop
+     </code>
+     ，这时才会执行
+     <code>
+      setImmediate
+     </code>
+     。
+    </p>
+    <h3 id="JS%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%96%B9%E5%BC%8F">
+     JS延迟加载的方式
+    </h3>
+    <p>
+     <br/>
+     JavaScript 是单线程（js不走完下面不会走是因为
+     <strong>
+      同步
+     </strong>
+     ）会
+     <strong>
+      阻塞DOM的解析
+     </strong>
+     ，因此也就会阻塞DOM的加载。所以有时候我们希望延迟JS的加载来提高页面的加载速度。
+    </p>
+    <p>
+     1.把
+     <strong>
+      JS
+     </strong>
+     放在页面的
+     <strong>
+      最底部（
+     </strong>
+     css放顶部，js放底部是框架常见优化
+     <strong>
+      ）
+     </strong>
+    </p>
+    <p>
+     2.
+     <strong>
+      script标签的defer属性
+     </strong>
+     ：脚本会
+     <strong>
+      立即下载
+     </strong>
+     但延迟到
+     <strong>
+      整个页面加载完毕再执行
+     </strong>
+     。该属性对于
+     <strong>
+      内联
+     </strong>
+     脚本无作用 (即没有 「src」 属性的脚本）。
+    </p>
+    <p>
+     3.是在
+     <strong>
+      外部JS
+     </strong>
+     加载完成后，浏览器
+     <strong>
+      空闲
+     </strong>
+     时，
+     <strong>
+      Load
+     </strong>
+     事件触发前执行，标记为
+     <strong>
+      async
+     </strong>
+     的脚本并不保证按照指定他们的先后顺序执行， 该属性对于
+     <strong>
+      内联
+     </strong>
+     脚本无作用 (即没有 「src」 属性的脚本）。
+    </p>
+    <p>
+     4.
+     <strong>
+      动态创建script标签
+     </strong>
+     ，监听dom加载完毕再引入js文件
+    </p>
+    <p>
+    </p>
+    <h2 id="HTTP%E5%8D%8F%E8%AE%AE">
+     <a href="https://blog.csdn.net/crazy_jialin/article/details/114967245?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167929745816800197092202%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167929745816800197092202&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-3-114967245-null-null.142%5Ev74%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93&amp;spm=1018.2226.3001.4187" title="服务器端渲染">
+      服务器端渲染
+     </a>
+    </h2>
+    <p>
+    </p>
+    <h4 id="%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">
+     基本概念
+    </h4>
+    <p>
+     <br/>
+     <strong>
+      SSR （server side rende
+     </strong>
+     r）服务端渲染，是指由服务侧（server side）完成
+     <strong>
+      页面的DOM结构拼接
+     </strong>
+     ，然后发送到浏览器，为其绑定状态与事件，成为完全可交互页面的过程。
+     <br/>
+     <strong>
+      CSR（client side rend
+     </strong>
+     er）客户端渲染，是指由客户端（client side）JS完成页面和数据的拼接，生成DOM结构再交由浏览器渲染成页面的过程。
+     <br/>
+     <strong>
+      SPA（single page application）
+     </strong>
+     单页面应用，只是局部更新内容。SPA实现的原理就采用了CSR，页面中所有内容由JS控制，需要浏览器进行JS解析才能显示出来。
+     <br/>
+     <strong>
+      SEO（search engine optimization）搜索引擎优化
+     </strong>
+     ，利用搜索
+     <strong>
+      引擎的规则
+     </strong>
+     提高网站在有关搜索引擎内的自然排名。
+    </p>
+    <h4 id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93">
+     <br/>
+     服务器端渲染SSR
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a6b88083cac029ec4251aa9f95c6aa58.png"/>
+     ​
+     <br/>
+     <br/>
+     <strong>
+      前端耗时少
+     </strong>
+     。因为
+     <strong>
+      后端拼接了html
+     </strong>
+     ，
+     <strong>
+      浏览器
+     </strong>
+     只需
+     <strong>
+      直接渲染出来
+     </strong>
+     。
+    </p>
+    <p>
+     <strong>
+      不利于前后端分离
+     </strong>
+     ，开发效率低。
+     <br/>
+     有利于
+     <strong>
+      SEO
+     </strong>
+     。因为在后端有
+     <strong>
+      完整的html页面
+     </strong>
+     ，所以
+     <strong>
+      爬虫
+     </strong>
+     更容易爬取获得信息，更有利于seo。
+    </p>
+    <p>
+     后端生成静态化文件。即生成
+     <strong>
+      缓存
+     </strong>
+     片段，这样就可以减少数据库查询浪费的时间了，且对于数据变化不大的页面非常高效 。
+    </p>
+    <p>
+     <br/>
+     占用服务器端
+     <strong>
+      资源
+     </strong>
+     。无需占用客户端资源。即
+     <strong>
+      解析
+     </strong>
+     模板的工作完全交由
+     <strong>
+      后端
+     </strong>
+     来做。
+    </p>
+    <p id="vue%EF%BC%8Creact%E9%83%BD%E6%98%AF%E6%8E%A8%E8%8D%90%E9%80%9A%E8%BF%87%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E6%9D%A5%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E7%9A%84%E3%80%82">
+     <strong>
+      vue，react
+     </strong>
+     都是推荐通过
+     <strong>
+      服务端渲染
+     </strong>
+     来
+     <strong>
+      实现路由的。
+     </strong>
+    </p>
+    <h4 id="%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93">
+     <br/>
+     客户端渲染
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6d3f02f1b3e2927226680b428725ceda.png"/>
+     ​
+    </p>
+    <h3 id="GET%E5%92%8CPOST%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82">
+     浏览器从输入url到渲染页面 过程⭐⭐⭐
+    </h3>
+    <p>
+     <strong>
+      查找缓存
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       合成 URL
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     浏览区会判断用户输入是合法 URL（Uniform Resource Locator,统一资源定位器），比如用户输入的是搜索的关键词，默认的搜索引擎会合成新的，
+    </p>
+    <p>
+     如果符合url规则会根据url协议，在这段内容加上协议合成合法的url
+    </p>
+    <ul>
+     <li>
+      <strong>
+       查找缓存
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     网络进程获取到 URL，
+    </p>
+    <p>
+     先去
+     <strong>
+      本地缓存
+     </strong>
+     中查找是否有缓存资源，如果有则
+     <strong>
+      拦截请求
+     </strong>
+     ，直接将缓存资源返回给浏览器进程；
+    </p>
+    <p>
+     否则，进入
+     <strong>
+      网络请请求
+     </strong>
+     阶段；
+    </p>
+    <ul>
+     <li>
+      <strong>
+       DNS 解析
+      </strong>
+      ：（域名系统Domain Name System）
+     </li>
+    </ul>
+    <p>
+     DNS 查找
+     <strong>
+      数据缓存服务
+     </strong>
+     中是否缓存过当前域名信息，有则直接返回；
+    </p>
+    <p>
+     否则，会进行 DNS
+     <strong>
+      解析
+     </strong>
+     返回域名对应的
+     <strong>
+      IP 和端口号
+     </strong>
+     ，
+    </p>
+    <p>
+     如果没有指定端口号，
+     <strong>
+      http 默认 80 端口
+     </strong>
+     ，
+     <strong>
+      https 默认 443
+     </strong>
+     。
+    </p>
+    <p>
+     如果是
+     <strong>
+      https 请求
+     </strong>
+     ，还需要建立
+     <strong>
+      TLS 连接
+     </strong>
+     ；（
+     <a href="https://baike.baidu.com/item/%E4%BC%A0%E8%BE%93%E5%B1%82%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%8F%E8%AE%AE/22657552?fromModule=lemma_inlink" rel="nofollow" title="传输层安全性协议">
+      传输层安全性协议
+     </a>
+     Transport Layer Security）
+    </p>
+    <p>
+     <strong>
+      TCP连接
+     </strong>
+    </p>
+    <ul>
+     <li>
+      建立
+      <strong>
+       TCP
+      </strong>
+      连接：
+     </li>
+    </ul>
+    <p>
+     TCP 三次握手与服务器建立连接，然后进行数据的传输；
+    </p>
+    <ul>
+     <li>
+      发送
+      <strong>
+       HTTP 请求
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     浏览器首先会向服务器发送
+     <strong>
+      请求行
+     </strong>
+     ，它包含了
+     <strong>
+      请求方法、请求 URI （
+     </strong>
+     统一资源标识符Uniform Resource Identifier
+     <strong>
+      ）
+     </strong>
+     和
+     <strong>
+      HTTP 协议的版本
+     </strong>
+     ；
+    </p>
+    <p>
+     还会发送
+     <strong>
+      请求头
+     </strong>
+     ，告诉服务器一些
+     <strong>
+      浏览器的相关信息
+     </strong>
+     ，比如
+     <strong>
+      浏览器内核，请求域名
+     </strong>
+     ；
+    </p>
+    <ul>
+     <li>
+      <strong>
+       服务器处理请求
+      </strong>
+      ：
+     </li>
+    </ul>
+    <p>
+     服务器首先返回
+     <strong>
+      响应头+响应行
+     </strong>
+     ，
+     <strong>
+      响应行
+     </strong>
+     包括协议版本和
+     <strong>
+      状态码
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       页面渲染
+      </strong>
+      :
+     </li>
+    </ul>
+    <p>
+     查看
+     <strong>
+      响应头
+     </strong>
+     的信息，做不同的处理，比如重定向，存储
+     <strong>
+      cookie
+     </strong>
+     看看
+     <strong>
+      content-type
+     </strong>
+     的值，根据不同的资源类型来用不同的解析方式
+    </p>
+    <p>
+     渲染详情可见
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D" title="2023年最全前端面试题考点HTML5+CSS3+JS_参宿7的博客-CSDN博客">
+      2023年最全前端面试题考点HTML5+CSS3+JS_参宿7的博客-CSDN博客
+     </a>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       断开 TCP
+      </strong>
+      连接：
+     </li>
+    </ul>
+    <p>
+     数据传输完成，正常情况下 TCP 将
+     <strong>
+      四次挥手断开连接
+     </strong>
+     。
+    </p>
+    <h3 id="OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCP%2FIP%E5%8D%8F%E8%AE%AE">
+     DNS
+    </h3>
+    <p>
+     因特网使用的命名系统，用来把人们方便记忆的主机名转换为机器方便处理的IP地址。
+    </p>
+    <p>
+     <strong>
+      DNS协议属于应用层协议，一般是运行在UDP协议之上，使用53端口。
+     </strong>
+    </p>
+    <p>
+     <img alt="" height="113" src="https://i-blog.csdnimg.cn/blog_migrate/bdc177bef890f1b699bb568d5b7e5ffe.png" width="204"/>
+     <img alt="" height="230" src="https://i-blog.csdnimg.cn/blog_migrate/295854838c0243cd3062aee8b5dc9e8b.png" width="347"/>
+    </p>
+    <h4 id="%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B%E2%AD%90%E2%AD%90">
+     解析过程⭐⭐
+    </h4>
+    <p>
+     1.当客户端需要域名解析时，通过本机的DNS客户端构造一个
+     <strong>
+      DNS请求报文
+     </strong>
+     ，以
+     <strong>
+      UDP数据报
+     </strong>
+     的形式发往
+     <strong>
+      本地域名服务器
+     </strong>
+     。
+    </p>
+    <p>
+     2.域名解析有两种方式：递归查询和迭代查询相结合的查询。
+    </p>
+    <p>
+     由于递归查询给根域名服务器的负载过大，所以一般不使用。
+    </p>
+    <p>
+     <img alt="" height="263" src="https://i-blog.csdnimg.cn/blog_migrate/d798c9f0d20e40a563c025d924e5091c.png" width="334"/>
+     <img alt="" height="261" src="https://i-blog.csdnimg.cn/blog_migrate/51293532813c38ae6b56fc470e9d8cb2.png" width="328"/>
+    </p>
+    <h3 id="OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCP%2FIP%E5%8D%8F%E8%AE%AE%E2%AD%90">
+     OSI模型和TCP/IP协议⭐
+    </h3>
+    <p>
+     <img alt="" height="236" src="https://i-blog.csdnimg.cn/blog_migrate/5a82108cf3fb00c9b0560954cb84f962.png" width="353"/>
+     ​
+     <img alt="" height="382" src="https://i-blog.csdnimg.cn/blog_migrate/a98c5564ca8d6e43f2ed3d69034b4277.png" width="647"/>
+     ​
+     <img alt="" height="230" src="https://i-blog.csdnimg.cn/blog_migrate/52b363ddc51317cc32f35fe4c29226ee.png" width="645"/>
+     ​
+    </p>
+    <h2>
+     HTTP协议
+    </h2>
+    <p>
+     HTTP：基于
+     <strong>
+      TCP/IP
+     </strong>
+     的关于数据如何在万维网中如何通信的协议。
+    </p>
+    <p>
+     <strong>
+      无状态的协议（对于事务处理没有记忆能力，每次客户端和服务端会话完成时，服务端不会保存任何会话信息
+     </strong>
+     ）
+    </p>
+    <h3 id="Http%E5%92%8CHttps%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89">
+     Http和Https区别⭐⭐⭐
+    </h3>
+    <p>
+     1.`HTTP` 的URL 以http:// 开头，而HTTPS 的URL 以https:// 开头
+     <br/>
+     2.``HTTP` 无法加密，而HTTPS 对传输的数据进行加密，
+     <strong>
+      安全
+     </strong>
+     <br/>
+     3.`HTTP` 标准
+     <strong>
+      端口
+     </strong>
+     是80 ，而 HTTPS 的标准端口是443
+     <br/>
+     4.`在OSI` 网络模型中，HTTP工作于
+     <strong>
+      应用层
+     </strong>
+     ，而HTTPS 的安全传输机制工作在
+     <strong>
+      传输层
+     </strong>
+    </p>
+    <h3 id="%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F">
+     常见的请求方式
+    </h3>
+    <ul>
+     <li>
+      <p>
+       POST：用于传输信息给服务器，功能与 GET 类似，但一般推荐使用 POST 方式；
+      </p>
+     </li>
+     <li>
+      <p>
+       GET： 用于请求访问已经被 URI（统一资源标识符）识别的资源，可以通过 URL 传参给服务器；
+      </p>
+     </li>
+     <li>
+      <p>
+       HEAD：，类似 GET
+       <strong>
+        获得报文首部
+       </strong>
+       ，只是
+       <strong>
+        不返回报文主体
+       </strong>
+       ，一般用于
+       <strong>
+        验证
+       </strong>
+       URI 是否有效；
+      </p>
+     </li>
+     <li>
+      <p>
+       PUT：
+       <strong>
+        传输文件
+       </strong>
+       ，报文主体中包含文件内容，保存到对应 URI 位置；
+      </p>
+     </li>
+     <li>
+      <p>
+       DELETE：与 PUT 相反，
+       <strong>
+        删除文件
+       </strong>
+       ，删除对应 URI 位置的文件；
+      </p>
+     </li>
+     <li>
+      <p>
+       OPTIONS：
+       <strong>
+        查询
+       </strong>
+       相应 URI 支持的 HTTP 方法。
+      </p>
+     </li>
+    </ul>
+    <h3 id="GET%E5%92%8CPOST%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E2%AD%90%E2%AD%90%E2%AD%90">
+     GET和POST发送请求
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+     ⭐⭐
+    </h3>
+    <p>
+     HTTP协议中的两种发送请求的方法。
+    </p>
+    <h4 id="%E5%BC%82%E5%90%8C">
+     异同
+    </h4>
+    <p>
+     <strong>
+      同
+     </strong>
+     ：GET和POST本质上就是
+     <strong>
+      TCP链接
+     </strong>
+    </p>
+    <p>
+     <strong>
+      异
+     </strong>
+     ：
+    </p>
+    <p>
+     <strong>
+      数据包数量
+     </strong>
+     ：GET产生
+     <strong>
+      一个TCP数据包
+     </strong>
+     ；POST产生
+     <strong>
+      两个TCP数据包
+     </strong>
+     。
+    </p>
+    <p>
+     （并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。）
+    </p>
+    <p>
+     <strong>
+      过程
+     </strong>
+     ：
+    </p>
+    <p>
+     对于GET方式的请求，浏览器会把
+     <strong>
+      http header和data一并发送出去
+     </strong>
+     ，服务器响应
+     <strong>
+      20
+     </strong>
+     0（返回数据）；
+    </p>
+    <p>
+     对于POST，浏览器
+     <strong>
+      先发送header
+     </strong>
+     ，服务器响应
+     <strong>
+      100 continue
+     </strong>
+     ，浏览器
+     <strong>
+      再发送data
+     </strong>
+     ，服务器响应
+     <strong>
+      200 ok
+     </strong>
+     （返回数据）。
+    </p>
+    <p>
+     <strong>
+      应用
+     </strong>
+     ：
+    </p>
+    <p>
+     在网络环境好的情况下，发一次包的时间和发两次包的
+     <strong>
+      时间差
+     </strong>
+     别基本可以无视。
+    </p>
+    <p>
+     在网络环境差的情况下，两次包的TCP在验证数据包
+     <strong>
+      完整性
+     </strong>
+     上，有非常大的优点。
+    </p>
+    <p>
+    </p>
+    <p>
+     因为GET一般用于
+     <strong>
+      查询
+     </strong>
+     信息，POST一般用于提交某种信息进行某些
+     <strong>
+      修改
+     </strong>
+     操作（私密性的信息如注册、登陆）
+    </p>
+    <p>
+     所以GET在浏览器
+     <strong>
+      回退不会再次请求
+     </strong>
+     ，POST会再次提交请求
+    </p>
+    <p>
+    </p>
+    <p>
+     因为GET在浏览器
+     <strong>
+      回退不会再次请求
+     </strong>
+     ，POST会再次提交请求
+    </p>
+    <p>
+     所以GET请求会被浏览器主动
+     <strong>
+      缓存
+     </strong>
+     ，POST不会，要手动设置
+     <br/>
+     GET请求
+     <strong>
+      参数
+     </strong>
+     会被完整保留在浏览器历史记录里，POST中的参数不会
+    </p>
+    <p>
+     因为 GET请求
+     <strong>
+      参数
+     </strong>
+     会被完整保留在浏览器历史记录里
+     <br/>
+     所以GET请求在URL中传送的参数是有
+     <strong>
+      长度限制
+     </strong>
+     的，而POST没有限制
+    </p>
+    <p>
+     因为GET参数通过
+     <strong>
+      URL传递
+     </strong>
+     ，POST放在
+     <strong>
+      Request body
+     </strong>
+     中
+     <br/>
+     所以GET参数暴露在
+     <strong>
+      地址栏
+     </strong>
+     不安全，POST放在报文内部更安全
+    </p>
+    <h4 id="POST%E7%9A%84content-type%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81">
+     POST的content-type数据编码
+    </h4>
+    <p>
+     Content-Type（MediaType），即是Internet Media Type，互联网媒体类型，也叫做MIME类型。（最初MIME是用于电子邮件系统的）
+    </p>
+    <p>
+     在HTTP协议消息头中，使用Content-Type来表示请求和响应中的媒体类型信息。
+    </p>
+    <p>
+     它用来告诉服务端如何
+     <strong>
+      处理请求
+     </strong>
+     的数据，以及告诉客户端（一般是浏览器）如何
+     <strong>
+      解析响应的数据
+     </strong>
+     ，比如显示图片，解析并展示html等等。
+    </p>
+    <p>
+     <strong>
+      Content-Type的格式
+     </strong>
+     ：type/subtype ;parameter
+    </p>
+    <ul>
+     <li>
+      type：主类型，任意的字符串，如text，如果是*号代表所有；
+     </li>
+     <li>
+      subtype：子类型，任意的字符串，如html，如果是*号代表所有，用“/”与主类型隔开；
+     </li>
+     <li>
+      parameter：可选参数，如
+      <strong>
+       charset
+      </strong>
+      ，boundary等。
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     POST 方法中对发送数据编码的方式，也就是 Content-Type 有四种方式，
+    </p>
+    <p>
+     application/x-www-form-urlencoded （
+     <strong>
+      URL
+     </strong>
+     encoded）（
+     <strong>
+      默认
+     </strong>
+     ）
+     <br/>
+     multipart/form-data （
+     <strong>
+      键值对
+     </strong>
+     型数据）
+     <br/>
+     application/json (
+     <strong>
+      Json
+     </strong>
+     类型数据)（最方便）
+     <br/>
+     text/xml （xml）（
+     <strong>
+      HTML
+     </strong>
+     文档标记）
+    </p>
+    <p>
+     <br/>
+     传统的
+     <strong>
+      ajax
+     </strong>
+     请求时候，Content-Type默认为"
+     <strong>
+      文本
+     </strong>
+     "类型。
+    </p>
+    <p>
+     传统的
+     <strong>
+      form
+     </strong>
+     提交的时候，Content-Type默认为"F
+     <strong>
+      orm
+     </strong>
+     "类型。
+    </p>
+    <p>
+     <strong>
+      axios
+     </strong>
+     传递
+     <strong>
+      字符串
+     </strong>
+     的时候，Content-Type默认为"
+     <strong>
+      Form
+     </strong>
+     "类型。
+    </p>
+    <p>
+     <strong>
+      axios
+     </strong>
+     传递
+     <strong>
+      对象
+     </strong>
+     的时候，Content-Type默认为"
+     <strong>
+      JSON
+     </strong>
+     "类型
+    </p>
+    <h3 id="http%E6%8A%A5%E6%96%87">
+     http报文
+    </h3>
+    <p>
+     响应报头
+     <br/>
+     常见的
+     <strong>
+      响应报头
+     </strong>
+     字段有:
+     <strong>
+      Server, Connection
+     </strong>
+     ...
+    </p>
+    <p>
+     <br/>
+     响应
+     <strong>
+      报文
+     </strong>
+     <br/>
+     你从服务器请求的
+     <strong>
+      HTML,CSS,JS
+     </strong>
+     文件就放在这里面
+    </p>
+    <h4 id="HTTP%E8%AF%B7%E6%B1%82(Request)%E6%8A%A5%E6%96%87">
+     HTTP请求(Request)报文
+    </h4>
+    <p>
+     报文格式为：请求行 – HTTP头(通用信息头，请求头，实体头) – 请求报文主体(
+     <strong>
+      只有POST才有报文主体
+     </strong>
+     )
+    </p>
+    <h4 id="HTTP%E5%93%8D%E5%BA%94(Response)%E6%8A%A5%E6%96%87">
+     HTTP响应(Response)报文
+    </h4>
+    <p>
+     报文格式为：状态行 – HTTP头(通用信息头，响应头，实体头) – 响应报文主体
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/732c3e292262874f8504e8f5af69dde5.png"/>
+     ​
+    </p>
+    <p>
+     <img alt="20210328150930116.png" src="https://i-blog.csdnimg.cn/blog_migrate/5eef411201e25c2c9377dd10081c8754.png"/>
+     ​
+    </p>
+    <h3 id="http%E7%8A%B6%E6%80%81%E7%A0%81">
+     http版本⭐⭐⭐
+    </h3>
+    <p>
+     1.0-&gt;1.1（一次传输多个文件，默认
+     <strong>
+      Connection: keep-alive
+     </strong>
+     ）
+    </p>
+    <p>
+     http1.x
+     <strong>
+      解析基于文本
+     </strong>
+     ，
+    </p>
+    <p>
+     http2.0采用
+     <strong>
+      二进制格式
+     </strong>
+     ，新增特性
+     <strong>
+      多路复用、header压缩、服务端推送(静态html资源)
+     </strong>
+    </p>
+    <h3 id="http%E7%8A%B6%E6%80%81%E7%A0%81%E2%AD%90%E2%AD%90%E2%AD%90">
+     http状态码⭐⭐⭐
+    </h3>
+    <pre><code class="language-javascript">状态码是由3位数组成，第一个数字定义了响应的类别，且有五种可能取值:
+    1xx Informational（信息状态码）      接受请求正在处理
+    2xx Success（成功状态码）            请求正常处理完毕
+
+    3xx Redirection（重定向状态码）      需要附加操作已完成请求
+
+    4xx Client Error（客户端错误状态码）  服务器无法处理请求
+    5xx Server Error（服务器错误状态码）  服务器处理请求出错
+
+常见状态码：
+
+    200 响应成功
+    204 返回无内容
+
+    301永久重定向  （请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。）
+    302临时重定向（服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。）
+    304资源缓存（自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。）
+
+    400 错误请求（请求格式错误，服务器不理解请求的语法。）
+    422 无法处理（请求格式正确，但是由于含有语义错误，无法响应）
+    401 未授权（请求要求身份验证。）
+    403服务器禁止访问
+    404服务器找不到请求的网页
+    
+
+    500 502服务器内部错误
+    504 服务器繁忙</code></pre>
+    <h3 id="TCP%E5%92%8CUDP">
+     UDP⭐
+    </h3>
+    <p>
+     应用层协议DNS基于UDP
+    </p>
+    <ul>
+     <li>
+      `TCP`向上层提供面向
+      <strong>
+       连接
+      </strong>
+      的
+      <strong>
+       可靠
+      </strong>
+      服务 ，`UDP`向上层提供无连接不可靠服务。
+     </li>
+     <li>
+      `TCP`准确（文件传输），`UDP`
+      <strong>
+       实时（
+      </strong>
+      视频会议、直播
+      <strong>
+       ）
+      </strong>
+     </li>
+     <li>
+      `TCP`仅支持
+      <strong>
+       一对一
+      </strong>
+      ，`UDP`支持一对一，一对多，多对一和多对多交互通信
+     </li>
+     <li>
+      `TCP`面向
+      <strong>
+       字节流
+      </strong>
+      传输，`UDP`面向
+      <strong>
+       报文
+      </strong>
+      传输
+     </li>
+    </ul>
+    <h3 id="TCP%E2%AD%90%E2%AD%90%E2%AD%90">
+     TCP⭐⭐⭐
+    </h3>
+    <h4 id="keep-alive%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5">
+     <strong>
+      三次握手
+     </strong>
+    </h4>
+    <p>
+     <img alt="" height="432" src="https://i-blog.csdnimg.cn/blog_migrate/0f8b49389ee660b0f33cf57e430d6b01.png" width="844"/>
+    </p>
+    <h4 id="%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B">
+     四次挥手
+    </h4>
+    <p>
+     <img alt="" height="882" src="https://i-blog.csdnimg.cn/blog_migrate/a1d125402a639b52abb5d0f7852618a3.png" width="1200"/>
+    </p>
+    <p>
+     TIME-WAIT：2 MSL (Maximum segment lifetime) 最长
+     <em>
+      报文
+     </em>
+     最大生存时间
+    </p>
+    <h4 id="%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6">
+     流量控制（
+     <strong>
+      滑动窗口机制
+     </strong>
+     ）
+    </h4>
+    <p>
+     让发送方的发送速率不要太快，要让接收方来得及接收。
+    </p>
+    <p>
+     还可接收的窗口是 rwnd = 400 ”(receiver window) 。
+    </p>
+    <p>
+     发送方的发送窗口不能超过接收方给出的接收窗口的数值。TCP的窗口单位是字节，不是报文段。
+    </p>
+    <p>
+     <img alt="" height="415" src="https://i-blog.csdnimg.cn/blog_migrate/484df736933c35f387da1acae3d41ebc.png" width="777"/>
+    </p>
+    <h4>
+     <strong>
+      拥塞控制
+     </strong>
+    </h4>
+    <p>
+     拥塞：资源供不应求
+    </p>
+    <ul>
+     <li>
+      慢开始、拥塞避免
+     </li>
+     <li>
+      快重传、快恢复
+     </li>
+    </ul>
+    <p>
+     <img alt="" height="306" src="https://i-blog.csdnimg.cn/blog_migrate/c4167847bd723914f247e902188368b2.png" width="772"/>
+    </p>
+    <h4>
+     <strong>
+      keep-alive持久连接
+     </strong>
+    </h4>
+    <p>
+     为了能够提升效率，在 HTTP
+     <strong>
+      1.1
+     </strong>
+     规范中把 Connection 头写入了标准，并且默认启用。
+    </p>
+    <p>
+     浏览器 或 服务器在
+     <strong>
+      HTTP头部
+     </strong>
+     加上
+     <strong>
+      Connection: keep-alive
+     </strong>
+     ，TCP 就会一直保持连接。
+    </p>
+    <p>
+     它会在隔开一段时间之后
+     <strong>
+      发送几次没有数据
+     </strong>
+     内容的网络请求来判断当前连接是不是应该继续保留。
+    </p>
+    <p>
+     可能会造成大量的无用途连接，白白占用系统
+     <strong>
+      资源
+     </strong>
+    </p>
+    <h3 id="*%E7%B2%98%E5%8C%85">
+     *粘包
+    </h3>
+    <p>
+     在流传输中出现，UDP不会出现粘包，因为它有
+     <strong>
+      消息边界
+     </strong>
+    </p>
+    <p>
+     TCP粘包是指发送方发送的若干包数据到接收方接收时粘成一包，从接收缓冲区看，后一包数据的头紧接着前一包数据的尾。
+    </p>
+    <p>
+     <strong>
+      情况
+     </strong>
+    </p>
+    <p>
+     粘包情况有两种，一种是
+     <code>
+      粘在一起的包都是完整的数据包
+     </code>
+     ，另一种情况是
+     <code>
+      粘在一起的包有不完整的包
+     </code>
+     。
+    </p>
+    <p>
+     <strong>
+      措施
+     </strong>
+    </p>
+    <p>
+     （1）对于
+     <strong>
+      发送方
+     </strong>
+     引起的粘包现象，用户可通过编程设置来避免，
+     <code>
+      TCP提供了
+      <strong>
+       强制数据立即传送
+      </strong>
+      的操作指令push
+     </code>
+     ，TCP软件收到该操作指令后，就立即将本段数据发送出去，而不必等待发送缓冲区满；
+    </p>
+    <p>
+     （2）对于
+     <strong>
+      接收方
+     </strong>
+     引起的粘包，则可通过优化程序设计、精简接收进程工作量、
+     <code>
+      提高接收进程优先级等措施
+     </code>
+     ，使其
+     <strong>
+      及时接收
+     </strong>
+     数据，从而尽量避免出现粘包现象；
+    </p>
+    <p>
+     （3）由接收方控制，将一包数据按结构字段，人为控制分多次接收，然后合并，通过这种手段来避免粘包。
+     <strong>
+      <code>
+       分包多发
+      </code>
+     </strong>
+     。
+    </p>
+    <p>
+     <strong>
+      问题
+     </strong>
+    </p>
+    <p>
+     （1)设置方法虽然可以避免发送方引起的粘包，但它关闭了优化算法，降低了网络发送效率，影响应用程序的
+     <strong>
+      性能
+     </strong>
+     ，一般不建议使用。
+    </p>
+    <p>
+     （2）只能减少出现粘包的可能性，但并
+     <strong>
+      不能完全避免
+     </strong>
+     粘包，当发送频率较高时，或由于网络突发可能使某个时间段数据包到达接收方较快，接收方还是有可能来不及接收，从而导致粘包。
+    </p>
+    <p>
+     （3）避免了粘包，但应用程序的
+     <strong>
+      效率较低
+     </strong>
+     ，对实时应用的场合不适合。
+    </p>
+    <p>
+     <strong>
+      总结
+     </strong>
+    </p>
+    <p>
+     接收方创建一
+     <strong>
+      预处理线程
+     </strong>
+     ，对接收到的数据包进行预处理，将粘连的包分开。实验证明这种方法是高效可行的。
+    </p>
+    <h2 id="%E7%BC%93%E5%AD%98">
+     缓存
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+    </h2>
+    <h3 id="%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F">
+     存储方式
+    </h3>
+    <p>
+     白话：
+    </p>
+    <p>
+     强制缓存就是根据
+     <strong>
+      headers
+     </strong>
+     中的信息
+     <strong>
+      (expires,cache-control)
+     </strong>
+     强行从本地拿缓存，
+    </p>
+    <p>
+     拿不到再和服务器协商拿缓存，
+    </p>
+    <p>
+     如果服务器返回304
+     <strong>
+      （缓存无更新）
+     </strong>
+     ，就又从本地拿缓存。
+    </p>
+    <p>
+     否则，将从服务器那拿到的新资源存入浏览器
+    </p>
+    <h4 id="%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98">
+     强制缓存
+    </h4>
+    <p>
+     浏览器在加载资源的时候，会根据
+     <strong>
+      本地缓存
+     </strong>
+     中的
+     <strong>
+      headers
+     </strong>
+     中的信息
+     <strong>
+      (expires,cache-control)
+     </strong>
+     是否要强缓存，如果命中的话，则会使用缓存中的资源，否则继续发送请求。
+    </p>
+    <p>
+     其中Cache-Control优先级比Expires高。
+    </p>
+    <p>
+     Exprires的值为服务端返回的数据到期时间。当再次请求时的请求时间小于返回的此时间，则直接使用缓存数据。
+    </p>
+    <p>
+     但由于服务端时间和客户端时间可能有
+     <strong>
+      误差
+     </strong>
+     ，这也将导致缓存命中的误差，另一方面，Expires是
+     <strong>
+      HTTP1.0
+     </strong>
+     的产物，故现在大多数使用Cache-Control替代。
+    </p>
+    <h4 id="%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98">
+     协商缓存
+    </h4>
+    <p>
+     协商缓存就是强制缓存失效后，浏览器携带
+     <strong>
+      缓存标识
+     </strong>
+     向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程
+    </p>
+    <ol>
+     <li>
+      协商缓存生效，返回
+      <strong>
+       304（缓存无更新）
+      </strong>
+      ，如下
+      <br/>
+      <img alt="2." src="https://i-blog.csdnimg.cn/blog_migrate/c2802d90a26b81c286b7b507c3cd0bc7.png"/>
+      ​
+     </li>
+     <li>
+      协商缓存失效，返回
+      <strong>
+       200
+      </strong>
+      和请求结果结果，如下
+     </li>
+    </ol>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/5b88166218c0297dc2e463d3b15f3c13.png"/>
+     ​
+    </p>
+    <p>
+     强制缓存优先于协商缓存进行
+    </p>
+    <h3 id="%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8">
+     本地存储
+    </h3>
+    <h4 id="cookie">
+     <a href="https://blog.csdn.net/chen13333336677/article/details/100939030?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167767159116800222885492%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167767159116800222885492&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-100939030-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=cookie&amp;spm=1018.2226.3001.4187" title="cookie">
+      cookie
+     </a>
+    </h4>
+    <p>
+     浏览器
+     <strong>
+      本地保存数据
+     </strong>
+     的一种方案，且会在
+     <strong>
+      每次请求中带上该字段
+     </strong>
+     。
+    </p>
+    <p>
+     cookie 最常见的用法是作为
+     <strong>
+      用户登录凭证
+     </strong>
+     ，赋予原本无状态HTTP 协议以一种状态
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" height="316" src="https://i-blog.csdnimg.cn/blog_migrate/66d0f966ce301af8613fa51d97912f89.png" width="956"/>
+     ​​
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/fe_watermelon/article/details/124504595" title="Cookie属性">
+      Cookie属性
+     </a>
+     ：
+    </p>
+    <blockquote>
+     <p>
+      必选属性：Name Value
+     </p>
+     <p>
+      可选属性：
+      <strong>
+       有效期、使用范围、安全性
+      </strong>
+      的可选属性组成
+     </p>
+     <p>
+      <strong>
+       Cookie 的作用域是和 domain（域名或 ip）绑定的，端口无关
+      </strong>
+      。
+     </p>
+     <p>
+      <strong>
+       cookie 是不可跨域的：
+      </strong>
+      每个 cookie 都会绑定单一的域名，无法在别的域名下获取使用，
+      <strong>
+       一级域名和二级域名之间是允许共享使用的
+      </strong>
+      （
+      <strong>
+       靠的是 domain）
+      </strong>
+      。
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      Expires/Max-Age属性：有两种存储类型的Cookie：
+      <strong>
+       会话性（默认）
+      </strong>
+      与
+      <strong>
+       持久性
+      </strong>
+      。
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      <strong>
+       会话性
+      </strong>
+      cookie仅保存在
+      <a href="https://baike.baidu.com/item/%E5%AE%A2%E6%88%B7%E7%AB%AF/101081?fromModule=lemma_inlink" rel="nofollow" title="客户端">
+       客户端
+      </a>
+      内存中，并在用户
+      <strong>
+       关闭 整个 浏览器时失效
+      </strong>
+      ；
+     </p>
+     <p>
+      <strong>
+       持久性
+      </strong>
+      Cookie会保存在用户的
+      <strong>
+       硬盘
+      </strong>
+      中，直至
+      <strong>
+       生存期
+      </strong>
+      到或用户直接在网页中单击“
+      <strong>
+       注销
+      </strong>
+      ”等按钮结束会话时才会失效
+     </p>
+     <p>
+     </p>
+     <p>
+      Max-Age：失效时间（单位秒）
+     </p>
+     <p>
+      为
+      <strong>
+       负数
+      </strong>
+      ，该 cookie 为
+      <strong>
+       临时 cookie
+      </strong>
+      ，
+      <strong>
+       关闭浏览器即失效，
+      </strong>
+     </p>
+     <p>
+      如果为
+      <strong>
+       0
+      </strong>
+      ，表示
+      <strong>
+       删除
+      </strong>
+      该 cookie 。
+      <strong>
+       默认为 -1
+      </strong>
+      。
+     </p>
+     <p>
+      如果 Max-Age 和 Expires 同时存在，以
+      <strong>
+       Max-Age 为准
+      </strong>
+      。
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      Path属性：
+      <strong>
+       指定 cookie 在哪个路径（路由）下生效，默认是 '/'
+      </strong>
+      。
+      <br/>
+      如果设置为
+      <code>
+       /abc
+      </code>
+      ，则只有
+      <code>
+       /abc
+      </code>
+      下的路由可以访问到该 cookie，如：
+      <code>
+       /abc/read
+      </code>
+     </li>
+     <li>
+      Domain属性：指定了可以访问该 Cookie 的
+      <strong>
+       Web 域，默认
+      </strong>
+      是
+      <strong>
+       当前域名
+      </strong>
+     </li>
+     <li>
+      Secure属性：指定是否使用
+      <a href="https://baike.baidu.com/item/HTTPS/285356?fromModule=lemma_inlink" rel="nofollow" title="HTTPS">
+       HTTPS
+      </a>
+      安全协议发送Cookie。默认为false。
+      <strong>
+       （
+      </strong>
+      安全协议有 HTTPS，SSL等，在网络上传输数据之前先将数据加密。
+      <strong>
+       ）
+      </strong>
+     </li>
+     <li>
+      <strong>
+       httpOnly
+      </strong>
+      属性：
+      <strong>
+       无法通过 JS 脚本 读取到该 cookie 的信息，但还是能通过 Application 中手动修改 cookie，所以只是在一定程度上可以防止 XSS 攻击，不是绝对的安全
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      HTTP 响应报文
+     </strong>
+     通过
+     <strong>
+      Set-Cookie 头字段
+     </strong>
+     给浏览器给当前网站设置 cookie：
+    </p>
+    <pre><code class="language-javascript">HTTP/1.1 200 OK
+Set-Cookie: token=abcd; Max-Age=6000; Path=/; Expires=Thu, 28 Apr 2022 16:31:36 GMT; HttpOnly
+            name=value;           (s);      ;        &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
+
+</code></pre>
+    <p>
+     Cookie的
+     <strong>
+      安全规范
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       不放重要数据
+      </strong>
+      ，重要数据放Session。
+     </li>
+     <li>
+      Cookie 数据加
+      <strong>
+       签名
+      </strong>
+      。对 Cookie 数据添加签名，这样 Cookie 如果被篡改了，服务端使用的时候通过校验签名就能发现了。
+     </li>
+     <li>
+      Cookie数据
+      <strong>
+       加密
+      </strong>
+      。加密后数据就很难篡改了，但是加解密过程会带来
+      <strong>
+       性能损耗
+      </strong>
+      ，
+     </li>
+    </ul>
+    <h4 id="session">
+     session
+    </h4>
+    <p>
+     浏览器端第一次发送请求到服务器端，服务器端创建一个Session，同时会创建一个特殊的Cookie（name为
+     <strong>
+      JSESSIONID
+     </strong>
+     的
+     <strong>
+      固定值
+     </strong>
+     ，value为session对象的ID）（
+     <strong>
+      JSESSIONID：
+     </strong>
+     j session id）
+    </p>
+    <p>
+     服务器端根据该Cookie查询Session对象，从而区分不同用户。
+    </p>
+    <p>
+     <strong>
+      session 是基于 cookie 实现的，
+     </strong>
+    </p>
+    <p>
+     <strong>
+      session 存储在服务器端，
+     </strong>
+    </p>
+    <p>
+     <strong>
+      sessionId 会被存储到客户端的cookie 中，是连接 Cookie 和 Session 的一道桥梁
+     </strong>
+    </p>
+    <h4 id="%E5%85%B1%E5%90%8C%E7%82%B9">
+     <strong>
+      共同点
+     </strong>
+    </h4>
+    <p>
+     cookie和
+     <a href="https://so.csdn.net/so/search?q=session&amp;spm=1001.2101.3001.7020" title="session">
+      session
+     </a>
+     都是用来跟踪浏览器
+     <strong>
+      用户身份
+     </strong>
+     的
+     <strong>
+      会话方式
+     </strong>
+     。
+    </p>
+    <p>
+     用于浏览器中存储数据的
+    </p>
+    <p id="%E5%8C%BA%E5%88%AB">
+     <strong>
+      浏览器的本地存储主要分为
+      <code>
+       Cookie、WebStorage和IndexDB
+      </code>
+      （
+     </strong>
+     运行在浏览器的
+     <strong>
+      非关系型数据库）
+     </strong>
+    </p>
+    <p>
+     <strong>
+      其中
+      <code>
+       WebStorage
+      </code>
+      又可以分为
+      <code>
+       localStorage和sessionStorage
+      </code>
+      。
+     </strong>
+    </p>
+    <h4 id="Cookie%E3%80%81localStorage%E5%92%8CsessionStorage">
+     <strong>
+      <code>
+       Cookie、
+      </code>
+      <code>
+       localStorage和sessionStorage
+      </code>
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      同:都是保存在浏览器端、且同源的
+     </strong>
+    </p>
+    <p>
+     <strong>
+      异：
+     </strong>
+    </p>
+    <p>
+     <code>
+      cookie
+     </code>
+     在浏览器和服务器间
+     <strong>
+      来回传递
+     </strong>
+    </p>
+    <p>
+     <strong>
+      存储地
+     </strong>
+    </p>
+    <ul>
+     <li>
+      cookie数据保存在
+      <strong>
+       客户端
+      </strong>
+      ，session数据保存在
+      <strong>
+       服务端，session更安全
+      </strong>
+     </li>
+     <li>
+      sessionStorage和localStorage不会把数据发给服务器，仅在本地保存
+     </li>
+    </ul>
+    <p>
+     <strong>
+      存取值的类型
+     </strong>
+    </p>
+    <ul>
+     <li>
+      Cookie 只支持存字符串数据，想要设置其他类型的数据，需要将其转换成字符串，
+     </li>
+     <li>
+      Session 可以存任意数据类型。
+     </li>
+    </ul>
+    <p>
+     <strong>
+      存储大小
+     </strong>
+    </p>
+    <ul>
+     <li>
+      单个 Cookie 保存的数据不能超过 4K，
+     </li>
+     <li>
+      Session 可存储数据远高于 Cookie，但是当访问量过多，会占用过多的服务器资源。
+     </li>
+    </ul>
+    <p>
+     <strong>
+      有效期
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        <code>
+         localStorage
+        </code>
+       </strong>
+       ：
+       <strong>
+        始终有效
+       </strong>
+       ，窗口或浏览器关闭也一直保存，本地存储，因此用作持久数据；
+      </p>
+     </li>
+     <li>
+      <p>
+       cookie的有效期是可以设置的，默认情况下是
+       <strong>
+        关闭浏览器
+       </strong>
+       后失效。
+      </p>
+     </li>
+     <li>
+      <p>
+       sessionStorage的有效期是仅存在于当前会话，
+       <strong>
+        关闭当前会话或者浏览器
+       </strong>
+       后就会失效。
+      </p>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      由于关闭浏览器不会导致 session 被删除，迫使服务器为 session 设置了一个失效时间，
+     </strong>
+    </p>
+    <p>
+     <strong>
+      当距离客户端上一次使用 session 的时间超过这个失效时间时，
+     </strong>
+    </p>
+    <p>
+     <strong>
+      服务器就认为客户端已经停止了活动，才会把 session 删除以节省存储空间
+     </strong>
+    </p>
+    <p>
+     <strong>
+      作用域不同
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        <code>
+         sessionStorage
+        </code>
+       </strong>
+       ：不在
+       <strong>
+        不同的浏览器窗口
+       </strong>
+       中共享，即使是
+       <strong>
+        同一个页面
+       </strong>
+       ；
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        <code>
+         cookie，localstorage
+        </code>
+       </strong>
+       ：在所有同源窗口中都共享；也就是说只要
+       <strong>
+        浏览器不关闭
+       </strong>
+       ，数据仍在
+      </p>
+     </li>
+    </ul>
+    <h3 id="%E5%AD%98%E5%82%A8%E5%9C%B0">
+     存储地
+    </h3>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/34422b26cd2151db1600fb41a40dedb4.png"/>
+     ​状态码为灰色的请求则代表使用了强制缓存，请求对应的Size值则代表该缓存存放的位置，分别为from memory cache 和 from disk cache。
+    </p>
+    <ul>
+     <li>
+      浏览器读取缓存的顺序为memory –&gt; disk。
+     </li>
+     <li>
+      访问URL–&gt; 200 –&gt; 关闭标签页 –&gt; 重新打开URL–&gt; 200(from disk cache) –&gt; 刷新 –&gt; 200(from memory cache)
+     </li>
+    </ul>
+    <h4 id="%E5%86%85%E5%AD%98%E7%BC%93%E5%AD%98(from%20memory%20cache)">
+     内存缓存(from memory cache)
+    </h4>
+    <ul>
+     <li>
+      快速读取：内存缓存会将
+      <strong>
+       编译解析后
+      </strong>
+      的文件，直接存入该进程的内存中，占据该进程一定的内存资源，以方便下次运行使用时的快速读取。
+     </li>
+     <li>
+      时效性：一旦该
+      <strong>
+       进程关闭
+      </strong>
+      ，则该进程的内存则会清空。
+     </li>
+    </ul>
+    <h4 id="%E7%A1%AC%E7%9B%98%E7%BC%93%E5%AD%98(from%20disk%20cache)">
+     硬盘缓存(from disk cache)
+    </h4>
+    <p>
+     <strong>
+      重新解析
+     </strong>
+     该缓存内容，读取复杂，速度比内存缓存慢。
+    </p>
+    <h4 id="%E5%BA%94%E7%94%A8">
+     应用
+    </h4>
+    <p>
+     <strong>
+      js和图片
+     </strong>
+     等文件解析执行后直接存入内存缓存中，那么当刷新页面时只需直接从内存缓存中读取；
+    </p>
+    <p>
+     <strong>
+      css
+     </strong>
+     文件则会存入硬盘文件中，所以每次
+     <strong>
+      渲染页面
+     </strong>
+     都需要从硬盘读取缓存(from disk cache)。
+     <br/>
+     <a href="https://blog.csdn.net/qq_39903567/article/details/115281234?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167817014216800215035961%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167817014216800215035961&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115281234-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=http%E7%BC%93%E5%AD%98&amp;spm=1018.2226.3001.4187" title="前端基础-浏览器缓存/HTTP缓存机制(面试常考)_浏览器缓存机制 面试_LYFlied的博客-CSDN博客">
+      前端基础-浏览器缓存/HTTP缓存机制(面试常考)_浏览器缓存机制 面试_LYFlied的博客-CSDN博客
+     </a>
+    </p>
+    <h2 id="Token%E3%80%81JWT">
+     <a href="https://juejin.cn/post/6844904034181070861" rel="nofollow" title="Token、JWT">
+      Token、JWT
+     </a>
+    </h2>
+    <h3 id="web%E5%AE%89%E5%85%A8%E5%8F%8A%E9%98%B2%E6%8A%A4">
+     认证（Authentication）
+    </h3>
+    <p>
+     <strong>
+      针对用户，验证当前用户的身份
+     </strong>
+    </p>
+    <p>
+     互联网中的认证：
+    </p>
+    <ul>
+     <li>
+      用户名密码登录
+     </li>
+     <li>
+      手机号接收验证码
+     </li>
+    </ul>
+    <h3 id="%E6%8E%88%E6%9D%83%EF%BC%88Authorization%EF%BC%89">
+     授权（Authorization）
+    </h3>
+    <p>
+     <strong>
+      针对第三方应用，用户授予第三方应用访问该用户某些资源的权限
+     </strong>
+    </p>
+    <ul>
+     <li>
+      你在安装手机应用的时候，APP 会询问是否允许授予权限（访问相册、地理位置等权限）
+     </li>
+     <li>
+      你在访问微信小程序时，当登录时，小程序会询问是否允许授予权限（获取昵称、头像、地区、性别等个人信息）
+     </li>
+    </ul>
+    <p>
+     实现授权的方式有：cookie、session、token、OAuth
+    </p>
+    <h3 id="%E5%87%AD%E8%AF%81%EF%BC%88Credentials%EF%BC%89">
+     凭证（Credentials）
+    </h3>
+    <p>
+     <strong>
+      实现认证和授权的前提
+     </strong>
+     是需要一种
+     <strong>
+      媒介（证书）
+     </strong>
+     来标记访问者的身份
+    </p>
+    <p>
+     当用户登录成功后，服务器会给该用户使用的浏览器颁发一个令牌（token），这个令牌用来表明你的身份，每次浏览器发送请求时会带上这个令牌
+    </p>
+    <h3 id="Token%EF%BC%88%E4%BB%A4%E7%89%8C%EF%BC%89">
+     Token（令牌）
+    </h3>
+    <h4 id="Acesss%20Token">
+     Acesss Token
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       访问资源接口（API）时所需要的资源凭证
+      </strong>
+     </li>
+     <li>
+      <strong>
+       简单 token 的组成：
+      </strong>
+      uid(用户唯一的身份标识)、time(当前时间的时间戳)、sign（签名，token 的前几位以哈希算法压缩成的一定长度的十六进制字符串）
+     </li>
+     <li>
+      <strong>
+       特点：
+      </strong>
+      <ul>
+       <li>
+        <strong>
+         服务端无状态化、可扩展性好
+        </strong>
+       </li>
+       <li>
+        <strong>
+         支持移动端设备
+        </strong>
+       </li>
+       <li>
+        安全
+       </li>
+       <li>
+        支持跨程序调用
+       </li>
+      </ul>
+     </li>
+     <li>
+      <strong>
+       token 的身份验证流程：
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/a48a1fdf73540e9047105ba2d0189a94.png"/>
+     ​
+    </p>
+    <h4 id="%E5%9F%BA%E4%BA%8Etoken%E7%9A%84%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E2%AD%90%E2%AD%90">
+     基于token的登录流程
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <p>
+     1. 客户端使用用户名跟密码
+     <strong>
+      请求
+     </strong>
+     登录
+    </p>
+    <p>
+     2. 服务端收到请求，去
+     <strong>
+      验证
+     </strong>
+     用户名与密码
+    </p>
+    <p>
+     3. 验证成功后，服务端会签发一个
+     <strong>
+      Token
+     </strong>
+     ，再把这个 Token 发送给客户端
+    </p>
+    <p>
+     4. 客户端收到 Token 以后可以把它存储起来，比如放在
+     <strong>
+      Cookie
+     </strong>
+     里或者
+     <strong>
+     </strong>
+     <strong>
+      Local Storage
+     </strong>
+     <strong>
+     </strong>
+     里
+    </p>
+    <p>
+     5. 客户端每次向服务端请求资源的时候需要带着服务端签发的 Token
+    </p>
+    <p>
+     6. 服务端收到请求，然后去验证客户端请求里面带着的 Token，如果验证成功，就向客户端返回请求的数据
+    </p>
+    <ul>
+     <li>
+      <strong>
+       每一次请求都需要携带 token，
+      </strong>
+      需要把
+      <strong>
+       token
+      </strong>
+      放到
+      <strong>
+       HTTP 的 Header 里
+      </strong>
+     </li>
+     <li>
+      <strong>
+       基于 token 的用户认证是一种服务端无状态的认证方式，服务端不用存放 token 数据。用解析 token 的计算时间换取 session 的存储空间，从而减轻服务器的压力，减少频繁的查询数据库
+      </strong>
+     </li>
+     <li>
+      <strong>
+       token 完全由应用管理，所以它可以避开同源策略
+      </strong>
+     </li>
+    </ul>
+    <h4 id="Refresh%20Token">
+     Refresh Token
+    </h4>
+    <p>
+     refresh token 是专用于
+     <strong>
+      刷新 access token
+     </strong>
+     的 token。
+    </p>
+    <p>
+     如果没有 refresh token，也可以刷新 access token，但每次刷新都要用户输入登录用户名与密码，会很麻烦。
+    </p>
+    <p>
+     有了 refresh token，可以减少这个麻烦，客户端直接用 refresh token 去更新 access token，无需用户进行额外的操作。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/473695c02a857fe42ebc88fe1fb2c3a3.png"/>
+     ​
+    </p>
+    <p>
+    </p>
+    <ul>
+     <li>
+      Access Token 的有效期比较短，当 Acesss Token 由于过期而失效时，使用 Refresh Token 就可以获取到新的 Token，如果 Refresh Token 也失效了，用户就只能
+      <strong>
+       重新登录
+      </strong>
+      了。
+     </li>
+     <li>
+      <strong>
+       Refresh Token
+      </strong>
+      及
+      <strong>
+       过期时间
+      </strong>
+      是存储在
+      <strong>
+       服务器的数据库
+      </strong>
+      中，只有在
+      <strong>
+       申请新的 Acesss Token
+      </strong>
+      时才会验证，不会对业务接口响应时间造成影响，也不需要向 Session 一样一直保持在内存中以应对大量的请求。
+     </li>
+    </ul>
+    <h3 id="Token%20%E5%92%8C%20Session%20%E7%9A%84%E5%8C%BA%E5%88%AB">
+     Token 和 Session 的区别
+    </h3>
+    <ul>
+     <li>
+      Session 是一种
+      <strong>
+       记录服务器和客户端会话状态的机制，使服务端有状态化，可以记录会话信息
+      </strong>
+      。
+     </li>
+     <li>
+      Token 是
+      <strong>
+       令牌
+      </strong>
+      ，
+      <strong>
+       访问资源接口（API）时所需要的资源凭证
+      </strong>
+      。Token
+      <strong>
+       使服务端无状态化，不会存储会话信息。
+      </strong>
+     </li>
+     <li>
+      作为身份认证 Token 安全性比 Session 好，因为每一个请求都有
+      <strong>
+       签名
+      </strong>
+      还能
+      <strong>
+       防止监听
+      </strong>
+      以及
+      <strong>
+       重放攻击
+      </strong>
+      ，
+     </li>
+     <li>
+      Session 就必须依赖链路层来保障通讯安全了。
+      <strong>
+       如果你需要实现有状态的会话，仍然可以增加 Session 来在服务器端保存一些状态。
+      </strong>
+     </li>
+     <li>
+      Session 认证只是简单的把 User 信息存储到 Session 里，因为 SessionID 的不可预测性，暂且认为是安全的。
+     </li>
+     <li>
+      Token ，如果指的是 OAuth Token 或类似的机制的话，提供的是 认证 和 授权 ，认证是针对用户，授权是针对 App 。其目的是让某 App 有权利访问某用户的信息。这里的 Token 是唯一的。不可以转移到其它 App上，也不可以转到其它用户上。
+     </li>
+     <li>
+      Session 只提供一种简单的认证，即只要有此 SessionID ，即认为有此 User 的全部权利。是需要严格保密的，这个数据应该只保存在站方，
+      <strong>
+       不应该共享给其它网站或者第三方 App
+      </strong>
+      。所以简单来说：
+      <strong>
+       如果你的用户数据可能需要和第三方共享，或者允许第三方调用 API 接口，用 Token 。如果永远只是自己的网站，自己的 App，用什么就无所谓了。
+      </strong>
+     </li>
+     <li>
+      <strong>
+       移动端对 cookie 的支持不是很好，而 session 需要基于 cookie 实现，所以移动端常用的是 token
+      </strong>
+     </li>
+    </ul>
+    <h3 id="JSON%20Web%20Token%EF%BC%88JWT%EF%BC%89%E2%AD%90">
+     <a href="https://blog.csdn.net/weixin_45070175/article/details/118559272?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168065837616800215056160%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168065837616800215056160&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-118559272-null-null.142%5Ev81%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=jwt&amp;spm=1018.2226.3001.4187" title="JSON Web Token（JWT）">
+      JSON Web Token（JWT）
+     </a>
+     ⭐
+    </h3>
+    <p>
+     <strong>
+      跨域认证
+     </strong>
+     解决方案。是一种
+     <strong>
+      认证授权机制
+     </strong>
+     。
+    </p>
+    <p>
+     因为 JWT 通常使用 localstorage （也可以使用 Cookie），所以你可以使用任何域名提供你的 API 服务而不需要担心跨域资源共享问题（CORS）
+    </p>
+    <p>
+     JWT 默认是不加密，但也是可以加密的。生成原始 Token 以后，可以用密钥再加密一次。
+    </p>
+    <h4 id="%E5%86%85%E5%AE%B9">
+     内容
+    </h4>
+    <p>
+     1.Header
+     <br/>
+     JWT头是一个描述JWT元数据的JSON对象，alg属性表示签名使用的算法，默认为HMAC SHA256（写为HS256）；typ属性表示令牌的类型，JWT令牌统一写为JWT。最后，使用Base64 URL算法将上述JSON对象转换为字符串保存
+    </p>
+    <p>
+     {
+     <!-- -->
+     <br/>
+     "alg": "HS256",
+     <br/>
+     "typ": "JWT"
+     <br/>
+     }
+     <br/>
+     2.Payload
+     <br/>
+     有效载荷部分，是JWT的
+     <strong>
+      主体
+     </strong>
+     内容部分，也是一个
+     <strong>
+      JSON
+     </strong>
+     对象，包含需要传递的数据。 JWT指定七个默认字段供选择
+    </p>
+    <blockquote>
+     <p>
+      iss：发行人
+      <br/>
+      exp：到期时间
+      <br/>
+      sub：主题
+      <br/>
+      aud：用户
+      <br/>
+      nbf：在此之前不可用
+      <br/>
+      iat：发布时间
+      <br/>
+      jti：JWT ID用于标识该JWT
+     </p>
+    </blockquote>
+    <h4 id="%E6%96%B9%E5%BC%8F">
+     方式
+    </h4>
+    <p>
+     当用户希望访问一个受保护的路由或者资源的时候，可以把它放在 Cookie 里面自动发送，但是这样不能跨域，
+    </p>
+    <p>
+     所以更好的做法是放在
+     <strong>
+      HTTP 请求头信息的 Authorization
+     </strong>
+     字段里，使用
+     <strong>
+      Bearer 模式添加 JWT
+     </strong>
+     。
+    </p>
+    <pre><code>GET /calendar/v1/events
+Host: api.example.com
+Authorization: Bearer &lt;token&gt;</code></pre>
+    <p>
+     服务端的保护路由将会检查请求头 Authorization 中的 JWT 信息，如果合法，则允许用户的行为。
+    </p>
+    <p>
+     由于 JWT 是自包含的，因此减少了需要查询数据库的需要
+    </p>
+    <p>
+     JWT 的这些特性使得我们可以完全依赖其无状态的特性提供数据 API 服务，甚至是创建一个下载流服务。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       跨域
+      </strong>
+      方式
+     </li>
+    </ul>
+    <p>
+     JWT 放在
+     <strong>
+      POST 请求的数据体
+     </strong>
+     里。
+    </p>
+    <ul>
+     <li>
+      通过 URL 传输方式
+     </li>
+    </ul>
+    <pre><code>http://www.example.com/user?token=xxx</code></pre>
+    <h4 id="%E4%BC%98%E7%BC%BA%E7%82%B9">
+     优缺点
+    </h4>
+    <ul>
+     <li>
+      优点：
+     </li>
+    </ul>
+    <p>
+     基于
+     <strong>
+      JSON，方便解析
+     </strong>
+     ，可以在令牌中自定义丰富内容，易扩展。
+    </p>
+    <p>
+     通过
+     <strong>
+      非对称加密及数字签名
+     </strong>
+     技术，可以防止篡改、安全性高。
+    </p>
+    <p>
+     可以
+     <strong>
+      不依赖认证服务
+     </strong>
+     就可以完成授权。
+    </p>
+    <ul>
+     <li>
+      缺点：
+     </li>
+    </ul>
+    <p>
+     JWT
+     <strong>
+      令牌较长
+     </strong>
+     ，占存储空间比较大。
+    </p>
+    <p>
+     由于服务器不需要存储 Session 状态，因此使用过程中
+     <strong>
+      无法废弃
+     </strong>
+     某个 Token 或者更改 Token 的权限。也就是说一旦 JWT 签发了，到期之前就会始终有效，除非服务器部署额外的逻辑。
+    </p>
+    <h4 id="Token%20%E5%92%8C%20JWT%20%E7%9A%84%E5%8C%BA%E5%88%AB">
+     Token 和 JWT 的区别
+    </h4>
+    <p>
+     <strong>
+      相同：
+     </strong>
+    </p>
+    <ul>
+     <li>
+      都是访问资源的令牌
+     </li>
+     <li>
+      都可以
+      <strong>
+       记录用户
+      </strong>
+      的信息
+     </li>
+     <li>
+      都是使
+      <strong>
+       服务端无状态化
+      </strong>
+     </li>
+     <li>
+      都是只有验证成功后，客户端才能访问服务端上受保护的资源
+     </li>
+    </ul>
+    <p>
+     <strong>
+      区别：
+     </strong>
+    </p>
+    <ul>
+     <li>
+      Token：服务端验证客户端发送过来的 Token 时，还需要
+      <strong>
+       查询数据库获取用户信息
+      </strong>
+      ，然后验证 Token 是否有效。
+     </li>
+     <li>
+      JWT：
+      <strong>
+       将 Token 和 Payload 加密后存储于客户端
+      </strong>
+      ，服务端只需要使用
+      <strong>
+       密钥解密
+      </strong>
+      进行校验（
+      <strong>
+       校验也是 JWT 自己实现的
+      </strong>
+      ）即可，不需要查询或者减少查询数据库，因为 JWT 自包含了用户信息和加密的数据。
+     </li>
+    </ul>
+    <h3 id="%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95">
+     常见的加密算法
+    </h3>
+    <p>
+     哈希算法(Hash Algorithm)又称散列算法
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/weixin_45070175/article/details/118559272?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168065837616800215056160%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168065837616800215056160&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-118559272-null-null.142%5Ev81%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=jwt&amp;spm=1018.2226.3001.4187" title="JWT详解_baobao555#的博客-CSDN博客">
+      JWT详解_baobao555#的博客-CSDN博客
+     </a>
+    </p>
+    <h2 id="%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E6%A0%BC%E5%BC%8F">
+     数据交换格式
+    </h2>
+    <p>
+     服务器端与客户端之间进行数据传输与交换的格式。
+    </p>
+    <h3 id="HTML%E5%92%8CXML">
+     XML
+    </h3>
+    <h4>
+     HTML和XML
+    </h4>
+    <p>
+     HTML(HyperText Markup Language超文本标记语言)
+    </p>
+    <p>
+     XML(Extensiable Markup Language可扩展标记语言)
+    </p>
+    <p>
+     发展史：HTML-&gt;XHTML-&gt;XML
+    </p>
+    <p>
+     HTML缺点：
+    </p>
+    <ul>
+     <li>
+      不能自定义标签
+     </li>
+     <li>
+      本身缺少含义
+     </li>
+    </ul>
+    <h4>
+     应用
+    </h4>
+    <ul>
+     <li>
+      程序间的数据通信（例：QQ之间传输文件）
+     </li>
+     <li>
+      配置文件（例：structs-config.xml）
+     </li>
+     <li>
+      小型数据库（例：msn中保存用户聊天记录就是用XML文件）直接读取文件比读数据库快。
+     </li>
+    </ul>
+    <h4 id="JSON">
+     <strong>
+      <strong>
+       JSX
+      </strong>
+     </strong>
+    </h4>
+    <p>
+     JSX =JavaScript + XML。是一个 JavaScript 的语法扩展。
+    </p>
+    <pre><code class="language-javascript">let element = React.createElement('h2', {title: 'hi'}, [
+    'hello world',
+    React.createElement('span', null, '!!!!!!')
+]);</code></pre>
+    <p>
+     JSX写起来就方便很多了，在内部会转换成
+     <strong>
+      React.createElement()
+     </strong>
+     ，然后再转换成对应的
+     <strong>
+      虚拟DOM
+     </strong>
+     ，但是JSX语法
+     <strong>
+      浏览器不认识
+     </strong>
+     ，所以需要利用babel插件进行
+     <strong>
+      转义处理
+     </strong>
+     。
+    </p>
+    <h4 id="Babel">
+     Babel
+     <a href="https://blog.csdn.net/qq_28838891/article/details/129866463?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22129866463%22%2C%22source%22%3A%22qq_28838891%22%7D#t48" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <p>
+     <strong>
+      JavaScript 编译器
+     </strong>
+    </p>
+    <p>
+     将es6、es7、es8等语法转换成浏览器可识别的es5或es3语法，即浏览器兼容的语法，比如将箭头函数转换为普通函数
+    </p>
+    <p>
+     将jsx转换成浏览器认的js
+    </p>
+    <h3>
+     <strong>
+      <strong>
+       JSON
+      </strong>
+     </strong>
+    </h3>
+    <p>
+     JSON，全称是 JavaScript
+     <strong>
+      Object Notation
+     </strong>
+     ，即 JavaScript
+     <strong>
+      对象标记
+     </strong>
+     法。
+    </p>
+    <p>
+     是一种
+     <strong>
+      轻量级（Light-Meight)、基于文本的(Text-Based)、可读的(Human-Readable)
+     </strong>
+     格式。
+    </p>
+    <p>
+     名称中虽然带有JavaScript，但是指其
+     <strong>
+      语法规则
+     </strong>
+     是参考JavaScript对象的，而不是指只能用于JavaScript 语言。
+    </p>
+    <p>
+     相比 XML(另一种常见的数据交换格式)，文件更小
+    </p>
+    <pre><code class="language-javascript">//JSON
+{
+	"name":"参宿",                    //"key":value，value可以str、num、bool、null、obj,arr。
+	"id":7,                    //并列的数据之间用逗号(“,”）分隔
+	"fruits":["apple","pear","grape"]   //数组用[],对象用{}
+}
+
+//XML
+&lt;root&gt;
+	&lt;name&gt;"参宿"&lt;/name&gt;
+	&lt;id&gt;7&lt;/id&gt;
+	&lt;fruits&gt;apple&lt;/fruits&gt;
+	&lt;fruits&gt;pear&lt;/fruits&gt;
+	&lt;fruits&gt;grape&lt;/fruits&gt;
+&lt;/root&gt;
+</code></pre>
+    <h4 id="JSON%E8%A7%A3%E6%9E%90%E5%92%8C%E7%94%9F%E5%AD%98">
+     JSON解析和生成
+    </h4>
+    <pre><code class="language-javascript">var str = '{"name": "参宿","id":7}';      //'JSON字符串'
+var obj = JSON.parse(str);                //JSON.parse(str)
+console.log(obj);                       //JSON的解析（JSON字符串转换为JS对象）
+
+//Object { name: "参宿", id: 7 }
+var jsonstr = JSON.stringify(obj);        //JSON.stringify(obj)
+console.log(jsonstr);                     //JSON的生成（JS对象转换为JSON字符串）
+
+JSON.parse(text[, reviver])//reviver函数参数，修改解析生成的原始值，调用时机在 parse 函数返回之前。
+//k：key，v：value
+JSON.parse('{"p": 5}', function (k, v) {
+    if(k === '') return v;     // 如果到了最顶层，则直接返回属性值，
+    return v * 2;              // 否则将属性值变为原来的 2 倍。
+});                            // { p: 10 }
+
+//从最最里层的属性开始，一级级往外，最终到达顶层，也就是解析值本身
+JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
+    console.log(k); // 输出当前的属性名，从而得知遍历顺序是从内向外的，
+                    // 最后一个属性名会是个空字符串。
+    return v;       // 返回原始属性值，相当于没有传递 reviver 参数。
+});
+
+// 1
+// 2
+// 4
+// 6
+// 5
+// 3
+// ""
+</code></pre>
+    <h2 id="%E5%BC%82%E6%AD%A5">
+     异步⭐⭐⭐
+    </h2>
+    <ul>
+     <li>
+      <strong>
+       异步
+      </strong>
+      是通过一次次的
+      <strong>
+       循环事件队列
+      </strong>
+      来实现的．例如 setTimeout setInterval xmlHttprequest 等
+     </li>
+     <li>
+      <strong>
+       同步
+      </strong>
+      是
+      <strong>
+       阻塞式的IO
+      </strong>
+      ,在
+      <strong>
+       高并发
+      </strong>
+      环境会是一个很大的性能问题，
+     </li>
+    </ul>
+    <p>
+     所以同步一般只在基础框架的
+     <strong>
+      启动
+     </strong>
+     时使用，用来
+     <strong>
+      加载配置
+     </strong>
+     文件，
+     <strong>
+      初始化
+     </strong>
+     程序什么的．
+    </p>
+    <p>
+     <strong>
+      node
+     </strong>
+     是
+     <strong>
+      单线程
+     </strong>
+     的，
+     <strong>
+      网络请求，浏览器
+     </strong>
+     事件等操作都需要使用
+     <strong>
+      异步
+     </strong>
+     的方法。
+    </p>
+    <h3 id="webworker%EF%BC%88%E5%88%9B%E5%BB%BA%E5%88%86%E7%BA%BF%E7%A8%8B%EF%BC%89%E2%AD%90">
+     webworker（创建分线程）⭐
+    </h3>
+    <p>
+     当在 HTML 页面中
+     <strong>
+      执行脚本
+     </strong>
+     时，
+     <strong>
+      页面的状态是不可响应的
+     </strong>
+     ，直到脚本已完成。
+    </p>
+    <p>
+     web worker 是
+     <strong>
+      运行在后台
+     </strong>
+     的 JavaScript，独立于其他脚本，
+     <strong>
+      不会影响页面的性能
+     </strong>
+     。
+    </p>
+    <p>
+     <em>
+      <strong>
+       index.js为加载到html页面中的主线程(js文件)
+      </strong>
+     </em>
+    </p>
+    <p>
+     <em>
+      <strong>
+       work.js为在index中创建的分线程
+      </strong>
+     </em>
+    </p>
+    <pre><code class="language-javascript">werbwork的实现方法
+    在index.js中 创建分线程  var w =new webwork('work.js')//创建 Web Worker 对象
+    在index.js中 通过 w.postmesage('数据') 向子线程发送数据
+    在work.js中  通过
+     onmessage = function(ev) {
+              console.log(ev);//接受主线程发送过来的ev.data数据
+              this.postMessage('数据')//通过 postmesage('数据') 向主线程发送数据
+     }
+
+    在index.js中 通过w.onmessage=function(ev){ev.data} ev.data 接受  a 的值.
+    在work.js中 w.terminate();//终止 Web Worker
+</code></pre>
+    <h3 id="%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9Afetch">
+     <strong>
+      AJAX
+     </strong>
+    </h3>
+    <ul>
+     <li>
+      <p>
+       ajax 全名
+       <a href="https://so.csdn.net/so/search?q=async&amp;spm=1001.2101.3001.7020" title="async">
+        async
+       </a>
+       javascript and XML(异步JavaScript和XML)
+      </p>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      前后端交互的重要工具
+     </strong>
+    </p>
+    <p>
+     在
+     <strong>
+      无需重新加载整个网页
+     </strong>
+     的情况下，能够更新部分网页
+    </p>
+    <p>
+     <img alt="" height="163" src="https://i-blog.csdnimg.cn/blog_migrate/cb03ccfeedbe850dde9894b7d409727b.png" width="262"/>
+     ​​
+    </p>
+    <h4 id="%E5%8E%9F%E7%94%9FAJAX%E5%88%9B%E5%BB%BA">
+     原生AJAX创建⭐
+    </h4>
+    <pre><code class="language-javascript">//1.创建xhr 核心对象
+var xhr=new XMLHttpRequest();
+​
+//2.调用open 准备
+xhrReq.open(method, url, [async, user, password]);//请求方式，请求地址，true异步，false 同步
+xhr.open('post','http://www.baidu.com/api/search',true)
+
+//3.如果是post请求，必须设置请求头。
+//xhr.setRequestHeader('Content-Type', 'application/json')
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+​
+//4.调用send 发送请求 （如果不需要参数，就写null）
+xhr.send('user=tom&amp;age=10&amp;sex=女')
+​
+//5.监听异步回调 onreadystatechange
+xhr.onreadystatechange=function(){
+    if(xhr.readyState==4){                    //表示请求完成
+        if(xhr.status==200){                 //状态码 为 200 表示接口请求成功
+            console.log(xhr.responseText);   //responeseText 为相应数据。字符串类型。
+            var res=JSON.parse(xhr.responseText);
+            console.log(res);
+
+            if(res.code==1){
+            modal.modal('hide');
+           location.reload();
+       }
+    }</code></pre>
+    <h4 id="jQuery%20ajax">
+     *jQuery ajax
+    </h4>
+    <pre><code class="language-javascript"> $(function(){
+            // jQuery里使用ajax
+            $.ajax({
+            url:"/js/data.json",
+            type:'GET',
+            dataType:'json',
+            data:{'aa':1},
+            })
+            //设置请求成功后的回调函数
+            .done(function(dat){
+            console.log(dat);
+         })
+         //设置请求失败后的回调函数和
+         .fail(function(dat){
+            console.log('no!');
+         })
+        })</code></pre>
+    <p>
+     <a href="https://blog.csdn.net/qq_38490457/article/details/109683256?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167817587216800184128511%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=167817587216800184128511&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109683256-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=jQuery&amp;spm=1018.2226.3001.4187" title="jQuery">
+      jQuery
+     </a>
+     是一个 JavaScript 工具库
+    </p>
+    <h3 id="Axios">
+     <a href="https://www.axios-http.cn/docs/intro" rel="nofollow" title="Axios">
+      Axios
+     </a>
+     ⭐⭐
+    </h3>
+    <p>
+     axios 是一个基于
+     <a href="https://so.csdn.net/so/search?q=Promise&amp;spm=1001.2101.3001.7020" title="Promise">
+      Promise
+     </a>
+     的
+     <strong>
+      ajax的封装
+     </strong>
+     ，用于
+     <strong>
+      浏览器和 nodejs
+     </strong>
+     的
+     <strong>
+      HTTP 客户端
+     </strong>
+     。
+    </p>
+    <p>
+     特征：
+    </p>
+    <ul>
+     <li>
+      从浏览器中创建 XMLHttpRequest
+     </li>
+     <li>
+      从 node.js
+      <strong>
+       发出
+      </strong>
+      http 请求
+     </li>
+     <li>
+      <strong>
+       拦截
+      </strong>
+      请求和响应
+     </li>
+     <li>
+      <strong>
+       转换
+      </strong>
+      请求和响应数据
+     </li>
+     <li>
+      <strong>
+       取消
+      </strong>
+      请求
+     </li>
+     <li>
+      <strong>
+       自动转换JSON数据
+      </strong>
+     </li>
+     <li>
+      客户端支持防止
+      <strong>
+       CSRF
+      </strong>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">import axios from "axios";
+
+axios.get('/users')
+  .then(res =&gt; {
+    console.log(res.data);
+  });
+
+// 向给定ID的用户发起请求
+axios.get('/user?ID=12345')
+  .then(function (response) {
+    // 处理成功情况
+    console.log(response);
+  })
+  .catch(function (error) {
+    // 处理错误情况
+    console.log(error);
+  })
+  .then(function () {
+    // 总是会执行
+  });
+
+axios.get('/user?ID=12345')===
+axios.get('/user', {
+    params: {
+      ID: 12345
+    }
+  })
+
+
+axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });</code></pre>
+    <h4 id="Axios%20API">
+     Axios API
+    </h4>
+    <pre><code class="language-javascript">1.axios(config)
+// 发送 POST 请求
+axios({
+  method: 'post',
+  url: '/user/12345',
+  data: {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  }
+});
+ 
+2.axios(url[, config])
+// 发送 GET 请求（默认的方法）
+axios('/user/12345');
+
+// 在 node.js 用GET请求获取远程图片
+axios({
+  method: 'get',
+  url: 'http://bit.ly/2mTM3nY',
+  responseType: 'stream'
+})
+  .then(function (response) {
+    response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+  });</code></pre>
+    <p>
+     axios.get(`http://localhost:3000/search/users?q=${keyWord}`)
+    </p>
+    <p>
+     get('') （自动默认） 和get(``)（反单引号）均可
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/gao_xu_520/article/details/79726298?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165192828616782390543048%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=165192828616782390543048&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-79726298-null-null.142%5Ev9%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=axios&amp;spm=1018.2226.3001.4187" title="axios基本用法_面条请不要欺负汉堡的博客-CSDN博客_axios">
+      axios基本用法_面条请不要欺负汉堡的博客-CSDN博客_axios
+     </a>
+    </p>
+    <h3 id="%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%EF%BC%9APromise">
+     setTimeout()（倒）计时（手写）⭐
+    </h3>
+    <p>
+     <strong>
+      <code>
+       setInterval()
+      </code>
+     </strong>
+     方法重复调用一个函数或执行一个代码段，在每次调用之间具有固定的时间延迟。
+    </p>
+    <pre><code class="language-javascript">​//返回值timeoutID是一个正整数，表示定时器的编号。
+let timeoutID = scope.setTimeout(function[, delay])，//delay表示最小等待时间，真正等待时间取决于前面排队的消息
+clearTimeout(timeoutID) //取消该定时器。</code></pre>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/71d135a768c234bfc3ce80afc4ca2ee4.gif"/>
+    </p>
+    <pre><code class="language-html">&lt;body&gt;
+&lt;button onclick="startCount()"&gt;开始计数!&lt;/button&gt; &lt;input type="text" id="txt"&gt; 
+&lt;button onclick="stopCount()"&gt;停止计数!&lt;/button&gt;
+	&lt;/body&gt;
+	&lt;script type="text/javascript"&gt;
+		var c = 0;
+		var t;
+		var timer = 0;
+ 
+		function timedCount() {
+			document.getElementById("txt").value = c;
+			c = c + 1;
+			t = setTimeout(function() {
+				timedCount()
+			}, 1000);
+		}
+ 
+		function startCount() {
+			if (!timer) {
+				timer = 1;
+				timedCount();
+			}
+		}
+ 
+		function stopCount() {
+			clearTimeout(t);
+			timer = 0;
+		}
+	&lt;/script&gt;
+ </code></pre>
+    <p>
+    </p>
+    <pre><code class="language-html">&lt;body&gt;
+&lt;button onclick="startCount()"&gt;开始倒计时&lt;/button&gt; &lt;input type="text" id="txt"&gt; 
+&lt;/body&gt;
+	&lt;script type="text/javascript"&gt;
+		var c = 0;
+		var t;
+ 
+		function timedCount() {
+			c -=1;
+			document.getElementById("txt").value=c;
+			
+			if(c===0){
+				clearTimeout(t);
+				return;
+			}
+			t = setTimeout(function() {
+				timedCount()
+			}, 1000);
+		}
+ 
+		function startCount() {
+			    c=document.getElementById("txt").value;
+				timedCount();
+		}
+
+&lt;/script&gt;</code></pre>
+    <h4 id="setTimeout()%E5%92%8CsetInterval()%E2%AD%90">
+     setTimeout()和setInterval()⭐
+    </h4>
+    <blockquote>
+     <ul>
+      <li>
+       在
+       <strong>
+        同一个对象
+       </strong>
+       上（一个
+       <strong>
+        window
+       </strong>
+       或者
+       <strong>
+        worker
+       </strong>
+       ），
+       <code>
+        setTimeout()
+       </code>
+       或者
+       <code>
+        setInterval()
+       </code>
+       在后续的调用
+       <strong>
+        不会重用同一个定时器编号
+       </strong>
+       。
+      </li>
+      <li>
+       如果省略delay， 取默认值 0，意味着“马上”执行，或者尽快执行。
+      </li>
+      <li>
+       <strong>
+        不同的对象
+       </strong>
+       使用
+       <strong>
+        独立的编号池
+       </strong>
+      </li>
+      <li>
+       浏览器会控制
+       <strong>
+        最小的超时时间
+       </strong>
+       固定在
+       <strong>
+        4ms到15ms
+       </strong>
+       之间。
+      </li>
+     </ul>
+     <p>
+     </p>
+     <ul>
+      <li>
+       <p>
+        <code>
+         setTimeout
+        </code>
+        ：延时delay毫秒之后，直接将
+        <strong>
+         回调函数
+        </strong>
+        加入
+        <strong>
+         事件队列
+        </strong>
+        。
+       </p>
+      </li>
+      <li>
+       <p>
+        <code>
+         setInterval
+        </code>
+        ：延时delay毫秒之后，先看看事件队列中是否存在还没有执行setInterval的回调函数，如果存在，就不要再往事件队列里加入回调函数了。
+       </p>
+      </li>
+      <li>
+       <p>
+        <code>
+         setTimeout
+        </code>
+        保证
+        <strong>
+         调用
+        </strong>
+        的时间间隔是一致的，
+       </p>
+      </li>
+      <li>
+       <p>
+        <code>
+         setInterval
+        </code>
+        的设定的间隔时间包括了
+        <strong>
+         执行回调
+        </strong>
+        的时间。
+       </p>
+      </li>
+      <li>
+       <p>
+        <code>
+         setInterval的回调函数
+         <strong>
+          不报错
+         </strong>
+        </code>
+       </p>
+      </li>
+     </ul>
+    </blockquote>
+    <h3 id="Promise%EF%BC%88ES6%20%E8%A7%A3%E5%86%B3%E5%9C%B0%E7%8B%B1%E5%9B%9E%E8%B0%83%EF%BC%89%E2%AD%90%E2%AD%90%E2%AD%90">
+     Promise（ES6 解决地狱回调）⭐⭐⭐
+    </h3>
+    <p>
+     <strong>
+      回调函数
+     </strong>
+     ：
+     <br/>
+     当一个函数作为参数传入另一个函数中，并且它不会立即执行，只有当满足一定条件后该函数才可以执行，这种函数就称为回调函数，例如setTimeout
+    </p>
+    <p>
+     <strong>
+      回调地狱：回调函数套回调函数，
+     </strong>
+     回调的多重嵌套，会导致代码可读低、编写费劲、容易出错，故而被称为 callback hell
+    </p>
+    <p>
+     Promise:ES6异步操作的一种解决方案
+    </p>
+    <p>
+     Promise
+     <strong>
+      构造函数
+     </strong>
+     接受一个
+     <strong>
+      函数
+     </strong>
+     作为
+     <strong>
+      参数
+     </strong>
+     ，该函数是
+     <strong>
+      同步
+     </strong>
+     的并且会被
+     <strong>
+      立即执行
+     </strong>
+     ，称为
+     <strong>
+      起始函数
+     </strong>
+     。
+    </p>
+    <p>
+     <strong>
+      起始函数
+     </strong>
+     包含两个
+     <strong>
+      函数参数 resolve
+     </strong>
+     和
+     <strong>
+      reject
+     </strong>
+     ，分别表示 Promise 成功和失败的状态。
+    </p>
+    <p>
+     起始函数执行成功时，它应该调用 resolve 函数并传递成功的结果。
+    </p>
+    <p>
+     起始函数执行失败时，它应该调用 reject 函数并传递失败的原因。
+    </p>
+    <p>
+     <strong>
+      promise 有三个状态：
+     </strong>
+    </p>
+    <p>
+     <strong>
+      pending[待定]初始状态，fulfilled[实现]操作成功，rejected[被否决]操作失败
+     </strong>
+    </p>
+    <p>
+     <strong>
+      如果不使用 resove 和 reject 两个函数 状态为pendding
+     </strong>
+    </p>
+    <p>
+     Promise 构造函数返回一个 Promise 对象，
+     <strong>
+      该对象
+     </strong>
+     具有以下几个方法：
+    </p>
+    <ul>
+     <li>
+      then：用于处理 Promise 成功状态的回调函数，参数为resolve传递的参数。
+     </li>
+     <li>
+      catch：用于处理 Promise 失败状态的回调函数，参数为reject传递的参数。
+     </li>
+     <li>
+      finally：无论 Promise 是成功还是失败，都会执行的回调函数。
+     </li>
+    </ul>
+    <pre><code class="language-javascript">const promise = new Promise((resolve, reject) =&gt; {
+  // 异步操作
+  setTimeout(() =&gt; {
+    if (Math.random() &lt; 0.5) {
+      resolve('success');
+    } else {
+      reject('error');
+    }
+  }, 1000);
+});
+ 
+promise.then(result =&gt; {
+  console.log(result);
+}).catch(error =&gt; {
+  console.log(error);
+});</code></pre>
+    <pre><code class="language-javascript">new Promise(function (resolve, reject) {
+    var a = 0;
+    var b = 1;
+    if (b == 0) reject("Divide zero");
+    else resolve(a / b);
+}).then(function (value) {
+    console.log("a / b = " + value);
+}).catch(function (err) {
+    console.log(err);
+}).finally(function () {
+    console.log("End");
+});</code></pre>
+    <h4 id="promise%E8%B0%83%E7%94%A8then%EF%BC%8C">
+     <strong>
+      promise调用then，
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      如果非promise，会将值包装成promise
+     </strong>
+    </p>
+    <pre><code class="language-javascript">new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        console.log("First");
+        resolve();
+    }, 1000);
+}).then(function () {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log("Second");
+            resolve();
+        }, 4000);
+    });
+}).then(function () {
+    setTimeout(function () {
+        console.log("Third");
+    }, 3000);
+});</code></pre>
+    <pre><code class="language-javascript">new Promise(function (resolve, reject) {
+    console.log(1111);
+    resolve(2222);
+}).then(function (value) {
+    console.log(value);
+    return 3333;
+}).then(function (value) {
+    console.log(value);
+    throw "An error";
+}).catch(function (err) {
+    console.log(err);
+});</code></pre>
+    <pre><code class="language-javascript">// then方法
+then(resolveFn, rejectFn) {
+  //return一个新的promise
+  return new MyPromise((resolve, reject) =&gt; {
+    //把resolveFn重新包装一下,再push进resolve执行队列,这是为了能够获取回调的返回值进行分类讨论
+    const fulfilledFn = value =&gt; {
+      try {
+        //执行第一个(当前的)Promise的成功回调,并获取返回值
+        let x = resolveFn(value)
+        //分类讨论返回值,如果是Promise,那么等待Promise状态变更,否则直接resolve
+        //这里resolve之后，就能被下一个.then()的回调获取到返回值，从而实现链式调用
+        x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
+      } catch (error) {
+        reject(error)
+      }
+    }
+    //把后续then收集的依赖都push进当前Promise的成功回调队列中(_resolveQueue), 这是为了保证顺序调用
+    this._resolveQueue.push(fulfilledFn)
+
+    //reject同理
+    const rejectedFn  = error =&gt; {
+      try {
+        let x = rejectFn(error)
+        x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
+      } catch (error) {
+        reject(error)
+      }
+    }
+    this._rejectQueue.push(rejectedFn)
+  })
+}
+</code></pre>
+    <ul>
+     <li>
+      <strong>
+       值穿透
+      </strong>
+      ：根据规范，如果 then() 接收的参数不是function，那么我们应该忽略它。
+     </li>
+    </ul>
+    <p>
+     如果没有忽略，当then()回调不为function时将会抛出异常，导致链式调用中断
+    </p>
+    <ul>
+     <li>
+      <strong>
+       处理状态为resolve/reject的情况
+      </strong>
+      ：其实我们上边 then() 的写法是对应状态为pending的情况，但是有些时候，resolve/reject 在 then() 之前就被执行（比如
+      <code>
+       Promise.resolve().then()
+      </code>
+      ），如果这个时候还把then()回调push进resolve/reject的执行队列里，那么回调将不会被执行，因此对于状态已经变为
+      <code>
+       fulfilled
+      </code>
+      或
+      <code>
+       rejected
+      </code>
+      的情况，我们直接执行then回调
+     </li>
+    </ul>
+    <pre><code class="language-javascript">// then方法,接收一个成功的回调和一个失败的回调
+  then(resolveFn, rejectFn) {
+    // 根据规范，如果then的参数不是function，则我们需要忽略它, 让链式调用继续往下执行
+    typeof resolveFn !== 'function' ? resolveFn = value =&gt; value : null
+    typeof rejectFn !== 'function' ? rejectFn = reason =&gt; {
+      throw new Error(reason instanceof Error? reason.message:reason);
+    } : null
+  
+    // return一个新的promise
+    return new MyPromise((resolve, reject) =&gt; {
+      // 把resolveFn重新包装一下,再push进resolve执行队列,这是为了能够获取回调的返回值进行分类讨论
+      const fulfilledFn = value =&gt; {
+        try {
+          // 执行第一个(当前的)Promise的成功回调,并获取返回值
+          let x = resolveFn(value)
+          // 分类讨论返回值,如果是Promise,那么等待Promise状态变更,否则直接resolve
+          x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
+        } catch (error) {
+          reject(error)
+        }
+      }
+  
+      // reject同理
+      const rejectedFn  = error =&gt; {
+        try {
+          let x = rejectFn(error)
+          x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
+        } catch (error) {
+          reject(error)
+        }
+      }
+  
+      switch (this._status) {
+        // 当状态为pending时,把then回调push进resolve/reject执行队列,等待执行
+        case PENDING:
+          this._resolveQueue.push(fulfilledFn)
+          this._rejectQueue.push(rejectedFn)
+          break;
+        // 当状态已经变为resolve/reject时,直接执行then回调
+        case FULFILLED:
+          fulfilledFn(this._value)    // this._value是上一个then回调return的值(见完整版代码)
+          break;
+        case REJECTED:
+          rejectedFn(this._value)
+          break;
+      }
+    })
+  }</code></pre>
+    <h4 id="%E5%85%BC%E5%AE%B9%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1">
+     兼容同步任务
+    </h4>
+    <p>
+     <strong>
+      executor是异步任务：
+     </strong>
+    </p>
+    <p>
+     Promise的执行顺序是
+     <code>
+      new Promise -&gt; then()收集回调 -&gt; resolve/reject执行回调
+     </code>
+    </p>
+    <p>
+     executor是同步任务：
+     <code>
+      new Promise -&gt; resolve/reject执行回调 -&gt; then()收集回调
+     </code>
+     ，resolve的执行跑到then之前去了，
+    </p>
+    <p>
+     为了兼容这种情况，给
+     <code>
+      resolve/reject
+     </code>
+     执行回调的操作包一个setTimeout，让它异步执行。
+    </p>
+    <pre><code class="language-javascript">//Promise/A+规定的三种状态
+const PENDING = 'pending'
+const FULFILLED = 'fulfilled'
+const REJECTED = 'rejected'
+
+class MyPromise {
+  // 构造方法接收一个回调
+  constructor(executor) {
+    this._status = PENDING     // Promise状态
+    this._value = undefined    // 储存then回调return的值
+    this._resolveQueue = []    // 成功队列, resolve时触发
+    this._rejectQueue = []     // 失败队列, reject时触发
+
+    // 由于resolve/reject是在executor内部被调用, 因此需要使用箭头函数固定this指向, 否则找不到this._resolveQueue
+    let _resolve = (val) =&gt; {
+      //把resolve执行回调的操作封装成一个函数,放进setTimeout里,以兼容executor是同步代码的情况
+      const run = () =&gt; {
+        if(this._status !== PENDING) return   // 对应规范中的"状态只能由pending到fulfilled或rejected"
+        this._status = FULFILLED              // 变更状态
+        this._value = val                     // 储存当前value
+
+        // 这里之所以使用一个队列来储存回调,是为了实现规范要求的 "then 方法可以被同一个 promise 调用多次"
+        // 如果使用一个变量而非队列来储存回调,那么即使多次p1.then()也只会执行一次回调
+        while(this._resolveQueue.length) {    
+          const callback = this._resolveQueue.shift()
+          callback(val)
+        }
+      }
+      setTimeout(run)
+    }
+    // 实现同resolve
+    let _reject = (val) =&gt; {
+      const run = () =&gt; {
+        if(this._status !== PENDING) return   // 对应规范中的"状态只能由pending到fulfilled或rejected"
+        this._status = REJECTED               // 变更状态
+        this._value = val                     // 储存当前value
+        while(this._rejectQueue.length) {
+          const callback = this._rejectQueue.shift()
+          callback(val)
+        }
+      }
+      setTimeout(run)
+    }
+    // new Promise()时立即执行executor,并传入resolve和reject
+    executor(_resolve, _reject)
+  }
+
+  // then方法,接收一个成功的回调和一个失败的回调
+  then(resolveFn, rejectFn) {
+    // 根据规范，如果then的参数不是function，则我们需要忽略它, 让链式调用继续往下执行
+    typeof resolveFn !== 'function' ? resolveFn = value =&gt; value : null
+    typeof rejectFn !== 'function' ? rejectFn = reason =&gt; {
+      throw new Error(reason instanceof Error? reason.message:reason);
+    } : null
+  
+    // return一个新的promise
+    return new MyPromise((resolve, reject) =&gt; {
+      // 把resolveFn重新包装一下,再push进resolve执行队列,这是为了能够获取回调的返回值进行分类讨论
+      const fulfilledFn = value =&gt; {
+        try {
+          // 执行第一个(当前的)Promise的成功回调,并获取返回值
+          let x = resolveFn(value)
+          // 分类讨论返回值,如果是Promise,那么等待Promise状态变更,否则直接resolve
+          x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
+        } catch (error) {
+          reject(error)
+        }
+      }
+  
+      // reject同理
+      const rejectedFn  = error =&gt; {
+        try {
+          let x = rejectFn(error)
+          x instanceof MyPromise ? x.then(resolve, reject) : resolve(x)
+        } catch (error) {
+          reject(error)
+        }
+      }
+  
+      switch (this._status) {
+        // 当状态为pending时,把then回调push进resolve/reject执行队列,等待执行
+        case PENDING:
+          this._resolveQueue.push(fulfilledFn)
+          this._rejectQueue.push(rejectedFn)
+          break;
+        // 当状态已经变为resolve/reject时,直接执行then回调
+        case FULFILLED:
+          fulfilledFn(this._value)    // this._value是上一个then回调return的值(见完整版代码)
+          break;
+        case REJECTED:
+          rejectedFn(this._value)
+          break;
+      }
+    })
+  }
+}</code></pre>
+    <h4 id="Promise.prototype.catch()">
+     Promise.prototype.catch()
+    </h4>
+    <blockquote>
+     <p>
+      <code>
+       catch()方法
+      </code>
+      返回一个Promise，并且处理拒绝的情况。它的行为与调用Promise.prototype.then(undefined, onRejected) 相同。
+     </p>
+    </blockquote>
+    <pre><code class="language-javascript">//catch方法其实就是执行一下then的第二个回调
+catch(rejectFn) {
+  return this.then(undefined, rejectFn)
+}</code></pre>
+    <h4 id="Promise.prototype.finally()">
+     Promise.prototype.finally()
+    </h4>
+    <blockquote>
+     <p>
+      <code>
+       finally()方法
+      </code>
+      返回一个Promise。在promise结束时，无论结果是fulfilled或者是rejected，都会执行指定的回调函数。在finally之后，还可以继续then。并且会将值原封不动的传递给后面的then
+     </p>
+    </blockquote>
+    <pre><code class="language-javascript">//finally方法
+finally(callback) {
+  return this.then(
+    value =&gt; MyPromise.resolve(callback()).then(() =&gt; value),             // MyPromise.resolve执行回调,并在then中return结果传递给后面的Promise
+    reason =&gt; MyPromise.resolve(callback()).then(() =&gt; { throw reason })  // reject同理
+  )
+}
+复制代码</code></pre>
+    <p>
+     <code>
+      MyPromise.resolve(callback())
+     </code>
+     的意义：这个写法其实涉及到一个
+     <code>
+      finally()
+     </code>
+     的使用细节，
+     <strong>
+      finally()如果return了一个reject状态的Promise，将会改变当前Promise的状态
+     </strong>
+     ，这个
+     <code>
+      MyPromise.resolve
+     </code>
+     就用于改变Promise状态，在finally()没有返回reject态Promise或throw错误的情况下，去掉
+     <code>
+      MyPromise.resolve
+     </code>
+     也是一样的
+    </p>
+    <h4 id="Promise.resolve()">
+     Promise.resolve()
+    </h4>
+    <blockquote>
+     <p>
+      <code>
+       Promise.resolve(value)
+      </code>
+      方法返回一个以给定值解析后的Promise 对象。如果该值为promise，返回这个promise；如果这个值是thenable（即带有"then" 方法)），返回的promise会“跟随”这个thenable的对象，采用它的最终状态；否则返回的promise将以此值完成。此函数将类promise对象的多层嵌套展平。
+     </p>
+    </blockquote>
+    <pre><code class="language-javascript">//静态的resolve方法
+static resolve(value) {
+  if(value instanceof MyPromise) return value // 根据规范, 如果参数是Promise实例, 直接return这个实例
+  return new MyPromise(resolve =&gt; resolve(value))
+}
+复制代码</code></pre>
+    <h4 id="Promise.reject()">
+     Promise.reject()
+    </h4>
+    <blockquote>
+     <p>
+      <code>
+       Promise.reject()
+      </code>
+      方法返回一个带有拒绝原因的Promise对象。
+     </p>
+    </blockquote>
+    <pre><code class="language-javascript">//静态的reject方法
+static reject(reason) {
+  return new MyPromise((resolve, reject) =&gt; reject(reason))
+}</code></pre>
+    <h4 id="Promise.all()">
+     Promise.all()
+    </h4>
+    <blockquote>
+     <p>
+      <code>
+       Promise.all(iterable)
+      </code>
+      方法
+      <strong>
+       返回一个 Promise
+      </strong>
+      实例，此实例在 iterable 参数内所有的 promise
+      <strong>
+       都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）
+      </strong>
+      ；
+     </p>
+     <p>
+      如果参数中 promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是
+      <strong>
+       第一个失败 promise 的结果
+      </strong>
+      。
+     </p>
+    </blockquote>
+    <pre><code class="language-javascript">//静态的all方法
+static all(promiseArr) {
+  let index = 0
+  let result = []
+  return new MyPromise((resolve, reject) =&gt; {
+    promiseArr.forEach((p, i) =&gt; {
+      //Promise.resolve(p)用于处理传入值不为Promise的情况
+      MyPromise.resolve(p).then(
+        val =&gt; {
+          index++
+          result[i] = val
+          //所有then执行后, resolve结果
+          if(index === promiseArr.length) {
+            resolve(result)
+          }
+        },
+        err =&gt; {
+          //有一个Promise被reject时，MyPromise的状态变为reject
+          reject(err)
+        }
+      )
+    })
+  })
+}
+复制代码</code></pre>
+    <h4 id="Promise.race()">
+     Promise.race()
+    </h4>
+    <blockquote>
+     <p>
+      <code>
+       Promise.race(iterable)
+      </code>
+      方法返回一个 promise，一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。
+     </p>
+    </blockquote>
+    <pre><code class="language-javascript">static race(promiseArr) {
+  return new MyPromise((resolve, reject) =&gt; {
+    //同时执行Promise,如果有一个Promise的状态发生改变,就变更新MyPromise的状态
+    for (let p of promiseArr) {
+      MyPromise.resolve(p).then(  //Promise.resolve(p)用于处理传入值不为Promise的情况
+        value =&gt; {
+          resolve(value)        //注意这个resolve是上边new MyPromise的
+        },
+        err =&gt; {
+          reject(err)
+        }
+      )
+    }
+  })
+}</code></pre>
+    <h4 id="Promise.all()%E5%93%AA%E6%80%95%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%A4%B1%E8%B4%A5%E4%BA%86%E4%B9%9F%E8%83%BD%E5%BE%97%E5%88%B0%E5%85%B6%E4%BD%99%E6%AD%A3%E7%A1%AE%E7%9A%84%E8%AF%B7%E6%B1%82%E7%BB%93%E6%9E%9C%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%AD%90%E2%AD%90">
+     Promise.all()哪怕一个请求失败了也能得到其余正确的请求结果的解决方案
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <p>
+     await（
+     <strong>
+      串行
+     </strong>
+     ）：如果在一个async的方法中，有多个await操作的时候，程序会变成完全的串行操作，一个完事等另一个但是为了发挥node的异步优势，
+    </p>
+    <p>
+     当异步操作之间不存在
+     <strong>
+      结果的依赖
+     </strong>
+     关系时，可以使用promise.all来实现并行，all中的所有方法是一同执行的。
+    </p>
+    <p>
+     执行后的结果：
+    </p>
+    <p>
+     async函数中，如果有多个await关键字时，如果有一个await的状态变成了rejected，那么后面的操作都不会继续执行，promise也是同理
+    </p>
+    <p>
+     await的返回结果就是后面promise执行的结果，可能是resolves或者rejected的值使用场景循环遍历方便了代码需要同步的操作（文件读取，数据库操作等）
+     <br/>
+    </p>
+    <p>
+     promise.all并行（同时）执行promise，当其中任何一个promise 出现错误的时候都会执行reject，导致其它正常返回的数据也无法使用
+    </p>
+    <pre><code class="language-javascript">const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) =&gt; {
+  setTimeout(resolve, 100, 'foo');//setTimeout(function[, delay, arg1, arg2, ...]);
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) =&gt; {
+  console.log(values);
+});
+// Expected output: Array [3, 42, "foo"]
+</code></pre>
+    <p>
+     map的每一项都是promise，catch方法返回值会被
+     <strong>
+      promise.reslove()
+     </strong>
+     包裹，这样传进promise.all的数据都是resolved状态的。
+    </p>
+    <pre><code class="language-javascript">let p1 = Promise.resolve(1)
+let p2 = Promise.resolve(2)
+let p3 = Promise.resolve(3)
+let p4 = Promise.resolve(4)
+let p5 = Promise.reject("error")
+let arr = [p1,p2,p3,p4,p5];
+
+let all = Promise.all(arr.map((promise)=&gt;promise.catch((e)=&gt;{console.log("错误信息"+e)})))
+all.then(res=&gt;{console.log(res)}).catch(err=&gt;console.log(err));</code></pre>
+    <h4 id="Mypromise">
+     Mypromise
+    </h4>
+    <pre><code class="language-javascript">//Promise/A+规范的三种状态
+const PENDING = 'pending'
+const FULFILLED = 'fulfilled'
+const REJECTED = 'rejected'
+
+class MyPromise {
+  // 构造方法接收一个回调
+  constructor(executor) {
+    this._status = PENDING     // Promise状态
+    this._resolveQueue = []    // 成功队列, resolve时触发
+    this._rejectQueue = []     // 失败队列, reject时触发
+
+    // 由于resolve/reject是在executor内部被调用, 因此需要使用箭头函数固定this指向, 否则找不到this._resolveQueue
+    let _resolve = (val) =&gt; {
+      if(this._status !== PENDING) return   // 对应规范中的"状态只能由pending到fulfilled或rejected"
+      this._status = FULFILLED              // 变更状态
+
+      // 这里之所以使用一个队列来储存回调,是为了实现规范要求的 "then 方法可以被同一个 promise 调用多次"
+      // 如果使用一个变量而非队列来储存回调,那么即使多次p1.then()也只会执行一次回调
+      while(this._resolveQueue.length) {    
+        const callback = this._resolveQueue.shift()
+        callback(val)
+      }
+    }
+    // 实现同resolve
+    let _reject = (val) =&gt; {
+      if(this._status !== PENDING) return   // 对应规范中的"状态只能由pending到fulfilled或rejected"
+      this._status = REJECTED               // 变更状态
+      while(this._rejectQueue.length) {
+        const callback = this._rejectQueue.shift()
+        callback(val)
+      }
+    }
+    // new Promise()时立即执行executor,并传入resolve和reject
+    executor(_resolve, _reject)
+  }
+
+  // then方法,接收一个成功的回调和一个失败的回调
+  then(resolveFn, rejectFn) {
+    this._resolveQueue.push(resolveFn)
+    this._rejectQueue.push(rejectFn)
+  }
+}</code></pre>
+    <h3 id="fetch">
+     fetch（ES6 拉取网络资源）
+    </h3>
+    <p>
+     以前
+     <strong>
+      发送请求
+     </strong>
+     ，使用ajax或者axios，现在还可以使用fetch。这个是
+     <strong>
+      window自带
+     </strong>
+     的方法，和
+     <strong>
+      xhr
+     </strong>
+     是一个级别的。（xhr=new XMLHttpRequest()）
+    </p>
+    <pre><code class="language-javascript">fetch(input[, init]);
+
+// url (必须), options (可选)
+fetch('/some/url', {method: 'get'})
+
+.then(function(response) {
+
+})
+
+.catch(function(err) {
+    // 出错了;等价于 then 的第二个参数,但这样更好用更直观 :(
+
+});</code></pre>
+    <p>
+     第二个
+     <strong>
+      then
+     </strong>
+     接收的才是后台传过来的真正的数据
+    </p>
+    <pre><code class="language-javascript">window.fetch(url, { method: 'get'})   //fetch() 返回响应的promise 
+    // 第一个then  设置请求的格式
+        .then(res =&gt; return res.json())  // 第一层then返回的是:响应的报文对象  
+        .then((data) =&gt; {             //第二层:如果想要使用第一层的数据,必须把数据序列化  
+                                       res.json() 返回的对象是一个 Promise对象再进行then()
+         &lt;!-- data为真正数据 --&gt;
+    }).catch(e =&gt; console.log("Oops, error", e))
+
+</code></pre>
+    <p>
+     <a href="https://blog.csdn.net/qq_36754767/article/details/89645041?ops_request_misc=%7B%22request_id%22%3A%22165192167116781435474109%22%2C%22scm%22%3A%2220140713.130102334.pc_all.%22%7D&amp;request_id=165192167116781435474109&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-89645041-null-null.142%5Ev9%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=fetch&amp;spm=1018.2226.3001.4187" title="Fetch()方法介绍_小钢炮vv的博客-CSDN博客_fetch">
+      Fetch()方法介绍_小钢炮vv的博客-CSDN博客_fetch
+     </a>
+    </p>
+    <h3 id="*Generator">
+     *Generator
+    </h3>
+    <p>
+     <strong>
+      ES6
+     </strong>
+     引入Generator 函数是一个
+     <strong>
+      状态机
+     </strong>
+     ，封装了多个内部状态。
+    </p>
+    <p>
+     执行 Generator 函数会返回一个遍历器对象，可以依次遍历 Generator 函数内部的每一个状态。
+     <strong>
+      <code>
+       yield
+      </code>
+     </strong>
+     表达式就是暂停标志，把函数的
+     <strong>
+      执行流挂起
+     </strong>
+     ，通过
+     <strong>
+      next()
+     </strong>
+     方法可以
+     <strong>
+      切换到下一个状态
+     </strong>
+     ，为改变执行流程提供了可能，从而为异步编程提供解决方案。
+    </p>
+    <pre><code class="language-javascript">function* myGenerator() {
+  yield '1'
+  yield '2'
+  return '3'
+}
+
+const gen = myGenerator();  // 获取迭代器
+gen.next()  //{value: "1", done: false}
+gen.next()  //{value: "2", done: false}
+gen.next()  //{value: "3", done: true}
+
+</code></pre>
+    <ul>
+     <li>
+      <p>
+       形式上，Generator是一个普通函数。
+      </p>
+      <p>
+       区别一是
+       <strong>
+        function命令和函数名之间有一个星号
+       </strong>
+       *
+      </p>
+      <p>
+       区别二是
+       <strong>
+        函数体内部使用yield定义不同的状态
+       </strong>
+       。
+      </p>
+     </li>
+     <li>
+      <p>
+       调用后函数并不执行，返回的是
+       <strong>
+        一个指向内部状态的指针对象
+       </strong>
+       Iterator。
+      </p>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">function* gen(x){
+  console.log('x='+x)
+  var y = yield x + 2;
+
+  return y;
+}
+//调用Generator 函数
+var g = gen(1);
+ 
+g.next();
+// x=1
+// {value: 3, done: false}</code></pre>
+    <h3 id="async%2Fawait%E5%87%BD%E6%95%B0">
+     async/await函数
+    </h3>
+    <p>
+     异步函数实际上原理与 Promise 原生 API 的机制是一模一样的，只不过更
+     <strong>
+      便于阅读。
+     </strong>
+    </p>
+    <p>
+     相当于promise用法的
+     <strong>
+      语法糖，async/await实际上是对Generator（生成器）的封装
+     </strong>
+     。
+    </p>
+    <p>
+     ES6 引入了 Generator 函数，被ES7 提出的async/await取代了，
+    </p>
+    <p>
+     将Generator函数的星号 * 替换成async，将yield替换成await。
+    </p>
+    <p>
+     相对于Generator函数的改进：
+     <strong>
+      自带执行器
+     </strong>
+     ，会自动执行。
+    </p>
+    <p>
+     <code>
+      await
+     </code>
+     规定了异步操作只能一个一个排队执行，从而达到
+     <strong>
+      用同步方式，执行异步操作
+     </strong>
+     的效果
+    </p>
+    <pre><code class="language-javascript">Promise.resolve(a)
+  .then(b =&gt; {
+    // do something
+  })
+  .then(c =&gt; {
+    // do something
+  })
+
+//等价于
+async () =&gt; {
+  const a = await Promise.resolve(a);
+  const b = await Promise.resolve(b);
+  const c = await Promise.resolve(c);
+}
+</code></pre>
+    <p>
+     <strong>
+      <code>
+       async
+      </code>
+      关键字+函数
+     </strong>
+     <strong>
+      ，表明该函数内部有异步
+     </strong>
+     操作
+     <strong>
+      。
+     </strong>
+    </p>
+    <p>
+     函数
+     <strong>
+      返回
+     </strong>
+     的是一个状态为
+     <strong>
+      <code>
+       fulfilled
+      </code>
+     </strong>
+     的
+     <strong>
+      Promise对象
+     </strong>
+     ，
+    </p>
+    <p>
+     如果结果是
+     <strong>
+      值
+     </strong>
+     ，会经过
+     <strong>
+      Promise包装
+     </strong>
+     返回。
+     <br/>
+     如果是
+     <strong>
+      promise则会等待promaise 返回结果，否则，
+     </strong>
+     就直接
+     <strong>
+      返回对应的值，
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      await
+     </strong>
+     <strong>
+      操作符
+     </strong>
+     +
+     <strong>
+      promise对象
+     </strong>
+     <strong>
+      ，
+     </strong>
+     用于组成
+     <strong>
+      表达式
+     </strong>
+    </p>
+    <p>
+     awai+
+     <strong>
+      值
+     </strong>
+     ，就会转到一个立即
+     <code>
+      resolve
+     </code>
+     的Promise对象。
+    </p>
+    <pre><code class="language-javascript">async function asyncFunc() {
+    let value = await new Promise(
+        function (resolve, reject) {
+            resolve("Return value");
+        }
+    );
+    console.log(value);
+}
+asyncFunc();</code></pre>
+    <p>
+     <strong>
+      await只能在async函数中出现, 普通函数直接使用会报语法错误
+     </strong>
+     SyntaxError
+    </p>
+    <p>
+     <strong>
+      await语句后的Promise对象变成reject状态时，那么整个async函数会中断，后面的程序不会继续执行
+     </strong>
+    </p>
+    <p>
+     处理异常的机制将用 try-catch 块实现
+    </p>
+    <pre><code class="language-javascript">async function asyncFunc() {
+    try {
+        await new Promise(function (resolve, reject) {
+            throw "Some error"; // 或者 reject("Some error")
+        });
+    } catch (err) {
+        console.log(err);
+        // 会输出 Some error
+    }
+}
+asyncFunc();</code></pre>
+    <p>
+     <a href="https://blog.csdn.net/xgangzai/article/details/81269989?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165194272716781435496611%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=165194272716781435496611&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-81269989-null-null.142%5Ev9%5Epc_search_result_cache,157%5Ev4%5Econtrol&amp;utm_term=async%E5%92%8Cawait&amp;spm=1018.2226.3001.4187" title="async和await的讲解_傲娇的koala的博客-CSDN博客_async await">
+      async和await的讲解_傲娇的koala的博客-CSDN博客_async await
+     </a>
+    </p>
+    <h3 id="SPA%E5%92%8CMPA">
+     SPA和MPA
+    </h3>
+    <ul>
+     <li>
+      爬虫在爬取的过程中，不会去执行js，所以隐藏在js中的跳转也不会获取到
+     </li>
+    </ul>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d59f4c53a995d703f2b28132e6e25883.jpeg"/>
+     ​
+    </p>
+    <p>
+     单页Web应用(single page web application，SPA)。
+    </p>
+    <p>
+     整个应用只有一个完整的页面。
+    </p>
+    <p>
+     点击页面中的链接不会刷新页面，只会做页面的
+     <strong>
+      局部更新
+     </strong>
+     。
+    </p>
+    <p>
+     数据都需要通过
+     <strong>
+      ajax请求
+     </strong>
+     获取,并在前端
+     <strong>
+      异步
+     </strong>
+     展现
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_45271323/article/details/106091721?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167812160416800215022160%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167812160416800215022160&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-106091721-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=spa%E5%92%8Cmpa&amp;spm=1018.2226.3001.4187" title="SPA和MPA的区别_糖果的小九的博客-CSDN博客">
+      SPA和MPA的区别_糖果的小九的博客-CSDN博客
+     </a>
+    </p>
+    <h2 id="URL">
+     <a href="https://juejin.cn/post/6844903705809010696#comment" rel="nofollow" title="URL">
+      URL
+     </a>
+    </h2>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d6e1d19fc6db90b32519f0a78654ce53.jpeg"/>
+    </p>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        字符串
+       </th>
+       <th>
+        说明
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        ://
+       </td>
+       <td>
+        协议符号
+       </td>
+      </tr>
+      <tr>
+       <td>
+        /
+       </td>
+       <td>
+        分隔目录和子目录
+       </td>
+      </tr>
+      <tr>
+       <td>
+        测试
+       </td>
+       <td>
+        代表需要编译处理了的路径
+       </td>
+      </tr>
+      <tr>
+       <td>
+        ？
+       </td>
+       <td>
+        分隔实际的URL和参数
+       </td>
+      </tr>
+      <tr>
+       <td>
+        &amp;
+       </td>
+       <td>
+        URL中指定的参数间的
+        <strong>
+         分隔符
+        </strong>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        =
+       </td>
+       <td>
+        左边为参数名、右边参数值
+       </td>
+      </tr>
+      <tr>
+       <td>
+        搜&amp;索
+       </td>
+       <td>
+        搜索词含有中文，含有保留字段，需要编译
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <code>
+      #
+     </code>
+     符号的url就是一个 Fragment URL。
+     <code>
+      #
+     </code>
+     指定了网页中的一个位置
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/e9e8f9ed3d7e5b32079763d712715514.png"/>
+    </p>
+    <p>
+     浏览器就会查询网页中
+     <code>
+      name
+     </code>
+     属性值匹配
+     <code>
+      print
+     </code>
+     的
+     <code>
+      &lt;a&gt;
+     </code>
+     标签。即：
+     <code>
+      &lt;a name="print"&gt;&lt;/a&gt;
+     </code>
+     ，
+     <br/>
+     或者是
+     <code>
+      id
+     </code>
+     属性匹配
+     <code>
+      print
+     </code>
+     的
+     <code>
+      &lt;a&gt;
+     </code>
+     标签。即
+     <code>
+      &lt;a id="print"&gt;&lt;/a&gt;
+     </code>
+     <br/>
+     匹配后，浏览器会将该部分滚动到可视区域的顶部。
+    </p>
+    <p>
+     <code>
+      #
+     </code>
+     仅
+     <strong>
+      仅作用于浏览器
+     </strong>
+     ，它不会影响服务器端。所以http请求中不会包括
+     <code>
+      #
+     </code>
+     。
+     <br/>
+    </p>
+    <h3 id="URL%E5%92%8CURI">
+     <a href="https://juejin.cn/post/6844903937364099079" rel="nofollow" title="URL和URI">
+      URL和URI
+     </a>
+    </h3>
+    <p>
+     URL (Uniform Resource
+     <strong>
+      Locator
+     </strong>
+     ），统一资源定位符，对可以从互联网上得到的资源的
+     <strong>
+      位置
+     </strong>
+     和
+     <strong>
+      访问方法
+     </strong>
+     的一种简洁的表示，是互联网上标准
+     <strong>
+      资源唯一
+     </strong>
+     <strong>
+      的地址
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/799de593d8d1b1a8fb7a12ebbc1a8104.png"/>
+    </p>
+    <p>
+     URI(Uniform Resource
+     <strong>
+      Identifier
+     </strong>
+     )，统一资源标识符，结构如下
+    </p>
+    <pre><code> foo://example.com:8042/over/there?name=ferret#nose
+
+   \_/ \______________/ \________/\_________/ \__/
+
+    |         |              |         |        |
+
+  scheme     authority      path      query   fragment</code></pre>
+    <p>
+     URL 是 URI 的一个
+     <strong>
+      子集
+     </strong>
+     ， URL 同时说明
+     <strong>
+      访问方式
+     </strong>
+    </p>
+    <h2 id="%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1">
+     <a href="https://juejin.cn/post/6844903767226351623#heading-3" rel="nofollow" title="跨域通信">
+      跨域通信
+     </a>
+     ⭐⭐⭐
+    </h2>
+    <p>
+     所谓同源（域）就是两个页面具有相同的协议（protocol），主机（host）和端口号（port）
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/126f7f3413d0ce5e4f8f149e8cf09705.png"/>
+    </p>
+    <p>
+     ​
+    </p>
+    <p>
+     同源策略（Sameoriginpolicy）是一种约定，它是浏览器最核心也最基本的安全功能
+    </p>
+    <p>
+     如果缺少了同源策略，浏览器很容易受到XSS、CSRF等攻击。（跨域并不能完全阻止 CSRF，因为请求毕竟是发出去了。）
+    </p>
+    <p>
+     同源策略会阻止一个域的
+     <a href="https://so.csdn.net/so/search?q=javascript&amp;spm=1001.2101.3001.7020" title="javascript">
+      javascript
+     </a>
+     脚本和另外一个域的内容进行交互。
+    </p>
+    <p>
+     （
+     <strong>
+      服务端能收到请求并正常返回结果，只是结果被浏览器拦截了
+     </strong>
+     。）
+    </p>
+    <p>
+     服务器与服务器之间是可以通信的不受同源策略的影响：Nginx反向代理，proxy代理
+    </p>
+    <p>
+     <strong>
+      同源策略限制内容有：
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Cookie、LocalStorage
+      </strong>
+      、IndexedDB 等
+      <strong>
+       存储
+      </strong>
+      性内容
+     </li>
+     <li>
+      <strong>
+       DOM 节点
+      </strong>
+     </li>
+     <li>
+      <strong>
+       AJAX 请求
+      </strong>
+      发送后，结果被浏览器拦截了
+     </li>
+    </ul>
+    <p>
+     允许跨域加载资源的标签：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       script标签的跨域
+      </strong>
+      功能：
+      <code>
+       &lt;img src=XXX&gt;&lt;script src=XXX&gt;
+      </code>
+     </li>
+     <li>
+      规定
+      <strong>
+       外部脚本文件的 URL：
+      </strong>
+      <code>
+       &lt;link href=XXX&gt;
+      </code>
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      跨域的解决方案思路两种，绕过去和cors；
+     </p>
+     <ul>
+      <li>
+       <strong>
+        iframe
+       </strong>
+       方式
+       <strong>
+        可传递数据
+       </strong>
+       ，但组织和控制代码逻辑太
+       <strong>
+        复杂
+       </strong>
+       ，鸡肋；
+      </li>
+      <li>
+       <strong>
+        jsonp
+       </strong>
+       适合加载不同域名的
+       <strong>
+        js、css，img
+       </strong>
+       等
+       <strong>
+        静态资源
+       </strong>
+       ，现在浏览器
+       <strong>
+        兼容性高
+       </strong>
+       了，以及受限于仅get方式，
+       <strong>
+        逐步淘汰
+       </strong>
+       了；
+      </li>
+      <li>
+       <strong>
+        Nginx反向代理和nodejs中间件跨域
+       </strong>
+       原理都相似，是
+       <strong>
+        绕过去
+       </strong>
+       的方式，是从古至今
+       <strong>
+        通用
+       </strong>
+       的没完解决方案，适合
+       <strong>
+        前后端分离
+       </strong>
+       的前端项目调后端接口。都是搭建一个服务器，直接在服务器端请求HTTP接口，缺点也许是
+       <strong>
+        服务器压力大一点
+       </strong>
+       ，实际中那点压力根本不是大问题；同时反向代理更适合
+       <strong>
+        内部
+       </strong>
+       应用间访问和共享；
+      </li>
+      <li>
+       <strong>
+        cors
+       </strong>
+       才是
+       <strong>
+        真正
+       </strong>
+       的称得上跨域请求解决方案（支持
+       <strong>
+        所有类型的HTTP请求
+       </strong>
+       ，但浏览器
+       <strong>
+        IE10以下不支持
+       </strong>
+       ）适合做ajax各种跨域请求；
+      </li>
+      <li>
+       websocket都是
+       <strong>
+        HTML5新特性
+       </strong>
+       ，
+       <strong>
+        兼容性不是很好
+       </strong>
+       ，只适用于主流浏览器和IE10+。
+      </li>
+     </ul>
+    </blockquote>
+    <h3 id="JSONP%E8%B7%A8%E5%9F%9F">
+     <strong>
+      JSONP跨域
+     </strong>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h3>
+    <p>
+     <strong>
+      服务器与客户端跨源通信
+     </strong>
+     的
+     <strong>
+      常用
+     </strong>
+     方法。
+    </p>
+    <p>
+     JSONP（JSON With
+     <strong>
+      Padding
+     </strong>
+     ）是利用
+     <code>
+      &lt;script src=XXX&gt;跨域
+     </code>
+    </p>
+    <p>
+     因为是
+     <strong>
+      动态创建script标签
+     </strong>
+     ，所以它
+     <strong>
+      只支持get请求
+     </strong>
+     ，
+     <strong>
+      不支持post请求
+     </strong>
+     。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       优点
+      </strong>
+      ：
+     </li>
+    </ul>
+    <ol>
+     <li>
+      <strong>
+       简单
+      </strong>
+      适用，
+     </li>
+     <li>
+      <strong>
+       兼容低版本IE
+      </strong>
+      ，可以向
+      <strong>
+       不支持CORS
+      </strong>
+      的网站请求数据（ IE&lt;=9, Opera&lt;12, or Firefox&lt;3.5 ）
+     </li>
+    </ol>
+    <ul>
+     <li>
+      <strong>
+       不足
+      </strong>
+      ：
+     </li>
+    </ul>
+    <ol>
+     <li>
+      <strong>
+       只支持get请求，
+      </strong>
+     </li>
+     <li>
+      只支持跨域
+      <strong>
+       HTTP 请求
+      </strong>
+      不安全，可能遇到
+      <strong>
+       XSS攻击
+      </strong>
+      ，
+     </li>
+     <li>
+      不能解决
+      <strong>
+       不同域
+      </strong>
+      的两个页面之间如何进行
+      <strong>
+       Javascript 调用
+      </strong>
+     </li>
+    </ol>
+    <h4 id="%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0">
+     原生实现
+    </h4>
+    <pre><code class="language-html">&lt;script&gt;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+
+    // 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数
+    script.src = 'http://www.domain2.com:8080/login?user=admin&amp;callback=handleCallback';
+    document.head.appendChild(script);
+
+    // 回调执行函数
+    function handleCallback(res) {
+        alert(JSON.stringify(res));
+    }
+ &lt;/script&gt;</code></pre>
+    <ul>
+     <li>
+      src=跨域的API数据接口地址+向服务器传递该函数名（?问号传参
+     </li>
+    </ul>
+    <p>
+     ?user=admin&amp;callback=handleCallback）
+    </p>
+    <ul>
+     <li>
+      客户端声明一个回调函数，其
+      <strong>
+       函数名
+      </strong>
+      当做
+      <strong>
+       参数值
+      </strong>
+      ，要
+      <strong>
+       传递
+      </strong>
+      给跨域请求数据的
+      <strong>
+       服务器
+      </strong>
+      ，函数
+      <strong>
+       形参
+      </strong>
+      为要获取目标数据(
+      <strong>
+       服务器返回的data
+      </strong>
+      )。
+     </li>
+     <li>
+      服务器接收到请求后，查找数据库，把
+      <strong>
+       返回的data
+      </strong>
+      和传递进来的函数名拼接成一个字符串,
+     </li>
+     <li>
+      例如：传递进去的函数名是handleCallback，它准备好的数据是handleCallback
+      <code>
+       ('res')
+      </code>
+      。
+     </li>
+     <li>
+      服务器把准备的数据通过
+      <strong>
+       HTTP
+      </strong>
+      协议返回给客户端，客户端再调用执行之前声明的回调函数handleCallback，对返回的数据进行操作。
+     </li>
+    </ul>
+    <h4 id="%E5%B0%81%E8%A3%85JSONP">
+     封装JSONP
+    </h4>
+    <p>
+     在开发中可能会遇到多个 JSONP 请求的回调函数名是相同的，这时需封装一个 JSONP函数。
+    </p>
+    <pre><code class="language-javascript">// index.html
+function jsonp({ url, params, callback }) {
+  return new Promise((resolve, reject) =&gt; {
+
+    let script = document.createElement('script')
+    window[callback] = function(data) {
+      resolve(data)
+      document.body.removeChild(script)
+    }
+    //抽出参数，新建对象
+    params = { ...params, callback } // wd=b&amp;callback=show
+    let arrs = []
+    for (let key in params) {
+      arrs.push(`${key}=${params[key]}`)
+    }
+    script.src = `${url}?${arrs.join('&amp;')}`//拼接
+    document.body.appendChild(script)
+  })
+}
+jsonp({
+  url: 'http://localhost:3000/say',
+  params: { wd: 'Iloveyou' },
+  callback: 'show'
+}).then(data =&gt; {
+  console.log(data)
+})</code></pre>
+    <p>
+     向
+     <code>
+      http://localhost:3000/say?wd=Iloveyou&amp;callback=show
+     </code>
+     这个地址请求数据，然后后台返回
+     <code>
+      show('我不爱你')
+     </code>
+     ，最后会运行show()这个函数，打印出'我不爱你'
+    </p>
+    <pre><code class="language-javascript">// server.js
+let express = require('express')
+let app = express()
+app.get('/say', function(req, res) {
+  let { wd, callback } = req.query
+  console.log(wd) // Iloveyou
+  console.log(callback) // show
+  res.end(`${callback}('我不爱你')`)
+})
+app.listen(3000)</code></pre>
+    <h4 id="jQuery%E5%AE%9E%E7%8E%B0">
+     jQuery实现
+    </h4>
+    <p>
+     JSONP都是
+     <strong>
+      GET和异步
+     </strong>
+     请求的，不存在其他的请求方式和同步请求，
+    </p>
+    <p>
+     且jQuery
+     <strong>
+      默认
+     </strong>
+     就会给JSONP的请求
+     <strong>
+      清除缓存
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">$.ajax({
+url:"http://crossdomain.com/jsonServerResponse",
+dataType:"jsonp",
+type:"get",//可以省略
+jsonpCallback:"show",//-&gt;自定义传递给服务器的函数名，而不是使用jQuery自动生成的，可省略
+jsonp:"callback",//-&gt;把传递函数名的那个形参callback，可省略
+success:function (data){
+console.log(data);}
+});</code></pre>
+    <h3 id="%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%88CORS%EF%BC%89">
+     <strong>
+      <strong>
+       <a href="https://juejin.cn/post/6983852288091619342#comment" rel="nofollow" title="跨域资源共享（CORS）">
+        跨域资源共享（CORS）
+       </a>
+      </strong>
+     </strong>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h3>
+    <p>
+     Cross-Origin Resource Sharing W3C 标准 CORS（
+     <strong>
+      主流
+     </strong>
+     的解决方案，推荐使用）
+    </p>
+    <p>
+     允许浏览器
+     <strong>
+      向跨源服务器发送
+      <code>
+       XMLHttpRequest
+      </code>
+      请求
+     </strong>
+     ，从而
+     <strong>
+      克服
+     </strong>
+     了
+     <strong>
+      AJAX 只能同源
+     </strong>
+     使用的限制
+    </p>
+    <p>
+     属于
+     <strong>
+      跨源 AJAX 请求
+     </strong>
+     的
+     <strong>
+      根本解决
+     </strong>
+     方法，
+     <strong>
+      最常用
+     </strong>
+     的一种解决办法
+    </p>
+    <p>
+     目前，
+     <strong>
+      所有浏览器
+     </strong>
+     都支持该功能，
+     <strong>
+      IE浏览器不能低于IE10
+     </strong>
+    </p>
+    <p>
+     <strong>
+      CORS 需要浏览器和后端同时支持。IE 8 和 9 需要通过 XDomainRequest 来实现
+     </strong>
+     。
+    </p>
+    <p>
+     服务端设置 Access-Control-Allow-Origin 就可以开启 CORS。 该属性表示哪些域名可以访问资源，如果设置通配符则表示所有网站都可以访问资源。
+    </p>
+    <p>
+     CORS分为简单请求，非简单/复杂请求
+    </p>
+    <h4 id="%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82">
+     简单请求
+    </h4>
+    <p>
+     只要同时满足以下两大条件，就属于简单请求
+    </p>
+    <p>
+     条件1：使用下列方法之一：
+    </p>
+    <ul>
+     <li>
+      GET
+     </li>
+     <li>
+      HEAD
+     </li>
+     <li>
+      POST
+     </li>
+    </ul>
+    <p>
+     条件2：Content-Type 的值仅限于下列三者之一：
+    </p>
+    <ul>
+     <li>
+      text/xxx
+     </li>
+     <li>
+      multipart/form-data（
+      <strong>
+       键值对
+      </strong>
+      型数据）
+     </li>
+     <li>
+      application/x-www-form-urlencoded（
+      <strong>
+       URL
+      </strong>
+      encoded）（
+      <strong>
+       默认
+      </strong>
+      ）
+     </li>
+    </ul>
+    <p>
+     application/xml 、 text/xml、text/html、text/plain的区别
+    </p>
+    <p>
+     1、text/html是
+     <strong>
+      html格式
+     </strong>
+     的正文
+    </p>
+    <p>
+     2、text/plain是
+     <strong>
+      无格式
+     </strong>
+     正文(可以有效避免
+     <strong>
+      XSS
+     </strong>
+     漏洞)
+    </p>
+    <p>
+     3、text/xml
+     <strong>
+      忽略
+     </strong>
+     xml头所指定编码格式而默认采用us-
+     <strong>
+      ascii
+     </strong>
+     编码
+    </p>
+    <p>
+     4、application/xml会根据xml头指定的编码格式来编码：
+    </p>
+    <p>
+    </p>
+    <p>
+     请求中的任意
+     <strong>
+      XMLHttpRequestUpload 对象
+     </strong>
+     均
+     <strong>
+      没有注册
+     </strong>
+     任何
+     <strong>
+      事件监听器
+     </strong>
+     ；
+    </p>
+    <p>
+     XMLHttpRequestUpload 对象可以使用
+     <strong>
+      XMLHttpRequest.upload 属性访问
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">GET /cors? HTTP/1.1
+Host: localhost:2333
+Connection: keep-alive
+Origin: http://localhost:2332
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+Accept: */*
+Referer: http://localhost:2332/CORS.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+If-None-Match: W/"1-NWoZK3kTsExUV00Ywo1G5jlUKKs"
+</code></pre>
+    <h4 id="%E6%99%AE%E9%80%9A%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82">
+     <strong>
+      普通跨域请求
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      只需服务器端设置Access-Control-Allow-Origin（
+     </strong>
+     表示接受那些域名的请求(*为所有)
+     <strong>
+      ）
+     </strong>
+    </p>
+    <pre><code class="language-javascript">Access-Control-Allow-Origin: http://api.bob.com
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: FooBar
+Content-Type: text/html; charset=utf-8</code></pre>
+    <h4 id="%E5%B8%A6cookie%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82">
+     <strong>
+      <strong>
+       <a href="https://juejin.cn/post/7066420545327218725#heading-6" rel="nofollow" title="带cookie跨域请求">
+        带cookie跨域请求
+       </a>
+      </strong>
+     </strong>
+     （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <p>
+     <strong>
+      前后端都需要进行设置
+     </strong>
+    </p>
+    <p>
+     <em>
+      Access-Control-Allow-Credentials
+     </em>
+     值为true时,Access-Control-Allow-Origin必须有明确的值,不能是通配符(*)
+    </p>
+    <p>
+     withCredentials 表示
+     <strong>
+      跨域请求是否提供凭据信息
+     </strong>
+     (cookie、HTTP认证及客户端SSL证明等)
+    </p>
+    <h4 id="cors%E4%B8%AD%E9%97%B4%E4%BB%B6">
+     <strong>
+      cors中间件
+     </strong>
+    </h4>
+    <p>
+     cors是Express的一个第三方中间件
+     <br/>
+     使用的步骤分为如下三步：
+     <br/>
+     1.运行 npm install cors 安装中间件
+     <br/>
+     2.使用const cores = require(‘cors’) 导入中间件
+     <br/>
+     3.在路由之前调用app.use(cors())配置中间件
+    </p>
+    <h4 id="%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82">
+     复杂请求
+    </h4>
+    <p>
+     在正式通信之前，增加一次HTTP
+     <strong>
+      查询
+     </strong>
+     请求，称为"预检"请求,该请求是
+     <strong>
+      option
+     </strong>
+     方法的，通过该请求来知道
+     <strong>
+      服务端是否允许
+     </strong>
+     跨域请求。
+    </p>
+    <p>
+     用
+     <strong>
+      <code>
+       PUT
+      </code>
+     </strong>
+     向后台请求时，后台需做如下配置：
+    </p>
+    <pre><code class="language-javascript">// 允许哪个方法访问我
+res.setHeader('Access-Control-Allow-Methods', 'PUT')
+// 预检的存活时间
+res.setHeader('Access-Control-Max-Age', 6)
+// OPTIONS请求不做任何处理
+if (req.method === 'OPTIONS') {
+  res.end() 
+}
+// 定义后台返回的内容
+app.put('/getData', function(req, res) {
+  console.log(req.headers)
+  res.end('我不爱你')
+})</code></pre>
+    <p>
+     完整复杂请求的例子，并且介绍下CORS请求相关的字段：
+    </p>
+    <pre><code class="language-javascript">// index.html
+let xhr = new XMLHttpRequest()
+document.cookie = 'name=xiamen' // cookie不能跨域
+xhr.withCredentials = true // 前端设置是否带cookie
+xhr.open('PUT', 'http://localhost:4000/getData', true)
+xhr.setRequestHeader('name', 'xiamen')
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4) {
+    if ((xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) || xhr.status === 304) {
+      console.log(xhr.response)
+      //得到响应头，后台需设置Access-Control-Expose-Headers
+      console.log(xhr.getResponseHeader('name'))
+    }
+  }
+}
+xhr.send()</code></pre>
+    <pre><code class="language-javascript">//server1.js
+let express = require('express');
+let app = express();
+app.use(express.static(__dirname));
+app.listen(3000);</code></pre>
+    <pre><code class="language-javascript">//server2.js
+let express = require('express')
+let app = express()
+let whitList = ['http://localhost:3000'] //设置白名单
+app.use(function(req, res, next) {
+  let origin = req.headers.origin
+  if (whitList.includes(origin)) {
+    // 设置哪个源可以访问我
+    res.setHeader('Access-Control-Allow-Origin', origin)
+    // 允许携带哪个头访问我
+    res.setHeader('Access-Control-Allow-Headers', 'name')
+    // 允许哪个方法访问我
+    res.setHeader('Access-Control-Allow-Methods', 'PUT')
+    // 允许携带cookie
+    res.setHeader('Access-Control-Allow-Credentials', true)
+    // 预检的存活时间
+    res.setHeader('Access-Control-Max-Age', 6)
+    // 允许返回的头
+    res.setHeader('Access-Control-Expose-Headers', 'name')
+    if (req.method === 'OPTIONS') {
+      res.end() // OPTIONS请求不做任何处理
+    }
+  }
+  next()
+})
+app.put('/getData', function(req, res) {
+  console.log(req.headers)
+  res.setHeader('name', 'jw') //返回一个响应头，后台需设置
+  res.end('我不爱你')
+})
+app.get('/getData', function(req, res) {
+  console.log(req.headers)
+  res.end('我不爱你')
+})
+app.use(express.static(__dirname))
+app.listen(4000)</code></pre>
+    <p>
+     上述代码由
+     <code>
+      http://localhost:3000/index.html
+     </code>
+     向
+     <code>
+      http://localhost:4000/
+     </code>
+     跨域请求，
+     <strong>
+      后端是实现 CORS 通信的关键
+     </strong>
+     。
+    </p>
+    <h4 id="postMessage">
+     postMessage
+    </h4>
+    <p>
+     HTML5 XMLHttpRequest Level 2中的API，且是为数不多可以
+     <strong>
+      跨域操作的window属
+     </strong>
+     性之一
+    </p>
+    <ul>
+     <li>
+      <strong>
+       页面
+      </strong>
+      和其打开的
+      <strong>
+       新窗口
+      </strong>
+      的数据传递
+     </li>
+     <li>
+      <strong>
+       多窗口
+      </strong>
+      之间消息传递
+     </li>
+     <li>
+      页面与嵌套的iframe消息传递
+     </li>
+     <li>
+      上面三个场景的跨域数据传递
+     </li>
+    </ul>
+    <p>
+     postMessage()方法允许来自
+     <strong>
+      不同源的脚本
+     </strong>
+     采用
+     <strong>
+      异步
+     </strong>
+     方式进行
+     <strong>
+      有限
+     </strong>
+     的通信，
+    </p>
+    <p>
+     可以实现
+     <strong>
+      跨文本档、多窗口、跨域
+     </strong>
+     消息传递。
+    </p>
+    <blockquote>
+     <p>
+      otherWindow.postMessage(message, targetOrigin, [transfer]);
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      message: 将要发送到其他 window的数据。
+     </li>
+     <li>
+      targetOrigin:通过窗口的origin属性来指定哪些窗口能接收到消息事件，其值可以是字符串"*"（表示无限制）或者一个URI。
+     </li>
+     <li>
+      transfer(可选)：是一串和message 同时传递的 Transferable 对象. 这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。
+     </li>
+    </ul>
+    <p>
+     <code>
+      http://localhost:3000/a.html
+     </code>
+     页面向
+     <code>
+      http://localhost:4000/b.html
+     </code>
+     传递“我爱你”,然后后者传回"我不爱你"。
+    </p>
+    <pre><code class="language-html">// a.html
+//内联框架元素 (&lt;iframe&gt;) 表示嵌套的browsing context。将另一个 HTML 页面嵌入到当前页面中。
+  &lt;iframe src="http://localhost:4000/b.html" frameborder="0" id="frame" onload="load()"&gt;&lt;/iframe&gt; //等它加载完触发一个事件
+  //内嵌在http://localhost:3000/a.html
+    &lt;script&gt;
+      function load() {
+        let frame = document.getElementById('frame')
+        frame.contentWindow.postMessage('我爱你', 'http://localhost:4000') //发送数据
+        window.onmessage = function(e) { //接受返回数据
+          console.log(e.data) //我不爱你
+        }
+      }
+    &lt;/script&gt;</code></pre>
+    <pre><code class="language-javascript">// b.html
+  window.onmessage = function(e) {
+    console.log(e.data) //我爱你
+    e.source.postMessage('我不爱你', e.origin)
+ }</code></pre>
+    <h3 id="%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8">
+     代理服务器
+    </h3>
+    <p>
+     前端配置一个代理服务器代替浏览器去发送请求:
+    </p>
+    <p>
+     因为服务器与服务器之间是可以通信的不受同源策略的影响。
+    </p>
+    <h3 id="proxy">
+     <strong>
+      <strong>
+       <a href="https://juejin.cn/post/7182084369454989349#heading-3" rel="nofollow" title="proxy代理服务器（ES6）">
+        proxy代理服务器（ES6）
+       </a>
+      </strong>
+     </strong>
+    </h3>
+    <p>
+     <code>
+      target
+     </code>
+     表示所要拦截的目标对象（
+     <strong>
+      任何类型的对象
+     </strong>
+     ，包括原生数组，函数，甚至另一个
+     <strong>
+      代理
+     </strong>
+     ）
+    </p>
+    <p>
+     <code>
+      handler
+     </code>
+     通常以
+     <strong>
+      函数
+     </strong>
+     作为属性的对象，各属性中的函数分别定义了在执行各种操作时的代理行为
+    </p>
+    <pre><code class="language-javascript">const p = new Proxy(target, handler)</code></pre>
+    <h4 id="Reflect%EF%BC%88ES6%EF%BC%89">
+     Reflect（ES6）
+    </h4>
+    <p>
+     <code>
+      ES6
+     </code>
+     中操作对象而提供的新
+     <code>
+      API
+     </code>
+     ，若需要在
+     <strong>
+      <code>
+       Proxy
+      </code>
+      内部调用对象
+     </strong>
+     的默认行为，建议使用
+     <code>
+      Reflect
+     </code>
+    </p>
+    <ul>
+     <li>
+      只要
+      <code>
+       Proxy
+      </code>
+      对象具有的代理方法，
+      <code>
+       Reflect
+      </code>
+      对象全部具有，以
+      <strong>
+       静态方法
+      </strong>
+      的形式存在
+     </li>
+     <li>
+      修改某些
+      <code>
+       Object
+      </code>
+      方法的返回结果，让其变得更合理（定义
+      <strong>
+       不存在
+      </strong>
+      属性行为的时候不报错而是返回
+      <strong>
+       <code>
+        false
+       </code>
+      </strong>
+      ）
+     </li>
+     <li>
+      让
+      <strong>
+       <code>
+        Object
+       </code>
+       操作
+      </strong>
+      都变成
+      <strong>
+       函数
+      </strong>
+      行为
+     </li>
+    </ul>
+    <h4 id="handler%E6%8B%A6%E6%88%AA%E5%B1%9E%E6%80%A7">
+     <code>
+      handler
+     </code>
+     拦截属性
+    </h4>
+    <p>
+     target,propKey,value,receiver:目标对象、属性名、属性值
+     <code>
+      proxy
+     </code>
+     实例本身
+    </p>
+    <p>
+     以下为关键属性
+    </p>
+    <h4 id="get(target%2CpropKey%2Creceiver)">
+     get(target,propKey,receiver)
+    </h4>
+    <p>
+     拦截对象属性的读取
+    </p>
+    <pre><code class="language-javascript">let person = {
+  name: "Guest"
+};
+let proxy = new Proxy(person, {
+  get: function(target, propKey, receiver) {
+    return Reflect.get(target, propKey, receiver)
+    // or
+    // return target[propKey]
+  }
+});
+
+proxy.name // "Guest"</code></pre>
+    <p>
+     <code>
+      get
+     </code>
+     能够对数组
+     <strong>
+      增删改查进行拦截
+     </strong>
+     ，将读取数组负数的索引
+    </p>
+    <pre><code class="language-javascript">function createArray(...elements) {
+  //handler对象
+  let handler = {
+    //get函数属性
+    get(target, propKey, receiver) {
+
+      let index = Number(propKey);
+    //实现循环索引
+      if (index &lt; 0) {
+        propKey = String(target.length + index);
+      }
+
+      return Reflect.get(target, propKey, receiver);
+    }
+  };
+
+  let target = [];
+  target.push(...elements);
+  return new Proxy(target, handler);
+}
+
+let arr = createArray('a', 'b', 'c');
+arr[-1] // c</code></pre>
+    <h4 id="set(target%2CpropKey%2Cvalue%2Creceiver)">
+     set(target,propKey,value,receiver)
+    </h4>
+    <p>
+     拦截对象属性的设置
+    </p>
+    <p>
+     现定义一个对象 规定 年龄输入整数时才被赋值，访问无效属性时控制台提醒
+    </p>
+    <pre><code class="language-javascript">const obj = { name: "张三", age: 18 };
+
+const proxy = new Proxy(obj, {
+
+    get(target, prop) {
+      if (prop in target) {
+        return Reflect.get(target, prop);
+      } else {
+        console.error("字段不存在")
+        return undefined;
+      }
+    },
+
+    set(target, propKey, value, receiver) {
+
+      if (propKey === "age") {
+        if (typeof value === "number") {
+          return Reflect.set(target, propKey, value, receiver);
+          // or
+          // target[propKey] = value 
+          // return true
+        } else {
+          console.error("年龄只能输入正整数");
+          return false;
+        }
+
+      } else {
+        return false;
+      }
+    }
+});
+
+proxy.age = 20;  
+console.log(proxy.age);  // 20
+proxy.age = "22";
+console.log(proxy.age);  // 20
+console.log(proxy.test); // undefined</code></pre>
+    <h4 id="deleteProperty(target%2CpropKey)">
+     deleteProperty(target,propKey)
+    </h4>
+    <p>
+     拦截
+     <code>
+      delete proxy[propKey]
+     </code>
+     的操作，返回一个布尔值
+    </p>
+    <p>
+     如果这个方法抛出错误或者返回
+     <code>
+      false
+     </code>
+     ，当前属性就无法被
+     <code>
+      delete
+     </code>
+     命令删除
+    </p>
+    <pre><code class="language-javascript">function invariant (key, action) {
+  if (key[0] === '_') {
+    throw new Error(`无法删除私有属性`);
+  }
+}
+
+var handler = {
+  deleteProperty (target, key) {
+    invariant(key, 'delete');
+    Reflect.deleteProperty(target,key)
+    return true;
+  }
+};
+
+
+var target = { _prop: 'foo' };
+var proxy = new Proxy(target, handler);
+delete proxy._prop
+// Error: 无法删除私有属性</code></pre>
+    <h4 id="%E5%8F%96%E6%B6%88%E4%BB%A3%E7%90%86Proxy.revocable(target%2C%20handler)">
+     取消代理Proxy.revocable(target, handler)
+    </h4>
+    <pre><code class="language-javascript">Proxy.revocable(target, handler);</code></pre>
+    <h4>
+     应用
+    </h4>
+    <p>
+     类似于设计模式中的
+     <strong>
+      代理
+     </strong>
+     模式，常用功能如下：
+    </p>
+    <ul>
+     <li>
+      拦截和监视外部对对象的访问
+     </li>
+     <li>
+      降低函数或类的复杂度
+     </li>
+     <li>
+      在复杂操作前对操作进行
+      <strong>
+       校验
+      </strong>
+      或对所需资源进行管理
+     </li>
+    </ul>
+    <p>
+     使用
+     <code>
+      Proxy
+     </code>
+     保障数据类型的准确性
+    </p>
+    <pre><code class="language-javascript">let data = { num: 0 };
+data = new Proxy(data, {
+    set(target, key, value, proxy) {
+        if (typeof value !== 'number') {
+            throw Error("属性只能是number类型");
+        }
+        return Reflect.set(target, key, value, proxy);
+    }
+});
+
+data.num = "foo"
+// Error: 属性只能是number类型
+data.num = 1
+// 赋值成功
+</code></pre>
+    <p>
+     声明一个私有的
+     <code>
+      apiKey
+     </code>
+     ，便于
+     <code>
+      api
+     </code>
+     这个对象内部的方法调用
+    </p>
+    <pre><code class="language-javascript">let api = {
+    _apiKey: 'kafakakafaka',
+};
+//私有属性名 常量数组
+const RESTRICTED = ['_apiKey'];
+
+api = new Proxy(api, {
+    get(target, key, receiver) {
+        if(RESTRICTED.indexOf(key) &gt; -1) {
+            throw Error(`${key} 不可访问.`);
+        } 
+        return Reflect.get(target, key, receiver);
+    },
+    set(target, key, value, receiver) {
+        if(RESTRICTED.indexOf(key) &gt; -1) {
+            throw Error(`${key} 不可修改`);
+        }
+        return Reflect.set(target, key, value, receiver);
+    }
+});
+
+console.log(api._apiKey)
+api._apiKey = '987654321'
+// 上述都抛出错误</code></pre>
+    <p>
+     观察者模式（Observer mode）：函数
+     <strong>
+      自动观察
+     </strong>
+     数据对象，一旦对象有变化，函数就会自动执行
+    </p>
+    <p>
+     <code>
+      observable
+     </code>
+     函数返回一个原始对象的
+     <code>
+      Proxy
+     </code>
+     代理，拦截赋值操作，触发充当观察者的各个函数
+    </p>
+    <pre><code class="language-javascript">//观察者函数都放进Set集合
+const queuedObservers = new Set();
+
+const observe = fn =&gt; queuedObservers.add(fn);
+const observable = obj =&gt; new Proxy(obj, {set});
+
+//当修改obj的值，在会set函数中拦截
+function set(target, key, value, receiver) {
+  const result = Reflect.set(target, key, value, receiver);
+  //自动执行Set所有的观察者
+  queuedObservers.forEach(observer =&gt; observer());
+  return result;
+}
+</code></pre>
+    <h3 id="Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">
+     <strong>
+      Nginx反向代理
+     </strong>
+    </h3>
+    <p>
+     nginx代理跨域，实质和
+     <strong>
+      CORS跨域原理
+     </strong>
+     一样，通过配置文件设置
+     <strong>
+      请求响应头Access-Control-Allow-Origin.
+     </strong>
+     ..等字段。
+    </p>
+    <p>
+     <a href="https://blog.csdn.net/qq_40036754/article/details/102463099?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167814979916800213064154%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=167814979916800213064154&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-102463099-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=nginx&amp;spm=1018.2226.3001.4187" title="Nginx">
+      Nginx
+     </a>
+     是高性能的 HTTP 和
+     <a href="https://so.csdn.net/so/search?q=%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86&amp;spm=1001.2101.3001.7020" title="反向代理">
+      反向代理
+     </a>
+     的web服务器
+    </p>
+    <p>
+     是最简单的跨域方式，只需要修改
+     <strong>
+      nginx 的配置
+     </strong>
+     即可解决跨域问题
+    </p>
+    <ol>
+     <li>
+      node中间件和nginx反向代理，都是搭建一个中转 nginx 服务器，用于
+      <strong>
+       转发请求
+      </strong>
+      。
+     </li>
+     <li>
+      请求发给代理服务器，
+      <strong>
+       静态页面
+      </strong>
+      和
+      <strong>
+       代理服务器是同源
+      </strong>
+      的，
+     </li>
+     <li>
+      代理服务器再向后端服务器发请求，
+      <strong>
+       服务器和服务器
+      </strong>
+      之间
+      <strong>
+       不存在同源限制
+      </strong>
+      。
+     </li>
+    </ol>
+    <h4 id="%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">
+     正向代理和反向代理
+    </h4>
+    <p>
+     正向代理是
+     <strong>
+      代理用户客户端
+     </strong>
+     ，为客户端发送请求，对服务器
+     <strong>
+      隐藏真实客户端
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="472" src="https://i-blog.csdnimg.cn/blog_migrate/b4a5939ad34de5b6b16a47d241a18f93.png" width="702"/>
+     ​
+    </p>
+    <p>
+     反向代理以
+     <strong>
+      代理服务器
+     </strong>
+     来接收客户端的请求，然后将请求转发给内部网络上的服务器，将从服务器上得到的结果返回给客户端。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/c513827522718b3aa0a0f158e24dd0e5.png"/>
+     ​
+    </p>
+    <p>
+     正向代理主要是用来解决
+     <strong>
+      访问限制
+     </strong>
+     问题;
+    </p>
+    <p>
+     反向代理则是提供
+     <strong>
+      负载均衡、安全防护
+     </strong>
+     等作用。
+    </p>
+    <h3 id="websocket%E5%8D%8F%E8%AE%AE">
+     <strong>
+      websocket协议
+     </strong>
+    </h3>
+    <p>
+     HTML5 的一个
+     <strong>
+      持久化
+     </strong>
+     的协议，它实现了
+     <strong>
+      浏览器与服务器
+     </strong>
+     的
+     <strong>
+      全双工通信
+     </strong>
+    </p>
+    <p>
+     <strong>
+      WebSocket
+     </strong>
+     和
+     <strong>
+      HTTP
+     </strong>
+     都是
+     <strong>
+      应用层协议
+     </strong>
+     ，都基于
+     <strong>
+      TCP 协议
+     </strong>
+     。
+    </p>
+    <p>
+     WebSocket 在建
+     <strong>
+      立连接时需要借助 HTTP 协议
+     </strong>
+     ，连接建立好了之后 client 与 server 之间的双向通信就与 HTTP 无关了
+    </p>
+    <p>
+     原生WebSocket API使用起来不太方便
+    </p>
+    <p>
+     <code>
+      Socket.io
+     </code>
+     ，它很好地封装了webSocket接口，提供了更简单、灵活的接口，也对不支持webSocket的浏览器提供了
+     <strong>
+      向下兼容
+     </strong>
+     。
+    </p>
+    <p>
+     本地文件socket.html向
+     <code>
+      localhost:3000
+     </code>
+     发生数据和接受数据：
+    </p>
+    <pre><code class="language-javascript">// socket.html
+&lt;script&gt;
+    let socket = new WebSocket('ws://localhost:3000');
+    socket.onopen = function () {
+      socket.send('我爱你');//向服务器发送数据
+    }
+    socket.onmessage = function (e) {
+      console.log(e.data);//接收服务器返回的数据
+    }
+&lt;/script&gt;</code></pre>
+    <pre><code class="language-javascript">// server.js
+let express = require('express');
+let app = express();
+let WebSocket = require('ws');//记得安装ws
+let wss = new WebSocket.Server({port:3000});
+wss.on('connection',function(ws) {
+  ws.on('message', function (data) {
+    console.log(data);
+    ws.send('我不爱你')
+  });
+})</code></pre>
+    <h2>
+     web安全及防护
+    </h2>
+    <h3 id="XSS%E6%94%BB%E5%87%BB">
+     <strong>
+      XSS攻击
+     </strong>
+    </h3>
+    <p>
+     <strong>
+      跨站脚本攻击
+      <code>
+       Cross-Site Scripting，
+      </code>
+     </strong>
+     代码注入攻击。
+    </p>
+    <p>
+     当被攻击者
+     <strong>
+      登陆网站时
+     </strong>
+     就会执行这些恶意代码，这些脚本可以
+     <strong>
+      读取 cookie，session tokens
+     </strong>
+     ，或者其它敏感的网站信息，对用户进行钓鱼欺诈，甚至发起蠕虫攻击等。
+    </p>
+    <ul>
+     <li>
+      解决：
+     </li>
+    </ul>
+    <p>
+     url参数使用encodeURIComponent方法
+     <strong>
+      转义
+     </strong>
+    </p>
+    <p>
+     尽量
+     <strong>
+      不用InnerHtml插入HTML内容
+     </strong>
+    </p>
+    <p>
+     使用特殊符号、标签转义符。
+    </p>
+    <h3 id="CSRF%E6%94%BB%E5%87%BB%E2%AD%90%E2%AD%90%E2%AD%90%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B">
+     <strong>
+      <strong>
+       <a href="https://blog.csdn.net/stpeace/article/details/53512283?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168053034916800225514781%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168053034916800225514781&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-53512283-null-null.142%5Ev81%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=Csrf%E6%94%BB%E5%87%BB&amp;spm=1018.2226.3001.4187" title="CSRF攻击">
+        CSRF攻击
+       </a>
+      </strong>
+     </strong>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t38" title="⭐">
+      ⭐
+     </a>
+    </h3>
+    <p>
+     <strong>
+      跨站请求伪造
+     </strong>
+     Cross-site request forgery，在第三方网站中，向被攻击网站发送跨站请求。
+    </p>
+    <p>
+     利用用户在被攻击网站已经获取的注册凭证，绕过后台的用户验证，达到冒充用户对被攻击的网站执行某项操作的目的。
+    </p>
+    <ul>
+     <li>
+      解决：添加
+      <strong>
+       验证码
+      </strong>
+      、使用
+      <strong>
+       token
+      </strong>
+     </li>
+    </ul>
+    <h3 id="SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B">
+     <strong>
+      SQL注入攻击
+     </strong>
+    </h3>
+    <p>
+     <strong>
+      SQL命令插入到Web表单递交或输入域名，最终达到欺骗服务器执行恶意的SQL命令。
+     </strong>
+    </p>
+    <p>
+     解决：表单输入时通过正则表达式将一些
+     <strong>
+      特殊字符进行转换
+     </strong>
+    </p>
+    <h3 id="DDoS%E6%94%BB%E5%87%BB">
+     <strong>
+      <code>
+       DDoS攻击
+      </code>
+     </strong>
+    </h3>
+    <p>
+     <strong>
+      分布式拒绝服务，全称
+      <code>
+       Distributed Denial of Service
+      </code>
+      ，
+     </strong>
+     其原理就是利用
+     <strong>
+      大量的请求
+     </strong>
+     造成
+     <strong>
+      资源过载
+     </strong>
+     ，导致服务不可用。
+    </p>
+    <p>
+     <strong>
+      解决：
+     </strong>
+    </p>
+    <ol>
+     <li>
+      <p>
+       限制
+       <strong>
+        单IP
+       </strong>
+       请求频率。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        防火墙
+       </strong>
+       等防护设置禁止
+       <code>
+        ICMP
+       </code>
+       包等
+      </p>
+     </li>
+     <li>
+      <p>
+       检查
+       <strong>
+        特权端口
+       </strong>
+       的开放
+      </p>
+     </li>
+    </ol>
+    <p>
+     考试时允许使用草稿纸，请提前准备纸笔。考试过程中允许上厕所等短暂离开，但请控制离开时间
+    </p>
+    <p>
+     笔试得分60%一般通过，面试答对80%才能通过
+    </p>
+    <h2 id="main-toc">
+     考试范围收录
+    </h2>
+    <p>
+     选择题总集合={前端，计算机基础（数据库，操作系统，数据结构与算法，计算机网络），行测}；
+    </p>
+    <p>
+     编程题总集合={常规算法（到具体情景），js手写，Dom操作}
+    </p>
+    <p>
+     例如：
+    </p>
+    <ul>
+     <li>
+      美团：前端，计算机基础，行测，常规算法（前端：计算机基础=1:1）
+     </li>
+     <li>
+      小红书：前端，计算机基础，常规算法（前端：计算机基础=3：1）
+     </li>
+     <li>
+      SHINE：前端，js手写
+     </li>
+     <li>
+      携程，京东：是先行测
+     </li>
+     <li>
+      百度：前端，计算机基础，常规算法，Dom操作
+     </li>
+    </ul>
+    <h2 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E9%80%89%E6%8B%A9%E9%A2%98%EF%BC%89">
+     选择题
+    </h2>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t1" title="⭐">
+      ⭐
+     </a>
+     是常考考点，其他是作为理解原理的补充，原理部分在大厂笔面试中会考到
+    </p>
+    <h2 id="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">
+     <a href="https://juejin.cn/post/6844904032826294286#heading-4" rel="nofollow" title="常用设计模式">
+      常用设计模式
+     </a>
+    </h2>
+    <h3 id="%E5%8E%9F%E5%88%99">
+     原则
+    </h3>
+    <ul>
+     <li>
+      <strong>
+       S – Single Responsibility Principle 单一职责原则
+      </strong>
+      <ul>
+       <li>
+        一个程序只做好一件事
+       </li>
+       <li>
+        如果功能过于复杂就拆分开，每个部分保持独立
+       </li>
+       <li>
+        例如：Promise每个then中的逻辑只做好一件事
+       </li>
+      </ul>
+     </li>
+     <li>
+      <strong>
+       O – OpenClosed Principle 开放/封闭原则
+      </strong>
+      <ul>
+       <li>
+        <strong>
+         对扩展开放，对修改封闭
+        </strong>
+       </li>
+       <li>
+        增加需求时，扩展新代码，而非修改已有代码
+       </li>
+       <li>
+        例如：Promise如果新增需求，扩展then
+       </li>
+      </ul>
+     </li>
+     <li>
+      L – Liskov Substitution Principle 里氏替换原则
+      <ul>
+       <li>
+        子类能覆盖父类
+       </li>
+       <li>
+        <strong>
+         父类能出现
+        </strong>
+        的地方子类就能出现
+       </li>
+      </ul>
+     </li>
+     <li>
+      I – Interface Segregation Principle
+      <strong>
+       接口隔离
+      </strong>
+      原则
+      <ul>
+       <li>
+        保持
+        <strong>
+         接口的单一独立
+        </strong>
+       </li>
+       <li>
+        类似单一职责原则，这里更关注接口
+       </li>
+      </ul>
+     </li>
+     <li>
+      D – Dependency Inversion Principle 依赖倒转原则
+      <ul>
+       <li>
+        <strong>
+         面向接口
+        </strong>
+        编程，依赖于抽象而不依赖于具体
+       </li>
+       <li>
+        使用方只关注接口而不关注具体类的实现
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">//checkType('165226226326','mobile')
+//result：false
+let checkType=function(str, type) {
+    switch (type) {
+        case 'email':
+            return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(str)
+        case 'mobile':
+            return /^1[3|4|5|7|8][0-9]{9}$/.test(str);
+        case 'tel':
+            return /^(0\d{2,3}-\d{7,8})(-\d{1,4})?$/.test(str);
+        default:
+            return true;
+    }
+}
+</code></pre>
+    <p>
+     想添加其他规则就得在函数里面增加 case 。违反了开放-封闭原则（对扩展开放，对修改关闭）
+    </p>
+    <p>
+     给 API 增加一个扩展的接口:
+    </p>
+    <pre><code class="language-javascript">let checkType=(function(){
+    let rules={
+        email(str){
+            return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(str);
+        },
+        mobile(str){
+            return /^1[3|4|5|7|8][0-9]{9}$/.test(str);
+        }
+    };
+    //暴露接口
+    return {
+        //校验
+        check(str, type){
+            return rules[type]?rules[type](str):false;
+        },
+        //添加规则
+        addRule(type,fn){
+            rules[type]=fn;
+        }
+    }
+})();
+
+//调用方式
+//使用mobile校验规则
+console.log(checkType.check('188170239','mobile'));
+//添加金额校验规则
+checkType.addRule('money',function (str) {
+    return /^[0-9]+(.[0-9]{2})?$/.test(str)
+});
+//使用金额校验规则
+console.log(checkType.check('18.36','money'));</code></pre>
+    <h3 id="%E5%88%9B%E5%BB%BA%E5%9E%8B">
+     创建型
+    </h3>
+    <h4 id="%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F">
+     <strong>
+      单例模式
+     </strong>
+    </h4>
+    <p>
+     一个类只有一个实例，并提供一个访问它的全局访问点。
+    </p>
+    <pre><code class="language-javascript">class LoginForm {
+    constructor() {
+        this.state = 'hide'
+    }
+    show() {
+        if (this.state === 'show') {
+            alert('已经显示')
+            return
+        }
+        this.state = 'show'
+        console.log('登录框显示成功')
+    }
+    hide() {
+        if (this.state === 'hide') {
+            alert('已经隐藏')
+            return
+        }
+        this.state = 'hide'
+        console.log('登录框隐藏成功')
+    }
+ }
+
+ LoginForm.getInstance = (function () {
+     let instance
+     return function () {
+        if (!instance) {
+            instance = new LoginForm()
+        }
+        return instance
+     }
+ })()
+
+let obj1 = LoginForm.getInstance()
+obj1.show()
+
+let obj2 = LoginForm.getInstance()
+obj2.hide()
+
+console.log(obj1 === obj2)</code></pre>
+    <p>
+     优点：
+    </p>
+    <ul>
+     <li>
+      单例模式可以保证内存里只有一个实例，减少了
+      <strong>
+       内存
+      </strong>
+      的开销。
+     </li>
+     <li>
+      单例模式设置全局访问点，可以优化和
+      <strong>
+       共享资源
+      </strong>
+      的访问。
+     </li>
+     <li>
+      只会实例化一次。简化了代码的调试和
+      <strong>
+       维护
+      </strong>
+     </li>
+    </ul>
+    <p>
+     缺点：
+    </p>
+    <ul>
+     <li>
+      单例模式一般没有接口，扩展困难
+     </li>
+     <li>
+      有可能导致模块间的强耦合 从而不利于单元测试。
+     </li>
+    </ul>
+    <p>
+     应用：登录框
+    </p>
+    <h4 id="%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F">
+     <strong>
+      工厂模式
+     </strong>
+    </h4>
+    <p>
+     工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。
+    </p>
+    <p>
+     该模式使一个
+     <strong>
+      类的实例化延迟到了子类
+     </strong>
+     。
+    </p>
+    <p>
+     而子类可以
+     <strong>
+      重写接口
+     </strong>
+     方法以便创建的时候
+     <strong>
+      指定自己的对象类型
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">class Product1 {
+    product() {
+        console.log("生产一线");
+    }
+}
+class Product2 {
+    product() {
+        console.log("生产二线");
+    }
+}
+class Factory {
+    constructor() {
+        this.Product1 = Product1;
+        this.Product2 = Product2;
+    }
+    create(name, callBack) {
+        const product = new this[name]();
+        product.product();
+        return callBack("susess");
+    }
+}
+let p = new Factory();
+p.create("Product1", (res) =&gt; {
+    console.log(res);
+});</code></pre>
+    <p>
+     优点：
+    </p>
+    <ul>
+     <li>
+      工厂职责单一化易于维护
+     </li>
+     <li>
+      有利于消除对象间的耦合，提供更大的灵活性
+     </li>
+    </ul>
+    <p>
+     缺点：添加新产品时，需要编写新的具体产品类,一定程度上增加了系统的复杂度
+    </p>
+    <h3 id="%E7%BB%93%E6%9E%84%E5%9E%8B">
+     结构型
+    </h3>
+    <ul>
+     <li>
+      装饰者模式： 扩展功能，原有功能不变且可直接使用
+     </li>
+     <li>
+      代理模式： 显示原有功能，但是经过限制之后的
+     </li>
+    </ul>
+    <h4 id="%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F">
+     <strong>
+      代理模式
+     </strong>
+    </h4>
+    <p>
+     是为一个对象提供一个代用品或占位符，以便控制对它的访问
+    </p>
+    <p>
+     应用：
+    </p>
+    <ul>
+     <li>
+      ES6 的 proxy
+     </li>
+     <li>
+      HTML元 素事件代理
+     </li>
+    </ul>
+    <pre><code class="language-javascript">1. 给"ul"标签添加点击事件
+2. 当点击某"li"标签时，该标签内容拼接"."符号。如：某"li"标签被点击时，该标签内容为".."
+注意：
+1. 必须使用DOM0级标准事件（onclick）
+ 
+target表示当前触发事件的元素
+currentTarget是绑定处理函数的元素
+只有当事件处理函数绑定在自身的时候，target才会和currentTarget一样
+ 
+&lt;ul&gt;
+      &lt;li&gt;.&lt;/li&gt;
+      &lt;li&gt;.&lt;/li&gt;
+      &lt;li&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+ 
+&lt;script type="text/javascript"&gt;
+            document.querySelector('ul').onclick=event=&gt;{
+                event.target.innerText+='.'
+            }
+&lt;/script&gt;</code></pre>
+    <h4 id="%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F">
+     <strong>
+      装饰器模式
+     </strong>
+    </h4>
+    <p>
+    </p>
+    <p>
+     动态地给某个对象添加一些额外的职责，是一种实现
+     <strong>
+      继承的替代
+     </strong>
+     方案
+    </p>
+    <pre><code class="language-javascript">class Cellphone {
+    create() {
+        console.log('生成一个手机')
+    }
+}
+class Decorator {
+    constructor(cellphone) {
+        this.cellphone = cellphone
+    }
+    create() {
+        this.cellphone.create()
+        this.createShell(cellphone)
+    }
+    createShell() {
+        console.log('生成手机壳')
+    }
+}
+// 测试代码
+let cellphone = new Cellphone()
+cellphone.create()
+
+console.log('------------')
+let dec = new Decorator(cellphone)
+dec.create()</code></pre>
+    <p>
+     优点：
+    </p>
+    <ul>
+     <li>
+      方便动态的扩展功能，且提供了比继承更多的灵活性。
+     </li>
+    </ul>
+    <p>
+     缺点：
+    </p>
+    <ul>
+     <li>
+      多层装饰比较复杂。
+     </li>
+    </ul>
+    <p>
+     应用：
+    </p>
+    <ul>
+     <li>
+      ES7 Decorator
+     </li>
+     <li>
+      比如现在有4 种型号的自行车，我们为每种自行车都定义了一个单 独的类。现在要给每种自行车都装上前灯、尾 灯和铃铛这3 种配件。如果使用继承的方式来给 每种自行车创建子类，则需要 4×3 = 12 个子类。 但是如果把前灯、尾灯、铃铛这些对象动态组 合到自行车上面，则只需要额外增加3 个类
+     </li>
+    </ul>
+    <h3 id="%E8%A1%8C%E4%B8%BA%E5%9E%8B">
+     行为型
+    </h3>
+    <h4 id="%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F">
+     职责链模式
+    </h4>
+    <p>
+     使多个对象都有机会处理请求，从而避免请求的发送者和接受者之间的耦合关系，将这些对象连成一条链，并
+     <strong>
+      沿着这条链传递该请求
+     </strong>
+     ，
+     <strong>
+      直到有一个对象处理它为止
+     </strong>
+    </p>
+    <pre><code class="language-javascript">// 请假审批，需要组长审批、经理审批、总监审批
+class Action {
+    constructor(name) {
+        this.name = name
+        this.nextAction = null
+    }
+    setNextAction(action) {
+        this.nextAction = action
+    }
+    handle() {
+        console.log( `${this.name} 审批`)
+        if (this.nextAction != null) {
+            this.nextAction.handle()
+        }
+    }
+}
+
+let a1 = new Action("组长")
+let a2 = new Action("经理")
+let a3 = new Action("总监")
+a1.setNextAction(a2)
+a2.setNextAction(a3)
+a1.handle()</code></pre>
+    <p>
+     优点：
+    </p>
+    <ul>
+     <li>
+      简化了对象。使得对象不需要知道链的结构
+     </li>
+    </ul>
+    <p>
+     缺点：
+    </p>
+    <ul>
+     <li>
+      不能保证某个请求一定会被链中的节点处理，这种情况可以在链尾增加一个
+      <strong>
+       保底的接受
+      </strong>
+      者节点来处理这种即将离开链尾的请求。
+     </li>
+     <li>
+      使程序中多了很多节点对象，可能再一次请求的过程中，大部分的节点并没有起到实质性的作用。他们的作用仅仅是让请求传递下去，从
+      <strong>
+       性能
+      </strong>
+      当面考虑，要避免过长的职责链到来的性能损耗。
+     </li>
+    </ul>
+    <p>
+     应用：
+    </p>
+    <ul>
+     <li>
+      JS 中的事件冒泡
+     </li>
+     <li>
+      作用域链
+     </li>
+     <li>
+      原型链
+     </li>
+    </ul>
+    <h4 id="%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F">
+     <strong>
+      观察者模式
+     </strong>
+    </h4>
+    <pre><code class="language-javascript">const p1 = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        resolve('result')
+    },
+    1000);
+}) 
+
+p1.then(res =&gt; console.log(res), err =&gt; console.log(err))</code></pre>
+    <p>
+     分析Promise的调用流程：
+    </p>
+    <ul>
+     <li>
+      <code>
+       Promise
+      </code>
+      的构造方法接收一个
+      <code>
+       executor()
+      </code>
+      ，在
+      <code>
+       new Promise()
+      </code>
+      时就立刻执行这个executor回调
+     </li>
+     <li>
+      <code>
+       executor()
+      </code>
+      内部的异步任务被放入宏/微任务队列，等待执行
+     </li>
+     <li>
+      <code>
+       then()
+      </code>
+      被执行，收集成功/失败回调，放入成功/失败队列
+     </li>
+     <li>
+      <code>
+       executor()
+      </code>
+      的异步任务被执行，触发
+      <code>
+       resolve/reject
+      </code>
+      ，从成功/失败队列中取出回调依次执行
+     </li>
+    </ul>
+    <p>
+     观察者模式：
+     <code>
+      收集依赖 -&gt; 触发通知 -&gt; 取出依赖执行
+     </code>
+    </p>
+    <p>
+     在Promise里，执行顺序是
+     <code>
+      then收集依赖 -&gt; 异步触发resolve -&gt; resolve执行依赖
+     </code>
+     。
+    </p>
+    <pre><code class="language-javascript">class MyPromise {
+  // 构造方法接收一个回调
+  constructor(executor) {
+    this._resolveQueue = []    // then收集的执行成功的回调队列
+    this._rejectQueue = []     // then收集的执行失败的回调队列
+
+    /*由于resolve/reject是在executor内部被调用, 
+    因此需要使用箭头函数固定this指向, 否则找不到this._resolveQueue*/
+
+    let _resolve = (val) =&gt; {
+      // 从成功队列里取出回调依次执行
+      while(this._resolveQueue.length) {
+        const callback = this._resolveQueue.shift()
+        callback(val)
+      }
+    }
+    // 实现同resolve
+    let _reject = (val) =&gt; {
+      while(this._rejectQueue.length) {
+        const callback = this._rejectQueue.shift()
+        callback(val)
+      }
+    }
+    // new Promise()时立即执行executor,并传入resolve和reject
+    executor(_resolve, _reject)
+  }
+
+  // then方法,接收一个成功的回调和一个失败的回调，并push进对应队列
+  then(resolveFn, rejectFn) {
+    this._resolveQueue.push(resolveFn)
+    this._rejectQueue.push(rejectFn)
+  }
+}</code></pre>
+    <h2>
+     操作系统
+    </h2>
+    <h3 id="%E8%BF%9B%E7%A8%8B">
+     进程
+    </h3>
+    <h4 id="%E7%A8%8B%E5%BA%8F%E3%80%81%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E2%AD%90%E2%AD%90%E2%AD%90">
+     程序、进程、线程
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t1" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <p>
+     程序：（
+     <strong>
+      <strong>
+       静态
+      </strong>
+     </strong>
+     ）以 文件形式 存于
+     <strong>
+      <strong>
+       硬盘
+      </strong>
+     </strong>
+    </p>
+    <p>
+     进程：（
+     <strong>
+      <strong>
+       传统OS
+      </strong>
+     </strong>
+     ）
+     <strong>
+      <strong>
+       资源分配
+      </strong>
+     </strong>
+     和
+     <strong>
+      <strong>
+       独立调度
+      </strong>
+     </strong>
+     的 基本单位，进程 实体 的
+     <strong>
+      <strong>
+       运行过程
+      </strong>
+     </strong>
+    </p>
+    <p>
+     线程：（引入线程的OS）
+     <strong>
+      <strong>
+       独立调度
+      </strong>
+     </strong>
+     的 基本单位
+    </p>
+    <p>
+     <strong>
+      进程 的状态 和 转换
+     </strong>
+    </p>
+    <ol>
+     <li>
+      运行
+     </li>
+     <li>
+      就绪：仅缺处理机
+     </li>
+     <li>
+      <strong>
+       <strong>
+        阻塞/等待
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        等待资源
+       </strong>
+      </strong>
+      （除处理机）可用 或 输入/输出完成
+     </li>
+     <li>
+      创建：正创建；
+     </li>
+     <li>
+      结束：正消失；
+     </li>
+    </ol>
+    <p>
+     &lt;--
+     <strong>
+      <strong>
+       时间片/优先级
+      </strong>
+     </strong>
+     --
+    </p>
+    <p>
+     <strong>
+      <strong>
+       新建
+      </strong>
+     </strong>
+     ---创建---&gt;
+     <strong>
+      <strong>
+       就绪
+      </strong>
+     </strong>
+     ---调度---&gt;
+     <strong>
+      <strong>
+       运行
+      </strong>
+     </strong>
+     ----退出---&gt;
+     <strong>
+      <strong>
+       终止
+      </strong>
+     </strong>
+    </p>
+    <p>
+     事件发生↖
+     <strong>
+      <strong>
+       阻塞
+      </strong>
+     </strong>
+     ↙等待事件
+    </p>
+    <h4 id="%E6%AD%BB%E9%94%81">
+     死锁
+    </h4>
+    <p>
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t1" title="⭐">
+      ⭐
+     </a>
+     <strong>
+      常考类型
+     </strong>
+     ：进程Pi各需资源S Xi个，则Smin/Nmax不死锁条件：S=∑(Xi-1)+1
+    </p>
+    <ol>
+     <li>
+      定义：多进程 ∵
+      <strong>
+       <strong>
+        资源竞争
+       </strong>
+      </strong>
+      而造成 相互等待 的僵局，无外力作用下 都
+      <strong>
+       <strong>
+        无法
+       </strong>
+      </strong>
+      继续
+      <strong>
+       <strong>
+        推进
+       </strong>
+      </strong>
+     </li>
+     <li>
+      原因：
+      <strong>
+       <strong>
+        非剥夺资源
+       </strong>
+      </strong>
+      的 竞争 + 进程的
+      <strong>
+       <strong>
+        非法推进顺序
+       </strong>
+      </strong>
+      （含
+      <strong>
+       <strong>
+        信号量 使用不当
+       </strong>
+      </strong>
+      ）
+     </li>
+     <li>
+      <strong>
+       <strong>
+        充要
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <p>
+     等待循环+
+     <strong>
+      <strong>
+       Pi的资源 必须 由 Pi+1 满足
+      </strong>
+     </strong>
+     （当各类资源＝1，则循环等待＝死锁）
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        必要
+       </strong>
+      </strong>
+      条件：b-&gt;a、c-&gt;d
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        互斥
+       </strong>
+      </strong>
+      访问
+     </li>
+     <li>
+      <strong>
+       <strong>
+        非剥夺
+       </strong>
+      </strong>
+      资源
+     </li>
+     <li>
+      <strong>
+       <strong>
+        请求
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        和保持
+       </strong>
+      </strong>
+     </li>
+     <li>
+      循环
+      <strong>
+       <strong>
+        等待
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           处理
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           预防
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           避免
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           检测
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           分配
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           严格
+          </strong>
+         </strong>
+         ，
+        </p>
+        <p>
+         宁愿
+         <strong>
+          <strong>
+           闲置
+          </strong>
+         </strong>
+         资源
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           折中
+          </strong>
+         </strong>
+         ，
+        </p>
+        <p>
+         运行时判断是否
+         <strong>
+          <strong>
+           可能
+          </strong>
+         </strong>
+         死锁
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           宽松
+          </strong>
+         </strong>
+         ，
+         <strong>
+          <strong>
+           并发性最强
+          </strong>
+         </strong>
+        </p>
+        <p>
+         只要
+         <strong>
+          <strong>
+           允许
+          </strong>
+         </strong>
+         就分配
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           操作
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         破坏必要条件之一：
+        </p>
+        <p>
+         一次请求all；剥夺；按资源
+         <strong>
+          <strong>
+           序
+          </strong>
+         </strong>
+         分配
+        </p>
+       </td>
+       <td>
+        <p>
+         算法通过 是否安全状态，找 可能的
+         <strong>
+          <strong>
+           安全序列
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           定期检查
+          </strong>
+         </strong>
+         是否死锁
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           优点
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         适用
+         <strong>
+          <strong>
+           突发
+          </strong>
+         </strong>
+         处理，
+         <strong>
+          <strong>
+           不必剥夺
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           不必剥夺
+          </strong>
+         </strong>
+         ，限制条件弱，系统性能较好
+        </p>
+       </td>
+       <td>
+        <p>
+         不延长进程
+         <strong>
+          <strong>
+           初始化时间
+          </strong>
+         </strong>
+         ，
+        </p>
+        <p>
+         允许 对
+         <strong>
+          <strong>
+           死锁
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           现场处理
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           缺点
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         效率低，进程
+         <strong>
+          <strong>
+           初始化时间长
+          </strong>
+         </strong>
+         ；
+         <strong>
+          <strong>
+           饥饿
+          </strong>
+         </strong>
+        </p>
+        <p>
+         <strong>
+          <strong>
+           剥夺
+          </strong>
+         </strong>
+         次数过多；
+         <strong>
+          <strong>
+           不便灵活申请
+          </strong>
+         </strong>
+         资源
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           需知
+          </strong>
+         </strong>
+         将来
+         <strong>
+          <strong>
+           需求
+          </strong>
+         </strong>
+         资源；
+        </p>
+        <p>
+         <strong>
+          <strong>
+           可能
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           长时阻塞
+          </strong>
+         </strong>
+         进程
+        </p>
+       </td>
+       <td>
+        <p>
+         剥夺
+         <strong>
+          <strong>
+           解除
+          </strong>
+         </strong>
+         死锁，造成
+         <strong>
+          <strong>
+           损失
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        预防
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <p>
+     破坏
+     <strong>
+      <strong>
+       必要
+      </strong>
+     </strong>
+     条件：
+    </p>
+    <ol>
+     <li>
+      互斥访问：某些场合 必须保证 互斥，∴实现 可能性小：
+     </li>
+     <li>
+      非
+      <strong>
+       <strong>
+        剥夺
+       </strong>
+      </strong>
+      资源：释放已获得，造成前段工作失效；反复申请+释放，增加开销，降低吞吐
+     </li>
+    </ol>
+    <p>
+     （常用于
+     <strong>
+      <strong>
+       易于
+      </strong>
+     </strong>
+     保存和恢复的资源，eg：CPU的寄存器+内存资源；而
+     <strong>
+      <strong>
+       非打印机
+      </strong>
+     </strong>
+     etc）
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        请求
+       </strong>
+      </strong>
+      和保持：
+      <strong>
+       <strong>
+        预先静态
+       </strong>
+      </strong>
+      分配（一次申请完）；
+      <strong>
+       <strong>
+        饥饿
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        循环
+       </strong>
+      </strong>
+      等待：资源
+      <strong>
+       <strong>
+        编号
+       </strong>
+      </strong>
+      ，只能
+      <strong>
+       <strong>
+        按
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        递增
+       </strong>
+      </strong>
+      申请，
+      <strong>
+       <strong>
+        同类
+       </strong>
+      </strong>
+      资源
+      <strong>
+       <strong>
+        一次申请完
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     （需编号稳定，限制了设备增加；可能 用资源和规定顺序不同，造成浪费资源；编程麻烦）
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        避免
+       </strong>
+      </strong>
+      ：（死锁
+      <strong>
+       <strong>
+        =&gt;不安全状态
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ol>
+    <p>
+     银行家算法：Max，Need，Allocation，Available
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        检测
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        死锁定理
+       </strong>
+      </strong>
+      ：S状态的 资源分配图
+      <strong>
+       <strong>
+        不可完全简化
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        解除
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        剥夺（暂停）
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        挂起
+       </strong>
+      </strong>
+      某些进程，并抢夺资源（应防止 被挂起的进程 长期得不到资源）
+     </li>
+     <li>
+      <strong>
+       <strong>
+        撤销（关闭）
+       </strong>
+      </strong>
+      ：（按 进程
+      <strong>
+       <strong>
+        优先级
+       </strong>
+      </strong>
+      +
+      <strong>
+       <strong>
+        撤销代价
+       </strong>
+      </strong>
+      ）撤销 部分甚至全部 进程，并抢夺资源
+     </li>
+     <li>
+      <strong>
+       <strong>
+        回退（回放）
+       </strong>
+      </strong>
+      ：一/多个进程 回退到
+      <strong>
+       <strong>
+        足以避免死锁
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        自愿
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        释放
+       </strong>
+      </strong>
+      资源（要求 系统 保持进程 的历史信息，设置
+      <strong>
+       <strong>
+        还原点
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ol>
+    <h4 id="%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C">
+     并发和并行
+    </h4>
+    <p>
+     并发：逻辑上的同时发生（simultaneous）一个处理器同时处理多个任务。
+     <br/>
+     并行：物理上的同时发生，是指多个处理器或者是
+     <a href="https://so.csdn.net/so/search?q=%E5%A4%9A%E6%A0%B8&amp;spm=1001.2101.3001.7020" title="多核">
+      多核
+     </a>
+     的处理器同时处理多个不同的任务。
+    </p>
+    <h3 id="%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6">
+     处理机调度
+    </h3>
+    <h4 id="%E8%B0%83%E5%BA%A6%E5%B1%82%E6%AC%A1">
+     调度层次
+    </h4>
+    <p>
+     多道批处理系统 大多有
+     <strong>
+      <strong>
+       作业调度
+      </strong>
+     </strong>
+     ，
+     <strong>
+      <strong>
+       其他系统
+      </strong>
+     </strong>
+     则不需要
+    </p>
+    <ol>
+     <li>
+      低级/
+      <strong>
+       <strong>
+        作业
+       </strong>
+      </strong>
+      调度：外/辅存 后备---&gt;入内存，
+      <strong>
+       <strong>
+        建进程，分资源
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        获
+       </strong>
+      </strong>
+      竞争处理机
+      <strong>
+       <strong>
+        权利
+       </strong>
+      </strong>
+     </li>
+     <li>
+      中级/
+      <strong>
+       <strong>
+        内存
+       </strong>
+      </strong>
+      调度：
+      <strong>
+       <strong>
+        暂不能运行
+       </strong>
+      </strong>
+      ---&gt;
+      <strong>
+       <strong>
+        外存 挂起
+       </strong>
+      </strong>
+      （提高内存利用率+系统吞吐量）
+     </li>
+     <li>
+      高级/
+      <strong>
+       <strong>
+        进程
+       </strong>
+      </strong>
+      调度：按某种方法/
+      <strong>
+       策略 分配
+      </strong>
+     </li>
+    </ol>
+    <h4 id="%E8%B0%83%E5%BA%A6%E5%9F%BA%E6%9C%AC%E5%87%86%E5%88%99">
+     调度基本准则
+    </h4>
+    <ol>
+     <li>
+      CPU利用率
+     </li>
+     <li>
+      系统
+      <strong>
+       <strong>
+        吞吐量
+       </strong>
+      </strong>
+      ：
+      <strong>
+       单位时间
+      </strong>
+      内 CPU
+      <strong>
+       完成的作业量
+      </strong>
+     </li>
+     <li>
+      <strong>
+       周转
+      </strong>
+      时间＝作业
+      <strong>
+       <strong>
+        完成
+       </strong>
+      </strong>
+      时间－
+      <strong>
+       <strong>
+        提交
+       </strong>
+      </strong>
+      时间＝t总；
+     </li>
+     <li>
+      <strong>
+       带权
+      </strong>
+      周转时间＝
+      <img alt="" height="40" src="https://i-blog.csdnimg.cn/blog_migrate/e973ecda0c9b13d3f994a5d9c5d10cee.png" width="90"/>
+     </li>
+     <li>
+      <strong>
+       等待
+      </strong>
+      时间＝∑等待
+      <strong>
+       <strong>
+        处理机
+       </strong>
+      </strong>
+      时间；（判断 效率）
+     </li>
+     <li>
+      <strong>
+       响应
+      </strong>
+      时间＝
+      <strong>
+       <strong>
+        首次响应
+       </strong>
+      </strong>
+      时刻－提交时刻；
+     </li>
+    </ol>
+    <h4 id="%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F">
+     调度方式
+    </h4>
+    <ol>
+     <li>
+      非剥夺/抢占式：适用 多数 批处理系统
+     </li>
+     <li>
+      剥夺/抢占式：提高 系统吞吐率+响应率
+     </li>
+    </ol>
+    <h4 id="%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90">
+     调度算法
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t1" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <p>
+     （含
+     <strong>
+      <strong>
+       作业/进程
+      </strong>
+     </strong>
+     ）
+    </p>
+    <p>
+     <strong>
+      <strong>
+       平均等待时间
+      </strong>
+     </strong>
+     ：时间片轮转 较长（上下文
+     <strong>
+      <strong>
+       切换
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       费时
+      </strong>
+     </strong>
+     ）；
+     <strong>
+      <strong>
+       短作业优先  最短
+      </strong>
+     </strong>
+    </p>
+    <table align="center" border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           FCFS
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           短作业优先
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           高响应比
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           RR
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           多级反馈队列
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           抢占
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         √
+        </p>
+       </td>
+       <td>
+        <p>
+         √
+        </p>
+       </td>
+       <td>
+        <p>
+         √
+        </p>
+       </td>
+       <td>
+        <p>
+         对内算法?
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           非抢占
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         √
+        </p>
+       </td>
+       <td>
+        <p>
+         √（默认）
+        </p>
+       </td>
+       <td>
+        <p>
+         √（默认）
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         对内算法?
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           适用
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         无
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           批处理OS
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         无
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           分时
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         通用
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        FCFS
+       </strong>
+      </strong>
+      <em>
+       先来先服务（First Come First Serve）
+      </em>
+      ：
+      <strong>
+       <strong>
+        利于长
+       </strong>
+      </strong>
+      作业，
+      <strong>
+       <strong>
+        CPU繁忙型
+       </strong>
+      </strong>
+      作业
+     </li>
+     <li>
+      <strong>
+       <strong>
+        SJF短作业优先
+       </strong>
+      </strong>
+      ：
+      <strong>
+       一个/若干
+      </strong>
+      估计运行时间 最短 作业 入内存
+     </li>
+     <li>
+      <strong>
+       <strong>
+        SPF短进程优先
+       </strong>
+      </strong>
+      ：一个
+      <strong>
+       <strong>
+        最
+       </strong>
+      </strong>
+      短 进程 调度，分配处理机
+     </li>
+     <li>
+      优先级：静
+      <strong>
+       <strong>
+        优先级
+       </strong>
+      </strong>
+      取决 进程类型（系统&gt;用户），要求资源（
+      <strong>
+       <strong>
+        I/O&gt;计算
+       </strong>
+      </strong>
+      ），
+      <strong>
+       <strong>
+        用户要求
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     动态priority＝
+     <strong>
+      <strong>
+       nice
+      </strong>
+     </strong>
+     +k1*cpuTime-k2*waitTime（k1，k2&gt;0调整所占比例）
+    </p>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        高响应比
+       </strong>
+      </strong>
+      优先（主要
+      <strong>
+       <strong>
+        作业
+       </strong>
+      </strong>
+      ）＝FCFS+SJF；
+      <strong>
+       <strong>
+        无 饥饿
+       </strong>
+      </strong>
+     </li>
+    </ul>
+    <p>
+     t总/t实＝响应比Rp＝
+     <img alt="" height="52" src="https://i-blog.csdnimg.cn/blog_migrate/a044d22791319ef687759a60f10849c0.png" width="184"/>
+    </p>
+    <ol>
+     <li>
+      时间片轮转RR（主要
+      <strong>
+       <strong>
+        分时
+       </strong>
+      </strong>
+      ）：长短 取决 系统响应时间，就绪进程数，系统处理能力
+     </li>
+     <li>
+      多级反馈队列＝
+      <strong>
+       <strong>
+        时间片
+       </strong>
+      </strong>
+      +
+      <strong>
+       <strong>
+        优先
+       </strong>
+      </strong>
+      级：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      特点：
+     </li>
+    </ol>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        级↓
+       </strong>
+      </strong>
+      的就绪队列，
+      <strong>
+       <strong>
+        优先级↑
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        时间片↑
+       </strong>
+      </strong>
+     </li>
+     <li>
+      新进程入内存，
+      <strong>
+       先1级
+      </strong>
+      ，
+      <strong>
+       时间片用完则降级
+      </strong>
+      ；第n级队列 时间片轮转
+     </li>
+     <li>
+      <strong>
+       <strong>
+        i级队列空
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        才执行i+1级
+       </strong>
+      </strong>
+      队列
+     </li>
+     <li>
+      若执行j级队列时，k级队列入进程（k&lt;j），则
+      <strong>
+       <strong>
+        抢占
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        当前进程回j队列末尾
+       </strong>
+      </strong>
+     </li>
+    </ul>
+    <ol>
+     <li>
+      优势：
+     </li>
+    </ol>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        终端型
+       </strong>
+      </strong>
+      作业用户：
+      <strong>
+       <strong>
+        短作业优先
+       </strong>
+      </strong>
+      （大多
+      <strong>
+       <strong>
+        交互型
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        常短小
+       </strong>
+      </strong>
+      ）
+     </li>
+     <li>
+      <strong>
+       短
+      </strong>
+      批处理作业用户：
+      <strong>
+       <strong>
+        周转时间短
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       长
+      </strong>
+      批处理作业用户：经过前几个队列的部分执行，
+      <strong>
+       <strong>
+        不会长时间无响应
+       </strong>
+      </strong>
+     </li>
+    </ul>
+    <h3 id="%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">
+     <strong>
+      <strong>
+       内存管理
+      </strong>
+     </strong>
+    </h3>
+    <p>
+     <strong>
+      <strong>
+       内存空间的扩充
+      </strong>
+     </strong>
+     ：从逻辑上扩充，
+     <strong>
+      <strong>
+       虚拟存储/自动覆盖
+      </strong>
+     </strong>
+     技术
+    </p>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        源程序-&gt;
+       </strong>
+      </strong>
+      可在
+      <strong>
+       <strong>
+        内存中
+       </strong>
+      </strong>
+      执行的程序：
+     </li>
+    </ul>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        编译
+       </strong>
+      </strong>
+      ：编译程序 编译 源代码 成
+      <strong>
+       <strong>
+        若干个
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        目标模块
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        链接
+       </strong>
+      </strong>
+      ：链接程序 链接 目标模块 +
+      <strong>
+       <strong>
+        所需
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        库函数
+       </strong>
+      </strong>
+      ，形成 一个 完整 的
+      <strong>
+       <strong>
+        装入模块
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        （形成逻辑地址）
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        装入
+       </strong>
+      </strong>
+      ：装入程序 将 装入模块 装入
+      <strong>
+       内存
+      </strong>
+      <strong>
+       <strong>
+        （形成绝对地址）
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        相对/逻辑地址
+       </strong>
+      </strong>
+      ：编译后，每个目标模块 都从0号单元开始编址
+     </li>
+     <li>
+      <strong>
+       <strong>
+        逻辑地址空间
+       </strong>
+      </strong>
+      ：各个目标模块 的 相对地址 构成 的统一 从0号单元开始编址的 集合
+     </li>
+     <li>
+      （内存管理的具体机制 完全透明，只有系统编程人员 才涉及，用户程序/程序员只需 知道逻辑地址）
+     </li>
+     <li>
+      <strong>
+       <strong>
+        物理地址空间
+       </strong>
+      </strong>
+      ：内存 中 物理单元的集合
+     </li>
+     <li>
+      <strong>
+       <strong>
+        地址重定位
+       </strong>
+      </strong>
+      ：
+      <strong>
+       逻辑
+      </strong>
+      地址-&gt;
+      <strong>
+       物理
+      </strong>
+      地址
+     </li>
+    </ul>
+    <h4 id="%E8%BF%9E%E7%BB%AD%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90">
+     连续空间分配策略算法
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t1" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         分配策略算法
+        </p>
+       </td>
+       <td>
+        <p>
+         首次适应
+         <strong>
+          <strong>
+           FF
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         最佳适应
+         <strong>
+          <strong>
+           BF
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         最坏适应
+         <strong>
+          <strong>
+           WF
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           邻近适用NF
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           空闲分区链接
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           地址递增
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           容量递增
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         容量递减
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           循环
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           首次
+          </strong>
+         </strong>
+         适应
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         性能
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           最简单、快、好
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           最多
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           外部碎片
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         很快
+         <strong>
+          <strong>
+           没大内存块
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           内存末尾
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           碎片
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         比较
+        </p>
+       </td>
+       <td colspan="4">
+        <p>
+         （∵留下了 高地址的大空闲区，∴
+         <strong>
+          <strong>
+           更可能满足进程
+          </strong>
+         </strong>
+         ）
+        </p>
+        <p>
+         优于顺序：FF 可能&gt;
+         <strong>
+          <strong>
+           BF &gt;WF
+          </strong>
+         </strong>
+         ，
+         <strong>
+          <strong>
+           FF 通常&gt;NF
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E2%AD%90%E2%AD%90%E2%AD%90">
+     页面置换算法
+     <a href="https://blog.csdn.net/qq_28838891/article/details/123741623?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22123741623%22%2C%22source%22%3A%22qq_28838891%22%7D#t1" title="⭐">
+      ⭐
+     </a>
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        最佳(OPT)
+       </strong>
+      </strong>
+      置换算法：替换
+      <strong>
+       <strong>
+        最长
+       </strong>
+      </strong>
+      时间内/永久
+      <strong>
+       <strong>
+        不再被访问
+       </strong>
+      </strong>
+     </li>
+     <li>
+      ∵最低缺页率，不可实现，∴只拿来
+      <strong>
+       评价
+      </strong>
+      其他算法
+     </li>
+     <li>
+      <strong>
+       <strong>
+        先进先出(FIFO)
+       </strong>
+      </strong>
+      置换算法（
+      <strong>
+       <strong>
+        队列
+       </strong>
+      </strong>
+      ）：
+      <strong>
+       <strong>
+        Belady异常
+       </strong>
+      </strong>
+      （分配物理块数↑，页故障数↑）
+     </li>
+     <li>
+      <strong>
+       <strong>
+        最近
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        最久
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        未使用(LRU)
+       </strong>
+      </strong>
+      置换算法（
+      <strong>
+       <strong>
+        堆栈
+       </strong>
+      </strong>
+      ）：
+      <strong>
+       <strong>
+        性能接近OPT
+       </strong>
+      </strong>
+      ，但需
+      <strong>
+       <strong>
+        寄存器+栈
+       </strong>
+      </strong>
+      ；困难，开销大
+     </li>
+     <li>
+      理论可证明，
+      <strong>
+       堆栈类
+      </strong>
+      算法
+      <strong>
+       不可能出现 Belady异常
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        时钟(CLOCK)
+       </strong>
+      </strong>
+      /
+      <strong>
+       <strong>
+        最近未使用(NRU)
+       </strong>
+      </strong>
+      置换算法：
+      <strong>
+       <strong>
+        循环
+       </strong>
+      </strong>
+      扫描 缓冲区
+     </li>
+     <li>
+      简单CLOCK 算法：
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      <strong>
+       <strong>
+        使用位
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        每一帧
+       </strong>
+      </strong>
+      关联一个
+      <strong>
+       <strong>
+        附加位/访问位
+       </strong>
+      </strong>
+     </p>
+     <p>
+      使用位  置
+      <strong>
+       <strong>
+        1
+       </strong>
+      </strong>
+      ：首次
+      <strong>
+       <strong>
+        装入
+       </strong>
+      </strong>
+      /再被
+      <strong>
+       <strong>
+        访问
+       </strong>
+      </strong>
+     </p>
+     <p>
+      候选帧 集合：看做
+      <strong>
+       <strong>
+        循环缓冲区
+       </strong>
+      </strong>
+      ，有一个指针与之关联
+     </p>
+     <p>
+      替换：按
+      <strong>
+       <strong>
+        装入顺序
+       </strong>
+      </strong>
+      扫描/
+      <strong>
+       <strong>
+        上次
+       </strong>
+      </strong>
+      扫描
+      <strong>
+       <strong>
+        位置
+       </strong>
+      </strong>
+      ，扫描查找到
+      <strong>
+       <strong>
+        0的帧
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        之前
+       </strong>
+      </strong>
+      的1帧
+      <strong>
+       <strong>
+        置0
+       </strong>
+      </strong>
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        改进型
+       </strong>
+      </strong>
+      CLOCK算法：+
+      <strong>
+       <strong>
+        修改位m
+       </strong>
+      </strong>
+      （
+      <strong>
+       <strong>
+        修改过
+       </strong>
+      </strong>
+      的页，被
+      <strong>
+       <strong>
+        替换前
+       </strong>
+      </strong>
+      ，需
+      <strong>
+       <strong>
+        写回外存
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      替换
+      <strong>
+       <strong>
+        第一个
+       </strong>
+      </strong>
+      帧（
+      <strong>
+       <strong>
+        u
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        ＝0，m＝0
+       </strong>
+      </strong>
+      ）
+     </p>
+     <p>
+      重新扫描，替换 第一个帧（
+      <strong>
+       <strong>
+        u＝0，m＝1
+       </strong>
+      </strong>
+      ），
+      <strong>
+       <strong>
+        跳过的帧u
+       </strong>
+      </strong>
+      置
+      <strong>
+       <strong>
+        0
+       </strong>
+      </strong>
+     </p>
+     <p>
+      指针回到
+      <strong>
+       <strong>
+        最初位置
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        所有帧 u置0
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        重复①
+       </strong>
+      </strong>
+     </p>
+    </blockquote>
+    <h2 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">
+     数据结构
+    </h2>
+    <h3 id="%E6%A0%91">
+     <strong>
+      <strong>
+       链表
+      </strong>
+     </strong>
+    </h3>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        指针
+       </strong>
+      </strong>
+      ：是结点的
+      <strong>
+       <strong>
+        相对地址
+       </strong>
+      </strong>
+      ，即
+      <strong>
+       <strong>
+        数组下标
+       </strong>
+      </strong>
+      ，即
+      <strong>
+       <strong>
+        游标
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        分配
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        预先
+       </strong>
+      </strong>
+      分配
+      <strong>
+       <strong>
+        连续
+       </strong>
+      </strong>
+      的 内存空间
+     </li>
+     <li>
+      <strong>
+       <strong>
+        结束标志
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        next=-1
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+       <td>
+        <p>
+         --&gt;
+        </p>
+       </td>
+       <td>
+        <p>
+         b
+        </p>
+       </td>
+       <td>
+        <p>
+         --&gt;
+        </p>
+       </td>
+       <td>
+        <p>
+         c
+        </p>
+       </td>
+       <td>
+        <p>
+         ^
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         下标
+        </p>
+       </td>
+       <td>
+        <p>
+         data
+        </p>
+       </td>
+       <td>
+        <p>
+         next
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           0
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         b
+        </p>
+       </td>
+       <td>
+        <p>
+         4
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         2
+        </p>
+       </td>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         3
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         4
+        </p>
+       </td>
+       <td>
+        <p>
+         c
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           -1
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3 id="%E6%A0%88">
+     <strong>
+      <strong>
+       栈
+      </strong>
+     </strong>
+    </h3>
+    <h4 id="%E5%8E%8B%E6%A0%88%20%E7%9A%84%20%E5%87%BA%E5%85%A5%E5%BA%8F%E5%88%97">
+     压栈 的 出入序列
+    </h4>
+    <p>
+     （以
+     <strong>
+      <strong>
+       入栈
+      </strong>
+     </strong>
+     1 2 3 4 5 为例）
+    </p>
+    <p>
+     <strong>
+      <strong>
+       （1）出栈p首时，p前
+      </strong>
+     </strong>
+     的序列A，只能逆序出栈，且插在A中每个元素后面
+    </p>
+    <p>
+     eg：4****； 4_3_2_1_
+    </p>
+    <p>
+     （2）p
+     <strong>
+      <strong>
+       出栈序列
+      </strong>
+     </strong>
+     的前一个元素p1，可能为p的
+     <strong>
+      前面的
+     </strong>
+     或
+     <strong>
+      <strong>
+       后一个结点
+      </strong>
+     </strong>
+    </p>
+    <p>
+     eg：出栈 p1,3 则p1可能=1,2;4
+    </p>
+    <h4 id="n%E4%B8%AA%E4%B8%8D%E5%90%8C%E5%85%83%E7%B4%A0%E8%BF%9B%E6%A0%88%EF%BC%8C%E5%87%BA%E6%A0%88%E5%BA%8F%E5%88%97%E6%95%B0">
+     <a href="https://zhuanlan.zhihu.com/p/97619085" rel="nofollow" title="n个不同元素进栈，出栈序列数">
+      n个不同元素进栈，出栈序列数
+     </a>
+    </h4>
+    <p>
+     合法的出栈序列的数量=出栈序列的总数-非法序列的数量
+     <img alt="" height="66" src="https://i-blog.csdnimg.cn/blog_migrate/0aa3099a47663ae8b64449941ad515a7.png" width="214"/>
+    </p>
+    <p>
+     卡特兰数Catalan
+    </p>
+    <p>
+     <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/2d750c17ddecd26df6b73b602c5fe984.png"/>
+    </p>
+    <h4 id="%E6%A0%88%E6%8C%87%E9%92%88">
+     <strong>
+      栈指针
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           操作
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         初始S.top=
+         <strong>
+          <strong>
+           -1
+          </strong>
+         </strong>
+         ，即top指向
+         <strong>
+          <strong>
+           栈顶
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         S.top=
+         <strong>
+          <strong>
+           0
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           共享栈
+          </strong>
+         </strong>
+         ，top指向
+         <strong>
+          <strong>
+           栈顶
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           栈顶元素
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         S.data[S.top]
+        </p>
+       </td>
+       <td>
+        <p>
+         S.data[S.top-1]
+        </p>
+       </td>
+       <td>
+        <p>
+         S.data[S.top]
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           进栈
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         S.data[++top]=x;
+        </p>
+       </td>
+       <td>
+        <p>
+         S.data[top++]=x;
+        </p>
+       </td>
+       <td>
+        <p>
+         S.data[--top1]=x;
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           出栈
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         x=S.data[top--];
+        </p>
+       </td>
+       <td>
+        <p>
+         x=S.data[--top];
+        </p>
+       </td>
+       <td>
+        <p>
+         x=S.data[top1++];
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           栈空
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         S.top==-1;
+        </p>
+       </td>
+       <td>
+        <p>
+         S.top=0;
+        </p>
+       </td>
+       <td>
+        <p>
+         top1==MaxSize;  top0=0;
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           栈满
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         S.top==MaxSize-1;
+        </p>
+       </td>
+       <td>
+        <p>
+         S.top==MaxSize;
+        </p>
+       </td>
+       <td>
+        <p>
+         top
+         <strong>
+          <strong>
+           1
+          </strong>
+         </strong>
+         -top
+         <strong>
+          <strong>
+           0
+          </strong>
+         </strong>
+         =1;
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        缺点
+       </strong>
+      </strong>
+      ：数组上界 约束 入栈，对 最大空间 估计不足时，可能
+      <strong>
+       <strong>
+        上溢（
+       </strong>
+      </strong>
+      整个 存储空间满时
+      <strong>
+       <strong>
+        ）
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        共享栈
+       </strong>
+      </strong>
+      ：栈顶向 共享空间 延伸，栈底 在两端，
+      <strong>
+       <strong>
+        优点
+       </strong>
+      </strong>
+      ：更有效 利用 存储空间
+     </li>
+    </ol>
+    <h4 id="%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC">
+     <strong>
+      表达式求值
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      将表达式构建成中序二叉树，然后先序求值
+     </strong>
+    </p>
+    <p>
+     前，中，后缀 指 op在 两 操作数 中的位置
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        中缀
+       </strong>
+      </strong>
+      表达式：A+Bx（C-D）-E/F依赖
+      <strong>
+       <strong>
+        运算符
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        优先级；处理括号
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        后缀
+       </strong>
+      </strong>
+      表达式：ABCD-x+EF/-
+      <strong>
+       <strong>
+        已考虑
+       </strong>
+      </strong>
+      运算符
+      <strong>
+       <strong>
+        优先级
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        无括号
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <blockquote>
+     <p>
+      <strong>
+       后缀表达式
+      </strong>
+     </p>
+     <ul>
+      <li>
+       <strong>
+        <strong>
+         组成
+        </strong>
+       </strong>
+       ：只有
+       <strong>
+        <strong>
+         操作数
+        </strong>
+       </strong>
+       +
+       <strong>
+        <strong>
+         运算符
+        </strong>
+       </strong>
+       ；
+      </li>
+      <li>
+       <strong>
+        <strong>
+         表达
+        </strong>
+       </strong>
+       ：原运算式 对应 的
+       <strong>
+        <strong>
+         表达式树
+        </strong>
+       </strong>
+       的
+       <strong>
+        <strong>
+         后续遍历
+        </strong>
+       </strong>
+      </li>
+      <li>
+       <strong>
+        <strong>
+         计算
+        </strong>
+       </strong>
+       表达式值：
+      </li>
+     </ul>
+     <ol>
+      <li>
+       初始设置一个
+       <strong>
+        <strong>
+         空栈
+        </strong>
+       </strong>
+       ，
+       <strong>
+        <strong>
+         顺序扫描
+        </strong>
+       </strong>
+       后缀表达式
+      </li>
+      <li>
+       若为
+       <strong>
+        <strong>
+         操作数
+        </strong>
+       </strong>
+       ，则压
+       <strong>
+        <strong>
+         入栈
+        </strong>
+       </strong>
+      </li>
+      <li>
+       若为
+       <strong>
+        操作
+        <strong>
+         符&lt;op&gt;
+        </strong>
+       </strong>
+       ，则
+       <strong>
+        <strong>
+         连续
+        </strong>
+       </strong>
+       从 栈中
+       <strong>
+        <strong>
+         退出
+        </strong>
+       </strong>
+       <strong>
+        <strong>
+         两个操作数Y
+        </strong>
+       </strong>
+       和
+       <strong>
+        <strong>
+         X
+        </strong>
+       </strong>
+       ，形成
+       <strong>
+        <strong>
+         运算指令X&lt;op&gt;Y
+        </strong>
+       </strong>
+       ，计算
+       <strong>
+        <strong>
+         结果
+        </strong>
+       </strong>
+       重新 压
+       <strong>
+        <strong>
+         入栈
+        </strong>
+       </strong>
+      </li>
+      <li>
+       所有表达式 项 都扫描完，
+       <strong>
+        <strong>
+         栈顶
+        </strong>
+       </strong>
+       即为
+       <strong>
+        <strong>
+         结果
+        </strong>
+       </strong>
+      </li>
+     </ol>
+    </blockquote>
+    <p>
+     <strong>
+      <strong>
+       中
+      </strong>
+     </strong>
+     缀 转换为
+     <strong>
+      <strong>
+       前/后
+      </strong>
+     </strong>
+     缀：（
+     <strong>
+      <strong>
+       手工
+      </strong>
+     </strong>
+     ）
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        按
+       </strong>
+      </strong>
+      运算符
+      <strong>
+       <strong>
+        优先级
+       </strong>
+      </strong>
+      ，对所有
+      <strong>
+       <strong>
+        运算单位
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        加（）
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        运算符
+       </strong>
+      </strong>
+      移到
+      <strong>
+       <strong>
+        相应
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        （）前/后
+       </strong>
+      </strong>
+      面
+     </li>
+     <li>
+      <strong>
+       <strong>
+        去掉括号
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     <strong>
+      <strong>
+       中
+      </strong>
+     </strong>
+     缀 转换为
+     <strong>
+      <strong>
+       后
+      </strong>
+     </strong>
+     缀：以a*b+(-c)为例
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        根本
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        栈
+       </strong>
+      </strong>
+      存放
+      <strong>
+       <strong>
+        暂时
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        不能确定
+       </strong>
+      </strong>
+      运算
+      <strong>
+       <strong>
+        次序
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        操作符
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        算法思想
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      从
+      <strong>
+       <strong>
+        左到右
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        扫描
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        中缀
+       </strong>
+      </strong>
+      表达式
+     </li>
+     <li>
+      扫到
+      <strong>
+       <strong>
+        数
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        加入后缀
+       </strong>
+      </strong>
+     </li>
+     <li>
+      扫到
+      <strong>
+       <strong>
+        符
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      ‘
+      <strong>
+       <strong>
+        （
+       </strong>
+      </strong>
+      ’：
+      <strong>
+       <strong>
+        入栈
+       </strong>
+      </strong>
+     </li>
+     <li>
+      ‘
+      <strong>
+       <strong>
+        ）
+       </strong>
+      </strong>
+      ’：栈内
+      <strong>
+       <strong>
+        运算符
+       </strong>
+      </strong>
+      依次
+      <strong>
+       <strong>
+        出栈
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        直至栈内遇
+       </strong>
+      </strong>
+      到‘
+      <strong>
+       <strong>
+        （
+       </strong>
+      </strong>
+      ’，然后
+      <strong>
+       <strong>
+        直接删除
+       </strong>
+      </strong>
+      ‘
+      <strong>
+       <strong>
+        （
+       </strong>
+      </strong>
+      ’
+     </li>
+     <li>
+      其他
+      <strong>
+       <strong>
+        运算符
+       </strong>
+      </strong>
+      ：优先级 ＞ 栈顶的非‘（’运算符时or栈空or栈顶‘(’，直接入栈
+     </li>
+    </ol>
+    <p>
+     否则，依次弹出 当前处理 符 ≤ 栈内优先级 的 运算符，
+    </p>
+    <p>
+     直到遇‘(’or 优先级&lt;当前处理 符
+    </p>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           待处理序列
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           栈
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           后缀表达式
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           当前扫描元素
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           动作
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         a*b+(-c)
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           a加入后缀表达式
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         *b+(-c)
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+       <td>
+        <p>
+         *
+        </p>
+       </td>
+       <td>
+        <p>
+         *入栈
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         b+(-c)
+        </p>
+       </td>
+       <td>
+        <p>
+         *
+        </p>
+       </td>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+       <td>
+        <p>
+         b
+        </p>
+       </td>
+       <td>
+        <p>
+         b加入后缀表达式
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         +(-c)
+        </p>
+       </td>
+       <td>
+        <p>
+         *
+        </p>
+       </td>
+       <td>
+        <p>
+         ab
+        </p>
+       </td>
+       <td>
+        <p>
+         +
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           +&lt;栈顶*，弹出*
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         +(-c)
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         ab
+        </p>
+       </td>
+       <td>
+        <p>
+         +
+        </p>
+       </td>
+       <td>
+        <p>
+         +入栈
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         (-c)
+        </p>
+       </td>
+       <td>
+        <p>
+         +
+        </p>
+       </td>
+       <td>
+        <p>
+         ab*
+        </p>
+       </td>
+       <td>
+        <p>
+         (
+        </p>
+       </td>
+       <td>
+        <p>
+         (入栈
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         -c)
+        </p>
+       </td>
+       <td>
+        <p>
+         +(
+        </p>
+       </td>
+       <td>
+        <p>
+         ab*
+        </p>
+       </td>
+       <td>
+        <p>
+         -
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           栈顶
+          </strong>
+         </strong>
+         为
+         <strong>
+          <strong>
+           (，-入栈
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         c)
+        </p>
+       </td>
+       <td>
+        <p>
+         +(-
+        </p>
+       </td>
+       <td>
+        <p>
+         ab*
+        </p>
+       </td>
+       <td>
+        <p>
+         c
+        </p>
+       </td>
+       <td>
+        <p>
+         c加入后缀表达式
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         )
+        </p>
+       </td>
+       <td>
+        <p>
+         +(-
+        </p>
+       </td>
+       <td>
+        <p>
+         ab*c
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           )
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         把
+         <strong>
+          <strong>
+           栈
+          </strong>
+         </strong>
+         中
+         <strong>
+          <strong>
+           (之后
+          </strong>
+         </strong>
+         的符号
+         <strong>
+          <strong>
+           入后缀，并删(
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         ab*c-
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           扫描完毕，
+          </strong>
+         </strong>
+         运算符
+         <strong>
+          <strong>
+           依次退栈，入后缀
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         ab*c-+
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           完成
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ol>
+     <li>
+      具体
+      <strong>
+       <strong>
+        转换 过程
+       </strong>
+      </strong>
+      （在 中缀表达式后+‘
+      <strong>
+       <strong>
+        #
+       </strong>
+      </strong>
+      ’表示
+      <strong>
+       <strong>
+        表达式结束
+       </strong>
+      </strong>
+      ，题中
+      <strong>
+       <strong>
+        不算
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        操作符
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ol>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           操作符
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           #
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           （
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           *,/
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           +,-
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           ）
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           isp栈内优先
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         0
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         5
+        </p>
+       </td>
+       <td>
+        <p>
+         3
+        </p>
+       </td>
+       <td>
+        <p>
+         6
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           icp栈外优先
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         0
+        </p>
+       </td>
+       <td>
+        <p>
+         6
+        </p>
+       </td>
+       <td>
+        <p>
+         4
+        </p>
+       </td>
+       <td>
+        <p>
+         2
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           步骤
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           扫描项
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           项类型
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           动作
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           栈内
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           输出
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         0
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           ‘#’进栈，读下一符号
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         #
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           操作数
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           直接输出
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         #
+        </p>
+       </td>
+       <td>
+        <p>
+         a
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         2
+        </p>
+       </td>
+       <td>
+        <p>
+         *
+        </p>
+       </td>
+       <td>
+        <p>
+         操作符
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           isp
+          </strong>
+         </strong>
+         (‘#’)
+         <strong>
+          <strong>
+           &lt;icp
+          </strong>
+         </strong>
+         (‘*’)，
+         <strong>
+          <strong>
+           进栈
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         #*
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         3
+        </p>
+       </td>
+       <td>
+        <p>
+         b
+        </p>
+       </td>
+       <td>
+        <p>
+         操作数
+        </p>
+       </td>
+       <td>
+        <p>
+         直接输出
+        </p>
+       </td>
+       <td>
+        <p>
+         #*
+        </p>
+       </td>
+       <td>
+        <p>
+         b
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         4
+        </p>
+       </td>
+       <td>
+        <p>
+         +
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           操作符
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           isp
+          </strong>
+         </strong>
+         (‘*’)
+         <strong>
+          <strong>
+           &gt;icp
+          </strong>
+         </strong>
+         (‘+’)
+         <strong>
+          <strong>
+           ，退栈并输出
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         #
+        </p>
+       </td>
+       <td>
+        <p>
+         *
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         5
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         isp(‘#’)&lt;icp(‘+’)，进栈
+        </p>
+       </td>
+       <td>
+        <p>
+         #+
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         6
+        </p>
+       </td>
+       <td>
+        <p>
+         （
+        </p>
+       </td>
+       <td>
+        <p>
+         操作符
+        </p>
+       </td>
+       <td>
+        <p>
+         isp(‘-’)&lt;icp(‘（’)，进栈
+        </p>
+       </td>
+       <td>
+        <p>
+         #+（
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         7
+        </p>
+       </td>
+       <td>
+        <p>
+         -
+        </p>
+       </td>
+       <td>
+        <p>
+         操作符
+        </p>
+       </td>
+       <td>
+        <p>
+         isp(‘（’)&lt;icp(‘-’)，进栈
+        </p>
+       </td>
+       <td>
+        <p>
+         #+（-
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         8
+        </p>
+       </td>
+       <td>
+        <p>
+         c
+        </p>
+       </td>
+       <td>
+        <p>
+         操作数
+        </p>
+       </td>
+       <td>
+        <p>
+         直接输出
+        </p>
+       </td>
+       <td>
+        <p>
+         #+（-
+        </p>
+       </td>
+       <td>
+        <p>
+         c
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         9
+        </p>
+       </td>
+       <td>
+        <p>
+         ）
+        </p>
+       </td>
+       <td>
+        <p>
+         操作符
+        </p>
+       </td>
+       <td>
+        <p>
+         isp(‘-’)&gt;icp(‘）’)，退栈并输出
+        </p>
+       </td>
+       <td>
+        <p>
+         #+（
+        </p>
+       </td>
+       <td>
+        <p>
+         -
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         10
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           isp
+          </strong>
+         </strong>
+         (‘（’)
+         <strong>
+          <strong>
+           ==icp
+          </strong>
+         </strong>
+         (‘）’)
+         <strong>
+          <strong>
+           ，直接退栈
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         #+
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         11
+        </p>
+       </td>
+       <td>
+        <p>
+         #
+        </p>
+       </td>
+       <td>
+        <p>
+         操作符
+        </p>
+       </td>
+       <td>
+        <p>
+         isp(‘+’)&gt;icp(‘#’)，退栈并输出
+        </p>
+       </td>
+       <td>
+        <p>
+         #
+        </p>
+       </td>
+       <td>
+        <p>
+         +
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         12
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         isp(‘#’)==icp(‘#’)，退栈，
+         <strong>
+          <strong>
+           结束
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3 id="%E9%98%9F%E5%88%97">
+     队列
+    </h3>
+    <h4 id="%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8">
+     顺序存储
+    </h4>
+    <p>
+     队非空时，
+    </p>
+    <p>
+     Q.front指向队头元素的
+     <strong>
+      <strong>
+       上一个
+      </strong>
+     </strong>
+     元素，Q.rear指向队尾元素
+    </p>
+    <p>
+     Q.front指向队头元素，Q.rear指向队尾元素的
+     <strong>
+      <strong>
+       下一个
+      </strong>
+     </strong>
+     位置
+    </p>
+    <p>
+    </p>
+    <p>
+     ∵
+     <strong>
+      <strong>
+       假溢出
+      </strong>
+     </strong>
+     ：
+     <strong>
+      <strong>
+       初始Q.front==Q.rear
+      </strong>
+     </strong>
+     =0;
+     <strong>
+      <strong>
+       “队满”Q.front==Q.rear
+      </strong>
+     </strong>
+    </p>
+    <p>
+     ∴
+     <strong>
+      <strong>
+       循环队列
+      </strong>
+     </strong>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        初始
+       </strong>
+      </strong>
+      Q.front=Q.rear=0;
+     </li>
+     <li>
+      <strong>
+       <strong>
+        队长
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        (Q.rear-Q.front+MaxSize)%MaxSize
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        出
+       </strong>
+      </strong>
+      队/
+      <strong>
+       <strong>
+        入
+       </strong>
+      </strong>
+      队时，Q.front或Q.rear
+      <strong>
+       <strong>
+        顺时针+1
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <p>
+     x=Q.data[Q.front];
+    </p>
+    <p>
+     Q.front=(Q.front+1)%MaxSize
+    </p>
+    <h4 id="%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8">
+     <strong>
+      链式存储
+     </strong>
+    </h4>
+    <p>
+     链队列
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        优点
+       </strong>
+      </strong>
+      ：不存在
+      <strong>
+       <strong>
+        队满
+       </strong>
+      </strong>
+      甚至
+      <strong>
+       <strong>
+        溢出
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        适用
+       </strong>
+      </strong>
+      ：数据
+      <strong>
+       <strong>
+        元素波动大
+       </strong>
+      </strong>
+      ，或者
+      <strong>
+       <strong>
+        多个队列
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        队空
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        无头
+       </strong>
+      </strong>
+      结点：
+      <strong>
+       <strong>
+        Q.rear=NULL，Q.front=NULL
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        带头
+       </strong>
+      </strong>
+      结点：
+      <strong>
+       <strong>
+        Q.front==Q.rear
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     （带头结点，
+     <strong>
+      <strong>
+       增删
+      </strong>
+     </strong>
+     操作
+     <strong>
+      <strong>
+       统一
+      </strong>
+     </strong>
+     ）
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        入队
+       </strong>
+      </strong>
+      ：...s-&gt;next=NULL...
+     </li>
+     <li>
+      <strong>
+       <strong>
+        出队
+       </strong>
+      </strong>
+      ：...Q.front-&gt;next=p-&gt;next，if(Q.rear==p){ Q.rear=Q.front;}...
+     </li>
+    </ol>
+    <h3>
+     树
+    </h3>
+    <h4 id="%E4%BA%8C%E5%8F%89%E6%A0%91">
+     <strong>
+      <strong>
+       二叉树
+      </strong>
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       N0=1+N2
+      </strong>
+     </strong>
+    </p>
+    <h4 id="%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91">
+     <strong>
+      满二叉树
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      结点数：2^h-1
+     </li>
+    </ol>
+    <p>
+     结点i的
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        父
+       </strong>
+      </strong>
+      结点：└i/2┘
+     </li>
+     <li>
+      <strong>
+       <strong>
+        左
+       </strong>
+      </strong>
+      孩子结点：2i
+     </li>
+     <li>
+      <strong>
+       <strong>
+        右
+       </strong>
+      </strong>
+      孩子结点：2i+1
+     </li>
+    </ol>
+    <h4 id="%E5%AE%8C%E5%85%A8%E5%9B%BE%EF%BC%9A">
+     <strong>
+      <strong>
+       哈夫曼树
+      </strong>
+      （最优二叉树）
+     </strong>
+     Huffman
+    </h4>
+    <p>
+     <strong>
+      目的：找出存放一串字符所需的最少的二进制编码
+     </strong>
+    </p>
+    <p>
+     最小的两个合成组成二叉树。在
+     <strong>
+      频率表
+     </strong>
+     中删去他俩，并加入新的根结点。重复该步骤
+    </p>
+    <p>
+     默认是小在左，大在右，，所以哈弗曼
+     <strong>
+      <strong>
+       编码不唯一
+      </strong>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      例如：频率表 B:45,   C:13   D:69   E:14   F:5  G:3
+     </strong>
+    </p>
+    <p>
+     <img alt="" height="114" src="https://i-blog.csdnimg.cn/blog_migrate/6fdd4acb69c3131e1b3b6f964ec5408f.png" width="125"/>
+     <img alt="" height="162" src="https://i-blog.csdnimg.cn/blog_migrate/0e4b8c0a911ceef5f68d9b20aceafef1.png" width="183"/>
+     <img alt="" height="198" src="https://i-blog.csdnimg.cn/blog_migrate/3d5d906d17f18cf427c6c6ed63ab0397.png" width="173"/>
+     <img alt="" height="297" src="https://i-blog.csdnimg.cn/blog_migrate/eef894fc509e7cd9731f804094a9055e.png" width="192"/>
+    </p>
+    <p>
+     <strong>
+      度m的哈夫曼树
+     </strong>
+     只有度为0和m的结点∴Nm=(n-1)/(m-1)
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        固定
+       </strong>
+      </strong>
+      长度编码：待处理的字符串序列中，每个字符用
+      <strong>
+       <strong>
+        同样长度
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        二进制位
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        可变
+       </strong>
+      </strong>
+      长度编码：
+      <strong>
+       <strong>
+        频率
+       </strong>
+      </strong>
+      高的字符短编码；平均编码长度 减短，压缩数据
+     </li>
+     <li>
+      <strong>
+       <strong>
+        前缀
+       </strong>
+      </strong>
+      编码：
+      <strong>
+       <strong>
+        没有
+       </strong>
+      </strong>
+      一个
+      <strong>
+       <strong>
+        编码
+       </strong>
+      </strong>
+      是
+      <strong>
+       <strong>
+        另外
+       </strong>
+      </strong>
+      一个编码的
+      <strong>
+       <strong>
+        前缀
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        哈夫曼是前缀，可变长度编码
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     <img alt="在这里插入图片描述" height="255" src="https://i-blog.csdnimg.cn/blog_migrate/0afd1ce91678fe58d774b668eeae5e7a.png#pic_center" width="301"/>
+    </p>
+    <h4 id="%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91">
+     二叉排序树/二叉查找树BST（Binary Search/Sort Tree）
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       左
+      </strong>
+     </strong>
+     子树的关键字
+     <strong>
+      <strong>
+       ＜
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       根
+      </strong>
+     </strong>
+     结点
+     <strong>
+      <strong>
+       ＜
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       右
+      </strong>
+     </strong>
+     子树的关键字
+    </p>
+    <p>
+     <strong>
+      判断是否为BST
+     </strong>
+     ：中序序列递增=&gt;B为BST，即pre &lt; bt-&gt;data
+    </p>
+    <h4 id="%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91AVL">
+     <strong>
+      平衡二叉树AVL
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       任一
+      </strong>
+     </strong>
+     结点的
+     <strong>
+      <strong>
+       左子树
+      </strong>
+     </strong>
+     和
+     <strong>
+      <strong>
+       右子树
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       深度之差≤1
+      </strong>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <strong>
+       插入
+      </strong>
+     </strong>
+     ：若需调整，则每次 调整对象 必为
+     <strong>
+      <strong>
+       最小
+      </strong>
+     </strong>
+     不平衡二叉树
+    </p>
+    <p>
+     <img alt="" height="143" src="https://i-blog.csdnimg.cn/blog_migrate/bf37f402caff29d34623354801dd904d.png" width="337"/>
+     <img alt="" height="148" src="https://i-blog.csdnimg.cn/blog_migrate/5492dbb640b5f4c35a325c4ac1e09fe7.png" width="343"/>
+    </p>
+    <p>
+     <img alt="" height="155" src="https://i-blog.csdnimg.cn/blog_migrate/2bfcb418bf84eb466953c92aed09c25b.png" width="336"/>
+     <img alt="" height="161" src="https://i-blog.csdnimg.cn/blog_migrate/c8327676e4f70b8e02854eeceb0f44f9.png" width="340"/>
+    </p>
+    <p>
+     <strong>
+      <strong>
+       查找
+      </strong>
+     </strong>
+     ：Nh表示深度为h
+     <strong>
+      <strong>
+       最少结点数
+      </strong>
+     </strong>
+     ，则N0=0，N1=1，N2=2，Nh=Nh-1+Nh-2+1
+    </p>
+    <p>
+     <img alt="" height="147" src="https://i-blog.csdnimg.cn/blog_migrate/93c2e0f2ee2f399c6453f1f6bf7cd7dc.png" width="440"/>
+    </p>
+    <h4 id="%E5%A4%A7%E6%A0%B9%E5%A0%86">
+     <strong>
+      大根堆
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       左/右
+      </strong>
+     </strong>
+     子树的关键字
+     <strong>
+      <strong>
+       ≤根
+      </strong>
+     </strong>
+     结点，
+     <strong>
+      <strong>
+       完全
+      </strong>
+     </strong>
+     二叉树
+    </p>
+    <h4>
+     最小生成树
+    </h4>
+    <ol>
+     <li>
+      定义：
+      <strong>
+       <strong>
+        连通
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        无向带权
+       </strong>
+      </strong>
+      图的生成树，
+      <strong>
+       <strong>
+        权值之和最小
+       </strong>
+      </strong>
+      的
+     </li>
+     <li>
+      <strong>
+       <strong>
+        唯一
+       </strong>
+      </strong>
+      ：当任意环中边的
+      <strong>
+       <strong>
+        权值相异
+       </strong>
+      </strong>
+      ，则最小生成树
+      <strong>
+       <strong>
+        唯一
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     <img alt="" height="233" src="https://i-blog.csdnimg.cn/blog_migrate/723be55f1215d9fc974fb0b0015cf058.png" width="328"/>
+     <img alt="" height="234" src="https://i-blog.csdnimg.cn/blog_migrate/d254c06e740a8887fc81e663c9e3d051.png" width="353"/>
+    </p>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         普里姆Prim算法
+        </p>
+       </td>
+       <td>
+        <p>
+         克鲁斯卡Kruskal算法
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         共同
+        </p>
+       </td>
+       <td colspan="2">
+        <p>
+         基于
+         <strong>
+          <strong>
+           贪心
+          </strong>
+         </strong>
+         算法
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         特点
+        </p>
+       </td>
+       <td>
+        <p>
+         从
+         <strong>
+          <strong>
+           顶点
+          </strong>
+         </strong>
+         开始扩展最小生成树
+        </p>
+       </td>
+       <td>
+        <p>
+         按
+         <strong>
+          <strong>
+           权
+          </strong>
+         </strong>
+         递
+         <strong>
+          <strong>
+           增
+          </strong>
+         </strong>
+         次
+         <strong>
+          <strong>
+           序
+          </strong>
+         </strong>
+         ，选择
+         <strong>
+          <strong>
+           不构成环
+          </strong>
+         </strong>
+         的
+         <strong>
+          <strong>
+           边
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+         T(n)
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+         O(|V|^2)
+        </p>
+       </td>
+       <td>
+        <p>
+         O(|E|log2|E|)
+        </p>
+        <p>
+         <strong>
+          <strong>
+           堆存放
+          </strong>
+         </strong>
+         E，
+         <strong>
+          <strong>
+           每次
+          </strong>
+         </strong>
+         选
+         <strong>
+          <strong>
+           最小
+          </strong>
+         </strong>
+         权值边
+         <strong>
+          <strong>
+           O(log
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           |E|)
+          </strong>
+         </strong>
+        </p>
+        <p>
+         T所有边看成
+         <strong>
+          <strong>
+           等价类
+          </strong>
+         </strong>
+         ，每次
+         <strong>
+          <strong>
+           +边
+          </strong>
+         </strong>
+         ，看成
+         <strong>
+          <strong>
+           求等价类
+          </strong>
+         </strong>
+         ∴
+         <strong>
+          <strong>
+           并查集
+          </strong>
+         </strong>
+         描述T，
+        </p>
+        <p>
+         ∴构造T需
+         <strong>
+          <strong>
+           O(|E|)
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         适用
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           稠密
+          </strong>
+         </strong>
+         图
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           稀疏
+          </strong>
+         </strong>
+         图
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="%E6%A3%AE%E6%9E%97">
+     森林
+    </h4>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         对应树
+        </p>
+       </td>
+       <td>
+        <p>
+         森林1次
+        </p>
+       </td>
+       <td>
+        <p>
+         对应二叉树
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          先
+          <strong>
+           根
+          </strong>
+         </strong>
+         遍历
+        </p>
+       </td>
+       <td>
+        <p>
+         先序遍历
+        </p>
+       </td>
+       <td>
+        <p>
+         先序遍历
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          后
+          <strong>
+           根
+          </strong>
+         </strong>
+         遍历
+        </p>
+       </td>
+       <td>
+        <p>
+         中序遍历
+        </p>
+       </td>
+       <td>
+        <p>
+         中序遍历
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="%E5%85%88%E5%BA%8F%20%E7%A1%AE%E5%AE%9A%E7%9A%84%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AA%E6%95%B0">
+     <strong>
+      先序 确定的 二叉树个数
+     </strong>
+    </h4>
+    <p>
+     ∵
+     <strong>
+      <strong>
+       先序+中序
+      </strong>
+     </strong>
+     可 唯一 确定 一棵二叉树
+    </p>
+    <p>
+     其关系 就如 入栈序列+出栈序列 可 唯一 确定 一个 栈
+    </p>
+    <p>
+     ∴先序 确定 二叉树个数，即先序 确定 中序个数，
+    </p>
+    <p>
+     <strong>
+      <strong>
+       NL
+      </strong>
+     </strong>
+     R确定
+     <strong>
+      <strong>
+       LN
+      </strong>
+     </strong>
+     R，LN、NL相当于压栈，R相当于进了立即出
+    </p>
+    <p>
+     ∴h(n)=Catalan卡特兰数=
+     <img alt="" height="66" src="https://i-blog.csdnimg.cn/blog_migrate/0aa3099a47663ae8b64449941ad515a7.png" width="214"/>
+    </p>
+    <h4 id="%E5%B8%A6%E6%9D%83%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6WPL">
+     带权路径长度WPL
+    </h4>
+    <p>
+     WPL=∑（weight*路径
+     <strong>
+      <strong>
+       边
+      </strong>
+     </strong>
+     数）=(16+21+30)*2+(10+12)*3=200
+    </p>
+    <p>
+     <img alt="" height="221" src="https://i-blog.csdnimg.cn/blog_migrate/fdfb08179106c4e3ae242634f32957cc.png" width="210"/>
+    </p>
+    <p>
+     <strong>
+      <strong>
+       查找次数
+      </strong>
+     </strong>
+     =路径上的
+     <strong>
+      <strong>
+       结点数
+      </strong>
+     </strong>
+     ，
+     <strong>
+      <strong>
+       路径长度
+      </strong>
+     </strong>
+     =路径上的
+     <strong>
+      <strong>
+       边数
+      </strong>
+     </strong>
+    </p>
+    <h3 id="%E5%9B%BE">
+     图
+    </h3>
+    <h4 id="%E5%AE%8C%E5%85%A8%E5%9B%BE">
+     <strong>
+      <strong>
+       完全
+      </strong>
+     </strong>
+     图
+    </h4>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        无向
+       </strong>
+      </strong>
+      ：任意两个顶点间，
+      <strong>
+       <strong>
+        只有
+       </strong>
+      </strong>
+      一条边，
+      <strong>
+       <strong>
+        n(n-1)/2
+       </strong>
+      </strong>
+      条边
+     </li>
+     <li>
+      <strong>
+       <strong>
+        有向
+       </strong>
+      </strong>
+      ：任意两个顶点间，
+      <strong>
+       <strong>
+        只有
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        方向相反
+       </strong>
+      </strong>
+      的两条弧，
+      <strong>
+       <strong>
+        n(n-1)
+       </strong>
+      </strong>
+      条弧
+     </li>
+    </ol>
+    <h4 id="%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84">
+     最短路径
+    </h4>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+         Dijkstra算法
+        </p>
+       </td>
+       <td>
+        <p>
+         Floyd算法
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         问题
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           单源
+          </strong>
+         </strong>
+         最短路径（单起源到各个顶点的最短距离，从源点的临近点开始）
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           各个顶点
+          </strong>
+         </strong>
+         之间的最短路径
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p id="%E2%80%8B%E7%BC%96%E8%BE%91">
+     <img alt="" height="535" src="https://i-blog.csdnimg.cn/blog_migrate/d4b31aa895b6df244d8ce158ef4802ff.png" width="583"/>
+    </p>
+    <h4 id="%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F">
+     <strong>
+      拓扑排序
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        DAG
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        有向无环
+       </strong>
+      </strong>
+      图Directed Acycline Graph
+     </li>
+     <li>
+      拓扑排序：DAG中，每个顶点只出现一次，对每个
+      <strong>
+       <strong>
+        &lt;u,v&gt;
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        序列
+       </strong>
+      </strong>
+      中，
+      <strong>
+       <strong>
+        u在v前
+       </strong>
+      </strong>
+     </li>
+     <li>
+      唯一：图为
+      <strong>
+       <strong>
+        线性
+       </strong>
+      </strong>
+      有序序列时，唯一；若存在顶点 有多个后继则不唯一
+     </li>
+     <li>
+      邻接矩阵：
+     </li>
+     <li>
+      算法：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        输出
+       </strong>
+      </strong>
+      并
+      <strong>
+       <strong>
+        删除
+       </strong>
+      </strong>
+      一个
+      <strong>
+       <strong>
+        没有前驱
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        结点
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        删除
+       </strong>
+      </strong>
+      以该结点 为
+      <strong>
+       <strong>
+        弧头
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        边
+       </strong>
+      </strong>
+     </li>
+     <li>
+      重复（1）（2），直到 DAG为空 或者 不存在 无前驱的 结点（环）
+     </li>
+    </ol>
+    <p>
+     <img alt="" height="308" src="https://i-blog.csdnimg.cn/blog_migrate/ad980510a769c920324ba6f730dff87a.png" width="355"/>
+    </p>
+    <h4 id="%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84">
+     <strong>
+      关键路径
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      关键路径：
+      <strong>
+       <strong>
+        最长
+       </strong>
+      </strong>
+      路径，
+      <strong>
+       <strong>
+        工程所需时间
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ol>
+     <li>
+      关键活动：最长路径上的边
+     </li>
+     <li>
+      ve(k)：事件k最早发生时间ve(k)=0（源点），ve(k)=
+      <strong>
+       <strong>
+        Max
+       </strong>
+      </strong>
+      {ve(j)+Weight(j,k)}
+     </li>
+     <li>
+      vl(k)：事件k最迟发生时间vl(k)=ve(k)（汇点），vl(k)=
+      <strong>
+       <strong>
+        Min
+       </strong>
+      </strong>
+      {vl(j)-Weight(j,k)}
+     </li>
+     <li>
+      e(i)：活动ai最早开始时间&lt;vk,vj&gt;，e(i)=vl(k)
+     </li>
+     <li>
+      l(i)：活动ai最迟开始时间&lt;vk,vj&gt;，l(i)=vl(j)-Weight(k,j)
+     </li>
+     <li>
+      d(i)：l(i)-e(i)，为0的即
+      <strong>
+       <strong>
+        关键
+       </strong>
+      </strong>
+      活动
+     </li>
+    </ol>
+    <p>
+     <img alt="" height="222" src="https://i-blog.csdnimg.cn/blog_migrate/4a855dcd1b83db3feb4cab83bc380e6f.png" width="580"/>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        适度缩短 关键活动
+       </strong>
+      </strong>
+      ，可以缩短工期，
+      <strong>
+       <strong>
+        过度
+       </strong>
+      </strong>
+      时，关键活动可能变成
+      <strong>
+       <strong>
+        非关键活动
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        多关键路径
+       </strong>
+      </strong>
+      时，
+      <strong>
+       <strong>
+        缩短 所有 关键路径
+       </strong>
+      </strong>
+      才 缩短工期，除非有“
+      <strong>
+       <strong>
+        桥
+       </strong>
+      </strong>
+      ”---所有关键路径的
+      <strong>
+       <strong>
+        共有活动
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <h3 id="%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D">
+     <strong>
+      <strong>
+       模式匹配
+      </strong>
+     </strong>
+    </h3>
+    <p>
+     主串S，长n，模式串T，长m。T在S中
+     <strong>
+      <strong>
+       首次出现
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       位置
+      </strong>
+     </strong>
+    </p>
+    <h4 id="BF%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D">
+     <strong>
+      BF模式匹配
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       最坏T(n)=O(m
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       *
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       n)
+      </strong>
+     </strong>
+    </p>
+    <h4 id="KMP%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D">
+     <strong>
+      KMP模式匹配
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      next[j]：
+      <strong>
+       <strong>
+        T
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        第j个
+       </strong>
+      </strong>
+      字符
+      <strong>
+       <strong>
+        失配
+       </strong>
+      </strong>
+      于
+      <strong>
+       <strong>
+        S
+       </strong>
+      </strong>
+      中的
+      <strong>
+       <strong>
+        第i个
+       </strong>
+      </strong>
+      字符，需要用
+      <strong>
+       <strong>
+        T
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        第next[j]个
+       </strong>
+      </strong>
+      字符与
+      <strong>
+       <strong>
+        S
+       </strong>
+      </strong>
+      中的
+      <strong>
+       <strong>
+        第i个
+       </strong>
+      </strong>
+      字符 比较
+     </li>
+    </ol>
+    <p>
+     abcdeab
+     <strong>
+      <strong>
+       f
+      </strong>
+     </strong>
+     （f
+     <strong>
+      <strong>
+       失配
+      </strong>
+     </strong>
+     ，第
+     <strong>
+      <strong>
+       next[j]=
+      </strong>
+     </strong>
+     3个字符c比较）
+     <strong>
+      <strong>
+       T起点开始
+      </strong>
+     </strong>
+     ，和
+     <strong>
+      <strong>
+       失配点结束
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       最大公共前缀
+      </strong>
+     </strong>
+    </p>
+    <ol>
+     <li>
+      next[1]
+      <strong>
+       <strong>
+        =0
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        i++;
+       </strong>
+      </strong>
+     </li>
+     <li>
+      next[2]
+      <strong>
+       <strong>
+        =
+       </strong>
+      </strong>
+      1，next[j]：
+      <strong>
+       <strong>
+        i不变;
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     模式匹配过程：
+    </p>
+    <ol>
+     <li>
+      S中第i个char，T中第j个char
+     </li>
+     <li>
+      j指向 失配点/ j
+      <strong>
+       <strong>
+        =
+       </strong>
+      </strong>
+      m（全部匹配成功） 为 一趟
+     </li>
+    </ol>
+    <p>
+     虽KMP的
+     <strong>
+      <strong>
+       T(n)=O(m
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       +
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       n)
+      </strong>
+     </strong>
+     ，
+    </p>
+    <p>
+     但
+     <strong>
+      <strong>
+       实际
+      </strong>
+     </strong>
+     中
+     <strong>
+      <strong>
+       BF
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       T(n)接近O(m+n)
+      </strong>
+     </strong>
+     ，
+    </p>
+    <p>
+     ∴至今采用
+    </p>
+    <p>
+     只有T中有
+     <strong>
+      <strong>
+       很多部分匹配
+      </strong>
+     </strong>
+     ，
+     <strong>
+      <strong>
+       KMP才明显快
+      </strong>
+     </strong>
+    </p>
+    <h3 id="%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95">
+     <strong>
+      内部排序算法
+     </strong>
+    </h3>
+    <h4 id="T(n)%E5%92%8CS(n)">
+     <strong>
+      <strong>
+       T(n)和S(n)
+      </strong>
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      任何 基于
+      <strong>
+       <strong>
+        比较
+       </strong>
+      </strong>
+      的算法，都可用
+      <strong>
+       <strong>
+        二叉树
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        描述判定
+       </strong>
+      </strong>
+      过程，∴T(n)至少=O(nlog2n)
+     </li>
+    </ol>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td rowspan="2">
+        <p>
+         操作
+        </p>
+       </td>
+       <td rowspan="2">
+        <p>
+         <strong>
+          <strong>
+           内部排序
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td rowspan="2">
+        <p>
+         <strong>
+          <strong>
+           思想
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td rowspan="2">
+        <p>
+         <strong>
+          <strong>
+           稳定
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td rowspan="2">
+        <p>
+         <strong>
+          <strong>
+           平均
+          </strong>
+         </strong>
+        </p>
+        <p>
+         <strong>
+          <strong>
+           S(n)
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td colspan="3">
+        <p>
+         <strong>
+          <strong>
+           T(n)
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           平均
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           最坏
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           最好
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td rowspan="3">
+        <p>
+         <strong>
+          <strong>
+           插
+          </strong>
+         </strong>
+        </p>
+        <p>
+        </p>
+        <p>
+         <strong>
+          <strong>
+           入
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           直接
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         查找；elem插入到有序，顺序找位
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           √
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           顺序
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n逆序
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           折半
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         查找；直接插入的优化，折半找位
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td colspan="3">
+        <p>
+         n2与初始序列无关
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           希尔
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         分治；分组直接插入排序d个组L[i,i+d,...,i+kd]
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         n1.3
+        </p>
+       </td>
+       <td>
+        <p>
+         n2
+        </p>
+       </td>
+       <td>
+        <p>
+         依赖f(d)
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td rowspan="2">
+        <p>
+         <strong>
+          <strong>
+           交换
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           冒泡
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         擂台；无序中两两比较，不等则交换，至最值
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           √
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           逆序
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n顺序
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           快速
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         分治；取pivot，调整至L[1...k-1]＜L(k)≤L[k+1...n]
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           log
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         nlog2n
+        </p>
+       </td>
+       <td>
+        <p>
+         n2最不平衡
+        </p>
+       </td>
+       <td>
+        <p>
+         nlog2n最平衡
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td rowspan="2">
+        <p>
+         <strong>
+          <strong>
+           选择
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           简单
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         擂台；第i趟L[i...n]，初始min=i，swap(L(min),L(i))
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         n2
+        </p>
+       </td>
+       <td>
+        <p>
+         n2逆序
+        </p>
+       </td>
+       <td>
+        <p>
+         n2顺序
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           堆
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         擂台；完全二叉树，根&gt;子结点（大根堆）
+        </p>
+       </td>
+       <td>
+        <p>
+         x
+        </p>
+       </td>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           nlog
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           nlog
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n逆序
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           nlog
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n顺序
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2">
+        <p>
+         <strong>
+          <strong>
+           2-路归并
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         分治；分组排序，两两合并 相邻 有序序列
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           √
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           nlog
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           nlog
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n逆序
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           nlog
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           n顺序
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2">
+        <p>
+         <strong>
+          <strong>
+           基数
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         多key；从优先级min的开始入队分配，收集
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           √
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           r
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td colspan="3">
+        <p>
+         d(n+r)与初始序列无关
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        顺序/链式
+       </strong>
+      </strong>
+      存储 均可：（与
+      <strong>
+       <strong>
+        下标
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        无关
+       </strong>
+      </strong>
+      ）
+      <strong>
+       <strong>
+        直接插入
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        冒泡
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        快速
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        简单选择
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        2-路归并
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        顺序
+       </strong>
+      </strong>
+      存储：（数组）
+      <strong>
+       <strong>
+        折半
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        希尔
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        堆
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        基数
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        比较
+       </strong>
+      </strong>
+      次数与
+      <strong>
+       <strong>
+        初始状态无关
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        简单选择
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        基数
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        T(n)
+       </strong>
+      </strong>
+      与
+      <strong>
+       <strong>
+        初始序列
+       </strong>
+      </strong>
+      无关：
+      <strong>
+       <strong>
+        折半
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        堆
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        多路归并
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        基数
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        过程特征
+       </strong>
+      </strong>
+      ：（
+      <strong>
+       <strong>
+        每一趟
+       </strong>
+      </strong>
+      确定
+      <strong>
+       <strong>
+        一个
+       </strong>
+      </strong>
+      elem
+      <strong>
+       <strong>
+        最终位置
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ol>
+    <ol>
+     <li>
+      第
+      <strong>
+       <strong>
+        k
+       </strong>
+      </strong>
+      趟确定第
+      <strong>
+       <strong>
+        k
+       </strong>
+      </strong>
+      小/大值：
+      <strong>
+       <strong>
+        冒泡
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        堆
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        简单选择
+       </strong>
+      </strong>
+     </li>
+     <li>
+      第
+      <strong>
+       <strong>
+        k
+       </strong>
+      </strong>
+      趟确定第
+      <strong>
+       <strong>
+        i
+       </strong>
+      </strong>
+      小/大值：
+      <strong>
+       <strong>
+        快速
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <h4>
+     <strong>
+      应用
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        考虑因素
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        n
+       </strong>
+      </strong>
+      待排序数目
+     </li>
+     <li>
+      <strong>
+       <strong>
+        elem本身
+       </strong>
+      </strong>
+      信息量
+      <strong>
+       <strong>
+        大小
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        key
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        结构
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        稳定性
+       </strong>
+      </strong>
+      要求
+     </li>
+     <li>
+      <strong>
+       <strong>
+        语言工具
+       </strong>
+      </strong>
+      条件
+     </li>
+     <li>
+      <strong>
+       <strong>
+        存储结构
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        辅助空间大小
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        情况
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        n≤50 ? 100
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        n
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        2
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        链
+       </strong>
+      </strong>
+      式存储/
+      <strong>
+       <strong>
+        n≤50
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        直接插入
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        顺
+       </strong>
+      </strong>
+      序存储：
+      <strong>
+       <strong>
+        折半插入
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        elem本身
+       </strong>
+      </strong>
+      信息量
+      <strong>
+       <strong>
+        大
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        简单选择
+       </strong>
+      </strong>
+      （
+      <strong>
+       <strong>
+        移动少
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        1000≥n＞50?100
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        希尔
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        n＞1000
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        nlog
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        2
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        n
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        key随机
+       </strong>
+      </strong>
+      分布：
+      <strong>
+       <strong>
+        快速
+       </strong>
+      </strong>
+      排序
+     </li>
+     <li>
+      <strong>
+       <strong>
+        key位数少
+       </strong>
+      </strong>
+      且可
+      <strong>
+       <strong>
+        分解
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        基数
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        T(n)
+       </strong>
+      </strong>
+      与
+      <strong>
+       <strong>
+        初始序列
+       </strong>
+      </strong>
+      无关：
+     </li>
+    </ol>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        辅助空间小
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        堆
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        稳定
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        归并
+       </strong>
+      </strong>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        key基本有序
+       </strong>
+      </strong>
+      ：（
+      <strong>
+       <strong>
+        比较
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        直接插入
+       </strong>
+      </strong>
+      &lt;
+      <strong>
+       <strong>
+        冒泡
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        移动
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        直接插入
+       </strong>
+      </strong>
+      &gt;
+      <strong>
+       <strong>
+        冒泡
+       </strong>
+      </strong>
+      ）
+     </li>
+    </ol>
+    <ol>
+     <li>
+      基本
+      <strong>
+       <strong>
+        逆序
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        直接插入
+       </strong>
+      </strong>
+     </li>
+     <li>
+      基本
+      <strong>
+       <strong>
+        顺序
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        冒泡
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        elem本身
+       </strong>
+      </strong>
+      信息量
+      <strong>
+       <strong>
+        大
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        链
+       </strong>
+      </strong>
+      式存储；避免耗费
+      <strong>
+       <strong>
+        大量移动记录
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        总体
+       </strong>
+      </strong>
+      信息量
+      <strong>
+       <strong>
+        大
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        归并排序
+       </strong>
+      </strong>
+      ；
+      <strong>
+       <strong>
+        内存
+       </strong>
+      </strong>
+      一次
+      <strong>
+       <strong>
+        放不下
+       </strong>
+      </strong>
+      ，需要
+      <strong>
+       <strong>
+        外部介质
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <h3 id="%E9%80%92%E5%BD%92">
+     平均查找长度ASL
+    </h3>
+    <h4 id="%E9%A1%BA%E5%BA%8F%20%2F%20%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE">
+     顺序 / 线性查找
+    </h4>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           ASL
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           无序线性表
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           有序表
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           succ
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td colspan="2">
+        <p>
+         (n+1)/2
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+         <strong>
+          <strong>
+           fail
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+         n+1
+        </p>
+       </td>
+       <td>
+        <p>
+         <img alt="" height="160" src="https://i-blog.csdnimg.cn/blog_migrate/bb45f3c98f28728d4700c7bae2715071.png" width="323"/>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="%E6%8A%98%E5%8D%8A%20%2F%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE">
+     折半 / 二分查找
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       判定树
+      </strong>
+     </strong>
+     ：描述 折半查找
+     <strong>
+      <strong>
+       过程
+      </strong>
+     </strong>
+    </p>
+    <p>
+     ASLsucc≈log2(n+1)-1
+    </p>
+    <h4 id="%E5%88%86%E5%9D%97%20%2F%20%E7%B4%A2%E5%BC%95%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE">
+     <a name="_Toc8625">
+     </a>
+     <strong>
+      分块 / 索引顺序查找
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        优点
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        动态
+       </strong>
+      </strong>
+      结构，
+      <strong>
+       <strong>
+        快速
+       </strong>
+      </strong>
+      查找
+     </li>
+     <li>
+      <strong>
+       <strong>
+        基本思想
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <ol>
+     <li>
+      块
+      <strong>
+       <strong>
+        间
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        第i块max key&lt;第i+1块
+       </strong>
+      </strong>
+      all key
+     </li>
+     <li>
+      块
+      <strong>
+       <strong>
+        内
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        无序
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        索引表
+       </strong>
+      </strong>
+      ：含
+      <strong>
+       <strong>
+        各块
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        max key
+       </strong>
+      </strong>
+      和
+      <strong>
+       <strong>
+        各块
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        第一个元素
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        地址
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <ol>
+     <li>
+      ASLSucc=LI+LS
+     </li>
+    </ol>
+    <ol>
+     <li>
+      LI：ASL
+      <strong>
+       <strong>
+        索引
+       </strong>
+      </strong>
+      查找
+     </li>
+     <li>
+      LS：ASL
+      <strong>
+       <strong>
+        块内
+       </strong>
+      </strong>
+      查找
+     </li>
+    </ol>
+    <ol>
+     <li>
+      分
+      <strong>
+       <strong>
+        b块
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        每块s个记录
+       </strong>
+      </strong>
+      ：(b+1)/2 + (s+1)/2 =
+      <img alt="" height="22" src="https://i-blog.csdnimg.cn/blog_migrate/c7f5852afd37990f8a9d4a4e9321dec5.png" width="89"/>
+     </li>
+    </ol>
+    <p>
+     （
+     <strong>
+      <strong>
+       索引表
+      </strong>
+     </strong>
+     ，
+     <strong>
+      <strong>
+       顺序表
+      </strong>
+     </strong>
+     ，均
+     <strong>
+      <strong>
+       顺序查找
+      </strong>
+     </strong>
+     ）当s=
+     <img alt="" height="22" src="https://i-blog.csdnimg.cn/blog_migrate/8bd18e26d9018663f33d6c6da9aaaf66.png" width="21"/>
+     时ASLmin=
+     <img alt="" height="23" src="https://i-blog.csdnimg.cn/blog_migrate/8bd18e26d9018663f33d6c6da9aaaf66.png" width="22"/>
+     +1
+    </p>
+    <ol>
+     <li>
+      若对
+      <strong>
+       <strong>
+        索引表
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        折半
+       </strong>
+      </strong>
+      查找：┌log2(b+1)┐ +(s+1)/2
+     </li>
+    </ol>
+    <h4 id="%E6%95%A3%E5%88%97(Hash)%E8%A1%A8">
+     <strong>
+      散列(Hash)表
+     </strong>
+    </h4>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        散列表
+       </strong>
+      </strong>
+      ：根据
+      <strong>
+       <strong>
+        关键字
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        直接访问
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        数据结构
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        对比
+       </strong>
+      </strong>
+      ：散列表中
+      <strong>
+       <strong>
+        key
+       </strong>
+      </strong>
+      和
+      <strong>
+       <strong>
+        存储地址
+       </strong>
+      </strong>
+      有
+      <strong>
+       <strong>
+        直接映射
+       </strong>
+      </strong>
+      关系，而线性表，树表等无确定映射关系
+     </li>
+     <li>
+      <strong>
+       <strong>
+        散列函数
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        Hash(key)=Addr
+       </strong>
+      </strong>
+      （
+      <strong>
+       <strong>
+        数组下标
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        索引
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        内存地址
+       </strong>
+      </strong>
+      ）
+     </li>
+     <li>
+      <strong>
+       <strong>
+        冲突
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        不同关键字 映射
+       </strong>
+      </strong>
+      到
+      <strong>
+       <strong>
+        同一地址
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        同义词
+       </strong>
+      </strong>
+      ：映射到同一地址的不同关键字
+     </li>
+     <li>
+      <strong>
+       <strong>
+        T(n)
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        无冲突时
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        O(1)
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     <strong>
+      散列函数 构造
+     </strong>
+    </p>
+    <p>
+     要求
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        定义域
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        全部 关键字
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        值域
+       </strong>
+      </strong>
+      ：依赖于
+      <strong>
+       <strong>
+        散列表大小
+       </strong>
+      </strong>
+      /
+      <strong>
+       <strong>
+        地址范围
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        地址
+       </strong>
+      </strong>
+      ：计算出来的地址 应
+      <strong>
+       <strong>
+        等概率
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        均匀
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        分布
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        整个地址空间
+       </strong>
+      </strong>
+     </li>
+     <li>
+      计算：
+      <strong>
+       <strong>
+        简单
+       </strong>
+      </strong>
+      ，以在
+      <strong>
+       <strong>
+        短时
+       </strong>
+      </strong>
+      间计算出
+     </li>
+    </ol>
+    <table border="1" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           方法
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           Hash(key)
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           适用
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           不适/特点
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           直接
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           定址
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         a*key+b
+        </p>
+       </td>
+       <td>
+        <p>
+         key
+         <strong>
+          <strong>
+           分布连续
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         key分布不连续，空位多，则空间浪费
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           除留
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           取余
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           key MOD p
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td colspan="2">
+        <p>
+         质数p
+         <strong>
+          <strong>
+           左接近
+          </strong>
+         </strong>
+         表长
+         <strong>
+          <strong>
+           m
+          </strong>
+         </strong>
+         ；简单，常用
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           平方取中
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           key
+          </strong>
+         </strong>
+         <strong>
+          <strong>
+           2
+          </strong>
+         </strong>
+         的
+         <strong>
+          <strong>
+           中间几位
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           每一位取值
+          </strong>
+         </strong>
+         都
+         <strong>
+          <strong>
+           不够均匀
+          </strong>
+         </strong>
+        </p>
+        <p>
+         /
+         <strong>
+          <strong>
+           均＜Addr所需位数
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         Addr与key的每一位都有关系，
+        </p>
+        <p>
+         <strong>
+          <strong>
+           使Addr分布均匀
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           数字分析
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           数码分布均匀
+          </strong>
+         </strong>
+         的
+         <strong>
+          <strong>
+           几位
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           已知Key
+          </strong>
+         </strong>
+         的
+         <strong>
+          <strong>
+           集合
+          </strong>
+         </strong>
+        </p>
+        <p>
+         （
+         <strong>
+          <strong>
+           r进制
+          </strong>
+         </strong>
+         ，
+         <strong>
+          <strong>
+           r个数码
+          </strong>
+         </strong>
+         ）
+        </p>
+       </td>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           某些位分布不均匀
+          </strong>
+         </strong>
+         ，
+        </p>
+        <p>
+         只有
+         <strong>
+          <strong>
+           某几种数码经常出现
+          </strong>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <strong>
+          <strong>
+           折叠
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         分割成
+         <strong>
+          <strong>
+           位数相同
+          </strong>
+         </strong>
+         的几部分，
+        </p>
+        <p>
+         取这几部分的
+         <strong>
+          <strong>
+           叠加和
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         key
+         <strong>
+          <strong>
+           位数多
+          </strong>
+         </strong>
+         ，且
+         <strong>
+          <strong>
+           每一位
+          </strong>
+         </strong>
+        </p>
+        <p>
+         <strong>
+          <strong>
+           数字
+          </strong>
+         </strong>
+         上
+         <strong>
+          <strong>
+           分布大致均匀
+          </strong>
+         </strong>
+        </p>
+       </td>
+       <td>
+        <p>
+         key分成 位数相同的几部分
+        </p>
+        <p>
+         (
+         <strong>
+          <strong>
+           最后一部分
+          </strong>
+         </strong>
+         ，
+         <strong>
+          <strong>
+           可以短些
+          </strong>
+         </strong>
+         )
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <strong>
+      处理冲突
+     </strong>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        定义
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        同义词
+       </strong>
+      </strong>
+      找下一个“
+      <strong>
+       <strong>
+        空”Hash地址
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        方法
+       </strong>
+      </strong>
+      ：
+     </li>
+    </ol>
+    <p>
+     *
+     <strong>
+      <strong>
+       Hi
+      </strong>
+     </strong>
+     表示冲突后的
+     <strong>
+      <strong>
+       第i次探测
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       散列地址
+      </strong>
+     </strong>
+     ，
+     <strong>
+      <strong>
+       m
+      </strong>
+     </strong>
+     散列表
+     <strong>
+      <strong>
+       表长
+      </strong>
+     </strong>
+     ，
+     <strong>
+      <strong>
+       di增量序列
+      </strong>
+     </strong>
+     ，i∈[1，m-1]
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        开放地址
+       </strong>
+      </strong>
+      ：Hi=(Hash(key)+
+      <strong>
+       <strong>
+        di
+       </strong>
+      </strong>
+      )%m空闲地址 还对 同义词表项开放
+     </li>
+     <li>
+      <strong>
+       <strong>
+        线性探测
+       </strong>
+      </strong>
+      ：di=1...di++..di=m-1
+      <strong>
+       <strong>
+        顺序
+       </strong>
+      </strong>
+      查看
+      <strong>
+       <strong>
+        下一单元
+       </strong>
+      </strong>
+      ，直到找到
+      <strong>
+       <strong>
+        空闲
+       </strong>
+      </strong>
+      单元/
+      <strong>
+       <strong>
+        查遍
+       </strong>
+      </strong>
+      全表
+     </li>
+    </ol>
+    <p>
+     （检测到表尾地址m-1时，下一地址为表首地址0）
+    </p>
+    <p>
+     可能 大量元素 在
+     <strong>
+      <strong>
+       相邻
+      </strong>
+     </strong>
+     散列地址
+     <strong>
+      <strong>
+       堆积
+      </strong>
+     </strong>
+     ，大大降低了查找效率
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        平方/二次探测
+       </strong>
+      </strong>
+      ：di=
+      <img alt="" height="25" src="https://i-blog.csdnimg.cn/blog_migrate/62339e70c154dfc817c56d78e098d726.png" width="93"/>
+      （
+      <strong>
+       <strong>
+        k≤m/2
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        m
+       </strong>
+      </strong>
+      为
+      <strong>
+       <strong>
+        4k+3
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        质数
+       </strong>
+      </strong>
+      ）；较好，可
+      <strong>
+       <strong>
+        避免堆积
+       </strong>
+      </strong>
+      ；
+     </li>
+    </ol>
+    <p>
+     <strong>
+      <strong>
+       不能
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       检测所有
+      </strong>
+     </strong>
+     单元，但
+     <strong>
+      <strong>
+       至少
+      </strong>
+     </strong>
+     能检测
+     <strong>
+      <strong>
+       一半
+      </strong>
+     </strong>
+     单元
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        再/双散列
+       </strong>
+      </strong>
+      ：di=Hash
+      <strong>
+       <strong>
+        2
+       </strong>
+      </strong>
+      (key)；
+      <strong>
+       <strong>
+        最多m-1次
+       </strong>
+      </strong>
+      探测 遍历全表，
+      <strong>
+       <strong>
+        回到H0位置
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        伪随机
+       </strong>
+      </strong>
+      序列：di=伪随机序列
+     </li>
+    </ol>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        拉链/链式地址
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        同义词
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        链
+       </strong>
+      </strong>
+      由
+      <strong>
+       <strong>
+        散列地址
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        唯一标识
+       </strong>
+      </strong>
+      ；适用于
+      <strong>
+       <strong>
+        经常增删
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <p>
+     ps：
+    </p>
+    <p>
+     ∵
+     <strong>
+      <strong>
+       查找
+      </strong>
+     </strong>
+     时，碰到
+     <strong>
+      <strong>
+       空
+      </strong>
+     </strong>
+     指针 就认为
+     <strong>
+      <strong>
+       查找失败
+      </strong>
+     </strong>
+    </p>
+    <p>
+     ∴
+     <strong>
+      <strong>
+       开放地址
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       不能物理删除
+      </strong>
+     </strong>
+     元素，否则会
+     <strong>
+      <strong>
+       截断
+      </strong>
+     </strong>
+     其他
+     <strong>
+      <strong>
+       具有相同
+      </strong>
+     </strong>
+     <strong>
+      <strong>
+       散列地址
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       查找地址
+      </strong>
+     </strong>
+     ；
+    </p>
+    <p>
+     ∴只能做删除
+     <strong>
+      <strong>
+       标记
+      </strong>
+     </strong>
+     ∴ 多次删除后，散列表看起来很满，其实许多位置没用
+    </p>
+    <p>
+     ∴要
+     <strong>
+      <strong>
+       定期维护
+      </strong>
+     </strong>
+     散列表，把
+     <strong>
+      <strong>
+       删除标记
+      </strong>
+     </strong>
+     的 元素
+     <strong>
+      <strong>
+       物理删除
+      </strong>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      性能分析
+     </strong>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        决定
+       </strong>
+      </strong>
+      因素：
+      <strong>
+       <strong>
+        散列函数；处理冲突
+       </strong>
+      </strong>
+      的方法；
+      <strong>
+       <strong>
+        装满因子α
+       </strong>
+      </strong>
+      =
+      <strong>
+       <strong>
+        n/m=记录数/表长
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        ASL
+       </strong>
+      </strong>
+      ：
+      <strong>
+       <strong>
+        与α有关
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <h3>
+     递归
+    </h3>
+    <ol>
+     <li>
+      代码简单，容易理解
+     </li>
+     <li>
+      <strong>
+       <strong>
+        缺点
+       </strong>
+      </strong>
+      ：通常 包含很多
+      <strong>
+       <strong>
+        重复计算
+       </strong>
+      </strong>
+      ，效率不高
+     </li>
+     <li>
+      <strong>
+       <strong>
+        精髓
+       </strong>
+      </strong>
+      ：将 原始问题 转换为
+      <strong>
+       <strong>
+        属性相似
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        小规模
+       </strong>
+      </strong>
+      问题
+     </li>
+     <li>
+      <strong>
+       <strong>
+        递归工作栈
+       </strong>
+      </strong>
+      ：容量与 递归
+      <strong>
+       <strong>
+        调用最大深度一致
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <h4 id="%E9%80%92%E5%BD%92%E5%92%8C%E9%80%92%E6%8E%A8%E7%9A%84%E5%8C%BA%E5%88%AB">
+     递归和递推的区别
+    </h4>
+    <ul>
+     <li>
+      递归：
+     </li>
+    </ul>
+    <ol>
+     <li>
+      设置递归边界
+     </li>
+     <li>
+      判断已经计算过，直接返回结果
+     </li>
+     <li>
+      返回关系式
+     </li>
+    </ol>
+    <ul>
+     <li>
+      递推：
+     </li>
+    </ul>
+    <ol>
+     <li>
+      初始化边界
+     </li>
+     <li>
+      根据初始化边界 开始 递推
+     </li>
+     <li>
+      循环递推
+     </li>
+    </ol>
+    <h4 id="%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6">
+     十进制转换为二进制
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       余数入栈
+      </strong>
+     </strong>
+     <img alt="" height="207" src="https://i-blog.csdnimg.cn/blog_migrate/cd64d30f149a9b2c51d281fc85141b42.png" width="246"/>
+    </p>
+    <h4 id="%E8%BF%B7%E5%AE%AB%E6%B1%82%E8%A7%A3">
+     <strong>
+      <strong>
+       迷宫求解
+      </strong>
+     </strong>
+    </h4>
+    <p>
+     <img alt="" height="162" src="https://i-blog.csdnimg.cn/blog_migrate/0792ed7963c8845b841f97337bb419a7.png" width="157"/>
+    </p>
+    <p>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       <strong>
+        已走过
+       </strong>
+      </strong>
+      的
+      <strong>
+       <strong>
+        0
+       </strong>
+      </strong>
+      改
+      <strong>
+       <strong>
+        2
+       </strong>
+      </strong>
+      ，且
+      <strong>
+       <strong>
+        入栈
+       </strong>
+      </strong>
+      ，
+     </li>
+     <li>
+      <strong>
+       <strong>
+        坐标周围无0
+       </strong>
+      </strong>
+      时，
+      <strong>
+       <strong>
+        出栈
+       </strong>
+      </strong>
+      直到
+      <strong>
+       <strong>
+        遇到周围有0
+       </strong>
+      </strong>
+     </li>
+    </ol>
+    <h2 id="%E7%AE%97%E6%B3%95%EF%BC%88%E7%BC%96%E7%A8%8B%E9%A2%98%EF%BC%89">
+     算法（编程题）
+    </h2>
+    <p>
+     场景题千千万，但都是由经典算法变换而来。
+    </p>
+    <p>
+     优化一般靠牺牲空间换时间
+    </p>
+    <h3 id="%E7%BB%8F%E9%AA%8C">
+     经验
+    </h3>
+    <p>
+     一般过了3道编程，过了1.5就差不多，2就稳了。但是不绝对，有的一道题也会让你面试，有的a了2，也不一定有面试机会
+     <br/>
+     有没有面试机会更多看的是卷的程度，名额多少，简历（例如学历高低）
+    </p>
+    <ul>
+     <li>
+      运用
+      <strong>
+       示例
+      </strong>
+      ，摸清
+      <strong>
+       规律
+      </strong>
+      ，弄懂
+      <strong>
+       整个逻辑
+      </strong>
+      后，再动手
+     </li>
+     <li>
+      <strong>
+       10min没有完整思路
+      </strong>
+      的
+      <strong>
+       先跳过
+      </strong>
+      ，有时候局限了，
+      <strong>
+       回过头可能
+      </strong>
+      想得出来
+     </li>
+     <li>
+      <strong>
+       随手保存
+      </strong>
+     </li>
+     <li>
+      <strong>
+       不要追求AC率
+      </strong>
+      ，后面有空再返回完善，
+     </li>
+     <li>
+      注意题目中说明
+      <strong>
+       输入的上限
+      </strong>
+      ，如下
+     </li>
+    </ul>
+    <pre><code class="language-javascript">read_line()//将读取至多1024个字符，一定注意看题目字符上限
+gets(n)//将读取至多n个字符，当还未达到n个时如果遇到回车或结束符</code></pre>
+    <h4 id="%E5%B8%B8%E7%94%A8%E8%BE%93%E5%87%BA">
+     常用输出
+    </h4>
+    <pre><code class="language-javascript">let a=[1,2,3];
+
+console.log(a.toString());     //1,2,3  arr-&gt;str
+console.log(a.join(' '));     // 1 2 3  arr-&gt;str
+console.log(...a);            // 1 2 3  展开运算符...</code></pre>
+    <h3 id="ACM%E6%A8%A1%E5%BC%8F">
+     考核方式
+    </h3>
+    <h4>
+     ACM模式
+    </h4>
+    <p>
+     自己构造输入格式，控制返回格式，OJ不会给任何代码，不同的语言有不同的输入输出规范。
+    </p>
+    <h4 id="JavaScript(V8)">
+     JavaScript(V8)
+    </h4>
+    <p>
+     <br/>
+     <a href="https://labfiles.acmcoder.com/ojhtml/index.html#/?id=jsv8" rel="nofollow" title="ACMcoder OJ">
+      ACMcoder OJ
+     </a>
+    </p>
+    <p>
+     readline()获取单行
+     <strong>
+      字符串
+     </strong>
+    </p>
+    <p>
+     <strong>
+      key：
+     </strong>
+    </p>
+    <pre><code class="language-javascript">read_line()//将读取至多1024个字符，一定注意看题目字符上限
+gets(n)//将读取至多n个字符，当还未达到n个时如果遇到回车或结束符
+
+printsth(sth, ...)//多个参数时，空格分隔；最后不加回车。
+console.log(sth, ...)、print(sth, ...)//多个参数时，空格分隔；最后加回车
+
+line.split(' ').map(e=&gt;Number(e));//str-&gt;arr
+arr.push([]);//arr[]-&gt;arr[][]</code></pre>
+    <pre><code class="language-javascript">//单行输入
+while(line=readline()){
+    //字符数组
+    var lines = line.split(' ');
+    //.map(Number)可以直接将字符数组变为数字数组
+    var lines = line.split(' ').map(Number);  
+    
+    var a = parseInt(lines[0]);//效果等同下面
+    var b = +lines[1];         //+能将str转换为num
+    print(a+b);
+}
+
+//矩阵的输入
+while (line = readline()) {
+    let nums = line.split(' ');//读取第一行
+    var row = +nums[0];//第一行的第一个数为行数
+    var col = +nums[1];//第一行的第二个数为列数
+    var map = [];//用于存放矩阵
+    for (let i = 0; i &lt; row; i++) {
+        map.push([]);
+        let mapline = readline().split(' ');
+        for (let j = 0; j &lt; col; j++) {
+            map[i][j] = +mapline[j];
+        }
+    }
+}
+</code></pre>
+    <h4 id="JavaScript(Node)">
+     JavaScript(Node)
+    </h4>
+    <p>
+     华为只可以采用Javascript(Node)
+    </p>
+    <p>
+     <a href="https://www.nowcoder.com/exam/test/68135520/detail?pid=27976983" rel="nofollow" title="牛客JavaScript Node练习">
+      牛客JavaScript Node练习
+     </a>
+    </p>
+    <pre><code class="language-javascript">模板1
+var readline = require('readline')
+// 创建读取行接口对象
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+单行
+//监听换行，接受数据
+rl.on('line', function(line) {
+  //line为输入的单行字符串，split函数--通过空格将该行数据转换为数组。
+  var arr= line.split(' ')
+  //数组arr的每一项都是字符串格式，如果我们需要整型，则需要parseInt将其转换为数字
+  console.log(parseInt(arr[0]) + parseInt(arr[1]));
+})
+
+多行
+const inputArr = [];//存放输入的数据
+rl.on('line', function(line){
+  //line是输入的每一行，为字符串格式
+    inputArr.push(line.split(' '));//将输入流保存到inputArr中（注意为字符串数组）
+}).on('close', function(){
+    console.log(fun(inputArr))//调用函数并输出
+})
+
+//解决函数
+function fun() {
+	xxxxxxxx
+	return xx
+}
+模板2
+const rl = require("readline").createInterface({ input: process.stdin });
+var iter = rl[Symbol.asyncIterator]();
+const readline = async () =&gt; (await iter.next()).value;
+
+void async function () {
+    // Write your code here
+    while(line = await readline()){
+        let tokens = line.split(' ');
+        let a = parseInt(tokens[0]);
+        let b = parseInt(tokens[1]);
+        console.log(a + b);
+    }
+}()</code></pre>
+    <h4 id="%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%BC%8F">
+     核心代码模式
+    </h4>
+    <p>
+     只需要实现函数核心功能并返回结果，无须处理输入输出
+    </p>
+    <p>
+     例如力扣上是核心代码模式，就是把要处理的数据都已经放入容器里，可以直接写逻辑
+    </p>
+    <h3 id="%E9%93%BE%E8%A1%A8">
+     链表
+    </h3>
+    <h4 id="%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E6%9C%89%E7%8E%AF">
+     判断链表是否有环
+    </h4>
+    <p>
+     key：遍历链表，判断
+     <strong>
+      相邻结点是否相等
+     </strong>
+     ，若结点为空，则false，若相等，则true
+    </p>
+    <pre><code class="language-javascript">function ListNode(x){
+   this.val = x;
+   this.next = null;
+ }
+
+/**
+ * 
+ * @param head ListNode类 
+ * @return bool布尔型
+ */
+function hasCycle( head ) {
+    // write code here
+    if(!head || !head.next){return false}
+    let fast = head.next
+    let slow = head
+    while(slow !== fast){
+        if(!fast || !fast.next){
+            return false
+        }
+        fast = fast.next.next
+        slow = slow.next
+    }
+    return true
+}
+module.exports = {
+    hasCycle : hasCycle
+};</code></pre>
+    <h3 id="%EF%BC%88%E5%8F%8D%EF%BC%89%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91">
+     二叉树
+    </h3>
+    <h4 id="(%E5%8F%8D)%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91">
+     (反)序列化二叉树
+    </h4>
+    <p>
+     序列化二叉树，key：
+    </p>
+    <ul>
+     <li>
+      let arr = Array.isArray(s) ? s : s.split("");
+     </li>
+     <li>
+      let a = arr.shift();
+     </li>
+     <li>
+      let node = null;
+     </li>
+     <li>
+      if (typeof a === "number")
+     </li>
+    </ul>
+    <pre><code class="language-javascript">function TreeNode(x) {
+    this.val = x;
+    this.left = null;
+    this.right = null;
+}
+//反序列化二叉树：tree-&gt;str 把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串
+function Serialize(pRoot, arr = []) {
+    if (!pRoot) {
+        arr.push("#");
+        return arr;
+    } else {
+        arr.push(pRoot.val);//注意是val。而不是root
+        Serialize(pRoot.left, arr);
+        Serialize(pRoot.right, arr);
+    }
+    return arr;
+}
+//序列化二叉树：str-&gt;tree 根据字符串结果str，重构二叉树
+function Deserialize(s) {
+    //转换为数组
+    let arr = Array.isArray(s) ? s : s.split("");
+    //取出val
+    let a = arr.shift();
+    //构建二叉树结点
+    let node = null;
+    if (typeof a === "number") {
+        //还有可能等于#
+        node = new TreeNode(a);
+        node.left = Deserialize(arr);
+        node.right = Deserialize(arr);
+    }
+    return node;
+}
+module.exports = {
+    Serialize: Serialize,
+    Deserialize: Deserialize,
+};
+</code></pre>
+    <h4 id="%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%EF%BC%8C%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%EF%BC%89">
+     前序遍历（迭代）
+    </h4>
+    <p>
+     入栈：中右左
+    </p>
+    <p>
+     出栈：中左右
+    </p>
+    <pre><code class="language-javascript">/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var preorderTraversal = function(root) {
+    let stack=[]
+    let res = []
+    let cur = null;
+    if(!root) return res;
+    root&amp;&amp;stack.push(root)
+    while(stack.length){
+        cur = stack.pop()
+        res.push(cur.val)
+        cur.right&amp;&amp;stack.push(cur.right)
+        cur.left&amp;&amp;stack.push(cur.left)
+    }
+    return res
+};
+</code></pre>
+    <h4 id="%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E8%BF%AD%E4%BB%A3%EF%BC%89">
+     中序遍历（迭代）
+    </h4>
+    <p>
+     <strong>
+      指针的遍历来帮助访问节点，栈则用来处理节点上的元素
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    let stack = []
+    let res = []
+    let cur = root
+    while(cur||stack.length){
+        if(cur){
+            stack.push(cur)
+            cur = cur.left
+        } else {
+            cur = stack.pop()
+            res.push(cur.val)
+            cur = cur.right
+        }
+    }
+    return res
+};
+</code></pre>
+    <h4 id="%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%88%E8%BF%AD%E4%BB%A3%EF%BC%89">
+     后序遍历（迭代）
+    </h4>
+    <p>
+     和前序遍历不同：
+    </p>
+    <p>
+     入栈：中
+     <strong>
+      左右
+     </strong>
+    </p>
+    <p>
+     出栈：中右左
+    </p>
+    <p>
+     rever出栈：左右中
+    </p>
+    <pre><code class="language-javascript">/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var postorderTraversal = function(root) {
+    let stack = []
+    let res = []
+    let cur = root
+    if(!root) return res
+    stack.push(root)
+    while(stack.length){
+        cur = stack.pop()
+        res.push(cur.val)
+        cur.left&amp;&amp;stack.push(cur.left)
+        cur.right&amp;&amp;stack.push(cur.right)
+    }
+    return res.reverse()
+
+};
+</code></pre>
+    <h4 id="%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86">
+     层序遍历
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       树
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       层序遍历
+      </strong>
+     </strong>
+     ，相似
+     <strong>
+      <strong>
+       图
+      </strong>
+     </strong>
+     的
+     <strong>
+      <strong>
+       广度优先搜索
+      </strong>
+     </strong>
+    </p>
+    <ol>
+     <li>
+      初始设置一个
+      <strong>
+       <strong>
+        空队
+       </strong>
+      </strong>
+      ，
+      <strong>
+       <strong>
+        根结点入队
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        队首
+       </strong>
+      </strong>
+      结点
+      <strong>
+       <strong>
+        出队
+       </strong>
+      </strong>
+      ，其
+      <strong>
+       <strong>
+        左右孩子
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        依次
+       </strong>
+      </strong>
+      <strong>
+       <strong>
+        入队
+       </strong>
+      </strong>
+     </li>
+     <li>
+      若
+      <strong>
+       <strong>
+        队空
+       </strong>
+      </strong>
+      ，说明 所有结点
+      <strong>
+       <strong>
+        已处理完
+       </strong>
+      </strong>
+      ，结束遍历；否则（2)
+     </li>
+    </ol>
+    <pre><code class="language-javascript">/*
+ * function TreeNode(x) {
+ *   this.val = x;
+ *   this.left = null;
+ *   this.right = null;
+ * }
+ */
+
+/**
+ *
+ * @param root TreeNode类
+ * @return int整型二维数组
+ */
+function levelOrder(root) {
+    // write code here
+    if (root == null) {
+        return [];
+    }
+
+    const arr = [];
+    const queue = [];
+
+    queue.push(root);
+
+    while (queue.length) {
+        const preSize = queue.length;
+        const floor = [];//当前层
+        for (let i = 0; i &lt; preSize; ++i) {
+            const v = queue.shift();
+            floor.push(v.val);
+            v.left&amp;&amp;queue.push(v.left);
+            v.right&amp;&amp;queue.push(v.right);
+        }
+        arr.push(floor);
+    }
+    return arr;//[[1],[2,3]]
+}
+module.exports = {
+    levelOrder: levelOrder,
+};
+</code></pre>
+    <h4 id="%E5%88%A4%E6%96%AD%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91">
+     判断对称二叉树
+    </h4>
+    <p class="img-center">
+     <img alt="" height="272" src="https://i-blog.csdnimg.cn/blog_migrate/c69128677eaedd479a777ead05da33a8.gif" width="483"/>
+    </p>
+    <pre><code class="language-javascript">/* function TreeNode(x) {
+    this.val = x;
+    this.left = null;
+    this.right = null;
+} */
+let flag = true;
+function deep(left, right) {
+    if (!left &amp;&amp; !right) return true; //可以两个都为空
+    if (!right||!left|| left.val !== right.val) {//只有一个为空或者节点值不同，必定不对称
+        return false;
+    }
+    return deep(left.left, right.right) &amp;&amp; deep(left.right, right.left); //每层对应的节点进入递归比较
+}
+function isSymmetrical(pRoot) {
+    return deep(pRoot, pRoot);
+}
+module.exports = {
+    isSymmetrical: isSymmetrical,
+};
+</code></pre>
+    <h4 id="%E5%88%A4%E6%96%AD%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91">
+     判断完全二叉树
+    </h4>
+    <p>
+     完全二叉树：叶子节点只能出现在最下层和次下层，且最下层的叶子节点集中在树的左部。
+    </p>
+    <p class="img-center">
+     <img alt="" height="272" src="https://i-blog.csdnimg.cn/blog_migrate/10ac7ee04774f1a0dcca34e840b8def6.gif" width="484"/>
+    </p>
+    <pre><code class="language-javascript">/*
+ * function TreeNode(x) {
+ *   this.val = x;
+ *   this.left = null;
+ *   this.right = null;
+ * }
+ */
+/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ *
+ * @param root TreeNode类
+ * @return bool布尔型
+ */
+function isCompleteTree(root) {
+    // write code here
+    if (root == null) return true;
+
+    const queue = [];
+    queue.push(root);
+
+    let flag = false; //是否遇到空节点
+    while (queue.length) {
+        const node = queue.shift();
+        if (node == null) {
+            //如果遇到某个节点为空，进行标记，代表到了完全二叉树的最下层
+            flag = true;
+            continue;
+        }
+
+        if (flag == true) {
+            //若是后续还有访问，则说明提前出现了叶子节点，不符合完全二叉树的性质。
+            return false;
+        }
+
+        queue.push(node.left);
+        queue.push(node.right);
+    }
+    return true;
+}
+module.exports = {
+    isCompleteTree: isCompleteTree,
+};
+</code></pre>
+    <h4 id="%E5%88%A4%E6%96%AD%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91">
+     判断平衡二叉树
+    </h4>
+    <p>
+     平衡二叉树是左子树的高度与右子树的高度差的绝对值小于等于1，同样左子树是平衡二叉树，右子树为平衡二叉树。
+    </p>
+    <pre><code class="language-javascript">/* function TreeNode(x) {
+    this.val = x;
+    this.left = null;
+    this.right = null;
+} */
+function IsBalanced_Solution(pRoot)
+{
+    if(!pRoot) return true;
+    // write code here
+    return (Math.abs(getMaxDepth(pRoot.left) - getMaxDepth(pRoot.right)) &lt;=1) &amp;&amp; IsBalanced_Solution(pRoot.left) &amp;&amp; IsBalanced_Solution(pRoot.right)
+}
+
+function getMaxDepth(root) {
+    if(!root) return 0;
+    return Math.max(getMaxDepth(root.left)+1,getMaxDepth(root.right)+1)
+}
+module.exports = {
+    IsBalanced_Solution : IsBalanced_Solution
+};</code></pre>
+    <h4 id="%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F">
+     二叉树的镜像
+    </h4>
+    <p>
+     先序遍历
+    </p>
+    <pre><code class="language-javascript">/*
+ * function TreeNode(x) {
+ *   this.val = x;
+ *   this.left = null;
+ *   this.right = null;
+ * }
+ */
+/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ * 
+ * @param pRoot TreeNode类 
+ * @return TreeNode类
+ */
+function Mirror( pRoot ) {
+    
+    function traversal(root){
+        if(root===null) return ;
+        //交换左右孩子
+        let temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        traversal(root.left);
+        traversal(root.right);
+        return root;
+    }
+    
+    return traversal(pRoot);
+    // write code here
+}
+module.exports = {
+    Mirror : Mirror
+};</code></pre>
+    <h4 id="%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88">
+     最近公共祖先
+    </h4>
+    <p>
+     如果从两个节点往上找，每个节点都往上走，一直走到根节点，那么根节点到这两个节点的连线肯定有相交的地方，
+    </p>
+    <p>
+     如果从上往下走，那么最后一次相交的节点就是他们的最近公共祖先节点。
+    </p>
+    <pre><code class="language-javascript">/*
+ * function TreeNode(x) {
+ *   this.val = x;
+ *   this.left = null;
+ *   this.right = null;
+ * }
+ */
+
+/**
+ *
+ * @param root TreeNode类
+ * @param o1 int整型
+ * @param o2 int整型
+ * @return int整型
+ */
+function dfs(root, o1, o2) {
+    if (root == null || root.val == o1 || root.val == o2) {
+        return root;
+    }
+    //递归遍历左子树
+    let left = dfs(root.left, o1, o2);
+    //递归遍历右子树
+    let right = dfs(root.right, o1, o2);
+    //如果left、right都不为空，那么代表o1、o2在root的两侧，所以root为他们的公共祖先
+    if (left &amp;&amp; right) return root;
+    //如果left、right有一个为空，那么就返回不为空的那一个
+    return left != null ? left : right;
+}</code></pre>
+    <h3 id="%E6%95%B0%E7%BB%84%E5%92%8C%E6%A0%91">
+     数组和树
+    </h3>
+    <h4 id="%E6%89%81%E5%B9%B3%E7%BB%93%E6%9E%84%E8%BD%AC%E6%A0%91">
+     扁平结构(一维数组)转树
+    </h4>
+    <p>
+     key：
+    </p>
+    <ol>
+     <li>
+      pid：parent id
+     </li>
+     <li>
+      obj[item.id] = { ...item, children: [] }
+     </li>
+     <li>
+      pid === 0
+     </li>
+     <li>
+      !obj[pid]
+     </li>
+     <li>
+      obj[pid].children.push(treeitem)
+     </li>
+    </ol>
+    <pre><code class="language-javascript">   //pid：parent id 
+   let arr = [
+        { id: 1, name: '部门1', pid: 0 },
+        { id: 2, name: '部门2', pid: 1 },
+        { id: 3, name: '部门3', pid: 1 },
+        { id: 4, name: '部门4', pid: 3 },
+        { id: 5, name: '部门5', pid: 4 },
+    ]
+
+    // // 上面的数据转换为 下面的 tree 数据
+    // [
+    //     {
+    //         "id": 1,
+    //         "name": "部门1",
+    //         "pid": 0,
+    //         "children": [
+    //             {
+    //                 "id": 2,
+    //                 "name": "部门2",
+    //                 "pid": 1,
+    //                 "children": []
+    //             },
+    //             {
+    //                 "id": 3,
+    //                 "name": "部门3",
+    //                 "pid": 1,
+    //                 "children": [
+    //                     {
+    //                         id: 4,
+    //                         name: '部门4',
+    //                         pid: 3,
+    //                         "children": [
+    //                             {
+    //                                 id: 5,
+    //                                 name: '部门5',
+    //                                 pid: 4,
+    //                                 "children": []
+    //                             },
+    //                         ]
+    //                     },
+    //                 ]
+    //             }
+    //         ]
+    //     }
+    // ]
+
+
+    function tree(items) {
+        // 1、声明一个数组和一个对象 用来存储数据
+        let arr = []
+        let obj = {}
+        // 2、给每条item添加children ，并连带一起放在obj对象里
+        for (let item of items) {
+            obj[item.id] = { ...item, children: [] }
+        }
+        // 3、for of 逻辑处理
+        for (let item of items) {
+            // 4、把数据里面的id 取出来赋值 方便下一步的操作
+            let id = item.id
+            let pid = item.pid
+            // 5、根据 id  将 obj 里面的每一项数据取出来
+            let treeitem = obj[id]
+            // 6、如果是第一项的话 吧treeitem 放到 arr 数组当中
+            if (pid === 0) {
+                // 把数据放到 arr 数组里面
+                arr.push(treeitem)
+            } else {
+                // 如果没有 pid 找不到 就开一个 obj { }
+                if (!obj[pid]) {
+                    obj = {
+                        children: []
+                    }
+                }
+
+                // 否则给它的 obj 根基 pid（自己定义的下标） 进行查找 它里面的children属性 然后push
+                obj[pid].children.push(treeitem)
+            }
+        }
+        // 返回处理好的数据
+        return arr
+    }
+    console.log(tree(arr))
+</code></pre>
+    <h4 id="%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96">
+     数组扁平化
+    </h4>
+    <p>
+     要求将数组参数中的多维数组扩展为一维数组并返回该数组。
+     <br/>
+     数组参数中仅包含数组类型和数字类型
+    </p>
+    <p>
+     <img alt="" height="404" src="https://i-blog.csdnimg.cn/blog_migrate/1f1763f9b561ce3b8131cac084a094d7.png" width="639"/>
+    </p>
+    <pre><code class="language-javascript">function flatten(arr){
+    // toString() + split() 实现   
+    return arr.toString().split(',').map(item =&gt; Number(item));
+
+    //join() + split() 实现
+    return arr.join(',').split(',').map(item =&gt; Number(item));
+
+    //reduce 实现
+    return arr.reduce((target, item) =&gt; {
+        return target.concat(Array.isArray(item) ? flatten(item) : item);
+    }, [])
+
+    // 递归实现
+    let res = [];
+    arr.forEach(item =&gt; {
+        if (Array.isArray(item)) {
+            res = res.concat(flatten(item))
+      } else {
+             res.push(item);
+         }
+     });
+     return res;
+
+    // 扩展运算符实现
+       while(arr.some(item =&gt; Array.isArray(item))){
+         arr = [].concat(...arr);
+     }
+     return arr;
+
+    // flat()实现（这里不支持使用）
+    return arr.flat(Infinity);
+}</code></pre>
+    <h3 id="%E6%8E%92%E5%BA%8F">
+     排序
+    </h3>
+    <h4 id="%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F">
+     快速排序
+    </h4>
+    <p>
+     快速排序的基本思想是通过分治来使一部分均比另一部分小（大）再使两部分重复该步骤而实现有序的排列。核心步骤有：
+    </p>
+    <ol>
+     <li>
+      选择一个基准值（pivot）
+     </li>
+     <li>
+      以基准值将数组分割为两部分
+     </li>
+     <li>
+      递归分割之后的数组直到数组为空或只有一个元素为止
+     </li>
+    </ol>
+    <p>
+     key：
+    </p>
+    <ol>
+     <li>
+      pivot = array.splice(pivotIndex, 1)[0]
+     </li>
+     <li>
+      _quickSort(left).concat([pivot], _quickSort(right))
+     </li>
+    </ol>
+    <pre><code class="language-javascript">const _quickSort = array =&gt; {
+    if(array.length &lt;= 1) return array
+    var pivotIndex = Math.floor(array.length / 2)
+    var pivot = array.splice(pivotIndex, 1)[0]
+    var left = []
+    var right = []
+    for (var i=0 ; i&lt;array.length ; i++){
+        if (array[i] &lt; pivot) {
+            left.push(array[i])
+        } else {
+            right.push(array[i])
+        }
+    }
+    return _quickSort(left).concat([pivot], _quickSort(right))
+}
+</code></pre>
+    <h4 id="%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F">
+     *归并排序
+    </h4>
+    <p>
+     <strong>
+      <strong>
+       思想
+      </strong>
+     </strong>
+     ：
+     <strong>
+      <strong>
+       两个/两个以上
+      </strong>
+     </strong>
+     有序表 合并成 新 有序表
+    </p>
+    <ul>
+     <li>
+      <strong>
+       <strong>
+        2路
+       </strong>
+      </strong>
+      -归并排序：
+      <strong>
+       <strong>
+        两两归并
+       </strong>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <strong>
+        key：
+       </strong>
+      </strong>
+     </li>
+    </ul>
+    <ol>
+     <li>
+      left=arr.
+      <strong>
+       slice
+      </strong>
+      (0,mid)
+     </li>
+     <li>
+      mergeLeft=mergeSort(left)
+     </li>
+     <li>
+      res.push(leftArr.
+      <strong>
+       shift()
+      </strong>
+      )
+     </li>
+     <li>
+      res=res.
+      <strong>
+       concat
+      </strong>
+      (leftArr)
+     </li>
+    </ol>
+    <pre><code class="language-javascript"> function   mergesort(arr){
+            if(arr.length&lt;2)return  arr
+            let  len=arr.length
+            let  mid=parseInt(len/2)
+            let l1=arr.slice(0,mid)
+            let  r1=arr.slice(mid,len)
+            let  mergeleft=mergesort(l1)
+            let mergeright=mergesort(r1)
+            return merge(mergeleft,mergeright)
+            function merge(left,right){
+                let res=[]
+                while(left.length!=0 &amp;&amp;right.length!=0){
+                    if(left[0]&lt;=right[0]){
+                        res.push(left.shift())
+                    }else{
+                        res.push((right.shift()))
+                    }
+                }
+                if(left.length){
+                    res=res.concat(left)
+                }
+                if(right.length){
+                    res=res.concat(right)
+                }
+                return  res
+            }
+         
+    }</code></pre>
+    <h4 id="%E5%A0%86%E6%8E%92%E5%BA%8F">
+     *堆排序
+    </h4>
+    <p>
+     1.首先将待排序的数组构造成一个大根堆，此时，整个数组的最大值就是堆结构的顶端
+    </p>
+    <p>
+     2.将
+     <strong>
+      顶端
+     </strong>
+     的数与
+     <strong>
+      末尾
+     </strong>
+     的数
+     <strong>
+      交换
+     </strong>
+     ，此时，末尾的数为最大值，剩余待排序数组个数为n-1
+    </p>
+    <p>
+     3.将剩余的n-1个数再
+     <strong>
+      构造成大根堆
+     </strong>
+     ，再将顶端数与n-1位置的数交换，如此反复执行，便能得到有序数组
+    </p>
+    <p>
+     注意:升序用大根堆，降序就用小根堆(默认为升序)
+    </p>
+    <p>
+     key：
+    </p>
+    <p>
+     headAdjust：
+    </p>
+    <ol>
+     <li>
+      for (var  i = 2 * start + 1; i &lt;= end; i = i * 2 + 1)
+     </li>
+     <li>
+      if (i &lt; end &amp;&amp; arr[i] &lt; arr[i-1])
+     </li>
+    </ol>
+    <p>
+     buildHeap：//从最后一棵子树开始,从后往前调整
+    </p>
+    <ol>
+     <li>
+      //最大元素保存于尾部，并且不参与后面的调整
+     </li>
+     <li>
+      //进行调整，将最大元素调整至堆顶
+     </li>
+     <li>
+      headAdjust(arr, 0, i);
+     </li>
+    </ol>
+    <pre><code class="language-javascript">//每次调整,从上往下调整
+//调整为大根堆
+function headAdjust(arr, start, end){    
+  //将当前节点值进行保存
+  var tmp = arr[start];
+  //遍历孩子结点
+  for (var  i = 2 * start + 1; i &lt;= end; i = i * 2 + 1)
+	{
+		if (i &lt; end &amp;&amp; arr[i] &lt; arr[i-1])//有右孩子并且左孩子小于右孩子
+		{
+			i--;//i一定是左右孩子的最大值
+		}
+		if (arr[i] &gt; tmp)
+		{
+			arr[start] = arr[i];
+			start = i;
+		}
+		else
+		{
+			break;
+		}
+	}
+    arr[start] = tmp ;
+  }
+}
+//构建堆
+function buildHeap(arr){
+//从最后一棵子树开始,从后往前调整
+
+  for(var i=  Math.floor(arr.length/2) ; i&gt;=0; i--){
+    headAdjust(arr, i, arr.length);
+  }
+}
+function heapSort(arr){
+  //构建堆
+  buildHeap(arr);
+  for(var i=arr.length-1; i&gt;0; i--){
+    //最大元素保存于尾部，并且不参与后面的调整
+    var swap = arr[i];
+    arr[i] = arr[0];
+    arr[0] = swap;
+    //进行调整，将最大元素调整至堆顶
+    headAdjust(arr, 0, i);
+  }
+}
+</code></pre>
+    <h3 id="%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">
+     回溯
+    </h3>
+    <p>
+     如果不能成功，那么返回的时候我们就还要把这个位置还原。这就是
+     <strong>
+      回溯算法
+     </strong>
+     ，也是试探算法。
+    </p>
+    <h4 id="%E5%85%A8%E6%8E%92%E5%88%97">
+     全排列
+    </h4>
+    <p>
+     通过回溯剪枝。修剪掉有当前元素的path，最后保留与原字符串长度相等的所有元素。
+    </p>
+    <p class="img-center">
+     <img alt="" height="180" src="https://i-blog.csdnimg.cn/blog_migrate/24a4e87ed5cf1ab680237e7ec81c09d1.png" width="302"/>
+    </p>
+    <p>
+     key：
+    </p>
+    <ol>
+     <li>
+      <strong>
+       path.length
+      </strong>
+      == string.length
+     </li>
+     <li>
+      path.
+      <strong>
+       includes
+      </strong>
+      (item)
+     </li>
+    </ol>
+    <pre><code class="language-javascript">const _permute = string =&gt; {
+    const res = [];
+    const backtrace = path =&gt; {
+        if(path.length == string.length){
+            res.push(path);
+            return;
+        }
+        for(const item of string) {
+            if(path.includes(item)) continue;
+            backtrace(path + item);
+        }
+    };
+    backtrace('');
+    return res;
+}</code></pre>
+    <h3 id="N%E7%9A%87%E5%90%8E">
+     N皇后
+    </h3>
+    <p class="img-center">
+     <img alt="" height="78" src="https://i-blog.csdnimg.cn/blog_migrate/ffeb398a26b54c695f677f173432fca8.png" width="173"/>
+    </p>
+    <p>
+     N 皇后问题是指在 n * n 的棋盘上要摆 n 个皇后，
+     <br/>
+     要求：任何两个皇后
+     <strong>
+      不同行，不同列
+     </strong>
+     也
+     <strong>
+      不在同一条斜线
+     </strong>
+     上，
+     <br/>
+     求给一个整数 n ，返回 n 皇后的摆法数。
+    </p>
+    <p>
+     要求：空间复杂度 O(1) ，时间复杂度O(n!)
+    </p>
+    <ol>
+     <li>
+      要确定皇后的位置，其实就是确定列的位置，因为行已经固定了
+     </li>
+     <li>
+      进一步讲，也就是如何摆放 数组
+      <code>
+       arr
+      </code>
+      <code>
+       [0,1,2,3,...,n-1]
+      </code>
+     </li>
+     <li>
+      如果没有【不在同一条斜线上】要求，这题其实只是单纯的全排列问题
+     </li>
+     <li>
+      在全排列的基础上，根据N皇后的问题，去除一些结果
+     </li>
+    </ol>
+    <ul>
+     <li>
+      <p>
+       <code>
+        arr
+       </code>
+       n个皇后的列位置
+      </p>
+     </li>
+     <li>
+      <p>
+       <code>
+        res
+       </code>
+       n皇后排列结果
+      </p>
+     </li>
+     <li>
+      <p>
+       <code>
+        ruler
+       </code>
+       记录对应的列位置是否已经占用（也是是否有皇后），如果有，那么设为1，没有设为0
+      </p>
+     </li>
+     <li>
+      <p>
+       <code>
+        setPos
+       </code>
+       哈希集合，标记正斜线（从左上到右下）位置，如果在相同
+       <strong>
+        正斜线
+       </strong>
+       上，坐标(x,y)满足 y-x 都相同
+      </p>
+     </li>
+     <li>
+      <p>
+       <code>
+        setCon
+       </code>
+       哈希集合，标记反正斜线（从y右上到左下）位置，如果在相同反斜线上，坐标(x,y)满足 x+y 都相同
+      </p>
+     </li>
+     <li>
+      <p>
+       是否在同一斜线上，其实就是这两个点的所形成的斜线的斜率是否为±1。点P(a,b) ，点Q(c,d)
+      </p>
+      <p>
+       （1）斜率为1 (d-b)/(c-a) = 1，横纵坐标之差相等
+      </p>
+      <p>
+       （2）斜率为-1 (d-b)/(c-a) = -1 ，等式两边恒等变形 a+b = c + d ，横纵坐标之和相等
+      </p>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">/**
+ *
+ * @param n int整型 the n
+ * @return int整型
+ */
+function Nqueen(n) {
+    let res = []; //二维数组，存放每行Q的列坐标
+    let isQ = new Array(n).fill(0); //记录该列是否有Q
+    let setPos = new Set(); //标记正对角线
+    let setCon = new Set(); // 标记反对角线
+    //给当前row找一个col
+    const backTrace = (row, path) =&gt; {
+        if (path.length === n) {
+            res.push(path);
+            return;
+        }
+        for (let col = 0; col &lt; n; col++) {
+            if (
+                isQ[col] == 0 &amp;&amp;
+                !setPos.has(row - col) &amp;&amp;
+                !setCon.has(row + col)
+            ) {
+                path.push(col);
+                isQ[col] = 1;
+                setPos.add(row - col);
+                setCon.add(row + col);
+                backTrace(row + 1, path);
+                path.pop();
+                isQ[col] = 0;
+                setPos.delete(row - col);
+                setCon.delete(row + col);
+            }
+        }
+    };
+    backTrace(0, []);
+    return res.length;
+}
+module.exports = {
+    Nqueen: Nqueen,
+};
+</code></pre>
+    <h3 id="%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92(Dynamic%20Programming%EF%BC%8CDP)">
+     动态规划(Dynamic Programming，DP)
+    </h3>
+    <p>
+     用来解决一类
+     <strong>
+      最优化
+     </strong>
+     问题的算法思想。考虑
+     <strong>
+      最简单
+     </strong>
+     的情况，以及
+     <strong>
+      下一级
+     </strong>
+     情况和它的
+     <strong>
+      关系
+     </strong>
+     <br/>
+     简单来说，动态规划将一个复杂的问题
+     <strong>
+      分解成若干个子问题
+     </strong>
+     ，通过综合子问题的最优解来得到原问题的最优解。需要注意的是，动态规划会将每个求解过的子问题的解记录下来，这样
+     <br/>
+     一般可以使用
+     <strong>
+      递归
+     </strong>
+     或者
+     <strong>
+      递推
+     </strong>
+     的写法来实现动态规划，其中递归写法在此处又称作
+     <strong>
+      记忆化搜索
+     </strong>
+     。
+    </p>
+    <h4 id="%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91(Fibonacci%EF%BC%89%E6%95%B0%E5%88%97%EF%BC%88%E9%80%92%E5%BD%92%EF%BC%89">
+     <br/>
+     斐波那契(Fibonacci）数列（
+     <strong>
+      递归
+     </strong>
+     ）
+    </h4>
+    <pre><code class="language-javascript">function F(n){
+if(n= 0||n== 1) return 1;
+else return F(n-1)+F(n-2);
+}
+</code></pre>
+    <p>
+     dp[n]=-1表示F(n)当前还没有被计算过
+    </p>
+    <pre><code class="language-javascript">function F(n) {
+if(n == 0lIn-1) return 1;//递归边界
+if(dp[n] != -1) return dp[n]; //已经计算过，直接返回结果，不再重复计算else {
+else dp[n] = F(n-1) + F(n-2); 1/计算F(n)，并保存至dp[n]
+return dp [n];//返回F(n)的结果
+}
+</code></pre>
+    <h4 id="%E6%95%B0%E5%A1%94%EF%BC%88%E9%80%92%E6%8E%A8%EF%BC%89">
+     <strong>
+      数塔（递推）
+     </strong>
+    </h4>
+    <p>
+     第i层有i个数字。现在要从
+     <strong>
+      第一层
+     </strong>
+     走到
+     <strong>
+      第n层
+     </strong>
+     ，最后将路径上所有数字相加后得到的和最大是多少?
+    </p>
+    <p>
+     <img alt="" height="266" src="https://i-blog.csdnimg.cn/blog_migrate/e3ec8ffee5ff78bfaf5c70f0d102e966.png" width="495"/>
+    </p>
+    <p>
+     <strong>
+      dp[i][j]
+     </strong>
+     表示从
+     <strong>
+      第i行第j个数字出发
+     </strong>
+     到达最底层的所有路径中能得到的最大和
+    </p>
+    <p>
+     dp[i][i]=max(dp[i-1][j],dp[i-1][j+1])+f[i][j]
+    </p>
+    <p>
+     <img alt="" height="345" src="https://i-blog.csdnimg.cn/blog_migrate/c3fae7f706f7adf1924b700d09ba2b2e.png" width="453"/>
+    </p>
+    <h4 id="%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97(LCS)">
+     <strong>
+      最长公共子序列(LCS)
+     </strong>
+    </h4>
+    <p>
+     Longest Common Subsequence：子序列可以不连续
+     <br/>
+     <img alt="" height="108" src="https://i-blog.csdnimg.cn/blog_migrate/1690a607c76d91fa22fe9932abf23138.png" width="260"/>
+     “sadstory”与“adminsorry”最长公共子序列为“adsory”
+    </p>
+    <p>
+     dp[i][j]表示字符串A的i号位和字符串B的j号位之前的LCS 长度下标从1开始)
+     <br/>
+     <img alt="" height="61" src="https://i-blog.csdnimg.cn/blog_migrate/cd43d99b8521a7e13f3e29865036d379.png" width="352"/>
+     <img alt="" height="27" src="https://i-blog.csdnimg.cn/blog_migrate/fe40ffd2eb7dcb4a7cb3bb9b067703cf.png" width="318"/>
+    </p>
+    <h4 id="%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2">
+     <strong>
+      最长回文子串
+     </strong>
+    </h4>
+    <p>
+     dp[i][j]表示S[i]至S[j]所表示的子串是否是回文子串，是则为1，不是为0
+     <br/>
+     <img alt="" height="55" src="https://i-blog.csdnimg.cn/blog_migrate/39e14b4f5dae075027166049e5b3e91c.png" width="275"/>
+     <img alt="" height="30" src="https://i-blog.csdnimg.cn/blog_migrate/ce1cc777fd89bdb4602639f108faffb0.png" width="396"/>
+    </p>
+    <p>
+     <img alt="" height="500" src="https://i-blog.csdnimg.cn/blog_migrate/bb2d36190001355ee20434380f7da50c.png" width="1038"/>
+    </p>
+    <h4 id="%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C%C2%A0">
+     <strong>
+      最小路径和
+     </strong>
+    </h4>
+    <p>
+     mxn矩阵 a，从左上角开始每次
+     <strong>
+      只能向右或者向下走
+     </strong>
+     ，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，输出所有的路径中最小的路径和。
+    </p>
+    <p>
+     <img alt="" height="116" src="https://i-blog.csdnimg.cn/blog_migrate/244ec0dd9aa7d2df5d42713c2c9ac4c4.png" width="141"/>
+     dp[i][j]代表i到j的最短路径
+    </p>
+    <p class="img-center">
+     <img alt="" height="352" src="https://i-blog.csdnimg.cn/blog_migrate/736606b1b06da9937101c96367776899.gif" width="661"/>
+    </p>
+    <p>
+     求解子问题时的
+     <strong>
+      状态转移
+     </strong>
+     方程：从「上一状态」到「下一状态」的递推式。
+    </p>
+    <p>
+     dp[i, j] = min(dp[i - 1][j], dp[i][j - 1]) + matrix[i][j]
+    </p>
+    <p>
+     JavaScript中没有二维数组的概念，但是可以设置数组元素的值等于数组
+    </p>
+    <p>
+     key：
+    </p>
+    <ol>
+     <li>
+      dp[0][i] = dp[0][i - 1] + matrix[0][i];
+     </li>
+     <li>
+      dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + matrix[i][j];
+     </li>
+    </ol>
+    <pre><code class="language-javascript">function minPathSum(matrix) {
+    var row = matrix.length,
+        col = matrix[0].length;
+    var dp = new Array(row).fill(null).map(() =&gt; new Array(col).fill(0));
+    dp[0][0] = matrix[0][0]; // 初始化左上角元素
+    // 初始化第一行
+    for (var i = 1; i &lt; col; i++) dp[0][i] = dp[0][i - 1] + matrix[0][i];
+    // 初始化第一列
+    for (var j = 1; j &lt; row; j++) dp[j][0] = dp[j - 1][0] + matrix[j][0];
+    // 动态规划
+    for (var i = 1; i &lt; row; i++) {
+        for (var j = 1; j &lt; col; j++) {
+            dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + matrix[i][j];
+        }
+    }
+    return dp[row - 1][col - 1]; // 右下角元素结果即为答案
+}</code></pre>
+    <h3 id="%E8%83%8C%E5%8C%85">
+     背包
+    </h3>
+    <h4 id="01%E8%83%8C%E5%8C%85">
+     01背包
+    </h4>
+    <p>
+     有n件物品,每件物品的重量为w[i],价值为c[j]。现有一个容量为V的背包，问如何选取物品放入背包，使得背包内物品的总价值最大。其中每种物品都只有1件。
+     <br/>
+     dp[i][v]表示前i件物品(1≤i≤n, 0≤v≤V)恰好装入容量为v的背包中所能获得的最大价值。
+     <br/>
+     <img alt="" height="51" src="https://i-blog.csdnimg.cn/blog_migrate/008fcb93ba421e0d03e6d639e50a31a6.png" width="333"/>
+     <img alt="" height="24" src="https://i-blog.csdnimg.cn/blog_migrate/307d847c36a52d2d8ca2c5989c5a9ac4.png" width="206"/>
+    </p>
+    <p>
+     <img alt="" height="134" src="https://i-blog.csdnimg.cn/blog_migrate/7c3fde2dd197c72ab575603461077bdc.png" width="564"/>
+    </p>
+    <p>
+     这样修改对应到图中可以这样理解:v的枚举顺序变为从右往左，dp[i][v]右边的部分为刚计算过的需要保存给下一行使用的数据，而dp[i][v]左上角的阴影部分为当前需要使用的部分。将这两者结合一下，即把 dp[i][v]左上角和右边的部分放在一个数组里，每计算出一个dp[i][v]，就相当于把 dp[i - 1][v]抹消，因为在后面的运算中 dp[i- 1][v]再也用不到了。我们把这种技巧称为
+     <strong>
+      滚动数组
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="47" src="https://i-blog.csdnimg.cn/blog_migrate/9655cf9f6e6050d114e53c79c250d54c.png" width="257"/>
+     <img alt="" height="26" src="https://i-blog.csdnimg.cn/blog_migrate/88d350e692a30334f6757f857f335cb5.png" width="221"/>
+    </p>
+    <p>
+     <img alt="" height="116" src="https://i-blog.csdnimg.cn/blog_migrate/ea9cbd2656d4db4958a407581036f968.png" width="361"/>
+     <img alt="" height="29" src="https://i-blog.csdnimg.cn/blog_migrate/fbf67af06116b249b260965f5ba4cdcf.png" width="249"/>
+    </p>
+    <p>
+     特别说明:
+    </p>
+    <p>
+     如果是用二维数组存放，v的枚举是顺序还是逆序都无所谓;
+    </p>
+    <p>
+     如果使用一维数组存放,则v的枚举必须是逆序!
+    </p>
+    <h4 id="%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85">
+     完全背包
+    </h4>
+    <p>
+     与01背包问题不同的是其中每种物品都有无数件。
+    </p>
+    <p>
+     <img alt="" height="48" src="https://i-blog.csdnimg.cn/blog_migrate/89da2663e19fbc7f21250201ad07889e.png" width="339"/>
+     <img alt="" height="24" src="https://i-blog.csdnimg.cn/blog_migrate/307d847c36a52d2d8ca2c5989c5a9ac4.png" width="206"/>
+    </p>
+    <p>
+     <img alt="" height="56" src="https://i-blog.csdnimg.cn/blog_migrate/3f8cc949323e609acf155d54cd9cf464.png" width="312"/>
+    </p>
+    <p>
+     写成一维形式之后和01背包完全相同，唯一的区别在于这里v的枚举顺序是正向枚举，而01背包的一维形式中v必须是逆向枚举。
+    </p>
+    <p>
+     <img alt="" height="163" src="https://i-blog.csdnimg.cn/blog_migrate/1851b548beba4102a70b3788c0b4bd0f.png" width="608"/>
+    </p>
+    <h3 id="%E6%95%A3%E5%88%97%2F%E5%93%88%E5%B8%8CHash">
+     散列/哈希Hash
+    </h3>
+    <p>
+     空间换时间,即当读入的数为x时，就令hashTable[x]=true(说明: hashTable数组需要初始化为false，表示初始状态下所有数都未出现过)。
+    </p>
+    <h3 id="%E6%95%B0%E5%AD%97%E5%8D%83%E4%BD%8D%E5%88%86%E5%89%B2">
+     数字千位分割
+    </h3>
+    <pre><code class="language-javascript">  const format = (n) =&gt; {
+        let num = n.toString() // 拿到传进来的 number 数字 进行 toString
+        let len = num.length // 在拿到字符串的长度
+        // 当传进来的结果小于 3 也就是 千位还把结果返回出去 小于3 不足以分割
+        if (len &lt; 3) {
+            return num
+        } else {
+            let render = len % 3 //传入 number 的长度 是否能被 3 整除
+            console.log(render)
+
+            if (render &gt; 0) { // 说明不是3的整数倍
+                return num.slice(0, render) + ',' + num.slice(render, len).match(/\d{3}/g).join(',')
+            } else {
+                return num.slice(0, len).match(/\d{3}/g).join(',')
+            }
+        }
+    }
+
+    let str = format(298000)
+    console.log(str)
+</code></pre>
+    <h3>
+     常用方法
+    </h3>
+    <h4 id="%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97%5E">
+     异或运算^
+    </h4>
+    <p>
+     按位异或，相同为0，不同为1
+    </p>
+    <p>
+    </p>
+    <p>
+     运算法则：
+    </p>
+    <p>
+     1.交换律（随便换像乘一样）：a ^ b ^ c  === a ^ c ^ b
+    </p>
+    <p>
+     2.任何数于0异或为任何数 0 ^ n === n
+    </p>
+    <p>
+     3.相同的数异或为0: n ^ n === 0
+    </p>
+    <h4>
+     Math
+    </h4>
+    <pre><code class="language-javascript">//e=2.718281828459045
+Math.E;
+
+//绝对值
+Math.abs()
+
+//基数（base）的指数（exponent）次幂，即 base^exponent。
+Math.pow(base, exponent)
+
+
+//max,min不支持传递数组
+Math.max(value0, value1, /* … ,*/ valueN)
+Math.max.apply(null,array)
+apply会将一个数组装换为一个参数接一个参数
+null是因为没有对象去调用这个方法,只需要用这个方法运算
+
+
+//取整
+Math.floor()  向下取一个整数（floor地板）
+Math.ceil(x)  向上取一个整数（ceil天花板）
+
+Math.round() 返回一个四舍五入的值
+
+Math.trunc() 直接去除小数点后面的值</code></pre>
+    <h4>
+     Number
+    </h4>
+    <p>
+     <strong>
+      0B，0O
+     </strong>
+     为
+     <strong>
+      ES6新增
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       二进制
+      </strong>
+      ：有前缀
+      <strong>
+       0b
+      </strong>
+      （或
+      <strong>
+       <code>
+        0B
+       </code>
+      </strong>
+      ）的数值，出现0,1以外的数字会
+      <strong>
+       报错
+      </strong>
+      （b：binary）
+     </li>
+     <li>
+      <strong>
+       八进制
+      </strong>
+      ：有前缀
+      <strong>
+       0o
+      </strong>
+      （或
+      <strong>
+       <code>
+        0O
+       </code>
+      </strong>
+      ）的数值，或者是以0后面再跟一个数字（0-7）。如果超出了前面所述的数值范围，则会忽略第一个数字0，视为十进制数（o：octonary）
+     </li>
+     <li>
+      注意：八进制字面量在严格模式下是无效的，会导致支持该模式的JavaScript引擎抛出错误
+     </li>
+     <li>
+      十六进制：有前缀
+      <strong>
+       0x
+      </strong>
+      ，后跟任何十六进制数字（0~9及A~F），字母大小写都可以，超出范围会
+      <strong>
+       报错
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      特殊值
+     </strong>
+     ：
+    </p>
+    <ul>
+     <li>
+      Number.MIN_VALUE：5e-324
+     </li>
+     <li>
+      Number.MAX_VALUE：1.7976931348623157e+308
+     </li>
+     <li>
+      Infinity ，代表无穷大，如果数字超过最大值，js会返回Infinity，这称为正向溢出(overflow)；
+     </li>
+     <li>
+      -Infinity ，代表无穷小，小于任何数值，如果等于或超过最小负值-1023（即非常接近0），js会直接把这个数转为0，这称为负向溢出(underflow)
+     </li>
+     <li>
+      NaN ，Not a number，代表一个非数值
+     </li>
+     <li>
+      isNaN()：用来判断一个变量是否为
+      <strong>
+       非数字
+      </strong>
+      的类型，如果是数字返回false;如果不是数字返回true。
+     </li>
+     <li>
+      isFinite()：数值是不是有穷的
+     </li>
+    </ul>
+    <pre><code class="language-javascript">var result = Number.MAX_VALUE + Number.MAX_VALUE;
+
+console.log(isFinite(result)); //false</code></pre>
+    <ul>
+     <li>
+      <strong>
+       <code>
+        typeof NaN // 'number'  ---
+        <code>
+         NaN
+        </code>
+        不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于
+        <code>
+         Number
+        </code>
+       </code>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <code>
+        NaN === NaN // false　　 ---
+        <code>
+         NaN
+        </code>
+        不等于任何值，包括它本身
+       </code>
+      </strong>
+     </li>
+     <li>
+      <strong>
+       <code>
+        (1 / +0) === (1 / -0) // false　　---除以正零得到
+        <code>
+         +Infinity
+        </code>
+        ，除以负零得到
+        <code>
+         -Infinity
+        </code>
+        ，这两者是不相等的
+       </code>
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      科学计数法
+     </strong>
+     ：
+    </p>
+    <p>
+     对于那些极大极小的数值，可以用e表示法（即科学计数法）表示的浮点数值表示。
+    </p>
+    <p>
+     等于e前面的数值乘以10的指数次幂
+    </p>
+    <pre><code class="language-javascript">numObj.toFixed(digits)//用定点表示法来格式化一个数值
+
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial('1.23e+5'));
+// Expected output: "123000.00"
+</code></pre>
+    <p>
+     取余是数学中的概念，
+    </p>
+    <p>
+     取模是计算机中的概念，
+    </p>
+    <p>
+     两者都是求
+     <strong>
+      两数相除的余数
+     </strong>
+    </p>
+    <p>
+     1.当两数符号相同时，结果相同，比如：7%4 与 7 Mod 4 结果都是3
+    </p>
+    <p>
+     2.当两数
+     <strong>
+      符号不同
+     </strong>
+     时，结果不同，比如   (-7)%4=-3和(-7)Mod4=1
+    </p>
+    <p>
+     取余运算，求商采用fix
+     <a href="http://www.fly63.com/tag/%E5%87%BD%E6%95%B0" rel="nofollow" title="函数">
+      函数
+     </a>
+     ，
+     <strong>
+      向0方向舍入
+     </strong>
+     ，取 -1。因此 (-7) % 4 商 -1 余数为 -3
+     <br/>
+     取模运算，求商采用 floor 函数，向
+     <strong>
+      无穷小
+     </strong>
+     方向舍入，取 -2。因此 (-7) Mod 4 商 -2 余数为 1
+    </p>
+    <p>
+     key：((n % m) + m) % m;
+    </p>
+    <pre><code class="language-javascript">Number.prototype.mod = function(n) {
+	return ((this % n) + n) % n;
+}
+// 或 
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}</code></pre>
+    <h4 id="Map">
+     Map
+    </h4>
+    <p>
+     保存键值对，任何值（对象或者
+     <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Primitive" rel="nofollow" title="基本类型">
+      基本类型
+     </a>
+     ）都可以作为一个键或一个值。
+    </p>
+    <p>
+     Map的键可以是任意值，包括函数、对象或任意基本类型。
+     <br/>
+     object的键必须是一个String或是Symbol 。
+    </p>
+    <pre><code class="language-javascript">const contacts = new Map()
+contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
+contacts.has('Jessie') // true
+contacts.get('Hilary') // undefined
+contacts.delete('Jessie') // true
+console.log(contacts.size) // 1
+
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([['foo', 3], ['bar', {}], ['baz', undefined]])
+  .forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+</code></pre>
+    <h4>
+     Set
+    </h4>
+    <p>
+     值的集合，且值唯一
+    </p>
+    <pre><code class="language-javascript">let setPos = new Set(); 
+setPos.add(value);//Boolean
+setPos.has(value);
+setPos.delete(value);
+
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"</code></pre>
+    <h4>
+     set判断值相等的机制
+    </h4>
+    <pre><code class="language-javascript">//Set用===判断是否相等
+const set= new Set();
+const obj1={ x: 10, y: 20 },obj2={ x: 10, y: 20 }
+set.add(obj1).add(obj2);
+
+console.log(obj1===obj2);//false
+console.log(set.size);// 2
+
+set.add(obj1);
+console.log(obj1===obj1);//true
+console.log(set.size);//2</code></pre>
+    <h4>
+     数组去重 （
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">// Use to remove duplicate elements from the array
+const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+console.log([...new Set(numbers)])
+// [2, 3, 4, 5, 6, 7, 32]
+</code></pre>
+    <h4>
+     Array
+    </h4>
+    <pre><code class="language-javascript">//创建字符串
+//join() 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串，用逗号
+或指定的分隔符字符串分隔。如果数组只有一个元素，那么将返回该元素而不使用分隔符。
+Array.join()
+Array.join(separator)
+
+//################创建数组：
+//伪数组转成数组
+Array.from(arrayLike, mapFn)
+console.log(Array.from('foo'));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], x =&gt; x + x));
+// Expected output: Array [2, 4, 6]
+
+console.log( Array.from({length:3},(item, index)=&gt; index) );// 列的位置
+// Expected output:Array [0, 1, 2]
+
+
+//################原数组会改变：
+
+arr.reverse()//返回翻转后的数组
+
+// 无函数
+arr.sort()//默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16
+// 比较函数
+arr.sort(compareFn)
+function compareFn(a, b) {
+  if (在某些排序规则中，a 小于 b) {
+    return -1;
+  }
+  if (在这一排序规则下，a 大于 b) {
+    return 1;
+  }
+  // a 一定等于 b
+  return 0;
+}
+//升序
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+
+//固定值填充
+arr.fill(value)
+arr.fill(value, start)
+arr.fill(value, start, end)
+
+
+//去除
+array.shift() //从数组中删除第一个元素，并返回该元素的值。
+
+array.pop() //从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
+array.push() //将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+
+//unshift() 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度
+array.unshift(element0, element1, /* … ,*/ elementN)
+
+//粘接，通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。
+array.splice(start)
+array.splice(start, deleteCount)
+array.splice(start, deleteCount, item1)
+array.splice(start, deleteCount, item1, item2...itemN)
+
+//################原数组不会改变：
+
+//切片，浅拷贝（包括 begin，不包括end）。
+array.slice()
+array.slice(start)
+array.slice(start, end)
+
+//展平，按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
+array.flat()//不写参数默认一维
+array.flat(depth)
+
+//过滤器，函数体 为 条件语句
+// 箭头函数
+filter((element) =&gt; { /* … */ } )
+filter((element, index) =&gt; { /* … */ } )
+filter((element, index, array) =&gt; { /* … */ } )
+array.filter(str =&gt; str .length &gt; 6) 
+
+//遍历数组处理
+// 箭头函数
+map((element) =&gt; { /* … */ })
+map((element, index) =&gt; { /* … */ })
+map((element, index, array) =&gt; { /* … */ })
+array.map(el =&gt; Math.pow(el,2))
+//map和filter同参
+
+//接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
+// 箭头函数
+reduce((previousValue, currentValue) =&gt; { /* … */ } )
+reduce((previousValue, currentValue, currentIndex) =&gt; { /* … */ } )
+reduce((previousValue, currentValue, currentIndex, array) =&gt; { /* … */ } )
+reduce((previousValue, currentValue) =&gt; { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) =&gt; { /* … */ } , initialValue)
+array.reduce((previousValue, currentValue, currentIndex, array) =&gt; { /* … */ }, initialValue)
+
+//一个“reducer”函数，包含四个参数：
+//previousValue：上一次调用 callbackFn 时的返回值。
+//在第一次调用时，若指定了初始值 initialValue，其值则为 initialValue，
+//否则为数组索引为 0 的元素 array[0]。
+
+//currentValue：数组中正在处理的元素。
+//在第一次调用时，若指定了初始值 initialValue，其值则为数组索引为 0 的元素 array[0]，
+//否则为 array[1]。
+
+//currentIndex：数组中正在处理的元素的索引。
+//若指定了初始值 initialValue，则起始索引号为 0，否则从索引 1 起始。
+
+//array：用于遍历的数组。
+
+//initialValue 可选
+//作为第一次调用 callback 函数时参数 previousValue 的值。
+//若指定了初始值 initialValue，则 currentValue 则将使用数组第一个元素；
+//否则 previousValue 将使用数组第一个元素，而 currentValue 将使用数组第二个元素。
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) =&gt; accumulator + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial);
+// Expected output: 10</code></pre>
+    <h4>
+     String
+    </h4>
+    <pre><code class="language-javascript">str.charAt(index)//获取第n位字符  
+str.charCodeAt(n)//获取第n位UTF-16字符编码 （Unicode）A是65，a是97
+String.fromCharCode(num1[, ...[, numN]])//根据UTF编码创建字符串
+
+String.fromCharCode('a'.charCodeAt(0))='a'
+
+str.trim()//返回去掉首尾的空白字符后的新字符串
+
+str.split(separator)//返回一个以指定分隔符出现位置分隔而成的一个数组，数组元素不包含分隔符
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words[3]);
+// Expected output: "fox"
+
+
+str.toLowerCase( )//字符串转小写；
+str.toUpperCase( )//字符串转大写；
+
+str.concat(str2, [, ...strN])
+
+
+str.substring(indexStart[, indexEnd])  //提取从 indexStart 到 indexEnd（不包括）之间的字符。
+str.substr(start[, length]) //没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。
+
+str.indexOf(searchString[, position]) //在大于或等于position索引处的第一次出现。
+str.match(regexp)//找到一个或多个正则表达式的匹配。
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+let regex = /[A-Z]/g;
+let found = paragraph.match(regex);
+console.log(found);
+// Expected output: Array ["T", "I"]
+regex = /[A-Z]/;
+found = paragraph.match(regex);
+console.log(found);
+// Expected output: Array ["T"]
+
+//match类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+var str = '123123000'
+str.match(/\w{3}/g).join(',') // 123,123,000
+
+str.search(regexp)//如果匹配成功，则 search() 返回正则表达式在字符串中首次匹配项的索引;否则，返回 -1
+const paragraph = '? The quick';
+
+// Any character that is not a word character or whitespace
+const regex = /[^\w\s]/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 0
+
+str.repeat(count)//返回副本
+str.replace(regexp|substr, newSubStr|function)//返回一个由替换值（replacement）替换部分或所有的模式（pattern）匹配项后的新字符串。
+const p = 'lazy dog.Dog lazy';//如果pattern是字符串，则仅替换第一个匹配项。
+console.log(p.replace('dog', 'monkey'));
+// "lazy monkey.Dog lazy"
+
+
+let regex = /dog/i;//如果非全局匹配，则仅替换第一个匹配项
+console.log(p.replace(regex, 'ferret'));
+//"lazy ferret.Dog lazy"
+
+regex = /d|Dog/g;
+console.log(p.replace(regex, 'ferret'));
+//"lazy ferretog.ferret lazy"
+
+//当使用一个 regex 时，您必须设置全局（“g”）标志， 否则，它将引发 TypeError：“必须使用全局 RegExp 调用 replaceAll”。
+const p = 'lazy dog.dog lazy';//如果pattern是字符串，则仅替换第一个匹配项。
+console.log(p.replaceAll('dog', 'monkey'));
+// "lazy monkey.monkey lazy"
+
+
+let regex = /dog/g;//如果非全局匹配，则仅替换第一个匹配项
+console.log(p.replaceAll(regex, 'ferret'));
+//"lazy ferret.ferret lazy"</code></pre>
+    <h2 id="%E8%B7%A8%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1">
+     正则表达式Regular Expression(RegExp)
+    </h2>
+    <p>
+     RegExp 对象是一个
+     <strong>
+      预定义了属性和方法
+     </strong>
+     的正则表达式对象
+    </p>
+    <h3 id="%E5%AD%97%E9%9D%A2%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2">
+     字面量和字符串
+    </h3>
+    <pre><code class="language-javascript">//以下三种表达式都会创建相同的正则表达式：
+
+/ab+c/i; //字面量形式      /正则表达式主体/修饰符(可选)
+new RegExp('ab+c', 'i'); // 首个参数为字符串模式的构造函数
+new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数
+
+//防止在字符串中被解译成一个转义字符
+var re = new RegExp("\\w+");//需要常规的字符转义规则（在前面加反斜杠 \）
+var re = /\w+/;
+</code></pre>
+    <blockquote>
+     <p>
+      当表达式被
+      <strong>
+       赋值
+      </strong>
+      时，字面量形式提供正则表达式的
+      <strong>
+       编译
+      </strong>
+      （compilation）状态，
+     </p>
+     <p>
+      当正则表达式保持为
+      <strong>
+       常量
+      </strong>
+      时使用字面量。
+     </p>
+     <p>
+      例如在循环中使用字面量构造一个正则表达式时，正则表达式不会在每一次迭代中都被重新编译（recompiled）。
+     </p>
+     <p>
+     </p>
+     <p>
+      正则表达式对象的构造函数，如
+      <code>
+       new RegExp('ab+c')
+      </code>
+      提供了正则表达式
+      <strong>
+       运行时编
+      </strong>
+      译（runtime compilation）。
+     </p>
+     <p>
+      如果你知道正则表达式模式为
+      <strong>
+       变量
+      </strong>
+      ，如用户输入，这些情况都可以使用构造函数。
+     </p>
+    </blockquote>
+    <h3 id="regexp.test%E5%92%8Cregexp.exec">
+     regexp.test和regexp.exec
+    </h3>
+    <p>
+     regexp.test(str)返回Bool
+    </p>
+    <p>
+     regexp.exec(str)返回匹配的子串 或者 null
+    </p>
+    <h3>
+     常用修饰符
+    </h3>
+    <blockquote>
+     <ul>
+      <li>
+       i   ignoreCase  执行对
+       <strong>
+        大小写不敏感
+       </strong>
+       的匹配。
+      </li>
+      <li>
+       g   global  执行
+       <strong>
+        全局匹配
+       </strong>
+       （查找所有匹配而非在找到第一个匹配后停止）。
+      </li>
+      <li>
+       y  sticky 粘性匹配  从源字符串的
+       <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" rel="nofollow" title="RegExp.prototype.lastIndex">
+        RegExp.prototype.lastIndex
+       </a>
+       位置开始匹配，
+      </li>
+     </ul>
+    </blockquote>
+    <h4 id="lastIndex">
+     lastIndex
+    </h4>
+    <p>
+     只有 "
+     <code>
+      g
+     </code>
+     " 或"
+     <code>
+      y
+     </code>
+     " 标志时，lastIndex才会起作用。
+    </p>
+    <p>
+     <code>
+      y
+     </code>
+     ：下一次匹配一定在
+     <code>
+      lastIndex
+     </code>
+     位置开始；
+    </p>
+    <p>
+     <code>
+      g
+     </code>
+     ：下一次匹配
+     <strong>
+      可能
+     </strong>
+     在
+     <code>
+      lastIndex
+     </code>
+     位置开始，也可能在这个位置的
+     <strong>
+      后面
+     </strong>
+     开始。
+    </p>
+    <p>
+     <code>
+      lastIndex
+     </code>
+     &gt;str.length，则匹配失败，
+    </p>
+    <p>
+     匹配
+     <strong>
+      失败
+     </strong>
+     ，则
+     <code>
+      lastIndex
+     </code>
+     被设置为
+     <strong>
+      0
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">let str = '#foo#'
+let regex = /foo/y
+
+regex.lastIndex = 1
+regex.test(str)      // true
+regex.lastIndex = 5
+regex.test(str)      // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex      // 0 (reset after match failure)
+</code></pre>
+    <h3 id="%E5%88%86%E7%BB%84">
+     分组
+    </h3>
+    <p>
+     <code>
+      ‘(
+     </code>
+     正则表达式
+     <code>
+      )’
+     </code>
+     每一个分组都是一个
+     <strong>
+      子表达式
+     </strong>
+    </p>
+    <h4 id="%E5%9B%9E%E6%BA%AF%E5%BC%95%E7%94%A8">
+     回溯引用
+    </h4>
+    <p>
+     （backreference）指的是
+     <strong>
+      模式的后面
+     </strong>
+     部分
+     <strong>
+      引用
+     </strong>
+     前面
+     <strong>
+      已经匹配到
+     </strong>
+     的子字符串。
+    </p>
+    <p>
+     回溯引用的语法像
+     <strong>
+      <code>
+       \1
+      </code>
+      ,
+      <code>
+       \2
+      </code>
+     </strong>
+     ,....,其中
+     <code>
+      \1
+     </code>
+     表示引用的第一个子表达式，
+     <code>
+      \2
+     </code>
+     表示引用的第二个子表达式，以此类推。而
+     <strong>
+      <code>
+       \0
+      </code>
+     </strong>
+     则表示
+     <strong>
+      整个表达式
+     </strong>
+     。
+    </p>
+    <blockquote>
+     <p>
+      匹配两个连续相同的单词:\b(\w+)\s\1
+      <br/>
+      Hello what what is the first thing, and I am am scq000.
+     </p>
+    </blockquote>
+    <p>
+     回溯引用在
+     <strong>
+      替换
+     </strong>
+     字符串中十分常用，语法上有些许区别，用
+     <code>
+      $1
+     </code>
+     ,
+     <code>
+      $2
+     </code>
+     ...来引用要被替换的字符
+    </p>
+    <pre><code class="language-javascript">var str = 'abc abc 123';
+str.replace(/(ab)c/g,'$1g');
+// 得到结果 'abg abg 123'</code></pre>
+    <h3 id="%E5%8C%B9%E9%85%8D">
+     匹配
+    </h3>
+    <h4 id="%E9%80%89%E6%8B%A9%E5%8C%B9%E9%85%8D">
+     选择匹配：(子模式)|(子模式)
+    </h4>
+    <p>
+     多重选择模式：在多个子模式之间加入选择操作符。
+    </p>
+    <p>
+     为了避免
+     <strong>
+      歧义
+     </strong>
+     ：(子模式)。
+    </p>
+    <pre><code class="language-javascript">var r = /(abc)|(efg)|(123)|(456)/;</code></pre>
+    <h4 id="%E6%83%B0%E6%80%A7%E5%8C%B9%E9%85%8D">
+     惰性匹配：
+     <strong>
+      最小化
+     </strong>
+     匹配
+    </h4>
+    <p>
+     <strong>
+      重复类量词
+     </strong>
+     都具有贪婪性，在条件允许的前提下，
+     <strong>
+      会匹配尽可能多
+     </strong>
+     的字符。
+    </p>
+    <ul>
+     <li>
+      ?、{n} 和 {n,m} 重复类具有
+      <strong>
+       弱
+      </strong>
+      贪婪性，表现为贪婪的
+      <strong>
+       有限性
+      </strong>
+      。
+     </li>
+     <li>
+      *、+ 和 {n,} 重复类具有
+      <strong>
+       强
+      </strong>
+      贪婪性，表现为贪婪的
+      <strong>
+       无限性
+      </strong>
+      。
+     </li>
+    </ul>
+    <p>
+     越
+     <strong>
+      左
+     </strong>
+     的
+     <strong>
+      重复类量词
+     </strong>
+     优先级越
+     <strong>
+      高
+     </strong>
+     ，会
+     <strong>
+      在保证右侧
+     </strong>
+     重复类量词
+     <strong>
+      最低
+     </strong>
+     匹配次数基础上，使
+     <strong>
+      最左侧
+     </strong>
+     的重复类量词
+     <strong>
+      尽可能占有所有字符
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">var s = "&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;";
+var r = /(&lt;.*&gt;)(&lt;.*&gt;)/
+var a = s.match(r);
+
+console.log(a[0])//整个表达式匹配'&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;'
+console.log(a[1]);//左侧表达式匹配"&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+console.log(a[2]);//右侧表达式匹配“&lt;/html&gt;”</code></pre>
+    <p>
+     定义：
+     <strong>
+      在满足条件的前提
+     </strong>
+     下，尽可能少的匹配字符。
+    </p>
+    <p>
+     方法：在重复类量词后面添加问号
+     <strong>
+      ?
+     </strong>
+     限制词。
+    </p>
+    <p>
+     贪婪匹配体现了
+     <strong>
+      最大化
+     </strong>
+     匹配原则，惰性匹配则体现
+     <strong>
+      最小化
+     </strong>
+     匹配原则。
+    </p>
+    <pre><code class="language-javascript">var s = "&lt;html&gt;&lt;p&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;";
+var r = /&lt;.*?&gt;/
+var a = s.match(r);  //返回单个元素数组["&lt;html&gt;"]而不是最短的&lt;p&gt;</code></pre>
+    <p>
+     针对 6 种重复类惰性匹配的简单描述如下：
+    </p>
+    <ul>
+     <li>
+      {n,m}?：尽量匹配 n 次，但是为了满足限定条件也可能最多重复 m 次。
+     </li>
+     <li>
+      {n}?：尽量匹配 n 次。
+     </li>
+     <li>
+      {n,}?：尽量匹配 n 次，但是为了满足限定条件也可能匹配任意次。
+     </li>
+     <li>
+      ??：尽量匹配，但是为了满足限定条件也可能最多匹配 1 次，相当于 {0,1}?。
+     </li>
+     <li>
+      <strong>
+       +?
+      </strong>
+      ：尽量匹配 1 次，但是为了满足限定条件也可能匹配任意次，相当于 {1,}?。
+     </li>
+     <li>
+      *? ：尽量不匹配，但是为了满足限定条件也可能匹配任意次，相当于 {0,}?。
+     </li>
+    </ul>
+    <h4 id="articleContentId">
+     前/后向查找：匹配括号中的内容（不包含括号）
+    </h4>
+    <blockquote>
+     <p>
+      包括括号：\[\S+?\]
+     </p>
+     <p>
+      不包括括号：(?&lt;=\[)\S+?(?=\])
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       后向
+      </strong>
+      查找：
+      <strong>
+       (?&lt;=exp)
+      </strong>
+      是以exp开头的字符串, 但
+      <strong>
+       不包含本身
+      </strong>
+      .
+     </p>
+     <p>
+      <strong>
+       负后向查找
+      </strong>
+      ：
+      <strong>
+       (?&lt;!exp)
+      </strong>
+      ，被指定的子表达式
+      <strong>
+       不能被匹配到
+      </strong>
+      。
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       前向
+      </strong>
+      查找：
+      <strong>
+       (?=exp)
+      </strong>
+      就匹配为
+      <strong>
+       exp结尾
+      </strong>
+      的字符串, 但
+      <strong>
+       不包含本身
+      </strong>
+      .
+     </p>
+     <p>
+      <em>
+       <strong>
+        负前向
+       </strong>
+       查找
+      </em>
+      :：
+      <strong>
+       (?!exp),
+      </strong>
+      被指定的子表达式
+      <strong>
+       不能被匹配到
+      </strong>
+      。
+     </p>
+     <p>
+     </p>
+     <p>
+      \S 匹配任何非空白字符。等价于[^\f\n\r\t\v]。
+     </p>
+    </blockquote>
+    <p id="%E5%8F%8D%E4%B9%89%E5%AD%97%E7%AC%A6">
+     如果不支持后向查找：将字符串进行
+     <strong>
+      翻转
+     </strong>
+     ，然后再使用
+     <strong>
+      前向
+     </strong>
+     查找，作完处理后再
+     <strong>
+      翻转
+     </strong>
+     回来
+    </p>
+    <h3 id="%E6%8A%80%E5%B7%A7">
+     技巧
+    </h3>
+    <h4 id="%E5%8F%8D%E4%B9%89%E5%AD%97%E7%AC%A6">
+     反义字符
+    </h4>
+    <p>
+     可以匹配很多无法直接描述的字符，达到
+     <strong>
+      以少应多
+     </strong>
+     的目的。
+    </p>
+    <pre><code class="language-javascript">var r = /[^0123456789]/g;</code></pre>
+    <h4 id="%E8%BE%B9%E7%95%8C%E9%87%8F%E8%AF%8D">
+     边界量词
+    </h4>
+    <p>
+     边界就是确定匹配模式的
+     <strong>
+      位置
+     </strong>
+     ，如字符串的头部或尾部，具体说明如表所示。
+    </p>
+    <table>
+     <caption>
+      JavaScript 正则表达式支持的边界量词
+     </caption>
+     <tbody>
+      <tr>
+       <th>
+        量词
+       </th>
+       <th>
+        说明
+       </th>
+      </tr>
+      <tr>
+       <td>
+        ^
+       </td>
+       <td>
+        匹配开头，在多行检测中，会匹配一行的开头
+       </td>
+      </tr>
+      <tr>
+       <td>
+        $
+       </td>
+       <td>
+        匹配结尾，在多行检测中，会匹配一行的结尾
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ol>
+     <li>
+      var s = "how are you"
+     </li>
+    </ol>
+    <p>
+     1) 匹配最后一个单词
+    </p>
+    <pre><code class="language-javascript">var r = /\w+$/;
+var a = s.match(r); //返回数组["you"]</code></pre>
+    <p>
+     2) 匹配第一个单词
+    </p>
+    <pre><code class="language-javascript">var r = /^\w+/;
+var a = s.match(r); //返回数组["how"]</code></pre>
+    <p>
+     3) 匹配每一个单词
+    </p>
+    <pre><code class="language-javascript">var r = /\w+/g;
+var a = s.match(r); //返回数组["how","are","you"]</code></pre>
+    <h4>
+     应用
+    </h4>
+    <h4 id="str.split()">
+     str.split()
+    </h4>
+    <p id="%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E6%9D%A5%E5%88%92%E5%88%86%E5%B8%A6%E6%9C%89%E5%A4%9A%E7%A7%8D%E8%A1%8C%E7%BB%93%E6%9D%9F%E7%AC%A6%E5%92%8C%E6%8D%A2%E8%A1%8C%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E6%9D%A5%E5%88%92%E5%88%86%E5%B8%A6%E6%9C%89%E5%A4%9A%E7%A7%8D%E8%A1%8C%E7%BB%93%E6%9D%9F%E7%AC%A6%E5%92%8C%E6%8D%A2%E8%A1%8C%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC" rel="nofollow" title="使用正则来划分带有多种行结束符和换行符的文本">
+      使用正则来划分带有多种行结束符和换行符的文本
+     </a>
+    </p>
+    <pre><code class="language-javascript">//对于不同的平台（Unix，Windows 等等），其默认的行结束符是不一样的。而下面的划分方式适用于所有平台。
+let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
+let lines = text.split(/\r\n|\r|\n/)
+console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+</code></pre>
+    <h4 id="str.match()">
+     str.match()
+    </h4>
+    <p>
+     在
+     <strong>
+      字符范围
+     </strong>
+     内可以
+     <strong>
+      混用
+     </strong>
+     各种字符模式。
+    </p>
+    <pre><code class="language-javascript">var s = "abcdez";  //字符串直接量
+var r = /[abce-z]/g;  //字符a、b、c，以及从e~z之间的任意字符
+var a = s.match(r);  //返回数组["a","b","c","e","z"]
+
+str.match(regexp)//找到一个或多个正则表达式的匹配。
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+let regex = /[A-Z]/g;
+let found = paragraph.match(regex);
+console.log(found);
+// Expected output: Array ["T", "I"]
+regex = /[A-Z]/;
+found = paragraph.match(regex);
+console.log(found);
+// Expected output: Array ["T"]
+
+//match类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+var str = '123123000'
+str.match(/\w{3}/g).join(',') // 123,123,000</code></pre>
+    <h4 id="%C2%A0str.replace()">
+     str.replace()
+    </h4>
+    <p id="%E5%85%83%E5%AD%97%E7%AC%A6%E8%A1%A8">
+     <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E6%94%B9%E5%8F%98%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" rel="nofollow" title="使用正则改变数据结构">
+      使用正则改变数据结构
+     </a>
+    </p>
+    <pre><code class="language-javascript">let re = /(\w+)\s(\w+)/;//匹配姓名 first last 输出新的格式 last, first。
+let str = "John Smith";
+let newstr = str.replace(re, "$2, $1");//$1 和 $2 指明括号里先前的匹配
+console.log(newstr);//"Smith, John".
+
+str.replace(regexp|substr, newSubStr|function)//返回一个由替换值（replacement）替换部分或所有的模式（pattern）匹配项后的新字符串。
+const p = 'lazy dog.Dog lazy';//如果pattern是字符串，则仅替换第一个匹配项。
+console.log(p.replace('dog', 'monkey'));
+// "lazy monkey.Dog lazy"
+
+
+let regex = /dog/i;//如果非全局匹配，则仅替换第一个匹配项
+console.log(p.replace(regex, 'ferret'));
+//"lazy ferret.Dog lazy"
+
+regex = /d|Dog/g;
+console.log(p.replace(regex, 'ferret'));
+//"lazy ferretog.ferret lazy"
+
+//当使用一个 regex 时，您必须设置全局（“g”）标志， 否则，它将引发 TypeError：“必须使用全局 RegExp 调用 replaceAll”。
+const p = 'lazy dog.dog lazy';//如果pattern是字符串，则仅替换第一个匹配项。
+console.log(p.replaceAll('dog', 'monkey'));
+// "lazy monkey.monkey lazy"
+
+
+let regex = /dog/g;//如果非全局匹配，则仅替换第一个匹配项
+console.log(p.replaceAll(regex, 'ferret'));
+//"lazy ferret.ferret lazy"
+</code></pre>
+    <p>
+     设计对提交的表单字符串进行敏感词过滤。先设计一个敏感词列表，然后使用竖线把它们连接在一起，定义选择匹配模式，最后使用字符串的 replace() 方法把所有敏感字符替换为可以显示的编码格式。
+    </p>
+    <pre><code class="language-javascript">var s = '&lt;meta charset="utf-8"&gt;';  //待过滤的表单提交信息
+var r = /\'|\"|\&lt;|\&gt;/gi;  //过滤敏感字符的正则表达式
+function f() {  //替换函数
+    把敏感字符替换为对应的网页显示的编码格式
+    return "&amp;#" + arguments[0].charCodeAt(0) + ";";
+}
+var a =s.replace(r,f);  //执行过滤替换 
+document.write(a);  //在网页中显示正常的字符信息
+console.log(a);</code></pre>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d03c333ca39ae04610c3395d6aba2ed1.gif"/>
+    </p>
+    <h4 id="str.serach()">
+     str.serach()
+    </h4>
+    <pre><code class="language-javascript">str.search(regexp)//如果匹配成功，则 search() 返回正则表达式在字符串中首次匹配项的索引;否则，返回 -1
+const paragraph = '? The quick';
+
+// Any character that is not a word character or whitespace
+const regex = /[^\w\s]/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 0</code></pre>
+    <h4>
+     合法的URL
+    </h4>
+    <p>
+     URL结构一般包括协议、主机名、主机端口、路径、请求信息、哈希
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/a54dd78fb657d09313c586a3a90de4d5.png"/>
+    </p>
+    <ol>
+     <li>
+      首先必须是以http(s)开头并且可以不包含协议头部信息
+     </li>
+     <li>
+      主机名可以使用"-"符号，所以两种情况都要判断，包含"-"或不包含"-"
+     </li>
+     <li>
+      顶级域名很多，直接判断"."之后是否为字母即可
+     </li>
+     <li>
+      最后判断端口、路径和哈希，这些参数可有可无
+     </li>
+    </ol>
+    <p>
+     域名中只能包含以下字符
+     <br/>
+     1. 26个英文字母
+     <br/>
+     2. "0，1，2，3，4，5，6，7，8，9"十个数字
+     <br/>
+     3. "-"(英文中的连词号，但不能是第一个字符)
+    </p>
+    <pre><code class="language-javascript">https://www.bilibili.com/video/BV1F54y1N74E/?spm_id_from=333.337.search-card.all.click&amp;vd_source=6fd32175adc98c97cd87300d3aed81ea
+//开始:                     ^
+//协议:                     http(s)?:\/\/
+//域名:                     [A-z0-9]+-[A-z0-9]+|[A-z0-9]+
+//顶级域名 如com cn,2-6位:   [a-zA-Z]{2,6}
+//端口 数字:                (\d+)?
+//路径 任意字符 如 /login:   (\/.+)?
+//哈希 ? 和 # ，如?age=1:    (\?.+)?(#.+)?
+//结束:                      $
+//     https://           www.bilibili                com    /video/BV1F54y1N74E  ?spm..            
+/^(http(s)?:\/\/)?(([a-zA-Z0-9]+-[a-zA-Z0-9]+|[a-zA-Z0-9]+)\.)+([a-zA-Z]{2,6})(:\d+)?(\/.+)?(\?.+)?(#.+)?$/.test(url)</code></pre>
+    <h3>
+     常用字符
+    </h3>
+    <p>
+     \标记下一个字符是特殊字符或文字。例如，"n”和字符"n”匹配。"\n"则和换行字符匹配。
+    </p>
+    <p>
+     ^匹配输入的开头.
+     <br/>
+     $匹配输入的末尾
+    </p>
+    <p>
+     <strong>
+      ·
+     </strong>
+     匹配除换行字符外的任何单个字符
+     <br/>
+     *匹配前一个字符零或多次。例如，"zo*”与"z”或"zoo”匹配。
+     <br/>
+     +匹配前一个字符一次或多次。例如，"zo+"与"zoo”匹配，但和"z”不匹配。
+     <br/>
+     ?匹配前一个字符零或一次。例如，"a?ve?”和"never"中的“"ve”匹配。
+     <br/>
+     x|y 匹配x或y
+     <br/>
+     {n}匹配n次。n是非负整数
+     <br/>
+     {n,} n是一个非负整数。至少匹配n次。例如，"o{2,)"和"Bob”中的"o”不匹配，但和"foooood"中的所有o匹配。"o{1}”与"o+”等效。"o{0,}”和"o*”等效。
+     <br/>
+     {n,m}m和n是非负整数。至少匹配n次而至多匹配 m次。例如，"o{1,3]"和"fooooood”中的前三个o匹配。"o{0,1}”和“o?”等效。
+     <br/>
+     [xyz]匹配括号内的任一字符。例如，"[abc]"和"plain”中的"a”匹配。
+    </p>
+    <p>
+     [^xyz]匹配非括号内的任何字符。例如，"[^abc]"和“plain”中的"p”匹配。
+     <br/>
+     [a-z]字符范围。和指定范围内的任一字符匹配。例如，"[a-z]”匹配"a"到"z"范围内的任一小写的字母表字符。
+     <br/>
+     <br/>
+     [^m-z]否定字符范围。匹配不在指定范围内的任何字符。例如，"[m-z]”匹配不在"m"到"z"范围内的任何字符。
+    </p>
+    <p>
+     助记：digital
+    </p>
+    <p>
+     \d匹配数字字符。等价于[0-9]。
+     <br/>
+     \D匹配非数字字符。等价于[^0-9]。
+    </p>
+    <p>
+     助记：space
+    </p>
+    <p>
+     \s匹配任何空白，包括空格、制表、换页等。与"[ \fn\rlt\v]”等效。
+     <br/>
+     \S匹配任何非空白字符。与"[^ \fn\rlt\v]”等效。
+    </p>
+    <p>
+     <br/>
+     \w匹配包括下划线在内的任何字字符。与"
+     <strong>
+      [A-Za-z0-9_]
+     </strong>
+     ”等效。
+    </p>
+    <p>
+     \W匹配任何非字字符。与"[^A-Za-z0-9_]”等效。
+    </p>
+    <h4 id="%E5%85%83%E5%AD%97%E7%AC%A6%E8%A1%A8">
+     元字符表
+    </h4>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        元字符
+       </th>
+       <th>
+        描述
+       </th>
+      </tr>
+      <tr>
+       <td>
+        .
+       </td>
+       <td>
+        查找单个字符，除了换行和行结束符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \w
+       </td>
+       <td>
+        查找单词字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \W
+       </td>
+       <td>
+        查找非单词字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \d
+       </td>
+       <td>
+        查找数字
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \D
+       </td>
+       <td>
+        查找非数字字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \s
+       </td>
+       <td>
+        查找空白字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \S
+       </td>
+       <td>
+        查找非空白字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \b
+       </td>
+       <td>
+        匹配单词边界
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \B
+       </td>
+       <td>
+        匹配非单词边界
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \0
+       </td>
+       <td>
+        查找 NUL字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \n
+       </td>
+       <td>
+        查找换行符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \f
+       </td>
+       <td>
+        查找换页符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \r
+       </td>
+       <td>
+        查找回车符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \t
+       </td>
+       <td>
+        查找制表符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \v
+       </td>
+       <td>
+        查找垂直制表符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \xxx
+       </td>
+       <td>
+        查找以八进制数 xxxx 规定的字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \xdd
+       </td>
+       <td>
+        查找以十六进制数 dd 规定的字符
+       </td>
+      </tr>
+      <tr>
+       <td>
+        \uxxxx
+       </td>
+       <td>
+        查找以十六进制 xxxx规定的 Unicode 字符
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="%5BA-z%5D%E5%92%8C%5Ba-zA-Z%5D">
+     <code>
+      [A-z]和[a-zA-Z]
+     </code>
+    </h4>
+    <p>
+     <code>
+      [A-z]
+     </code>
+     将在范围匹配的ASCII字符从
+     <code>
+      A
+     </code>
+     到
+     <code>
+      z
+     </code>
+     ，
+    </p>
+    <p>
+     <code>
+      [a-zA-Z]
+     </code>
+     将在范围中的范围匹配的ASCII字符从
+     <code>
+      A
+     </code>
+     到
+     <code>
+      Z
+     </code>
+     <strong>
+      和
+     </strong>
+     从
+     <code>
+      a
+     </code>
+     到
+     <code>
+      z
+     </code>
+     。
+    </p>
+    <p>
+     查看ASCII字符的
+     <a href="http://www.asciitable.com/" rel="nofollow" title="this table">
+      this table
+     </a>
+     ，则会看到
+     <code>
+      A-z
+     </code>
+     包含
+     <code>
+      [
+     </code>
+     ,
+     <code>
+      \
+     </code>
+     ,
+     <code>
+      ]
+     </code>
+     ,
+     <code>
+      ^
+     </code>
+     ,
+     <code>
+      _，
+     </code>
+     ```
+    </p>
+    <h2 id="%C2%A0*%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">
+     规范
+    </h2>
+    <h3 id="*%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">
+     *命名规范
+    </h3>
+    <p>
+     建议养成每句后加;的好习惯
+    </p>
+    <ol>
+     <li>
+      Pascal Case 大驼峰式命名法：首字母大写。eg：StudentInfo、UserInfo、ProductInfo
+     </li>
+     <li>
+      Camel Case 小驼峰式命名法：首字母小写。eg：studentInfo、userInfo、productInfo
+     </li>
+    </ol>
+    <h4 id="%E5%B8%B8%E9%87%8F">
+     常量
+    </h4>
+    <p>
+     命名方法：名词全部大写
+     <br/>
+     命名规范：使用大写字母和下划线来组合命名，下划线用来分割单词
+    </p>
+    <pre><code class="language-javascript">const MAX_COUNT = 10;</code></pre>
+    <h4 id="%E5%8F%98%E9%87%8F%EF%BC%8C%E5%87%BD%E6%95%B0">
+     变量，函数
+    </h4>
+    <p>
+     命名方法: 小驼峰式命名法
+     <br/>
+     命名规范：前缀为形容词（变量） ，前缀为动词（函数）
+    </p>
+    <pre><code class="language-javascript">let maxCount = 10;
+
+/**
+ * 
+ * @param n int整型 the n
+ * @return int整型
+ */
+function setConut(n){
+this.count=n;
+return n
+}</code></pre>
+    <h4 id="%E7%B1%BB">
+     类
+    </h4>
+    <p>
+     类 &amp; 构造函数
+    </p>
+    <p>
+     命名方法：大驼峰式命名法，首字母大写。
+    </p>
+    <p>
+     命名规范：前缀为名称。
+    </p>
+    <ul>
+     <li>
+      公共属性和方法：跟变量和函数的命名一样。
+     </li>
+     <li>
+      私有属性和方法：前缀为_(下划线)，后面跟公共属性和方法一样的命名方式。
+     </li>
+    </ul>
+    <pre><code class="language-javascript">class Person {
+  private _name: string;
+  constructor() { }
+  // 公共方法
+  getName() {
+    return this._name;
+  }
+  // 公共方法
+  setName(name) {
+    this._name = name;
+  }
+}
+const person = new Person();
+person.setName('mervyn');
+person.getName(); // -&gt;mervyn
+</code></pre>
+    <h3 id="%E8%80%83%E6%A0%B8%E6%96%B9%E5%BC%8F">
+     *注释
+    </h3>
+    <h4 id="HTML">
+     HTML
+    </h4>
+    <p>
+     &lt;!-- 注释 --&gt;
+    </p>
+    <h4 id="CSS">
+     CSS
+    </h4>
+    <pre><code class="language-css">p{
+    color: #ff7000;  /*字体颜色设置*/
+    height：30px;  /*段落高度设置*/
+}</code></pre>
+    <p>
+     /*注释*/
+    </p>
+    <h4 id="JS">
+     JS
+    </h4>
+    <p>
+     //注释
+    </p>
+    <p>
+     /*注释*/
+    </p>
+    <p>
+     <strong>
+      <strong>
+       <strong>
+        <strong>
+         <a href="https://github.com/youngyangyang04/leetcode-master" title="leetcode刷题攻略">
+          leetcode刷题攻略
+         </a>
+        </strong>
+       </strong>
+      </strong>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <strong>
+       <strong>
+        <strong>
+         <a href="https://mp.weixin.qq.com/s/SZoTG4DFfhQgc4LbhwyjKw" rel="nofollow" title="基础笔试套路">
+          基础笔试套路
+         </a>
+        </strong>
+       </strong>
+      </strong>
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     项目为二面三面，面试官基本就是照着简历里面的项目技术点切入然后
+     <strong>
+      深入
+     </strong>
+     展开。
+    </p>
+    <p>
+    </p>
+    <p>
+     为了简洁，相关文章参考链接在标题里
+    </p>
+    <p id="main-toc">
+     <strong>
+      目录
+     </strong>
+    </p>
+    <p id="js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83-toc">
+     <a href="#js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83" rel="nofollow">
+      模块化规范
+     </a>
+    </p>
+    <p id="%E6%87%92%E5%8A%A0%E8%BD%BD-toc">
+     <a href="#%E6%87%92%E5%8A%A0%E8%BD%BD" rel="nofollow">
+      懒加载（性能优化）
+     </a>
+    </p>
+    <p id="scroll%E7%89%88-toc">
+     <a href="#scroll%E7%89%88" rel="nofollow">
+      scroll版
+     </a>
+    </p>
+    <p id="%C2%A0IntersectionObserver%C2%A0%E7%89%88-toc">
+     <a href="#%C2%A0IntersectionObserver%C2%A0%E7%89%88" rel="nofollow">
+      IntersectionObserver 版
+     </a>
+    </p>
+    <p id="require%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8(CommonJS%E8%A7%84%E8%8C%83%E5%92%8Ces6%E8%A7%84%E8%8C%83)-toc">
+     <a href="#require%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%28CommonJS%E8%A7%84%E8%8C%83%E5%92%8Ces6%E8%A7%84%E8%8C%83%29" rel="nofollow">
+      require与import的区别和使用
+     </a>
+    </p>
+    <p id="js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83-toc">
+     <a href="#js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83" rel="nofollow">
+      js的运行环境
+     </a>
+    </p>
+    <p id="NodeJS-toc">
+     <a href="#NodeJS" rel="nofollow">
+      浏览器
+     </a>
+    </p>
+    <p id="Node-toc">
+     <a href="#Node" rel="nofollow">
+      Node
+     </a>
+    </p>
+    <p id="%E7%89%B9%E7%82%B9-toc">
+     <a href="#%E7%89%B9%E7%82%B9" rel="nofollow">
+      特点
+     </a>
+    </p>
+    <p id="npm-toc">
+     <a href="#npm" rel="nofollow">
+      npm
+     </a>
+    </p>
+    <p id="%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8-toc">
+     <a href="#%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8" rel="nofollow">
+      项目规范
+     </a>
+    </p>
+    <p id="%E5%91%BD%E4%BB%A4-toc">
+     <a href="#%E5%91%BD%E4%BB%A4" rel="nofollow">
+      命令（创建运行）
+     </a>
+    </p>
+    <p id="%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84-toc">
+     <a href="#%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" rel="nofollow">
+      项目文件结构
+     </a>
+    </p>
+    <p id="package.json-toc">
+     <a href="#package.json" rel="nofollow">
+      package.json
+     </a>
+    </p>
+    <p id="package-lock.json-toc">
+     <a href="#package-lock.json" rel="nofollow">
+      package-lock.json
+     </a>
+    </p>
+    <p id="node_modules-toc">
+     <a href="#node_modules" rel="nofollow">
+      node_modules
+     </a>
+    </p>
+    <p id="git%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86-toc">
+     <a href="#git%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86" rel="nofollow">
+      git代码管理
+     </a>
+    </p>
+    <p id="%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-toc">
+     <a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4" rel="nofollow">
+      常用命令
+     </a>
+    </p>
+    <p id="%E5%88%86%E6%94%AF-toc">
+     <a href="#%E5%88%86%E6%94%AF" rel="nofollow">
+      分支
+     </a>
+    </p>
+    <p id="git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8Cmerge%E5%86%B2%E7%AA%81-toc">
+     <a href="#git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8Cmerge%E5%86%B2%E7%AA%81" rel="nofollow">
+      git多人协同merge冲突
+     </a>
+    </p>
+    <p id="*%E5%88%86%E6%94%AF%E4%B8%8A%E4%BB%A3%E7%A0%81%E6%B2%A1%E5%86%99%E5%AE%8C%E6%80%8E%E4%B9%88%E7%BC%93%E5%AD%98-toc">
+     <a href="#*%E5%88%86%E6%94%AF%E4%B8%8A%E4%BB%A3%E7%A0%81%E6%B2%A1%E5%86%99%E5%AE%8C%E6%80%8E%E4%B9%88%E7%BC%93%E5%AD%98" rel="nofollow">
+      暂时保存更改
+     </a>
+    </p>
+    <p id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-toc">
+     <a href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" rel="nofollow">
+      性能优化
+     </a>
+    </p>
+    <p id="webpack%E6%89%93%E5%8C%85%E7%AE%A1%E7%90%86-toc">
+     <a href="#webpack%E6%89%93%E5%8C%85%E7%AE%A1%E7%90%86" rel="nofollow">
+      webpack打包管理
+     </a>
+    </p>
+    <p id="%E5%8E%9F%E7%90%86-toc">
+     <a href="#%E5%8E%9F%E7%90%86" rel="nofollow">
+      原理
+     </a>
+    </p>
+    <p id="Babel-toc">
+     <a href="#Babel" rel="nofollow">
+      Babel
+     </a>
+    </p>
+    <p id="loader-toc">
+     <a href="#loader" rel="nofollow">
+      loader
+     </a>
+    </p>
+    <p id="plugin-toc">
+     <a href="#plugin" rel="nofollow">
+      plugin
+     </a>
+    </p>
+    <p id="loader%E5%92%8Cplugin%E7%9A%84%E5%8C%BA%E5%88%AB-toc">
+     <a href="#loader%E5%92%8Cplugin%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      loader和plugin的区别
+     </a>
+    </p>
+    <p id="%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86-toc">
+     <a href="#%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86" rel="nofollow">
+      热加载原理
+     </a>
+    </p>
+    <p id="%E5%85%B1%E6%80%A7-toc">
+     <a href="#%E5%85%B1%E6%80%A7" rel="nofollow">
+      TS4 加分项
+     </a>
+    </p>
+    <p id="%E5%8C%BA%E5%88%AB-toc">
+     <a href="#%E5%8C%BA%E5%88%AB" rel="nofollow">
+      区别
+     </a>
+    </p>
+    <p id="%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8TypeScript%EF%BC%9F-toc">
+     <a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8TypeScript%EF%BC%9F" rel="nofollow">
+      为什么推荐使用TypeScript？
+     </a>
+    </p>
+    <p id="TypeScript%E5%92%8CJavaScript%E7%9A%84%E5%8C%BA%E5%88%AB-toc">
+     <a href="#TypeScript%E5%92%8CJavaScript%E7%9A%84%E5%8C%BA%E5%88%AB" rel="nofollow">
+      TypeScript和JavaScript的区别
+     </a>
+    </p>
+    <p id="*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-toc">
+     <a href="#*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3" rel="nofollow">
+      控制类成员可见性的访问关键字有哪些？
+     </a>
+    </p>
+    <p id="%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D-toc">
+     <a href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D" rel="nofollow">
+      接口interface与类型别名type
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E6%9C%AC-toc">
+     <a href="#%E5%9F%BA%E6%9C%AC" rel="nofollow">
+      类型
+     </a>
+    </p>
+    <p id="never%EF%BC%8Cany%EF%BC%8Cunknown-toc">
+     <a href="#never%EF%BC%8Cany%EF%BC%8Cunknown" rel="nofollow">
+      never，any，unknown
+     </a>
+    </p>
+    <p id="void-toc">
+     <a href="#void" rel="nofollow">
+      类型断言as与非空断言!
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8Cvoid-toc">
+     <a href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8Cvoid" rel="nofollow">
+      函数类型和void
+     </a>
+    </p>
+    <p id="%E6%B3%9B%E5%9E%8B-toc">
+     <a href="#%E6%B3%9B%E5%9E%8B" rel="nofollow">
+      泛型
+     </a>
+    </p>
+    <p id="%E5%BA%94%E7%94%A8-toc">
+     <a href="#%E5%BA%94%E7%94%A8" rel="nofollow">
+      应用
+     </a>
+    </p>
+    <p id="%E5%8F%98%E9%87%8F-toc">
+     <a href="#%E5%8F%98%E9%87%8F" rel="nofollow">
+      变量
+     </a>
+    </p>
+    <p id="%C2%A0*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-toc">
+     <a href="#%C2%A0*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3" rel="nofollow">
+      *类型注解
+     </a>
+    </p>
+    <p id="%E6%95%B0%E7%BB%84-toc">
+     <a href="#%E6%95%B0%E7%BB%84" rel="nofollow">
+      数组
+     </a>
+    </p>
+    <p id="%E5%87%BD%E6%95%B0-toc">
+     <a href="#%E5%87%BD%E6%95%B0" rel="nofollow">
+      函数
+     </a>
+    </p>
+    <p id="%E5%AF%B9%E8%B1%A1-toc">
+     <a href="#%E5%AF%B9%E8%B1%A1" rel="nofollow">
+      类
+     </a>
+    </p>
+    <p id="%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD-toc">
+     <a href="#%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD" rel="nofollow">
+      类型判断
+     </a>
+    </p>
+    <p id="is-toc">
+     <a href="#is" rel="nofollow">
+      is
+     </a>
+    </p>
+    <p id="Narrowing%20down%20sets-toc">
+     <a href="#Narrowing%20down%20sets" rel="nofollow">
+      Narrowing down sets
+     </a>
+    </p>
+    <p id="%E6%A0%B7%E5%BC%8F-toc">
+     <a href="#%E6%A0%B7%E5%BC%8F" rel="nofollow">
+      样式
+     </a>
+    </p>
+    <p id="Ant%20Design-toc">
+     <a href="#Ant%20Design" rel="nofollow">
+      Ant Design
+     </a>
+    </p>
+    <p id="Css%E3%80%81less%E3%80%81Sass%C2%A0-toc">
+     <a href="#Css%E3%80%81less%E3%80%81Sass%C2%A0" rel="nofollow">
+      Css、less、Sass （SCSS）
+     </a>
+    </p>
+    <p id="SCSS-toc">
+     <a href="#SCSS" rel="nofollow">
+      Sass
+     </a>
+    </p>
+    <p id="%E5%B5%8C%E5%A5%97-toc">
+     <a href="#%E5%B5%8C%E5%A5%97" rel="nofollow">
+      嵌套
+     </a>
+    </p>
+    <p id="%E9%80%89%E6%8B%A9%E5%99%A8%E5%B5%8C%E5%A5%97-toc">
+     <a href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%B5%8C%E5%A5%97" rel="nofollow">
+      选择器嵌套
+     </a>
+    </p>
+    <p id="%E5%B1%9E%E6%80%A7%E5%B5%8C%E5%A5%97-toc">
+     <a href="#%E5%B1%9E%E6%80%A7%E5%B5%8C%E5%A5%97" rel="nofollow">
+      属性嵌套
+     </a>
+    </p>
+    <p id="%E4%BC%AA%E7%B1%BB%E5%B5%8C%E5%A5%97-toc">
+     <a href="#%E4%BC%AA%E7%B1%BB%E5%B5%8C%E5%A5%97" rel="nofollow">
+      伪类嵌套
+     </a>
+    </p>
+    <p id="%E5%8F%98%E9%87%8F-toc">
+     <a href="#%E5%8F%98%E9%87%8F" rel="nofollow">
+      变量
+     </a>
+    </p>
+    <p id="%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F-toc">
+     <a href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F" rel="nofollow">
+      全局变量
+     </a>
+    </p>
+    <p id="%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F-toc">
+     <a href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F" rel="nofollow">
+      局部变量
+     </a>
+    </p>
+    <p id="%E9%BB%98%E8%AE%A4%E5%80%BC-toc">
+     <a href="#%E9%BB%98%E8%AE%A4%E5%80%BC" rel="nofollow">
+      默认值
+     </a>
+    </p>
+    <p id="%E6%B7%B7%E5%85%A5%E6%8C%87%E4%BB%A4%2F%E6%B7%B7%E5%90%88%E6%8C%87%E4%BB%A4%2F%E5%AE%8F%E6%8C%87%E4%BB%A4%40mixin-toc">
+     <a href="#%E6%B7%B7%E5%85%A5%E6%8C%87%E4%BB%A4%2F%E6%B7%B7%E5%90%88%E6%8C%87%E4%BB%A4%2F%E5%AE%8F%E6%8C%87%E4%BB%A4%40mixin" rel="nofollow">
+      混入指令/混合指令/宏指令@mixin
+     </a>
+    </p>
+    <p id="%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F-toc">
+     <a href="#%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F" rel="nofollow">
+      不带参数混合宏
+     </a>
+    </p>
+    <p id="%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F-toc">
+     <a href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F" rel="nofollow">
+      带参数混合宏
+     </a>
+    </p>
+    <p id="%E5%B8%A6%E7%89%B9%E5%88%AB%E5%A4%9A%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F-toc">
+     <a href="#%E5%B8%A6%E7%89%B9%E5%88%AB%E5%A4%9A%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F" rel="nofollow">
+      带特别多参数混合宏
+     </a>
+    </p>
+    <p id="%E8%B0%83%E7%94%A8%E6%B7%B7%E5%90%88%E5%AE%8F%40include-toc">
+     <a href="#%E8%B0%83%E7%94%A8%E6%B7%B7%E5%90%88%E5%AE%8F%40include" rel="nofollow">
+      调用混合宏@include
+     </a>
+    </p>
+    <p id="%E7%BB%A7%E6%89%BF%40extend-toc">
+     <a href="#%E7%BB%A7%E6%89%BF%40extend" rel="nofollow">
+      继承@extend
+     </a>
+    </p>
+    <p id="%E5%8D%A0%E4%BD%8D%E7%AC%A6%20%25placeholder-toc">
+     <a href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6%20%25placeholder" rel="nofollow">
+      占位符 %placeholder
+     </a>
+    </p>
+    <p id="%E6%B7%B7%E5%90%88%E5%AE%8FVS%E7%BB%A7%E6%89%BFVS%E5%8D%A0%E4%BD%8D%E7%AC%A6-toc">
+     <a href="#%E6%B7%B7%E5%90%88%E5%AE%8FVS%E7%BB%A7%E6%89%BFVS%E5%8D%A0%E4%BD%8D%E7%AC%A6" rel="nofollow">
+      混合宏VS继承VS占位符
+     </a>
+    </p>
+    <p id="%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-toc">
+     <a href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95" rel="nofollow">
+      基础语法
+     </a>
+    </p>
+    <p id="%E6%8F%92%E5%80%BC%23%7B%7D-toc">
+     <a href="#%E6%8F%92%E5%80%BC%23%7B%7D" rel="nofollow">
+      插值#{}
+     </a>
+    </p>
+    <p id="%E6%B3%A8%E9%87%8A-toc">
+     <a href="#%E6%B3%A8%E9%87%8A" rel="nofollow">
+      注释
+     </a>
+    </p>
+    <p id="%E5%8A%A0%E5%87%8F%E6%B3%95-toc">
+     <a href="#%E5%8A%A0%E5%87%8F%E6%B3%95" rel="nofollow">
+      加减法
+     </a>
+    </p>
+    <p id="%E4%B9%98%E6%B3%95-toc">
+     <a href="#%E4%B9%98%E6%B3%95" rel="nofollow">
+      乘法
+     </a>
+    </p>
+    <p id="%E9%99%A4%E6%B3%95-toc">
+     <a href="#%E9%99%A4%E6%B3%95" rel="nofollow">
+      除法
+     </a>
+    </p>
+    <p id="%40if%EF%BC%8C%20%40else%20if%C2%A0%EF%BC%8C%40else%E6%9D%A1%E4%BB%B6-toc">
+     <a href="#%40if%EF%BC%8C%20%40else%20if%C2%A0%EF%BC%8C%40else%E6%9D%A1%E4%BB%B6" rel="nofollow">
+      @if， @else if ，@else条件
+     </a>
+    </p>
+    <p id="%40for-toc">
+     <a href="#%40for" rel="nofollow">
+      @for
+     </a>
+    </p>
+    <p id="%40while%E5%BE%AA%E7%8E%AF-toc">
+     <a href="#%40while%E5%BE%AA%E7%8E%AF" rel="nofollow">
+      @while循环
+     </a>
+    </p>
+    <p id="%40each%E5%BE%AA%E7%8E%AF-toc">
+     <a href="#%40each%E5%BE%AA%E7%8E%AF" rel="nofollow">
+      @each循环
+     </a>
+    </p>
+    <p id="%40import%E5%BC%95%E5%85%A5%20SCSS%20%E5%92%8C%20Sass-toc">
+     <a href="#%40import%E5%BC%95%E5%85%A5%20SCSS%20%E5%92%8C%20Sass" rel="nofollow">
+      @import引入 SCSS 和 Sass
+     </a>
+    </p>
+    <p id="%E7%80%91%E5%B8%83%E6%B5%81-toc">
+     <a href="#%E7%80%91%E5%B8%83%E6%B5%81" rel="nofollow">
+      瀑布流
+     </a>
+    </p>
+    <p id="css-toc">
+     <a href="#css" rel="nofollow">
+      css
+     </a>
+    </p>
+    <p id="js-toc">
+     <a href="#js" rel="nofollow">
+      js
+     </a>
+    </p>
+    <p id="%E5%85%B1%E6%80%A7-toc">
+     <a href="#%E5%85%B1%E6%80%A7" rel="nofollow">
+      共性
+     </a>
+    </p>
+    <p id="%E9%97%AE%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E9%9A%BE%E7%82%B9%EF%BC%8C%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84-toc">
+     <a href="#%E9%97%AE%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E9%9A%BE%E7%82%B9%EF%BC%8C%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84" rel="nofollow">
+      问项目中有哪些难点，怎么解决的
+     </a>
+    </p>
+    <p id="%E4%BB%A3%E7%A0%81%E9%81%87%E5%88%B0%E5%86%B2%E7%AA%81%E6%80%8E%E4%B9%88%E5%8A%9E-toc">
+     <a href="#%E4%BB%A3%E7%A0%81%E9%81%87%E5%88%B0%E5%86%B2%E7%AA%81%E6%80%8E%E4%B9%88%E5%8A%9E" rel="nofollow">
+      代码遇到冲突怎么办
+     </a>
+    </p>
+    <p id="%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6-toc">
+     <a href="#%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6" rel="nofollow">
+      业务系统的搭建过程
+     </a>
+    </p>
+    <p id="%E5%A4%8D%E7%9B%98%E8%BF%87%E7%A8%8B-toc">
+     <a href="#%E5%A4%8D%E7%9B%98%E8%BF%87%E7%A8%8B" rel="nofollow">
+      复盘过程
+     </a>
+    </p>
+    <p id="%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6-toc">
+     <a href="#%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6" rel="nofollow">
+      拆分组件
+     </a>
+    </p>
+    <p id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94%E9%A1%B5%E9%9D%A2-toc">
+     <a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94%E9%A1%B5%E9%9D%A2" rel="nofollow">
+      如何实现自适应页面
+     </a>
+    </p>
+    <p id="%E4%B8%AA%E6%80%A7-toc">
+     <a href="#%E4%B8%AA%E6%80%A7" rel="nofollow">
+      *个性
+     </a>
+    </p>
+    <p id="%E6%94%B6%E9%9B%86%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E5%AE%8C%E6%88%90%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD-toc">
+     <a href="#%E6%94%B6%E9%9B%86%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E5%AE%8C%E6%88%90%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD" rel="nofollow">
+      介绍
+     </a>
+    </p>
+    <p id="%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD-toc">
+     <a href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD" rel="nofollow">
+      实现功能
+     </a>
+    </p>
+    <p id="%E5%88%86%E9%A1%B5%E6%80%8E%E4%B9%88%E5%81%9A-toc">
+     <a href="#%E5%88%86%E9%A1%B5%E6%80%8E%E4%B9%88%E5%81%9A" rel="nofollow">
+      后端接口
+     </a>
+    </p>
+    <p id="%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%91%E9%80%81token%E5%92%8C%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-toc">
+     <a href="#%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%91%E9%80%81token%E5%92%8C%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF" rel="nofollow">
+      登陆注册
+     </a>
+    </p>
+    <p id="articleContentId-toc">
+     <a href="#articleContentId" rel="nofollow">
+      *0.0.0.0，localhost，127.0.0.1
+     </a>
+    </p>
+    <p id="0.0.0.0-toc">
+     <a href="#0.0.0.0" rel="nofollow">
+      0.0.0.0
+     </a>
+    </p>
+    <p id="localhost-toc">
+     <a href="#localhost" rel="nofollow">
+      localhost
+     </a>
+    </p>
+    <p id="127.0.0.1-toc">
+     <a href="#127.0.0.1" rel="nofollow">
+      127.0.0.1
+     </a>
+    </p>
+    <p id="%E5%88%86%E9%A1%B5-toc">
+     <a href="#%E5%88%86%E9%A1%B5" rel="nofollow">
+      分页
+     </a>
+    </p>
+    <p id="%E6%80%8E%E6%A0%B7%E5%AE%9E%E7%8E%B0%E5%BC%B9%E7%AA%97%E7%BB%84%E4%BB%B6modal-toc">
+     <a href="#%E6%80%8E%E6%A0%B7%E5%AE%9E%E7%8E%B0%E5%BC%B9%E7%AA%97%E7%BB%84%E4%BB%B6modal" rel="nofollow">
+      弹窗组件modal
+     </a>
+    </p>
+    <p id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E5%BC%B9%E7%AA%97%E5%A4%96%E9%9D%A2%E5%8C%BA%E5%9F%9F%EF%BC%8C%E5%BC%B9%E7%AA%97%E6%B6%88%E5%A4%B1-toc">
+     <a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E5%BC%B9%E7%AA%97%E5%A4%96%E9%9D%A2%E5%8C%BA%E5%9F%9F%EF%BC%8C%E5%BC%B9%E7%AA%97%E6%B6%88%E5%A4%B1" rel="nofollow">
+      如何实现点击弹窗外面区域，弹窗消失
+     </a>
+    </p>
+    <p id="%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF-toc">
+     <a href="#%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF" rel="nofollow">
+      相关技术
+     </a>
+    </p>
+    <hr/>
+    <p>
+    </p>
+    <h2 id="js%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83">
+     <strong>
+      模块化规范
+     </strong>
+    </h2>
+    <p>
+     一个模块是实现一个
+     <strong>
+      特定功能
+     </strong>
+     的
+     <strong>
+      一组方法
+     </strong>
+     。
+    </p>
+    <ol>
+     <li>
+      由于函数具有
+      <strong>
+       独立作用域
+      </strong>
+      的特点，最原始的写法是使用函数来作为模块，
+      <strong>
+       几个函数作为一个模块
+      </strong>
+      ，但是这种方式容易造成
+      <strong>
+       全局变量的污染
+      </strong>
+      ，并且
+      <strong>
+       模块间没有联系
+      </strong>
+      。
+     </li>
+     <li>
+      后面提出了对象，通过
+      <strong>
+       将函数作为一个对象的方法
+      </strong>
+      来实现，但是这种办法会
+      <strong>
+       暴露
+      </strong>
+      所 有的所有的模块成员，外部代码可以修改
+      <strong>
+       内部属性的值
+      </strong>
+      。
+     </li>
+     <li>
+      现在最常用的是
+      <strong>
+       立即执行函数
+      </strong>
+      的写法，通过利用
+      <strong>
+       闭包
+      </strong>
+      来实现
+      <strong>
+       模块私有作用域
+      </strong>
+      的建立，同时
+      <strong>
+       不会对全局作用域造成污染
+      </strong>
+      。
+     </li>
+    </ol>
+    <ul>
+     <li>
+      ES6 ：使用
+      <strong>
+       import 和 export
+      </strong>
+      的形式来导入导出模块。
+     </li>
+     <li>
+      CommonJS ：
+      <strong>
+       require
+      </strong>
+      来引入模块，通过
+      <strong>
+       module.exports
+      </strong>
+      定义模块的输出接口。
+     </li>
+    </ul>
+    <p>
+     这种模块加载方案是
+     <strong>
+      服务器端
+     </strong>
+     的解决方案，它是以
+     <strong>
+      同步
+     </strong>
+     的方式来引入模块的，因为在服务端文件都存储在
+     <strong>
+      本地
+     </strong>
+     磁盘，所以
+     <strong>
+      读取
+     </strong>
+     非常快，所以以同步的方式加载没有问题。
+    </p>
+    <p>
+     但如果是在
+     <strong>
+      浏览器端
+     </strong>
+     ，由于模块的加载是使用
+     <strong>
+      网络请求
+     </strong>
+     ，因此使用异步加载的方式更加合适。
+    </p>
+    <ul>
+     <li>
+      AMD ：Asynchronous Module Definition，这种方案采用
+      <strong>
+       异步
+      </strong>
+      加载的方式来加载模块，模块的加载不影响后面语句的执行，所有
+      <strong>
+       依赖
+      </strong>
+      这个模块的语句都定义在一个
+      <strong>
+       回调函数
+      </strong>
+      里，等到加
+      <strong>
+       载完成后再执行回调函数
+      </strong>
+      。
+      <strong>
+       require.js
+      </strong>
+      实现了 AMD 规范。
+     </li>
+     <li>
+      CMD ：Common Module Definition，这种方案和 AMD 方案都是为了解决
+      <strong>
+       异步
+      </strong>
+      模块加载的问题，
+      <strong>
+       sea.js
+      </strong>
+      实现了 CMD 规范。
+     </li>
+    </ul>
+    <p>
+     AMD是预加载，CMD是懒加载。
+    </p>
+    <p>
+     AMD是提前执行，CMD是延迟执行。
+    </p>
+    <p>
+     AMD在对应的
+     <strong>
+      加载之前导入
+     </strong>
+     ，CMD在
+     <strong>
+      用的时候导入
+     </strong>
+    </p>
+    <h3 id="%E6%87%92%E5%8A%A0%E8%BD%BD">
+     <a href="https://juejin.cn/post/6903774214780616718#heading-1" rel="nofollow" title="懒加载（性能优化）">
+      懒加载（性能优化）
+     </a>
+    </h3>
+    <p>
+     (Load On Demand)延迟加载、按需加载
+    </p>
+    <p>
+     <strong>
+      可视化区域之外
+     </strong>
+     的图片不会进行加载，在
+     <strong>
+      滚动
+     </strong>
+     屏幕时才加载。这样使得网页的加载速度更快，减少了服务器的负载。懒加载适用于图片较多，页面列表较长(长列表)的场景中。
+    </p>
+    <h4 id="scroll%E7%89%88">
+     scroll版
+    </h4>
+    <ol>
+     <li>
+      图片的 src 属性设为默认图片
+     </li>
+     <li>
+      图片的真实路径则设置在data-src属性中，
+     </li>
+     <li>
+      绑定 window 的
+      <code>
+       scroll
+      </code>
+      事件，对其进行事件监听。
+     </li>
+     <li>
+      <pre><code class="language-javascript">//节流
+window.addEventListener('scroll', throttle(lazyload, 200))</code></pre>
+     </li>
+     <li>
+      在scroll事件的回调中，判断我们的懒加载的图片是否进入可视区域,
+     </li>
+     <li>
+      如果图片在可视区内将图片的 src 属性设置为data-src的值
+     </li>
+    </ol>
+    <pre><code class="language-html">&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Lazyload&lt;/title&gt;
+    &lt;style&gt;
+      .image-item {
+	    display: block;
+	    margin-bottom: 50px;
+	    height: 200px;//一定记得设置图片高度
+	}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src="./img/default.png" data-src="./img/1.jpg" /&gt;
+    ...
+    &lt;img src="./img/default.png" data-src="./img/10.jpg" /&gt;
+
+&lt;script&gt;
+function lazyload() {
+  let viewHeight = document.body.clientHeight //获取可视区高度
+//用属性选择器返回属性名为data-src的img元素列表
+  let imgs = document.querySelectorAll('img[data-src]')
+  imgs.forEach((item, index) =&gt; {
+    if (item.dataset.src === '') return
+
+    // 用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置
+    let rect = item.getBoundingClientRect()
+    if (rect.bottom &gt;= 0 &amp;&amp; rect.top &lt; viewHeight) {
+      item.src = item.dataset.src
+      item.removeAttribute('data-src')//移除属性，下次不再遍历
+    }
+  })
+}
+
+lazyload()//刚开始还没滚动屏幕时，要先触发一次函数，初始化首页的页面图片
+document.addEventListener（"scroll"，lazyload)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h4 id="%C2%A0IntersectionObserver%C2%A0%E7%89%88">
+     <code>
+      IntersectionObserver
+     </code>
+     版
+    </h4>
+    <p>
+     <code>
+      IntersectionObserver
+     </code>
+     "交叉观察器"。可见（visible）本质是，目标元素与视口产生一个交叉区
+    </p>
+    <p>
+     callback 一般会触发两次。一次是目标元素刚刚进入视口（开始可见），另一次是完全离开视口（开始不可见）
+    </p>
+    <pre><code class="language-javascript">//callback 是可见性变化时的回调函数，option 是配置对象（该参数可选）
+var io = new IntersectionObserver(callback, option)
+
+// 开始观察
+io.observe(document.getElementById('example'))
+
+// 停止观察
+io.unobserve(element)
+
+// 关闭观察器
+io.disconnect()
+</code></pre>
+    <p>
+     callback 函数的参数
+     <code>
+      （entries）
+     </code>
+     是一个数组，每个成员都是一个
+     <code>
+      IntersectionObserverEntry
+     </code>
+     对象。举例来说，如果同时有两个被观察的对象的可见性发生变化，
+     <code>
+      entries
+     </code>
+     数组就会有两个成员。
+    </p>
+    <ul>
+     <li>
+      time：可见性发生变化的时间，是一个高精度时间戳，单位为毫秒
+     </li>
+     <li>
+      target：被观察的目标元素，是一个 DOM 节点对象
+     </li>
+     <li>
+      isIntersecting: 目标是否可见
+     </li>
+     <li>
+      rootBounds：根元素的矩形区域的信息，
+      <code>
+       getBoundingClientRect()
+      </code>
+      方法的返回值，如果没有根元素（即直接相对于视口滚动），则返回 null
+     </li>
+     <li>
+      boundingClientRect：目标元素的矩形区域的信息
+     </li>
+     <li>
+      intersectionRect：目标元素与视口（或根元素）的交叉区域的信息
+     </li>
+     <li>
+      intersectionRatio：目标元素的可见比例，即
+      <code>
+       intersectionRect
+      </code>
+      占
+      <code>
+       boundingClientRect
+      </code>
+      的比例，完全可见时为 1，完全不可见时小于等于 0
+     </li>
+    </ul>
+    <pre><code class="language-javascript">const config = {
+  rootMargin: '0px',
+  threshold: 0,
+}
+let observer = new IntersectionObserver((entries, self) =&gt; {
+  entries.forEach((entry) =&gt; {
+    if (entry.isIntersecting) {
+      let img = entry.target
+      let src = img.dataset.src
+      if (src) {
+        img.src = src
+        img.removeAttribute('data-src')
+      }
+      // 解除观察
+      self.unobserve(entry.target)
+    }
+  })
+}, config)
+
+imgs.forEach((image) =&gt; {
+  observer.observe(image)
+})
+</code></pre>
+    <h3 id="require%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8(CommonJS%E8%A7%84%E8%8C%83%E5%92%8Ces6%E8%A7%84%E8%8C%83)">
+     require与import的区别和使用
+    </h3>
+    <pre><code class="language-javascript">require/import
+
+// CommonJS 的写法
+const moduleA = require('moduleA');
+const func1 = moduleA.func1;
+const func2 = moduleA.func2;
+// ES6 的写法
+import { func1, func2 } from 'moduleA';
+
+module.exports/export
+
+// commonJS 的写法
+var React = require('react');
+var Breadcrumbs = React.createClass({
+  render() {
+    return &lt;nav /&gt;;
+  }
+});
+module.exports = Breadcrumbs;
+
+// ES6 的写法
+import React from 'react';
+class Breadcrumbs extends React.Component {
+  render() {
+    return &lt;nav /&gt;;
+  }
+};
+export default Breadcrumbs;
+</code></pre>
+    <ol>
+     <li>
+      <strong>
+       规范
+      </strong>
+      ：require是
+      <strong>
+       CommonJS,AMD
+      </strong>
+      规范的模块化语法，import是ECMAScript 6规范的模块化语法，如果要兼容浏览器的话必须转化成es5的语法；CommonJS模块默认export的是一个对象，即使导出的是
+      <strong>
+       基础数据类型
+      </strong>
+      。
+     </li>
+     <li>
+      <strong>
+       本质：
+      </strong>
+      require是
+      <strong>
+       赋值
+      </strong>
+      过程，其实require 的结果就是对象、数字、字符串、函数等，再把require的结果赋值给某个变量，引入复杂数据类型时，数据
+      <strong>
+       浅拷贝
+      </strong>
+      该对象。。import是
+      <strong>
+       解构
+      </strong>
+      过程。
+     </li>
+     <li>
+      <strong>
+       加载
+      </strong>
+      ：require是
+      <strong>
+       运行
+      </strong>
+      时加载，import是
+      <strong>
+       编译
+      </strong>
+      时加载；
+     </li>
+     <li>
+      <strong>
+       位置
+      </strong>
+      ：require可以写在代码的
+      <strong>
+       任意
+      </strong>
+      位置，import只能写在文件的
+      <strong>
+       最顶端
+      </strong>
+      且不可在条件语句或函数作用域中使用；
+     </li>
+     <li>
+      <strong>
+       改变
+      </strong>
+      ：require通过
+      <strong>
+       module.exports
+      </strong>
+      导出的
+      <strong>
+       值
+      </strong>
+      就
+      <strong>
+       不能再变
+      </strong>
+      ，import通过export导出的值可以改变；
+      <br/>
+     </li>
+    </ol>
+    <h2>
+     <strong>
+      js的运行环境
+     </strong>
+    </h2>
+    <p>
+     <strong>
+      脚本语言
+     </strong>
+     需要一个
+     <strong>
+      解析器
+     </strong>
+     才能
+     <strong>
+      运行
+     </strong>
+     ，每一种解析器都是一个
+     <strong>
+      运行环境
+     </strong>
+    </p>
+    <p>
+     JavaScript是脚本语言，在不同的位置有不一样的解析器，
+    </p>
+    <h3 id="NodeJS">
+     <strong>
+      浏览器
+     </strong>
+    </h3>
+    <p>
+     写入html的js语言，浏览器是它的解析器角色。
+    </p>
+    <p>
+     浏览器中的js的用途是操作DOM，浏览器就提供了document之类的内置对象。
+    </p>
+    <h3 id="Node">
+     <strong>
+      Node
+     </strong>
+    </h3>
+    <p>
+     Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，独立于浏览器的运行环境
+    </p>
+    <p>
+     nodejs中的js的用途是操作磁盘文件或搭建http服务器，nodejs就相应提供了fs,http等内置对象。
+    </p>
+    <p class="img-center">
+     <img alt="" height="230" src="https://i-blog.csdnimg.cn/blog_migrate/5a9c24ce8aea633ae03da807cc94470f.png" width="394"/>
+    </p>
+    <h4 id="%E7%89%B9%E7%82%B9">
+     特点
+    </h4>
+    <ul>
+     <li>
+      简单：javascript,json进行编码，
+     </li>
+     <li>
+      强大：
+      <strong>
+       非阻塞IO
+      </strong>
+      ,可以适应
+      <strong>
+       分块传输数据
+      </strong>
+      ，较慢的网络环境，尤其擅长
+      <strong>
+       高并发访问
+      </strong>
+      ，
+     </li>
+     <li>
+      轻量：node本身既是
+      <strong>
+       代码
+      </strong>
+      ，又是
+      <strong>
+       服务器
+      </strong>
+      ，
+      <strong>
+       前后端使用统一语言
+      </strong>
+      ;
+     </li>
+     <li>
+      可扩展体：轻松应对
+      <strong>
+       多实例
+      </strong>
+      ，
+      <strong>
+       多服务器架构
+      </strong>
+      ，同时有海量的
+      <strong>
+       第三方应用组件
+      </strong>
+      。
+     </li>
+    </ul>
+    <h4 id="npm">
+     npm
+    </h4>
+    <p>
+     Node Package Manager ，即：node包管理器
+    </p>
+    <p>
+     是nodeJS的一个
+     <strong>
+      程序包
+     </strong>
+     管理和分发的
+     <strong>
+      管理
+     </strong>
+     工具，npm完全用 JavaScript 写成
+    </p>
+    <p>
+     允许用户从
+     <strong>
+      NPM服务器下载安装上传
+     </strong>
+     包
+    </p>
+    <p id="Babel">
+    </p>
+    <h2 id="%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8">
+     项目规范
+    </h2>
+    <p>
+     整个项目不再使用class组件，统一使用函数式组件，并且全面用Hooks;
+    </p>
+    <p>
+     所有的函数式组件，为了避免不必要的渲染，全部使用memo进行包裹;
+    </p>
+    <p>
+     组件内部的状态，使用useState、业务数据全部放在redux中管理;
+    </p>
+    <p>
+     函数组件内部逻辑代码基本按照如下顺序编写代码:
+    </p>
+    <pre><code class="language-javascript">组件内部state管理;
+
+redux的hooks代码;
+
+其他hooks相关代码(比如自定义hooks);
+
+其他逻辑代码;
+
+返回JSX代码;</code></pre>
+    <p>
+     redux代码规范如下:
+    </p>
+    <pre><code class="language-javascript">redux目前我们学习了两种模式, 根据自己的情况选择普通模式还是rtk模式
+
+每个模块有自己独立的reducer或者slice，之后合并在一起;
+
+redux中会存在共享的状态、从服务器获取到的数据状态;</code></pre>
+    <p>
+     网络请求采用axios
+    </p>
+    <pre><code class="language-javascript">对axios进行二次封装;
+
+所有的模块请求会放到一个请求文件中单独管理;
+
+项目使用AntDesign或者MUI(Material UI)
+
+其他规范在项目中根据实际情况决定和编写</code></pre>
+    <h2 id="%E5%91%BD%E4%BB%A4">
+     命令（创建运行）
+    </h2>
+    <p>
+     <strong>
+      npm run start
+     </strong>
+     来运行启动项目并打开页面
+     <br/>
+     npx create-react-app my-app //创建项目
+     <br/>
+     cd my-app
+     <br/>
+     npm start
+    </p>
+    <p>
+     安装命令：
+    </p>
+    <p>
+     npx create-react-app 项目名称 --template typescript
+     <br/>
+    </p>
+    <h2 id="%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">
+     <a href="https://blog.csdn.net/m0_71485750/article/details/126923270?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168060229316782425161665%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168060229316782425161665&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-14-126923270-null-null.142%5Ev81%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=react%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84&amp;spm=1018.2226.3001.4187" title="项目文件结构">
+      项目文件结构
+     </a>
+    </h2>
+    <p>
+     主要开发代码在src目录下。App.js为
+     <strong>
+      根
+     </strong>
+     组件，index.js为
+     <strong>
+      入口模块
+     </strong>
+     ，index.css为
+     <strong>
+      全局样式
+     </strong>
+     文件。
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/6bd179b733de38cbe162307017bd0045.png"/>
+    </p>
+    <h4 id="package.json">
+     <strong>
+      package.json
+     </strong>
+    </h4>
+    <p>
+     配置jsconfig.json:这个文件在
+     <strong>
+      Vue
+     </strong>
+     通过脚手架创建项目时
+     <strong>
+      自动生成
+     </strong>
+     , React是没有自动生成
+    </p>
+    <p>
+    </p>
+    <p>
+     package.json
+     <strong>
+      相当于说明书
+     </strong>
+     ,其重点字段：
+    </p>
+    <pre><code class="language-javascript">{
+  "name": "react-ts-app",
+  "version": "0.1.0",
+  "private": true,//是否私有，设置为 true 时，npm 拒绝发布
+  "dependencies": {//生产环境下，项目运行所需依赖
+    "@ant-design/icons": "^4.8.0",
+     ...
+    "@types/node": "^16.18.6",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "antd": "^5.0.4",
+    "axios": "^1.2.1",
+    "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.4",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {//执行npm脚本命令简写，比如“start" : "react-scripts start",执行npm start就是运行“react-scripts start"
+    "start": "SET PORT=8080 &amp;&amp; react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+....
+  "devDependencies": {//开发环境下，项目所需依赖
+    "@types/lodash": "^4.14.191"
+  }
+}
+</code></pre>
+    <h4 id="package-lock.json">
+     package-lock.json
+    </h4>
+    <p>
+     用一句话来概括很简单，就是锁定
+     <strong>
+      安装时
+     </strong>
+     的包的版本号，并且需要
+     <strong>
+      上传到git
+     </strong>
+     ，以保证其他人在
+     <strong>
+      npm install
+     </strong>
+     时大家的依赖能保证一致。
+    </p>
+    <h4 id="node_modules">
+     node_modules
+    </h4>
+    <p>
+     <img alt="" height="169" src="https://i-blog.csdnimg.cn/blog_migrate/3b791795e9b9ca25e48e09e664b5be93.png" width="182"/>
+    </p>
+    <p>
+     是安装
+     <a href="https://so.csdn.net/so/search?q=node&amp;spm=1001.2101.3001.7020" title="node">
+      node
+     </a>
+     后用来存放用包管理工具下载安装的
+     <strong>
+      包
+     </strong>
+     的文件夹。比如
+     <strong>
+      webpack
+     </strong>
+     、gulp、grunt这些工具。
+    </p>
+    <h2 id="git%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86">
+     git代码管理
+    </h2>
+    <h4 id="%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">
+     常用命令
+    </h4>
+    <p>
+     git init 初始化git仓库
+    </p>
+    <p>
+     git status 查看文件状态
+    </p>
+    <p>
+     git add 文件列表 追踪文件
+    </p>
+    <p>
+     git commit -m 提交信息 向仓库中提交代码
+    </p>
+    <p>
+     git log 查看提交记录
+    </p>
+    <h4 id="%E5%88%86%E6%94%AF">
+     分支
+    </h4>
+    <p>
+     1.分支明细
+    </p>
+    <p>
+     （1）主分支（master）：第一次向 git 仓库中提交更新记录时自动产生的一个分支。
+    </p>
+    <p>
+     （2）开发分支（develop）：作为开发的分支，基于 master 分支创建。
+    </p>
+    <p>
+     （3）功能分支（feature）：作为开发具体功能的分支，基于开发分支创建
+    </p>
+    <p>
+     2.分支命令
+    </p>
+    <p>
+     （1）git branch 查看分支
+    </p>
+    <p>
+     （2）git branch 分支名称 创建分支
+    </p>
+    <p>
+     （3）git checkout 分支名称 切换分支
+    </p>
+    <p>
+     （4）git merge 来源分支 合并分支 (备注：必须在
+     <strong>
+      master分支
+     </strong>
+     上才能合并develop分支)
+    </p>
+    <p>
+     （5）git branch -d 分支名称 删除分支（
+     <strong>
+      分支被合并后才允许删除
+     </strong>
+     ）（-D 强制删除）
+    </p>
+    <h4 id="git%E5%A4%9A%E4%BA%BA%E5%8D%8F%E5%90%8Cmerge%E5%86%B2%E7%AA%81">
+     git多人协同merge冲突
+    </h4>
+    <p>
+     是当前修改是左箭头方向，传入的是右箭头的方向，
+    </p>
+    <p>
+     <strong>
+      中间用等于号分割，等号上边是当前修改（本地），下边是传入的修改（线上的代码）。
+     </strong>
+    </p>
+    <p>
+     两人同时提交可能会出现冲突，解决办法是手动修改冲突
+    </p>
+    <h4 id="*%E5%88%86%E6%94%AF%E4%B8%8A%E4%BB%A3%E7%A0%81%E6%B2%A1%E5%86%99%E5%AE%8C%E6%80%8E%E4%B9%88%E7%BC%93%E5%AD%98">
+     暂时保存更改
+    </h4>
+    <p>
+     存储临时改动：git stash（藏匿）
+    </p>
+    <p>
+     恢复改动：git stash pop
+    </p>
+    <ul>
+     <li>
+      应用场景：
+     </li>
+    </ul>
+    <p>
+     对于多人并行开发，维护同一仓库工作场景，经常会出现文件
+     <strong>
+      合并冲突
+     </strong>
+     的情况
+    </p>
+    <ul>
+     <li>
+      作用：
+     </li>
+    </ul>
+    <p>
+     能够将所有未提交的修改（
+     <strong>
+      工作区和暂存区
+     </strong>
+     ）保存至
+     <strong>
+      堆栈
+     </strong>
+     中，用于后续恢复当前工作目录。
+    </p>
+    <p>
+     git add
+    </p>
+    <p>
+     只是把文件加到
+     <strong>
+      git 版本控制
+     </strong>
+     里
+    </p>
+    <h4 id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">
+     性能优化
+    </h4>
+    <p>
+     压缩js，css，js分包，优化图片（webp），开启gzip（后端开启），配置缓存（强制缓存协商缓存），使用cdn，
+     <br/>
+     webpack分包，减少重绘回流
+    </p>
+    <h2 id="webpack%E6%89%93%E5%8C%85%E7%AE%A1%E7%90%86">
+     <a href="https://blog.csdn.net/qq_41370833/article/details/124783929?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168060127616800182120777%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168060127616800182120777&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-124783929-null-null.142%5Ev81%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=webpack%E9%9D%A2%E8%AF%95%E9%A2%98&amp;spm=1018.2226.3001.4187" title="webpack打包管理">
+      webpack打包管理
+     </a>
+    </h2>
+    <p>
+     它将根据
+     <strong>
+      模块的依赖关
+     </strong>
+     系进行
+     <strong>
+      静态分析
+     </strong>
+     ，然后将这些模块（ js、css、less ）按照指定的规则生成对应的静态
+     <strong>
+      资源
+     </strong>
+     ，
+     <strong>
+      减少了页面的请求
+     </strong>
+     。Webpack是以
+     <strong>
+      公共JS
+     </strong>
+     的形式来书写脚本的，方便旧项目进行
+     <strong>
+      代码迁移
+     </strong>
+     。
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/4a6aa6485e9d872df9320a00a284bccc.png"/>
+    </p>
+    <h3 id="%E5%8E%9F%E7%90%86">
+     原理
+    </h3>
+    <p>
+     Webpack通过一个给定的
+     <strong>
+      主文件
+     </strong>
+     （如：
+     <strong>
+      index.js
+     </strong>
+     ）开始
+     <strong>
+      找到
+     </strong>
+     项目的所有
+     <strong>
+      依赖
+     </strong>
+     文件，
+    </p>
+    <p>
+     使用
+     <strong>
+      loaders
+     </strong>
+     处理它们，
+     <strong>
+      plugin
+     </strong>
+     可以
+     <strong>
+      压缩代码和图片
+     </strong>
+     ，
+    </p>
+    <p>
+     把所有
+     <strong>
+      依赖打包
+     </strong>
+     成一个 或多个bundle.js文件（捆bundle）
+     <strong>
+      浏览器可识别
+     </strong>
+     的JavaScript文件。
+    </p>
+    <h4>
+     Babel
+    </h4>
+    <p>
+     <strong>
+      JavaScript 编译器
+     </strong>
+    </p>
+    <p>
+     将es6、es7、es8等语法转换成浏览器可识别的es5或es3语法，即浏览器兼容的语法，比如将箭头函数转换为普通函数
+    </p>
+    <p>
+     将jsx转换成浏览器认的js
+    </p>
+    <h3 id="loader">
+     loader
+    </h3>
+    <p>
+     webpack只认识
+     <strong>
+      JS和JSON
+     </strong>
+     ，所以
+     <strong>
+      Loader
+     </strong>
+     相当于
+     <strong>
+      翻译
+     </strong>
+     官，将其他类型资源进行
+     <strong>
+      预处理，
+     </strong>
+     最终变为
+     <strong>
+      js
+     </strong>
+     代码。
+    </p>
+    <ul>
+     <li>
+      less-loader：将less文件编译成css文件（开发中，会使用
+      <strong>
+       less预处理器
+      </strong>
+      编写css样式，使开发
+      <strong>
+       效率
+      </strong>
+      提高）
+     </li>
+     <li>
+      css-loader：将css文件变成
+      <strong>
+       commonjs
+      </strong>
+      模块（
+      <strong>
+       模块化的规范
+      </strong>
+      ）加载到js中，模块内容是
+      <strong>
+       样式字符串
+      </strong>
+     </li>
+     <li>
+      style-loader：创建
+      <strong>
+       style
+      </strong>
+      标签，将
+      <strong>
+       js中的样式资源
+      </strong>
+      插入标签内，并将标签添加到
+      <strong>
+       head中生效
+      </strong>
+     </li>
+     <li>
+      ts-loader：
+      <strong>
+       打包编译Typescript
+      </strong>
+      文件
+     </li>
+    </ul>
+    <h3 id="plugin">
+     plugin
+    </h3>
+    <p>
+     Plugin解决loader 无法实现的事情，比如
+     <strong>
+      打包优化
+     </strong>
+     和
+     <strong>
+      代码压缩
+     </strong>
+     等。
+    </p>
+    <ul>
+     <li>
+      html-webpack-plugin 处理html资源，默认会创建一个
+      <strong>
+       空
+      </strong>
+      的HTML，自动引入打包输出的所有资源（js/css）
+     </li>
+     <li>
+      mini-css-extract-plugin 打包过后的css在js文件里，该插件可以
+      <strong>
+       把css单独抽出来
+      </strong>
+     </li>
+     <li>
+      clean-webpack-plugin 每次打包时候，CleanWebpackPlugin 插件就会自动把
+      <strong>
+       上一次打的包删除
+      </strong>
+     </li>
+    </ul>
+    <h4 id="loader%E5%92%8Cplugin%E7%9A%84%E5%8C%BA%E5%88%AB">
+     loader和plugin的区别
+    </h4>
+    <p class="img-center">
+     <img alt="" height="198" src="https://i-blog.csdnimg.cn/blog_migrate/77305938980de0fd36d5506653540a82.png" width="444"/>
+    </p>
+    <p>
+     <strong>
+      运行时机
+     </strong>
+     <br/>
+     1.loader运行在编译阶段
+     <br/>
+     2.plugins 在整个周期都起作用
+    </p>
+    <h4 id="%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86">
+     热加载原理
+    </h4>
+    <p>
+     浏览器热更新：开发时能够在
+     <strong>
+      浏览器页面
+     </strong>
+     中
+     <strong>
+      实时
+     </strong>
+     看到我们代码的变化产生
+     <strong>
+      效果
+     </strong>
+     的流程。
+    </p>
+    <p>
+     热加载是通过内置的 HotModuleReplacementPlugin 实现的
+    </p>
+    <p>
+     <img alt="" height="516" src="https://i-blog.csdnimg.cn/blog_migrate/efa737421ccf81299926a3cf33bb1ec1.png" width="1160"/>
+    </p>
+    <ol>
+     <li>
+      <strong>
+       构建 bundle
+      </strong>
+      的时候，
+      <strong>
+       监听
+      </strong>
+      文件变化。
+     </li>
+     <li>
+      <strong>
+       文件修改
+      </strong>
+      会触发
+      <strong>
+       webpack 重新构建
+      </strong>
+      ，
+     </li>
+     <li>
+      服务器通过
+      <strong>
+       向浏览器发送更新消息
+      </strong>
+      ，
+     </li>
+     <li>
+      浏览器通过
+      <strong>
+       jsonp 拉取更新
+      </strong>
+      的模块文件，
+     </li>
+     <li>
+      jsonp 回调触发模块
+      <strong>
+       热替换逻辑
+      </strong>
+      。
+     </li>
+    </ol>
+    <h2 id="%E5%85%B1%E6%80%A7">
+     <a href="https://juejin.cn/post/7162011064819777567#heading-5" rel="nofollow" title="TS4 加分项">
+      TS4 加分项
+     </a>
+    </h2>
+    <p>
+     一般面试官不会考察，但是你可以写在简历项目或者技能中，面试时主动提出使用了ts，解释下为什么要使用ts及ts与js，java（类成员可见性，多的类型（any，void，泛型，断言等））的区别，然后引导面试官提问，回答完其问题再自己拓展一些相关，是不错的加分项。
+    </p>
+    <p>
+    </p>
+    <p>
+     但既然是加分项，一般不会问太深，毕竟还有更关键的要问你，所以会试探一下你是否真的用过，还是纯背。
+    </p>
+    <p>
+     面试官一般是看你简历问的，没有问的才会问八股文之类。
+    </p>
+    <p>
+     面试一定要把握主动权，不要干等着面试官问，尽量展示自己所会的，并且回答不必太急，最后能条理清晰。
+    </p>
+    <h3 id="%E5%8C%BA%E5%88%AB">
+     区别
+    </h3>
+    <h4 id="%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8TypeScript%EF%BC%9F">
+     为什么推荐使用TypeScript？
+    </h4>
+    <ul>
+     <li>
+      JS的
+      <strong>
+       超集
+      </strong>
+      ，扩展新功能
+     </li>
+     <li>
+      <strong>
+       强制类型
+      </strong>
+      ，防止报错
+     </li>
+     <li>
+      <strong>
+       自动类型推断，
+      </strong>
+      保证变量的
+      <strong>
+       类型稳定
+      </strong>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">// let a: string  -&gt;  类型推断
+let a = 'hello'
+a = 123;   // error</code></pre>
+    <ul>
+     <li>
+      强大的类型系统，包括
+      <strong>
+       泛型
+      </strong>
+      。
+     </li>
+     <li>
+      支持
+      <strong>
+       静态类型
+      </strong>
+      。（主要改进）更有利于构建大型应用
+     </li>
+    </ul>
+    <h4 id="TypeScript%E5%92%8CJavaScript%E7%9A%84%E5%8C%BA%E5%88%AB">
+     TypeScript和JavaScript的区别
+    </h4>
+    <ul>
+     <li>
+      TypeScript是JavaScript  的
+      <strong>
+       超集
+      </strong>
+      ，可以被编译成JS。用JS编写的代码，在TS中依然有效。
+     </li>
+     <li>
+      TypeScript通过
+      <strong>
+       TypeScript编译器
+      </strong>
+      或
+      <strong>
+       Babel
+      </strong>
+      转译为
+      <strong>
+       JavaScript
+      </strong>
+      代码
+     </li>
+     <li>
+      TypeScript 是
+      <strong>
+       纯面向对象
+      </strong>
+      的编程语言，包含
+      <strong>
+       类和接口
+      </strong>
+      的概念。
+     </li>
+     <li>
+      JavaScript
+      <strong>
+       弱类型
+      </strong>
+      语言，
+      <strong>
+       动态类型
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      类型强弱
+     </strong>
+     是针对类型
+     <strong>
+      转换是否显示
+     </strong>
+     来区分，
+     <strong>
+      静态和动态类型
+     </strong>
+     是针对
+     <strong>
+      类型检查的时机
+     </strong>
+     来区分。
+    </p>
+    <ul>
+     <li>
+      在JS中只有
+      <strong>
+       变量声明空间
+      </strong>
+      ，比如
+      <code>
+       let a = 123
+      </code>
+      。但在TS中还存在
+      <strong>
+       类型声明空间，
+      </strong>
+      可通过
+      <strong>
+       类型注解结合这两个空间
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/a9e84f5db857b04cc87085c41836523c.png"/>
+    </p>
+    <p>
+     可以通过
+     <code>
+      type
+     </code>
+     关键字来定义类型声明空间，
+     <code>
+      type
+     </code>
+     在TS中叫做
+     <strong>
+      类型别名
+     </strong>
+     。为了能够更好的区分两个空间，所以人为规定类型空间定义的名字
+     <strong>
+      首字母要大写
+     </strong>
+     ，例如：
+     <code>
+      type A = number
+     </code>
+    </p>
+    <h4 id="*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3">
+     控制类成员可见性的访问关键字有哪些？
+    </h4>
+    <ul>
+     <li>
+      公共（public），类的所有
+      <strong>
+       成员
+      </strong>
+      ，其
+      <strong>
+       子类
+      </strong>
+      以及该类的
+      <strong>
+       实例
+      </strong>
+      都可以访问。
+     </li>
+     <li>
+      受保护（protected），该类及其子类都可以访问它们。 但是该类的实例无法访问。
+     </li>
+     <li>
+      私有（private），只有类的成员可以访问它们。
+     </li>
+    </ul>
+    <p>
+     TS与java不同，TS默认隐式
+     <strong>
+      公共
+     </strong>
+     的，TS符合
+     <strong>
+      JS 的便利性，java默认private，符合安全性
+     </strong>
+    </p>
+    <h4 id="%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D">
+     接口interface与类型别名type
+    </h4>
+    <p>
+     接口是一系列抽象方法的声明，是一些方法特征的集合。
+    </p>
+    <p>
+     <strong>
+      接口
+     </strong>
+     跟
+     <strong>
+      类型别名
+     </strong>
+     类似都是用来定义
+     <strong>
+      类型注解
+     </strong>
+     的，但接口
+     <strong>
+      只能操作对象
+     </strong>
+     ，且有
+     <strong>
+      继承，合并
+     </strong>
+    </p>
+    <pre><code class="language-javascript">interface A {
+  username: string;
+  age: number;
+}
+let a: A = {
+  username: 'xiaoming',
+  age: 20
+}</code></pre>
+    <p>
+     接口可以进行
+     <strong>
+      合并
+     </strong>
+     操作。
+    </p>
+    <pre><code class="language-javascript">interface A {
+  username: string;
+}
+interface A {
+  age: number;
+}
+let a: A = {
+  username: 'xiaoming',
+  age: 20
+}</code></pre>
+    <p>
+     接口具备
+     <strong>
+      继承
+     </strong>
+     能力。
+    </p>
+    <pre><code class="language-javascript">interface A {
+  username: string
+}
+interface B extends A {
+  age: number
+}
+let b: B = {
+  username: 'xiaoming',
+  age: 20
+}</code></pre>
+    <h3 id="%E5%9F%BA%E6%9C%AC">
+     类型
+    </h3>
+    <h4 id="never%EF%BC%8Cany%EF%BC%8Cunknown">
+     never，any，unknown
+    </h4>
+    <p>
+     never类型表示永不存在的值的类型，当一个值
+     <strong>
+      不存在
+     </strong>
+     的时候就会被自动类型推断成never类型。
+    </p>
+    <p>
+     在
+     <strong>
+      出问题
+     </strong>
+     的时候会被自动转成never。
+    </p>
+    <p>
+     any类型表示
+     <strong>
+      任意
+     </strong>
+     类型，而unknown类型表示为
+     <strong>
+      未知
+     </strong>
+     类型，是any类型对应的
+     <strong>
+      安全
+     </strong>
+     类型。
+    </p>
+    <h4 id="void">
+     类型断言as与非空断言!
+    </h4>
+    <p>
+     当 TypeScript
+     <strong>
+      推断
+     </strong>
+     出来类型并不满足需求，需要
+     <strong>
+      手动指定
+     </strong>
+     一个类型，强制说明类型，让TS编译不报错
+    </p>
+    <pre><code class="language-javascript">let a: unknown = 'hello';
+a = 123;
+(a as []).map(()=&gt;{})    // success</code></pre>
+    <p>
+     因为b可能是字符串也可能是undefined，所以
+     <code>
+      b.length
+     </code>
+     的时候就会报错，这样我们可以采用非空断言来告诉TS，这个b肯定不是undefined，所以b只能是字符串，那么
+     <code>
+      b.length
+     </code>
+     就不会报错了。
+    </p>
+    <pre><code class="language-javascript">let b: string|undefined = undefined;
+b!.length   // success</code></pre>
+    <h4 id="%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8Cvoid">
+     函数类型和void
+    </h4>
+    <pre><code class="language-javascript">function foo(n: number, m?: string): number{
+   return 123;
+}
+foo(123, 'hello');
+foo(123);     // success</code></pre>
+    <p>
+     当函数
+     <strong>
+      没有return
+     </strong>
+     和
+     <strong>
+      return undefined
+     </strong>
+     的时候返回void类型。
+    </p>
+    <pre><code class="language-javascript">let foo = function(){   // void
+}let foo = function(): undefined{   // undefined 不能不写return的
+}  // error</code></pre>
+    <h4 id="%E6%B3%9B%E5%9E%8B">
+     泛型
+    </h4>
+    <p>
+     泛型是指在定义
+     <strong>
+      函数、接口、类
+     </strong>
+     时，未指定其参数类型，只有在
+     <strong>
+      运行
+     </strong>
+     时传入才能确定。泛型简单来说就是对类型进行
+     <strong>
+      传参
+     </strong>
+     处理。
+    </p>
+    <h4>
+     应用
+    </h4>
+    <h4 id="%E5%8F%98%E9%87%8F">
+     变量
+    </h4>
+    <h4 id="%C2%A0*%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3">
+     *类型注解
+    </h4>
+    <p>
+     类型注解：把变量空间与类型空间结合在一起
+    </p>
+    <p>
+     type关键字+
+     <strong>
+      类型别名
+     </strong>
+    </p>
+    <pre><code class="language-javascript">let a: string = 'hello'
+
+//也可以通过类型别名进行连接
+type A = string
+let a: A = 'hello'</code></pre>
+    <h4 id="%E6%95%B0%E7%BB%84">
+     数组
+    </h4>
+    <pre><code class="language-javascript">let arr: Array&lt;number&gt; = [1, 2, 3];
+//自定义MyArray实现
+type MyArray&lt;T&gt; = T[];
+let arr2: MyArray&lt;number&gt; = [1, 2, 3];</code></pre>
+    <h4>
+     函数
+    </h4>
+    <pre><code class="language-javascript">function foo(n: number, m?: string): number{
+   return 123;
+}
+foo(123, 'hello');
+foo(123);     // success
+
+function foo&lt;T&gt;(n: T){
+}
+foo&lt;string&gt;('hello');
+foo(123);   // 泛型会自动类型推断</code></pre>
+    <h4 id="%E5%AF%B9%E8%B1%A1">
+     类
+    </h4>
+    <pre><code class="language-javascript">class Foo {
+  //第一种写法
+  //username: string = 'xiaoming';
+  //第二种写法
+  // username: string;
+  // constructor(){
+  //   this.username = 'xiaoming';
+  // }
+  //第三种写法
+  username: string;
+  constructor(username: string){
+    this.username = username;
+  }
+}
+
+interface A {
+  username: string
+  age: number
+  showName(n: string): string
+}
+
+class Foo implements A {
+  username: string = 'xiaoming'
+  age: number = 20
+  gender: string = 'male'  
+  showName = (n: string): string =&gt; {
+    return n
+  }
+}
+
+class Foo {
+  ...
+  showAge = (n: number): number =&gt; {
+    return n;
+  }
+}
+
+class Foo&lt;T&gt; {
+  username!: T;  //不给初始值可通过非空断言
+}
+let f = new Foo&lt;string&gt;();
+f.username = 'hello';
+
+class Foo&lt;T&gt; {
+  username!: T
+}
+class Baz extends Foo&lt;string&gt; {}
+let f = new Baz()
+f.username = 'hello'</code></pre>
+    <h3 id="%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD">
+     <a href="https://juejin.cn/post/6844903773190504456" rel="nofollow" title="类型判断">
+      类型判断
+     </a>
+    </h3>
+    <h4 id="is">
+     is
+    </h4>
+    <p>
+     <code>
+      is
+     </code>
+     让 ts 分辨类型
+    </p>
+    <pre><code class="language-TypeScript">function toUpperCase(x: unknown) {
+  if(isString(x)) {
+    x.toUpperCase(); // ⚡️ x is still of type unknown
+  }
+}</code></pre>
+    <ul>
+     <li>
+      <p>
+       但是由于这个检验函数(isString)被包裹在 toUpperCase()函数中，ts 在判断的时候还是抛出了错误提示
+      </p>
+     </li>
+     <li>
+      <p>
+       使用
+       <code>
+        is
+       </code>
+       ，这里让我们主动明确的告诉 ts ，在 isString() 这个函数的参数是一个 string。
+      </p>
+     </li>
+    </ul>
+    <pre><code class="language-TypeScript">// ！！！ 使用 is 来确认参数 s 是一个 string 类型
+function isString(s): s is string {
+  return typeof s === 'string';
+}</code></pre>
+    <h4 id="Narrowing%20down%20sets">
+     Narrowing down sets
+    </h4>
+    <pre><code class="language-TypeScript">function pipsAreValid(pips: number) {
+  // we check for every discrete value, as number can 
+  // be something between 1 and 2 as well.
+  return pips === 1 || pips === 2 || pips === 3 ||
+    pips === 4 || pips === 5 || pips === 6;
+}
+
+function evalThrow(count: number) {
+  if (pipsAreValid(count)) {
+    // my types are lying 😢
+    switch (count) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        console.log('Not today');
+        break;
+      case 6:
+        console.log('Won!');
+        break;
+      case 7:
+        // TypeScript does not complain here, even though
+        // it's impossible for count to be 7
+        console.log('This does not work!');
+        break;
+    }
+  }
+}</code></pre>
+    <p>
+     <code>
+      count
+     </code>
+     是一个
+     <code>
+      number
+     </code>
+     类型，输入的参数是没有问题的。
+    </p>
+    <p>
+     在我们校验它的时候，
+     <code>
+      count
+     </code>
+     不再是一个
+     <code>
+      number
+     </code>
+     类型,而是变成了一个 1-6 number 的特殊类型。
+    </p>
+    <p>
+     ts 为了防止类型溢出，使用了联合类型把原来
+     <code>
+      number
+     </code>
+     类型变成 1-6的数字(缩小了范围)
+    </p>
+    <pre><code class="language-TypeScript">改变处
+// 主动使用联合类型确保我们的输入是 1-6的数字
+type Dice = 1 | 2 | 3 | 4 | 5 | 6;
+
+function pipsAreValid(pips: number): pips is Dice {
+改变处
+  return pips === 1 || pips === 2 || pips === 3 ||
+    pips === 4 || pips === 5 || pips === 6;
+}
+
+function evalThrow(count: number) {
+  if (pipsAreValid(count)) {
+    // count is now of type Dice 😎
+    switch (count) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        console.log('Not today');
+        break;
+      case 6:
+        console.log('Won!');
+        break;
+      case 7:
+        // TypeScript errors here. 7 is not in the union type of 
+        // Dice
+        console.log('This does not work!');
+        break;
+    }
+  }
+}</code></pre>
+    <h2 id="%E6%A0%B7%E5%BC%8F">
+     样式
+    </h2>
+    <h3 id="Ant%20Design">
+     <a href="https://ant.design/index-cn" rel="nofollow" title="Ant Design">
+      Ant Design
+     </a>
+    </h3>
+    <h3 id="Css%E3%80%81less%E3%80%81Sass%C2%A0">
+     <a href="https://blog.csdn.net/fuhanghang/article/details/123890276?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168117579416800215067394%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168117579416800215067394&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-123890276-null-null.142%5Ev82%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=css%E5%92%8Cless%E3%80%81sass%E7%9A%84%E5%8C%BA%E5%88%AB&amp;spm=1018.2226.3001.4187" title="Css、less、Sass （SCSS）">
+      Css、less、Sass （SCSS）
+     </a>
+    </h3>
+    <p>
+     less, sass, scss都是
+     <strong>
+      css预处理语言
+     </strong>
+     （也是对应的文件后缀名）。
+    </p>
+    <p>
+     CSS 预处理器为 CSS 增加一些
+     <strong>
+      编程
+     </strong>
+     的特性，无需考虑浏览器的
+     <strong>
+      兼容性
+     </strong>
+     问题，
+    </p>
+    <p>
+     可以在 CSS 中使用
+     <strong>
+      变量
+     </strong>
+     、简单的
+     <strong>
+      逻辑
+     </strong>
+     程序、
+     <strong>
+      函数
+     </strong>
+     （如变量$main-color）等等在
+     <strong>
+      编程
+     </strong>
+     语言中的一些
+     <strong>
+      基本特性
+     </strong>
+     ，可以让 CSS 更加简洁、
+     <strong>
+      适应性更强
+     </strong>
+     、可读性更佳，更易于代码的
+     <strong>
+      维护
+     </strong>
+     等诸多好处。
+    </p>
+    <p>
+     <strong>
+      开发
+     </strong>
+     时用
+     <strong>
+      预处理语言
+     </strong>
+     ，在
+     <strong>
+      打包上线
+     </strong>
+     时，用webpack再配合loader工具给
+     <strong>
+      转成css
+     </strong>
+     给浏览器使用。
+    </p>
+    <h2 id="SCSS">
+     <a href="https://juejin.cn/post/7116139958699556877#comment" rel="nofollow" title="Sass">
+      Sass
+     </a>
+    </h2>
+    <p>
+     <strong>
+      在实际开发过程中，scss是常用写法，
+     </strong>
+     scss还是越
+     <strong>
+      直观
+     </strong>
+     越好，这种
+     <strong>
+      运算类型
+     </strong>
+     的特别是map类型的，尽量
+     <strong>
+      不要在实际项目中使用
+     </strong>
+     ，后续维护成本很高的。
+    </p>
+    <p>
+     Sass 和 SCSS 其实是同一种东西，我们平时都称之为 Sass，
+    </p>
+    <p>
+     后缀扩展名：
+    </p>
+    <ul>
+     <li>
+      Sass ：“.sass”，
+     </li>
+     <li>
+      SCSS ：“.scss”
+     </li>
+    </ul>
+    <p>
+     语法书写方式：
+    </p>
+    <ul>
+     <li>
+      Sass 是以严格的
+      <strong>
+       缩进式
+      </strong>
+      语法规则来书写，
+      <strong>
+       不带
+      </strong>
+      大括号
+      <strong>
+       ({})
+      </strong>
+      和分号
+      <strong>
+       (;)
+      </strong>
+      ，
+     </li>
+     <li>
+      SCSS 的语法书写和我们的
+      <strong>
+       CSS
+      </strong>
+      语法书写方式非常类似
+     </li>
+    </ul>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/9d382b297098f1d085701bf62efb465a.png"/>
+    </p>
+    <h3 id="%E5%B5%8C%E5%A5%97">
+     嵌套
+    </h3>
+    <h4 id="%E9%80%89%E6%8B%A9%E5%99%A8%E5%B5%8C%E5%A5%97">
+     选择器嵌套
+    </h4>
+    <pre><code class="language-css">#css
+nav a {
+  color:red;
+}
+header nav a {
+  color:green;
+}</code></pre>
+    <pre><code class="language-css">#scss
+nav {
+  a {
+    color: red;
+    header &amp; {
+      color:green;
+    }
+  }  
+}
+复制代码</code></pre>
+    <h4 id="%E5%B1%9E%E6%80%A7%E5%B5%8C%E5%A5%97">
+     属性嵌套
+    </h4>
+    <pre><code class="language-css">#css
+.box {
+    border-top: 1px solid red;
+    border-bottom: 1px solid green;
+}</code></pre>
+    <pre><code class="language-css">#scss
+.box {
+  border: {
+   top: 1px solid red;
+   bottom: 1px solid green;
+  }
+}</code></pre>
+    <h4 id="%E4%BC%AA%E7%B1%BB%E5%B5%8C%E5%A5%97">
+     伪类嵌套
+    </h4>
+    <pre><code class="language-css">.clearfix{
+    &amp;:after {
+        clear:both;
+        overflow: hidden;
+    }
+}</code></pre>
+    <h3>
+     变量
+    </h3>
+    <h4 id="%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">
+     全局变量
+    </h4>
+    <h4 id="%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F">
+     局部变量
+    </h4>
+    <p>
+     在选择器、函数、混合宏内定义的变量
+    </p>
+    <pre><code class="language-css">em {
+  $color: red;//定义局部变量
+  a {
+    color: $color;//调用局部变量
+  }
+}</code></pre>
+    <h4 id="%E9%BB%98%E8%AE%A4%E5%80%BC">
+     默认值
+    </h4>
+    <pre><code class="language-css">$btn-primary-color : #fff !default;</code></pre>
+    <h3 id="%E6%B7%B7%E5%85%A5%E6%8C%87%E4%BB%A4%2F%E6%B7%B7%E5%90%88%E6%8C%87%E4%BB%A4%2F%E5%AE%8F%E6%8C%87%E4%BB%A4%40mixin">
+     <strong>
+      混入指令/混合指令/宏指令
+     </strong>
+     @mixin
+    </h3>
+    <p>
+     <strong>
+      Vue中叫它混入指令，
+     </strong>
+     可以
+     <strong>
+      设置参数，复用重复
+     </strong>
+     代码块。但会生成
+     <strong>
+      冗余
+     </strong>
+     的代码块。比如在不同的地方调用一个相同的混合宏时，不能将两个
+     <strong>
+      合成并集
+     </strong>
+     形式。
+    </p>
+    <h4 id="%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F">
+     不带参数混合宏
+    </h4>
+    <pre><code class="language-css">@mixin border-radius{
+    border-radius: 5px;
+}</code></pre>
+    <h4 id="%E5%B8%A6%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F">
+     带参数混合宏
+    </h4>
+    <pre><code class="language-css"># 带值参数
+@mixin border-radius($radius:5px){
+    border-radius: $radius;
+}
+# 不带值参数
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+# 带多个参数
+@mixin center($width,$height){
+  width: $width;
+  height: $height;
+  margin-top: -($height) / 2;
+  margin-left: -($width) / 2;
+}</code></pre>
+    <h4 id="%E5%B8%A6%E7%89%B9%E5%88%AB%E5%A4%9A%E5%8F%82%E6%95%B0%E6%B7%B7%E5%90%88%E5%AE%8F">
+     带特别多参数混合宏
+    </h4>
+    <p>
+     当混合宏传的参数过多之时，可以使用“…”来替代
+    </p>
+    <pre><code class="language-css"># 带特别多参数
+@mixin box-shadow($shadows...){
+  @if length($shadows) &gt;= 1 {
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+  } @else {
+    $shadows: 0 0 2px rgba(#000,.25);
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+}</code></pre>
+    <h4 id="%E8%B0%83%E7%94%A8%E6%B7%B7%E5%90%88%E5%AE%8F%40include">
+     调用混合宏
+     <code>
+      @include
+     </code>
+    </h4>
+    <p>
+     关键词“
+     <code>
+      @include
+     </code>
+     ”来调用声明好的混合宏
+    </p>
+    <pre><code class="language-css">button {
+  @include border-radius;
+}
+.box {
+  @include border-radius(3px);
+}
+.box-center {
+  @include center(500px,300px);
+}
+.box {
+  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));
+}</code></pre>
+    <h3 id="%E7%BB%A7%E6%89%BF%40extend">
+     继承@extend
+    </h3>
+    <p>
+     继承已存在的类样式块，从而实现代码的继承
+    </p>
+    <pre><code class="language-css">.btn {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.btn, .btn-primary, .btn-second {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.btn-primary {
+  background-color: #f36;
+  color: #fff;
+}
+.btn-second {
+  background-clor: orange;
+  color: #fff;
+}</code></pre>
+    <p>
+     写成继承的形式，而且编译出来的
+     <strong>
+      CSS 会将选择器合并在一起，形成组合选择器
+     </strong>
+     .
+    </p>
+    <pre><code class="language-css">.btn-primary {
+  background-color: #f36;
+  color: #fff;
+  @extend .btn;
+}
+.btn-second {
+  background-color: orange;
+  color: #fff;
+  @extend .btn;
+}</code></pre>
+    <h3 id="%E5%8D%A0%E4%BD%8D%E7%AC%A6%20%25placeholder">
+     占位符 %placeholder
+    </h3>
+    <p>
+     %声明的代码，如果不被 @extend 调用的话，不会产生任何代码
+    </p>
+    <pre><code class="language-css">%mt5 {
+  margin-top: 5px;
+}
+.btn {
+  @extend %mt5;
+}
+.block {
+  @extend %mt5;
+}</code></pre>
+    <p>
+     通过 @extend 调用的占位符，编译出来的代码会将相同的代码合并在一起.
+    </p>
+    <pre><code class="language-css">.btn, .block {
+  margin-top: 5px;
+}</code></pre>
+    <h4 id="%E6%B7%B7%E5%90%88%E5%AE%8FVS%E7%BB%A7%E6%89%BFVS%E5%8D%A0%E4%BD%8D%E7%AC%A6">
+     混合宏VS继承VS占位符
+    </h4>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/f9e5a0e9fcc20aa8f4f8d9cea9463403.png"/>
+    </p>
+    <h3 id="%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">
+     基础语法
+    </h3>
+    <h4 id="%E6%8F%92%E5%80%BC%23%7B%7D">
+     插值#{}
+    </h4>
+    <p>
+     （1）构建一个选择器
+    </p>
+    <pre><code class="language-css">@mixin generate-sizes($class, $small, $medium, $big) {
+    .#{$class}-small { font-size: $small; }
+    .#{$class}-medium { font-size: $medium; }
+    .#{$class}-big { font-size: $big; }
+}
+@include generate-sizes("header-text", 12px, 20px, 40px);</code></pre>
+    <p>
+     (2) 属性变量
+    </p>
+    <pre><code class="language-css">$properties: (margin, padding);
+@mixin set-value($side, $value) {
+    @each $prop in $properties {
+        #{$prop}-#{$side}: $value;
+    }
+}
+.login-box {
+    @include set-value(top, 14px);
+}</code></pre>
+    <blockquote>
+     <p>
+      @mixin中插值不能作为赋值语句的值部分，只能用做属性名定义或者选择器构建时@include中不能使用插值
+     </p>
+    </blockquote>
+    <h4 id="%E6%B3%A8%E9%87%8A">
+     注释
+    </h4>
+    <p>
+     1、类似 CSS 的注释方式，使用 ”/* ”开头，结属使用 ”*/ ”
+    </p>
+    <p>
+     2、类似 JS的注释方式，使用“//” 两者区别，
+    </p>
+    <p>
+     前者会在编译出来的 CSS
+     <strong>
+      显示
+     </strong>
+     ，
+     <code>
+      后者在编译出来的 CSS 中不会显示
+     </code>
+    </p>
+    <p>
+     <code>
+      加减乘除
+      <strong>
+       连带单位一起计算
+      </strong>
+     </code>
+    </p>
+    <h4 id="%E5%8A%A0%E5%87%8F%E6%B3%95">
+     加减法
+    </h4>
+    <p>
+     在变量或属性中都可以做加法运算，但对于携带
+     <strong>
+      不同类型的单位
+     </strong>
+     时，在 Sass 中计算会报错
+    </p>
+    <pre><code class="language-css">.content {
+  width: $full-width - $sidebar-width;
+}</code></pre>
+    <p>
+     字符串拼接
+    </p>
+    <pre><code class="language-css">div {
+  cursor: e + -resize;
+}
+编译后
+div {cursor: e-resize;}</code></pre>
+    <h4 id="%E4%B9%98%E6%B3%95">
+     乘法
+    </h4>
+    <p>
+     <code>
+      当一个单位同时声明两个值时会有问题
+     </code>
+     <strong>
+      <code>
+       只能有一个值带单位
+      </code>
+     </strong>
+     （比如 em ,px , %）
+    </p>
+    <pre><code class="language-css"># 编译的时候报“20px*px isn't a valid CSS value.”错误信息。
+.box {
+  width:10px * 2px;  
+}
+</code></pre>
+    <pre><code class="language-css"># 正确的写法
+.box {
+  width: 10px * 2;
+}
+</code></pre>
+    <h4 id="%E9%99%A4%E6%B3%95">
+     除法
+    </h4>
+    <p>
+     如果数值或它的任意部分是存储在一个变量中或是函数的返回值。
+     <br/>
+     • 如果数值被
+     <strong>
+      圆括号
+     </strong>
+     包围。
+     <br/>
+     • 如果数值是另一个数学表达式的一部分
+    </p>
+    <blockquote>
+     <p>
+      在除法运算时，如果两个值带有相同的单位值时，除法运算之后会得到一个
+      <strong>
+       不带单位
+      </strong>
+      的数值
+     </p>
+    </blockquote>
+    <pre><code class="language-css">.box {
+  width: (1000px / 100px);
+}
+编译后
+.box {
+  width: 10;
+}</code></pre>
+    <h4 id="%40if%EF%BC%8C%20%40else%20if%C2%A0%EF%BC%8C%40else%E6%9D%A1%E4%BB%B6">
+     @if，
+     <code>
+      @else if
+     </code>
+     ，
+     <code>
+      @else
+     </code>
+     条件
+    </h4>
+    <pre><code class="language-css">@mixin blockOrHidden($boolean:true) {
+  @if $boolean {
+      display: block;
+    }
+  @else {
+      display: none;
+    }
+}
+.block {
+  @include blockOrHidden;
+}
+.hidden{
+  @include blockOrHidden(false);
+}
+</code></pre>
+    <h4 id="%40for">
+     @for
+    </h4>
+    <pre><code class="language-css">@for $i from &lt;start&gt; through &lt;end&gt;
+@for $i from &lt;start&gt; to &lt;end&gt;</code></pre>
+    <p>
+     关键字
+     <strong>
+      <code>
+       through
+      </code>
+      表示包括 end
+     </strong>
+     ，而
+     <code>
+      <strong>
+       to
+      </strong>
+     </code>
+     <strong>
+     </strong>
+     则
+     <strong>
+      不包括 end
+     </strong>
+    </p>
+    <pre><code class="language-css">@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}</code></pre>
+    <h4 id="%40while%E5%BE%AA%E7%8E%AF">
+     @while循环
+    </h4>
+    <pre><code class="language-css">@while $types &gt; 0 {
+    .while-#{$types} {
+        width: $type-width + $types;
+    }
+    $types: $types - 1;
+}</code></pre>
+    <h4 id="%40each%E5%BE%AA%E7%8E%AF">
+     @each循环
+    </h4>
+    <p>
+     <code>
+      @each
+     </code>
+     循环就是去遍历一个列表，然后从列表中取出对应的值
+    </p>
+    <pre><code class="language-css">@each $var in &lt;list&gt;
+$list: adam john wynn mason kuroir;
+@mixin author-images {
+    @each $author in $list {
+        .photo-#{$author} {
+            background: url("/images/avatars/#{$author}.png") no-repeat;
+        }
+    }
+}
+.author-bio {
+    @include author-images;
+}</code></pre>
+    <h4 id="%40import%E5%BC%95%E5%85%A5%20SCSS%20%E5%92%8C%20Sass">
+     @import引入 SCSS 和 Sass
+    </h4>
+    <p>
+     Sass 扩展了 CSS 的 @import 规则，让它能够引入 SCSS 和 Sass 文件。 所有引入的 SCSS 和 Sass 文件都会被合并并输出一个单一
+    </p>
+    <h3 id="%E7%80%91%E5%B8%83%E6%B5%81">
+     <a href="https://juejin.cn/post/7216200378341589052#heading-0" rel="nofollow" title="瀑布流">
+      瀑布流
+     </a>
+    </h3>
+    <p>
+     描述：页面元素的
+     <strong>
+      宽度
+     </strong>
+     按照
+     <strong>
+      屏幕分辨率进行适配调整
+     </strong>
+     ，但
+     <strong>
+      整体布局不变
+     </strong>
+     。主要特征是像瀑布一样往下流，
+     <strong>
+      有规律的无限遍历模块
+     </strong>
+     。（阿里、字节考过）
+    </p>
+    <p class="img-center">
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/d852aed375c9141c918f38a84b67ae0b.webp?x-oss-process=image/format,png"/>
+    </p>
+    <h4 id="css">
+     css
+    </h4>
+    <p>
+     给图片
+     <strong>
+      添加样式
+     </strong>
+     让图片
+     <strong>
+      等宽并同行
+     </strong>
+     显示。
+    </p>
+    <blockquote>
+     <p>
+      1、首先我们定义一个
+      <strong>
+       container
+      </strong>
+      容器来装
+      <strong>
+       所有图片
+      </strong>
+      ，在这个容器中用
+      <strong>
+       box
+      </strong>
+      容器装
+      <strong>
+       box-img
+      </strong>
+      容器再装入
+      <strong>
+       每张图片
+      </strong>
+      ，这样方便之后样式的编写。
+     </p>
+    </blockquote>
+    <blockquote>
+     <p>
+      2、使图片
+      <strong>
+       同行
+      </strong>
+      显示--给box容器使用
+      <strong>
+       float:left;属性
+      </strong>
+      。
+     </p>
+    </blockquote>
+    <blockquote>
+     <p>
+      3、让图片
+      <strong>
+       等宽
+      </strong>
+      显示--给box-img容器设置
+      <strong>
+       width:150px;
+      </strong>
+      ，img标签设置
+      <strong>
+       width:100%;继承父容器box-img高度的100%
+      </strong>
+     </p>
+    </blockquote>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;waterFall&lt;/title&gt;
+    &lt;script src="./index.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;style&gt;
+&lt;!--清除浏览器自带样式--&gt;
+    *{
+        margin: 0;
+        padding: 0;
+    }
+&lt;!--overflow: hidden触发BFC--&gt;
+    .container {
+        overflow: hidden;
+        position: relative;
+    }
+&lt;!--float: left同行显示--&gt;
+    .box{
+        float: left;
+        padding: 5px;
+    }
+&lt;!--图片等宽--&gt;
+    .box-img{
+        width: 150px;
+
+        padding: 5px;
+        border: 1px solid #484848;
+        box-shadow: 0 0 5px #484848;
+    }
+&lt;!--图片占满父容器--&gt;
+    .box-img img{
+        width: 100%;
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;div id="container"&gt;
+        &lt;div class="box"&gt;
+            &lt;div class="box-img"&gt;
+                &lt;img src="./img/1.jpg" alt=""&gt;
+           &lt;/div&gt;
+        &lt;/div&gt;
+        /*.......后面接39个box，此处省略*/
+    &lt;/div&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <h4 id="js">
+     js
+    </h4>
+    <p>
+     1、首先用window.οnlοad=function(){}来实现
+     <strong>
+      页面加载完毕后立即执行
+     </strong>
+     的功能
+    </p>
+    <p>
+     调用
+     <strong>
+      imgLocation('container','box')函数
+     </strong>
+     来呈现最终效果，
+    </p>
+    <p>
+     传入的实参是
+     <strong>
+      父容器
+     </strong>
+     'container'，装图片的
+     <strong>
+      子容器
+     </strong>
+     'box'。
+    </p>
+    <pre><code class="language-javascript">window.onload=function() {
+    imgLocation('container','box')
+}</code></pre>
+    <p>
+     2、实现
+     <strong>
+      imgLocation()
+     </strong>
+     函数功能
+    </p>
+    <p>
+     1）首先我们得
+     <strong>
+      <code>
+       获取所有要摆放的图片
+      </code>
+     </strong>
+     ，并将其存入一个
+     <code>
+      数组
+     </code>
+     中
+    </p>
+    <pre><code class="language-javascript">function imgLocation(parent,content){
+    //得到父容器
+    var cparent=document.getElementById(parent)
+    //cparent下的所有的第一层的子容器 box
+    var ccontent=getChildElement(cparent,content)//数组，40个div
+}
+
+//取到父容器中的某一层子容器
+function getChildElement(parent,content){
+    var contentArr=[]
+    var allContent=parent.getElementsByTagName('*')//通过标签来选中得到一个数组
+    //遍历allContent把其中类名为content的容器都存到contentArr数组中
+    for(var i=0;i&lt;allContent.length;i++){
+        if(allContent[i].className==content){    //当前这个容器的类名是否为content
+            contentArr.push(allContent[i])
+        }
+    }
+    return contentArr;
+
+}</code></pre>
+    <p>
+     2）得到这个
+     <code>
+      数组
+     </code>
+     后，找出
+     <code>
+      从谁开始
+     </code>
+     是需要
+     <code>
+      被摆放
+     </code>
+     位置的
+    </p>
+    <p>
+     首先获取
+     <strong>
+      视窗的宽度
+     </strong>
+     和
+     <strong>
+      每张图片的宽度
+     </strong>
+     ，
+    </p>
+    <p>
+     将两者
+     <strong>
+      相除
+     </strong>
+     并
+     <strong>
+      向下取整
+     </strong>
+     可得到
+     <strong>
+      第一行
+     </strong>
+     可以放置图片的数量，
+    </p>
+    <p>
+     自然也就知道了我们需要
+     <strong>
+      操作
+     </strong>
+     的那张图片的
+     <strong>
+      序号
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">    //从谁开始是需要被摆放位置的
+    var winWidth=document.documentElement.clientWidth;//视窗宽度
+    var imgWidth=ccontent[0].offsetWidth;//图片宽度
+
+    var num=Math.floor(winWidth/imgWidth)//第一行能放几张图</code></pre>
+    <p>
+     3）得到需要
+     <code>
+      被摆放
+     </code>
+     位置的图片序号后，确定其
+     <code>
+      摆放位置
+     </code>
+    </p>
+    <p>
+     定义一个
+     <strong>
+      存储高度的数组
+     </strong>
+     ，对前一行元素的
+     <strong>
+      高度
+     </strong>
+     进行
+     <strong>
+      遍历
+     </strong>
+     并
+     <strong>
+      存入
+     </strong>
+     数组，
+    </p>
+    <p>
+     当遍历到需要
+     <strong>
+      被摆放
+     </strong>
+     位置的图片时，
+    </p>
+    <p>
+     用
+     <strong>
+      Math.min()方法
+     </strong>
+     获取前一行高度
+     <strong>
+      最矮
+     </strong>
+     的元素高度，并用
+     <strong>
+      indexOf()方法
+     </strong>
+     获取到其
+     <strong>
+      下标
+     </strong>
+     。
+    </p>
+    <p>
+     再对我们
+     <strong>
+      所操作
+     </strong>
+     的这个图片容器的
+     <strong>
+      样式调整
+     </strong>
+     ：
+     <br/>
+     position：absolute;
+     <strong>
+      绝对定位
+     </strong>
+     ，
+    </p>
+    <p>
+     <strong>
+      top值
+     </strong>
+     设置为前一行高度最矮的图片高度
+     <strong>
+      minHeight
+     </strong>
+     ，
+    </p>
+    <p>
+     <strong>
+      left值
+     </strong>
+     设置为单张图片宽度
+     <strong>
+      乘
+     </strong>
+     这张图片的下标
+     <strong>
+      minIndex
+     </strong>
+     。
+    </p>
+    <p>
+     最后，摆放好图片后，还要
+     <strong>
+      更新
+     </strong>
+     摆放的那一列的
+     <strong>
+      高度
+     </strong>
+    </p>
+    <pre><code class="language-javascript">    //操作num+1张图
+    var BoxHeightArr=[]
+    for(var i=0;i&lt;ccontent.length;i++){
+        //前num张只要计算高度
+        if(i&lt;num){
+            BoxHeightArr[i]=ccontent[i].offsetHeight
+        }
+        else{
+            //我们要操作的box  :ccontent[i]
+            var minHeight=Math.min.apply(null,BoxHeightArr)//apply:把最小值这个方法借给它用
+            var minIndex=BoxHeightArr.indexOf(minHeight)//返回数组下标
+            ccontent[i].style.position='absolute'//style设置样式
+            ccontent[i].style.top=minHeight+'px'
+            ccontent[i].style.left=imgWidth*minIndex+'px'
+
+            //更新最矮的那一列的高度
+            BoxHeightArr[minIndex]+=ccontent[i].offsetHeight
+        }
+    }
+</code></pre>
+    <h2>
+     共性
+    </h2>
+    <h3 id="%E9%97%AE%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E9%9A%BE%E7%82%B9%EF%BC%8C%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84">
+     问项目中有哪些难点，怎么解决的
+    </h3>
+    <h3 id="%E4%BB%A3%E7%A0%81%E9%81%87%E5%88%B0%E5%86%B2%E7%AA%81%E6%80%8E%E4%B9%88%E5%8A%9E">
+     代码遇到冲突怎么办
+    </h3>
+    <h3 id="%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6">
+     业务系统的搭建过程
+    </h3>
+    <h3 id="%E5%A4%8D%E7%9B%98%E8%BF%87%E7%A8%8B">
+     复盘过程
+    </h3>
+    <h3>
+     拆分组件
+    </h3>
+    <p>
+     复用和业务逻辑拆分
+    </p>
+    <h3 id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%87%AA%E9%80%82%E5%BA%94%E9%A1%B5%E9%9D%A2">
+     如何实现自适应页面
+    </h3>
+    <p>
+     说到媒体查询和多个样式表
+     <br/>
+     React如何实现动画的（数字不断变大的动画）
+    </p>
+    <p>
+     最后是用库实现的
+    </p>
+    <h2 id="%E4%B8%AA%E6%80%A7">
+     <a href="https://blog.csdn.net/qq_28838891/article/details/129124014" title="*个性">
+      *个性
+     </a>
+    </h2>
+    <h2 id="%E6%94%B6%E9%9B%86%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E5%AE%8C%E6%88%90%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD">
+     介绍
+    </h2>
+    <p>
+     打卡考勤项目
+    </p>
+    <h2 id="%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD">
+     实现功能
+    </h2>
+    <h3 id="%E5%88%86%E9%A1%B5%E6%80%8E%E4%B9%88%E5%81%9A">
+     <a href="https://blog.csdn.net/weixin_53072519/article/details/121040183?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167898256216800227449827%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167898256216800227449827&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-3-121040183-null-null.142%5Ev74%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E5%89%8D%E7%AB%AF%E7%99%BB%E9%99%86&amp;spm=1018.2226.3001.4187" title="后端接口">
+      后端接口
+     </a>
+    </h3>
+    <ol>
+     <li>
+      Navicat创建
+      <strong>
+       数据库和空表
+      </strong>
+     </li>
+     <li>
+      <strong>
+       加载
+      </strong>
+      MySQL等模块
+     </li>
+     <li>
+      <strong>
+       创建
+      </strong>
+      MySQL连接池（设置服务器
+      <strong>
+       地址host
+      </strong>
+      ，服务器
+      <strong>
+       端口号port
+      </strong>
+      ） 和 服务器
+      <strong>
+       对象server
+      </strong>
+     </li>
+    </ol>
+    <ul>
+     <li>
+      3306是MySQL的默认
+      <em>
+       端口
+      </em>
+     </li>
+     <li>
+      默认的
+      <strong>
+       服务端口
+      </strong>
+      就是
+      <strong>
+       8080
+      </strong>
+      。
+     </li>
+     <li>
+      <strong>
+       跨源资源共享CORS
+      </strong>
+     </li>
+     <li>
+      <p>
+       <strong>
+        <code>
+         Origin
+        </code>
+       </strong>
+       字段用来说名
+       <strong>
+        本次请求来自哪个源
+       </strong>
+       ,服务器根据这个值,决定是否同意这次请求。
+      </p>
+      <p>
+       如果
+       <code>
+        Origin
+       </code>
+       指定的源不在允许范围之内,服务器就会返回一个正常的
+       <code>
+        HTTP
+       </code>
+       回应,然后浏览器发现头信息中
+       <strong>
+        没有包含
+        <code>
+         Access-Control-Allow-Origin
+        </code>
+       </strong>
+       字段,就知道出错啦,然后抛出错误
+      </p>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">// 加载Express模块
+const express = require('express');
+ 
+// 加载MySQL模块
+const mysql = require('mysql');
+
+...
+
+// 创建MySQL连接池
+const pool = mysql.createPool({
+  host: '127.0.0.1', //MySQL服务器地址
+  port: 3306, //MySQL服务器端口号
+
+  user: 'root', //数据库用户的用户名
+  password: '', //数据库用户密码
+  database: 'reg_log', //数据库名称
+  connectionLimit: 20, //最大连接数
+  charset: 'utf8' //数据库服务器的编码方式
+});
+ 
+// 创建服务器对象
+const server = express();
+
+// 加载CORS模块
+const cors = require('cors');
+
+// 使用CORS中间件
+server.use(cors({
+  origin: ['http://localhost:8080', 'http://127.0.0.1:8080']
+}));
+</code></pre>
+    <h3 id="%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%91%E9%80%81token%E5%92%8C%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF">
+     <a href="https://blog.csdn.net/weixin_53072519/article/details/121040183?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167898256216800227449827%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167898256216800227449827&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-3-121040183-null-null.142%5Ev74%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E5%89%8D%E7%AB%AF%E7%99%BB%E9%99%86&amp;spm=1018.2226.3001.4187" title="登陆注册">
+      登陆注册
+     </a>
+    </h3>
+    <h4 id="*0.0.0.0%EF%BC%8Clocalhost%EF%BC%8C127.0.0.1">
+     *0.0.0.0，localhost，127.0.0.1
+    </h4>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        网络需求
+       </th>
+       <th>
+        数据传输
+       </th>
+       <th>
+        访问
+       </th>
+       <th>
+        性质
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <strong>
+         localhost
+        </strong>
+       </td>
+       <td>
+        不联网
+       </td>
+       <td>
+        不使用网卡，不受防火墙和网卡限制
+       </td>
+       <td>
+        本机访问
+       </td>
+       <td>
+        域名，默认是指向
+        <code>
+         127.0.0.1
+        </code>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         127.0.0.1
+        </strong>
+       </td>
+       <td>
+        不联网
+       </td>
+       <td>
+        网卡传输，受防火墙和网卡限制
+       </td>
+       <td>
+        本机访问
+       </td>
+       <td>
+        环回地址
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         本机IP
+        </strong>
+       </td>
+       <td>
+        联网
+       </td>
+       <td>
+        网卡传输 ，受防火墙和网卡限制
+       </td>
+       <td>
+        本机or外部访问
+       </td>
+       <td>
+        本机对外放开访问的 IP 地址
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4 id="0.0.0.0">
+     0.0.0.0
+    </h4>
+    <ul>
+     <li>
+      在
+      <strong>
+       服务器
+      </strong>
+      中：0.0.0.0表示
+      <strong>
+       本机上的任意ip地址
+      </strong>
+      ，
+     </li>
+    </ul>
+    <ul>
+     <li>
+      在
+      <strong>
+       路由
+      </strong>
+      中：0.0.0.0表示的是
+      <strong>
+       默认路由
+      </strong>
+      ，即当路由表中
+      <strong>
+       没有找到完全匹配
+      </strong>
+      的路由的时候所对应的路由。表示”任意IPV4主机”。
+     </li>
+     <li>
+      当一台
+      <strong>
+       主机还没有被分配一个IP地址
+      </strong>
+      的时候，用于表示
+      <strong>
+       主机本身
+      </strong>
+      。
+     </li>
+    </ul>
+    <h4 id="localhost">
+     localhost
+    </h4>
+    <p>
+     localhost是个
+     <strong>
+      域名
+     </strong>
+     ，
+     <strong>
+      而不是一个ip地址
+     </strong>
+     。可修改。
+    </p>
+    <p>
+     用于指代 this computer 或者 this host，可以用它来获取运行在
+     <strong>
+      本机上的网络服务
+     </strong>
+     。
+    </p>
+    <p>
+     在大多数系统中，localhost被指向了 IPV4 的 127.0.0.1 和 IPV6 的 ::1，这就是把localhost与127.0.0.1等同的原因。
+    </p>
+    <h4 id="127.0.0.1">
+     127.0.0.1
+    </h4>
+    <p>
+     <strong>
+      本机地址
+     </strong>
+     ，主要用于
+     <strong>
+      测试
+     </strong>
+    </p>
+    <p>
+     （127.x.x.x）是
+     <strong>
+      本机回送
+     </strong>
+     地址（Loopback Address），即主机
+     <a href="https://baike.baidu.com/item/IP/224599?fromModule=lemma_inlink" rel="nofollow" title="IP">
+      IP
+     </a>
+     堆栈内部的
+     <a href="https://baike.baidu.com/item/IP%E5%9C%B0%E5%9D%80/150859?fromModule=lemma_inlink" rel="nofollow" title="IP地址">
+      IP地址
+     </a>
+     ，主要用于网络软件测试以及本地机
+     <a href="https://baike.baidu.com/item/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/1235923?fromModule=lemma_inlink" rel="nofollow" title="进程间通信">
+      进程间通信
+     </a>
+     ，无论什么程序，一旦使用回送地址发送数据，协议软件立即返回，不进行任何
+     <a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93/1873698?fromModule=lemma_inlink" rel="nofollow" title="网络传输">
+      网络传输
+     </a>
+     。
+    </p>
+    <p>
+     示例都使用端口
+     <strong>
+      3000
+     </strong>
+     作为HTTP服务器的
+     <strong>
+      默认
+     </strong>
+     监听端口。
+    </p>
+    <p>
+     3000 是整数。 0 ~ 1023 （常用端口）49152 ~ 65535 号端口是动态端口
+    </p>
+    <pre><code class="language-javascript">
+//用户注册接口
+server.post('/register', (req, res) =&gt; {
+  //console.log(md5('12345678'));
+  // 获取用户名和密码信息
+  let username = req.body.username;
+  let password = req.body.password;
+  
+  //以username为条件进行查找操作，以保证用户名的唯一性
+  let sql = 'SELECT COUNT(id) AS count FROM reg_log WHERE username=?';
+  pool.query(sql, [username], (error, results) =&gt; {
+    if (error) throw error;
+    let count = results[0].count;
+    if (count == 0) {
+      // 将用户的相关信息插入到数据表
+      sql = 'INSERT reg_log(username,password) VALUES(?,MD5(?))';
+
+      pool.query(sql, [username, password], (error, results) =&gt; {
+        if (error) throw error;
+        res.send({
+          message: 'ok',
+          code: 200
+        });
+      })
+    } else {
+      res.send({
+        message: 'user exists',
+        code: 201
+      });
+    }
+  });
+});
+ 
+// 用户登录接口
+server.post('/login', (req, res) =&gt; {
+  //获取用户名和密码信息
+  let username = req.body.username;
+  let password = req.body.password;
+   // SQL语句
+  let sql = 'SELECT id,username FROM reg_log WHERE username=? AND password=MD5(?)';
+  pool.query(sql, [username, password], (error, results) =&gt; {
+    if (error) throw error;
+    if (results.length == 0) { //登录失败
+      res.send({
+        message: 'login failed',
+        code: 201
+      });
+    } else { //登录成功
+      res.send({
+        message: 'ok',
+        code: 200,
+        result: results[0]
+      });
+    }
+  });
+ 
+// 指定服务器对象监听的端口号
+server.listen(3000, () =&gt; {
+  console.log('server is running...');
+})</code></pre>
+    <p>
+     注册页，使用token，能避免CSRF攻击Cross-site request forgery。
+     <a href="https://blog.csdn.net/weixin_45070175/article/details/118559272?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168065837616800215056160%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=168065837616800215056160&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-1-118559272-null-null.142%5Ev81%5Einsert_down1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=jwt&amp;spm=1018.2226.3001.4187" title="JSON Web Token（JWT）">
+      JSON Web Token（JWT）
+     </a>
+    </p>
+    <pre><code class="language-javascript">​//注册
+checkForm() {
+      // 点击注册按钮后调用此方法，验证用户名、密码、二次密码是否均正确，正确则发送axios请求
+      if (this.checkName() &amp;&amp; this.checkPwd() &amp;&amp; this.checkrePwd()) {
+        console.log(`验证成功，执行注册业务......`);
+        // 发送注册(post)请求
+        this.axios
+          .post("/register", `username=${this.name}&amp;password=${this.pwd}`)
+          .then((result) =&gt; {
+            console.log(result);
+            if (result.data.code == 200) {
+              // 弹窗提示注册成功
+               ...
+              // 注册成功后直接跳转到登录页
+              this.$router.push("/login");
+            } else if (result.data.code == 201) {
+              ...
+            }
+          });
+      }
+//登陆
+ checkForm() {
+      // 点击登录按钮后调用此方法，同时验证用户名和密码
+      if (this.checkName() &amp;&amp; this.checkPwd()) {
+        // 发送登录(post)请求
+        this.axios
+          .post("/login", `username=${this.name}&amp;password=${this.pwd}`)
+          .then((result) =&gt; {
+            console.log(result);
+            if (result.data.code == 200) {
+              // 弹窗提示登录成功
+              this.$toast({
+                message: `欢迎您 ${this.name}`,
+                position: "bottom",
+                duration: 3000,
+              });
+             ...
+            } else {
+              this.$toast({
+                message: "登录失败，请检查您的用户名和密码",
+                position: "bottom",
+                duration: 3000,
+              });
+            }
+          });
+      }
+</code></pre>
+    <h3 id="%E5%88%86%E9%A1%B5">
+     <a href="https://blog.csdn.net/m0_50441807/article/details/125154023?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167898337616800225598809%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=167898337616800225598809&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-125154023-null-null.142%5Ev74%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0&amp;spm=1018.2226.3001.4187" title="分页">
+      分页
+     </a>
+    </h3>
+    <p>
+     currentPage（当前页码）、total（总条数）、pageSize（每页展示的数据量）
+     <br/>
+     把
+     <strong>
+      所有的数据请求回
+     </strong>
+     后，通过
+     <strong>
+      arr.slice(开始索引，结束索引)
+     </strong>
+     来进行截取每一页的数据；
+    </p>
+    <p>
+     假设当前页是currentPage = 1，pageSize = 5，那么应该从(currentPage-1)*pageSize开始截取，到currentPage*pageSize结束
+    </p>
+    <h3 id="%E6%80%8E%E6%A0%B7%E5%AE%9E%E7%8E%B0%E5%BC%B9%E7%AA%97%E7%BB%84%E4%BB%B6modal">
+     弹窗组件modal
+    </h3>
+    <pre><code class="language-css">.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 1; /* 设置在顶层 */
+    ...
+    overflow: auto; 
+}</code></pre>
+    <pre><code class="language-javascript">// 点击按钮打开弹窗
+btn.onclick = function() {
+    modal.style.display = "block";
+}</code></pre>
+    <h4 id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E5%BC%B9%E7%AA%97%E5%A4%96%E9%9D%A2%E5%8C%BA%E5%9F%9F%EF%BC%8C%E5%BC%B9%E7%AA%97%E6%B6%88%E5%A4%B1">
+     如何实现点击弹窗外面区域，弹窗消失
+    </h4>
+    <p>
+     事件委托，往上遍历target的父元素如果有弹窗的id就不做反应，如果没有就触发消失
+    </p>
+    <h2 id="%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF">
+     相关技术
+    </h2>
+    <p>
+     主要目的是为了巩固基础知识，和适应大型项目的需求
+    </p>
+    <ul>
+     <li>
+      框架，选择了
+      <strong>
+       React
+      </strong>
+      ，说说其不同....，
+      <strong>
+       Router，Redux
+      </strong>
+      基本使用
+     </li>
+     <li>
+      保持
+      <strong>
+       TS
+      </strong>
+      限定类型的习惯，减少报错，说下区别和原因及其常用，
+     </li>
+     <li>
+      使用
+      <strong>
+       懒加载
+      </strong>
+      ，组件库按需加载，优化性能，
+     </li>
+     <li>
+      使用
+      <strong>
+       ant-design
+      </strong>
+      做ui，学会利用API，省去设计样式的时间，实现样式和行为分离
+     </li>
+     <li>
+      <strong>
+       webpack打包
+      </strong>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     框架为一二面，面试官尤其喜欢问为什么要用+怎么用
+    </p>
+    <p>
+     为了简洁，相关文章参考链接在标题里
+    </p>
+    <h2 id="React">
+     <a href="https://blog.csdn.net/qq_28838891/article/details/124598439?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22124598439%22%2C%22source%22%3A%22qq_28838891%22%7D" title="React18">
+      React18
+     </a>
+    </h2>
+    <p>
+     React是用来构造用户界面的JS库
+    </p>
+    <p>
+     在React18中，需要使用两个文件来初始化框架：
+    </p>
+    <ul>
+     <li>
+      <p>
+       react.development.js 或 react模块 -&gt; 生成虚拟DOM
+      </p>
+     </li>
+     <li>
+      <p>
+       react-dom.development.js 或 react-dom/client模块 -&gt; Diff算法 + 处理真实DOM
+      </p>
+     </li>
+    </ul>
+    <p>
+     下面就是初始化React程序的代码。
+    </p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+    
+  &lt;script src="../react.development.js"&gt;&lt;/script&gt;
+  &lt;script src="../react-dom.development.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="app"&gt;&lt;/div&gt;
+  &lt;script&gt;
+    // React对象 -&gt; react.development.js(产生虚拟DOM)
+    // ReactDOM对象 -&gt; react-dom.development.js(渲染成真实DOM)
+    //原生DOM获取
+    let app = document.querySelector('#app');
+    // root根对象，渲染react的DOM,React18
+    let root = ReactDOM.createRoot(app); 
+    // React.createElement() -&gt; 创建虚拟DOM 
+    //createElement(标签，属性，内容)
+    let element = React.createElement('h2', {title: 'hi'}, 'hello world');
+    root.render(element);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h3>
+     特点
+    </h3>
+    <p>
+     虚拟DOM，组件化设计模式，声明式代码，单向数据流，使用jsx描述信息
+    </p>
+    <h4 id="%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20Dom%EF%BC%89">
+     <strong>
+      声明式编码
+     </strong>
+    </h4>
+    <ul>
+     <li>
+      命令式编程：流程（每一步指令怎么去做）
+     </li>
+     <li>
+      声明式编码：目标，而非流程
+     </li>
+    </ul>
+    <p>
+     因没有指令的概念，所以条件渲染和列表渲染都要通过命令式编程来实现（即JS本身的能力）
+    </p>
+    <pre><code class="language-javascript">map()方法
+let app = document.querySelector('#app');
+let root = ReactDOM.createRoot(app); 
+let data = [
+    { id: 1, text: 'aaa' },
+    { id: 2, text: 'bbb' },
+    { id: 3, text: 'ccc' }
+];
+let element = (
+    &lt;ul&gt;
+        {
+            data.map(v=&gt;&lt;li key={v.id}&gt;{v.text}&lt;/li&gt;)
+        }
+    &lt;/ul&gt;
+);
+root.render(element);
+</code></pre>
+    <h4 id="%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81%C2%A0">
+     <strong>
+      单向数据流
+     </strong>
+     ⭐⭐⭐
+    </h4>
+    <p>
+     数据主要从父节点传到子节点（通过props）,如果父级的某个props改变了，React会重新渲染所有子节点
+    </p>
+    <h4 id="%E7%BB%84%E4%BB%B6%E5%8C%96">
+     组件化⭐⭐⭐
+    </h4>
+    <p>
+     <strong>
+      可复用的代码
+     </strong>
+     可以抽成组件
+     <strong>
+      共同使用
+     </strong>
+     （UI，方法等）
+    </p>
+    <p>
+     <strong>
+      每个UI块
+     </strong>
+     都是一个
+     <strong>
+      组件
+     </strong>
+     ，每个组件都有一个
+     <strong>
+      状态
+     </strong>
+     。
+    </p>
+    <h4 id="%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20Dom%EF%BC%89%EF%BC%88%E5%90%8CVue%EF%BC%89">
+     虚拟DOM（Virtual Dom）（同Vue）⭐⭐⭐
+    </h4>
+    <p>
+     虚拟 DOM，根据模板生成一个js
+     <strong>
+      对象
+     </strong>
+     （使用createElement，方法），取代真实的 DOM 。
+    </p>
+    <p>
+     当页面打开时浏览器会
+     <strong>
+      解析 HTML
+     </strong>
+     元素，
+     <strong>
+      构建一颗 DOM 树
+     </strong>
+     ，将状态全部保存起来
+    </p>
+    <p>
+     Vue和React框架都会自动控制DOM的更新，而直接操作真实DOM是非常耗性能的，所以才有了虚拟DOM的概念
+    </p>
+    <p>
+     React遵循可观察的模式，并监听状态变化。当组件的状态改变时，React更新虚拟DOM树。
+    </p>
+    <p>
+     <strong>
+      缺点
+     </strong>
+     ：
+     <strong>
+      首次渲染
+     </strong>
+     大量DOM时，由于
+     <strong>
+      多了一层虚拟DOM
+     </strong>
+     的计算，会比
+     <strong>
+      innerHTML插入慢
+     </strong>
+     <br/>
+    </p>
+    <h4 id="Diff%E7%AE%97%E6%B3%95">
+     Diff算法（同Vue）⭐⭐⭐
+    </h4>
+    <p>
+     <strong>
+      通过同层的树节点进行比较的高效算法,比较方式：diff整体策略为：深度优先，同层比较
+     </strong>
+    </p>
+    <p>
+     总的来说就是
+     <strong>
+      减少DOM，重绘
+     </strong>
+     和
+     <strong>
+      回流
+     </strong>
+    </p>
+    <p>
+     <br/>
+     react生成的新虚拟DOM和旧虚拟DOM的比较规则：
+    </p>
+    <ul>
+     <li>
+      如果旧的虚拟DOM中找到了与新虚拟DOM相同的key:
+     </li>
+    </ul>
+    <p>
+     如果内容没有变化，就直接只用之前旧的真实DOM
+     <br/>
+     如果内容发生了变化，就生成新的真实DOM
+    </p>
+    <ul>
+     <li>
+      如果旧的虚拟DOM中没有找到与新虚拟DOM相同的key:
+     </li>
+    </ul>
+    <p>
+     根据数据创建新的真实的DOM,随后渲染到页面上
+    </p>
+    <ul>
+     <li>
+      key 用于识别唯一的 Virtual DOM 元素及其驱动 UI 的相应数据。
+     </li>
+     <li>
+      它们通过回收 DOM 中当前所有的元素来帮助 React 优化渲染。这些 key 必须是唯一的数字或字符串，
+     </li>
+     <li>
+      React 只是
+      <strong>
+       重新排序元素
+      </strong>
+      而不是重新渲染它们。这可以提高应用程序的性能
+     </li>
+    </ul>
+    <h4 id="*%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93">
+     渲染原理⭐⭐
+    </h4>
+    <ul>
+     <li>
+      <strong>
+       单向数据流
+      </strong>
+      。React 是一个 MVVM 框架，简单来说是在 MVC 的模式下在
+      <strong>
+       前端部分拆分出数据层和视图层
+      </strong>
+      。单向数据流指的是只能由
+      <strong>
+       数据层的变化去影响视图层
+      </strong>
+      的变化，而不能反过来（除非像Vue双向绑定）
+     </li>
+     <li>
+      <strong>
+       数据驱动视图
+      </strong>
+      。我们无需关注页面的 DOM，只需要关注数据即可
+     </li>
+     <li>
+      <strong>
+       渲染过程：生命周期
+      </strong>
+     </li>
+     <li>
+      <strong>
+       setState()
+      </strong>
+      大部分时候是
+      <strong>
+       异步执行
+      </strong>
+      的，
+      <strong>
+       提升性能
+      </strong>
+      。
+     </li>
+    </ul>
+    <h3 id="%E7%BB%84%E4%BB%B6%E5%B1%9E%E6%80%A7">
+     组件属性
+    </h3>
+    <p>
+     每个
+     <strong>
+      React 组件
+     </strong>
+     强制要求必须有一个
+     <strong>
+      render()
+     </strong>
+     。它返回一个
+     <strong>
+      React 元素
+     </strong>
+     ，是
+     <strong>
+      原生 DOM 组件
+     </strong>
+     的表示。
+    </p>
+    <h4 id="%E6%9E%84%E5%BB%BA%E7%BB%84%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F%E2%AD%90%E2%AD%90">
+     构建组件的方式⭐⭐
+    </h4>
+    <p>
+     <strong>
+      React.createClass()、ES6 class 、无状态函数
+     </strong>
+     。
+    </p>
+    <h4 id="props">
+     props
+    </h4>
+    <p>
+     对外
+     <strong>
+      公开
+     </strong>
+     属性，
+     <strong>
+      只读
+     </strong>
+    </p>
+    <p>
+     <strong>
+      传递数据
+     </strong>
+    </p>
+    <pre><code class="language-html">&lt;body&gt;
+    &lt;div id = "div"&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script type="text/babel"&gt;
+
+// 函数组件
+function Welcome(props){
+    return (
+        &lt;div&gt;hello world, {props.msg}&lt;/div&gt;
+    );  
+}
+let element = (
+    &lt;Welcome msg="hi react" /&gt;
+);
+ 
+// 类组件
+class Person extends React.Component{
+        render(){
+            return (
+                &lt;ul&gt;
+                    &lt;!--接受数据并显示--&gt;
+                    &lt;li&gt;{this.props.name}&lt;/li&gt;
+                    &lt;li&gt;{this.props.age}&lt;/li&gt;
+                    &lt;li&gt;{this.props.sex}&lt;/li&gt;
+                &lt;/ul&gt;
+            )
+        }
+}
+
+const p = {name:"张三",age:"18",sex:"女"}
+ReactDOM.render(&lt;Person {...p}/&gt;,document.getElementById("div"));
+//上下等同
+ReactDOM.render(&lt;Person name="tom" age = "41" sex="男"/&gt;,document.getElementById("div"));
+&lt;/script&gt;</code></pre>
+    <p>
+     <strong>
+      传递函数
+     </strong>
+    </p>
+    <pre><code class="language-javascript">// 子组件
+class Head extends React.Component {
+    render(){
+        this.props.getData('子组件的问候~~~')
+        return (
+            &lt;div&gt;Head Component&lt;/div&gt;
+        );
+    }
+}
+// 父组件
+class Welcome extends React.Component {
+    getData = (data) =&gt; {
+        console.log(data)
+    }
+    render(){
+        return (
+            &lt;div&gt;
+                hello world, {this.props.msg}
+                &lt;br /&gt;
+                &lt;Head getData={this.getData} /&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+</code></pre>
+    <p>
+     <strong>
+      构造函数获取props
+     </strong>
+    </p>
+    <pre><code class="language-javascript">class Foo {
+    constructor(props){
+        this.props = props;
+    }
+}
+class Bar extends Foo {
+    constructor(props){
+        super(props);
+        console.log(this.props);
+    }
+    render(){
+        console.log(this.props);
+        return '';
+    }
+}
+let props = {
+    msg: 'hello world'
+};
+let b = new Bar(props);
+b.props = props;
+b.render();</code></pre>
+    <p>
+     <strong>
+      多属性传递props
+     </strong>
+    </p>
+    <pre><code class="language-javascript">class Welcome extends React.Component {
+    render(){
+        //解构
+        let { msg, username, age } = this.props;
+        console.log( isChecked );
+        return (
+            &lt;div&gt;hello world, {msg}, {username}, {age}&lt;/div&gt;
+        );
+    }
+}
+let info = {
+    msg: 'hi react',
+    username: 'xiaoming',
+    age: 20
+};
+let element = (
+    &lt;Welcome {...info} /&gt;
+);
+</code></pre>
+    <p>
+     <strong>
+      设置props初始值和类型
+     </strong>
+    </p>
+    <pre><code class="language-javascript">import PropTypes from 'prop-types'
+class Welcome extends React.Component {
+    static defaultProps = {
+        age: 0
+    }
+    static propTypes = {
+        age: PropTypes.number
+    }
+    ...
+}
+</code></pre>
+    <h4 id="%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87%E2%AD%90%E2%AD%90">
+     状态提升⭐⭐
+    </h4>
+    <p>
+     将
+     <strong>
+      共享状态
+     </strong>
+     提升到
+     <strong>
+      最近的共同父组件
+     </strong>
+     中去，
+     <strong>
+      在父组件上改变
+     </strong>
+     状态，然后通过
+     <strong>
+      props分发
+     </strong>
+     给子组件。
+    </p>
+    <h4 id="state">
+     state
+    </h4>
+    <p>
+     组件的
+     <strong>
+      私有
+     </strong>
+     属性，值是
+     <strong>
+      对象（
+     </strong>
+     可以包含多个key-value的组合）
+    </p>
+    <p>
+     通过state的变化设置
+     <strong>
+      响应式视图
+     </strong>
+     ，
+     <strong>
+      受控
+     </strong>
+     于当前组件
+    </p>
+    <pre><code class="language-javascript">class Welcome extends React.Component {
+    state = {
+        msg: 'hello',
+        count: 0
+    }
+    handleClick = () =&gt; {   
+        this.setState({
+            msg: 'hi'
+        });
+    }
+    render(){
+        console.log('render');
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleClick}&gt;点击&lt;/button&gt;
+                {this.state.msg}, {this.state.count}
+            &lt;/div&gt;
+        );
+    }
+}
+let element = (
+    &lt;Welcome /&gt;
+);</code></pre>
+    <h4 id="refs">
+     refs
+    </h4>
+    <p>
+     React
+     <strong>
+      操作原生DOM
+     </strong>
+     跟Vue框架是类似的，都是通过ref属性来完成的
+    </p>
+    <pre><code class="language-javascript">class Welcome extends React.Component {
+    myRef = React.createRef()
+    handleClick = () =&gt; {   
+        //console.log(this.myRef.current);  // 原生DOM input
+        this.myRef.current.focus();//获取焦点
+    }
+    render(){
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleClick}&gt;点击&lt;/button&gt;
+                &lt;input type="text" ref={this.myRef} /&gt;
+            &lt;/div&gt;
+        );
+    }
+}</code></pre>
+    <h4 id="%E6%80%BB%E7%BB%93">
+     总结
+    </h4>
+    <p>
+    </p>
+    <p>
+     <strong>
+      props
+     </strong>
+    </p>
+    <p>
+     <br/>
+     <strong>
+      公开，单向
+     </strong>
+     数据流值，
+     <strong>
+      父子组件间的唯一通信
+     </strong>
+     ，
+     <strong>
+      不可改
+     </strong>
+    </p>
+    <p>
+     1.每个组件对象都会有props（properties的简写）属性
+    </p>
+    <p>
+     2.组件标签的所有属性都保存在props中
+    </p>
+    <p>
+     3.内部读取某个属性值：
+     <strong>
+      this.props.propertyName
+     </strong>
+    </p>
+    <p>
+     这有助于
+     <strong>
+      维护单向数据流
+     </strong>
+     ，通常用于
+     <strong>
+      呈现动态生成的数据
+     </strong>
+    </p>
+    <p>
+     <strong>
+      state
+     </strong>
+    </p>
+    <p>
+     <br/>
+     <strong>
+      私有
+     </strong>
+     （通过Ajax获取回来的数据，一般都是私有数据），
+    </p>
+    <p>
+     React 把组件看成是一个状态机（State Machines），
+    </p>
+    <p>
+     只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。
+    </p>
+    <p>
+     <br/>
+     <strong>
+      refs
+     </strong>
+    </p>
+    <p>
+     <br/>
+     当需要获取某一个
+     <strong>
+      真实的DOM元素来交互
+     </strong>
+     ，比如文本框的聚焦、触发强制动画等
+    </p>
+    <p>
+     当需要
+     <strong>
+      操作
+     </strong>
+     的元素和
+     <strong>
+      获取
+     </strong>
+     的元素是同一个时，
+     <strong>
+      无需ref
+     </strong>
+    </p>
+    <p>
+    </p>
+    <h3 id="%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6%E5%92%8C%E9%9D%9E%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6">
+     <a href="https://juejin.cn/post/6858276396968951822" rel="nofollow" title="受控组件和非受控组件">
+      受控组件和非受控组件
+     </a>
+     ⭐⭐⭐
+    </h3>
+    <p>
+     受控和非控：
+     <strong>
+      对某个组件状态的掌控，它的值是否只能由用户设置，而不能通过代码控制
+     </strong>
+     。
+    </p>
+    <p>
+     <strong>
+      非受控组件
+     </strong>
+     <br/>
+     现用现取，官方建议尽量少用ref，用多了有一定的效率影响
+    </p>
+    <pre><code class="language-javascript">handleSubmit = (event) =&gt; {
+            event.preventDefault() //阻止表单提交
+            const {username, password} = this//拿到的是form下的username, password结点
+            alert(`你输入的用户名是：${username.value},你输入的密码是：${password.value}`)
+        }
+ 
+render() {
+return (
+&lt;form onSubmit={this.handleSubmit}&gt;
+用户名：&lt;input ref={c =&gt; this.username = c} type="text" name="username"/&gt;
+密码：&lt;input ref={c =&gt; this.password = c} type="password" name="password"/&gt;
+&lt;button&gt;登录&lt;/button&gt;</code></pre>
+    <p>
+     <br/>
+     <strong>
+      受控组件
+     </strong>
+     <br/>
+     将输入维护到state，等需要时再从state取出来
+    </p>
+    <pre><code class="language-javascript">    class Login extends React.Component {
+ 
+//state最好要初始化状态
+        state = {
+            username: '', //用户名
+            password: '' //密码
+        }
+ 
+//保存用户名到状态中
+        saveUsername = (event) =&gt; {
+this.setState({username: event.target.value})
+        }
+ 
+//保存密码到状态中
+        savePassword = (event) =&gt; {
+this.setState({password: event.target.value})
+        }
+ 
+//表单提交的回调
+        handleSubmit = (event) =&gt; {
+          event.preventDefault() //阻止表单提交
+          const {username, password} = this.state//获得的是state下的username,password值
+          alert(`你输入的用户名是：${username},你输入的密码是：${password}`)
+        }
+</code></pre>
+    <h3 id="%E4%BA%8B%E4%BB%B6event">
+     事件event
+    </h3>
+    <p>
+     React中的事件都是采用
+     <strong>
+      事件委托
+     </strong>
+     的形式，所有的事件都
+     <strong>
+      挂载
+     </strong>
+     到
+     <strong>
+      组件
+     </strong>
+     容器上，其次event对象是合成处理过的
+    </p>
+    <h4 id="%E4%BA%8B%E4%BB%B6%E4%B8%ADthis%E7%9A%84%E5%A4%84%E7%90%86">
+     事件处理的几种方法
+    </h4>
+    <pre><code class="language-javascript">import React from 'react'
+class Test extends React.Component{
+    
+    handleClick2(){
+        console.log('click2')
+    }
+ 
+    hangleClick4 = () =&gt;{
+        console.log('click4')
+    }
+    render(){
+        return(
+            &lt;button onClick={ console.log('click1')}&gt;click1&lt;/button&gt;
+            &lt;button onClick={ this.handleClick2.bind(this)}&gt;click2&lt;/button&gt;
+            &lt;button onClick={ () =&gt; {console.log('click3')}&gt;click3&lt;/button&gt;
+            &lt;button onClick={ this.hangleClick4 }&gt;click3&lt;/button&gt;
+        )
+    }
+}
+export default Test</code></pre>
+    <h4>
+     事件中this的处理
+    </h4>
+    <pre><code class="language-javascript">class Welcome extends React.Component {
+    handleClick = (ev) =&gt; {  //推荐 public class fields语法，箭头函数不会创建自己的                                      this，它只会从自己的作用域链的上一层继承 this。
+        console.log(this);   //对象
+        console.log(ev);
+    }
+    handleClick(){           //不推荐 要注意修正指向
+        console.log(this);   //按钮 
+    }
+    render(){
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleClick}&gt;点击&lt;/button&gt;
+                hello world
+            &lt;/div&gt;
+        );
+    }
+}
+let element = (
+    &lt;Welcome /&gt;
+);
+</code></pre>
+    <h4 id="%E4%BA%8B%E4%BB%B6%E4%BC%A0%E5%8F%82%E5%A4%84%E7%90%86">
+     事件传参处理
+    </h4>
+    <p>
+     <br/>
+     推荐采用
+     <strong>
+      函数的高阶
+     </strong>
+     方式，具体代码如下：
+    </p>
+    <pre><code class="language-javascript">class Welcome extends React.Component {
+    handleClick = (num) =&gt; {   // 高阶函数
+        return (ev) =&gt; {
+            console.log(num);
+        }
+    }
+    render(){
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleClick(123)}&gt;点击&lt;/button&gt;
+                hello world
+            &lt;/div&gt;
+        );
+    }
+}
+let element = (
+    &lt;Welcome /&gt;
+);</code></pre>
+    <h4 id="%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%20mouseenter%E4%B8%8Emouseover%E5%8C%BA%E5%88%AB">
+     鼠标事件 mouseenter与mouseover区别
+    </h4>
+    <p>
+     mouseenter： 鼠标进入被绑定事件监听元素节点时触发一次，再次触发是鼠标移出被绑定元素，再次进入时。而当鼠标进入被绑定元素节点触发一次后
+     <strong>
+      没有移出
+     </strong>
+     ，即使鼠标动了也
+     <strong>
+      不再触发
+     </strong>
+     。
+    </p>
+    <p>
+     mouseover： 鼠标进入被绑定事件监听元素节点时触发一次，如果
+     <strong>
+      目标元素包含子元素
+     </strong>
+     ，鼠标
+     <strong>
+      移出子元素到目标元素
+     </strong>
+     上也会触发。
+    </p>
+    <p>
+     mouseenter 不支持事件冒泡 mouseover 会冒泡
+    </p>
+    <h3>
+     跨组件通信
+    </h3>
+    <p>
+     Welcome传递给Title：
+    </p>
+    <pre><code class="language-javascript">let MyContext = React.createContext();
+class Welcome extends React.Component {
+    state = {
+        msg: 'welcome组件的数据'
+    }
+    render(){
+        return (
+            &lt;div&gt;
+                Hello Welcome
+                &lt;MyContext.Provider value={this.state.msg}&gt;
+                    &lt;Head /&gt;
+                &lt;/MyContext.Provider&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+class Head extends React.Component {
+    render(){
+        return (
+            &lt;div&gt;
+                Hello Head
+                &lt;Title /&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+class Title extends React.Component {
+    static contextType = MyContext
+    componentDidMount = () =&gt; {
+        console.log( this.context );
+    }
+    render(){
+        return (
+            &lt;div&gt;
+                Hello Title &lt;MyContext.Consumer&gt;{ value =&gt; value }&lt;/MyContext.Consumer&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+let element = (
+    &lt;Welcome /&gt;
+);</code></pre>
+    <p>
+     通过
+     <code>
+      &lt;MyContext.
+      <strong>
+       Provider
+      </strong>
+      &gt;
+     </code>
+     组件携带
+     <code>
+      value
+     </code>
+     属性进行向下传递的，
+    </p>
+    <p>
+     那么接收的语法是通过
+     <code>
+      &lt;MyContext.
+      <strong>
+       Consumer
+      </strong>
+      &gt;
+     </code>
+     组件。
+    </p>
+    <p>
+     也可以定义一个静态方法
+     <code>
+      static contextType = MyContext
+     </code>
+     ，这样就可以在逻辑中通过
+     <strong>
+      <code>
+       this.context
+      </code>
+     </strong>
+     来拿到同样的值。
+    </p>
+    <h3 id="%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">
+     生命周期
+    </h3>
+    <p>
+     <strong>
+      生命周期钩子函数
+     </strong>
+     就是
+     <strong>
+      回调函数
+     </strong>
+     ，
+    </p>
+    <p>
+     <strong>
+      挂载
+     </strong>
+    </p>
+    <ul>
+     <li>
+      constructor()：在 React 组件
+      <strong>
+       挂载之前
+      </strong>
+      ，会调用它的构造函数。（注：如果不
+      <strong>
+       初始化 state
+      </strong>
+      或不进行
+      <strong>
+       方法绑定
+      </strong>
+      ，则不需要为 React 组件实现构造函数。）
+     </li>
+     <li>
+      render()： class 组件中唯一必须实现的方法。
+     </li>
+     <li>
+      componentDidMount()：在
+      <strong>
+       组件挂载后（插入 DOM 树中）
+      </strong>
+      立即调用。依赖于 DOM 节点的
+      <strong>
+       初始化
+      </strong>
+      应该放在这里。
+     </li>
+    </ul>
+    <p>
+     <strong>
+      更新
+     </strong>
+    </p>
+    <ul>
+     <li>
+      render()： class 组件中唯一必须实现的方法。一旦组件被添加到 DOM，它只有在
+      <strong>
+       prop 或状态
+      </strong>
+      发生变化时才可能
+      <strong>
+       更新和重新渲染
+      </strong>
+      。
+     </li>
+     <li>
+      componentDidUpdate()：在
+      <strong>
+       更新
+      </strong>
+      后会被立即调用。
+      <strong>
+       首次渲染
+      </strong>
+      不会执行此方法。
+     </li>
+    </ul>
+    <p>
+     <strong>
+      卸载
+     </strong>
+    </p>
+    <ul>
+     <li>
+      componentWillUnmount()：在组件卸载及销毁之前直接调用。在此方法中执行必要的清理操作，例如，清除 timer，取消网络请求或清除在 componentDidMount() 中创建的订阅等。
+      <br/>
+     </li>
+    </ul>
+    <p>
+     可以看到挂载时和更新时都有
+     <code>
+      render
+     </code>
+     这个方法。这就是为什么
+     <strong>
+      state改变
+     </strong>
+     的时候，会触发
+     <strong>
+      <code>
+       render
+      </code>
+      重渲染操作
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="499" src="https://i-blog.csdnimg.cn/blog_migrate/0ac3a8b04ea070b5a6296cbaf533943a.png" width="995"/>
+     ​
+    </p>
+    <pre><code class="language-javascript">class Welcome extends React.Component {
+    state = {
+        msg: 'hello world'
+    }
+    constructor(props){
+        super(props);
+        console.log('constructor');
+    }
+    componentDidMount = () =&gt; {
+        // react中发起ajax请求的初始操作，在这个钩子中完成
+        console.log('componentDidMount');
+    }
+    componentDidUpdate = () =&gt; {
+        // 等DOM更新后触发的钩子
+        console.log('componentDidUpdate');
+    }
+    componentWillUnmount = () =&gt; {
+        console.log('componentWillUnmount');
+    }
+    handleClick = () =&gt; {  
+        /* this.setState({
+          msg: 'hi react'
+        }); */
+        //this.forceUpdate();
+        root.unmount();   // 触发卸载组件
+    }
+    render(){
+        console.log('render');
+        return (
+            &lt;div&gt;
+                &lt;button onClick={this.handleClick}&gt;点击&lt;/button&gt;
+                { this.state.msg }
+            &lt;/div&gt;
+        );
+    }
+}</code></pre>
+    <h3 id="%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87">
+     状态提升⭐⭐
+    </h3>
+    <p>
+     状态是 React 组件的
+     <strong>
+      核心
+     </strong>
+     ，是
+     <strong>
+      数据的来源
+     </strong>
+     ，必须尽可能简单。
+    </p>
+    <p>
+     基本上状态是确定组件呈现和行为的对象。
+    </p>
+    <p>
+     与 Props 不同，它们是可变的，并创建动态和交互式组件。可以通过this.state() 访问它们。
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      多个组件
+     </strong>
+     需要
+     <strong>
+      共享
+     </strong>
+     的
+     <strong>
+      状态提升
+     </strong>
+     到它们最近的
+     <strong>
+      父组件
+     </strong>
+     上，在父组件上改变这个状态然后通过props分发给子组件。对子组件操作，子组件不改变自己的状态。
+    </p>
+    <h3 id="Hooks">
+     <strong>
+      复用组件
+     </strong>
+    </h3>
+    <h4 id="Render%20Props%E6%A8%A1%E5%BC%8F">
+     Render Props模式
+    </h4>
+    <p>
+     <strong>
+      组件之间
+     </strong>
+     使用一个
+     <strong>
+      值为函数
+     </strong>
+     的
+     <strong>
+      prop 共享代码
+     </strong>
+     的简单技术。
+    </p>
+    <pre><code class="language-javascript">class MouseXY extends React.Component {
+    state = {
+        x: 0,
+        y: 0
+    }
+    componentDidMount = () =&gt; {
+        document.addEventListener('mousemove', this.move)
+    }
+    componentWillUnmount = () =&gt; {
+        document.removeEventListener('mousemove', this.move)
+    }
+    move = (ev) =&gt; {
+        this.setState({
+            x: ev.pageX,
+            y: ev.pageY
+        });
+    }
+    render(){
+        return (
+            &lt;React.Fragment&gt;
+                { this.props.render(this.state.x, this.state.y) }
+            &lt;/React.Fragment&gt;
+        );
+    }
+}
+class Welcome extends React.Component {
+    render(){
+        return (
+            &lt;MouseXY render={(x, y)=&gt; 
+               &lt;div&gt;
+                  hello world, {x}, {y}
+               &lt;/div&gt;
+            } /&gt;
+        );
+    }
+}
+let element = (
+    &lt;Welcome /&gt;
+);</code></pre>
+    <p>
+     render属性后面的值是一个
+     <strong>
+      回调函数
+     </strong>
+     ，通过这个函数的形参可以得到组件中的数据，从而实现功能的复用。
+    </p>
+    <h4 id="HOC%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%E6%A8%A1%E5%BC%8F">
+     HOC高阶组件模式⭐⭐
+    </h4>
+    <p>
+     <strong>
+      参数
+     </strong>
+     为
+     <strong>
+      组件
+     </strong>
+     ，
+     <strong>
+      返回值
+     </strong>
+     为
+     <strong>
+      新组件
+     </strong>
+     的
+     <strong>
+      函数
+     </strong>
+    </p>
+    <pre><code class="language-javascript">function withMouseXY(WithComponent){
+    return class extends React.Component {
+        state = {
+            x: 0,
+            y: 0
+        }
+        componentDidMount = () =&gt; {
+            document.addEventListener('mousemove', this.move)
+        }
+        componentWillUnmount = () =&gt; {
+            document.removeEventListener('mousemove', this.move)
+        }
+        move = (ev) =&gt; {
+            this.setState({
+                x: ev.pageX,
+                y: ev.pageY 
+            })
+        }
+        render(){
+            return &lt;WithComponent {...this.state} /&gt;
+        }
+    }
+}
+class Welcome extends React.Component {
+    render(){
+        return (
+            &lt;div&gt;
+                hello world, { this.props.x }, { this.props.y }
+            &lt;/div&gt;
+        );
+    }
+}
+const MouseWelcome = withMouseXY(Welcome)
+let element = (
+    &lt;MouseWelcome /&gt;
+);</code></pre>
+    <h3>
+     <strong>
+      Hooks
+     </strong>
+    </h3>
+    <p>
+     Hook 是 React 16.8 的新增特性,是一个特殊的
+     <strong>
+      函数
+     </strong>
+     ，它可以在
+     <strong>
+      不写 class（
+     </strong>
+     即
+     <strong>
+      不用extends React.Component）
+     </strong>
+     的情况下“
+     <strong>
+      钩入
+     </strong>
+     ” React 特性
+     <strong>
+      （
+     </strong>
+     即
+     <strong>
+      组件化模块
+     </strong>
+     的特性
+     <strong>
+      ）
+     </strong>
+     。
+    </p>
+    <h4 id="%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8Hooks%E2%AD%90%E2%AD%90%E2%AD%90">
+     <a href="https://juejin.cn/post/6844903709927800846#heading-18" rel="nofollow" title="为什么用Hooks">
+      为什么用Hooks
+     </a>
+     ⭐⭐⭐
+    </h4>
+    <blockquote>
+     <p>
+      以下帮助了解Hooks
+     </p>
+     <p>
+      Hooks（计算机术语）：运行到某时机会调用某函数，例
+      <strong>
+       <code>
+        onload
+       </code>
+      </strong>
+      ，
+      <strong>
+       <code>
+        addEventListener
+       </code>
+      </strong>
+     </p>
+     <p>
+      Hooks（React）：一系列以
+      <code>
+       “
+       <strong>
+        use
+       </strong>
+       ”
+      </code>
+      作为开头的方法，可以完全避开
+      <code>
+       <strong>
+        class式
+       </strong>
+       写法
+      </code>
+      ，在
+      <strong>
+       函数式组件
+      </strong>
+      中完成
+      <strong>
+       生命周期、状态管理、逻辑复用
+      </strong>
+      等几乎
+      <strong>
+       全部组件
+      </strong>
+      开发工作的能力。
+     </p>
+    </blockquote>
+    <h4 id="useState">
+     <strong>
+      useState
+     </strong>
+    </h4>
+    <p>
+     等同组件中的setState()
+    </p>
+    <pre><code class="language-javascript">let { useState } = React;//只能在最顶层使用Hook
+let Welcome = (props) =&gt; {//只能在函数组件中使用Hook
+    //count的初始值0，设置count的函数
+    const [count, setCount] = useState(0);
+    const handleClick = () =&gt; {
+        setCount(count + 1)       
+    }
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;点击&lt;/button&gt;
+            &lt;div&gt;hello world, { count }&lt;/div&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+    <p>
+     useState中的值在修改的时候，并
+     <strong>
+      不会进行原值的合并处理
+     </strong>
+     ，所以使用的时候要注意。可利用扩展运算符的形式来解决合并的问题。
+    </p>
+    <pre><code class="language-javascript">const [info, setInfo] = useState({
+    username: 'xiaoming',
+    age: 20
+})
+setInfo({
+    ...info,
+    username: 'xiaoqiang'
+})</code></pre>
+    <p>
+     如果遇到
+     <strong>
+      初始值需要大量运算才能获取
+     </strong>
+     的话，可采用
+     <strong>
+      惰性初始state
+     </strong>
+     ，useState()添加回调函数的形式来实现。
+    </p>
+    <pre><code class="language-javascript">const initCount = () =&gt; {
+    console.log('initCount');
+    return 2*2*2;
+}
+const [count, setCount] = useState(()=&gt;{
+    return initCount();
+});</code></pre>
+    <p>
+     这样初始只会计算一次，并不会
+     <strong>
+      每次都重新进行计算
+     </strong>
+     。
+    </p>
+    <h4 id="useReducer">
+     <strong>
+      useReducer
+     </strong>
+    </h4>
+    <p>
+     useState 的替代方案。它接收一个形如 (state, action) =&gt; newState 的 reducer，并返回当前的 state 以及与其配套的
+     <strong>
+      dispatch
+     </strong>
+     方法。
+    </p>
+    <p>
+     在某些场景下，useReducer 会比 useState 更适用，例如 state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state 等。
+    </p>
+    <pre><code class="language-javascript">let { useReducer } = React;
+let loginState = {//体现整体关联性与统一性**
+    isLogin: true,
+    isLogout: false
+}
+let loginReducer = (state, action) =&gt; {
+    switch(action.type){
+        case 'login':
+            return { isLogin: true, isLogout: false }
+        case 'logout':
+            return { isLogin: false, isLogout: true }
+        default: 
+            throw new Error() 
+    }
+}
+let Welcome = (props) =&gt; {  
+    const [ state, loginDispatch ] = useReducer(loginReducer, loginState);
+    const handleLogin = () =&gt; {
+        loginDispatch({ type: 'login' });
+    }
+    const handleLogout = () =&gt; {
+        loginDispatch({ type: 'logout' });
+    }
+    return (
+        &lt;div&gt;
+            { state.isLogin ? &lt;button onClick={handleLogout}&gt;退出&lt;/button&gt; : &lt;button onClick={handleLogin}&gt;登录&lt;/button&gt; }
+        &lt;/div&gt;
+    );
+}</code></pre>
+    <h4 id="useEffect">
+     <strong>
+      useEffect
+     </strong>
+    </h4>
+    <p>
+     在函数组件中执行副作用操作，
+     <strong>
+      副作用
+     </strong>
+     即：
+     <strong>
+      DOM操作、获取数据、记录日志
+     </strong>
+     等
+    </p>
+    <p>
+     代替类组件中的
+     <strong>
+      生命周期
+     </strong>
+     钩子函数。
+     <br/>
+     如果不传参：相当于render之后就会执行
+     <br/>
+     如果传空数组：相当于componentDidMount
+     <br/>
+     如果传数组：相当于componentDidUpdate
+     <br/>
+     如果返回回调函数：相当于componentWillUnmount，会在组件卸载的时候执行清除操作。
+    </p>
+    <p>
+     effect 在每次渲染的时候都会执行。React 会在执行当前 effect 之前对上一个 effect 进行清除。
+    </p>
+    <pre><code class="language-javascript">let Welcome = (props) =&gt; {
+    const [count, setCount] = useState(0);
+    //异步函数，在浏览器渲染DOM后触发的
+    useEffect(()=&gt;{
+        // 初始 和 更新 数据的时候会触发回调函数
+        console.log('didMount or didUpdate');
+        return ()=&gt;{  // 这里回调函数可以用来清理副作用
+            console.log('beforeUpdate or willUnmount');
+        }
+    })
+    const handleClick = () =&gt; {
+        //setCount(count + 1);
+        root.unmount();//卸载
+    }
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;点击&lt;/button&gt;
+            &lt;div&gt;hello world, { count }&lt;/div&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+    <p>
+     <strong>
+      关注点分离
+     </strong>
+     后，改变一个数据后，例如count，那么msg相关的useEffect也会触发，
+    </p>
+    <p>
+     给useEffect设置第二个参数，只重新触发自己的useEffect回调函数，即响应式的数据
+    </p>
+    <pre><code class="language-javascript">const [count, setCount] = useState(0);
+useEffect(()=&gt;{
+    console.log(count);
+}, [count])
+const [msg, setMsg] = useState('hello');
+useEffect(()=&gt;{
+    console.log(msg);
+}, [msg])</code></pre>
+    <ul>
+     <li>
+      useEffect()是在
+      <strong>
+       渲染之后
+      </strong>
+      且
+      <strong>
+       屏幕更新之后
+      </strong>
+      ，，是
+      <strong>
+       异步
+      </strong>
+      的；
+     </li>
+     <li>
+      useLayoutEffect()是在
+      <strong>
+       渲染之后
+      </strong>
+      但在
+      <strong>
+       屏幕更新之前
+      </strong>
+      ，是
+      <strong>
+       同步
+      </strong>
+      的。
+     </li>
+    </ul>
+    <p>
+     大部分情况下我们采用
+     <strong>
+      useEffect()
+     </strong>
+     ，
+     <strong>
+      性能更好
+     </strong>
+     。
+    </p>
+    <p>
+     但当你的useEffect里面的操作
+     <strong>
+      需要处理DOM
+     </strong>
+     ，并且
+     <strong>
+      会改变页面的样式
+     </strong>
+     ，
+    </p>
+    <p>
+     就需要
+     <strong>
+      useLayoutEffect
+     </strong>
+     ，否则可能会出现闪屏问题。
+    </p>
+    <h4 id="useRef">
+     <strong>
+      useRef
+     </strong>
+    </h4>
+    <pre><code class="language-javascript">let { useRef } = React;
+
+let Welcome = (props) =&gt; {  
+    const myRef = useRef()
+
+...}
+
+等同于
+
+React.createRef()</code></pre>
+    <p>
+     <strong>
+      函数转发
+     </strong>
+    </p>
+    <p>
+     把ref添加到函数组件上，把ref对应的对象
+     <strong>
+      转发到子组件
+     </strong>
+     的内部元素身上。
+    </p>
+    <pre><code class="language-javascript">let Head = React.forwardRef((props, ref) =&gt; {
+    return (
+        &lt;div&gt;
+            hello Head
+            &lt;input type="text" ref={ref} /&gt;
+        &lt;/div&gt;
+    )
+})
+let Welcome = (props) =&gt; {  
+    const myRef = useRef()
+    const handleClick = () =&gt; {
+        myRef.current.focus();
+    }
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;点击&lt;/button&gt;
+            &lt;Head ref={myRef} /&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+    <p>
+     let count = useRef(0);  // 与state类似，有记忆功能，可理解为全局操作
+     <br/>
+     const handleClick = () =&gt; {
+     <!-- -->
+     <br/>
+     count.
+     <strong>
+      current
+     </strong>
+     ++;
+    </p>
+    <p>
+     ...
+    </p>
+    <p>
+     }
+    </p>
+    <h4 id="%E5%80%92%E8%AE%A1%E6%97%B6%EF%BC%88%E2%AD%90%E6%89%8B%E5%86%99%EF%BC%89">
+     倒计时（
+     <a href="https://blog.csdn.net/Jet_Lover/article/details/115637795?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167818286416800227464615%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=167818286416800227464615&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-115637795-null-null.142%5Ev73%5Econtrol_1,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=%E9%9D%A2%E8%AF%95React&amp;spm=1018.2226.3001.4187#1_6" title="⭐">
+      ⭐
+     </a>
+     手写）
+    </h4>
+    <pre><code class="language-javascript">//利用setTimeOut，每秒将数值减一
+//利用useRef设置定时器，方便清楚
+	
+const [time,setTime]=useState(null)//倒计时时间
+const timeRef=useRef()//设置延时器
+	//倒计时
+useEffect(()=&gt;{
+    	//如果设置倒计时且倒计时不为0
+        if(time&amp;&amp;time!==0)
+            timeRef.current=setTimeout(()=&gt;{
+                setTime(time=&gt;time-1)
+            },1000)
+        //清楚延时器
+        return ()=&gt;{
+            clearTimeout(timeRef.current)
+        }
+},[time])
+
+&lt;button onClick={()=&gt;{settime(60)}} &gt;开始计时&lt;/button&gt;
+</code></pre>
+    <h4 id="useCallback">
+     <strong>
+      useCallback和useMemo
+     </strong>
+    </h4>
+    <p>
+     React 使用
+     <strong>
+      <strong>
+       <strong>
+        <strong>
+         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Description" rel="nofollow" title="Object.is 比较算法">
+          Object.is 比较算法
+         </a>
+        </strong>
+       </strong>
+      </strong>
+     </strong>
+     来比较 state。
+    </p>
+    <p>
+     当组件数据没有变化时，是不会重新渲染试图，如下，cosole.log不会执行
+    </p>
+    <pre><code class="language-javascript">let Welcome = (props) =&gt; {  
+    const [ count, setCount ] = useState(0);
+    const handleClick= () =&gt; {
+        setCount(0);
+    }
+    console.log(123);
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;点击&lt;/button&gt;
+            hello Welcome { Math.random() }
+        &lt;/div&gt;
+    );
+}</code></pre>
+    <p>
+     当
+     <strong>
+      变化后
+     </strong>
+     state与当前state
+     <strong>
+      相同
+     </strong>
+     时，包括变化前的渲染一共会
+     <strong>
+      渲染两次
+     </strong>
+    </p>
+    <p>
+     因为React 可能仍需要在
+     <strong>
+      跳过渲染前 渲染该组件
+     </strong>
+     。
+    </p>
+    <p>
+     但React
+     <strong>
+      不会对组件树的“深层”节点进行不必要的渲染
+     </strong>
+    </p>
+    <p>
+     <code>
+      React.memo
+     </code>
+     <strong>
+      避免
+     </strong>
+     可以没有必要的重新渲染，类似于类组件中的
+     <strong>
+      纯函数
+     </strong>
+     概念。
+    </p>
+    <p>
+     将{ Math.random() } 包装成函数组件
+    </p>
+    <pre><code class="language-javascript">let Welcome = (props) =&gt; {  
+    const [ count, setCount ] = useState(0);
+    const handleClick= () =&gt; {
+        setCount(1);
+    }
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;点击&lt;/button&gt;
+            hello Welcome
+            &lt;Head count={count} /&gt;
+        &lt;/div&gt;
+    );
+}
+let Head = React.memo(() =&gt; {
+    return (
+        &lt;div&gt;hello Head, { Math.random() }&lt;/div&gt;
+    )
+})</code></pre>
+    <p>
+     在
+     <strong>
+      渲染期间
+     </strong>
+     执行了
+     <strong>
+      高开销
+     </strong>
+     的计算，则可以使用
+     <code>
+      useMemo
+     </code>
+     来进行
+     <strong>
+      优化
+     </strong>
+     。
+    </p>
+    <p>
+     useCallback返回一个
+     <strong>
+      可记忆
+     </strong>
+     的
+     <strong>
+      函数
+     </strong>
+     ，useMemo返回一个可记忆的
+     <strong>
+      值
+     </strong>
+     ，useCallback只是useMemo的一种
+     <strong>
+      特殊形式
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">let Welcome = (props) =&gt; {  
+    const [ count, setCount ] = useState(0);
+    const handleClick= () =&gt; {
+        setCount(count+1);
+    }
+    const foo = () =&gt; {}
+    return (
+        &lt;div&gt;
+            &lt;button onClick={handleClick}&gt;点击&lt;/button&gt;
+            hello Welcome
+            &lt;Head onClick={foo} /&gt;
+        &lt;/div&gt;
+    );
+}
+let Head = React.memo(() =&gt; {
+    return (
+        &lt;div&gt;hello Head, { Math.random() }&lt;/div&gt;
+    )
+})</code></pre>
+    <p>
+     当点击按钮的时候，&lt;Head&gt;组件会进行重新渲染，因为每次重新触发&lt;Welcome&gt;组件的时候，后会重新生成一个
+     <strong>
+      新的内存地址
+     </strong>
+     的foo函数。
+    </p>
+    <p>
+     通过useCallback和useMemo可以不让foo函数重新生成，使用之前的函数地址
+    </p>
+    <p>
+     从而
+     <strong>
+      减少子组件的渲染，提升性能
+     </strong>
+     。
+    </p>
+    <pre><code class="language-javascript">const foo = useCallback(() =&gt; {}, [])
+
+const foo = useMemo(()=&gt; ()=&gt;{}, [])   // 针对函数
+const bar = useMemo(()=&gt; [1,2,3], [])  // 针对数组
+
+const foo = useMemo(()=&gt; ()=&gt;{}, [count])   // 第二个参数为依赖项，当count改变时，函数重新创建</code></pre>
+    <h4 id="%E8%87%AA%E5%AE%9A%E4%B9%89Hook">
+     <strong>
+      自定义Hook
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      实现函数组件复用
+     </strong>
+    </p>
+    <pre><code class="language-javascript">let { useState, useEffect } = React
+let useMouseXY = () =&gt; {
+    const [x, setX] = useState(0)
+    const [y, setY] = useState(0)
+    useEffect(()=&gt;{
+        function move(ev){
+            setX(ev.pageX)
+            setY(ev.pageY)
+        }
+        document.addEventListener('mousemove', move)
+        //如果返回回调函数：相当于componentWillUnmount，会在组件卸载的时候执行清除操作。
+        return () =&gt; {
+            document.removeEventListener('mousemove', move)
+        }
+    }, [])//如果传空数组：相当于componentDidMount
+    return {
+        x,
+        y
+    }
+}
+let Welcome = ()=&gt;{
+    const {x, y} = useMouseXY()
+    return (
+        &lt;div&gt;
+            hello Welcome, {x}, {y}
+        &lt;/div&gt;
+    )
+}</code></pre>
+    <h3 id="Redux">
+     StrictMode严格模式
+    </h3>
+    <p>
+     <code>
+      StrictMode
+     </code>
+     是一个用来突出显示应用程序中
+     <strong>
+      潜在问题
+     </strong>
+     的工具。用于
+     <strong>
+      开发
+     </strong>
+     环境
+    </p>
+    <p>
+     与
+     <code>
+      Fragment
+     </code>
+     一样，
+     <code>
+      StrictMode
+     </code>
+     <strong>
+      不会渲染任何可见的 UI
+     </strong>
+     。它为其后代元素触发额外的检查和警告。例如：
+    </p>
+    <ul>
+     <li>
+      识别不安全的
+      <strong>
+       过时
+      </strong>
+      的生命周期
+     </li>
+     <li>
+      关于使用
+      <strong>
+       过时
+      </strong>
+      字符串 ref API 的警告
+     </li>
+    </ul>
+    <p>
+     <strong>
+      发布环境
+     </strong>
+     下关闭严格模式，以避免
+     <strong>
+      性能
+     </strong>
+     损失。
+    </p>
+    <h3 id="Router">
+     Router
+    </h3>
+    <p>
+     路由是根据
+     <strong>
+      不同的url地址
+     </strong>
+     展示不同的内容或页面，是SPA（单页应用）的
+     <strong>
+      路径管理器
+     </strong>
+     ，
+    </p>
+    <p>
+     用于开发
+     <strong>
+      单页 Web 应用
+     </strong>
+    </p>
+    <p>
+     1.一个路由就是一个
+     <strong>
+      映射关系(key:value)
+     </strong>
+    </p>
+    <p>
+     2.key为路径, value可能是function或component
+    </p>
+    <p>
+     Router 用于定义多个路由，当用户定义特定的 URL 时，如果此 URL 与 Router 内定义的任何 “路由” 的路径匹配，则用户将
+     <strong>
+      重定向
+     </strong>
+     到该特定路由。
+    </p>
+    <h4 id="%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F">
+     路由模式（同Vue）
+    </h4>
+    <p>
+     React中的路由模式跟Vue中一样，分为history和hash模式。默认是hash
+    </p>
+    <p>
+     <strong>
+      Hash模式
+     </strong>
+    </p>
+    <p>
+     hash——即地址栏URL中的#符号（此hash不是密码学里的散列运算）。比如在 http://localhost:8080/#/donate 中，hash的值就是#/donate,我们在浏览器中可以通过BOM中的window.location.hash来获取当前URL的hash值
+    </p>
+    <p>
+     注：BOM(Browser Object Model) 是指浏览器对象模型，BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。
+    </p>
+    <p>
+     <img alt="" height="521" src="https://i-blog.csdnimg.cn/blog_migrate/3b1b8d37998d4e32f5efcdca7778027a.png" width="1178"/>
+     ​
+    </p>
+    <p>
+     <strong>
+      history模式
+     </strong>
+    </p>
+    <p>
+     通过在
+     <strong>
+      host
+     </strong>
+     后，直接添加
+     <strong>
+      斜线
+     </strong>
+     和
+     <strong>
+      路径
+     </strong>
+     来
+     <strong>
+      请求后端
+     </strong>
+     的一种
+     <strong>
+      URL模式
+     </strong>
+     。
+    </p>
+    <p>
+     <img alt="" height="541" src="https://i-blog.csdnimg.cn/blog_migrate/ac21660e1729a05dbf4eb95847075820.png" width="1200"/>
+     ​
+    </p>
+    <p>
+     图中pathname变量为/donate，而hash值为空。
+    </p>
+    <p>
+     <strong>
+      原理
+     </strong>
+    </p>
+    <ul>
+     <li>
+      hash通过
+      <strong>
+       window.addEventListener
+      </strong>
+      监听浏览器的
+      <strong>
+       onhashchange()
+      </strong>
+      事件变化，查找对应的路由规则
+     </li>
+     <li>
+      <strong>
+       HTML5
+      </strong>
+      的
+      <strong>
+       history API
+      </strong>
+      监听URL变化，所以有浏览器兼容问题
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <strong>
+      区别
+     </strong>
+    </p>
+    <ul>
+     <li>
+      是否向后端传参：
+     </li>
+    </ul>
+    <p>
+     在hash模式中，我们刷新一下上面的网页，可以看到请求的URL为http://localhost:8080/，没有带上#/donate，说明hash 虽然出现 URL 中，#后面的内容是不会包含在http请求中的，对后端完全没有影 响，因此改变 hash 不会重新加载页面。
+    </p>
+    <p>
+     <img alt="" height="606" src="https://i-blog.csdnimg.cn/blog_migrate/1f9fcf32a3f86c8f4e948853c713b948.png" width="1200"/>
+     ​
+    </p>
+    <p>
+     在history模式中，刷新一下网页，明显可以看到请求url为完整的url，url完整地请求了后端：
+    </p>
+    <p>
+     <img alt="" height="611" src="https://i-blog.csdnimg.cn/blog_migrate/a59cd9a6c26a63d3ae487b9002a77e49.png" width="1200"/>
+     ​
+    </p>
+    <p>
+     前端的 URL 必须和实际向后端发起请求的 URL 一致，否则返回 404 错误
+     <br/>
+     <br/>
+    </p>
+    <p>
+     在React中
+    </p>
+    <ul>
+     <li>
+      <p>
+       history模式：createBrowserRouter
+      </p>
+     </li>
+    </ul>
+    <p>
+     IE9及以下不兼容，需要由
+     <strong>
+      web server
+     </strong>
+     支持，在
+     <strong>
+      web client
+     </strong>
+     这边window.location.
+     <strong>
+      pathname
+     </strong>
+     被
+     <strong>
+      react router
+     </strong>
+     解析
+    </p>
+    <ul>
+     <li>
+      <p>
+       hash模式：createHashRouter
+      </p>
+     </li>
+    </ul>
+    <p>
+     不需要由web server支持，因为它的只有
+     <strong>
+      ‘/’path
+     </strong>
+     需要由web server支持，而
+     <strong>
+      #/react/route URL
+     </strong>
+     不能被web server读取，在
+     <strong>
+      web client
+     </strong>
+     这边window,location.
+     <strong>
+      hash
+     </strong>
+     被
+     <strong>
+      react router
+     </strong>
+     解析
+    </p>
+    <p>
+    </p>
+    <p>
+     history的好处是可以进行修改历史记录，并且不会立刻像后端发起请求。不过如果对于项目没有硬性标准要求，可以直接使用hash模式开发。
+    </p>
+    <h4 id="%E5%9F%BA%E7%A1%80%E8%B7%AF%E7%94%B1%E6%90%AD%E5%BB%BA">
+     基础路由搭建
+    </h4>
+    <pre><code class="language-javascript">import { createBrowserRouter, createHashRouter } from 'react-router-dom'
+//路由表
+export const routes = [];
+//路由对象
+const router = createBrowserRouter(routes);
+export default router;</code></pre>
+    <p>
+     接下来让路由配置文件与React结合，需要在主入口index.js进行操作，如下：
+    </p>
+    <pre><code class="language-javascript">import { RouterProvider } from 'react-router-dom'
+import router from './router';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  &lt;React.StrictMode&gt;
+    &lt;RouterProvider router={router}&gt;&lt;/RouterProvider&gt;
+  &lt;/React.StrictMode&gt;
+);</code></pre>
+    <p>
+     路由表的配置字段如下：
+    </p>
+    <ul>
+     <li>
+      <p>
+       path：指定路径
+      </p>
+     </li>
+     <li>
+      <p>
+       element：对应组件
+      </p>
+     </li>
+     <li>
+      <p>
+       children：嵌套路由
+      </p>
+     </li>
+    </ul>
+    <pre><code class="language-javascript">//路由表
+export const routes = [
+    {
+        path: '/',
+        element: &lt;App /&gt;,
+        children: [
+            {
+                path: '',
+                element: &lt;Home /&gt;
+            },
+            {
+                path: 'about',
+                element: &lt;About /&gt;,
+                children: [
+                    {
+                        path: 'foo',
+                        element: &lt;Foo /&gt;,
+                    },
+                    {
+                        path: 'bar',
+                        element: &lt;Bar /&gt;,
+                    }
+                ]
+            }
+        ]
+    }
+];</code></pre>
+    <p>
+     接下来就是显示路由区域，利用
+     <strong>
+      &lt;outlet&gt;组件占位
+     </strong>
+     ，表明
+     <strong>
+      子路由渲染的位置
+     </strong>
+    </p>
+    <pre><code class="language-javascript">import React from "react";
+import { Outlet, Link } from 'react-router-dom'
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;h2&gt;hello react&lt;/h2&gt;
+      &lt;Link to="/"&gt;首页&lt;/Link&gt; | &lt;Link to="/about"&gt;关于&lt;/Link&gt;
+      &lt;Outlet /&gt;
+    &lt;/div&gt;
+  );
+}
+export default App;</code></pre>
+    <p>
+     可以看到 &lt;Link&gt;组件用于
+     <strong>
+      声明式
+     </strong>
+     路由切换使用。同样&lt;outlet&gt;组件也可以给嵌套路由页面进行使用，从而完成二级路由的切换操作。
+    </p>
+    <pre><code class="language-javascript">import React from 'react'
+import './About.scss'
+import { Outlet, Link } from 'react-router-dom'
+export default function About() {
+  return (
+    &lt;div&gt;
+      &lt;h3&gt;About&lt;/h3&gt;
+      &lt;Link to="/about/foo"&gt;foo&lt;/Link&gt; | &lt;Link to="/about/bar"&gt;bar&lt;/Link&gt;
+      &lt;Outlet /&gt;
+    &lt;/div&gt;
+  )
+}
+​
+</code></pre>
+    <h4 id="%E9%87%8D%E5%AE%9A%E5%90%91%E8%B7%AF%E7%94%B1">
+     重定向路由
+    </h4>
+    <p>
+     访问的URL跳转到另一个URL上，从而实现重定向的需求。
+    </p>
+    <p>
+     &lt;Navigate&gt;组件就是实现重定向需求的组件。
+    </p>
+    <pre><code class="language-javascript">import { createBrowserRouter, createHashRouter, Navigate } from 'react-router-dom'
+children: [ 
+    {
+        index: true,// 默认路由
+        element: &lt;Navigate to="/about/foo/123" /&gt;,
+    },
+    {
+        path: 'foo',
+        element: &lt;Foo /&gt;
+    },
+    {
+        path: 'bar',
+        element: &lt;Bar /&gt;
+    }
+ ]</code></pre>
+    <h4 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%A8%E5%B1%80%E5%AE%88%E5%8D%AB">
+     自定义全局守卫
+    </h4>
+    <p>
+     全局守卫：包裹根组件，访问根组件下面的所有子组件都要先通过守卫进行操作
+    </p>
+    <p>
+     在React里面,它不像Vue一样,为我们提供和很多方便的功能,一些功能都需要自己去进行封装比如说
+     <a href="https://so.csdn.net/so/search?q=%E8%B7%AF%E7%94%B1%E6%8B%A6%E6%88%AA&amp;spm=1001.2101.3001.7020" title="路由拦截">
+      路由拦截
+     </a>
+    </p>
+    <p>
+     在/src/components/BeforeEach.jsx下创建守卫的组件。
+    </p>
+    <pre><code class="language-javascript">import React from 'react'
+import { Navigate } from 'react-router-dom'
+import { routes } from '../../router';
+export default function BeforeEach(props) {
+  if(true){
+    return &lt;Navigate to="/login" /&gt;
+  }
+  else{
+    return (
+      &lt;div&gt;{ props.children }&lt;/div&gt;
+    )
+  }
+}</code></pre>
+    <p>
+     根据判断的结果，是否进入到组件内，还是重定向到其他的组件内。
+    </p>
+    <p>
+     调用BeforeEach.jsx，index.js通过路由配置文件引入，如下：
+    </p>
+    <pre><code class="language-javascript">export const routes = [
+  {
+    path: '/',
+    element: &lt;BeforeEach&gt;&lt;App /&gt;&lt;/BeforeEach&gt;//包裹根组件APP
+  }
+]</code></pre>
+    <h4 id="%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1">
+     动态路由
+    </h4>
+    <p>
+     根据
+     <strong>
+      不同的UR
+     </strong>
+     L，可以访问
+     <strong>
+      同一个组件
+     </strong>
+     。在React路由中，通过
+     <strong>
+      path
+     </strong>
+     字段来指定动态路由的写法。
+    </p>
+    <p>
+     foo/xxx都能访问到Foo组件，本身就有实现了动态路由
+    </p>
+    <pre><code class="language-javascript">import { Outlet, Link } from 'react-router-dom'
+export default function About() {
+	return (
+        &lt;div&gt;
+            &lt;Link to="/about/foo/123"&gt;foo 123&lt;/Link&gt; | &lt;Link to="/about/foo/456"&gt;foo 456&lt;/Link&gt;
+        &lt;/div&gt;
+   	)
+}</code></pre>
+    <pre><code class="language-javascript">{
+    path: 'foo/:id',
+    element: &lt;Foo /&gt;
+}</code></pre>
+    <p>
+     <code>
+      id
+     </code>
+     就是
+     <strong>
+      变量名
+     </strong>
+     ，可以在组件中用
+     <code>
+      useParams
+     </code>
+     来获取到对应的值。
+    </p>
+    <pre><code class="language-javascript">import { useParams } from 'react-router-dom'
+export default function Foo() {
+  const params = useParams()
+  return (
+    &lt;div&gt;Foo, { params.id }&lt;/div&gt;
+  )
+}</code></pre>
+    <h3 id="Redux%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E5%BA%93">
+     Redux状态管理库
+    </h3>
+    <p>
+     Redux就像Vue中的
+     <strong>
+      Vuex
+     </strong>
+     或
+     <strong>
+      Pinia
+     </strong>
+     是一样专门用于做
+     <strong>
+      <strong>
+       状态管理
+      </strong>
+     </strong>
+     的JS库(不是react插件库)。
+    </p>
+    <p>
+     只不过Redux比较独立，可以跟很多框架结合使用，不过主要还是跟React配合比较好，也是最常见的React状态管理的库。
+    </p>
+    <p>
+     redux相当于在
+     <strong>
+      顶层组件
+     </strong>
+     之上又加了一个
+     <strong>
+      组件
+     </strong>
+    </p>
+    <h4 id="%E5%8D%95%E4%B8%80%E4%BA%8B%E5%AE%9E%E6%9D%A5%E6%BA%90%E2%AD%90">
+     单一事实来源⭐
+    </h4>
+    <p>
+     Redux：
+     <strong>
+      所有组件的状态
+     </strong>
+     都存储在store 中，并且它们从 store 本身接收更新。
+    </p>
+    <p>
+     <strong>
+      单一状态树
+     </strong>
+     可
+     <strong>
+      以更容易地跟踪随
+     </strong>
+     时间的变化，并调试或检查程序。
+    </p>
+    <h4 id="Redux%20%E7%9A%84%E7%BB%84%E4%BB%B6%E2%AD%90%E2%AD%90%E2%AD%90">
+     Redux 的组件⭐⭐⭐
+    </h4>
+    <ul>
+     <li>
+      Action 这是一个用来描述
+      <strong>
+       发生
+      </strong>
+      了什么事情的
+      <strong>
+       对象
+      </strong>
+     </li>
+     <li>
+      Reducer 这是一个
+      <strong>
+       确定状态将如何变化
+      </strong>
+      的地方
+     </li>
+     <li>
+      Store
+      <strong>
+       整个程序的状态/对象树
+      </strong>
+      保存在 Store 中
+     </li>
+     <li>
+      View 查只
+      <strong>
+       显示 Store 提供的数据
+      </strong>
+     </li>
+    </ul>
+    <h4 id="Redux%E4%BC%98%E7%82%B9%E2%AD%90">
+     <strong>
+      Redux优点
+     </strong>
+     ⭐
+    </h4>
+    <ul>
+     <li>
+      结果的可预测性
+     </li>
+     <li>
+      可维护性
+     </li>
+     <li>
+      服务器端渲染
+     </li>
+     <li>
+      易于测试 -
+     </li>
+    </ul>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/f231b1934e4a1d689200914a06c27887.png"/>
+     ​
+    </p>
+    <pre><code class="language-javascript">//state存储共享数据
+function counterReducer(state={count: 0}, action) {//reducer修改state
+    switch(action.type){
+        case 'inc':
+            return {count: state.count + state.payload}
+        default:
+            return state;
+    }
+}
+const store = createStore(counterReducer)
+export default store</code></pre>
+    <p>
+     这样store对象就可以在其他组件中进行使用了，例如在&lt;Bar&gt;组件中。
+    </p>
+    <pre><code class="language-javascript">import React from 'react'
+import './Bar.scss'
+import { useSelector,useDispatch } from 'react-redux'
+export default function Bar() {
+  const count = useSelector((state)=&gt; state.count)//获取共享状态
+  const dispatch=useDispatch();//修改共享状态
+  const handleClick = () =&gt; {
+    dispatch({//dispatch触发Reducer，分发action
+      type: 'inc',
+      payload: 5
+    })
+  }
+  return (
+    &lt;div&gt;
+     &lt;button onClick={handleClick}&gt;修改count&lt;/button&gt;     
+     Bar, { count }
+    &lt;/div&gt;
+  )
+}</code></pre>
+    <p>
+     在主模块中进行注册。
+    </p>
+    <pre><code class="language-javascript">import { RouterProvider } from 'react-router-dom'
+import router from './router';
+import { Provider } from 'react-redux'
+import store from './store';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  &lt;React.StrictMode&gt;
+    &lt;Provider store={store}&gt;//注册状态管理与React结合，自动完成重渲染
+      &lt;RouterProvider router={router}&gt;&lt;/RouterProvider&gt;
+    &lt;/Provider&gt;
+  &lt;/React.StrictMode&gt;
+);</code></pre>
+    <h4>
+     应用
+    </h4>
+    <p>
+     从项目的整体看
+    </p>
+    <ul>
+     <li>
+      不同身份的
+      <strong>
+       用户
+      </strong>
+      有不同的使用方式（比如普通用户和管理员）
+     </li>
+     <li>
+      多个用户之间可以
+      <strong>
+       协作
+      </strong>
+     </li>
+     <li>
+      与服务器大量
+      <strong>
+       交互
+      </strong>
+      ，或者使用了 WebSocket
+     </li>
+     <li>
+      View 要从
+      <strong>
+       多个来源
+      </strong>
+      获取数据
+     </li>
+    </ul>
+    <p>
+     从组件角度看
+    </p>
+    <ul>
+     <li>
+      某个组件的状态，需要
+      <strong>
+       共享
+      </strong>
+     </li>
+     <li>
+      组件有相当
+      <strong>
+       大量
+      </strong>
+      的，
+      <strong>
+       随时间变化
+      </strong>
+      的数据
+     </li>
+     <li>
+      state 需要有一个
+      <strong>
+       单一可靠
+      </strong>
+      数据源
+     </li>
+    </ul>
+    <h2 id="React18%E6%96%B0%E5%A2%9E%E7%89%B9%E6%80%A7%E2%AD%90%E2%AD%90">
+     <a href="https://mp.weixin.qq.com/s?__biz=MjM5MDA2MTI1MA==&amp;mid=2649110777&amp;idx=2&amp;sn=c2d23858560bd80506fbe05011ce9d38&amp;chksm=be581f54892f9642ad2f7780e1e5e7229717d59b3c36867df83faa95ebc366f3a11d1e5dd431&amp;scene=27" rel="nofollow" title="React18新增特性">
+      React18新增特性
+     </a>
+     ⭐⭐
+    </h2>
+    <h3 id="%E8%87%AA%E5%8A%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A5%E5%87%8F%E5%B0%91%E6%B8%B2%E6%9F%93">
+     <strong>
+      自动批处理以减少渲染
+     </strong>
+    </h3>
+    <p>
+     批处理是 React将多个状态更新分组到单个重新渲染中以获得更好的性能。
+    </p>
+    <pre><code class="language-javascript">
+function  App ()  { 
+  const  [ count ,  setCount ]  =  useState ( 0 ) ; 
+  const  [ flag ,  setFlag ]  =  useState ( false ) ;
+
+  function handleClick ( )  { 
+    setCount ( c  =&gt;  c  +  1 ) ;  // 还没有重新渲染
+    setFlag ( f  =&gt;  ! f ) ;  // 还没有重新渲染
+    // React 只会在最后重新渲染一次（这是批处理！）
+  }
+
+  return  ( 
+    &lt; div &gt; 
+      &lt; button  onClick = { handleClick } &gt; Next &lt; / button &gt; 
+      &lt; h1  style = { {  color : flag ? "blue" : "black"  } } &gt; { count } &lt; / h1 &gt; 
+    &lt; / div &gt; 
+  ) ; 
+}</code></pre>
+    <h4 id="flushSync%E6%B8%85%E6%B4%97%E5%90%8C%E6%AD%A5">
+     flushSync清洗同步
+    </h4>
+    <p>
+     与组件中的state一样自动批处理（即合并修改，每次set只渲染一次），可用
+     <code>
+      flushSync
+     </code>
+     方法消除
+    </p>
+    <pre><code class="language-javascript">
+import { flushSync } from 'react-dom'; // Note: react-dom, not react
+
+function handleClick() {
+  flushSync(() =&gt; {
+    setCounter(c =&gt; c + 1);
+  });
+  // React has updated the DOM by now
+  flushSync(() =&gt; {
+    setFlag(f =&gt; !f);
+  });
+  // React has updated the DOM by now
+}</code></pre>
+    <h3 id="%3CSuspense%20%3E%E7%BB%84%E4%BB%B6%E7%9A%84%20SSR%20%E6%94%AF%E6%8C%81">
+     &lt;
+     <strong>
+      Suspense
+     </strong>
+     &gt;组件
+     <strong>
+      的 SSR 支持
+     </strong>
+    </h3>
+    <p>
+     这基本上是服务器端渲染
+     <strong>
+      (SSR) 逻辑的扩展
+     </strong>
+     。
+    </p>
+    <p>
+     在典型的 React SSR 应用程序中，会发生以下步骤：
+    </p>
+    <ul>
+     <li>
+      <p>
+       服务器获取需要在
+       <strong>
+        UI
+       </strong>
+       上显示的相关数据
+      </p>
+     </li>
+     <li>
+      <p>
+       服务器将
+       <strong>
+        整个应用程序呈现为 HTML
+       </strong>
+       并将其发送给客户端作为响应
+      </p>
+     </li>
+     <li>
+      <p>
+       客户端下载
+       <strong>
+        JavaScript 包
+       </strong>
+       （除了 HTML）
+      </p>
+     </li>
+     <li>
+      <p>
+       在最后一步，客户端将
+       <strong>
+        javascript 逻辑连接到 HTML
+       </strong>
+       （称为
+       <strong>
+        hydration
+       </strong>
+       ）
+      </p>
+     </li>
+    </ul>
+    <p>
+     在下一步可以开始之前，必须
+     <strong>
+      立即
+     </strong>
+     完成
+     <strong>
+      整个应用程序
+     </strong>
+     的
+     <strong>
+      每个步骤
+     </strong>
+     。在
+     <strong>
+      初始加载时变慢且无响应
+     </strong>
+     。
+    </p>
+    <p>
+     &lt;Suspense&gt; 组件将应用程序
+     <strong>
+      分解为更小的独立单元
+     </strong>
+     ，这些单元经过提到的每个步骤。这样一旦用户看到内容，它就会变成互动的。
+    </p>
+    <h3 id="startTransition">
+     <strong>
+      startTransition
+     </strong>
+    </h3>
+    <h4 id="%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E5%88%86%E7%B1%BB">
+     <strong>
+      状态更新
+     </strong>
+     分类
+    </h4>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        紧急更新
+       </strong>
+       反映
+       <strong>
+        直接交互
+       </strong>
+       ，如
+       <strong>
+        打字、悬停、拖动
+       </strong>
+       等。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        过渡更新
+       </strong>
+       将
+       <strong>
+        UI
+       </strong>
+       从一个
+       <strong>
+        视图
+       </strong>
+       过渡到另一个视图。
+      </p>
+     </li>
+    </ul>
+    <h4 id="%E4%BD%BF%E7%94%A8">
+     使用
+    </h4>
+    <p>
+     <strong>
+      默认
+     </strong>
+     情况下，React 18 仍然将更新处理为
+     <strong>
+      紧急更新
+     </strong>
+     ，您可以通过将
+     <strong>
+      更新包装到startTransition
+     </strong>
+     .
+    </p>
+    <pre><code class="language-javascript">import  {  startTransition  }  from  'react' ;
+
+// 紧急：显示输入的内容
+setInputValue ( input ) ;
+
+// 将内部的任何状态更新标记为转换
+startTransition ( ( )  =&gt;  { 
+  // Transition: 显示结果
+  setSearchQuery ( input ) ; 
+} ) ;</code></pre>
+    <p>
+     包装在其中的更新startTransition被视为非紧急处理，如果出现更紧急的更新（如点击或按键），则会中断。
+    </p>
+    <pre><code class="language-javascript">// 显示你输入的内容
+setInputValue ( input ) ;
+
+// 显示结果
+setTimeout ( ( )  =&gt;  { 
+  setSearchQuery ( input ) ; 
+} ,  0 ) ;</code></pre>
+    <h4 id="%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">
+     应用场景
+    </h4>
+    <p>
+     startTransition来包装要
+     <strong>
+      移动到后台的任何更新
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       <strong>
+        缓慢渲染
+       </strong>
+       ：React 需要执行大量工作才能转换 UI 以显示结果。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        慢速网络
+       </strong>
+       ：React 正在等待来自网络的一些数据。此用例与
+       <strong>
+        Suspense
+       </strong>
+       紧密集成。
+      </p>
+     </li>
+    </ul>
+    <h3 id="Angular%2CVue%2CReact">
+     React脚手架
+    </h3>
+    <p>
+     开始一个react项目，
+     <strong>
+      不用手动配置
+     </strong>
+     ，直接开发
+    </p>
+    <h3 id="Angular%2CVue%2CReact%E5%8C%BA%E5%88%AB">
+     Angular,Vue,React对比⭐⭐
+    </h3>
+    <h4 id="Angular">
+     <br/>
+     Angular
+    </h4>
+    <p>
+     框架比较成熟
+     <strong>
+      完整
+     </strong>
+     ，
+     <strong>
+      过于庞大
+     </strong>
+     ，上手难；
+    </p>
+    <h4 id="React%E5%92%8CVue">
+     React和Vue
+    </h4>
+    <p>
+     <strong>
+      相同点
+     </strong>
+     ：
+    </p>
+    <p>
+     创建
+     <strong>
+      UI的js库
+     </strong>
+    </p>
+    <p>
+     都是使用了
+     <strong>
+      虚拟dom
+     </strong>
+    </p>
+    <p>
+     <strong>
+      组件化
+     </strong>
+     开发
+    </p>
+    <p>
+     <strong>
+      父子
+     </strong>
+     之间通信
+     <strong>
+      单项数据流
+     </strong>
+    </p>
+    <p>
+     都支持
+     <strong>
+      服务端渲染
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      不同点
+     </strong>
+     ：
+    </p>
+    <p>
+     vue轻量级框架，其核心库
+     <strong>
+      只关注视图层
+     </strong>
+     ，简单小巧、易学易上手；
+    </p>
+    <p>
+     个人维护项目； 适合于
+     <strong>
+      移动端
+     </strong>
+     开发；
+    </p>
+    <p>
+     reacct 的jsx，可读性好
+    </p>
+    <p>
+     vue的是 template
+    </p>
+    <p>
+     数据变化，react
+     <strong>
+      手动 setState
+     </strong>
+     vue
+     <strong>
+      自动响应式处理
+     </strong>
+     proxy object.DefineProperty
+    </p>
+    <p>
+     react 单向数据流 ，vue双向数据流
+    </p>
+    <p>
+     react 的 redux mobx
+    </p>
+    <p>
+     vue 的vuex  pinia
+    </p>
+    <h3 id="MVC%E3%80%81MVP%E3%80%81MVVM%E6%A8%A1%E5%BC%8F">
+     <strong>
+      MVC、MVP、MVVM模式
+     </strong>
+     ⭐⭐⭐
+    </h3>
+    <h4 id="MVC%20%EF%BC%88Model%20View%20Controller%EF%BC%89-React">
+     MVC （Model View Controller）
+    </h4>
+    <p>
+    </p>
+    <ul>
+     <li>
+      Model（模型）：
+      <strong>
+       提供数据
+      </strong>
+     </li>
+     <li>
+      View（视图）：
+      <strong>
+       显示数据
+      </strong>
+     </li>
+     <li>
+      Controller（控制器）：
+      <strong>
+       用户交互
+      </strong>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      【优点】
+     </strong>
+    </p>
+    <p>
+     <strong>
+      耦合性低，方便维护
+     </strong>
+     ，可以利于分工协作 重用性高
+    </p>
+    <p>
+     <strong>
+      【缺点】
+     </strong>
+    </p>
+    <p>
+     使得项目架构变得
+     <strong>
+      复杂
+     </strong>
+     ，对开发人员要求高
+    </p>
+    <ul>
+     <li>
+      key 对 DOM 操作的代价非常高
+     </li>
+     <li>
+      程序运行缓慢且效率低下
+     </li>
+     <li>
+      内存浪费严重
+     </li>
+     <li>
+      由于循环依赖性，组件模型需要围绕 models 和 views 进行创建
+     </li>
+    </ul>
+    <h4 id="MVP%EF%BC%88Model%20View%20Presenter%EF%BC%89">
+     MVP（Model View Presenter）
+    </h4>
+    <p>
+     从MVC演变而来，它们的基本思想有相通的地方
+     <strong>
+      Controller/Presenter
+     </strong>
+     负责逻辑的处理，
+    </p>
+    <h4 id="MVVM%20%EF%BC%88Model-View-ViewModel%EF%BC%89-Vue">
+     MVVM （Model View View Model）
+    </h4>
+    <p>
+     <strong>
+      视图
+     </strong>
+     和
+     <strong>
+      业务逻辑
+     </strong>
+     分开。
+    </p>
+    <p>
+     <strong>
+      View视图层
+     </strong>
+     ，
+     <strong>
+      Model 数据模型
+     </strong>
+     ，
+     <strong>
+      ViewModel
+     </strong>
+     是它们
+     <strong>
+      双向绑定的桥梁，自动同步更新
+     </strong>
+    </p>
+    <p>
+     <strong>
+      【优点】
+     </strong>
+    </p>
+    <p>
+     相比mvp各层的
+     <strong>
+      耦合度
+     </strong>
+     更低，一个viewmodel层可以给多个view层共用（
+     <strong>
+      一对多
+     </strong>
+     ），提高代码的
+     <strong>
+      可重用性
+     </strong>
+     。
+    </p>
+    <p>
+     *
+     <strong>
+      耦合度：模块间依赖的程度。
+     </strong>
+    </p>
+    <p>
+     <strong>
+      【缺点】
+     </strong>
+    </p>
+    <p>
+     因为使用了
+     <strong>
+      dataBinding
+     </strong>
+     ，增加了大量的
+     <strong>
+      内存开销
+     </strong>
+     ，增加了程序的
+     <strong>
+      编译
+     </strong>
+     时间，所以适合
+     <strong>
+      轻量级
+     </strong>
+     项目。
+    </p>
+    <p>
+     数据绑定使得
+     <strong>
+      Bug 很难被调试
+     </strong>
+     。你看到界面异常了，有可能是你
+     <strong>
+      View
+     </strong>
+     的代码有 Bug，也可能是
+     <strong>
+      Model
+     </strong>
+     的代码有问题
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      React和Vue都用了MVVM
+     </strong>
+    </p>
+    <p>
+     <strong>
+      React单向数据流
+     </strong>
+     ：只能由
+     <strong>
+      数据
+     </strong>
+     层的变化去影响
+     <strong>
+      视图
+     </strong>
+     层的变化
+    </p>
+    <p>
+     <strong>
+      Vue双向数据绑定
+     </strong>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f32383833383839312f:61727469636c652f64657461696c732f313234363338343536</p>

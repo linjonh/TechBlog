@@ -8,8 +8,9 @@ image:
   path: https://img-blog.csdnimg.cn/20190822002115395.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0luZGV4TWFu,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
   alt: Python之初级RPG小游戏
 artid: 100006397
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a:2f2f626c6f672e6373646e2e6e65742f496e6465784d616e2f:61727469636c652f64657461696c732f313030303036333937></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -208,3 +209,4 @@ while True:
 </div>
 
 
+<p class="artid" style="display:none">68747470733a:2f2f626c6f672e6373646e2e6e65742f496e6465784d616e2f:61727469636c652f64657461696c732f313030303036333937

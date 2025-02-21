@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 2024-12-11-HarmonyOS环境搭建
 date: 2024-12-11 22:10:51 +0800
 categories: [☀️HarmonyOS-TheDragonBoat]
@@ -7,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=136035057
   alt: HarmonyOS环境搭建
 artid: 136035057
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f4173696e636572656d616e2f:61727469636c652f64657461696c732f313336303335303537></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -638,3 +639,4 @@ artid: 136035057
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f4173696e636572656d616e2f:61727469636c652f64657461696c732f313336303335303537</p>

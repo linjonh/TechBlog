@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 2024-11-25-微软默认升级后桌面右下角Microsoft资讯新闻怎么关闭
 date: 2024-11-25 09:08:51 +0800
 categories: [电脑常识]
@@ -7,8 +8,8 @@ image:
   path: https://img-blog.csdnimg.cn/2021061009022318.png?x-oss-process&#61;image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIyMDEzMA&#61;&#61;,size_16,color_FFFFFF,t_70
   alt: 微软默认升级后桌面右下角Microsoft资讯新闻怎么关闭
 artid: 117766837
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f34323232303133302f:61727469636c652f64657461696c732f313137373636383337></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -51,3 +52,4 @@ artid: 117766837
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f34323232303133302f:61727469636c652f64657461696c732f313137373636383337</p>

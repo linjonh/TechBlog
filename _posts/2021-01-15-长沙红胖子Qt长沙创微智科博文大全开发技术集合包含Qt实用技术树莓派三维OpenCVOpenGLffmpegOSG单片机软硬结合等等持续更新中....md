@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=102478062
   alt: 长沙红胖子Qt长沙创微智科博文大全开发技术集合包含Qt实用技术树莓派三维OpenCVOpenGLffmpegOSG单片机软硬结合等等持续更新中...
 artid: 102478062
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f717132313439373933362f:61727469636c652f64657461696c732f313032343738303632></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -8561,3 +8561,4 @@ artid: 102478062
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f717132313439373933362f:61727469636c652f64657461696c732f313032343738303632</p>

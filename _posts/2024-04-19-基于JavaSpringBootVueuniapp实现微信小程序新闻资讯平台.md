@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 2024-04-19-基于JavaSpringBootVueuniapp实现微信小程序新闻资讯平台
 date: 2024-04-19 21:18:49 +0800
 categories: [Java精品毕设实战案例]
@@ -7,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=130801603
   alt: 基于JavaSpringBootVueuniapp实现微信小程序新闻资讯平台
 artid: 130801603
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f33393730393133342f:61727469636c652f64657461696c732f313330383031363033></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -828,3 +829,4 @@ public class NewsCollectionController {
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f33393730393133342f:61727469636c652f64657461696c732f313330383031363033</p>

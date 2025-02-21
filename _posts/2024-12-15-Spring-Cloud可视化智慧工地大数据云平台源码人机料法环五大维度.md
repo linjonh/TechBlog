@@ -1,0 +1,394 @@
+---
+layout: post
+title: 2024-12-15-Spring-Cloud可视化智慧工地大数据云平台源码人机料法环五大维度
+date: 2024-12-15 18:58:58 +0800
+categories: [智慧工地云平台源码]
+tags: [springcloud,大数据,云计算,智慧工地,智慧工地云平台,多智慧工地,APP]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=135711342
+  alt: Spring-Cloud可视化智慧工地大数据云平台源码人机料法环五大维度
+artid: 135711342
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Spring Cloud可视化智慧工地大数据云平台源码（人、机、料、法、环五大维度）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <blockquote>
+     <p>
+      <span style="color:#fe2c24;">
+       <strong>
+        智慧工地平台
+       </strong>
+      </span>
+      是依托物联网、互联网、AI、可视化建立的大数据管理平台，是一种全新的管理模式，能够实现劳务管理、安全施工、绿色施工的智能化和互联网化。围绕施工现场管理的
+      <span style="color:#fe2c24;">
+       <strong>
+        人、机、料、法、环
+       </strong>
+      </span>
+      五大维度，以及施工过程管理的进度、质量、安全三大体系为基础应用，实现全面高效的工程管理需求，满足工地
+      <span style="color:#fe2c24;">
+       <strong>
+        多角色、多视角
+       </strong>
+      </span>
+      的有效监管，实现工程建设管理的降本增效，为监管平台提供数据支撑。
+     </p>
+    </blockquote>
+    <p class="img-center">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/7326c1c90dfd6fcd2cde1f56be88a16c.gif"/>
+    </p>
+    <h3>
+     <span style="color:#0d0016;">
+      <strong>
+       智慧工地整体架构
+      </strong>
+     </span>
+    </h3>
+    <p>
+     <span style="color:#1a439c;">
+      <strong>
+       1、终端层
+      </strong>
+     </span>
+     ，充分利用物联网技术和移动应用提高现场管控能力。通过传感器、摄像头等终端设备，实现对项目建设过程的实时监控、智能感知、数据采集和高效协同，提高作业现场的管理能力。
+    </p>
+    <p>
+     <span style="color:#1a439c;">
+      <strong>
+       2、平台层
+      </strong>
+     </span>
+     ，各系统中处理的复杂业务，产生的大规模和大数据，这对服务器提高性能的计算能力和低成本的海量数据存储能力产生了巨大需求。通过云平台进行高效计算、存储及提供服务。让项目参建各方更便捷的访问数据，协同工作，使得建造过程更加集约、灵活和高效。
+    </p>
+    <p>
+     <br/>
+     <strong>
+      <span style="color:#1a439c;">
+       3、应用层
+      </span>
+     </strong>
+     ，应用层核心内容应始终围绕提升工程项目管理这一关键核心业务，因此智慧工地管理系统是工地现场管理的关键系统。
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/dcd052a61dc5f994feb491a457382582.png"/>
+    </p>
+    <h3>
+     <span style="color:#0d0016;">
+      <strong>
+       智慧工地项目监管端
+      </strong>
+     </span>
+    </h3>
+    <p>
+     <span style="color:#ed7976;">
+      <u>
+       <strong>
+        集团大屏
+       </strong>
+      </u>
+     </span>
+    </p>
+    <p>
+     实时统计今日全国各区域项目出勤概况、劳务人员出勤数、管理人员出勤数、设备在线情况、视频监控率、环境监控率等项目数据信息，帮助集团可视化掌握工地实时动态，实现数字化管理施工。
+    </p>
+    <p>
+     <span style="color:#ed7976;">
+      <u>
+       <strong>
+        项目概况
+       </strong>
+      </u>
+     </span>
+    </p>
+    <p>
+     大数据总览统计全国项目分布情况，人员概况、设备在线情况，项目阶段统计、全国工地安全情况分析。
+    </p>
+    <p>
+     <span style="color:#ed7976;">
+      <u>
+       <strong>
+        视频监控
+       </strong>
+      </u>
+     </span>
+    </p>
+    <p>
+     统计全国设备分布情况，离线数、在线数，设备运维情况，视频查看概况，并支持实时视频分析，并将分析结果发送至服务器在项目中采用大屏展示全国的项目视频情况。可以实时查看现场视频以及案件数量，针对异常的数据可以进行实时查看，及时预警。
+    </p>
+    <p>
+     <span style="color:#ed7976;">
+      <u>
+       <strong>
+        环境管理
+       </strong>
+      </u>
+     </span>
+    </p>
+    <p>
+     统计查看全国个区域项目报警情况，报警总数、支持查看历史报警趋势图，及设备安装情况分布， 辅助企业管理人员了解个区域项目的环境管理情况。
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/4894497f0d8fdceabab1d74d43ceb079.png"/>
+    </p>
+    <h3>
+     <span style="color:#0d0016;">
+      <strong>
+       数据大屏端
+      </strong>
+     </span>
+    </h3>
+    <p>
+     <span style="color:#ed7976;">
+      <strong>
+       <u>
+        大数据总览中心
+       </u>
+      </strong>
+     </span>
+    </p>
+    <p>
+     将主管单位所关注的重点问题进行统计汇总展示，包括项目统计、工程、设备、视频地图分布，工程人员在场与总人数统计，劳务人员年龄分布、劳务人员工种统计、工程进度统计、企业类型统计、环境监测实时报警数据等，可以通过大数据直观的掌握项目、企业、劳务人员概况信息，可投放到主管单位大屏作为指挥中心大屏展示内容。
+    </p>
+    <h3>
+     <span style="color:#0d0016;">
+      <strong>
+       智慧工地项目管理端
+      </strong>
+     </span>
+    </h3>
+    <p>
+     <strong>
+      1、人员管理：
+     </strong>
+     劳务实名制、工资监管、关键人员考勤、特殊人员持证上岗管理、人员定位等。
+    </p>
+    <p>
+     <strong>
+      2、绿色施工：
+     </strong>
+     环境监测、自动喷淋、智能用水用电、车辆清洗等。
+    </p>
+    <p>
+     <strong>
+      3、安全施工：
+     </strong>
+     塔吊监测、吊钩可视化、升降机监测、视频监控、车辆监管、高支模等。
+    </p>
+    <p>
+     <strong>
+      4、质量监管：
+     </strong>
+     巡检管理、溯源管理、物料管理等。
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/94ee909cae6c22f6412a69a8288ae4a1.png"/>
+    </p>
+    <h3>
+     <span style="color:#0d0016;">
+      <strong>
+       技术架构
+      </strong>
+     </span>
+    </h3>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        微服务+Java+Spring Cloud +Vue+UniApp +MySql
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        开发语言：Java
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        开发工具：Idea
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        前端框架：Vue
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        后端框架：Spring Cloud
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        数 据 库：MySql
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        移 动 端：UniApp
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        系统端口：PC端（监管平台、项目管理平台）、H5移动端、数据大屏端
+       </span>
+      </span>
+     </strong>
+    </p>
+    <p style="text-align:center;">
+     <strong>
+      <span style="color:#f3f3f4;">
+       <span style="background-color:#4da8ee;">
+        <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/854704056bba99b13bc87c5b0138d9a5.png"/>
+       </span>
+      </span>
+     </strong>
+    </p>
+    <h3>
+     <span style="color:#0d0016;">
+      <strong>
+       智慧工地云平台系统功能
+      </strong>
+     </span>
+    </h3>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       1、基础数据管理
+      </strong>
+     </span>
+    </p>
+    <p>
+     提供对各个建筑工地、工程项目、承建机构等信息的维护、配置和管理。分类别展示了工地名称、施工单位、负责人、工地位置、开工时间、联系方式、工地出入口和数据状态等信息，通过搜索栏可直接查询各个工地数据或者某个时间段内处于开工状态的工地信息。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       2、人员管理
+      </strong>
+     </span>
+    </p>
+    <p>
+     农民工实名制管理系统可以实时记录农民工进出工地、考勤、工资支付等信息，人员履历、资料、资质证件管理，培训、合同、工种等信息管理，实时统计在场人员各项数据。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       3、安全隐患管理
+      </strong>
+     </span>
+    </p>
+    <p>
+     安全隐患信息实时上报，使安全隐患管理流程化，形成管理闭环。系统具备隐患整改验收、提醒功能，生成整改通知单与整改验收单，实现安全隐患报表统计。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       4、视频监控
+      </strong>
+     </span>
+    </p>
+    <p>
+     智慧工地管理平台能够实现实时图像点播、远程控制、图像存储和备份、历史图像的检索和回收。视频监控可以覆盖工地各个角落，做到监控无死角。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       5、塔吊监控
+      </strong>
+     </span>
+    </p>
+    <p>
+     系统支持吊装定位、传感器状态检测、支持塔机五限位预警/报警控制、支持远程GPRS传输以及黑匣子记录。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       6、升降机监控
+      </strong>
+     </span>
+    </p>
+    <p>
+     升降机监控功能能够实现升降机安全监测、隐患预警，超出人数控制范围系统会自动报警，同时对速度、倾斜度、高度限位、防冲顶、电压、门锁等进行检测。
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/184456fbafde1b4af7d3ba9a6490846e.png"/>
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       7、管理分析报表
+      </strong>
+     </span>
+    </p>
+    <p>
+     智慧工地管理平台采用统计报表、曲线图或柱状图等方式，按照年、月、天、小时等定制条件对实名制人员数据、、噪声扬尘监测数据等业务运行情况进行汇总，生成统计报表，提供按照时间监测设备查询各类监测数据的明细情况。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       8、移动端数据推送
+      </strong>
+     </span>
+    </p>
+    <p>
+     根据监测频度与并发量情况，平台服务器定期将获取的监测数据推送到移动端，借助智能手机，可实时显示高支模板变形监测数据、大体积混凝土温度监测数据以及噪声分贝、扬尘浓度等环境监测数据，及时排查各类安全隐患。
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       9、数据接收管理
+      </strong>
+     </span>
+    </p>
+    <p>
+     实现对各工地数据上报来源、时间、数据包大小等详细情况的自动记录，当数据接收通道出现故障时，可以根据接收记录对上报数据进行追溯与管理。
+     <br/>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f32373734313738372f:61727469636c652f64657461696c732f313335373131333432</p>

@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=145453732
   alt: DeepSeek本地部署投喂数据训练AI教程
 artid: 145453732
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f:672e6373646e2e6e65742f323330315f37363136383338312f:61727469636c652f64657461696c732f313435343533373332></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -584,3 +584,4 @@ artid: 145453732
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f:672e6373646e2e6e65742f323330315f37363136383338312f:61727469636c652f64657461696c732f313435343533373332</p>

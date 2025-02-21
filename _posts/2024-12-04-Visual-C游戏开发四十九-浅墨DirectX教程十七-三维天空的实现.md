@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=8715196
   alt: Visual-C游戏开发四十九-浅墨DirectX教程十七-三维天空的实现
 artid: 8715196
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470:733a2f2f626c6f672e6373646e2e6e65742f7a686d78793535:352f61727469636c652f64657461696c732f38373135313936></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -2246,3 +2247,4 @@ void Direct3D_CleanUp()
 </div>
 
 
+<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f7a686d78793535:352f61727469636c652f64657461696c732f38373135313936

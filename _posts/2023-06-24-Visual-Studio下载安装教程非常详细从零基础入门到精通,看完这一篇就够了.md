@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=131358012
   alt: Visual-Studio下载安装教程非常详细从零基础入门到精通,看完这一篇就够了
 artid: 131358012
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f4a6176616368696368692f:61727469636c652f64657461696c732f313331333538303132></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -1446,3 +1446,4 @@ int main() {
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f4a6176616368696368692f:61727469636c652f64657461696c732f313331333538303132</p>

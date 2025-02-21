@@ -5,6 +5,7 @@ date:  2019-08-21 15:46:00 +0800
 categories:  Android 水印 自定义水印 OpenGL 
 tags:  Android OpenGL DrawImage
 
+render_with_liquid: false
 ---
 * content
 {:toc}

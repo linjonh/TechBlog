@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=136693451
   alt: Pycharm使用django框架bootstrap前端项目教程
 artid: 136693451
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f37323934393230352f:61727469636c652f64657461696c732f313336363933343531></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -284,3 +285,4 @@ def index(request):
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f37323934393230352f:61727469636c652f64657461696c732f313336363933343531

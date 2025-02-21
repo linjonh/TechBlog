@@ -1,0 +1,294 @@
+---
+layout: post
+title: 2024-06-14-重磅Stable-Diffusion-3正式开源附安装方法和下载地址
+date: 2024-06-14 18:02:34 +0800
+categories: [AI绘画,StableDiffuison应用教程]
+tags: [stablediffusion,SD3,AI绘画入门,AI绘画,人工智能]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=139687608
+  alt: 重磅Stable-Diffusion-3正式开源附安装方法和下载地址
+artid: 139687608
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     重磅！Stable Diffusion 3正式开源（附安装方法和下载地址）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     正如承诺的那样，Stability AI在6月12日正式开源了Stable Diffusion 3（Medium版本）！不愧是AI生图领域的“开源英雄”。
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/078bd39747b7e856708635fbe9905f7d.jpeg"/>
+    </p>
+    <p>
+     接下来就讲讲，怎么在本地部署最新的Stable Diffusion 3，大致分为以下几步（开始操作前，
+     <strong>
+      请确保你有“畅通”的网络
+     </strong>
+     ）：
+    </p>
+    <hr/>
+    <p>
+     <strong>
+      第一步：安装ComfyUI的最新版本
+     </strong>
+    </p>
+    <p>
+     1、请从下面的地址下载压缩包，并解压缩到硬盘
+     <br/>
+     https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu121_or_cpu.7z
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/77b16ad737d7ba707a8dd894d0229571.jpeg"/>
+    </p>
+    <p>
+     2、进入安装好的目录，运行run_nvidia_gpu.bat，接下来系统会自动下载必需的文件
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/0f97d910cb4b765703ef3db2c68b4cf6.jpeg"/>
+    </p>
+    <p>
+     3、之后会自动弹出如下的网页，说明安装成功
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/488abe9dc09337d8afa4f3d9ee226147.jpeg"/>
+    </p>
+    <p>
+     注意：这个后台窗口要保持开启，否则ComfyUI无法正常使用
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/e3dc90084cc3504522c9f0ac7dec18a5.jpeg"/>
+    </p>
+    <hr/>
+    <p>
+     **第二步：下载SD3模型和文本编码器
+    </p>
+    <p>
+     **
+    </p>
+    <p>
+     1、进入SD3的抱抱脸页面：
+     <br/>
+     https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main
+    </p>
+    <p>
+     2、下载主要模型，全部下载大约有20G
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/c6caf7b2d26abbad34dcf1bee7beec8a.jpeg"/>
+    </p>
+    <p>
+     3、到text_encoders目录里，下载文本编码器，全部下载大约有16G
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6c370ff995c7390b531b97c6c2903e02.png"/>
+    </p>
+    <hr/>
+    <p>
+     **
+     <br/>
+     第三步：把模型和编码器放入ComfyUI的对应目录**
+    </p>
+    <p>
+     1、下载后的模型需要放到 \ComfyUI\models\checkpoints 文件夹里
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/f301893e7c8921a461e176b038ef8f91.jpeg"/>
+    </p>
+    <p>
+     2、下载后的模型文本编码器需要放到 \ComfyUI\models\clip 文件夹里
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/22535124cf0a10107f384720d6acfee6.jpeg"/>
+    </p>
+    <hr/>
+    <p>
+     **
+     <br/>
+     第四步：将官方提供的json流程导入ComfyUI**
+    </p>
+    <p>
+     1、到comfy_example_workflows目录里，下载工作流，建议全部下载
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/8a2d2470341ad0f27dce82b0e33f8b0f.jpeg"/>
+    </p>
+    <p>
+     2、将下载的json文件，根据需要拖到ComfyUI的界面，就会出现相应的工作流
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/faf07f41f90531178001646da7332fc8.jpeg"/>
+    </p>
+    <hr/>
+    <p>
+     **
+     <br/>
+     第五步：开始使用**
+    </p>
+    <p>
+     你需要先选择正确的模型以及文本编码器，并输入“正面提示词”和“负面提示词”，然后点击右方的“Queue Prompt”按钮，即可开始绘画！
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/563839f2e794367396cdd1e673d104f7.jpeg"/>
+    </p>
+    <p>
+     来简单测试一下
+    </p>
+    <p>
+     提示词：《古墓丽影》的lora croft站在玛雅神庙前，上衣写着“LORA”几个字母，她20岁，红色头发，单马尾辫，她面向镜头，电影胶片画质
+     <br/>
+     Lora croft from Tomb Raider stands in front of the Mayan temple, with the letters “LORA” written on her shirt. She is 20 years old, with red hair and a single ponytail. She faces the camera and the film quality is excellent
+    </p>
+    <p>
+     <img alt="图片" src="https://i-blog.csdnimg.cn/blog_migrate/772d1a5985c643c2fb2de71899c3b5ac.png"/>
+    </p>
+    <p>
+     再试一个
+    </p>
+    <p>
+     提示词：特朗普和一个机器女郎在跳迪斯科，机器女郎有模特身材，全身泛着金属光泽，头部侧面有发光的配件，旁边有许多观众
+     <br/>
+     Trump danced at a disco with a robot girl with a mannequin body, a metallic sheen all over her body and glowing accessories on the side of her head, surrounded by many spectators
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/e5a8c1c9662b9afd5c801b5f08455c6d.png"/>
+    </p>
+    <p>
+     再试一个场景类
+    </p>
+    <p>
+     提示词：图为梦幻般的城堡场景：夜空下，一座雄伟的城堡矗立在山顶上，明亮的满月和闪烁的星星是背景。城堡四周的灯光照亮了蜿蜒的石阶，两侧的护栏上也装饰着灯笼。城堡设计精美，高耸的尖塔和神秘而神奇的氛围。整个场景充满童话色彩，非常适合作为奇幻故事的背景。
+     <br/>
+     The picture shows a dreamy castle scene: under the night sky, a majestic castle stands on the top of a mountain, with a bright full moon and twinkling stars in the background. The lights around the castle illuminate the winding stone steps, and the guardrails on both sides are also decorated with lanterns. The castle is beautifully designed with towering spiers and a mysterious and magical atmosphere. The overall scene is full of fairy tale colors and is very suitable as a background for fantasy stories
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/bc562c11a102ff223c95814806393ce9.png"/>
+    </p>
+    <p>
+     可以看到，SD3相对之前版本，具有优秀的文字生成能力，对提示词的理解也比较准确。鉴于本文主要是介绍安装使用方法，兴趣的朋友不妨自行详细测试！
+    </p>
+    <h4>
+     <a id="AI_108">
+     </a>
+     关于AI绘画技术储备
+    </h4>
+    <p>
+     学好 AI绘画 不论是就业还是做副业赚钱都不错，但要学会 AI绘画 还是要有一个学习规划。最后大家分享一份全套的 AI绘画 学习资料，给那些想学习 AI绘画 的小伙伴们一点帮助！
+    </p>
+    <p>
+     <font color="red">
+      感兴趣的小伙伴，赠送全套AIGC学习资料和安装工具，包含AI绘画、AI人工智能等前沿科技教程，模型插件，具体看下方。
+     </font>
+    </p>
+    <p>
+     <strong>
+      <mark>
+       需要的可以微信扫描下方CSDN官方认证二维码免费领取
+       <font color="red">
+        【保证100%免费】
+       </font>
+      </mark>
+     </strong>
+    </p>
+    <center>
+     <img src="https://i-blog.csdnimg.cn/img_convert/70e650f3b9a78221000fdc13679bac31.png"/>
+     <center>
+     </center>
+    </center>
+    <p>
+     <strong>
+      一、AIGC所有方向的学习路线
+     </strong>
+    </p>
+    <p>
+     AIGC所有方向的技术点做的整理，形成各个领域的知识点汇总，它的用处就在于，你可以按照下面的知识点去找对应的学习资源，保证自己学得较为全面。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/1b1cab9c91b3aeff41c3bac3310c410e.png"/>
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/d031252fcc8679953d0e75884d94d9cc.png#pic_center"/>
+    </p>
+    <p>
+     <strong>
+      二、AIGC必备工具
+     </strong>
+    </p>
+    <p>
+     工具都帮大家整理好了，安装就可直接上手！
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/bb1138400c89c4f4a35a285518e0d429.png"/>
+    </p>
+    <p>
+     <strong>
+      三、最新AIGC学习笔记
+     </strong>
+    </p>
+    <p>
+     当我学到一定基础，有自己的理解能力的时候，会去阅读一些前辈整理的书籍或者手写的笔记资料，这些笔记详细记载了他们对一些技术点的理解，这些理解是比较独到，可以学到不一样的思路。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9ed7f683ffa0be9b4c731df22c52e7f6.png"/>
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/316f26c00706b15bae812d4ddf5ee304.png"/>
+    </p>
+    <p>
+     <strong>
+      四、AIGC视频教程合集
+     </strong>
+    </p>
+    <p>
+     观看全面零基础学习视频，看视频学习是最快捷也是最有效果的方式，跟着视频中老师的思路，从基础到深入，还是很容易入门的。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c73dd95b03963edc0f97e15bc2b20bbb.png"/>
+    </p>
+    <p>
+     <strong>
+      五、实战案例
+     </strong>
+    </p>
+    <p>
+     纸上得来终觉浅，要学会跟着视频一起敲，要动手实操，才能将自己的所学运用到实际当中去，这时候可以搞点实战案例来学习。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/3ff5d36806bf14c4dd8a1fc85ad3e2e5.png"/>
+     <br/>
+     <strong>
+      <mark>
+       这份完整版的学习资料已经上传CSDN，朋友们如果需要可以微信扫描下方CSDN官方认证二维码免费领取
+       <font color="red">
+        【保证100%免费】
+       </font>
+      </mark>
+     </strong>
+    </p>
+    <center>
+     <img src="https://i-blog.csdnimg.cn/img_convert/70e650f3b9a78221000fdc13679bac31.png"/>
+     <center>
+     </center>
+    </center>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f35353135343836362f:61727469636c652f64657461696c732f313339363837363038</p>

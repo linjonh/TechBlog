@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=134887159
   alt: 已解决如何在服务器中下载huggingface模型,解决huggingface无法连接
 artid: 134887159
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f:2f626c6f672e6373646e2e6e65742f6136313032323730362f:61727469636c652f64657461696c732f313334383837313539></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -144,3 +145,4 @@ python model_download.py --repo_id （模型ID)
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f:2f626c6f672e6373646e2e6e65742f6136313032323730362f:61727469636c652f64657461696c732f313334383837313539

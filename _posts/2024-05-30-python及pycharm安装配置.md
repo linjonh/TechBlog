@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=139243659
   alt: python及pycharm安装配置
 artid: 139243659
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34353935313634342f:61727469636c652f64657461696c732f313339323433363539></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -1020,3 +1021,4 @@ if __name__ == '__main__':
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34353935313634342f:61727469636c652f64657461696c732f313339323433363539

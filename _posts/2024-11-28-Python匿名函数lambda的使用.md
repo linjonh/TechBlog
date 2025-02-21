@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=90730797
   alt: Python匿名函数lambda的使用
 artid: 90730797
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f67:2e6373646e2e6e65742f77656978696e5f3433373930323736:2f61727469636c652f64657461696c732f3930373330373937></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -209,3 +210,4 @@ print(return_func(100))</code></pre>
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f67:2e6373646e2e6e65742f77656978696e5f3433373930323736:2f61727469636c652f64657461696c732f3930373330373937

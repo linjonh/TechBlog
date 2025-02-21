@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=141947470
   alt: K8s的福音Kubernetes企业级云原生运维实战导读
 artid: 141947470
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71796a31393932303730342f:61727469636c652f64657461696c732f313431393437343730></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -116,3 +116,4 @@ artid: 141947470
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71796a31393932303730342f:61727469636c652f64657461696c732f313431393437343730</p>

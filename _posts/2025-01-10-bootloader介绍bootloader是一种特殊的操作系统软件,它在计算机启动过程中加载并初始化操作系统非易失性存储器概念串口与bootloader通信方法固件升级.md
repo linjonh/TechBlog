@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=141933550
   alt: bootloader介绍bootloader是一种特殊的操作系统软件,它在计算机启动过程中加载并初始化操作系统非易失性存储器概念串口与bootloader通信方法固件升级
 artid: 141933550
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470:733a2f2f626c6f672e6373646e2e6e65742f446f6e746c612f:61727469636c652f64657461696c732f313431393333353530></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -734,3 +735,4 @@ DW 0xAA55       ; 标记为可启动扇区
 </div>
 
 
+<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f446f6e746c612f:61727469636c652f64657461696c732f313431393333353530

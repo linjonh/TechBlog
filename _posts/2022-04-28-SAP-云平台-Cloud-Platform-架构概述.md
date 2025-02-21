@@ -8,8 +8,9 @@ image:
   path: https://img-blog.csdnimg.cn/img_convert/418b542343783f5cc40e985e50c97374.png?x-oss-process=image/resize,m_fixed,h_150
   alt: SAP-云平台-Cloud-Platform-架构概述
 artid: 124468907
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=6874747073:3a2f2f626c6f672e6373646e2e6e65742f693034323431362f:61727469636c652f64657461696c732f313234343638393037></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -374,3 +375,4 @@ artid: 124468907
 </div>
 
 
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f693034323431362f:61727469636c652f64657461696c732f313234343638393037

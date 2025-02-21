@@ -1,0 +1,938 @@
+---
+layout: post
+title: 2024-09-21-Python安装与环境配置全程详细教学包含Windows版和Mac版
+date: 2024-09-21 15:19:50 +0800
+categories: [编程环境保姆级教程]
+tags: [python,开发语言,pycharm]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=141940274
+  alt: Python安装与环境配置全程详细教学包含Windows版和Mac版
+artid: 141940274
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Python安装与环境配置全程详细教学（包含Windows版和Mac版）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h2 style="background-color:transparent;">
+     <strong>
+      Windows版
+     </strong>
+    </h2>
+    <h3>
+     Python的安装与环境配置
+    </h3>
+    <h4 style="background-color:transparent;">
+     1.下载Python
+    </h4>
+    <p>
+     Python下载地址：
+     <a href="https://www.python.org/downloads/" rel="nofollow" title="Download Python | Python.org">
+      Download Python | Python.org
+     </a>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/cb5701fbf76649e1980cd82954e415a2.png"/>
+    </p>
+    <p>
+     可以在这里直接
+     <span style="color:#fe2c24;">
+      点击下载
+     </span>
+     ，就会下载你电脑对应的最新版本
+    </p>
+    <p>
+     如果你要是不想下载对应的最新版或者因为某些原因你想安装某一特定版本的Python你可以在上面的
+     <span style="color:#fe2c24;">
+      Downloads中点击Windows
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/4bcfd6bdac6a4b27b88983583da2fde2.png"/>
+    </p>
+    <p style="text-align:justify;">
+     你就可以看到所有版本的Python，其中左边Stable Releases对应的是稳定版，右边Pre-releases对应的是提前测试版
+     <span style="color:#fe2c24;">
+      不建议下载
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/1706ba16ce174b78aebe0ae495f2ac67.png"/>
+    </p>
+    <p style="text-align:justify;">
+     下载时记得点击Download Windows installer（64-bit） 现在的电脑一般都是64位了，如果你的电脑不是64位请选择对应版本的进行安装，如果你不确定你的电脑是多少位系统，你可以尝试以下几种方法：首先如果你的电脑系统是Win11那一定是64位，你依然可以从以下途径查看
+    </p>
+    <p style="text-align:justify;">
+     1.打开
+     <span style="color:#fe2c24;">
+      设置
+     </span>
+     ，点击
+     <span style="color:#fe2c24;">
+      系统
+     </span>
+     ，向下翻找到
+     <span style="color:#fe2c24;">
+      系统信息
+     </span>
+     ，打开后就能清楚看到自己的电 脑是64位处理器的了
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/4b9986ee550b47849dd6ff8efcbe3027.png"/>
+    </p>
+    <p style="text-align:justify;">
+     2.通过命令行查询，在键盘上同时
+     <span style="color:#fe2c24;">
+      按住win+r键
+     </span>
+     ，然后
+     <span style="color:#fe2c24;">
+      输入cmd
+     </span>
+     ，如图所示，然后
+     <span style="color:#fe2c24;">
+      按下回车
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d70e757576d846b9a8e74dee072156d6.png"/>
+    </p>
+    <p style="text-align:justify;">
+     再输入Systeminfo即可找到自己的系统信息
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/344c4d75dbc74b5197c883b30dcc1803.png"/>
+    </p>
+    <p style="text-align:justify;">
+     以上两种方法确认后找到对应版本的进行下载就完成了第一步，下载Python
+    </p>
+    <h4 style="background-color:transparent;text-align:justify;">
+     2.安装Python
+    </h4>
+    <h5>
+     2.1最轻松安装
+    </h5>
+    <p>
+     下载后打开下载里的Python安装包，然后建议
+     <span style="color:#fe2c24;">
+      勾选下面两项
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/75bd894c1de545ca99dc1275965e7b94.png"/>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      第一个表示以管理员权限安装Python
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      第二个表示自动添加Python的环境路径
+     </span>
+     <span style="color:#fe2c24;">
+      （强烈建议勾选上否则你需要观看本教学的环境配置一步）
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      然后上面的Install Now可以理解成默认路径安装，也就是在C盘进行安装，同样你可以选择下面的Customize installation以自定义选择安装的位置
+     </span>
+    </p>
+    <p>
+     <span style="color:#fe2c24;">
+      如果弹出是否允许之类的弹窗选择是即可
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      如果直接点击上面的
+     </span>
+     <span style="color:#fe2c24;">
+      Install Now
+     </span>
+     <span style="color:#0d0016;">
+      等待片刻后，他就会安装完毕，出现如下画面
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      这里Diable path length limit是为了防止文件路径名字过长而取消路径长度限制，建议不要点击，直接
+     </span>
+     <span style="color:#fe2c24;">
+      点击Close
+     </span>
+     <span style="color:#0d0016;">
+      就好
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/04e949f2e0fa44b2a4d19ea353392ba3.png"/>
+    </p>
+    <p>
+     这是推荐的安装流程，如果你想自定义安装，你可以参考以下教程
+    </p>
+    <h5 style="background-color:transparent;">
+     2.2自定义安装
+    </h5>
+    <p>
+     在打开安装包后还是建议
+     <span style="color:#fe2c24;">
+      勾选下面两项
+     </span>
+     <span style="color:#0d0016;">
+      ，然后选择
+     </span>
+     <span style="color:#fe2c24;">
+      Customize installation
+     </span>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/75bd894c1de545ca99dc1275965e7b94.png"/>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      这些都直接不动直接
+     </span>
+     <span style="color:#fe2c24;">
+      点击Next
+     </span>
+     <span style="color:#0d0016;">
+      下一步就好
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      下面解释这些选项：
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Documentation：安装Python的文档和帮助文件
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      pip：安装Python包管理工具
+     </span>
+     ，
+     <span style="color:#fe2c24;">
+      非常关键
+     </span>
+     <span style="color:#0d0016;">
+      ，
+     </span>
+     <span style="color:#fe2c24;">
+      必选
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      tcl/tk and IDLE：其中tcl/tk是两个图形用户界面，而IDLE的名字是Integrated Development Environment and Learning Environment（集成开发环境和学习环境）所以这一项是一个python自带的ide但是我们后文更推荐使用pycharm作为ide进行学习
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Python test suite：Python官方提供的一套用于测试Python解释器和标准库的测试套件，听上去很重要但是对新手来说不重要，留着吧
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      py launcher for all users（requires admin privileges）：首先py launcher可以保证用户在命令行里使用python命令启动python，而后半句for all users是询问是否为电脑上的所有用户安装上python，而这一步需要管理员权限对应的是括号里的那句话
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/2f3aeabadb564c4797a41dd958617ff9.png"/>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      这里首先下面Customize install location选择的是安装路径，这个可以自选
+     </span>
+     <span style="color:#fe2c24;">
+      （建议路径中不要带中文）
+     </span>
+     <span style="color:#0d0016;">
+      ，选择好后
+     </span>
+     <span style="color:#fe2c24;">
+      点击Install
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      下面解释这些选项：
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Install Python 3.12 for all users：为所有用户安装，效果与前面的py launcher for all users（requires admin privileges）一致
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Associate files with Python（requires the 'py' launcher）：让系统自动将 Python 关联到特定的文件类型，使得在文件资源管理器中双击 Python 脚本文件时，系统会自动使用 Python 解释器来运行这些脚本
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Create shortcuts for installed applications：创建桌面快捷方式
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Add Python to environment variables：选择这个选项会将 Python 解释器的路径添加到系统的环境变量中，这样就可以在命令行中直接运行 Python 解释器而不需要输入完整的路径，
+     </span>
+     <span style="color:#fe2c24;">
+      本来就勾着的就不动了
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Precompile standard library：对 Python 标准库进行预编译，以提高标准库模块的导入速度，听着很厉害但是对新手来说不重要，可以勾可以不勾
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Download debugging symbols：给开发人员和调试人员用的调试符号
+     </span>
+    </p>
+    <p>
+     <span style="color:#0d0016;">
+      Download debug binaries（requires VS 2017 or later）：给开发人员和调试人员用的调试版本的二进制文件
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d0b5fe5166784d42a124da7d2fcdbb5c.png"/>
+    </p>
+    <p>
+     安装完毕后，出现如下画面，直接
+     <span style="color:#fe2c24;">
+      点击Close
+     </span>
+     ：
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/04e949f2e0fa44b2a4d19ea353392ba3.png"/>
+     至此你已完成安装Python
+    </p>
+    <h4 style="background-color:transparent;">
+     3.环境配置
+    </h4>
+    <p>
+     如果你在安装Python的时候点击了Add python.exe to PATH记得点击了这一步，恭喜你可以直接跳过新手最困难的一个步骤直接看下一环节了！
+    </p>
+    <p>
+     如果你没有点击Add python.exe to PATH这一步或者你忘记是否点击这一步，这里建议你可以再次点击安装包，它将出现如下界面，然后
+     <span style="color:#fe2c24;">
+      点击Uninstall
+     </span>
+     即可开始卸载
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/a35eb7213f114cfaaf22429ccaaf2199.png"/>
+    </p>
+    <p>
+     出现如下界面表示卸载成功，然后你可以回到上一步安装Python中重新安装Python，在Python安装的第一页
+     <span style="color:#fe2c24;">
+      点击Add python.exe to PATH
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/079e4b9b6fb04e28a0ca7a77bbfa3346.png"/>
+    </p>
+    <p>
+     当然这个自动环境配置出现于Python 3.3版本，如果你想安装这个版本之前的Python你需要手动进行环境配置，当然如果你不想进行卸载重新安装这样的操作，而是想自己配置环境的话你也可以继续看下面的步骤
+    </p>
+    <p>
+     打开
+     <span style="color:#fe2c24;">
+      设置
+     </span>
+     里的
+     <span style="color:#fe2c24;">
+      系统信息
+     </span>
+     然后点击
+     <span style="color:#fe2c24;">
+      高级系统设置
+     </span>
+     ，再点击
+     <span style="color:#fe2c24;">
+      环境变量
+     </span>
+     打开到对应环境配置界面
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/97366380916341f8b3c65fa3b86623e7.png"/>
+    </p>
+    <p>
+     也可以右击桌面上的
+     <span style="color:#fe2c24;">
+      此电脑
+     </span>
+     或者文件管理器中的此电脑选择
+     <span style="color:#fe2c24;">
+      属性
+     </span>
+     打开系统信息界面再选择
+     <span style="color:#fe2c24;">
+      高级系统设置
+     </span>
+     打开
+     <span style="color:#fe2c24;">
+      环境变量
+     </span>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/f5ed8f267084425ea390b89025bc76b9.png"/>
+    </p>
+    <p>
+     文件管理器如上图所示，是菜单栏长的这个像文件夹的软件
+    </p>
+    <p>
+     如果你还是找不到文件管理器，你可以再从刚刚下载的地方选择
+     <span style="color:#fe2c24;">
+      在文件夹中显示
+     </span>
+     ，打开文件管理器在左边能找到此电脑
+    </p>
+    <p>
+     或者你还可以通过命令行打开文件管理器，只需要像前文中在键盘上
+     <span style="color:#fe2c24;">
+      同时按住win+r键
+     </span>
+     ，然后
+     <span style="color:#fe2c24;">
+      输入cmd
+     </span>
+     按下
+     <span style="color:#fe2c24;">
+      回车
+     </span>
+     就可以打开命令行
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d70e757576d846b9a8e74dee072156d6.png"/>
+    </p>
+    <p>
+     然后
+     <span style="color:#fe2c24;">
+      输入explorer
+     </span>
+     ，系统即会弹出文件管理器
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/526d084b64ff4d9fbd1d93fc49470f19.png"/>
+    </p>
+    <p>
+     打开环境配置后，在下面的系统变量中
+     <span style="color:#fe2c24;">
+      双击Path
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <span style="color:#fe2c24;">
+      <img alt="" src="https://i-blog.csdnimg.cn/direct/dcd314e8390b4158b276808da9ffe157.png"/>
+     </span>
+    </p>
+    <p>
+     然后点击
+     <span style="color:#fe2c24;">
+      新建
+     </span>
+     ，然后
+     <span style="color:#fe2c24;">
+      输入Python的路径
+     </span>
+     ，再点击
+     <span style="color:#fe2c24;">
+      确定
+     </span>
+     。如果你刚刚选择的是默认安装，那路径应该是类似于以下的路径：
+    </p>
+    <p>
+     C:\Users\29545\AppData\Local\Programs\Python\Python312\
+    </p>
+    <p>
+     其中Users\后面跟的是你个人的
+     <span style="color:#fe2c24;">
+      用户名
+     </span>
+     ，Python后跟的应该是你
+     <span style="color:#fe2c24;">
+      Python对应的版本
+     </span>
+     ，你可以先在文件管理器中尝试寻找到自己电脑上的Python路径。如果你是自定义安装，这里的路径就是自己自定义选择的路径
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/0cdfcc0ad3644a5b92e4fe233737ad71.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     如果你是在安装的时候选择自动配置环境的话，你可以双击用户变量的Path中查看到Python安装时候自动帮你配置好的环境
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/3767d07a703a43e3b2e5502a08af8511.png"/>
+    </p>
+    <p>
+     如果你想知道用户变量和系统变量的不同你可以看本文后面的问题环节
+    </p>
+    <p>
+     你也可以使用命令行来配置环境
+    </p>
+    <p style="text-align:justify;">
+     如前文在键盘上同时
+     <span style="color:#fe2c24;">
+      按住win+r键
+     </span>
+     ，然后
+     <span style="color:#fe2c24;">
+      输入cmd
+     </span>
+     ，如图所示，然后
+     <span style="color:#fe2c24;">
+      按下回车
+     </span>
+    </p>
+    <p style="text-align:justify;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d70e757576d846b9a8e74dee072156d6.png"/>
+    </p>
+    <p>
+     打开命令行后输入path=%path%;
+     <span style="color:#fe2c24;">
+      C:\Users\29545\AppData\Local\Programs\Python\Python312\
+     </span>
+     红色部分是对应的路径名，可以看前面讲解怎么找到路径名
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/38d1b6b146364e2484cdbb04e13acdbf.png"/>
+    </p>
+    <p>
+     至此你已完成Python的环境配置
+    </p>
+    <h4 style="background-color:transparent;">
+     4.测试检验
+    </h4>
+    <p>
+     让我们再次打开命令行，或者你没有关掉的命令行
+    </p>
+    <p>
+     如果你忘记了怎么打开，你可以在键盘上同时
+     <span style="color:#fe2c24;">
+      按住win+r键
+     </span>
+     ，然后
+     <span style="color:#fe2c24;">
+      输入cmd
+     </span>
+     ，如图所示，然后
+     <span style="color:#fe2c24;">
+      按下回车
+     </span>
+    </p>
+    <p style="text-align:justify;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d70e757576d846b9a8e74dee072156d6.png"/>
+    </p>
+    <p>
+     然后在命令行里输入
+     <span style="color:#fe2c24;">
+      python
+     </span>
+     ，结果如图类似即可，由于我安装的是Python 3.12.5版本所以出现的就是Python 3.12.5，如果你是其他版本就是对应版本
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/09808c36531843748fea560ee0e64775.png"/>
+    </p>
+    <p>
+     你也可以输入
+     <span style="color:#fe2c24;">
+      python --version
+     </span>
+     ，结果如图所示
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/3f0fd1bf851142d3ab8c547b5dc7fcc8.png"/>
+    </p>
+    <p>
+     如果你的结果不像上面几张图所示，而是出现的是"...不是外部或内部命令，也不是可运行的程序"，你可能在环境配置中遇到了问题，你可以再次看一遍教程，重做前面的步骤
+    </p>
+    <p>
+     至此你已经完成了Python的安装与环境配置
+    </p>
+    <h3 style="background-color:transparent;">
+     Python的使用（通过IDE进行使用）
+    </h3>
+    <p>
+     Python大家一般都喜欢使用PyCharm进行编写，所以这里使用PyCharm作为例子并推荐你使用PyCharm作为未来Python的IDE工具
+    </p>
+    <h4>
+     1.IDE的下载
+    </h4>
+    <p>
+     PyCharm的官网：
+     <a href="https://www.jetbrains.com/pycharm/" rel="nofollow" title="PyCharm: the Python IDE for data science and web development (jetbrains.com)">
+      PyCharm: the Python IDE for data science and web development (jetbrains.com)
+     </a>
+    </p>
+    <p>
+     打开后点击
+     <span style="color:#fe2c24;">
+      Download
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/e596ddde6717411982ff400d96893e4a.png"/>
+    </p>
+    <p>
+     然后选择自己对应的操作系统，我们是Windows所以选择Windows下的进行下载，当然如果你的电脑是arm64的Windows你需要再次点击旁边的下拉菜单选择arm64进行下载，不知道自己电脑是不是arm64可以翻看前面说的如何查看自己电脑操作系统的信息
+    </p>
+    <p>
+     这里我们可以直接点击Download
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/ebfdae184be544e2a40aa7b241bc9792.png"/>
+    </p>
+    <p>
+     这里推荐下载Professional版，如果你是学生的话，你可以使用学生认证去免费使用Professional版，如何完成学生认证你可以参考这篇文章：
+     <a href="https://blog.csdn.net/sensen_kiss/article/details/142175063?spm=1001.2014.3001.5501" title="IDEA等JetBrains产品（包含Pycharm、Rider等）该如何使用学生认证免费使用其全部功能_jetbrains 学生 激活-CSDN博客">
+      IDEA等JetBrains产品（包含Pycharm、Rider等）该如何使用学生认证免费使用其全部功能_jetbrains 学生 激活-CSDN博客
+     </a>
+    </p>
+    <p>
+     两者区别将放在最后的问题当中进行解释
+    </p>
+    <p>
+     当然你如果觉得麻烦可以i直接选择下面的Community Edition，如图所示，操作类似
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/7e004ade680f4e68a65bdb7dd6965530.png"/>
+    </p>
+    <p>
+     点击后等待直至下载完毕，至此你已完成IDE的下载
+    </p>
+    <h4>
+     2.IDE的安装
+    </h4>
+    <p>
+     我们打开安装包，点击
+     <span style="color:#fe2c24;">
+      下一步
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/0c38b88ac6584f2c9a1b82c408d66618.png"/>
+    </p>
+    <p>
+     这一步选择安装位置，可以选择默认，我这里手动改到了D盘，然后点击
+     <span style="color:#fe2c24;">
+      下一步
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <span style="color:#fe2c24;">
+      <img alt="" src="https://i-blog.csdnimg.cn/direct/561f16a0db344aa4a783424fd562a619.png"/>
+     </span>
+    </p>
+    <p>
+     创建桌面快捷方式的这个地方和更新PATH变量的地方可以打上勾，也可以不打勾直接
+     <span style="color:#fe2c24;">
+      下一步
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <span style="color:#fe2c24;">
+      <img alt="" src="https://i-blog.csdnimg.cn/direct/8bd2c5313b8d40d4bac45543d6a4e7ab.png"/>
+     </span>
+    </p>
+    <p>
+     直接点击
+     <span style="color:#fe2c24;">
+      安装
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <span style="color:#fe2c24;">
+      <img alt="" src="https://i-blog.csdnimg.cn/direct/c36452ae9db4483ea01038ee2a5b99c3.png"/>
+     </span>
+    </p>
+    <p>
+     等待一会直至
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/a736c0b2a7f64b42addc156c1be38872.png"/>
+    </p>
+    <p>
+     点击完成
+    </p>
+    <p>
+     至此你就完成了IDE的安装
+    </p>
+    <h4>
+     3.IDE的使用
+    </h4>
+    <p>
+     你可能是从我的java教程过来的，导致你的电脑上已经安装了IDEA所以会出现如下情况，我们既可以选择点击上面的IDEA，让PyCharm和IDEA设置一样，也可以点击下面的
+     <span style="color:#fe2c24;">
+      Skip Import
+     </span>
+    </p>
+    <p>
+     其实两者使用几乎一致，如果你已学会使用IDEA，那这一部分可以直接跳过
+    </p>
+    <p>
+     如果你下载的是Professional版上面需要许可证的话你可以查看该教程：
+     <a href="https://blog.csdn.net/sensen_kiss/article/details/142175063?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22142175063%22%2C%22source%22%3A%22sensen_kiss%22%7D" title="IDEA等JetBrains产品（包含Pycharm、Rider等）该如何使用学生认证免费使用其全部功能-CSDN博客">
+      IDEA等JetBrains产品（包含Pycharm、Rider等）该如何使用学生认证免费使用其全部功能-CSDN博客
+     </a>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/820ae93cc34043a0889b17920d5c7261.png"/>
+    </p>
+    <p>
+     我们进入后点击
+     <span style="color:#fe2c24;">
+      New Project
+     </span>
+     创建新项目
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/1528b3fec5834818b8eaea5f9e342ab0.png"/>
+    </p>
+    <p>
+     我们这里可以自己定义新项目的名字，这里我就选择默认名字了，然后我在D盘创建了一个文件夹用于存放我所有的Python项目，然后勾选了Create a welcome script（这一步后续可以不需要添加，这里是为了演示方便），然后点击
+     <span style="color:#fe2c24;">
+      Create
+     </span>
+     进行创建
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/aea9e4efb6cf4827b9ae8e504f119927.png"/>
+    </p>
+    <p>
+     由于我们刚刚选择了Create a welcome script，所以我们进入之后，我们可以看到它给了我们一个示例代码，所以我们这里直接点击右上角绿色的三角形就可以直接运行
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/c43b7121dec54c759b51e46c9cbf5dc7.png"/>
+    </p>
+    <p>
+     下面会弹出一个窗口显示运行的结果，如图所示
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/40efe60e7ad94198b6a51cf745ad73b6.png"/>
+    </p>
+    <p>
+     我们可以删除当前py文件，
+     <span style="color:#fe2c24;">
+      右击main
+     </span>
+     然后
+     <span style="color:#fe2c24;">
+      点击Delete
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/dabe9224c7c84a7aae8bd343685044f2.png"/>
+    </p>
+    <p>
+     再直接点击
+     <span style="color:#fe2c24;">
+      OK
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <span style="color:#fe2c24;">
+      <img alt="" src="https://i-blog.csdnimg.cn/direct/2b13e706844c4307a5e45228fca5ee19.png"/>
+     </span>
+    </p>
+    <p>
+     然后就成功删除掉了当前py文件，我们再创建一个新的py文件，
+     <span style="color:#fe2c24;">
+      右击
+     </span>
+     最上面的文件夹，由于我的项目名为pythonProject，所以这里的最上面的文件夹叫pythonProject，点击
+     <span style="color:#fe2c24;">
+      New
+     </span>
+     ，再点击
+     <span style="color:#fe2c24;">
+      Python File
+     </span>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/246580fc1c3a41529cb7ffb2af97ebb1.png"/>
+    </p>
+    <p>
+     名字我继续输入main为例
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d4a9a94bab9d44918f63593ac64960b9.png"/>
+    </p>
+    <p>
+     完成后如图所示
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/10272bf48dfd4fdf82e21f40dfa7f24c.png"/>
+    </p>
+    <p>
+     输入以下代码
+    </p>
+    <pre><code class="language-python">print("Hello World")</code></pre>
+    <p>
+     我们就获得了我们第一个程序
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/831f2116558a4eb58e2271c78d9e96dd.png"/>
+    </p>
+    <p>
+     我们再次点击运行，欢迎来到编程的世界~
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d7e7e302a96e4d25963dfb89f6f2cfed.png"/>
+    </p>
+    <p>
+     至此我们完成了本教学的全部内容
+    </p>
+    <h2 style="background-color:transparent;">
+     Mac版
+    </h2>
+    <h3 style="background-color:transparent;">
+     Python的安装与环境配置
+    </h3>
+    <h4>
+     1.下载Python
+    </h4>
+    <p>
+     我们打开左下角启动台，然后在上面的小搜索框中输入terminal或者终端
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/28b40f194d1947c4b4dc6fc93a076f34.jpeg"/>
+    </p>
+    <p>
+     打开后
+     <span style="color:#fe2c24;">
+      输入python3
+     </span>
+     后等待一段时间即可
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/8e9bae8418b342cda7ebe3412bcfdc77.jpeg"/>
+    </p>
+    <h4>
+     2.安装Python
+    </h4>
+    <p>
+     mac的优势直接跳过这一步咯~
+    </p>
+    <h4>
+     3.环境配置
+    </h4>
+    <p>
+     mac能自己找到所以又跳过咯~
+    </p>
+    <h4>
+     4.测试检验
+    </h4>
+    <p>
+     mac都亲自下场帮你安装了，肯定没有问题
+    </p>
+    <p>
+     如果你不放心，你也可以再次输入python3，会得到如下结果
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/5eaef8b4c65a4f59a8bde58adf1de5e1.jpeg"/>
+    </p>
+    <p>
+     mac轻松速通Python的安装与环境配置
+    </p>
+    <h3>
+     Python的使用（通过IDE进行使用）
+    </h3>
+    <p>
+     Mac上依然建议使用PyCharm作为IDE
+    </p>
+    <h4>
+     1.IDE的下载
+    </h4>
+    <p>
+     我们打开网站：
+     <a href="https://www.jetbrains.com/zh-cn/pycharm/download/?section=mac" rel="nofollow" title="下载 PyCharm：JetBrains 出品的用于数据科学和 Web 开发的 Python IDE">
+      下载 PyCharm：JetBrains 出品的用于数据科学和 Web 开发的 Python IDE
+     </a>
+    </p>
+    <p>
+     下载时需要看清楚macOS系统，然后按照自己的芯片选择对应的版本，但其实苹果的m系列芯片也可以运行上面的intel芯片版本
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/8e5d1c27919341e5b734d1a04f3b5cb3.png"/>
+    </p>
+    <p>
+     点击下载后等待其下载完毕就完成IDE的下载
+    </p>
+    <h4>
+     2.IDE的安装
+    </h4>
+    <p>
+     IDE的安装与Windows版相似，这里不再重复
+    </p>
+    <h4>
+     3.IDE的使用
+    </h4>
+    <p>
+     IDE的使用与Windows版相似，这里不再重复
+    </p>
+    <h2>
+     一些问题
+    </h2>
+    <h3 style="background-color:transparent;">
+     1.用户变量和系统变量的区别
+    </h3>
+    <p>
+     用户变量：作用于当前登录的用户，如果你的电脑上有多个用户，那不同的用户可以有不同的Python环境，如果你只为一个用户配置了用户变量，那其他用户不可以使用该变量
+    </p>
+    <p>
+     系统变量：该电脑上的所有用户都可以使用的，因此如果你在系统变量中添加了Python环境那该电脑上的所有用户都可以使用该Python
+    </p>
+    <p>
+     因此对于初学者来说这两者是没有差别的
+    </p>
+    <h3>
+     2.PyCharm安装时设置内容都分别是什么
+    </h3>
+    <p>
+     如图所示
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/d3217c00d42540878271c39c9c7518df.png"/>
+    </p>
+    <p>
+     首先第一个创建桌面快捷方式，不用多说，现在安装软件点击这个选项后你能更方便地在桌面上点击这个快捷方式打开软件
+    </p>
+    <p>
+     更新PATH变量是将bin目录添加到PATH中，你会发现他与配置环境的操作比较类似，这个操作可以帮助你直接使用命令行运行Pycharm相关的命令
+    </p>
+    <p>
+     更新上下文菜单是运行你可以右击文件夹选择以Pycharm打开，这样可以帮助你快速打开一些别人的项目
+    </p>
+    <p>
+     创建关联是将所有py文件关联到PyCharm
+    </p>
+    <p>
+     所以其实都不勾选也不会影响你的使用
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f73656e73656e5f6b6973732f:61727469636c652f64657461696c732f313431393430323734</p>

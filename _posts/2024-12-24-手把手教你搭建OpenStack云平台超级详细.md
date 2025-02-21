@@ -8,8 +8,9 @@ image:
   path: https://img-blog.csdnimg.cn/c6a5481bd6b14347bba5051a9ca55318.png?x-oss-process&#61;image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAMOmGkumGkg&#61;&#61;,size_20,color_FFFFFF,t_70,g_se,x_16
   alt: 手把手教你搭建OpenStack云平台超级详细
 artid: 122628664
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f34353639323131302f:61727469636c652f64657461696c732f313232363238363634></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -797,3 +798,4 @@ openrc.sh                                                            100% 3820  
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f34353639323131302f:61727469636c652f64657461696c732f313232363238363634

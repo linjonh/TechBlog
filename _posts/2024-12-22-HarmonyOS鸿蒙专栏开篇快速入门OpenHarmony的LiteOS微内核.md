@@ -8,8 +8,9 @@ image:
   path: https://img-blog.csdnimg.cn/20200913161047448.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDg3MDQ0,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
   alt: HarmonyOS鸿蒙专栏开篇快速入门OpenHarmony的LiteOS微内核
 artid: 108560890
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f33333438373034342f:61727469636c652f64657461696c732f313038353630383930></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -772,3 +773,4 @@ endif
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f33333438373034342f:61727469636c652f64657461696c732f313038353630383930

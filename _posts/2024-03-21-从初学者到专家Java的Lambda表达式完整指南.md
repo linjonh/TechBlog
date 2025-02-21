@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=136889277
   alt: 从初学者到专家Java的Lambda表达式完整指南
 artid: 136889277
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f:2f626c6f672e6373646e2e6e65742f4c48593533373230302f:61727469636c652f64657461696c732f313336383839323737></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -1460,3 +1461,4 @@ System.out.println(scores);
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f:2f626c6f672e6373646e2e6e65742f4c48593533373230302f:61727469636c652f64657461696c732f313336383839323737

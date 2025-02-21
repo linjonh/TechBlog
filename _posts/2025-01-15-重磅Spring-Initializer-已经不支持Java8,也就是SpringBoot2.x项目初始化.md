@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=134648866
   alt: 重磅Spring-Initializer-已经不支持Java8,也就是SpringBoot2.x项目初始化
 artid: 134648866
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f34373436363131382f:61727469636c652f64657461696c732f313334363438383636></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -175,3 +176,4 @@ artid: 134648866
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f34373436363131382f:61727469636c652f64657461696c732f313334363438383636

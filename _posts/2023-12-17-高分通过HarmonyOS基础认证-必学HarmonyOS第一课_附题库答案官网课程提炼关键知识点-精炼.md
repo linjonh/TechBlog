@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 2023-12-17-高分通过HarmonyOS基础认证-必学HarmonyOS第一课_附题库答案官网课程提炼关键知识点-精炼
 date: 2023-12-17 18:39:17 +0800
 categories: [鸿蒙HarmonyOS从基础到深入实战]
@@ -7,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=135047606
   alt: 高分通过HarmonyOS基础认证-必学HarmonyOS第一课_附题库答案官网课程提炼关键知识点-精炼
 artid: 135047606
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f35323930383334322f:61727469636c652f64657461696c732f313335303437363036></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -547,3 +548,4 @@ artid: 135047606
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f672e:6373646e2e6e65742f77656978696e5f35323930383334322f:61727469636c652f64657461696c732f313335303437363036</p>

@@ -7,8 +7,9 @@ image:
   path: https://img-blog.csdnimg.cn/ab5e2f6ffe80464cba7f56b37c516c05.png?x-oss-process=image/resize,m_fixed,h_150
   alt: openEuler快速入门-openEuler操作系统介绍
 artid: 127854597
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f33343632333632312f:61727469636c652f64657461696c732f313237383534353937></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -275,3 +276,4 @@ artid: 127854597
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f33343632333632312f:61727469636c652f64657461696c732f313237383534353937

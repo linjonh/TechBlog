@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=138614659
   alt: 云原生测试实战-云计算大数据云原生架构容器技术Kubernetes计算机软件工程软件开发
 artid: 138614659
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=6874747073:3a2f2f626c6f672e6373646e2e6e65742f733434353332302f:61727469636c652f64657461696c732f313338363134363539></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -286,3 +286,4 @@ artid: 138614659
 </div>
 
 
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f733434353332302f:61727469636c652f64657461696c732f313338363134363539</p>

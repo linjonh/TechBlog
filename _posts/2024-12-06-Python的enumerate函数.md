@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=109029773
   alt: Python的enumerate函数
 artid: 109029773
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f626c6f67:2e6373646e2e6e65742f73696e61745f33383638323836302f:61727469636c652f64657461696c732f313039303239373733></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -188,3 +189,4 @@ names <span class="token operator">=</span> <span class="token punctuation">[</s
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f626c6f67:2e6373646e2e6e65742f73696e61745f33383638323836302f:61727469636c652f64657461696c732f313039303239373733

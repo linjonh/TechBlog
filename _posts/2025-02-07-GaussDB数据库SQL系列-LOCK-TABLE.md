@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=133803923
   alt: GaussDB数据库SQL系列-LOCK-TABLE
 artid: 133803923
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=6874747073:3a2f2f626c6f672e6373646e2e6e65742f476175737344422f:61727469636c652f64657461696c732f313333383033393233></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -492,3 +493,4 @@ COMMIT;</code></pre>
 </div>
 
 
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f476175737344422f:61727469636c652f64657461696c732f313333383033393233

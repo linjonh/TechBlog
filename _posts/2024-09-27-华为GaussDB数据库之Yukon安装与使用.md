@@ -1,0 +1,300 @@
+---
+layout: post
+title: 2024-09-27-华为GaussDB数据库之Yukon安装与使用
+date: 2024-09-27 09:53:15 +0800
+categories: [数据库]
+tags: [数据库,gaussdb]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=142585773
+  alt: 华为GaussDB数据库之Yukon安装与使用
+artid: 142585773
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     华为GaussDB数据库之Yukon安装与使用
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-tomorrow-night" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="Yukon_0">
+     </a>
+     一、Yukon简介
+    </h2>
+    <p>
+     Yukon（禹贡），基于openGauss、PostgreSQL、GaussDB数据库扩展地理空间数据的存储和管理能力，提供专业的GIS（Geographic Information System）功能，赋能传统关系型数据库。
+     <br/>
+     Yukon 支持二三维一体化的空间数据存储能力:
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/d68da82f084047c8897f6aeecf26a36c.gif#pic_center">
+      <br/>
+      官网地址
+      <a href="https://yukon.supermap.io/" rel="nofollow">
+       https://yukon.supermap.io/
+      </a>
+      ,此次我们基于华为GaussDB安装Yukon
+     </img>
+    </p>
+    <h2>
+     <a id="_6">
+     </a>
+     二、软件版本
+    </h2>
+    <ul>
+     <li>
+      机器配置：8核16G，CPU: Huawei Kunpeng 920 2.9GHz
+     </li>
+     <li>
+      操作系统：EulerOS 2.8 64bit with ARM
+     </li>
+     <li>
+      数据库版本：GaussDB Kernel 505.1.0 build 44f4fa53
+     </li>
+    </ul>
+    <h2>
+     <a id="Yukon_11">
+     </a>
+     三、部署Yukon
+    </h2>
+    <ul>
+     <li>
+      请提前安装好GaussDB环境，具体安装方式请查看
+      <a href="https://blog.csdn.net/zhang90522/article/details/142567764">
+       华为GaussDB数据库（单机版）在ARM环境下的安装指南
+       <br/>
+      </a>
+     </li>
+     <li>
+      下载Yukon包：链接: https://pan.baidu.com/s/1tPPkFWTZjdOfyx4SnDjIgA?pwd=cykh 提取码: cykh
+     </li>
+    </ul>
+    <h3>
+     <a id="_omm_15">
+     </a>
+     ① 切换到omm用户
+    </h3>
+    <pre><code>su omm
+</code></pre>
+    <h3>
+     <a id="_yukon_19">
+     </a>
+     ② 解压yukon安装包
+    </h3>
+    <pre><code>tar -zxvf Yukon-2.0.2-GaussDB_505.1.B008_arm_20240228.tar.gz
+</code></pre>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/d8f6d7558da752ecd502ec54ee31391a.png"/>
+    </p>
+    <h3>
+     <a id="__25">
+     </a>
+     ③ 确认环境变量
+    </h3>
+    <pre><code>--检查GAUSSHOME环境变量，输出结果是否为空以及是否正确
+echo $GAUSSHOME
+
+--检查PGDATA环境变量，输出结果是否为空以及是否正确
+echo $PGDATA
+
+--检查LD_LIBRARY_PATH环境变量，输出结果是否为空以及是否包含数据库lib目录
+echo $LD_LIBRARY_PATH
+</code></pre>
+    <h3>
+     <a id="__37">
+     </a>
+     ④ 执行安装命令
+    </h3>
+    <pre><code>cd yukon/
+./install.sh -i
+</code></pre>
+    <p>
+     看到如下页面，Yukon安装成功
+     <br/>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/3f258e898e283aab8a741c1f12f13c60.png"/>
+    </p>
+    <h2>
+     <a id="PostGIS_44">
+     </a>
+     四、创建表空间、数据库、PostGIS扩展插件
+    </h2>
+    <h4>
+     <a id="__46">
+     </a>
+     ① 启动数据库
+    </h4>
+    <pre><code>gs_ctl start
+</code></pre>
+    <p>
+     使用上一章节创建的用户继续操作，如果没有请重新创建
+    </p>
+    <h4>
+     <a id="__53">
+     </a>
+     ② 登录数据库
+    </h4>
+    <pre><code>gsql -d postgres -U zhangyongli -W supermap@123
+</code></pre>
+    <p>
+     创建新用户，需要提前设置omm密码，否则会报错
+    </p>
+    <pre><code>gsql -d postgres
+ALTER ROLE "omm" PASSWORD 'supermap@123';
+CREATE USER zhangyongli with PASSWORD 'supermap@123' SYSADMIN;
+</code></pre>
+    <h3>
+     <a id="31__65">
+     </a>
+     3.1 创建表空间
+    </h3>
+    <pre><code>CREATE TABLESPACE testspace LOCATION '/home/omm/data';
+</code></pre>
+    <p>
+     <code>
+      注意：目录 /home/omm/data 必须已经存在且具有可访问权限。
+     </code>
+     <br/>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/a81ec4651d9b18f2a70e91e123a04b6d.png"/>
+    </p>
+    <h3>
+     <a id="32__71">
+     </a>
+     3.2 创建数据库
+    </h3>
+    <pre><code>CREATE DATABASE testdata ENCODING='UTF8' TABLESPACE=testspace;
+</code></pre>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/ade285bfb14117ece332f2cc2561e2bd.png"/>
+    </p>
+    <h3>
+     <a id="33_PostGIS_78">
+     </a>
+     3.3 创建PostGIS扩展插件
+    </h3>
+    <p>
+     输入\q 退出，使用新的数据库登录，创建PostGIS扩展插件
+    </p>
+    <pre><code>gsql -d testdata -U zhangyongli -W supermap\@123
+CREATE EXTENSION postgis;
+</code></pre>
+    <p>
+     == 提示 ==，如果不是用新创建的数据库登录，会报如下错误；如果确定用新用户登录的，无法创建可以尝试重启GaussDB数据库
+    </p>
+    <pre><code>gaussdb=&gt; CREATE EXTENSION postgis;
+ERROR:  Extension is not a secure feature, and it may cause unexpected errors. using it need set enable_extension to true.
+</code></pre>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/3f49282144c6a4a2c237348599bc65fb.png"/>
+    </p>
+    <h2>
+     <a id="SuperMap_iDesktopX_92">
+     </a>
+     五、使用SuperMap iDesktopX测试
+    </h2>
+    <h3>
+     <a id="_SuperMap_iDesktopX_11i2024_93">
+     </a>
+     ① 启动SuperMap iDesktopX 11i(2024)，数据源右键新建数据库型数据源
+    </h3>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/0290afeff1d19eec1b5b76d6dc4ed498.png"/>
+    </p>
+    <h3>
+     <a id="_96">
+     </a>
+     ②输入用户名密码后，点击创建，当创建成功后，则证明基础环境搭建完成
+    </h3>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/993d696d1982f3e764a11cc356c97b46.png"/>
+    </p>
+    <p>
+     <strong>
+      至此安装Yukon安装成功。
+     </strong>
+    </p>
+    <h2>
+     <a id="_102">
+     </a>
+     六、可能遇到的问题
+    </h2>
+    <h3>
+     <a id="61_iDesktopXYukon_104">
+     </a>
+     6.1 iDesktopX创建Yukon数据源失败，
+    </h3>
+    <p>
+     由于iDesktopX创建时依赖libpcre16，如果当前环境中没有安装会导致创建数据源失败（EulerOS 2.8没有）
+     <br/>
+     检查是否有缺失，可以通过以下命令：
+    </p>
+    <pre><code>cd /home/omm/package/lib/gaussdb
+ldd yukon_geomodel-1.0.so | grep not
+</code></pre>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/8195d8b7b8099f178aed1eb55b4f05e4.png"/>
+     <br/>
+     手动安装，需要root用户安装
+    </p>
+    <pre><code>su - root
+yum install pcre-utf16
+</code></pre>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/d743e62d1dfd11ed315c0cff7f6c0f0b.png"/>
+     <br/>
+     安装完成后，不需要重启GaussDB数据库，直接再次使用iDesktopX创建
+    </p>
+    <h3>
+     <a id="62_PostGIScould_not_open_extension_control_file_No_such_file_or_directory_120">
+     </a>
+     6.2 创建PostGIS插件时，报"could not open extension control file: No such file or directory"错误
+    </h3>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/3a6585c4be720c1f9b1f3206dea186a0.png"/>
+     <br/>
+     问题原因：该问题是没有安装Yukon，应该先安装Yukon，再创建PostGIS插件。
+     <br/>
+     解决办法：另开一个窗口，把Yukon安装好，然后在回到这个窗口再次执行
+    </p>
+    <h3>
+     <a id="63_PostGISERRORcould_not_load_library_postgis3so_homeommpackagelibgaussdbpostgis3so_cannot_open_shared_object_file_No_such_file_or_directory_125">
+     </a>
+     6.3 创建PostGIS插件时，报"ERROR:could not load library “postgis-3.so”: /home/omm/package/lib/gaussdb/postgis-3.so: cannot open shared object file: No such file or directory"
+    </h3>
+    <p>
+     <img alt="" src="https://img-blog.csdnimg.cn/img_convert/d3900367725fdc7f09b09cf387bdf021.png"/>
+     <br/>
+     问题原因：
+    </p>
+    <ol>
+     <li>
+      检查环境变量是否配置成功，检查/home/omm/package/lib/gaussdb/这个目录下postgis-3.so文件是否存在，是否有权限。
+     </li>
+     <li>
+      检查是否是安装错Yukon包了，例如将X86安装在ARM环境中
+      <br/>
+      <img alt="" src="https://img-blog.csdnimg.cn/img_convert/9334b54b83777e25af3cf67640ed643d.png"/>
+      <br/>
+      (转发请注明出处：https://blog.csdn.net/zhang90522 如发现有错，请留言，谢谢)
+     </li>
+    </ol>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f7a68616e6739303532322f:61727469636c652f64657461696c732f313432353835373733</p>

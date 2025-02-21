@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=136715809
   alt: linux-运行开源音视频livekit,实现html视频语音聊天
 artid: 136715809
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f773938313931323533362f:61727469636c652f64657461696c732f313336373135383039></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -596,3 +597,4 @@ public class LiveKitTest {
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f:626c6f672e6373646e2e6e65742f773938313931323533362f:61727469636c652f64657461696c732f313336373135383039

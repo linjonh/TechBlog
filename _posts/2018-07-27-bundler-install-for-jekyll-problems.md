@@ -4,6 +4,7 @@ title: "bundle-install-for-jekyll"
 date: 2018-07-27 16:03:18 +0800
 categories: gem jekyll gem-bundle
 tags: gem jekyll gem-bundle
+render_with_liquid: false
 ---
 * content
 {:toc}

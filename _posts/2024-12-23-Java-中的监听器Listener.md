@@ -7,8 +7,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=139802383
   alt: Java-中的监听器Listener
 artid: 139802383
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f37343837303932312f:61727469636c652f64657461696c732f313339383032333833></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -441,3 +442,4 @@ public class EventSource {
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f6d305f37343837303932312f:61727469636c652f64657461696c732f313339383032333833

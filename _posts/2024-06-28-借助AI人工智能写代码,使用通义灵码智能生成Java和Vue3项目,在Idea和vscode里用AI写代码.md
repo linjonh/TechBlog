@@ -8,8 +8,9 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=140038600
   alt: 借助AI人工智能写代码,使用通义灵码智能生成Java和Vue3项目,在Idea和vscode里用AI写代码
 artid: 140038600
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f7169757368695f313939302f:61727469636c652f64657461696c732f313430303338363030></span>
+</p>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -552,3 +553,4 @@ CREATE TABLE `good` (
 </div>
 
 
+<p class="artid" style="display:none">68747470733a2f2f62:6c6f672e6373646e2e6e65742f7169757368695f313939302f:61727469636c652f64657461696c732f313430303338363030

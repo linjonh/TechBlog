@@ -8,8 +8,8 @@ image:
   path: https://api.vvhan.com/api/bing?rand=sj&artid=134611701
   alt: 开源自制一个桌面宠物STM32CUBEMX-HAL库-PWM波-小项目
 artid: 134611701
+render_with_liquid: false
 ---
-<span class="artid" style="display:none" artid=68747470:733a2f2f626c6f672e6373646e2e6e65742f48756f6f65722f:61727469636c652f64657461696c732f313334363131373031></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -2154,3 +2154,4 @@ char Hzk[][32]={
 </div>
 
 
+<p class="artid" style="display:none">68747470:733a2f2f626c6f672e6373646e2e6e65742f48756f6f65722f:61727469636c652f64657461696c732f313334363131373031</p>

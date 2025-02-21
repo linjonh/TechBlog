@@ -1,0 +1,261 @@
+---
+layout: post
+title: 2024-07-01-从人工到自动化到AIOps再到ChatOps大模型在运维领域的应用
+date: 2024-07-01 17:03:58 +0800
+categories: []
+tags: [运维,自动化]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=140105517
+  alt: 从人工到自动化到AIOps再到ChatOps大模型在运维领域的应用
+artid: 140105517
+render_with_liquid: false
+---
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     从人工到自动化到AIOps再到ChatOps：大模型在运维领域的应用
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="_0">
+     </a>
+     一、引言
+    </h2>
+    <p>
+     在信息技术飞速发展的今天，运维工作已经从最初的人工操作，逐步演变为自动化、AIOps（人工智能运维）和ChatOps（通过聊天的方式去运维）。这些变革不仅提升了运维效率，还显著保障了系统的稳定性。特别是借助大模型，运维同学能够更加高效地完成工作，并应对复杂的运维挑战。本文将依次介绍这些概念，并探讨大模型在运维领域的具体应用。
+    </p>
+    <p>
+    </p>
+    <h2>
+     <a id="_7">
+     </a>
+     二、运维的演变历程
+    </h2>
+    <p>
+     <strong>
+      1. 人工运维
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       概念：人工运维是指通过人工手动执行各种运维任务，如服务器配置、日志分析、故障排除等。
+      </p>
+     </li>
+     <li>
+      <p>
+       挑战：人工操作容易出错，效率低下，且无法快速响应突发事件。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/00475af9f772ec29324f92a9e47b622a.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      2. 自动化运维
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       概念：自动化运维通过编写脚本和使用工具来自动执行运维任务，减少人工干预。
+      </p>
+     </li>
+     <li>
+      <p>
+       优势：提高效率，减少人为错误，能够快速重复执行任务。
+      </p>
+     </li>
+     <li>
+      <p>
+       工具：Ansible、Puppet、Chef等。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/516da724f490394b9fa713b8be56839c.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      3. AIOps（智能运维）
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       概念：AIOps利用机器学习和大数据分析技术，自动检测、分析和解决运维问题。
+      </p>
+     </li>
+     <li>
+      <p>
+       优势：能够处理海量数据，提前预测故障，自动化决策和响应。
+      </p>
+     </li>
+     <li>
+      <p>
+       应用：异常检测、根因分析、自动化修复等。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/80ba2c0a022cd7a69837c88a2b609f3c.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      4. ChatOps（通过聊天的方式去运维）
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       概念：ChatOps通过将运维工具集成到聊天平台（如咚咚、微信）中，让运维同学通过聊天界面执行运维任务。
+      </p>
+     </li>
+     <li>
+      <p>
+       优势：将运维自动化的能力通过聊天的方式提供给运维、开发等人员使用，使运维同学具有可以随时随地使用手机远程运维的能力。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d940e2baf64b7bd61f6410cd5cda41c9.png"/>
+    </p>
+    <p>
+    </p>
+    <h2>
+     <a id="_68">
+     </a>
+     三、大模型在运维领域的应用
+    </h2>
+    <p>
+     大模型在运维领域的应用，能够进一步提升运维工作的智能化和自动化水平。以往，受限于自然语言处理（NLP）模型的限制，现有的机器学习模型在理解人类的问题和上下文方面存在较大挑战。这导致了当前的ChatOps应用主要依赖于预置的指令，通过设计好的NLP任务来完成一些运维工作。
+    </p>
+    <p>
+     借助大模型的强大自然语言理解能力，目前可以较好和方便地构建智能的运维应用。以下是几个结合大模型的运维场景，这些场景展示了大模型在提升运维工作智能化和自动化水平方面的潜力。
+    </p>
+    <p>
+     <strong>
+      1. 运维智能助手
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       问题：因为当前的机器人不够智能，运维同学需要24小时在线协助研发同学解决使用内部工具遇到的问题。
+      </p>
+     </li>
+     <li>
+      <p>
+       解决方案：可以基于大模型构建RAG应用，使用运维同学沉淀的运维知识库和热门问题，使研发同学能自助的、快速的解决大部分问题。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/02494758f20d6c6f9123e0ef9a2b3cd9.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      2. 自动化问题诊断与修复
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       问题：传统问题诊断需要人工介入，耗时且易出错。
+      </p>
+     </li>
+     <li>
+      <p>
+       解决方案：大模型能够自动诊断系统问题，并提供修复建议或自动执行修复操作。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/15b87deb36eab822ce7a248bf8c4a099.png"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      3. 智能日志分析
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <p>
+       问题：传统日志分析需要手动筛选和分析，效率低且容易遗漏关键信息。在AIOps产品中，我们已经构建了基于日志模版的智能日志分析，但在构建日志模版的过程中，还是依赖相关的运维专家经验去构建相关的运维模版。
+      </p>
+     </li>
+     <li>
+      <p>
+       解决方案：大模型本身是通用领域的专家，借助上面构建的RAG的私域运维知识和他的通用经验，基于大模型构建一个运维日志监控专家，24小时审查关键日志，通过他可以自动解析海量日志，识别异常模式，并生成易于理解的报告。
+      </p>
+     </li>
+     <li>
+      <p>
+       例子：在服务器日志中，大模型能够快速识别出潜在的安全威胁（如异常登录尝试），并提醒运维人员采取措施。
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <h2>
+     <a id="_117">
+     </a>
+     四、结论
+    </h2>
+    <p>
+     稳定是运维部门的主要目标，但一台精密复杂的机器，难免在运行一段时间后出现故障，出现故障后，要求我们能依赖现有的监控、告警数据，通过AIOps平台或基于大模型的工具快速的，在这庞大复杂的系统中找到问题、定位问题并解决问题，这也是当前我们运维部门的目标1，5，15原则：1分钟发现故障，5分钟定位故障，15分钟解决故障。
+    </p>
+    <p>
+     从人工运维到自动化运维，再到AIOps和ChatOps，运维工作的智能化和自动化水平不断提升。借助大模型，运维同学能够更加高效地完成工作，保障系统的稳定性。通过智能日志分析、故障预测与预防、自动化问题诊断与修复，以及知识库与文档生成，大模型在运维领域展现出巨大的应用潜力。未来，随着大模型技术的不断发展，运维工作的智能化水平将进一步提升，为企业的信息系统保驾护航。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
+<p class="artid" style="display:none">6874747073:3a2f2f626c6f672e6373646e2e6e65742f6a64636465765f2f:61727469636c652f64657461696c732f313430313035353137</p>
