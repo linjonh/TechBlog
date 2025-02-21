@@ -1,0 +1,206 @@
+---
+title: 2025-01-04-基于pythonDjangomysql疫苗接种疫苗在线预约网站系统设计与实现
+date: 2025-01-04 16:32:45 +0800
+categories: [毕设资料]
+tags: [疫苗在线预约网站系统]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=144720006
+  alt: 基于pythonDjangomysql疫苗接种疫苗在线预约网站系统设计与实现
+artid: 144720006
+---
+<span class="artid" style="display:none" artid=68747470733a2f2f:626c6f672e6373646e2e6e65742f753031333831383230352f:61727469636c652f64657461696c732f313434373230303036></span>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     基于python+Django+mysql疫苗接种疫苗在线预约网站系统设计与实现
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <blockquote>
+     <p>
+      <strong>
+       博主介绍
+      </strong>
+      ：黄菊华老师《Vue.js入门与商城开发实战》《微信小程序商城开发》图书作者，CSDN博客专家，在线教育专家，CSDN钻石讲师；专注大学生毕业设计教育、辅导。
+      <br/>
+      所有项目都配有从入门到精通的基础知识视频课程，学习后应对毕业设计答辩，提供核心代码讲解，答辩指导。
+      <br/>
+      项目配有对应开发文档、开题报告、任务书、PPT等，提供毕业设计论文辅导。
+     </p>
+     <p>
+      项目都录了发布和功能操作演示视频；项目的界面和功能都可以定制，包安装运行！！！
+     </p>
+     <p>
+      如果需要联系我，可以在CSDN网站查询黄菊华老师的，
+      <strong>
+       在文章末尾可以获取联系方式
+      </strong>
+     </p>
+    </blockquote>
+    <h2>
+     开发技术
+    </h2>
+    <p>
+     开发操作系统：windows10 + 4G内存 + 500G硬盘
+    </p>
+    <p>
+     开发环境：Python3.8
+    </p>
+    <p>
+     开发语言：Python
+    </p>
+    <p>
+     开发框架：Django
+    </p>
+    <p>
+     开发工具：pycharm
+    </p>
+    <p>
+     数据库：mysql8
+    </p>
+    <p>
+     数据库管理工具：navicat
+    </p>
+    <p>
+     其他开发语言：html + css +javascript
+    </p>
+    <h2>
+     功能清单
+    </h2>
+    <p>
+     <img alt="" height="358" src="https://i-blog.csdnimg.cn/direct/42229a67374941c3b38e55d43c8ef08b.png" width="652"/>
+    </p>
+    <p>
+     【后台管理功能模块】
+     <br/>
+     系统设置：设置关于我们、联系我们、加入我们、法律声明
+     <br/>
+     广告管理：设置小程序首页轮播图广告和链接
+     <br/>
+     留言列表：所有用户留言信息列表，支持删除
+     <br/>
+     会员列表：查看所有注册会员信息，支持删除
+     <br/>
+     资讯分类：录入、修改、查看、删除资讯分类
+     <br/>
+     录入资讯：录入资讯标题、内容等信息
+     <br/>
+     管理资讯：查看已录入资讯列表，支持删除和修改
+     <br/>
+     资讯评论列表：所有用户的评论信息列表
+     <br/>
+     资讯评论管理：支持对评论信息审核，删除；审核后的信息用户才可见
+    </p>
+    <p>
+     疫苗属性设置：设置疫苗属性，例如是否进行、是注射还是口服等、支持修改和删除
+     <br/>
+     录入疫苗：录入疫苗名称、价格、封面、介绍内容等
+     <br/>
+     疫苗管理：显示疫苗的列表，支持修改和删除
+     <br/>
+     设置疫苗场次：在疫苗列表，疫苗名称后面，通过【场次管理】，设置疫苗开放的日期和场次
+     <br/>
+     设置热门疫苗：设置需要在前台查询框下面显示的热门疫苗，按|分隔
+     <br/>
+     疫苗订单列表：显示所有用户预约的疫苗订单，包含疫苗封面、疫苗名称、价格、疫苗预约用户信息、疫苗日期和时间。
+     <br/>
+     疫苗订单管理：支持付款状态修改，删除
+     <br/>
+     疫苗评论列表：显示所有用户评论的疫苗信息和评论信息
+     <br/>
+     疫苗评论管理：支持评论审核处理，删除处理；管理员审核后前台可见。
+    </p>
+    <p>
+     密码修改：修改注册的密码。
+     <br/>
+     退出登录：清除登录的cookie，返回到首页。
+    </p>
+    <p>
+     【用户功能模块】
+     <br/>
+     用户注册：填写手机账号和密码，注册新用户
+     <br/>
+     登录功能：注册普通账号登录；登录后可以修改用户的基本信息，也可以退出。
+     <br/>
+     关于我们：关于我们、联系我们、加入我们、法律声明
+     <br/>
+     轮播广告：后台设置首页轮播广告图，可以连接到广告页面。
+     <br/>
+     留言反馈：用户填写李哭咽的主题、联系人、电话、邮箱、留言内容；后台管理可以查看留言列表，可以删除留言。。
+    </p>
+    <p>
+     疫苗列表：显示网站能提供的所有的疫苗列表信息，左侧是按注射和口服来分类，可以按分类进行筛选
+     <br/>
+     疫苗查询：网站顶部输入疫苗关键字，查询
+     <br/>
+     疫苗详情：主要显示疫苗的名称、相关图片、是否进口、使用方式、疫苗种类、疫苗的详情
+     <br/>
+     疫苗收藏：在疫苗详情页面，我们可以进行收藏操作
+     <br/>
+     疫苗评论：在疫苗页面，发表评论（需后台管理员审核后才可见）
+     <br/>
+     疫苗预约：选择疫苗提供的日期和场次，选择打疫苗的序号，提交预约
+    </p>
+    <p>
+     我的收藏：收藏的感兴趣的资讯文章，可以直接点击去阅读，支持删除。
+     <br/>
+     我的疫苗预约订单：显示已经预约的疫苗信息列表，包含疫苗名称，打疫苗的时间，序号，费用等，可以直接点击进入详情页面。
+     <br/>
+     疫苗浏览、收藏、评论：显示对疫苗浏览列表、收藏的疫苗列表、评论的列表
+     <br/>
+     资讯浏览、收藏、评论：对网站普通资讯的浏览列表、收藏列表、评论列表
+    </p>
+    <p>
+     用户信息：姓名、联系方式、邮箱、头像、简介、介绍等，支持随时修改；用户注册的信息后台管理员可见；后台管理员可以删除
+     <br/>
+     密码修改：修改注册的密码。
+     <br/>
+     退出登录：清除登录的cookie，返回到首页。
+     <br/>
+    </p>
+    <h2>
+     作品截图
+    </h2>
+    <p>
+     <img alt="" height="953" src="https://i-blog.csdnimg.cn/direct/481d2d0a7e2d4c29ae197d35a3d3ca52.png" width="1200">
+      <img alt="" height="924" src="https://i-blog.csdnimg.cn/direct/6e98b15622784357be68d20fc854d67a.png" width="1200">
+       <img alt="" height="872" src="https://i-blog.csdnimg.cn/direct/002ba890ebe14cafb57301fc9f391c65.png" width="1200">
+        <img alt="" height="924" src="https://i-blog.csdnimg.cn/direct/595bbb1c1423414ea2e99a94c6bae12a.png" width="1200">
+         <img alt="" height="886" src="https://i-blog.csdnimg.cn/direct/a0017cd84b244de5bdf25cd9907dd947.png" width="1200">
+          <img alt="" height="727" src="https://i-blog.csdnimg.cn/direct/866e52428d1b495596f12c53fb27e726.png" width="1200">
+           <img alt="" height="732" src="https://i-blog.csdnimg.cn/direct/80f403c8f916497eb2aa7b7c772dbd6e.png" width="1200">
+            <img alt="" height="735" src="https://i-blog.csdnimg.cn/direct/bbf9b8e4c2744c838a161c4b6583643d.png" width="1200"/>
+            <img alt="" height="730" src="https://i-blog.csdnimg.cn/direct/04bf82253c9c4d288229a3c91ae186ad.png" width="1200"/>
+            <img alt="" height="743" src="https://i-blog.csdnimg.cn/direct/a4828122e9464ea991b6d5029ad861e9.png" width="1200"/>
+            <img alt="" height="872" src="https://i-blog.csdnimg.cn/direct/57e5a60e41d04004b237fcdb5b67cc99.png" width="1200"/>
+            <img alt="" height="924" src="https://i-blog.csdnimg.cn/direct/4b8aa829b5e74c1ab95505cbe74446c5.png" width="1200"/>
+            <img alt="" height="872" src="https://i-blog.csdnimg.cn/direct/e86faa8748e94cdfbbbb9daada8a2512.png" width="1200"/>
+            <img alt="" height="872" src="https://i-blog.csdnimg.cn/direct/46459d7c832f4926be9b45b7f1854037.png" width="1200"/>
+           </img>
+          </img>
+         </img>
+        </img>
+       </img>
+      </img>
+     </img>
+    </p>
+    <h2>
+    </h2>
+    <h2>
+    </h2>
+   </div>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

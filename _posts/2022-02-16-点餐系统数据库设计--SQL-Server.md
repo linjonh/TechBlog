@@ -1,0 +1,1222 @@
+---
+layout: post
+title: 2022-02-16-点餐系统数据库设计--SQL-Server
+date: 2022-02-16 19:54:35 +0800
+categories: [数据库,SQL]
+tags: [数据库,sql,sqlserver]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=122960029
+  alt: 点餐系统数据库设计--SQL-Server
+artid: 122960029
+---
+<span class="artid" style="display:none" artid=68747470733a2f2f626c6f672e6373:646e2e6e65742f4172746966696369616c5f6964696f74732f:61727469636c652f64657461696c732f313232393630303239></span>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     点餐系统数据库设计--SQL Server
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#_1" rel="nofollow">
+        友情链接
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#1MySQL_2" rel="nofollow">
+          1、学生成绩管理系统数据库设计--MySQL
+         </a>
+        </li>
+        <li>
+         <a href="#2MySQL_4" rel="nofollow">
+          2、医疗信息管理系统数据库--MySQL
+         </a>
+        </li>
+        <li>
+         <a href="#3MySQL_6" rel="nofollow">
+          3、邮件管理数据库设计--MySQL
+         </a>
+        </li>
+        <li>
+         <a href="#4SQL_Server_8" rel="nofollow">
+          4、商品管理系统数据库设计--SQL Server
+         </a>
+        </li>
+        <li>
+         <a href="#5SQL_ServerMedical_Management_System_Database_10" rel="nofollow">
+          5、SQL Server医疗信息管理系统数据库【英文版-源码】--（Medical Management System Database）
+         </a>
+        </li>
+        <li>
+         <a href="#6SQL_ServerMovie_Theatre_Management_System_Database_12" rel="nofollow">
+          6、SQL Server电影院数据库管理系统【英文版-源码】--（Movie Theatre Management System Database）
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_15" rel="nofollow">
+        一、需求分析
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#1_16" rel="nofollow">
+          1.选题背景
+         </a>
+        </li>
+        <li>
+         <a href="#2_18" rel="nofollow">
+          2.系统功能
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#21__19" rel="nofollow">
+            2.1 查询菜单功能
+           </a>
+          </li>
+          <li>
+           <a href="#22__21" rel="nofollow">
+            2.2 菜品折扣功能
+           </a>
+          </li>
+          <li>
+           <a href="#23__23" rel="nofollow">
+            2.3 点餐功能
+           </a>
+          </li>
+          <li>
+           <a href="#24__25" rel="nofollow">
+            2.4 餐桌和顾客信息
+           </a>
+          </li>
+          <li>
+           <a href="#25__27" rel="nofollow">
+            2.5 顾客实时状态维护
+           </a>
+          </li>
+          <li>
+           <a href="#26__29" rel="nofollow">
+            2.6 顾客排队功能
+           </a>
+          </li>
+          <li>
+           <a href="#27__31" rel="nofollow">
+            2.7 结算功能
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#3_33" rel="nofollow">
+          3.用户需求分析
+         </a>
+        </li>
+        <li>
+         <a href="#4_49" rel="nofollow">
+          4.数据字典
+         </a>
+        </li>
+        <li>
+         <a href="#5_57" rel="nofollow">
+          5.数据流图
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_60" rel="nofollow">
+        二、数据概念结构
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#1_61" rel="nofollow">
+          1.数据结构
+         </a>
+        </li>
+        <li>
+         <a href="#2ER_66" rel="nofollow">
+          2.ER图
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#21ER_67" rel="nofollow">
+            2.1局部ER图
+           </a>
+          </li>
+          <li>
+           <a href="#22_ER_105" rel="nofollow">
+            2.2 全局ER图
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_109" rel="nofollow">
+        三、逻辑结构设计
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#1_112" rel="nofollow">
+          1.实体
+         </a>
+        </li>
+        <li>
+         <a href="#2_123" rel="nofollow">
+          2.实体间联系
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_130" rel="nofollow">
+        四、物理结构设计
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#41_CustomerInfo_132" rel="nofollow">
+          4.1 顾客CustomerInfo
+         </a>
+        </li>
+        <li>
+         <a href="#42_FoodInfo_135" rel="nofollow">
+          4.2 菜品信息FoodInfo
+         </a>
+        </li>
+        <li>
+         <a href="#43_DiscountInfo_139" rel="nofollow">
+          4.3 优惠信息DiscountInfo
+         </a>
+        </li>
+        <li>
+         <a href="#44_OrderInfo_143" rel="nofollow">
+          4.4 点菜单OrderInfo
+         </a>
+        </li>
+        <li>
+         <a href="#45_ManagerInfo_147" rel="nofollow">
+          4.5 店员信息ManagerInfo
+         </a>
+        </li>
+        <li>
+         <a href="#46_ManagerInfo_150" rel="nofollow">
+          4.6 顾客状态实时表ManagerInfo
+         </a>
+        </li>
+        <li>
+         <a href="#47_ChargeInfo_154" rel="nofollow">
+          4.7 收银单ChargeInfo
+         </a>
+        </li>
+        <li>
+         <a href="#48_Queue_159" rel="nofollow">
+          4.8 顾客排队表Queue
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_163" rel="nofollow">
+        五、数据库构建
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#1_164" rel="nofollow">
+          1.建表语句
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#11__165" rel="nofollow">
+            1.1 创建数据库
+           </a>
+          </li>
+          <li>
+           <a href="#12__189" rel="nofollow">
+            1.2 创建表
+           </a>
+          </li>
+          <li>
+           <a href="#13__252" rel="nofollow">
+            1.3 添加外键约束
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#2_278" rel="nofollow">
+          2.插入数据
+         </a>
+        </li>
+        <li>
+         <a href="#3_309" rel="nofollow">
+          3.索引
+         </a>
+        </li>
+        <li>
+         <a href="#4_316" rel="nofollow">
+          4.查询
+         </a>
+        </li>
+        <li>
+         <a href="#5_339" rel="nofollow">
+          5.触发器
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#51__340" rel="nofollow">
+            5.1 增加数据库触发器
+           </a>
+          </li>
+          <li>
+           <a href="#52__345" rel="nofollow">
+            5.2 增触发器
+           </a>
+          </li>
+          <li>
+           <a href="#53__350" rel="nofollow">
+            5.3 删触发器
+           </a>
+          </li>
+          <li>
+           <a href="#54_update_356" rel="nofollow">
+            5.4 update触发器
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#6_362" rel="nofollow">
+          6.存储过程
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#61__363" rel="nofollow">
+            6.1 新增存储过程
+           </a>
+          </li>
+          <li>
+           <a href="#62__368" rel="nofollow">
+            6.2 变更存储过程
+           </a>
+          </li>
+          <li>
+           <a href="#63__373" rel="nofollow">
+            6.3 删除存储过程
+           </a>
+          </li>
+          <li>
+           <a href="#64__380" rel="nofollow">
+            6.4 查询存储过程一
+           </a>
+          </li>
+          <li>
+           <a href="#65__385" rel="nofollow">
+            6.5 查询存储过程二
+           </a>
+          </li>
+          <li>
+           <a href="#66__390" rel="nofollow">
+            6.6 查询存储过程三
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#7_395" rel="nofollow">
+          7.视图
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#71__396" rel="nofollow">
+            7.1 菜品种类分布
+           </a>
+          </li>
+          <li>
+           <a href="#72__400" rel="nofollow">
+            7.2 建立视图，查看菜品及折扣情况
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#8_407" rel="nofollow">
+          8.自定义函数
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#81__408" rel="nofollow">
+            8.1 输入收银员编号，返回收银员姓名
+           </a>
+          </li>
+          <li>
+           <a href="#82__418" rel="nofollow">
+            8.2 建立自定义函数，输入食物名称，返回对应食物所属菜系
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#9_422" rel="nofollow">
+          9.游标
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="_1">
+     </a>
+     友情链接
+    </h2>
+    <h3>
+     <a id="1MySQL_2">
+     </a>
+     1、学生成绩管理系统数据库设计–MySQL
+    </h3>
+    <p>
+     <a href="https://blog.csdn.net/Artificial_idiots/article/details/106830628">
+      学生成绩管理系统数据库设计–MySQL
+     </a>
+    </p>
+    <h3>
+     <a id="2MySQL_4">
+     </a>
+     2、医疗信息管理系统数据库–MySQL
+    </h3>
+    <p>
+     <a href="https://blog.csdn.net/Artificial_idiots/article/details/122094857">
+      医疗信息管理系统数据库–MySQL
+     </a>
+    </p>
+    <h3>
+     <a id="3MySQL_6">
+     </a>
+     3、邮件管理数据库设计–MySQL
+    </h3>
+    <p>
+     <a href="https://blog.csdn.net/Artificial_idiots/article/details/122094148">
+      邮件管理数据库设计–MySQL
+     </a>
+    </p>
+    <h3>
+     <a id="4SQL_Server_8">
+     </a>
+     4、商品管理系统数据库设计–SQL Server
+    </h3>
+    <p>
+     <a href="https://blog.csdn.net/Artificial_idiots/article/details/122963688">
+      商品管理系统数据库设计–SQL Server
+     </a>
+    </p>
+    <h3>
+     <a id="5SQL_ServerMedical_Management_System_Database_10">
+     </a>
+     5、SQL Server医疗信息管理系统数据库【英文版-源码】–（Medical Management System Database）
+    </h3>
+    <p>
+     <a href="https://blog.csdn.net/Artificial_idiots/article/details/122095909">
+      SQL Server医疗信息管理系统数据库【英文版-源码】–（Medical Management System Database）
+     </a>
+    </p>
+    <h3>
+     <a id="6SQL_ServerMovie_Theatre_Management_System_Database_12">
+     </a>
+     6、SQL Server电影院数据库管理系统【英文版-源码】–（Movie Theatre Management System Database）
+    </h3>
+    <p>
+     <a href="https://blog.csdn.net/Artificial_idiots/article/details/122096252">
+      SQL Server电影院数据库管理系统【英文版-源码】–（Movie Theatre Management System Database）
+     </a>
+    </p>
+    <h2>
+     <a id="_15">
+     </a>
+     一、需求分析
+    </h2>
+    <h3>
+     <a id="1_16">
+     </a>
+     1.选题背景
+    </h3>
+    <p>
+     随着经济不断发展，餐饮行业也随着物质生活水平逐步提高而迅速发展，人们对生活质量的要求也越来越高，享受真正自动化、人性化的服务成为了人们追求高质量生活的重要内容。在大多数的餐饮场所点菜、查看菜谱等是人工完成的，速度慢，效率低，极易出错，造成人力物力的极大浪费。然而随着我国市场经济的快速发展，餐厅点菜系统成为餐厅提升服务档次，提高办公效率，提高竞争力的关键因素之餐饮业要想跟上发展形势，餐馆点餐的信息化进程也要加快脚步。
+    </p>
+    <h3>
+     <a id="2_18">
+     </a>
+     2.系统功能
+    </h3>
+    <h4>
+     <a id="21__19">
+     </a>
+     2.1 查询菜单功能
+    </h4>
+    <p>
+     顾客可以根据所有餐厅的菜单信息，数据菜单的相关信息例如通过菜品的菜系查找对应菜系的菜品，也可以通过菜品类型查询相应的菜品，也可以根据价格范围来查询目标菜品，由餐厅管理者维护菜品信息。
+    </p>
+    <h4>
+     <a id="22__21">
+     </a>
+     2.2 菜品折扣功能
+    </h4>
+    <p>
+     餐厅菜品一定程度上有折扣，可定期或者集中维护，顾客也可以通过折扣情况来选择菜品。
+    </p>
+    <h4>
+     <a id="23__23">
+     </a>
+     2.3 点餐功能
+    </h4>
+    <p>
+     顾客进店后可根据菜单点相应的菜品，可以记录顾客点餐的份数和对应的口味需求，顾客也可以更改自己的点餐信息。餐厅管理者也可以查看菜品受欢迎程度以及对顾客口味进行分析。
+    </p>
+    <h4>
+     <a id="24__25">
+     </a>
+     2.4 餐桌和顾客信息
+    </h4>
+    <p>
+     餐桌为顾客提供用餐位置，需要实时更新当前餐桌状态（空闲，就餐），不同餐桌提供的座位数不同。顾客是进店顾客相关信息，两个表都有管理员来维护，每一个顾客id对应一起进餐厅的顾客，人数不限，同时需要指定顾客的就餐桌号。
+    </p>
+    <h4>
+     <a id="25__27">
+     </a>
+     2.5 顾客实时状态维护
+    </h4>
+    <p>
+     为了餐厅管理者更好维护餐厅就餐情况，为餐厅设计顾客状态表数据，可以数据顾客查询顾客当前状态。
+    </p>
+    <h4>
+     <a id="26__29">
+     </a>
+     2.6 顾客排队功能
+    </h4>
+    <p>
+     顾客进入餐厅，如果满员需要一定时间等待，根据人数排队不同的桌位人数的排队。
+    </p>
+    <h4>
+     <a id="27__31">
+     </a>
+     2.7 结算功能
+    </h4>
+    <p>
+     顾客就餐完成，完成结款，可以通过顾客编号，餐桌号，点单编号等信息查询到顾客的消费情况。每天的销售统计，套餐和单点的销售情况，实现对本店总体销售情况的统计。
+    </p>
+    <h3>
+     <a id="3_33">
+     </a>
+     3.用户需求分析
+    </h3>
+    <p>
+     餐厅管理系统的总目标是为用户提供迅速、高效的服务，减免手工处理的繁琐与误差，及时、准确地反映餐厅的工作情况、经营情况，从而提高餐厅的服务质量，获得更好的经济效益。其具体目标包括：
+     <br/>
+     1）快速完成顾客的点餐。
+     <br/>
+     2）准确无误地记录顾客的每笔消费记录。
+     <br/>
+     3）实时、快速、准确地提供最新餐单。
+     <br/>
+     4）方便查询顾客消费情况。
+     <br/>
+     5）实现顾客排队功能。
+     <br/>
+     顾客：顾客进店首先选择位置，拿到菜单进行点餐 。
+     <br/>
+     菜品：供顾客选择，可由收银员（店员）维护、更新、删除、新增菜品，菜品编号，可提供菜系、价格和菜品类型供筛选，价格由最初店员设置，可通过折扣或者信息更新变更价格。
+     <br/>
+     点菜单:顾客进店后进行点单，点菜单编号不唯一，同一桌同一批顾客存在点不同菜品的可能，顾客可自行选择口味，顾客可以根据需求取消点单或者增加点单。
+     <br/>
+     顾客状态:体现顾客状态。
+     <br/>
+     优惠信息：包括菜品编号和对应折扣，由店员更新，针对不同菜品折扣不同，店员可根据时令和物价进行更新，折扣范围是0-1。
+     <br/>
+     收银单：统计点菜单顾客实际应付款项和对应折扣后实际应付款，计入收款时间，方便店员计算账目，可由店员维护。
+     <br/>
+     店员:快餐店维护者，数据库主要使用人和维护人，主要维护菜品信息和菜品对应折扣，完成收款和账目统计等。
+     <br/>
+     排队表，用于体现顾客排队情况，根据顾客人数等待餐桌不同。
+    </p>
+    <h3>
+     <a id="4_49">
+     </a>
+     4.数据字典
+    </h3>
+    <p>
+     数据字典是关于数据的信息的集合，也是对数据流图中所包含的所有元素的定义的集合。
+     <br/>
+     由于本次是小型数据库系统的开发，所以采用卡片形式书写数据字典。每张卡片上保存描述一个数据的信息。这样做更新和修改起来比较方便，而且能单独处理描述每个数据的信息。
+     <br/>
+     下面列出若干数据元素的数据卡片信息。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c9ec5f446d45a20edbf948cf141d7c35.png#pic_center">
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/bdec071081e9e9d9161a90644f49e584.png#pic_center"/>
+     </img>
+    </p>
+    <h3>
+     <a id="5_57">
+     </a>
+     5.数据流图
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f7b8b3ab3a1ae03629a3caaff8baa9f2.png#pic_center"/>
+    </p>
+    <h2>
+     <a id="_60">
+     </a>
+     二、数据概念结构
+    </h2>
+    <h3>
+     <a id="1_61">
+     </a>
+     1.数据结构
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f2a62c6f8d7ea8a5b27e5df275056332.png#pic_center"/>
+    </p>
+    <p>
+     概念结构设计是将分析得到的用户需求抽象为概念模型的过程，即在需求分析的基础上，设计出能够满足用户需求的各种实体以及它们之间的相互关系的模型。概念结构的主要特点是能真实、充分地反映现实世界，易于理解，易于更改，易于向关系、网状、层次等各种数据模型转换，描述概念模型的有力工具是E-R模型。
+    </p>
+    <h3>
+     <a id="2ER_66">
+     </a>
+     2.ER图
+    </h3>
+    <h4>
+     <a id="21ER_67">
+     </a>
+     2.1局部ER图
+    </h4>
+    <p>
+     （1）顾客信息E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/928ce2b6d844c1e38c029994de516d37.png"/>
+    </p>
+    <p>
+     （2）餐桌E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/63c67d7e61ea6f128ef1d8d6f0483ecd.png#pic_center"/>
+    </p>
+    <p>
+     （3）顾客状态E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a863166573c9af7e63f615a812b5d62c.png#pic_center"/>
+    </p>
+    <p>
+     （4）菜品E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/836016a434afce32299df43d9c662288.png#pic_center"/>
+    </p>
+    <p>
+     （5）点菜单E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/e4869bd17fed52f7864778a4529f37e8.png#pic_center"/>
+    </p>
+    <p>
+     （6）优惠信息E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/fcd58082113cdf60ec852e94261424b3.png"/>
+    </p>
+    <p>
+     （7）收银员E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/13ddef8c95fdae394aa15e2d2182768d.png#pic_center"/>
+    </p>
+    <p>
+     （8）收银单E-R图
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/eef2a6703114e4d45662fa4d55c77da3.png#pic_center"/>
+    </p>
+    <p>
+     （8）排队表E-R图
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/8d85441aaf8aeaee51fdf4dd9e12eeb1.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="22_ER_105">
+     </a>
+     2.2 全局ER图
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/fa72bf59bdab19c5de932dbce97c9204.png#pic_center"/>
+    </p>
+    <h2>
+     <a id="_109">
+     </a>
+     三、逻辑结构设计
+    </h2>
+    <p>
+     逻辑结构设计的任务就是把概念模型结构转换成某个具体的DBMS所支持的数据模型。设计逻辑结构时，首先是将概念结构转换为一般的关系、网状、层次模型，其次是将转换来的关系、网状、层次模型向特定DBMS支持下的数据模型转换，最后是对数据模型进行优化。
+     <br/>
+     将餐饮点菜系统的E-R图转换成关系数据模型。关系模式如下：
+    </p>
+    <h3>
+     <a id="1_112">
+     </a>
+     1.实体
+    </h3>
+    <p>
+     顾客：属性有顾客编号、桌号、用餐人数、进店时间
+     <br/>
+     餐桌：属性有餐桌编号、容量、状态（空闲、就餐）
+     <br/>
+     顾客状态：顾客编号、时间、状态（就餐、等待、结款）
+     <br/>
+     菜品：属性有菜品编号、菜品名称、菜品分类、所属菜系、价格、原材料
+     <br/>
+     点菜单：属性有点菜单编号、顾客编号、菜品编号、份数、口味
+     <br/>
+     优惠信息：属性有菜品编号、折扣
+     <br/>
+     收银员：属性有收银员编号、姓名、联系方式
+     <br/>
+     收银单：属性有收银单编号、收银员编号、顾客编号、餐桌编号、应收金额、折扣、实收金额、收银时间
+     <br/>
+     排队表：属性有顾客编号，顾客人数，对应需要餐桌人数
+    </p>
+    <h3>
+     <a id="2_123">
+     </a>
+     2.实体间联系
+    </h3>
+    <p>
+     一桌顾客对应一个菜单，多桌客人可以使用相同的菜单，因此顾客与菜单有多对一的联系。
+     <br/>
+     客人、收银单之间存在一对一的关系，即一桌客人只对应一个收银单
+     <br/>
+     点菜单和菜品之间存在一对多联系，一个菜单可对应多个菜品
+     <br/>
+     菜品和折扣存在一对一联系，一个菜品对应一种折扣
+     <br/>
+     顾客和顾客状态存在一对多联系，一个顾客对应多种客户状态
+     <br/>
+     排队表顾客与顾客存在一对一关系
+    </p>
+    <h2>
+     <a id="_130">
+     </a>
+     四、物理结构设计
+    </h2>
+    <p>
+     数据库的物理结构设计是对于给定的逻辑数据模型，选取一个最合适应用环境的物理结构。数据库的物理结构指的是数据库在物理设备上的存储结构与存取方法，它依赖于给定的计算机系统，是在数据库逻辑结构的基础上设计出一组能够满足实际需求的关系、约束、和索引等信息。餐厅点菜系统的数据库表结构如下：
+    </p>
+    <h3>
+     <a id="41_CustomerInfo_132">
+     </a>
+     4.1 顾客CustomerInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/fbc8f7e6d2c1b93991a7cb0fcbc9e2a8.png"/>
+    </p>
+    <h3>
+     <a id="42_FoodInfo_135">
+     </a>
+     4.2 菜品信息FoodInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/99b73f906bebb43ad289e301b9089bf3.png"/>
+    </p>
+    <h3>
+     <a id="43_DiscountInfo_139">
+     </a>
+     4.3 优惠信息DiscountInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/2be8f9ebe2d01c44a8c5f7de2bb4cfa5.png"/>
+    </p>
+    <h3>
+     <a id="44_OrderInfo_143">
+     </a>
+     4.4 点菜单OrderInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/71e7dfc8f8acbf001d83188c8914aeaa.png"/>
+    </p>
+    <h3>
+     <a id="45_ManagerInfo_147">
+     </a>
+     4.5 店员信息ManagerInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/0a82359c0c8aaa255d9157bb2d72da14.png"/>
+    </p>
+    <h3>
+     <a id="46_ManagerInfo_150">
+     </a>
+     4.6 顾客状态实时表ManagerInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/73ef8d1dc4604bf31fbd04853fd6340b.png"/>
+    </p>
+    <h3>
+     <a id="47_ChargeInfo_154">
+     </a>
+     4.7 收银单ChargeInfo
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/237629baaa6be4bcfbb66db78595f548.png#pic_center"/>
+    </p>
+    <h3>
+     <a id="48_Queue_159">
+     </a>
+     4.8 顾客排队表Queue
+    </h3>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/56a36d8e47bb9d7de3f0f5b1ff547d20.png"/>
+    </p>
+    <h2>
+     <a id="_163">
+     </a>
+     五、数据库构建
+    </h2>
+    <h3>
+     <a id="1_164">
+     </a>
+     1.建表语句
+    </h3>
+    <h4>
+     <a id="11__165">
+     </a>
+     1.1 创建数据库
+    </h4>
+    <pre><code class="prism language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> restaurant <span class="token keyword">on</span> <span class="token keyword">primary</span>
+<span class="token punctuation">(</span>
+	name<span class="token operator">=</span><span class="token string">'restaurant'</span><span class="token punctuation">,</span>
+	filename<span class="token operator">=</span><span class="token string">'D:\database\restaurant.mdf'</span><span class="token punctuation">,</span>
+	size<span class="token operator">=</span><span class="token number">5</span>MB<span class="token punctuation">,</span>
+	maxsize<span class="token operator">=</span><span class="token number">100</span>MB<span class="token punctuation">,</span>
+	filegrowth<span class="token operator">=</span><span class="token number">15</span><span class="token operator">%</span>
+<span class="token punctuation">)</span>
+Log <span class="token keyword">on</span>
+<span class="token punctuation">(</span>
+	name<span class="token operator">=</span><span class="token string">'restaurant_log'</span><span class="token punctuation">,</span>
+	filename<span class="token operator">=</span><span class="token string">'D:\database\restaurant.ldf'</span><span class="token punctuation">,</span>
+	size<span class="token operator">=</span><span class="token number">5</span>MB<span class="token punctuation">,</span>
+	maxsize<span class="token operator">=</span><span class="token number">100</span>MB<span class="token punctuation">,</span>
+	filegrowth<span class="token operator">=</span><span class="token number">15</span><span class="token operator">%</span>
+<span class="token punctuation">)</span>
+
+GO
+<span class="token keyword">use</span> restaurant<span class="token punctuation">;</span>
+</code></pre>
+    <h4>
+     <a id="12__189">
+     </a>
+     1.2 创建表
+    </h4>
+    <pre><code class="prism language-sql"><span class="token comment">-- 餐桌表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> TableInfo
+<span class="token punctuation">(</span>
+	Table_Id	 <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span>
+	Table_Num    <span class="token keyword">int</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span>
+	Table_Status <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 顾客表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> CustomerInfo
+<span class="token punctuation">(</span>
+	Cus_Id	  <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span>
+	Table_Id  <span class="token keyword">int</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span>
+	Cus_num	  <span class="token keyword">int</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">,</span>
+	Intime	  <span class="token keyword">datetime</span> <span class="token operator">not</span> <span class="token boolean">null</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 收银员表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> CashierInfo
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 菜品表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> FoodInfo
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 菜品折扣表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> DiscountInfo
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">--点菜单表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> OrderInfo
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 收银表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> ChargeInfo
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 顾客状态实时表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> CuststatusInfo
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 顾客排队表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> Queue
+<span class="token punctuation">(</span>
+	<span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+    <h4>
+     <a id="13__252">
+     </a>
+     1.3 添加外键约束
+    </h4>
+    <pre><code class="prism language-sql"><span class="token comment">--折扣菜品菜品id是菜品表菜品id的外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> CustomerInfo
+<span class="token keyword">add</span> <span class="token keyword">constraint</span> fk_Tab_Cu <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>Table_Id<span class="token punctuation">)</span> <span class="token keyword">references</span> TableInfo<span class="token punctuation">(</span>Table_Id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">--折扣菜品菜品id是菜品表菜品id的外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> DiscountInfo
+<span class="token keyword">add</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--点菜单的菜品id是菜品表菜品id的外键，顾客id是顾客表顾客id的外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> OrderInfo
+<span class="token keyword">add</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--收银单的顾客id是顾客表顾客id的外键，收银员id是收银员表收银员编号的外键，用餐餐桌id是餐桌表餐桌id的外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> ChargeInfo
+<span class="token keyword">add</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--顾客状态实时表的顾客id是顾客表顾客id的外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> CuststatusInfo
+<span class="token keyword">add</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--顾客排队表的顾客id是顾客表顾客id的外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> Queue
+<span class="token keyword">add</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+</code></pre>
+    <h3>
+     <a id="2_278">
+     </a>
+     2.插入数据
+    </h3>
+    <pre><code class="prism language-sql"><span class="token comment">--餐桌插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> TableInfo <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'空闲'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--顾客插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> CustomerInfo <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">1001</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'2019-11-19 08:21:56'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--收银员插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--菜品插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> FoodInfo <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--菜品折扣插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> DiscountInfo <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--点菜单插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> OrderInfo <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token comment">--结算单表插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> ChargeInfo <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+<span class="token comment">--顾客状态插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> CuststatusInfo <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+
+<span class="token comment">--顾客排队表插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> Queue <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+</code></pre>
+    <h3>
+     <a id="3_309">
+     </a>
+     3.索引
+    </h3>
+    <pre><code class="prism language-sql"><span class="token comment">--建立索引</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> Index_ Cash_Name <span class="token keyword">ON</span> <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+</code></pre>
+    <h3>
+     <a id="4_316">
+     </a>
+     4.查询
+    </h3>
+    <pre><code class="prism language-sql"><span class="token keyword">select</span> 
+    FoodInfo<span class="token punctuation">.</span>Food_id <span class="token keyword">as</span> 菜品编号<span class="token punctuation">,</span>
+    FoodInfo<span class="token punctuation">.</span>Food_name <span class="token keyword">as</span> 菜品名称<span class="token punctuation">,</span>
+    Food_Type <span class="token keyword">as</span> 菜品类型<span class="token punctuation">,</span>
+    FoodInfo<span class="token punctuation">.</span>Cuisine <span class="token keyword">AS</span> 菜品菜系<span class="token punctuation">,</span>
+    Price <span class="token keyword">as</span> 价格<span class="token punctuation">,</span>
+    DiscountInfo<span class="token punctuation">.</span>Discount <span class="token keyword">as</span> 折扣
+<span class="token keyword">from</span> FoodInfo <span class="token keyword">inner</span> <span class="token keyword">join</span> DiscountInfo
+<span class="token keyword">on</span> FoodInfo<span class="token punctuation">.</span>Food_id<span class="token operator">=</span>DiscountInfo<span class="token punctuation">.</span>Food_id<span class="token punctuation">;</span>
+
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/d2ea9b7f0251b3ad28c6988a7af8ef1b.png#pic_center"/>
+    </p>
+    <pre><code class="prism language-sql"><span class="token keyword">select</span> 
+   <span class="token comment">-- 需要完整代码请添加文章底部微信，付费咨询</span>
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/1181a621b561cbd86cf018585fc2498a.png#pic_center"/>
+    </p>
+    <h3>
+     <a id="5_339">
+     </a>
+     5.触发器
+    </h3>
+    <h4>
+     <a id="51__340">
+     </a>
+     5.1 增加数据库触发器
+    </h4>
+    <p>
+     点菜单产生一个数据自动传入收银单数据中，增加表OrderInfo，触发表ChargeInfo
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/efd3290ce0d5f5ae8c035ef700c27067.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="52__345">
+     </a>
+     5.2 增触发器
+    </h4>
+    <p>
+     新增客户自动默认排队，默认排队数桌人数为，后期可以修改,插入表CustomerInfo，触发表Queue
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/bab9c842497d7460eb178ee7e338f630.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="53__350">
+     </a>
+     5.3 删触发器
+    </h4>
+    <p>
+     删除不在参与排队的客户信息，即删除排队表中的客户信息，删除表CustomerInfo，触发表Queue
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/3886871666859df7037689ef2a0b522d.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="54_update_356">
+     </a>
+     5.4 update触发器
+    </h4>
+    <p>
+     更改客户人数，对应的排队人数也更新，更新CustomerInfo，触发CustomerInfo
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/5c8daa1087c115758e0714fa7a1005d1.png#pic_center"/>
+    </p>
+    <h3>
+     <a id="6_362">
+     </a>
+     6.存储过程
+    </h3>
+    <h4>
+     <a id="61__363">
+     </a>
+     6.1 新增存储过程
+    </h4>
+    <p>
+     新增顾客存储过程
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9921ed2c11243d75c186ed46e3a0f858.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="62__368">
+     </a>
+     6.2 变更存储过程
+    </h4>
+    <p>
+     调节食品价格存储过程
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/2d41dca69cd83fc11b4109a8e975a77c.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="63__373">
+     </a>
+     6.3 删除存储过程
+    </h4>
+    <p>
+     根据顾客id删除顾客排队存储过程
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/1f6cb416a2d044efa6dff637cfc167c3.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="64__380">
+     </a>
+     6.4 查询存储过程一
+    </h4>
+    <p>
+     根据菜品类型查询快餐厅目前食品清单存储过程，默认主食
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/0e9f8c2e3ba96dbf8226cc187d1a656c.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="65__385">
+     </a>
+     6.5 查询存储过程二
+    </h4>
+    <p>
+     根据客户id查询排队状态存储过程
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/ff6df341657b3d40c0a31c3a94288b41.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="66__390">
+     </a>
+     6.6 查询存储过程三
+    </h4>
+    <p>
+     根据食物口味查询订单存储过程
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c7ca348a01258bf5ccc11ae7895fd529.png#pic_center"/>
+    </p>
+    <h3>
+     <a id="7_395">
+     </a>
+     7.视图
+    </h3>
+    <h4>
+     <a id="71__396">
+     </a>
+     7.1 菜品种类分布
+    </h4>
+    <p>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/5473761a282f1872011258c4b8bfb7b0.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="72__400">
+     </a>
+     7.2 建立视图，查看菜品及折扣情况
+    </h4>
+    <p>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/652caaeaf37394535d666b2b3e03e364.png#pic_center"/>
+    </p>
+    <p>
+     测试
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/7184ff697b4b93e018faf1748a3894e7.png"/>
+    </p>
+    <h3>
+     <a id="8_407">
+     </a>
+     8.自定义函数
+    </h3>
+    <h4>
+     <a id="81__408">
+     </a>
+     8.1 输入收银员编号，返回收银员姓名
+    </h4>
+    <p>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6a438c6c04c1c6af6747f78e6b84106a.png#pic_center"/>
+    </p>
+    <p>
+     测试
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f4b05c5ca9136b7a76ba922e323ee8ee.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="82__418">
+     </a>
+     8.2 建立自定义函数，输入食物名称，返回对应食物所属菜系
+    </h4>
+    <p>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/da3753e3a7efa67ba3388ae815ddb9f8.png#pic_center"/>
+    </p>
+    <h3>
+     <a id="9_422">
+     </a>
+     9.游标
+    </h3>
+    <p>
+     显示有折扣的菜品信息
+     <br/>
+     – 需要完整代码请添加文章底部微信，付费咨询
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/2110a2deed376a92637f1700b43b6d41.png#pic_center"/>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,147 @@
+---
+layout: post
+title: 2025-01-12-解决前端跨域has-been-blocked-by-CORS-policy-No-Access-Control-Allow-Origin-header...
+date: 2025-01-12 17:47:11 +0800
+categories: [前端]
+tags: [nginx,前端,跨域]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=100887770
+  alt: 解决前端跨域has-been-blocked-by-CORS-policy-No-Access-Control-Allow-Origin-header...
+artid: 100887770
+---
+<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f71715f34303038383434332f:61727469636c652f64657461696c732f313030383837373730></span>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     解决前端跨域：has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header...
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     在前端工作中，有时候会碰到跨域的问题，就是请求的接口地址和本身的服务器不属于一个域内，此时浏览器会报错：
+    </p>
+    <p>
+     XXXXX（请求的跨域url）has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested
+    </p>
+    <p>
+     网上有很多的解决办法，可以用jsonp来请求等等。
+    </p>
+    <p>
+     这里可以用nginx的转发功能来实现。
+    </p>
+    <p>
+     比如我这里axios请求的接口是
+    </p>
+    <p>
+     http://xxxx.xxxx.com/abc/efg/hi?12341234324
+    </p>
+    <p>
+     我用了axios的get方法直接请求了这个连接，不出意外的浏览器报错。
+    </p>
+    <p>
+     此时我在nginx里配置了这样一条
+    </p>
+    <p>
+    </p>
+    <p>
+     location /abc/efg/ {
+     <!-- -->
+    </p>
+    <p>
+     proxy_pass http://xxxx.xxxx.com;
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+     代码请求的连接直接改为
+    </p>
+    <p>
+     /abc/efg/hi?1234234242432
+    </p>
+    <p>
+     此时去掉了前面的域名，实际上请求的是我本地的地址：
+    </p>
+    <p>
+     127.0.0.1：端口号/abc/efg/hi?123121313
+    </p>
+    <p>
+     然后nginx碰到了
+    </p>
+    <p>
+     /abc/efg/
+    </p>
+    <p>
+     所以自动的捕捉匹配这个端口的地址，转到了
+    </p>
+    <p>
+     http://xxxx.xxxx.com/abc/efg/hi?12341234324
+    </p>
+    <p>
+     可以实现的原因在于，出现了跨域问题是浏览器的报错，只要后台处理一下，用nginx转发就可以轻松的解决问题。
+    </p>
+    <p>
+     注意：我在配置了nginx后，实际测试时没有生效，一度以为自己配的有问题，后来发现时我自己的电脑问题，事实证明，觉得配的没问题还一直折腾的时候，那就是电脑问题了，可以换服务器上试一试。nginx经常不生效的，感觉windows上的nginx不靠谱，建议不确定的时候可以把跳转连接换成www.baidu.com来实验一下。我本地测试的时候百度跳转都没生效，有时候怀疑电脑有问题可能是正确的。
+    </p>
+    <hr/>
+    <p>
+     我是第二弹分割线
+    </p>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     第二弹：
+    </p>
+    <p>
+     在解决了跨域问题后，又出现了一个老大难的问题：如何解决https请求的问题。
+    </p>
+    <p>
+     当上文的nginx放在生产环境时，请求对方的连接变成了
+    </p>
+    <p>
+     https://xxxx.xxxx.com/abc/efg/hi?12341234324
+    </p>
+    <p>
+     然后在重启nginx的时候，无法启动nginx，我本身的服务器是http的，对方是https，启动的时候报错
+    </p>
+    <p>
+     https protocol requires SSL support
+    </p>
+    <p>
+     1.单纯的只是我方nginx安装的时候没有装ssl模块，解决方式参考连接
+    </p>
+    <p>
+     https://www.cnblogs.com/piscesLoveCc/p/6120875.html
+    </p>
+    <p>
+     2.在nginx配置里不需要放上监听443端口的内容，配置证书跟密钥
+    </p>
+    <p>
+     listen 443 ssl;
+    </p>
+    <p>
+     ssl_certificate /usr/local/Tengine/sslcrt/ wosign.com.crt;
+    </p>
+    <p>
+     ssl_certificate_key /usr/local/Tengine/sslcrt/ wosign.com .Key;
+    </p>
+    <p>
+    </p>
+    <p>
+     就是这些东西，只是我们请求别人的接口，不需要配置证书跟密钥。除非是我方自己是https的时候，才需要监听端口和配置自己的证书跟密钥。
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

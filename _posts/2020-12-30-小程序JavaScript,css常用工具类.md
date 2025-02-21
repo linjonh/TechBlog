@@ -1,0 +1,1806 @@
+---
+title: 2020-12-30-小程序JavaScript,css常用工具类
+date: 2020-12-30 20:39:47 +0800
+categories: [10小时零基础入门小程序开发,微信小程序]
+tags: [小程序,javascript,css,工具类,工具方法]
+image:
+  path: https://img-blog.csdnimg.cn/2021021117264357.png?x-oss-process&#61;image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70
+  alt: 小程序JavaScript,css常用工具类
+artid: 111997916
+---
+<span class="artid" style="display:none" artid=68747470733a2f2f62:6c6f672e6373646e2e6e65742f7169757368695f313939302f:61727469636c652f64657461696c732f313131393937393136></span>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     小程序JavaScript，css常用工具类
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="_0">
+     </a>
+     小程序
+    </h2>
+    <h3>
+     <a id="_1">
+     </a>
+     时间相关
+    </h3>
+    <h4>
+     <a id="1_2">
+     </a>
+     1，获取当前时间（年月日时分秒）
+    </h4>
+    <p>
+     示例：2020年12月30日20时38分
+    </p>
+    <pre><code>  // 获取当前时间
+  getCurrentTime() {
+    var d = new Date();
+    var month = d.getMonth() + 1;
+    var date = d.getDate();
+    var day = d.getDay();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
+    var ms = d.getMilliseconds();
+
+    var curDateTime = d.getFullYear() + '年';
+    if (month &gt; 9)
+      curDateTime += month + '月';
+    else
+      curDateTime += month + '月';
+
+    if (date &gt; 9)
+      curDateTime = curDateTime + date + "日";
+    else
+      curDateTime = curDateTime + date + "日";
+    if (hours &gt; 9)
+      curDateTime = curDateTime + hours + "时";
+    else
+      curDateTime = curDateTime + hours + "时";
+    if (minutes &gt; 9)
+      curDateTime = curDateTime + minutes + "分";
+    else
+      curDateTime = curDateTime + minutes + "分";
+    return curDateTime;
+  },
+</code></pre>
+    <h4>
+     <a id="2_37">
+     </a>
+     2，时间戳转换为年月日时分秒
+    </h4>
+    <pre><code class="prism language-vue">  getCurrentTime(date) {
+    var d = new Date();
+    if (date) {
+      var d = new Date(date);
+    }
+    var month = d.getMonth() + 1;
+    var date = d.getDate();
+    var day = d.getDay();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+
+    var curDateTime = d.getFullYear() + '年';
+    if (month &gt; 9)
+      curDateTime += month + '月';
+    else
+      curDateTime += month + '月';
+
+    if (date &gt; 9)
+      curDateTime = curDateTime + date + "日";
+    else
+      curDateTime = curDateTime + date + "日";
+    if (hours &gt; 9)
+      curDateTime = curDateTime + hours + "时";
+    else
+      curDateTime = curDateTime + hours + "时";
+    if (minutes &gt; 9)
+      curDateTime = curDateTime + minutes + "分";
+    else
+      curDateTime = curDateTime + minutes + "分";
+    return curDateTime;
+  },
+</code></pre>
+    <h4>
+     <a id="3_wxml_71">
+     </a>
+     3，小程序 wxml里时间戳转日期
+    </h4>
+    <ul>
+     <li>
+      1，在utils文件夹里添加名为filter.wxs的文件（命名可以随便），如下图
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/904d1012077f5d57de9bfe472a5968d9.png">
+       <br/>
+       在filter.wxs文件里添加下面的代码
+      </img>
+     </li>
+    </ul>
+    <pre><code>// 在wxml里调用
+formatNumber = function (n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+/**
+ * 将时间戳格式转为 yyyy年MM月dd日hh时mm秒 格式
+ */
+var formatDate = function (datetime) {
+  var date = getDate(datetime);
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+
+  var time = year + '年' + formatNumber(month) + '月' +
+    day + '日' + formatNumber(hours) + '时' + minutes + '分'
+  return time;
+}
+module.exports = {
+  formatDate: formatDate
+}
+</code></pre>
+    <ul>
+     <li>
+      2，test.wxml里写下面的代码。注意src里改成自己的文件路径
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/183d2cfa0eb597db3eeb2bc3aa037f96.png"/>
+     </li>
+    </ul>
+    <pre><code>&lt;!--导入时间格式化工具filter.wxs--&gt;
+&lt;wxs src="../../utils/filter.wxs" module="filters" /&gt;
+</code></pre>
+    <ul>
+     <li>
+      3，需要转换的地方，写下面的代码。
+     </li>
+    </ul>
+    <pre><code>&lt;text &gt;{<!-- -->{filters.formatDate(item._createTime)}}&lt;/text&gt;
+</code></pre>
+    <p>
+     效果图如下
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/b022fea01c4f94025649e511210e9217.png"/>
+    </p>
+    <h3>
+     <a id="_112">
+     </a>
+     列表相关
+    </h3>
+    <h4>
+     <a id="1_113">
+     </a>
+     1，快速更新购物车里某一条
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/7f5d3060f3ee88cea25d4b0b590c3f1c.png">
+      <br/>
+      定义点击事件传递索引
+     </img>
+    </p>
+    <pre><code>&lt;view wx:for="{<!-- -->{list}}" bindtap="change" data-index="{<!-- -->{index}}"&gt;{<!-- -->{item.age}}&lt;/view&gt;
+</code></pre>
+    <h3>
+     <a id="_121">
+     </a>
+     常用工具方法
+    </h3>
+    <h4>
+     <a id="146_122">
+     </a>
+     1，获取4位或者6位验证码
+    </h4>
+    <pre><code>  //获取随机验证码，n代表几位
+  generateMixed(n) {
+    let chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let res = "";
+    for (var i = 0; i &lt; n; i++) {
+      var id = Math.ceil(Math.random() * 35);
+      res += chars[id];
+    }
+    return res;
+  }
+</code></pre>
+    <h2>
+     <a id="_135">
+     </a>
+     云开发相关
+    </h2>
+    <h3>
+     <a id="1_136">
+     </a>
+     1，返回随机个数的数据
+    </h3>
+    <pre><code> wx.cloud.database().collection('questions')
+      .aggregate()
+      .sample({
+        size: 5 //随机获取几道题，比如这里随机返回5道题
+      })
+      .end()
+      .then(res =&gt; {
+        console.log("随机题库", res)
+      })
+</code></pre>
+    <p>
+     如我请求两次，返回的题目是随机不一样的
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/824bc03a222d5b963a0646a1e69990a3.png">
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/267740c6f81a687ed70a8d57ddc22c0f.png"/>
+     </img>
+    </p>
+    <h3>
+     <a id="2_152">
+     </a>
+     2，云数据库里数组字段是否包含某个值/字段
+    </h3>
+    <h4>
+     <a id="21_153">
+     </a>
+     2-1，包含某个值
+    </h4>
+    <p>
+     这个很简单，直接
+     <br/>
+     数组字段：你要查询的值
+     <br/>
+     如下图
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/6bf1858695b789c889f68ace55299f77.png"/>
+    </p>
+    <h4>
+     <a id="22_158">
+     </a>
+     2-2，不包含
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/3e5763744ffa52855124ae5d8bfc4c21.png"/>
+    </p>
+    <h4>
+     <a id="23_160">
+     </a>
+     2-3，包含某个字段
+    </h4>
+    <p>
+     如判断数据里users字段(数组)里包含姓名为‘小石头’的数据
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/826e845e308709dd2f22191f619a7441.png"/>
+    </p>
+    <h4>
+     <a id="24_163">
+     </a>
+     2-4，数据里数组字段包含要查询数组的一个或者多个
+    </h4>
+    <p>
+     这个常用于根据用户标签匹配商品。商品有多个标签，只要包好用户标签数组里的一个或者多个，就可以推荐给用户。
+    </p>
+    <p>
+     在小程序云开发中，如果你想要查询一个集合（collection）中，某个数组字段包含指定的多个元素之一，可以使用 db.collection().where() 方法结合
+     <span class="katex--inline">
+      <span class="katex">
+       <span class="katex-mathml">
+        i 
+        
+       
+         n 
+        
+       
+         操作符来实现。 
+        
+       
+      
+        in 操作符来实现。
+       </span>
+       <span class="katex-html">
+        <span class="base">
+         <span class="strut" style="height: 0.6833em;">
+         </span>
+         <span class="mord mathnormal">
+          in
+         </span>
+         <span class="mord cjk_fallback">
+          操作符来实现。
+         </span>
+        </span>
+       </span>
+      </span>
+     </span>
+     in 操作符允许你查询文档中某个字段的值是否在给定数组中。这意味着你可以指定一个包含多个可能值的数组作为查询条件，只要文档中相应字段的值与这些值中的任何一个匹配，文档就会被返回。
+    </p>
+    <p>
+     以下是一个示例代码片段，说明如何在云函数中执行这样的查询：
+    </p>
+    <pre><code>  // 假设你要查询的集合名是 'myCollection'
+  // 假设你要查询的数组字段名是 'arrayField'
+  // 假设你要查找的元素列表是 ['elementA', 'elementB', 'elementC']
+ let searchElements = ['elementA', 'elementB', 'elementC'];
+ db.collection('myCollection')
+      .where({
+        arrayField: {
+          $in: searchElements,
+        },
+      })
+      .get();
+  
+</code></pre>
+    <p>
+     在这个例子中，$in: searchElements 表示查询条件是 arrayField 字段的值必须存在于 searchElements 数组中。执行此查询后，将返回所有在 arrayField 中包含 ‘elementA’、‘elementB’ 或 ‘elementC’ 之一的文档
+    </p>
+    <h3>
+     <a id="3_185">
+     </a>
+     3，多条件模糊搜索查询
+    </h3>
+    <h4>
+     <a id="31_186">
+     </a>
+     3-1，多条件模糊搜索
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/b67d268910fd644a90b3f86448f32018.png">
+      <br/>
+      代码如下：
+     </img>
+    </p>
+    <pre><code>        const db = wx.cloud.database();
+        const _ = db.command
+        db.collection('questions').where(
+        _.or([{
+            type: db.RegExp({
+              regexp: key,
+              options: 'i'
+            })
+          },
+          {
+            type: db.RegExp({
+              regexp: key,
+              options: 'i'
+            })
+          },
+          {
+            regexp: key,
+            options: 'i'
+          }
+        ])
+      ).get()
+</code></pre>
+    <h4>
+     <a id="341050_213">
+     </a>
+     3-4，查询年纪在大于等于10小于等于50的用户
+    </h4>
+    <pre><code>const db = wx.cloud.database()
+        db.collection('user')
+            .where({
+                age: {
+                    $gte: 10, //查询年纪在10到50岁之间，包含
+                    $lte: 50
+                },
+                height: {
+                    $gt: 100, //查询身高在100到190岁之间，不包含
+                    $lt: 190
+                }
+            }).get()
+</code></pre>
+    <h4>
+     <a id="3310100_228">
+     </a>
+     3-3，价格大于10并且小于100
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d54a4fc845e50e43a70f3147665e75a8.png"/>
+    </p>
+    <h4>
+     <a id="34__10100_230">
+     </a>
+     3-4，查询城市或者地址里包含 北京 并且门票价格在10到100之前的景点
+    </h4>
+    <pre><code>db.collection('scenicSpot').where(
+          // 地点和价格同时满足
+          _.and([
+            // 地址或地点满足一个就行
+            _.or([{
+              place: db.RegExp({
+                regexp: place,
+                options: 'i'
+              })
+            }, {
+              address: db.RegExp({
+                regexp: place,
+                options: 'i'
+              })
+            }]),
+            // 价格在10到100
+            _.and([{
+                price: _.gt(10)
+              }, {
+                price: _.lt(100)
+              }
+
+            ])
+
+          ])
+        ).get()
+        .then(res =&gt; {
+          console.log('筛选结果', res)
+          this.setData({
+            list: res.data
+          })
+        })
+</code></pre>
+    <h3>
+     <a id="4_265">
+     </a>
+     4,往数组字段里添加/删除数据
+    </h3>
+    <p>
+     我们以点赞为例，比如数据表里有一个字段dianzanList专门存点赞用户的信息，是一个数组，我们点赞和取消点赞时就是往这个数组里添加或者删除数据。
+    </p>
+    <h4>
+     <a id="41_267">
+     </a>
+     4-1，往数组字段里添加数据
+    </h4>
+    <pre><code>const db = wx.cloud.database()
+    const _ = db.command
+    db.collection('test').doc("123")
+      .update({
+        data: {
+          dianzanList: _.push({
+            userid: '990',
+            name: '邱石'
+          })
+        }
+      }).then(res =&gt; {
+        console.log('点赞成功', res)
+      })
+</code></pre>
+    <h4>
+     <a id="42_283">
+     </a>
+     4-2，从数组字段里删除指定数据
+    </h4>
+    <p>
+     如删除点赞字段里的userid和name为指定数据的数据，这样可以删除dianzanList数组字段里所有符合条件的数据。
+    </p>
+    <pre><code>const db = wx.cloud.database()
+    const _ = db.command
+    db.collection('test').doc("123")
+      .update({
+        data: {
+          dianzanList: _.pull({
+            userid: '990',
+            name: '编程小石头'
+          })
+        }
+      }).then(res =&gt; {
+        console.log('取消点赞成功', res)
+      })
+</code></pre>
+    <h3>
+     <a id="5_300">
+     </a>
+     5，修改数据表里数组里的某条数据
+    </h3>
+    <p>
+     如：修改用户表里成绩数组里的数学成绩
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/95fcf154e9b856cc1f73c92474c7de3f.png"/>
+     <br/>
+     代码如下：
+    </p>
+    <pre><code> wx.cloud.database().collection('user')
+      .where({
+        'chengji.type': '数学'
+      })
+      .update({
+        data:{
+          'chengji.$.fenshu': 100
+        }
+      })
+      .then(res =&gt; {
+        console.log('修改结果', res)
+      })
+</code></pre>
+    <p>
+     修改结果如下
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/a27aed02f33ad6f157ee94a3961f47e9.png"/>
+    </p>
+    <h3>
+     <a id="6_323">
+     </a>
+     6，校验图片是否合法
+    </h3>
+    <p>
+     这里用到云函数里的开发功能security.imgSecCheck
+     <br/>
+     对应的官方文档如下：
+     <br/>
+     https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/sec-check/security.imgSecCheck.html#method-cloud
+    </p>
+    <p>
+     小程序端的js代码
+    </p>
+    <pre><code> Page({
+   //选择图片
+   addImage() {
+     wx.chooseImage({
+       count: 3, // 可添加照片的最大数量，根据业务需求更改
+       sizeType: ['compressed'],
+     }).then(res =&gt; {
+       console.log('图片链接', res)
+       this.cloudCheck(res.tempFilePaths[0])
+     })
+   },
+   //  调用云函数校验图片是否合规
+   cloudCheck(temp) {
+     wx.getFileSystemManager().readFile({
+       filePath: temp,
+       success: buffer =&gt; {
+         console.log('buffer', buffer)
+         wx.cloud.callFunction({
+           name: 'tupianjiaoyan', //云函数的名称
+           data: {
+             img: buffer.data
+           },
+         }).then(res =&gt; {
+           console.log("校验结果", res);
+           if (res.result.errCode == 87014) {
+             console.log('图片违规')
+             // 发现敏感照片后所做的处理
+             // 下面的imageR是云函数中定义的返回值
+           } else if (res.result.imageR.errCode == 0) {
+             // imageList.push(origin); // 将检查通过的照片添加至imageList，以便其他方法调用
+             console.log('图片正常')
+           }
+         })
+       }
+     });
+   }
+ })
+</code></pre>
+    <p>
+     云函数端的代码如下
+    </p>
+    <pre><code>// 云函数入口文件
+const cloud = require('wx-server-sdk')
+
+cloud.init({
+  env: cloud.DYNAMIC_CURRENT_ENV
+})
+
+// 云函数入口函数
+exports.main = async (event, context) =&gt; {
+  try {
+    let imageR = false;
+    //  检查图像内容是否违规
+    imageR = await cloud.openapi.security.imgSecCheck({
+      media: {
+        header: {
+          'Content-Type': 'application/octet-stream'
+        },
+        contentType: 'image/png',
+        // contentType: 'image/jpg',
+        value: Buffer.from(event.img) // 官方文档这里是个坑
+      }
+    });
+    return {
+      imageR
+    };
+  } catch (e) {
+    return e
+  }
+}
+</code></pre>
+    <h3>
+     <a id="7_400">
+     </a>
+     7，聚合查询后进行排序
+    </h3>
+    <pre><code>db.collection('demo').aggregate()
+			.match({
+				louhao
+			})
+			.group({
+				_id: '$sushe'
+			})
+			.sort({
+				_id: -1 //宿舍号升序排列,1降序 。注意这里用 _id为排序依据
+			})
+			.end()
+</code></pre>
+    <h3>
+     <a id="8request_414">
+     </a>
+     8，云函数里request请求数据返回
+    </h3>
+    <pre><code>const cloud = require("wx-server-sdk");
+const request = require("request");
+cloud.init();//初始化实例
+//1. 获取数据库引用
+const db = cloud.database();
+//云函数入口函数，导出函数
+exports.main = async (event, context)=&gt;{
+    return new Promise((resolve, reject)=&gt;{
+        //请求配置
+        let options = {
+            method:"GET",
+            url:"http://www.xxx.com"
+        };
+        
+        //使用request请求数据
+        request(options, function(err, res, body){
+            //判断是否请求成功
+            if(err){
+                resolve({err})
+            }else{
+                //将请求到的数据和从云数据库中找到的数据一并返回给小程序的前端页面
+                resolve({body, data})
+            }
+        })
+    })
+}
+</code></pre>
+    <h3>
+     <a id="9_444">
+     </a>
+     9，连表查询
+    </h3>
+    <p>
+     小程序云开发要想实现联表查询的话，需要写在云函数里，我们已常见的分类列表页的联表查询为例
+     <br/>
+     如下图：
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/498cf80f246ee492e0a4defeac3f26f7.png"/>
+     <br/>
+     我们这里对应两个表
+     <br/>
+     videoType 视频分类表
+     <br/>
+     video 视频表
+    </p>
+    <p>
+     对应的源码如下
+    </p>
+    <pre><code>// 云函数入口文件
+const cloud = require('wx-server-sdk')
+cloud.init({
+    env: cloud.DYNAMIC_CURRENT_ENV
+}) // 使用当前云环境
+const db = cloud.database()
+// 云函数入口函数
+exports.main = async (event, context) =&gt; {
+    return await db.collection('videoType')
+        .aggregate()
+        .lookup({
+            from: 'video', // 关联的表名
+            localField: '_id', // videoType表中与video表关联的字段
+            foreignField: 'typeid', // video表中的关联字段
+            as: 'list' // 输出的别名
+        })
+        .end()
+
+}
+</code></pre>
+    <p>
+     查询到的数据如下：
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/1d8760c9a0cfb43db09eee82d64cf056.png"/>
+     <br/>
+     这样我们借助联表查询，就可以很方便的查询到分类列表的数据了
+    </p>
+    <p>
+     数据库里对应如下
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/977ca0a1496b225c5ee4f495a4882896.png"/>
+    </p>
+    <h2>
+     <a id="node_480">
+     </a>
+     node相关
+    </h2>
+    <h3>
+     <a id="1node_481">
+     </a>
+     1，安装node
+    </h3>
+    <p>
+     我们去node官网安装最新的即可
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/4b1373e680c9457c9e69f897ed550506.png"/>
+     <br/>
+     安装很简单，双击然后一直下一步即可，所有的都保持默认就行。
+     <br/>
+     <strong>
+      有一点需要注意的就是要选中Add to PATH
+     </strong>
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/8b3ff75ea39149b9953c4df7ef4c6563.png"/>
+     <br/>
+     然后等待安装完成即可。
+    </p>
+    <p>
+     我们前面安装好node以后，最好重启下电脑。
+     <br/>
+     然后随便打开一个cms验证下是否安装成功
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/93bf7cd37d0c4877b00893efd9d47f73.png"/>
+     <br/>
+     输入如下命令行，如果成功显示出版本号，就代表安装成功。
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/cbb064f235c64bc4b223dbbcb60d751a.png"/>
+    </p>
+    <h3>
+     <a id="2_498">
+     </a>
+     2，设置国内镜像
+    </h3>
+    <p>
+     因为node是国外网站，有的同学使用npm加载依赖的时候可能会特别慢，这个时候把npm的镜像设置为国内的，这样加载依赖的时候就会比较快了。
+     <br/>
+     <strong>
+      npm查看镜像和设置国内镜像
+     </strong>
+    </p>
+    <p>
+     查看当前镜像 npm get registry
+     <br/>
+     <code>
+      设置国内阿里云镜像
+     </code>
+     npm config set registry https://registry.npmmirror.com/
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/fd998246ff474287acd9d36fd7c50968.png"/>
+    </p>
+    <h3>
+     <a id="3node_506">
+     </a>
+     3，小程序云函数里引入node三方库
+    </h3>
+    <p>
+     我们如果想在小程序云开发的云函数里使用第三方node库，就需要先安装好node，我们以格式化时间的类库dayjs为例
+     <br/>
+     先在云函数右键，选择在外部终端打开。
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/053f3386bbb640d0a0908f809febd6bb.png"/>
+     <br/>
+     使用npm安装dayjs,在终端里输入命令行
+    </p>
+    <pre><code>npm i dayjs
+</code></pre>
+    <p>
+     安装完，可以看到云函数里多了一个node_modules文件，这里就是我们安装的dayjs类库
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/78d0692e61c14d71bf5c71fcfd9e5a0f.png"/>
+     <br/>
+     并且可以看到云函数的package.json里多了dayjs类库
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/6969c59610ff407a98fcbb1e233df777.png"/>
+     <br/>
+     然后记得重新部署下云函数。
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/8f6f9d575b3f4e6c929f4bcdbf209dae.png"/>
+     <br/>
+     然后就可以直接使用dayjs了
+     <br/>
+     先在云函数里引入类库
+     <br/>
+     const dayjs = require(‘dayjs’);
+     <br/>
+     然后直接使用，比如我们获取今天的年月日格式的日期
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/2680ebf8f8b74203b115b8f72d823a9f.png"/>
+     <br/>
+     然后调用云函数，就可以看到dayjs类库给我们返回的日期了。
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/direct/79d95b9f978e4c7dafe4b925ba9a3199.png"/>
+     <br/>
+     成功返回日期，dayjs类库调用成功。
+    </p>
+    <h2>
+     <a id="JavaScript_531">
+     </a>
+     JavaScript
+    </h2>
+    <h3>
+     <a id="_532">
+     </a>
+     数组相关
+    </h3>
+    <h4>
+     <a id="1_533">
+     </a>
+     1，检查数组里的对象是否包含某个字段
+    </h4>
+    <ul>
+     <li>
+      find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+     </li>
+     <li>
+      findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
+     </li>
+    </ul>
+    <p>
+     find()
+    </p>
+    <pre><code>var objArr = [{id:1, name:'jiankian'}, {id:23, name:'anan'}, {id:188, name:'superme'}, {id:233, name:'jobs'}, {id:288, name:'bill', age:89}, {id:333}] ;
+var ret2 = objArr.find((v) =&gt; {
+    return v.id == 233;
+});
+console.log(ret2);
+// return {id:233, name:'jobs'}
+// 当返回undefined时，则说明objArr中没有，可以添加
+</code></pre>
+    <p>
+     findIndex()
+    </p>
+    <pre><code>var objArr = [{id:1, name:'jiankian'}, {id:23, name:'anan'}, {id:188, name:'superme'}, {id:233, name:'jobs'}, {id:288, name:'bill', age:89}, {id:333}] ;
+var ret2 = objArr.findIndex((v) =&gt; {
+    return v.id == 233;
+});
+console.log(ret2);
+// return 3
+// 当返回-1时，则说明objArr中没有，可以添加了
+</code></pre>
+    <h4>
+     <a id="2_557">
+     </a>
+     2，返回数组里符合某个条件的所有对象
+    </h4>
+    <ul>
+     <li>
+      filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素
+     </li>
+     <li>
+      find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
+     </li>
+    </ul>
+    <pre><code>    let arr = [{
+      name: '小石头',
+      age: 18
+    }, {
+      name: '周杰伦',
+      age: 38
+    }, {
+      name: '易烊千玺',
+      age: 18
+    }]
+
+    let res = arr.filter(item =&gt; {
+      return item.age == 18
+    })
+    console.log(res)//返回一个数组，包含所有符合要求的数据
+    //打印结果：[{name: "小石头", age: 18},{name: "易烊千玺", age: 18}]   
+    let res2=arr.find(item =&gt; {
+      return item.age == 18
+    })
+    console.log(res2)//返回一个对象，第一个符合要求的对象
+    //打印结果：{name: "小石头", age: 18}
+</code></pre>
+    <h4>
+     <a id="3_583">
+     </a>
+     3，快速复制数组，拼接数组
+    </h4>
+    <p>
+     这里直接使用es6的语法来复制数组和拼接数组，操作如下
+    </p>
+    <pre><code>    let arr = [1,2,3]
+    //复制数组
+    let arrnew=[...arr]
+    console.log(arrnew)//[1, 2, 3]
+
+    //拼接数组
+    let arr1=[1,2,3]
+    let arr2=[4,5,6]
+    let arr3=[...arr1,...arr2]
+    console.log(arr3)//[1, 2, 3, 4, 5, 6]
+</code></pre>
+    <h4>
+     <a id="4_597">
+     </a>
+     4，查找数组里是否存在某个元素
+    </h4>
+    <p>
+     includes：返回true或者false，true代表存在，false代表不存在
+     <br/>
+     indexOf：返回-1代表不存在，返回
+    </p>
+    <pre><code>    let arr = [1, 2, 3, 4]
+    console.log(arr.includes(3)) //返回true
+    console.log(arr.indexOf(3)) //返回2
+    console.log(arr.indexOf(0)) //返回-1
+</code></pre>
+    <h4>
+     <a id="5_606">
+     </a>
+     5，将数组按照某个字段进行分组
+    </h4>
+    <p>
+     源数据为
+    </p>
+    <pre><code>[{
+	type: '早餐',
+	name: '馒头',
+	price: 2
+},
+{
+	type: '早餐',
+	name: '油条',
+	price: 3
+},
+{
+	type: '午餐',
+	name: '宫保鸡丁',
+	price: 20
+},
+{
+	type: '午餐',
+	name: '鱼香肉丝',
+	price: 22
+}]
+</code></pre>
+    <p>
+     想把上面的无序数据进行分组。如想把早餐，午餐分组，转换后如下。
+    </p>
+    <pre><code>[{
+	"type": "早餐",
+	"list": [{
+		"type": "早餐",
+		"name": "馒头",
+		"price": 2
+	},
+	{
+		"type": "早餐",
+		"name": "油条",
+		"price": 3
+	}]
+},
+{
+	"type": "午餐",
+	"list": [{
+		"type": "午餐",
+		"name": "宫保鸡丁",
+		"price": 20
+	},
+	{
+		"type": "午餐",
+		"name": "鱼香肉丝",
+		"price": 22
+	}]
+}]
+</code></pre>
+    <p>
+     所用的方法如下
+    </p>
+    <pre><code>  /**
+   对数组进行分组，
+   dataList是要分组的源数组
+   key: 依据那个字段进行分组
+   */
+  groupArr(dataList,key) {
+    let tempArr = []; //临时数组
+    let endData = []; //最终数组
+    dataList.forEach(item =&gt; {
+      if (tempArr.indexOf(item[key]) === -1) {
+        endData.push({
+          type: item[key],
+          list: [item]
+        });
+        tempArr.push(item[key]);
+      } else {
+        for (let j = 0; j &lt; endData.length; j++) {
+          if (endData[j].type == item[key]) {
+            endData[j].list.push(item);
+            break;
+          }
+        }
+      }
+    })
+    return endData
+  }
+</code></pre>
+    <p>
+     注意事项：使用的时候，分组的依据字段要加引号。如下，我们要依据type字段进行分组
+    </p>
+    <pre><code>groupArr(dataList,'type')
+</code></pre>
+    <p>
+     结果如下
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/80366c00531fab671d583d76f2431b65.png"/>
+    </p>
+    <h4>
+     <a id="6_695">
+     </a>
+     6，对象数组依据某个字段排序
+    </h4>
+    <pre><code>let arr=[{
+	type: '早餐',
+	name: '馒头',
+	price: 2
+},
+{
+	type: '早餐',
+	name: '油条',
+	price: 3
+},
+{
+	type: '午餐',
+	name: '宫保鸡丁',
+	price: 20
+},
+{
+	type: '午餐',
+	name: '鱼香肉丝',
+	price: 22
+}]
+
+
+
+sortBy(key) {
+        //根据传过来的字段进行排序
+        return (x, y) =&gt; {
+            return y[key] - x[key] //降序
+            // return x[key] - y[key] //升序
+            
+        }
+},
+
+arr.sort(this.sortBy('price'))
+</code></pre>
+    <h3>
+     <a id="_731">
+     </a>
+     对象相关
+    </h3>
+    <h4>
+     <a id="1_732">
+     </a>
+     1，复制对象的属性到另外一个对象
+    </h4>
+    <p>
+     方法：Object.assign()
+     <br/>
+     如下图所示，把对象b的属性复制到对象a
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/c30169b97f84487c7147bb2f646845cc.png"/>
+    </p>
+    <h4>
+     <a id="2_736">
+     </a>
+     2，删除对象里无用字段
+    </h4>
+    <p>
+     直接 delete 对象.属性名 就可以删除对象的属性了
+     <br/>
+     如下图所示，把对象a的age和city属性删除了
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/f569ef52655dbe92cb21b7363c154818.png"/>
+    </p>
+    <h3>
+     <a id="Promise_742">
+     </a>
+     Promise相关
+    </h3>
+    <h4>
+     <a id="Promiseall_743">
+     </a>
+     Promise.all
+    </h4>
+    <p>
+     同时执行多个Promise,所有的Promise都成功才成功，有一个失败就失败。
+    </p>
+    <ul>
+     <li>
+      所有的Promise都成功时才成功，返回一个数组包含所有Promise的返回值。
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/65156f8e37d1809b63de998a4315e5a4.png"/>
+     </li>
+     <li>
+      只要有一个失败就失败，返回失败的那个Promise返回的值。如果有多个失败时，就返回第一个失败Promise的返回值。
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/99336d6c6da6c1f2c8c93eb3d1346c98.png"/>
+     </li>
+    </ul>
+    <h4>
+     <a id="_Promiseall_750">
+     </a>
+     自定义方法让 Promise.all按照顺序执行
+    </h4>
+    <p>
+     Promise.all执行多个请求时，因为是同时执行的，谁先成功谁后成功不知道的，所以要通过下面自定义方式让所有的请求按照添加顺序执行。比如我们发朋友圈时，照片要按照顺序。就可以通过这样的方式来了。
+    </p>
+    <pre><code>function order(arr) {
+  return new Promise((resolve, reject) =&gt; {
+    let index = 0
+    next()
+    function next() {
+      arr[index].then(function (res) {
+        index++;
+        if (index == arr.length) resolve()
+        else next()
+      }).catch(e =&gt; {
+        reject()
+      })
+    }
+  })
+}
+
+// 顺序执行
+order([oneFun(), towFun()]).then(res =&gt; {
+  console.log('3')
+}).catch(e =&gt; {
+  console.log('error')
+})
+</code></pre>
+    <h4>
+     <a id="Promiserace_776">
+     </a>
+     Promise.race
+    </h4>
+    <p>
+     多个Promise同时执行，进行赛跑，返回第一个成功或者失败的Promise的结果值。
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d4d94caef185b3b78a65d2fb8db247c0.png"/>
+    </p>
+    <h3>
+     <a id="_779">
+     </a>
+     时间相关
+    </h3>
+    <h4>
+     <a id="1_780">
+     </a>
+     1，查看当前时间是否在某一个时间段
+    </h4>
+    <pre><code>  // 查看当前时间是否在某一个时间段
+  timeRange(beginTime, endTime) {
+    let strb = beginTime.split(":");
+    if (strb.length != 2) {
+      return false;
+    }
+    let stre = endTime.split(":");
+    if (stre.length != 2) {
+      return false;
+    }
+
+    let b = new Date();
+    let e = new Date();
+    let n = new Date();
+
+    b.setHours(strb[0]);
+    b.setMinutes(strb[1]);
+    e.setHours(stre[0]);
+    e.setMinutes(stre[1]);
+
+    if (n.getTime() - b.getTime() &gt; 0 &amp;&amp; n.getTime() - e.getTime() &lt; 0) {
+      return true;
+    } else {
+      console.log("当前时间是：" + n.getHours() + ":" + n.getMinutes() + "，不在该时间范围内！");
+      return false;
+    }
+  },
+</code></pre>
+    <p>
+     调用
+    </p>
+    <pre><code> console.log('是否在打卡范围内',this.timeRange('10:20','10:24'))
+</code></pre>
+    <h2>
+     <a id="css_814">
+     </a>
+     小程序样式和css
+    </h2>
+    <h3>
+     <a id="flex_815">
+     </a>
+     flex布局相关
+    </h3>
+    <h4>
+     <a id="1_816">
+     </a>
+     1，常用属性（如居中）
+    </h4>
+    <pre><code>  /* 上下居中 */
+  align-items: center;
+  /* 左右居中 */
+  justify-content: center;
+  /* 竖着排列 */
+  flex-direction: column;
+</code></pre>
+    <h4>
+     <a id="2_825">
+     </a>
+     2，子元素宽度被压缩
+    </h4>
+    <p>
+     flex-shrink: 0;
+    </p>
+    <h4>
+     <a id="3_828">
+     </a>
+     3，一行多列，九宫格布局
+    </h4>
+    <pre><code>/* 列表 */
+.container-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+/* 项目成员 */
+.item-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1%;
+  width: 14%;
+  height: auto;
+}
+
+/* 图 */
+.product-photo {
+  width: 100%;
+  height: 100rpx;
+  /* background-size: 100% 100%; */
+  /* border: 1px solid rgba(240, 240, 240, 0.8); */
+  background: white;
+}
+
+/* 文 */
+.product-text {
+  /* margin: 30rpx 0 30rpx 20rpx; */
+  font-weight: bold;
+  align-self: flex-start;
+  flex: 1 0 auto;
+  font-size: 32rpx;
+  color: #292929;
+}
+</code></pre>
+    <h3>
+     <a id="_869">
+     </a>
+     小程序专有
+    </h3>
+    <h4>
+     <a id="1wxfor_870">
+     </a>
+     1wx:for横向布局
+    </h4>
+    <pre><code>display: inline-block;
+</code></pre>
+    <h4>
+     <a id="2inlineblockoverflowhidden_874">
+     </a>
+     2解决inline-block元素设置overflow:hidden属性导致相邻行内元素向下偏移
+    </h4>
+    <pre><code>.wrap {
+  display: inline-block;
+  overflow: hidden
+	vertical-align: bottom
+}
+</code></pre>
+    <h4>
+     <a id="3_882">
+     </a>
+     3，遮罩蒙层
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/6888fe1fa37aa55c33d31f33ba5d08e0.png"/>
+     <br/>
+     wxml
+    </p>
+    <pre><code>&lt;!--蒙层 --&gt;
+&lt;view bindtap='chooseShare' class="mengceng"&gt;
+  &lt;view class="mengceng-content" &gt;
+    &lt;button open-type="share"&gt;发送给微信好友&lt;/button&gt;
+    &lt;button catchtap='onShareAppMessage'&gt;分享到朋友圈&lt;/button&gt;
+    &lt;button catchtap='chooseShare'&gt;取消&lt;/button&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+    <p>
+     wxss
+    </p>
+    <pre><code>/* 遮罩蒙层的样式 */
+.mengceng {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #333333d1;
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;  /* 垂直居中 */
+}
+.mengceng-content {
+  width: 80%;
+  border-radius: 40rpx;
+  background-color: white;
+}
+</code></pre>
+    <h4>
+     <a id="4_915">
+     </a>
+     4，带评论框的蒙层
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/77ea372e35b7150e60a0cdb862e0a34c.png"/>
+     <br/>
+     wxml如下
+    </p>
+    <pre><code>&lt;!-- 评论弹框 --&gt;
+&lt;view class='toast_root' hidden='{<!-- -->{isShow}}'&gt;
+  &lt;view class='toast_bg'&gt;&lt;/view&gt;
+  &lt;view class='toast_body'&gt;
+    &lt;view class='toast_title'&gt;评论店家&lt;/view&gt;
+    &lt;textarea class='textarea' placeholder='请输入您的评论内容' bindinput='setValue'&gt;&lt;/textarea&gt;
+    &lt;view class='toast_button'&gt;
+      &lt;view class='button1' bindtap='cancelComment'&gt;取消&lt;/view&gt;
+      &lt;view class='button2' bindtap='submitComment'&gt;确定&lt;/view&gt;
+    &lt;/view&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+    <p>
+     wxss如下
+    </p>
+    <pre><code>/* 评论弹窗 */
+
+.toast_root {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.toast_bg {
+  opacity: 0.4;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.toast_body {
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+  background-color: white;
+}
+
+.toast_title {
+  text-align: center;
+  background-color: #2E8B57;
+  color: white;
+  padding: 20rpx 0;
+}
+
+
+.textarea {
+  margin: 3%;
+  border: 1px solid gray;
+  height: 150px;
+  width: 94%;
+}
+
+.toast_button {
+  display: flex;
+}
+
+.button1 {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background: gray;
+  color: white;
+ 
+}
+
+.button2 {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background: #2E8B57;
+  color: white;
+}
+</code></pre>
+    <h3>
+     <a id="_1003">
+     </a>
+     文字相关
+    </h3>
+    <h4>
+     <a id="1_1004">
+     </a>
+     1,文字超出一行显示省略号
+    </h4>
+    <pre><code>// 单行文本
+.wrap {
+	overflow:hidden;/*超出部分隐藏*/
+	text-overflow:ellipsis;/*超出部分显示省略号*/
+	white-space:nowrap;/*规定段落中的文本不进行换行 */
+}
+</code></pre>
+    <h4>
+     <a id="2N_1013">
+     </a>
+     2,文字超出N行显示省略号
+    </h4>
+    <pre><code>// 多行文本
+.wrap {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;  /*将对象作为弹性伸缩盒子模型显示  必须结合的属性*/
+    -webkit-box-orient: vertical;   /*设置伸缩盒对象的子元素的排列方式 */
+    -webkit-line-clamp: 3;  /*用来限制在一个块元素中显示的文本的行数*/
+    word-break: break-all;  /*让浏览器实现在任意位置的换行 break-all为允许在单词内换行*/
+}
+</code></pre>
+    <h4>
+     <a id="3css_1025">
+     </a>
+     3,css实现不换行、自动换行、强制换行
+    </h4>
+    <pre><code>//不换行
+.wrap {
+  white-space:nowrap;
+}
+//自动换行
+.wrap {
+  word-wrap: break-word;
+  word-break: normal;
+}
+//强制换行
+.wrap {
+  word-break:break-all;
+}
+</code></pre>
+    <h4>
+     <a id="4CSS_1041">
+     </a>
+     4,CSS实现文本两端对齐
+    </h4>
+    <pre><code>.wrap {
+    text-align: justify;
+    text-justify: distribute-all-lines;  //ie6-8
+    text-align-last: justify;  //一个块或行的最后一行对齐方式
+    -moz-text-align-last: justify;
+    -webkit-text-align-last: justify;
+}
+</code></pre>
+    <h4>
+     <a id="5_1051">
+     </a>
+     5,使用伪元素给文字前后加标识
+    </h4>
+    <p>
+     如我们在文字前后加星星
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/0cead3f81f6bd9dc46876e720368a237.png"/>
+     <br/>
+     代码如下：
+    </p>
+    <ul>
+     <li>
+      wxml
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/03908feab44c8199ffb64d11b9375742.png"/>
+     </li>
+     <li>
+      wxss
+      <br/>
+      <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/2c930ab7da6a35cd7dd5172a82b466ac.png"/>
+      <br/>
+      这样我们就可以很方便的实现在文字前后加标识了。
+     </li>
+    </ul>
+    <h3>
+     <a id="button_1061">
+     </a>
+     button按钮相关
+    </h3>
+    <h4>
+     <a id="1button_1062">
+     </a>
+     1隐藏button自带样式
+    </h4>
+    <p>
+     如果是在小程序里使用，记得在app.json里把 “style”: “v2” 设置去除掉
+    </p>
+    <pre><code>&lt;view class='button_item'&gt;
+ &lt;button class='button' open-type="feedback"&gt;反馈建议&lt;/button&gt;
+ &lt;view class='right_arrow' /&gt;
+&lt;/view&gt;
+
+// 下面是样式
+.button_item {
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ padding: 2px 20px;
+ background: white;
+ border-bottom: 1px solid gainsboro;
+}
+
+.button {
+  width: 100%;
+  background: white;
+  border: none;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 16px
+}
+
+/*  下面是关键去除边框 */
+.button::after {
+  border: none;
+  border-radius: 0;
+}
+</code></pre>
+    <h3>
+     <a id="Inputtextarea_1098">
+     </a>
+     Input和textarea相关
+    </h3>
+    <h4>
+     <a id="1inputtextareaplaceholder_1099">
+     </a>
+     1，input和textarea的placeholder设置居中
+    </h4>
+    <pre><code>&lt;input placeholder="你好ipnut啊" placeholder-class="placeholder-class"&gt;&lt;/input&gt;
+&lt;textarea class="textarea" placeholder="你好textarea啊" placeholder-class="center2"&gt;&lt;/textarea&gt;
+
+/* 
+input的placeholder可以直接使用placeholder-class实现居中 */
+.placeholder-class {
+  text-align: center;
+  color: red;
+}
+
+/* 
+textarea的placeholder如果想居中，只能通过设置textarea的样式text-align: center 
+才可以使placeholder居中 */
+.textarea {
+  margin: 5rpx;
+  border: solid 1px gainsboro;
+  text-align: center;
+}
+
+.center2 {
+  text-align: center;
+  color: green;
+}
+</code></pre>
+    <h3>
+     <a id="checkbox_1125">
+     </a>
+     checkbox选项相关
+    </h3>
+    <h4>
+     <a id="1_1126">
+     </a>
+     1，改变默认选择框样式
+    </h4>
+    <p>
+     默认的
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/24964b2dbe400eccad1826c1adb66db5.png"/>
+     <br/>
+     改变后的如下
+     <br/>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/96d5e2e0aca13c4bfc8f0a6748265a45.png"/>
+    </p>
+    <pre><code>&lt;checkbox-group&gt;
+  &lt;checkbox&gt;A&lt;/checkbox&gt;
+  &lt;checkbox&gt;B&lt;/checkbox&gt;
+  &lt;checkbox&gt;C&lt;/checkbox&gt;
+  &lt;checkbox&gt;D&lt;/checkbox&gt;
+&lt;/checkbox-group&gt;
+</code></pre>
+    <p>
+     对应的样式
+    </p>
+    <pre><code>checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  border-color: #3caaaa;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  background: #3caaaa;
+  color: #fff;
+}
+</code></pre>
+    <h3>
+     <a id="scrollview_1153">
+     </a>
+     scroll-view相关
+    </h3>
+    <h4>
+     <a id="1_1154">
+     </a>
+     1，滑动到顶部
+    </h4>
+    <pre><code> wx.pageScrollTo({
+        scrollTop: 0
+      })
+</code></pre>
+    <h3>
+     <a id="_1160">
+     </a>
+     图片相关
+    </h3>
+    <h4>
+     <a id="1_1161">
+     </a>
+     1高度撑满,图片铺满屏幕
+    </h4>
+    <pre><code>&lt;view class='bg'&gt;
+　　&lt;image src='../../imgs/guide.png' &gt;&lt;/image&gt;
+&lt;/view&gt;
+//样式
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -99999;
+}
+.bg image {
+  width: 100%;
+  height: 90%;
+}
+
+//下面是另外一种方法，有时候会有问题
+.myMap {
+ position: fixed;
+ height: 100%;
+ width: 100%;
+}
+
+</code></pre>
+    <h4>
+     <a id="2_1186">
+     </a>
+     2图片宽度自适应
+    </h4>
+    <pre><code>img {max-width: 100%}
+</code></pre>
+    <h4>
+     <a id="3_1190">
+     </a>
+     3,文字盖在图片上
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/d173e339e4c563ca50231d72b139cad4.png"/>
+    </p>
+    <pre><code>&lt;view class="root"&gt;
+  &lt;image class="bg" src="/images/login_bg.png"&gt; &lt;/image&gt;
+  &lt;view class="title"&gt;践行职业操守深化清廉文化知识测试&lt;/view&gt;
+&lt;/view&gt;
+
+css代码如下：
+
+.root {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 150rpx;
+  font-size: 52rpx;
+  color: white;
+  text-align: center;
+  margin: 40rpx;
+}
+
+.bg {
+  width: 750rpx;
+  height: 100vh;
+}
+
+
+</code></pre>
+    <h3>
+     <a id="css_1221">
+     </a>
+     常用的css画的图形
+    </h3>
+    <h4>
+     <a id="1_1222">
+     </a>
+     1,自己画尖头
+    </h4>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/5f7466ab8c4365c54ca4b7124cbb70bf.png"/>
+    </p>
+    <pre><code>.right_arrow {
+ border: solid black;
+ border-width: 0 3px 3px 0;
+ padding: 3px;
+ position: absolute;
+ right: 30px;
+ /* margin-left: 66%; */
+ transform: rotate(-45deg);
+ -webkit-transform: rotate(-45deg);
+}
+</code></pre>
+    <h2>
+     <a id="_1238">
+     </a>
+     开发者工具快捷方式
+    </h2>
+    <h3>
+     <a id="htmlwxml_1239">
+     </a>
+     快速生成html/wxml
+    </h3>
+    <h4>
+     <a id="1_1240">
+     </a>
+     1，组件名*数字
+    </h4>
+    <p>
+     如view*10然后回车可以快速生成10个view组件
+    </p>
+    <h4>
+     <a id="2_1242">
+     </a>
+     2，组件名{文字}*数字
+    </h4>
+    <p>
+     如view{小石头}*10 可以快速生成10个内容为小石头的view
+    </p>
+    <h4>
+     <a id="3_1244">
+     </a>
+     3，组件名{$}*数字
+    </h4>
+    <p>
+     如view{
+     <!-- -->
+     <span class="katex--inline">
+      KaTeX parse error: Expected 'EOF', got '}' at position 1: }̲*10 可以快速生成10个vi…
+     </span>
+     }*10 可以快速生成10个view,里面内容从小石头1到小石头10
+    </p>
+    <p>
+     持续收集更新中。。。。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

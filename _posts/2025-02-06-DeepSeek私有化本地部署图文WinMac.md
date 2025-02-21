@@ -1,12 +1,15 @@
 ---
+layout: post
 title: 2025-02-06-DeepSeek私有化本地部署图文WinMac
 date: 2025-02-06 00:47:47 +0800
 categories: [DeepSeek]
 tags: [DeepSeek,ai]
 image:
-  path: /assets/images/520681a08ce0d9e0a9045b3098c4e80a.png
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=145431054
   alt: DeepSeek私有化本地部署图文WinMac
+artid: 145431054
 ---
+<span class="artid" style="display:none" artid=68747470733a2f:2f626c6f672e6373646e2e6e65742f6c69627573693030312f:61727469636c652f64657461696c732f313435343331303534></span>
 <div class="blog-content-box">
  <div class="article-header-box">
   <div class="article-header">
@@ -136,13 +139,13 @@ image:
      </tbody>
     </table>
     <p>
-     <img alt="" height="885" src="/assets/images/f126cd0da45d3d660b4e4ea3440beef3.png" width="1914"/>
+     <img alt="" height="885" src="https://i-blog.csdnimg.cn/direct/1d4c258beccd4c139642698204b07f83.png" width="1914"/>
     </p>
     <p>
-     <img alt="" height="379" src="/assets/images/3e145b3b0d5147c2d7b338bf133fe55c.png" width="1000"/>
+     <img alt="" height="379" src="https://i-blog.csdnimg.cn/direct/1db6f4044f24404a8c32ce81349817db.png" width="1000"/>
     </p>
     <p>
-     <img alt="" height="241" src="/assets/images/98f172dcc3766087dc132aa6fc0f952a.png" width="676"/>
+     <img alt="" height="241" src="https://i-blog.csdnimg.cn/direct/3fc027b0bfb84985b0ba396a9019b913.png" width="676"/>
     </p>
     <h3 id="2%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" name="2%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">
      2、配置环境变量
@@ -168,19 +171,19 @@ image:
      </tbody>
     </table>
     <p>
-     <img alt="" height="182" src="/assets/images/c69a8ce2a2a017f0dcad13511f94b546.png" width="795"/>
+     <img alt="" height="182" src="https://i-blog.csdnimg.cn/direct/83421fd4ffff4dc0b5ad5ad74a1a5f4d.png" width="795"/>
     </p>
     <h3 id="3%E3%80%81%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B" name="3%E3%80%81%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B">
      3、下载模型
     </h3>
     <p>
-     <img alt="" height="765" src="/assets/images/4367bb70c2196b20b969dbcd7f095c66.png" width="1686"/>
+     <img alt="" height="765" src="https://i-blog.csdnimg.cn/direct/004ee77f5c0d43ba9559caf3b302d0b0.png" width="1686"/>
     </p>
     <p>
-     <img alt="" height="326" src="/assets/images/0b833729daffbbfbf361afeec9ca6ce9.png" width="1101"/>
+     <img alt="" height="326" src="https://i-blog.csdnimg.cn/direct/4f01c92802b648b4bb5feee5ee10ec42.png" width="1101"/>
     </p>
     <p>
-     <img alt="" height="234" src="/assets/images/8cdc68ccb097565eafe1a9cecc28f807.png" width="1102"/>
+     <img alt="" height="234" src="https://i-blog.csdnimg.cn/direct/397b70fb851f40b28009f517ea50de64.png" width="1102"/>
     </p>
     <h3 id="4%E3%80%81%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" name="4%E3%80%81%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">
      4、使用示例
@@ -189,10 +192,10 @@ image:
      a、直接访问
     </h4>
     <p>
-     <img alt="" height="817" src="/assets/images/8ae31fc3ff7fb2795e2e1c62625407ce.png" width="1096"/>
+     <img alt="" height="817" src="https://i-blog.csdnimg.cn/direct/d260de0cf6ec41578d7a72513675dc61.png" width="1096"/>
     </p>
     <p>
-     <img alt="" height="289" src="/assets/images/82a8e05effed1bd18d8ccc0e522c6ec2.png" width="1107"/>
+     <img alt="" height="289" src="https://i-blog.csdnimg.cn/direct/c703ef475f5c4303bdbf5690bce02d1e.png" width="1107"/>
     </p>
     <h4 id="b%E3%80%81chatbox%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE" name="b%E3%80%81chatbox%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE">
      b、chatbox网页访问
@@ -203,16 +206,16 @@ image:
      </a>
     </p>
     <p>
-     <img alt="" height="750" src="/assets/images/472a198f06d780f11f784e0a04bde516.png" width="1437"/>
+     <img alt="" height="750" src="https://i-blog.csdnimg.cn/direct/0f0798392b7142dfa46c959286be7204.png" width="1437"/>
     </p>
     <p>
-     <img alt="" height="1189" src="/assets/images/9e17c606160ca3ec50aaa7ab40a3e276.png" width="1594"/>
+     <img alt="" height="1189" src="https://i-blog.csdnimg.cn/direct/9e51415e46304f95b55c9b82a389c551.png" width="1594"/>
     </p>
     <p>
-     <img alt="" height="655" src="/assets/images/7d0a8b4005d2f202bfa21d610953d560.png" width="596"/>
+     <img alt="" height="655" src="https://i-blog.csdnimg.cn/direct/e0a4175aac3d494093c306f1e021c085.png" width="596"/>
     </p>
     <p>
-     <img alt="" height="830" src="/assets/images/d738c316f66a9c079b2f90d5a8131110.png" width="1641"/>
+     <img alt="" height="830" src="https://i-blog.csdnimg.cn/direct/0619da04dc0c4be29e5de059ce80916f.png" width="1641"/>
     </p>
     <hr/>
     <h2 id="%E4%BA%8C%E3%80%81DeepSeek%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E3%80%90Mac%E3%80%91" name="%E4%BA%8C%E3%80%81DeepSeek%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E3%80%90Mac%E3%80%91">
@@ -222,10 +225,10 @@ image:
      1、安装Ollama
     </h3>
     <p>
-     <img alt="" height="700" src="/assets/images/1701cca935a7130689d96d16e5349202.png" width="1437"/>
+     <img alt="" height="700" src="https://i-blog.csdnimg.cn/direct/bc0fac95ea2a4b539df9835674ee55e7.png" width="1437"/>
     </p>
     <p>
-     <img alt="" height="672" src="/assets/images/4d12cfebfe742f313d71f104369d1a74.png" width="1077"/>
+     <img alt="" height="672" src="https://i-blog.csdnimg.cn/direct/407c7a2eafae4004b2a8e39ea3dbab0c.png" width="1077"/>
     </p>
     <h3 id="2%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" name="2%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">
      2、配置环境变量
@@ -236,7 +239,7 @@ launchctl setenv OLLAMA_ORIGINS "*"</code></pre>
      还是不成功的请访问chatbox的帮助
     </p>
     <p>
-     <img alt="" height="923" src="/assets/images/826910dbe8a1e5ab126921e1b02a046d.png" width="1395"/>
+     <img alt="" height="923" src="https://i-blog.csdnimg.cn/direct/cfaf88e72b854389bf054454df7c0979.png" width="1395"/>
     </p>
     <p>
      直达链接：
@@ -250,7 +253,7 @@ launchctl setenv OLLAMA_ORIGINS "*"</code></pre>
      3、下载模型
     </h3>
     <p>
-     <img alt="" height="780" src="/assets/images/8f740914a728b0794c96272379f6f8ef.png" width="1651"/>
+     <img alt="" height="780" src="https://i-blog.csdnimg.cn/direct/c10a0d3c7843435aa06e71bd9acbd667.png" width="1651"/>
     </p>
     <h3 id="4%E3%80%81%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" name="4%E3%80%81%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">
      4、使用示例
@@ -270,13 +273,13 @@ launchctl setenv OLLAMA_ORIGINS "*"</code></pre>
      </p>
     </blockquote>
     <p>
-     <img alt="" height="407" src="/assets/images/5b42a1fb16d96b48b7e85d1c8c1cf031.png" width="938"/>
+     <img alt="" height="407" src="https://i-blog.csdnimg.cn/direct/4275089dc8364575825859cae064551f.png" width="938"/>
     </p>
     <p>
-     <img alt="" height="642" src="/assets/images/0213f44c5dc8f3dcde568ca0c7ce0c04.png" width="799"/>
+     <img alt="" height="642" src="https://i-blog.csdnimg.cn/direct/e1a8e423b5be42b682c2242d062c9e40.png" width="799"/>
     </p>
     <p>
-     <img alt="" height="1504" src="/assets/images/e0881495641f32461e53de3700666b7d.png" width="2554"/>
+     <img alt="" height="1504" src="https://i-blog.csdnimg.cn/direct/b48a6ab3feb4465384ff7bb8799b9f56.png" width="2554"/>
     </p>
     <h3 id="%C2%A05%E3%80%81%E5%88%A0%E9%99%A4%E5%B7%B2%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%A8%A1%E5%9E%8B" name="%C2%A05%E3%80%81%E5%88%A0%E9%99%A4%E5%B7%B2%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%A8%A1%E5%9E%8B">
      5、删除已下载的模型
@@ -285,7 +288,7 @@ launchctl setenv OLLAMA_ORIGINS "*"</code></pre>
 2．查看已经部署的模型，输入:ollama list
 3. 删除指定的模型： ollama rm deepseek -r1:70b</code></pre>
     <h2 id="%E2%80%8B%E7%BC%96%E8%BE%91" name="%E2%80%8B%E7%BC%96%E8%BE%91">
-     <img alt="" height="131" src="/assets/images/499d7269953f0e6ca3aa0ac60eca0703.png" width="490"/>
+     <img alt="" height="131" src="https://i-blog.csdnimg.cn/direct/0d3cef8f83c648579baa34ee2ec9e74c.png" width="490"/>
     </h2>
     <h2 id="%E4%B8%89%E3%80%81DeepSeek%E5%85%B6%E4%BB%96" name="%E4%B8%89%E3%80%81DeepSeek%E5%85%B6%E4%BB%96">
      三、DeepSeek其他
@@ -443,7 +446,7 @@ launchctl setenv OLLAMA_ORIGINS "*"</code></pre>
      2、DeepSeek-V3的综合能力
     </h3>
     <p>
-     <img alt="" height="1424" src="/assets/images/520681a08ce0d9e0a9045b3098c4e80a.png" width="1324"/>
+     <img alt="" height="1424" src="https://i-blog.csdnimg.cn/direct/c011f09d70c04b2588a3b40dcbbeb866.png" width="1324"/>
     </p>
     <h3 id="2%E3%80%81DeepSeek-%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E5%BA%93" name="2%E3%80%81DeepSeek-%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E5%BA%93">
      3、DeepSeek-个人知识库

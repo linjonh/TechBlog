@@ -1,0 +1,346 @@
+---
+layout: post
+title: 2018-07-10-使用CentOS搭建PXE网络安装服务器
+date: 2018-07-10 15:45:51 +0800
+categories: [运维]
+tags: [PXE,网络安装]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=80987119
+  alt: 使用CentOS搭建PXE网络安装服务器
+artid: 80987119
+---
+<span class="artid" style="display:none" artid=68747470733a2f:2f626c6f672e6373646e2e6e65742f6372617a795f72617973:2f61727469636c652f64657461696c732f3830393837313139></span>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     使用CentOS搭建PXE网络安装服务器
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="CentOSPXE_0">
+     </a>
+     使用CentOS搭建PXE网络安装服务器
+    </h2>
+    <p>
+     本文记录了PXE网络安装服务器的搭建过程，对以下参考链接中未记录的，包括防火墙设置等进行了进一步补充，参考连接：
+     <a href="https://blog.csdn.net/ggaofengg/article/details/54730392" rel="noopener noreferrer" target="_blank">
+      [ 通过网络安装CentOs7 ]
+     </a>
+    </p>
+    <p>
+     ###本文使用的系统环境如下：
+    </p>
+    <ul>
+     <li>
+      服务器操作系统：CentOS 7
+     </li>
+     <li>
+      服务器IP地址：10.39.100.150
+     </li>
+     <li>
+      镜像ISO文件保存目录为：/root/downloads/
+     </li>
+     <li>
+      镜像ISO文件名为：CentOS-7-x86_64-DVD-1804.iso
+     </li>
+     <li>
+      第三章节使用的ISO文件名为：CentOS-6.8-x86_64-bin-DVD1.iso
+     </li>
+    </ul>
+    <p>
+     ###其它约定：
+    </p>
+    <ul>
+     <li>
+      开始执行本文操作前，请先上传ISO镜像到服务器
+     </li>
+     <li>
+      linux命令块使用此种样式
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      mkdir /var/www/html/centos7
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      文件中的内容使用此种样式
+     </li>
+    </ul>
+    <pre><code class="prism language-python">default menu<span class="token punctuation">.</span>c32
+prompt <span class="token number">0</span>
+timeout <span class="token number">300</span>
+ONTIMEOUT local
+</code></pre>
+    <hr/>
+    <h3>
+     <a id="_27">
+     </a>
+     一、安装所需软件包
+    </h3>
+    <blockquote>
+     <p>
+      yum install dhcp xinetd syslinux httpd tftp-server -y
+     </p>
+    </blockquote>
+    <p>
+     根据所使用系统、系统版本不同，此处使用的命令、软件包可能会有所差异。
+     <br/>
+     其中各软件功能如下：
+    </p>
+    <pre><code> dhcpd: 　　  动态分配IP
+ xinetd: 　　 对服务访问进行控制，这里主要是控制tftp
+ tftp:　　　  从服务器端下载pxelinux.0、default文件
+ syslinux: 　 用于网络引导
+ httpd:　　   在网络上提供安装源，也就是镜像文件中的内容
+</code></pre>
+    <h3>
+     <a id="_40">
+     </a>
+     二、配置软件环境
+    </h3>
+    <h4>
+     <a id="20_XNET_41">
+     </a>
+     2.0 XNET配置
+    </h4>
+    <blockquote>
+     <p>
+      vi /etc/xinetd.d/tftp
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      编辑disable = yes，修改为如下内容
+     </li>
+    </ul>
+    <pre><code class="prism language-python">        disable                 <span class="token operator">=</span> no
+</code></pre>
+    <h4>
+     <a id="21_DHCP_48">
+     </a>
+     2.1 DHCP配置
+    </h4>
+    <blockquote>
+     <p>
+      vi /etc/dhcp/dhcpd.conf
+     </p>
+    </blockquote>
+    <p>
+     添加如下内容（
+     <font color="red">
+      <strong>
+       内容中的各类IP请替换成自己的IP地址
+      </strong>
+     </font>
+     ）
+    </p>
+    <pre><code class="prism language-python">
+<span class="token comment"># 1. 整体的环境设定 其中10.39.100.150是本机IP地址</span>
+ddns<span class="token operator">-</span>update<span class="token operator">-</span>style none<span class="token punctuation">;</span>
+ignore client<span class="token operator">-</span>updates<span class="token punctuation">;</span>
+default<span class="token operator">-</span>lease<span class="token operator">-</span>time <span class="token number">259200</span><span class="token punctuation">;</span>
+<span class="token builtin">max</span><span class="token operator">-</span>lease<span class="token operator">-</span>time <span class="token number">518400</span><span class="token punctuation">;</span>
+option domain<span class="token operator">-</span>name<span class="token operator">-</span>servers <span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.150</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 2. 关于动态分配的 IP ，</span>
+<span class="token comment"># 其中10.39.100.150是本机IP地址</span>
+<span class="token comment"># 10.39.100.0 netmask 255.255.254.0是笔者服务器所在的内网网段及子网掩码</span>
+<span class="token comment"># range 10.39.100.180 192.168.100.199 是笔者可用的DHCP地址池范围</span>
+subnet <span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.0</span> netmask <span class="token number">255.255</span><span class="token number">.254</span><span class="token number">.0</span> <span class="token punctuation">{<!-- --></span>
+       <span class="token builtin">range</span> <span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.180</span> <span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.199</span><span class="token punctuation">;</span>
+       option routers <span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.150</span><span class="token punctuation">;</span>
+       option subnet<span class="token operator">-</span>mask <span class="token number">255.255</span><span class="token number">.254</span><span class="token number">.0</span><span class="token punctuation">;</span>
+       <span class="token builtin">next</span><span class="token operator">-</span>server <span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.150</span><span class="token punctuation">;</span>
+       <span class="token comment"># the configuration  file for pxe boot</span>
+       filename <span class="token string">"pxelinux.0"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <h4>
+     <a id="22__76">
+     </a>
+     2.2 配置服务、防火墙
+    </h4>
+    <ul>
+     <li>
+      依次执行以下命令，添加软件到开机自启动 &amp;&amp; 服务启动
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      systemctl enable dhcpd &amp;&amp; systemctl start dhcpd
+      <br/>
+      systemctl enable xinetd &amp;&amp; systemctl start xinetd
+      <br/>
+      systemctl enable tftp &amp;&amp; systemctl start tftp
+      <br/>
+      systemctl enable httpd &amp;&amp; systemctl start httpd
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      依次执行以下命令，开放防火墙TCP-80端口及UDP-69端口，注意不要搞错了UDP和TCP。
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      firewall-cmd --zone=public --add-port=80/tcp --permanent
+      <br/>
+      firewall-cmd --zone=public --add-port=67/udp --permanent
+      <br/>
+      firewall-cmd --zone=public --add-port=69/udp --permanent
+      <br/>
+      firewall-cmd --reload
+      <br/>
+      firewall-cmd --zone=public --list-ports
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      编辑SELinux配置文件
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      vi /etc/sysconfig/selinux
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      修改内容SELINUX=enforcing如下，使关闭SELinux
+     </li>
+    </ul>
+    <pre><code class="prism language-python">SELINUX<span class="token operator">=</span>disabled
+</code></pre>
+    <ul>
+     <li>
+      因为修改selinux配置文件要重启才能生效，故先执行 “ 暂时关闭（重启失效）” 命令
+     </li>
+    </ul>
+    <blockquote>
+     <p>
+      setenforce 0
+     </p>
+    </blockquote>
+    <h4>
+     <a id="23__101">
+     </a>
+     2.3 设置镜像文件、安装配置文件
+    </h4>
+    <blockquote>
+     <p>
+      mkdir /var/www/html/centos7
+      <br/>
+      vi /etc/fstab
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      末尾加入
+     </li>
+    </ul>
+    <pre><code class="prism language-python"><span class="token operator">/</span>root<span class="token operator">/</span>downloads<span class="token operator">/</span>CentOS<span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>x86_64<span class="token operator">-</span>DVD<span class="token operator">-</span><span class="token number">1804.</span>iso <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>centos7<span class="token operator">/</span> iso9660 defaults<span class="token punctuation">,</span>ro<span class="token punctuation">,</span>loop <span class="token number">0</span> <span class="token number">0</span>
+</code></pre>
+    <blockquote>
+     <p>
+      mount -a
+      <br/>
+      mkdir /var/lib/tftpboot/centos7
+      <br/>
+      cp /var/www/html/centos7/images/pxeboot/initrd.img /var/lib/tftpboot/centos7/
+      <br/>
+      cp /var/www/html/centos7/images/pxeboot/vmlinuz /var/lib/tftpboot/centos7/
+      <br/>
+      cp /usr/share/syslinux/menu.c32 /var/lib/tftpboot
+      <br/>
+      cp /usr/share/syslinux/pxelinux.0 /var/lib/tftpboot
+      <br/>
+      mkdir /var/lib/tftpboot/pxelinux.cfg
+      <br/>
+      vi /var/lib/tftpboot/pxelinux.cfg/default
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      文件内容填写
+     </li>
+    </ul>
+    <pre><code class="prism language-python">default menu<span class="token punctuation">.</span>c32
+prompt <span class="token number">0</span>
+timeout <span class="token number">300</span>
+ONTIMEOUT local
+
+menu title <span class="token comment">########## PXE Boot Menu ##########</span>
+
+label <span class="token number">1</span>
+menu label <span class="token operator">^</span><span class="token number">1</span><span class="token punctuation">)</span> Install CentOS <span class="token number">7</span> x64 <span class="token keyword">with</span> HTTP
+kernel centos7<span class="token operator">/</span>vmlinuz
+append initrd<span class="token operator">=</span>centos7<span class="token operator">/</span>initrd<span class="token punctuation">.</span>img method<span class="token operator">=</span>http<span class="token punctuation">:</span><span class="token operator">//</span><span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.150</span><span class="token operator">/</span>centos7 devfs<span class="token operator">=</span>nomount
+</code></pre>
+    <p>
+     至此，服务器配置完毕，同一网段的计算机使用网络引导即可安装本服务器配置的CentOS7系统。
+    </p>
+    <h3>
+     <a id="_135">
+     </a>
+     三、添加多镜像引导
+    </h3>
+    <blockquote>
+     <p>
+      mkdir /var/www/html/centos6.8
+      <br/>
+      vi /etc/fstab
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      文末添加以下内容
+     </li>
+    </ul>
+    <pre><code class="prism language-python"><span class="token operator">&gt;</span><span class="token operator">/</span>root<span class="token operator">/</span>downloads<span class="token operator">/</span>CentOS<span class="token operator">-</span><span class="token number">6.8</span><span class="token operator">-</span>x86_64<span class="token operator">-</span><span class="token builtin">bin</span><span class="token operator">-</span>DVD1<span class="token punctuation">.</span>iso <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>centos6<span class="token punctuation">.</span><span class="token number">8</span><span class="token operator">/</span> iso9660 defaults<span class="token punctuation">,</span>ro<span class="token punctuation">,</span>loop <span class="token number">0</span> <span class="token number">0</span>
+</code></pre>
+    <blockquote>
+     <p>
+      mount -a
+      <br/>
+      mkdir /var/lib/tftpboot/centos6.8
+      <br/>
+      cp /var/www/html/centos6.8/images/pxeboot/initrd.img /var/lib/tftpboot/centos6.8/
+      <br/>
+      cp /var/www/html/centos6.8/images/pxeboot/vmlinuz /var/lib/tftpboot/centos6.8/
+      <br/>
+      vi /var/lib/tftpboot/pxelinux.cfg/default
+     </p>
+    </blockquote>
+    <ul>
+     <li>
+      文末添加以下内容
+     </li>
+    </ul>
+    <pre><code class="prism language-python">label <span class="token number">2</span>
+menu label <span class="token operator">^</span><span class="token number">2</span><span class="token punctuation">)</span> Install CentOS <span class="token number">6.8</span> x64 <span class="token keyword">with</span> HTTP
+kernel centos6<span class="token punctuation">.</span><span class="token number">8</span><span class="token operator">/</span>vmlinuz
+append initrd<span class="token operator">=</span>centos6<span class="token punctuation">.</span><span class="token number">8</span><span class="token operator">/</span>initrd<span class="token punctuation">.</span>img method<span class="token operator">=</span>http<span class="token punctuation">:</span><span class="token operator">//</span><span class="token number">10.39</span><span class="token number">.100</span><span class="token number">.150</span><span class="token operator">/</span>centos6<span class="token punctuation">.</span><span class="token number">8</span> devfs<span class="token operator">=</span>nomount
+</code></pre>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

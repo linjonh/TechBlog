@@ -1,0 +1,1462 @@
+---
+layout: post
+title: 2024-03-21-从初学者到专家Java的Lambda表达式完整指南
+date: 2024-03-21 16:53:12 +0800
+categories: [Java入门指南]
+tags: [开发语言,java]
+image:
+  path: https://api.vvhan.com/api/bing?rand=sj&artid=136889277
+  alt: 从初学者到专家Java的Lambda表达式完整指南
+artid: 136889277
+---
+<span class="artid" style="display:none" artid=68747470733a2f:2f626c6f672e6373646e2e6e65742f4c48593533373230302f:61727469636c652f64657461696c732f313336383839323737></span>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     从初学者到专家：Java的Lambda表达式完整指南
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+    </p>
+    <p>
+     <img alt="" height="548" src="https://i-blog.csdnimg.cn/blog_migrate/a60a1a5b258ff2c4714b49fc3d73adbf.png" width="830"/>
+    </p>
+    <h3 style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/4f36d3b38bd17d7daa66e507cb6ce43c.png"/>
+    </h3>
+    <p>
+    </p>
+    <h3>
+     一.Lambda的概念
+    </h3>
+    <p>
+     <span style="color:#ed7976;">
+      <strong>
+       概念：
+      </strong>
+     </span>
+     Lambda表达式是Java 8引入的一项重要功能，它允许我们以更简洁和灵活的方式编写代码。
+     <span style="background-color:#ffd900;">
+      可以把Lambda表达式看作是一种更方便的匿名函数，可以像数据一样传递和使用。
+     </span>
+    </p>
+    <p>
+     使用Lambda表达式可以让我们写出更短、更易读的代码。它可以替代传统的匿名类，使代码更加简洁。Lambda表达式还支持函数式编程，这意味着我们可以将函数作为参数传递给其他方法，使得代码更加灵活和可扩展。
+    </p>
+    <h4>
+     <span style="color:#333333;">
+      <strong>
+       1.1 Lambda
+      </strong>
+     </span>
+     <span style="color:#333333;">
+      <strong>
+       表达式的语法
+      </strong>
+     </span>
+    </h4>
+    <div>
+     <strong>
+      <span style="color:#333333;">
+       <span style="background-color:#ffd900;">
+        基本语法
+       </span>
+      </span>
+      <span style="color:#333333;">
+       <span style="background-color:#ffd900;">
+        :
+       </span>
+      </span>
+      <span style="color:#333333;">
+       <span style="background-color:#ffd900;">
+        (parameters) -&gt; expression
+       </span>
+      </span>
+      <span style="color:#333333;">
+       <span style="background-color:#ffd900;">
+        或
+       </span>
+      </span>
+      <span style="color:#333333;">
+       <span style="background-color:#ffd900;">
+        (parameters) -&gt;{ statements; }
+       </span>
+      </span>
+     </strong>
+    </div>
+    <div>
+     <span style="color:#333333;">
+      Lambda表达式由三部分组成：
+     </span>
+     <ol>
+      <li>
+       <span style="color:#0d0016;">
+        <strong>
+         paramaters
+        </strong>
+       </span>
+       <span style="color:#333333;">
+        ：类似方法中的形参列表，这里的参数是函数式接口里的参数。这里的参数类型可以明确的声明也可不声明而由JVM
+       </span>
+       <span style="color:#333333;">
+        隐含的推断。另外当只有一个推断类型时可以省略掉圆括号。
+       </span>
+      </li>
+      <li>
+       <span style="color:#333333;">
+        <strong>
+         -&gt;
+        </strong>
+       </span>
+       <span style="color:#333333;">
+        ：可理解为
+       </span>
+       <span style="color:#333333;">
+        “
+       </span>
+       <span style="color:#333333;">
+        被用于
+       </span>
+       <span style="color:#333333;">
+        ”
+       </span>
+       <span style="color:#333333;">
+        的意思
+       </span>
+      </li>
+      <li>
+       <span style="color:#333333;">
+        <strong>
+         方法体
+        </strong>
+       </span>
+       <span style="color:#333333;">
+        ：可以是表达式也可以代码块，是函数式接口里方法的实现。代码块可返回一个值或者什么都不反回，这里的代码块块等同于方法的方法体。如果是表达式，也可以返回一个值或者什么都不反回。
+       </span>
+      </li>
+     </ol>
+     <p>
+      根据上面的语法，理解下面的代码：
+     </p>
+     <ol>
+      <li>
+       <strong>
+        对于只有单个表达式的Lambda表达式：
+       </strong>
+      </li>
+     </ol>
+     <blockquote>
+      <pre><code class="language-java">import java.util.Arrays;
+import java.util.List;
+public class LambdaExample {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        // Lambda表达式作为参数传递给forEach方法
+        numbers.forEach(number -&gt; System.out.print(number+" "));
+    }
+}</code></pre>
+      <p>
+       运行截图如下：
+      </p>
+      <p>
+       <img alt="" height="157" src="https://i-blog.csdnimg.cn/blog_migrate/a0252a18e9f6e064eb7c70a4a578df5a.png" width="539"/>
+      </p>
+      <p>
+       这个示例首先创建了一个整数列表
+       <code>
+        numbers
+       </code>
+       。然后，通过调用
+       <code>
+        forEach
+       </code>
+       方法并传递一个 Lambda 表达式作为参数，对列表中的每个元素执行操作。
+      </p>
+     </blockquote>
+     <p>
+      <span style="color:#0d0016;">
+       <strong>
+        2.对于包含多个语句的Lambda表达式：
+       </strong>
+      </span>
+     </p>
+     <blockquote>
+      <pre><code class="language-java">import java.util.Arrays;
+import java.util.List;
+public class LambdaExample {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        // Lambda表达式使用多个语句块
+        numbers.forEach(number -&gt; {
+            int doubled = number * 2;
+            System.out.println(number + " doubled: " + doubled);
+        });
+    }
+}</code></pre>
+      <p>
+      </p>
+      <p>
+       运行截图：
+      </p>
+      <p>
+       <img alt="" height="306" src="https://i-blog.csdnimg.cn/blog_migrate/5e4bbae731801763afb137411470d81a.png" width="554"/>
+      </p>
+      <p>
+       Lambda 表达式
+       <strong>
+        使用了一个语句块
+       </strong>
+       ，首先计算每个数字的两倍值，并打印原始数字和计算结果。
+      </p>
+     </blockquote>
+     <hr/>
+     <h4>
+      <span style="color:#333333;">
+       <strong>
+        1.2
+       </strong>
+      </span>
+      <span style="color:#333333;">
+       <strong>
+        函数式接口
+       </strong>
+      </span>
+     </h4>
+     <div>
+      <span style="color:#333333;">
+       要了解
+      </span>
+      <span style="color:#333333;">
+       Lambda
+      </span>
+      <span style="color:#333333;">
+       表达式
+      </span>
+      <span style="color:#333333;">
+       ,
+      </span>
+      <span style="color:#333333;">
+       首先需要了解什么是函数式接口，函数式接口定义：一个接口有且只有一个抽象方法 。
+      </span>
+     </div>
+     <div>
+      <span style="color:#faa572;">
+       <strong>
+        注意：
+       </strong>
+      </span>
+     </div>
+     <div>
+      <ol>
+       <li>
+        <strong>
+         <span style="color:#333333;">
+          <span style="background-color:#ffd900;">
+           如果一个接口只有一个抽象方法，那么该接口就是一个函数式接口
+          </span>
+         </span>
+        </strong>
+       </li>
+       <li>
+        <span style="color:#333333;">
+        </span>
+        <span style="color:#333333;">
+         如果我们在某个接口上声明了
+        </span>
+        <span style="color:#333333;">
+         @FunctionalInterface
+        </span>
+        <span style="color:#333333;">
+         注解，那么编译器就会按照函数式接口的定义来要求该接口，这样如果有两个抽象方法，程序编译就会报错的。所以，从某种意义上来说，只要你保证你的接口中只有一个抽象方法，你可以不加这个注解。加上就会自动进行检测的。
+        </span>
+       </li>
+      </ol>
+     </div>
+    </div>
+    <p>
+     举个简单的例子：假设我是一位厨师，需要有一位助手来帮我。你给助手提供了一个简单的任务：切洋葱。你告诉助手只需要进行切洋葱的操作，其他的工作你会负责。
+    </p>
+    <p>
+     在这个例子中，我们可以将这个任务看作是一个接口，而助手则是接口的实现者。这个接口定义了一个方法，即切洋葱的操作。
+    </p>
+    <p>
+     代码案例：
+    </p>
+    <pre><code class="language-java">
+
+// 定义一个函数式接口
+@FunctionalInterface
+interface Task {
+//注意只能有一个方法
+    void perform();
+}
+
+public class LambdaExample {
+    public static void main(String[] args) {
+        // 创建一个助手对象，使用Lambda表达式实现任务
+        Task assistant = () -&gt; System.out.println("助手正在切洋葱...");
+
+        // 调用厨师的方法，传递助手对象执行任务
+        cookMeal(assistant);
+    }
+
+    public static void cookMeal(Task task) {
+        // 准备食材
+        System.out.println("准备食材...");
+
+        // 执行任务
+        task.perform();
+
+        // 煮菜
+        System.out.println("开始烹饪...");
+    }
+}</code></pre>
+    <p>
+     运行截图：
+    </p>
+    <p>
+     <img alt="" height="204" src="https://i-blog.csdnimg.cn/blog_migrate/2b60c497b28f068ad547e2d610d4f9af.png" width="538"/>
+    </p>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       如果我在接口再定义一个方法，则会报错。
+      </span>
+     </strong>
+     <br/>
+     <img alt="" height="647" src="https://i-blog.csdnimg.cn/blog_migrate/887d245cbe34897d40e17c7db3a1185f.png" width="844"/>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       但是有另外一种情况可以：
+      </span>
+     </strong>
+    </p>
+    <p>
+     在Java 8之前，接口中只能包含抽象方法，也就是没有具体的实现。但是，
+     <span style="color:#0d0016;">
+      <strong>
+       Java 8引入了默认方法的概念，允许在接口中定义具有默认实现的方法。默认方法使用
+       <code>
+        default
+       </code>
+       关键字进行修饰。
+      </strong>
+     </span>
+    </p>
+    <p>
+     由于接口中的默认方法拥有具体的实现，所以你可以直接在接口中调用它们。在实现该接口的类中，可以选择是否覆盖默认方法，如果没有覆盖，默认方法会被继承并直接使用。
+    </p>
+    <p>
+    </p>
+    <p>
+     <span style="background-color:#ffd900;">
+      现在我在接口定义一个washVegetables（）的默认方法。
+     </span>
+    </p>
+    <pre><code class="language-java">package demo1;
+
+// 定义一个函数式接口
+@FunctionalInterface
+interface Task {
+    void perform();
+
+    default void washVegetables() {
+        System.out.println("助理2，帮我洗菜即可");
+    }
+}
+
+public class Chef {
+    public static void main(String[] args) {
+        // 创建一个助手对象，使用Lambda表达式实现任务
+        Task assistant1 = () -&gt; {
+            System.out.println("助手1正在切洋葱...");
+            Task assistant2 = new Task() {
+                @Override
+                public void perform() {
+                    washVegetables();
+                }
+            };
+            assistant2.perform();
+        };
+
+        // 调用厨师的方法，传递助手对象执行任务
+        cookMeal(assistant1);
+    }
+
+    public static void cookMeal(Task task) {
+        // 准备食材
+        prepareIngredients();
+
+        // 执行任务
+        task.perform();
+
+        // 煮菜
+        startCooking();
+    }
+
+    public static void prepareIngredients() {
+        System.out.println("准备食材...");
+    }
+
+    public static void startCooking() {
+        System.out.println("开始烹饪...");
+    }
+}</code></pre>
+    <p>
+     我们将助理1的任务修改为先切洋葱，然后在切洋葱完成后创建一个新的助理2对象，该对象通过实现
+     <code>
+      Task
+     </code>
+     接口并重写
+     <code>
+      perform
+     </code>
+     方法来调用
+     <code>
+      washVegetables
+     </code>
+     默认方法。然后，我们调用助理2的
+     <code>
+      perform
+     </code>
+     方法来执行洗菜操作。
+    </p>
+    <hr/>
+    <h3>
+     二.
+     <span style="color:#333333;">
+      <strong>
+       Lambda
+      </strong>
+     </span>
+     <span style="color:#333333;">
+      <strong>
+       表达式的基本使用
+      </strong>
+     </span>
+    </h3>
+    <h4>
+     <span style="color:#333333;">
+      <strong>
+       2.1函数接口的六种情况
+      </strong>
+     </span>
+    </h4>
+    <div>
+     <span style="color:#333333;">
+      首先，我们实现准备好几个接口：
+     </span>
+     <pre><code class="language-java">//无返回值无参数
+@FunctionalInterface
+interface NoParameterNoReturn {
+void test();
+}
+//无返回值一个参数
+@FunctionalInterface
+interface OneParameterNoReturn {
+void test(int a);
+}
+//无返回值多个参数
+@FunctionalInterface
+interface MoreParameterNoReturn {
+void test(int a,int b);
+}
+//有返回值无参数
+@FunctionalInterface
+interface NoParameterReturn {
+int test();
+}
+//有返回值一个参数
+@FunctionalInterface
+interface OneParameterReturn {
+int test(int a);
+}
+//有返回值多参数
+@FunctionalInterface
+interface MoreParameterReturn {
+int test(int a,int b);
+}</code></pre>
+     <div>
+      <div>
+       <span style="color:#faa572;">
+        <strong>
+         语法精简：
+        </strong>
+       </span>
+      </div>
+      <div>
+       <strong>
+        <span style="color:#333333;">
+         1.
+        </span>
+        <span style="color:#333333;">
+         参数类型可以省略，如果需要省略，每个参数的类型都要省略。
+        </span>
+       </strong>
+      </div>
+      <div>
+       <strong>
+        <span style="color:#333333;">
+         2.
+        </span>
+        <span style="color:#333333;">
+         参数的小括号里面只有一个参数，那么小括号可以省略
+        </span>
+       </strong>
+      </div>
+      <div>
+       <strong>
+        <span style="color:#333333;">
+         3.
+        </span>
+        <span style="color:#333333;">
+         如果方法体当中只有一句代码，那么大括号可以省略
+        </span>
+       </strong>
+      </div>
+      <div>
+       <strong>
+        <span style="color:#333333;">
+         4.
+        </span>
+        <span style="color:#333333;">
+         如果方法体中只有一条语句，且是
+        </span>
+        <span style="color:#333333;">
+         return
+        </span>
+        <span style="color:#333333;">
+         语句，那么大括号可以省略，且去掉
+        </span>
+        <span style="color:#333333;">
+         return
+        </span>
+        <span style="color:#333333;">
+         关键字。
+        </span>
+       </strong>
+      </div>
+     </div>
+     <div>
+     </div>
+     <div>
+      <strong>
+       <span style="background-color:#ffd900;">
+        1.无返回值无参数的函数式接口
+       </span>
+      </strong>
+     </div>
+     <blockquote>
+      <div>
+       <pre><code class="language-java">@FunctionalInterface
+interface NoParameterNoReturn {
+    void test();
+}
+
+public class TestDemo {
+    public static void main(String[] args) {
+        // 无参数无返回值的函数式接口
+        NoParameterNoReturn noParameterNoReturn = () -&gt; {
+            System.out.println("无参数无返回值");
+        };
+        noParameterNoReturn.test();
+    }
+     
+}
+
+</code></pre>
+       <p>
+        <strong>
+         运行截图：
+        </strong>
+       </p>
+       <p>
+        <img alt="" height="59" src="https://i-blog.csdnimg.cn/blog_migrate/5a85eefdb5bddeef84d9c30c255346b5.png" width="539"/>
+       </p>
+      </div>
+     </blockquote>
+    </div>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       2.一个参数无返回值的函数式接口
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <pre><code class="language-java">@FunctionalInterface
+interface OneParameterNoReturn {
+    void test(int a);
+}
+public class TestDemo {
+    public static void main(String[] args) {
+           OneParameterNoReturn oneParameterNoReturn = (int a) -&gt; {
+            System.out.println("一个参数无返回值：" + a);
+        };
+        oneParameterNoReturn.test(10);
+     
+}
+
+</code></pre>
+     <p>
+      运行截图：
+     </p>
+     <p>
+      <img alt="" height="64" src="https://i-blog.csdnimg.cn/blog_migrate/7d8178ed39d688ecbb4cdfcf6dd7486b.png" width="539"/>
+     </p>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       3.多个参数无返回值的函数式接口
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <pre><code class="language-java">@FunctionalInterface
+interface MoreParameterNoReturn {
+    void test(int a, int b);
+}
+public class TestDemo {
+    public static void main(String[] args) {
+           // 多个参数无返回值的函数式接口
+        MoreParameterNoReturn moreParameterNoReturn = (int a, int b) -&gt; {
+            System.out.println("多个参数无返回值：" + a + " " + b);
+        };
+        moreParameterNoReturn.test(20, 30);
+     
+}
+
+</code></pre>
+     <p>
+      运行截图：
+     </p>
+     <p>
+      <img alt="" height="61" src="https://i-blog.csdnimg.cn/blog_migrate/2f1cc92aefbc5112aadb78ad417fe89b.png" width="536"/>
+     </p>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       4.有返回值无参数的函数式接口
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <pre><code class="language-java">@FunctionalInterface
+interface NoParameterReturn {
+    int test();
+}
+public class TestDemo {
+    public static void main(String[] args) {
+          NoParameterReturn noParameterReturn = () -&gt; {
+            System.out.println("有返回值无参数！");
+            return 40;
+        };
+        int ret = noParameterReturn.test();
+        System.out.println(ret);
+     
+}
+
+</code></pre>
+     <p>
+      运行截图：
+     </p>
+     <p>
+      <img alt="" height="87" src="https://i-blog.csdnimg.cn/blog_migrate/932fbca6b07f693bbc7f86ca1dd3f4d5.png" width="550"/>
+     </p>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       5.有返回值一个参数的函数式接口
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <pre><code class="language-java">@FunctionalInterface
+interface OneParameterReturn {
+    int test(int a);
+}
+public class TestDemo {
+    public static void main(String[] args) {
+         OneParameterReturn oneParameterReturn = (int a) -&gt; {
+            System.out.println("有返回值有一个参数！");
+            return a;
+        };
+       int ret = oneParameterReturn.test(50);
+        System.out.println(ret);
+     
+}
+
+</code></pre>
+     <p>
+      运行截图：
+     </p>
+     <p>
+      <img alt="" height="89" src="https://i-blog.csdnimg.cn/blog_migrate/bd5dab7bba52c9ddce45477c7990c14c.png" width="532"/>
+     </p>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       6.有返回值多个参数的函数式接口
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <pre><code class="language-java">@FunctionalInterface
+interface MoreParameterReturn {
+    int test(int a, int b);
+}
+public class TestDemo {
+    public static void main(String[] args) {
+         MoreParameterReturn moreParameterReturn = (int a, int b) -&gt; {
+            System.out.println("有返回值多个参数！");
+            return a + b;
+        };
+        int ret = moreParameterReturn.test(60, 70);
+        System.out.println(ret);
+     
+}
+
+</code></pre>
+     <p>
+      运行截图：
+     </p>
+     <p>
+      <img alt="" height="153" src="https://i-blog.csdnimg.cn/blog_migrate/7664654661a676773224fbbaa6ac0bf8.png" width="536"/>
+     </p>
+    </blockquote>
+    <h4>
+     2.2匿名内部类变量捕获
+    </h4>
+    <div>
+     <span style="color:#333333;">
+      Lambda
+     </span>
+     <span style="color:#333333;">
+      表达式中存在变量捕获 ，了解了变量捕获之后，我们才能更好的理解
+     </span>
+     <span style="color:#333333;">
+      Lambda
+     </span>
+     <span style="color:#333333;">
+      表达式的作用域 。
+     </span>
+     <span style="color:#333333;">
+      Java
+     </span>
+     <span style="color:#333333;">
+      当中的匿名类中，会存在变量捕获。
+     </span>
+    </div>
+    <div>
+    </div>
+    <p>
+     什么是匿名内部类？
+    </p>
+    <p>
+     <span style="color:#333333;">
+      匿名内部类就是没有名字的内部类 。我们这里只是为了说明变量捕获，所以，匿名内部类只要会使用就好，那么下面我们来，简单的看看匿名内部类的使用就好了。
+     </span>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#333333;">
+       <span style="background-color:#ffd900;">
+        代码案例一
+       </span>
+      </span>
+     </strong>
+    </p>
+    <pre><code class="language-java">interface MyFunction {
+    void printValue();
+}
+
+public class Example {
+    public static void main(String[] args) {
+        int x = 10; // 外部作用域的变量
+
+        MyFunction myFunction = new MyFunction() {
+            @Override
+            public void printValue() {
+                // 引用外部作用域的变量x
+                System.out.println("x: " + x);
+            }
+        };
+
+        x = 20; // 修改外部作用域的变量x
+
+        myFunction.printValue(); // 输出捕获的变量x，结果为20
+    }
+}</code></pre>
+    <p>
+     我们定义了一个函数式接口
+     <code>
+      MyFunction
+     </code>
+     ，其中包含了一个抽象方法
+     <code>
+      printValue()
+     </code>
+     。然后，我们创建了一个匿名内部类实现了该接口，并在实现中引用了外部作用域中的变量
+     <code>
+      x
+     </code>
+     ，并打印出其值。
+    </p>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       代码案例二
+      </span>
+     </strong>
+    </p>
+    <pre><code class="language-java">interface Shape {
+    void draw();
+}
+
+public class Example {
+    public static void main(String[] args) {
+        final int x = 10; // 外部作用域的变量
+
+        Shape shape = new Shape() {
+            @Override
+            public void draw() {
+                System.out.println("Drawing a shape with x = " + x);
+            }
+        };
+
+        shape.draw(); // 使用匿名内部类重写的draw()方法进行绘制
+    }
+}</code></pre>
+    <p>
+     我们定义了一个
+     <code>
+      Shape
+     </code>
+     接口，其中包含了一个抽象方法
+     <code>
+      draw()
+     </code>
+     。然后，我们使用匿名内部类实现了该接口，并在实现中引用了外部作用域中的变量
+     <code>
+      x
+     </code>
+     。在
+     <code>
+      draw()
+     </code>
+     方法中，我们打印出了变量
+     <code>
+      x
+     </code>
+     的值。
+    </p>
+    <h4>
+     2.3
+     <span style="color:#333333;">
+      <strong>
+       Lambda
+      </strong>
+     </span>
+     <span style="color:#333333;">
+      <strong>
+       的变量捕获
+      </strong>
+     </span>
+    </h4>
+    <p>
+     Lambda表达式可以捕获外部作用域的变量，这使得Lambda表达式可以访问和操作外部作用域中的变量。
+     <span style="background-color:#a2e043;">
+      捕获的变量在Lambda表达式中被视为"有效final"，即虽然没有显式声明为
+     </span>
+     <code>
+      <span style="background-color:#a2e043;">
+       final
+      </span>
+     </code>
+     <span style="background-color:#a2e043;">
+      ，但它们在Lambda表达式中不能被修改。
+     </span>
+     <br/>
+    </p>
+    <p>
+     代码案例：
+    </p>
+    <pre><code class="language-java">@FunctionalInterface
+interface NoParameterNoReturn {
+    void test();
+}
+
+public class TestDemo {
+    @FunctionalInterface
+    interface NoParameterNoReturn {
+        void test();
+    }
+    public static void main(String[] args) {
+        int a = 10;
+        NoParameterNoReturn noParameterNoReturn = ()-&gt;{
+       
+            System.out.println("捕获变量："+a);
+        };
+        noParameterNoReturn.test();
+    }
+
+}
+</code></pre>
+    <p>
+     运行截图：
+    </p>
+    <p>
+     <img alt="" height="156" src="https://i-blog.csdnimg.cn/blog_migrate/77d49686e5fee619c145c0b92a8e7860.png" width="552"/>
+    </p>
+    <p>
+     <strong>
+      现在我要修改变量a =99
+     </strong>
+    </p>
+    <p>
+     则
+    </p>
+    <p>
+     <img alt="" height="579" src="https://i-blog.csdnimg.cn/blog_migrate/1c951ac280603483b23a2045c1c2f5c7.png" width="812"/>
+    </p>
+    <p>
+    </p>
+    <hr/>
+    <h3>
+     三.
+     <span style="color:#333333;">
+      <strong>
+       Lambda
+      </strong>
+     </span>
+     <span style="color:#333333;">
+      <strong>
+       在集合当中的使用
+      </strong>
+     </span>
+    </h3>
+    <div>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       为了能够让
+      </span>
+     </span>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       Lambda
+      </span>
+     </span>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       和
+      </span>
+     </span>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       Java
+      </span>
+     </span>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       的集合类集更好的一起使用，集合当中，也新增了部分接口，以便与
+      </span>
+     </span>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       Lambda
+      </span>
+     </span>
+     <span style="color:#333333;">
+      <span style="background-color:#a2e043;">
+       表达式对接。
+      </span>
+     </span>
+    </div>
+    <div>
+     <strong>
+      以下是对应接口的常用方法及其使用：
+     </strong>
+    </div>
+    <div>
+     <img alt="" height="491" src="https://i-blog.csdnimg.cn/blog_migrate/7ae5d050e873fe1e64965f987658d49a.png" width="1200"/>
+    </div>
+    <h4>
+     <span style="color:#fe2c24;">
+      3.1
+      <strong>
+       Collection接口
+      </strong>
+     </span>
+    </h4>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       forEach()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用
+       <code>
+        forEach()
+       </code>
+       方法可以方便地遍历集合中的元素，并对每个元素执行自定义操作，从而简化了对集合的处理过程。
+      </strong>
+     </p>
+     <pre><code class="language-java">List&lt;String&gt; fruits = Arrays.asList("Apple", "Banana", "Orange");
+
+fruits.forEach(fruit -&gt; System.out.println("I like " + fruit));
+
+// 输出结果：
+// I like Apple
+// I like Banana
+// I like Orange</code></pre>
+    </blockquote>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       removeIf() 方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <span style="color:#0d0016;">
+      <strong>
+       <code>
+        removeIf(Predicate&lt;? super E&gt; filter)
+       </code>
+       ：使用Lambda表达式来移除集合中满足特定条件的元素。
+       <code>
+        Predicate
+       </code>
+       接口的Lambda表达式用于定义过滤条件。
+      </strong>
+     </span>
+     <pre><code class="language-java">List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;(Arrays.asList(1, 2, 3, 4, 5));
+
+numbers.removeIf(n -&gt; n % 2 == 0); // 移除所有偶数
+
+// 输出结果：[1, 3, 5]
+System.out.println(numbers);</code></pre>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       spliterator() 方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       返回一个可用于并行迭代集合的
+       <code>
+        Spliterator
+       </code>
+       对象。
+       <code>
+        Spliterator
+       </code>
+       接口的
+       <code>
+        forEachRemaining()
+       </code>
+       方法可以与Lambda表达式一起使用，对集合中的每个元素执行特定操作。
+      </strong>
+     </p>
+     <pre><code class="language-java">List&lt;String&gt; fruits = Arrays.asList("Apple", "Banana", "Orange");
+
+Spliterator&lt;String&gt; spliterator = fruits.spliterator();
+spliterator.forEachRemaining(fruit -&gt; System.out.println(fruit));
+
+// 输出结果：
+// Apple
+// Banana
+// Orange</code></pre>
+    </blockquote>
+    <p>
+    </p>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       stream()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       返回一个顺序流，用于对集合中的元素进行顺序操作。可以与
+       <code>
+        forEach()
+       </code>
+       方法结合使用，对集合中的每个元素执行特定操作。
+      </strong>
+     </p>
+     <pre><code class="language-java">List&lt;String&gt; names = Arrays.asList("Alice", "Bob", "Charlie");
+
+names.stream()
+     .forEach(name -&gt; System.out.println("Hello, " + name));
+
+// 输出结果：
+// Hello, Alice
+// Hello, Bob
+// Hello, Charlie</code></pre>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       parallelStream() 方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      返回一个并行流，用于对集合中的元素进行并行操作。可以与
+      <code>
+       forEach()
+      </code>
+      方法结合使用，对集合中的每个元素执行特定操作。
+      <br/>
+     </p>
+     <pre><code class="language-java">List&lt;String&gt; names = Arrays.asList("Alice", "Bob", "Charlie");
+
+names.parallelStream()
+     .forEach(name -&gt; System.out.println("Hello, " + name));
+
+// 输出结果：
+// Hello, Alice
+// Hello, Bob
+// Hello, Charlie</code></pre>
+    </blockquote>
+    <hr/>
+    <h4>
+     <span style="color:#fe2c24;">
+      3.2
+      <strong>
+       List接口
+      </strong>
+     </span>
+    </h4>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       replaceAll()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式替换列表中的所有元素。
+      </strong>
+     </p>
+     <pre><code class="language-java">List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;(Arrays.asList(1, 2, 3, 4, 5));
+
+numbers.replaceAll(n -&gt; n * 2); // 将列表中的每个元素乘以2
+
+// 输出结果：[2, 4, 6, 8, 10]
+System.out.println(numbers);</code></pre>
+    </blockquote>
+    <hr/>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       sort()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式对列表进行排序。
+       <code>
+        Comparator
+       </code>
+       接口的Lambda表达式用于定义排序逻辑。
+      </strong>
+     </p>
+     <pre><code class="language-java">List&lt;String&gt; names = new ArrayList&lt;&gt;(Arrays.asList("Alice", "Bob", "Charlie"));
+
+names.sort((name1, name2) -&gt; name1.compareToIgnoreCase(name2)); // 根据名称的字母顺序排序，忽略大小写
+
+// 输出结果：[Alice, Bob, Charlie]
+System.out.println(names);</code></pre>
+    </blockquote>
+    <h4>
+     <span style="color:#fe2c24;">
+      <strong>
+       3.3Map接口
+      </strong>
+     </span>
+    </h4>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       forEach()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式对Map中的每个键值对执行特定的操作。
+       <code>
+        BiConsumer
+       </code>
+       接口的Lambda表达式用于定义操作逻辑，接受键和值作为参数。
+      </strong>
+     </p>
+     <pre><code class="language-java">Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Alice", 90);
+scores.put("Bob", 80);
+scores.put("Charlie", 95);
+
+scores.forEach((name, score) -&gt; System.out.println(name + ": " + score));
+
+// 输出结果：
+// Alice: 90
+// Bob: 80
+// Charlie: 95</code></pre>
+    </blockquote>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       replaceAll()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式替换Map中的所有值。
+      </strong>
+     </p>
+     <pre><code class="language-java">Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Alice", 90);
+scores.put("Bob", 80);
+scores.put("Charlie", 95);
+
+scores.replaceAll((name, score) -&gt; score + 5); // 将每个分数加上5
+
+System.out.println(scores);
+
+// 输出结果：
+// {Alice=95, Bob=85, Charlie=100}</code></pre>
+     <p>
+     </p>
+    </blockquote>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       putIfAbsent()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式在Map中插入键值对，仅当键不存在时才插入。Lambda表达式用于定义要插入的值，接受键作为参数。
+      </strong>
+     </p>
+     <pre><code class="language-java">Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Alice", 90);
+scores.put("Bob", 80);
+
+scores.putIfAbsent("Charlie", 95); // 插入键值对"Charlie=95"
+
+System.out.println(scores);
+
+// 输出结果：
+// {Alice=90, Bob=80, Charlie=95}</code></pre>
+    </blockquote>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       remove()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式根据键和值从Map中移除指定的键值对。Lambda表达式用于定义要移除的值，接受键和当前值作为参数。
+      </strong>
+     </p>
+     <pre><code class="language-java">Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Alice", 90);
+scores.put("Bob", 80);
+scores.put("Charlie", 95);
+
+scores.remove("Alice", 90); // 移除键值对"Alice=90"
+
+System.out.println(scores);
+
+// 输出结果：
+// {Bob=80, Charlie=95}</code></pre>
+     <p>
+     </p>
+    </blockquote>
+    <hr/>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="background-color:#ffd900;">
+       replace()方法
+      </span>
+     </strong>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       使用Lambda表达式替换Map中指定键的值。Lambda表达式用于定义要替换的值，接受键和当前值作为参数。
+      </strong>
+     </p>
+     <pre><code class="language-java">Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Alice", 90);
+scores.put("Bob", 80);
+scores.put("Charlie", 95);
+
+scores.replace("Alice", 100); // 将键"Alice"的值替换为100
+
+System.out.println(scores);
+
+// 输出结果：
+// {Alice=100, Bob=80, Charlie=95}</code></pre>
+    </blockquote>
+    <h3>
+     四.总结
+    </h3>
+    <div>
+     <span style="color:#333333;">
+      Lambda
+     </span>
+     <span style="color:#333333;">
+      表达式的优点很明显，在代码层次上来说，使代码变得非常的简洁。缺点也很明显，代码不易读。
+     </span>
+    </div>
+    <div>
+     <span style="color:#e6b223;">
+      <strong>
+       优点：
+      </strong>
+     </span>
+    </div>
+    <ul>
+     <li>
+      <span style="color:#333333;">
+       代码简洁，开发迅速
+      </span>
+     </li>
+     <li>
+      <span style="color:#333333;">
+       方便函数式编程
+      </span>
+     </li>
+     <li>
+      <span style="color:#333333;">
+       非常容易进行并行计算
+      </span>
+     </li>
+     <li>
+      <span style="color:#333333;">
+       Java
+      </span>
+      <span style="color:#333333;">
+       引入
+      </span>
+      <span style="color:#333333;">
+       Lambda
+      </span>
+      <span style="color:#333333;">
+       ，改善了集合操作
+      </span>
+     </li>
+    </ul>
+    <div>
+     <strong>
+      <span style="color:#1c7331;">
+       缺点：
+      </span>
+     </strong>
+    </div>
+    <ul>
+     <li>
+      <span style="color:#333333;">
+       代码可读性变差
+      </span>
+     </li>
+     <li>
+      <span style="color:#333333;">
+       在非并行计算中，很多计算未必有传统的
+      </span>
+      <span style="color:#333333;">
+       for
+      </span>
+      <span style="color:#333333;">
+       性能要高
+      </span>
+     </li>
+     <li>
+      <span style="color:#333333;">
+       不容易进行调试
+      </span>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p style="text-align:center;">
+     <img alt="" src="https://i-blog.csdnimg.cn/blog_migrate/84b555c3eccba945d5d9cce43ab3217c.png"/>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+
