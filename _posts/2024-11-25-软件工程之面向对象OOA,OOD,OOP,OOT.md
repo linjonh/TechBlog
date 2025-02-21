@@ -1,0 +1,66 @@
+---
+layout: post
+title: 软件工程之面向对象OOA,OOD,OOP,OOT
+date: 2024-11-25 18:03:46 +0800
+categories: [【软件工程】]
+tags: []
+image:
+    path: https://img-blog.csdnimg.cn/20181111212357266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0Vsc2ExNQ==,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
+    alt: 软件工程之面向对象OOA,OOD,OOP,OOT
+artid: 83962615
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     软件工程之面向对象（OOA，OOD，OOP，OOT）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h4>
+     前面几篇博客分享的是传统的软件工程生命周期的几个阶段，这篇博客分享一下在传统软件工程的基础上发展而来的面向对象的软件工程，面向对象的软件工程与传统的软件工程生命周期阶段大体相同，也分为分析，设计，编码，测试阶段，不同的是面向对象所分析，设计，编码，测试的内容是对象，而非模块。
+    </h4>
+    <h4>
+     面向对象的概念：
+    </h4>
+    <p style="text-align:center;">
+     <img alt="" class="has" height="682" src="https://i-blog.csdnimg.cn/blog_migrate/2ab01450d3673832192bc5ff46c008bd.png" width="573"/>
+    </p>
+    <h4>
+    </h4>
+    <h4>
+     OOA(面向对象分析)
+    </h4>
+    <h4>
+     <img alt="" class="has" height="1052" src="https://i-blog.csdnimg.cn/blog_migrate/9fce3690e066319ef286984e3af3518d.png" width="860"/>
+    </h4>
+    <h4>
+     OOD（面向对象设计）
+    </h4>
+    <p style="text-align:center;">
+     <img alt="" class="has" height="507" src="https://i-blog.csdnimg.cn/blog_migrate/94d934dbbaf85399ceed0e6269573dd5.png" width="594"/>
+    </p>
+    <h4>
+     OOP（面向对象实现），OOT（面向对象测试）
+    </h4>
+    <p style="text-align:center;">
+     <img alt="" class="has" height="458" src="https://i-blog.csdnimg.cn/blog_migrate/bcab455f14bd38fe30e46f2bccb40f81.png" width="548"/>
+    </p>
+    <h4>
+     通过这次的梳理对面向对象的设计过程有了初步的了解，然而，这只是浅层的一个宏观把控，后面要细化的内容还有很多，逐步深入细化，下一站软件质量的宏观把控走起^_^
+    </h4>
+   </div>
+  </div>
+ </article>
+</div>
+
+

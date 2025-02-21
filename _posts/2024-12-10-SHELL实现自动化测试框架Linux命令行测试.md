@@ -1,0 +1,1194 @@
+---
+layout: post
+title: SHELL实现自动化测试框架Linux命令行测试
+date: 2024-12-10 14:37:21 +0800
+categories: [系统测试,shell,linux]
+tags: [软件测试,测试类型,单元测试,shell,linux]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=108285966
+    alt: SHELL实现自动化测试框架Linux命令行测试
+artid: 108285966
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     SHELL实现自动化测试框架(Linux命令行测试)
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="SHELL_0">
+     </a>
+     SHELL实现自动化测试框架
+    </h2>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#SHELL_0" rel="nofollow">
+        SHELL实现自动化测试框架
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#_2" rel="nofollow">
+          相关术语
+         </a>
+        </li>
+        <li>
+         <a href="#_10" rel="nofollow">
+          背景
+         </a>
+        </li>
+        <li>
+         <a href="#_53" rel="nofollow">
+          方案
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#_82" rel="nofollow">
+            设计
+           </a>
+          </li>
+          <li>
+           <ul>
+            <li>
+             <a href="#case_123" rel="nofollow">
+              用例模块（case）
+             </a>
+            </li>
+            <li>
+             <a href="#method_165" rel="nofollow">
+              方法封装模块（method）
+             </a>
+            </li>
+            <li>
+             <a href="#run_repor_177" rel="nofollow">
+              启动测试模块（run_repor）
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#_189" rel="nofollow">
+            关键技术
+           </a>
+          </li>
+          <li>
+           <ul>
+            <li>
+             <a href="#_199" rel="nofollow">
+              初始化功能的实现
+             </a>
+            </li>
+            <li>
+             <a href="#_255" rel="nofollow">
+              断言功能的实现
+             </a>
+            </li>
+            <li>
+             <a href="#_294" rel="nofollow">
+              测试执行功能的实现
+             </a>
+            </li>
+            <li>
+             <a href="#_352" rel="nofollow">
+              测试报告功能的实现
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#_400" rel="nofollow">
+          实验验证
+         </a>
+        </li>
+        <li>
+         <a href="#_450" rel="nofollow">
+          小结
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h3>
+     <a id="_2">
+     </a>
+     相关术语
+    </h3>
+    <table>
+     <thead>
+      <tr>
+       <th align="center">
+        缩写
+       </th>
+       <th align="center">
+        全称
+       </th>
+       <th align="center">
+        描述
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="center">
+        SAT
+       </td>
+       <td align="center">
+        Shell Automated Test
+       </td>
+       <td align="center">
+        使用Shell实现的自动化测试
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3>
+     <a id="_10">
+     </a>
+     背景
+    </h3>
+    <p>
+     <strong>
+      用以下功能用例举例
+     </strong>
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        用例标题
+       </td>
+       <td>
+        步骤
+       </td>
+       <td>
+        预期
+       </td>
+      </tr>
+      <tr>
+       <td rowspan="2">
+        基础命令：验证which基础命令功能正确
+       </td>
+       <td>
+        1、在命令行输入：which bash
+       </td>
+       <td>
+        1、输出：/usr/bin/bash
+       </td>
+      </tr>
+      <tr>
+       <td>
+        2、在命令行输入：which ls whereis cp
+       </td>
+       <td>
+        2、输出：/usr/bin/ls /usr/bin/whereis /usr/bin/cp
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     手工测试，我们要执行该用例需进行4个步骤：
+    </p>
+    <ul>
+     <li>
+      执行步骤1：命令行中输入命令
+      <code>
+       which bash
+      </code>
+     </li>
+     <li>
+      验证步骤1：查看步骤1输出结果，验证结果与用例中预期是否一致
+     </li>
+     <li>
+      执行步骤2：命令行中输入命令
+      <code>
+       which ls whereis cp
+      </code>
+     </li>
+     <li>
+      验证步骤2：查看步骤2输出结果，验证结果与用例中预期是否一致
+     </li>
+    </ul>
+    <p>
+     模拟命令行中测试实例：
+    </p>
+    <pre><code class="prism language-shell">mars@mars-PC:~$ <span class="token function">which</span> <span class="token function">bash</span>  <span class="token comment"># 步骤1</span>
+/usr/bin/bash  <span class="token comment"># 步骤1输出结果</span>
+
+mars@mars-PC:~$ <span class="token function">which</span> <span class="token function">ls</span> <span class="token function">whereis</span> <span class="token function">cp</span>  <span class="token comment"># 步骤2</span>
+/usr/bin/ls
+/usr/bin/whereis
+/usr/bin/cp  <span class="token comment"># 步骤2输出结果</span>
+</code></pre>
+    <p>
+     若从人工执行转换为自动化执行：自动执行命令、自动验证输出结果、生成测试报告，这样除了在全量测试时减少巨大的工作量，还能在回归测试、边缘测试时执行多覆盖大部分测试范围。
+    </p>
+    <h3>
+     <a id="_53">
+     </a>
+     方案
+    </h3>
+    <p>
+     实现该自动化方案，这里选择使用
+     <code>
+      Shell
+     </code>
+     来实现。
+     <code>
+      Shell
+     </code>
+     是一个命令解释器，它不仅是Linux操作系统内核与用户之间的绝缘层（俗称壳），同时也是一种功能相当强大的编程语言，可直接执行linux系统命令，它类似于DOS下的cmd.exe。
+    </p>
+    <p>
+     该方案除了Shell以外也可使用其他语言实现，比如Python，但是Python只能通过os、subprocess库来调用linux系统命令，不像Shell可直接执行系统命令，在脚本的编写和调式都不如Shell简洁、方便，所以最终方案的实现为Shell。这里对该技术方案命名为
+     <code>
+      SAT
+     </code>
+     方便后续说明使用。
+    </p>
+    <p>
+     使用场景【查询xx应用进程状态】的Shell、Python代码作为对比：
+    </p>
+    <ul>
+     <li>
+      Python
+     </li>
+    </ul>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> subprocess
+
+ps_state<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token string">'ps aux|grep -v grep|grep -q xx'</span><span class="token punctuation">,</span> shell<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">.</span>returncode
+<span class="token keyword">print</span><span class="token punctuation">(</span>ps_state<span class="token punctuation">)</span>
+</code></pre>
+    <ul>
+     <li>
+      Shell
+     </li>
+    </ul>
+    <pre><code class="prism language-shell"><span class="token function">ps</span> aux<span class="token operator">|</span><span class="token function">grep</span> -v <span class="token function">grep</span><span class="token operator">|</span><span class="token function">grep</span> -q xx
+<span class="token keyword">echo</span> <span class="token variable">$?</span>
+</code></pre>
+    <p>
+     通过以上对比可发现，实现一个相同的功能，Shell编写的代码要更为直接、简洁，命令越复杂这个优势越明显。
+    </p>
+    <h4>
+     <a id="_82">
+     </a>
+     设计
+    </h4>
+    <p>
+     <code>
+      SAT
+     </code>
+     是一个简单的自动化测试框架，主要实现命令行用例的自动执行并输出测试报告，体现出用例的执行情况，可快速对失败用例进行定位。总体可以划分为下面几个模块：
+    </p>
+    <ul>
+     <li>
+      <p>
+       用例模块（case）：存放转换为自动化测试用例的代码，最小单位为函数，该框架支持多个用例模块文件。
+      </p>
+     </li>
+     <li>
+      <p>
+       方法封装模块（method）：存放一些公用方法函数，比如：断言、测试报告等。
+      </p>
+     </li>
+     <li>
+      <p>
+       启动测试模块（run_repor）：存放启动测试的主代码，对用例模块文件进行批量处理并生成测试报告。
+      </p>
+     </li>
+     <li>
+      <p>
+       SAT目录结构如下：
+      </p>
+      <pre><code class="prism language-shell">   SAT					      <span class="token comment">#主目录</span>
+   ├── <span class="token keyword">case</span>                      <span class="token comment"># 存放用例模块的目录</span>
+   │   ├── case_a.sh             	<span class="token comment"># 测试人员A用例文件</span>
+   │   └── case_b.sh             	<span class="token comment"># 测试人员B用例文件</span>
+   ├── method                    <span class="token comment"># 存放方法封装模块的目录</span>
+   │   ├── assertion.sh				<span class="token comment"># 断言函数封装模块文件</span>
+   │   └── other.sh					<span class="token comment"># 其他函数封装模块文件</span>
+   ├── report					 <span class="token comment"># 存放测试报告的目录</span>
+   │   ├── report_0817231130		<span class="token comment"># 测试报告文件</span>
+   │   └── report_0819115441
+   └── run_report.sh			 <span class="token comment"># 启动测试模块文件</span>
+</code></pre>
+     </li>
+     <li>
+      <p>
+       SAT框架运行流程图如下：
+      </p>
+     </li>
+    </ul>
+    <div class="mermaid">
+     <svg height="608.3250122070312" id="mermaid-svg-836Ut2nVvbKf8sDE" viewbox="0 0 526.8499755859375 608.3250122070312" width="526.8499755859375" xmlns="http://www.w3.org/2000/svg">
+      <style>
+       #mermaid-svg-836Ut2nVvbKf8sDE .label{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);fill:#333;color:#333}#mermaid-svg-836Ut2nVvbKf8sDE .label text{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .node rect,#mermaid-svg-836Ut2nVvbKf8sDE .node circle,#mermaid-svg-836Ut2nVvbKf8sDE .node ellipse,#mermaid-svg-836Ut2nVvbKf8sDE .node polygon,#mermaid-svg-836Ut2nVvbKf8sDE .node path{fill:#ECECFF;stroke:#9370db;stroke-width:1px}#mermaid-svg-836Ut2nVvbKf8sDE .node .label{text-align:center;fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .node.clickable{cursor:pointer}#mermaid-svg-836Ut2nVvbKf8sDE .arrowheadPath{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .edgePath .path{stroke:#333;stroke-width:1.5px}#mermaid-svg-836Ut2nVvbKf8sDE .flowchart-link{stroke:#333;fill:none}#mermaid-svg-836Ut2nVvbKf8sDE .edgeLabel{background-color:#e8e8e8;text-align:center}#mermaid-svg-836Ut2nVvbKf8sDE .edgeLabel rect{opacity:0.9}#mermaid-svg-836Ut2nVvbKf8sDE .edgeLabel span{color:#333}#mermaid-svg-836Ut2nVvbKf8sDE .cluster rect{fill:#ffffde;stroke:#aa3;stroke-width:1px}#mermaid-svg-836Ut2nVvbKf8sDE .cluster text{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:12px;background:#ffffde;border:1px solid #aa3;border-radius:2px;pointer-events:none;z-index:100}#mermaid-svg-836Ut2nVvbKf8sDE .actor{stroke:#ccf;fill:#ECECFF}#mermaid-svg-836Ut2nVvbKf8sDE text.actor&gt;tspan{fill:#000;stroke:none}#mermaid-svg-836Ut2nVvbKf8sDE .actor-line{stroke:grey}#mermaid-svg-836Ut2nVvbKf8sDE .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333}#mermaid-svg-836Ut2nVvbKf8sDE .messageLine1{stroke-width:1.5;stroke-dasharray:2, 2;stroke:#333}#mermaid-svg-836Ut2nVvbKf8sDE #arrowhead path{fill:#333;stroke:#333}#mermaid-svg-836Ut2nVvbKf8sDE .sequenceNumber{fill:#fff}#mermaid-svg-836Ut2nVvbKf8sDE #sequencenumber{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE #crosshead path{fill:#333;stroke:#333}#mermaid-svg-836Ut2nVvbKf8sDE .messageText{fill:#333;stroke:#333}#mermaid-svg-836Ut2nVvbKf8sDE .labelBox{stroke:#ccf;fill:#ECECFF}#mermaid-svg-836Ut2nVvbKf8sDE .labelText,#mermaid-svg-836Ut2nVvbKf8sDE .labelText&gt;tspan{fill:#000;stroke:none}#mermaid-svg-836Ut2nVvbKf8sDE .loopText,#mermaid-svg-836Ut2nVvbKf8sDE .loopText&gt;tspan{fill:#000;stroke:none}#mermaid-svg-836Ut2nVvbKf8sDE .loopLine{stroke-width:2px;stroke-dasharray:2, 2;stroke:#ccf;fill:#ccf}#mermaid-svg-836Ut2nVvbKf8sDE .note{stroke:#aa3;fill:#fff5ad}#mermaid-svg-836Ut2nVvbKf8sDE .noteText,#mermaid-svg-836Ut2nVvbKf8sDE .noteText&gt;tspan{fill:#000;stroke:none}#mermaid-svg-836Ut2nVvbKf8sDE .activation0{fill:#f4f4f4;stroke:#666}#mermaid-svg-836Ut2nVvbKf8sDE .activation1{fill:#f4f4f4;stroke:#666}#mermaid-svg-836Ut2nVvbKf8sDE .activation2{fill:#f4f4f4;stroke:#666}#mermaid-svg-836Ut2nVvbKf8sDE .mermaid-main-font{font-family:"trebuchet ms", verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .section{stroke:none;opacity:0.2}#mermaid-svg-836Ut2nVvbKf8sDE .section0{fill:rgba(102,102,255,0.49)}#mermaid-svg-836Ut2nVvbKf8sDE .section2{fill:#fff400}#mermaid-svg-836Ut2nVvbKf8sDE .section1,#mermaid-svg-836Ut2nVvbKf8sDE .section3{fill:#fff;opacity:0.2}#mermaid-svg-836Ut2nVvbKf8sDE .sectionTitle0{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .sectionTitle1{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .sectionTitle2{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .sectionTitle3{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .sectionTitle{text-anchor:start;font-size:11px;text-height:14px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .grid .tick{stroke:#d3d3d3;opacity:0.8;shape-rendering:crispEdges}#mermaid-svg-836Ut2nVvbKf8sDE .grid .tick text{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .grid path{stroke-width:0}#mermaid-svg-836Ut2nVvbKf8sDE .today{fill:none;stroke:red;stroke-width:2px}#mermaid-svg-836Ut2nVvbKf8sDE .task{stroke-width:2}#mermaid-svg-836Ut2nVvbKf8sDE .taskText{text-anchor:middle;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .taskText:not([font-size]){font-size:11px}#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}#mermaid-svg-836Ut2nVvbKf8sDE .task.clickable{cursor:pointer}#mermaid-svg-836Ut2nVvbKf8sDE .taskText.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutsideLeft.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutsideRight.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-svg-836Ut2nVvbKf8sDE .taskText0,#mermaid-svg-836Ut2nVvbKf8sDE .taskText1,#mermaid-svg-836Ut2nVvbKf8sDE .taskText2,#mermaid-svg-836Ut2nVvbKf8sDE .taskText3{fill:#fff}#mermaid-svg-836Ut2nVvbKf8sDE .task0,#mermaid-svg-836Ut2nVvbKf8sDE .task1,#mermaid-svg-836Ut2nVvbKf8sDE .task2,#mermaid-svg-836Ut2nVvbKf8sDE .task3{fill:#8a90dd;stroke:#534fbc}#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutside0,#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutside2{fill:#000}#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutside1,#mermaid-svg-836Ut2nVvbKf8sDE .taskTextOutside3{fill:#000}#mermaid-svg-836Ut2nVvbKf8sDE .active0,#mermaid-svg-836Ut2nVvbKf8sDE .active1,#mermaid-svg-836Ut2nVvbKf8sDE .active2,#mermaid-svg-836Ut2nVvbKf8sDE .active3{fill:#bfc7ff;stroke:#534fbc}#mermaid-svg-836Ut2nVvbKf8sDE .activeText0,#mermaid-svg-836Ut2nVvbKf8sDE .activeText1,#mermaid-svg-836Ut2nVvbKf8sDE .activeText2,#mermaid-svg-836Ut2nVvbKf8sDE .activeText3{fill:#000 !important}#mermaid-svg-836Ut2nVvbKf8sDE .done0,#mermaid-svg-836Ut2nVvbKf8sDE .done1,#mermaid-svg-836Ut2nVvbKf8sDE .done2,#mermaid-svg-836Ut2nVvbKf8sDE .done3{stroke:grey;fill:#d3d3d3;stroke-width:2}#mermaid-svg-836Ut2nVvbKf8sDE .doneText0,#mermaid-svg-836Ut2nVvbKf8sDE .doneText1,#mermaid-svg-836Ut2nVvbKf8sDE .doneText2,#mermaid-svg-836Ut2nVvbKf8sDE .doneText3{fill:#000 !important}#mermaid-svg-836Ut2nVvbKf8sDE .crit0,#mermaid-svg-836Ut2nVvbKf8sDE .crit1,#mermaid-svg-836Ut2nVvbKf8sDE .crit2,#mermaid-svg-836Ut2nVvbKf8sDE .crit3{stroke:#f88;fill:red;stroke-width:2}#mermaid-svg-836Ut2nVvbKf8sDE .activeCrit0,#mermaid-svg-836Ut2nVvbKf8sDE .activeCrit1,#mermaid-svg-836Ut2nVvbKf8sDE .activeCrit2,#mermaid-svg-836Ut2nVvbKf8sDE .activeCrit3{stroke:#f88;fill:#bfc7ff;stroke-width:2}#mermaid-svg-836Ut2nVvbKf8sDE .doneCrit0,#mermaid-svg-836Ut2nVvbKf8sDE .doneCrit1,#mermaid-svg-836Ut2nVvbKf8sDE .doneCrit2,#mermaid-svg-836Ut2nVvbKf8sDE .doneCrit3{stroke:#f88;fill:#d3d3d3;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}#mermaid-svg-836Ut2nVvbKf8sDE .milestone{transform:rotate(45deg) scale(0.8, 0.8)}#mermaid-svg-836Ut2nVvbKf8sDE .milestoneText{font-style:italic}#mermaid-svg-836Ut2nVvbKf8sDE .doneCritText0,#mermaid-svg-836Ut2nVvbKf8sDE .doneCritText1,#mermaid-svg-836Ut2nVvbKf8sDE .doneCritText2,#mermaid-svg-836Ut2nVvbKf8sDE .doneCritText3{fill:#000 !important}#mermaid-svg-836Ut2nVvbKf8sDE .activeCritText0,#mermaid-svg-836Ut2nVvbKf8sDE .activeCritText1,#mermaid-svg-836Ut2nVvbKf8sDE .activeCritText2,#mermaid-svg-836Ut2nVvbKf8sDE .activeCritText3{fill:#000 !important}#mermaid-svg-836Ut2nVvbKf8sDE .titleText{text-anchor:middle;font-size:18px;fill:#000;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE g.classGroup text{fill:#9370db;stroke:none;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:10px}#mermaid-svg-836Ut2nVvbKf8sDE g.classGroup text .title{font-weight:bolder}#mermaid-svg-836Ut2nVvbKf8sDE g.clickable{cursor:pointer}#mermaid-svg-836Ut2nVvbKf8sDE g.classGroup rect{fill:#ECECFF;stroke:#9370db}#mermaid-svg-836Ut2nVvbKf8sDE g.classGroup line{stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5}#mermaid-svg-836Ut2nVvbKf8sDE .classLabel .label{fill:#9370db;font-size:10px}#mermaid-svg-836Ut2nVvbKf8sDE .relation{stroke:#9370db;stroke-width:1;fill:none}#mermaid-svg-836Ut2nVvbKf8sDE .dashed-line{stroke-dasharray:3}#mermaid-svg-836Ut2nVvbKf8sDE #compositionStart{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #compositionEnd{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #aggregationStart{fill:#ECECFF;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #aggregationEnd{fill:#ECECFF;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #dependencyStart{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #dependencyEnd{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #extensionStart{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE #extensionEnd{fill:#9370db;stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE .commit-id,#mermaid-svg-836Ut2nVvbKf8sDE .commit-msg,#mermaid-svg-836Ut2nVvbKf8sDE .branch-label{fill:lightgrey;color:lightgrey;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .pieTitleText{text-anchor:middle;font-size:25px;fill:#000;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .slice{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE g.stateGroup text{fill:#9370db;stroke:none;font-size:10px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE g.stateGroup text{fill:#9370db;fill:#333;stroke:none;font-size:10px}#mermaid-svg-836Ut2nVvbKf8sDE g.statediagram-cluster .cluster-label text{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE g.stateGroup .state-title{font-weight:bolder;fill:#000}#mermaid-svg-836Ut2nVvbKf8sDE g.stateGroup rect{fill:#ECECFF;stroke:#9370db}#mermaid-svg-836Ut2nVvbKf8sDE g.stateGroup line{stroke:#9370db;stroke-width:1}#mermaid-svg-836Ut2nVvbKf8sDE .transition{stroke:#9370db;stroke-width:1;fill:none}#mermaid-svg-836Ut2nVvbKf8sDE .stateGroup .composit{fill:white;border-bottom:1px}#mermaid-svg-836Ut2nVvbKf8sDE .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px}#mermaid-svg-836Ut2nVvbKf8sDE .state-note{stroke:#aa3;fill:#fff5ad}#mermaid-svg-836Ut2nVvbKf8sDE .state-note text{fill:black;stroke:none;font-size:10px}#mermaid-svg-836Ut2nVvbKf8sDE .stateLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.7}#mermaid-svg-836Ut2nVvbKf8sDE .edgeLabel text{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .stateLabel text{fill:#000;font-size:10px;font-weight:bold;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-svg-836Ut2nVvbKf8sDE .node circle.state-start{fill:black;stroke:black}#mermaid-svg-836Ut2nVvbKf8sDE .node circle.state-end{fill:black;stroke:white;stroke-width:1.5}#mermaid-svg-836Ut2nVvbKf8sDE #statediagram-barbEnd{fill:#9370db}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-cluster rect{fill:#ECECFF;stroke:#9370db;stroke-width:1px}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-cluster rect.outer{rx:5px;ry:5px}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-state .divider{stroke:#9370db}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-state .title-state{rx:5px;ry:5px}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-cluster.statediagram-cluster .inner{fill:white}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-cluster.statediagram-cluster-alt .inner{fill:#e0e0e0}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-cluster .inner{rx:0;ry:0}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-state rect.basic{rx:5px;ry:5px}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-state rect.divider{stroke-dasharray:10,10;fill:#efefef}#mermaid-svg-836Ut2nVvbKf8sDE .note-edge{stroke-dasharray:5}#mermaid-svg-836Ut2nVvbKf8sDE .statediagram-note rect{fill:#fff5ad;stroke:#aa3;stroke-width:1px;rx:0;ry:0}:root{--mermaid-font-family: '"trebuchet ms", verdana, arial';--mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive}#mermaid-svg-836Ut2nVvbKf8sDE .error-icon{fill:#522}#mermaid-svg-836Ut2nVvbKf8sDE .error-text{fill:#522;stroke:#522}#mermaid-svg-836Ut2nVvbKf8sDE .edge-thickness-normal{stroke-width:2px}#mermaid-svg-836Ut2nVvbKf8sDE .edge-thickness-thick{stroke-width:3.5px}#mermaid-svg-836Ut2nVvbKf8sDE .edge-pattern-solid{stroke-dasharray:0}#mermaid-svg-836Ut2nVvbKf8sDE .edge-pattern-dashed{stroke-dasharray:3}#mermaid-svg-836Ut2nVvbKf8sDE .edge-pattern-dotted{stroke-dasharray:2}#mermaid-svg-836Ut2nVvbKf8sDE .marker{fill:#333}#mermaid-svg-836Ut2nVvbKf8sDE .marker.cross{stroke:#333}
+
+:root { --mermaid-font-family: "trebuchet ms", verdana, arial;}
+      </style>
+      <style>
+       #mermaid-svg-836Ut2nVvbKf8sDE {
+    color: rgba(0, 0, 0, 0.75);
+    font: ;
+  }
+      </style>
+      <g>
+       <g class="output">
+        <g class="clusters">
+        </g>
+        <g class="edgePaths">
+         <g class="edgePath LS-1 LE-2" id="L-1-2" style="opacity: 1;">
+          <path class="path" d="M368.6750030517578,216.82500457763672L368.1750030517578,241.32500457763672L368.6750030517578,266.8250045776367" marker-end="url(#arrowhead77)" style="fill:none;stroke-width:2px;stroke-dasharray:3;">
+          </path>
+          <defs>
+           <marker id="arrowhead77" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-2 LE-3" id="L-2-3" style="opacity: 1;">
+          <path class="path" d="M368.6750030517578,312.8250045776367L368.1750030517578,337.3250045776367L368.6750030517578,362.8250045776367" marker-end="url(#arrowhead78)" style="fill:none;stroke-width:2px;stroke-dasharray:3;">
+          </path>
+          <defs>
+           <marker id="arrowhead78" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-3 LE-4" id="L-3-4" style="opacity: 1;">
+          <path class="path" d="M368.6750030517578,408.8250045776367L368.1750030517578,433.3250045776367L368.6750030517578,458.8250045776367" marker-end="url(#arrowhead79)" style="fill:none;stroke-width:2px;stroke-dasharray:3;">
+          </path>
+          <defs>
+           <marker id="arrowhead79" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-4 LE-5" id="L-4-5" style="opacity: 1;">
+          <path class="path" d="M368.6750030517578,504.8250045776367L368.1750030517578,529.3250045776367L368.6750030517578,554.8250045776367" marker-end="url(#arrowhead80)" style="fill:none;stroke-width:2px;stroke-dasharray:3;">
+          </path>
+          <defs>
+           <marker id="arrowhead80" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-o LE-a" id="L-o-a" style="opacity: 1;">
+          <path class="path" d="M198.04674564158728,67.28424869334508L82,132.32500457763672L82,170.32500457763672" marker-end="url(#arrowhead81)" style="fill:none">
+          </path>
+          <defs>
+           <marker id="arrowhead81" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-o LE-1" id="L-o-1" style="opacity: 1;">
+          <path class="path" d="M253.1282574101706,67.28424869334506L368.1750030517578,132.32500457763672L368.6750030517578,170.82500457763672" marker-end="url(#arrowhead82)" style="fill:none">
+          </path>
+          <defs>
+           <marker id="arrowhead82" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-a LE-b" id="L-a-b" style="opacity: 1;">
+          <path class="path" d="M82,216.32500457763672L82,241.32500457763672L82,266.3250045776367" marker-end="url(#arrowhead83)" style="fill:none">
+          </path>
+          <defs>
+           <marker id="arrowhead83" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-b LE-c" id="L-b-c" style="opacity: 1;">
+          <path class="path" d="M82,312.3250045776367L82,337.3250045776367L82,362.3250045776367" marker-end="url(#arrowhead84)" style="fill:none">
+          </path>
+          <defs>
+           <marker id="arrowhead84" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-c LE-d" id="L-c-d" style="opacity: 1;">
+          <path class="path" d="M82,408.3250045776367L82,433.3250045776367L82,458.3250045776367" marker-end="url(#arrowhead85)" style="fill:none">
+          </path>
+          <defs>
+           <marker id="arrowhead85" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;">
+            </path>
+           </marker>
+          </defs>
+         </g>
+         <g class="edgePath LS-d LE-e" id="L-d-e" style="opacity: 1;">
+          <path class="path" d="M82,504.3250045776367L82,529.3250045776367L82,554.3250045776367" marker-end="url(#arrowhead86)" style="fill:none">
+          </path>
+          <defs>
+           <marker id="arrowhead86" markerheight="6" markerunits="strokeWidth" markerwidth="8" orient="auto" refx="9" refy="5" viewbox="0 0 10 10">
+            <path class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;">
+            </path>
+           </marker>
+          </defs>
+         </g>
+        </g>
+        <g class="edgeLabels">
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-1' L-LE-2" id="L-L-1-2">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-2' L-LE-3" id="L-L-2-3">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-3' L-LE-4" id="L-L-3-4">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-4' L-LE-5" id="L-L-4-5">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="translate(82,132.32500457763672)">
+          <g class="label" transform="translate(-32,-13)">
+           <rect height="26" rx="0" ry="0" style="fill:#e8e8e8;" width="64">
+           </rect>
+           <foreignobject height="26" width="64">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-o' L-LE-a" id="L-L-o-a">
+              运行流程
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="translate(368.1750030517578,132.32500457763672)">
+          <g class="label" transform="translate(-32,-13)">
+           <rect height="26" rx="0" ry="0" style="fill:#e8e8e8;" width="64">
+           </rect>
+           <foreignobject height="26" width="64">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-o' L-LE-1" id="L-L-o-1">
+              步骤描述
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-a' L-LE-b" id="L-L-a-b">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-b' L-LE-c" id="L-L-b-c">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-c' L-LE-d" id="L-L-c-d">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+         <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g class="label" transform="translate(0,0)">
+           <rect height="0" rx="0" ry="0" style="fill:#e8e8e8;" width="0">
+           </rect>
+           <foreignobject height="0" width="0">
+            <div style="display: inline-block; white-space: nowrap;">
+             <span class="edgeLabel L-LS-d' L-LE-e" id="L-L-d-e">
+             </span>
+            </div>
+           </foreignobject>
+          </g>
+         </g>
+        </g>
+        <g class="nodes">
+         <g class="node default" id="1" style="opacity: 1;" transform="translate(368.1750030517578,193.32500457763672)">
+          <polygon class="label-container" points="-23,0 116,0 116,-46 -23,-46 0,-23" transform="translate(-58,23)">
+          </polygon>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-48,-13)">
+            <foreignobject height="26" width="96">
+             <div style="display: inline-block; white-space: nowrap;">
+              依次调用函数
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="2" style="opacity: 1;" transform="translate(368.1750030517578,289.3250045776367)">
+          <polygon class="label-container" points="-23,0 253.35000610351562,0 253.35000610351562,-46 -23,-46 0,-23" transform="translate(-126.67500305175781,23)">
+          </polygon>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-116.67500305175781,-13)">
+            <foreignobject height="26" width="233.35000610351562">
+             <div style="display: inline-block; white-space: nowrap;">
+              模块导入+变量初始化定义与赋值
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="3" style="opacity: 1;" transform="translate(368.1750030517578,385.3250045776367)">
+          <polygon class="label-container" points="-23,0 228,0 228,-46 -23,-46 0,-23" transform="translate(-114,23)">
+          </polygon>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-104,-13)">
+            <foreignobject height="26" width="208">
+             <div style="display: inline-block; white-space: nowrap;">
+              依次执行导入的用例模块文件
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="4" style="opacity: 1;" transform="translate(368.1750030517578,481.3250045776367)">
+          <polygon class="label-container" points="-23,0 301.3500061035156,0 301.3500061035156,-46 -23,-46 0,-23" transform="translate(-150.6750030517578,23)">
+          </polygon>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-140.6750030517578,-13)">
+            <foreignobject height="26" width="281.3500061035156">
+             <div style="display: inline-block; white-space: nowrap;">
+              统计用例通过与失败数量+失败用例编号
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="5" style="opacity: 1;" transform="translate(368.1750030517578,577.3250045776367)">
+          <polygon class="label-container" points="-23,0 228,0 228,-46 -23,-46 0,-23" transform="translate(-114,23)">
+          </polygon>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-104,-13)">
+            <foreignobject height="26" width="208">
+             <div style="display: inline-block; white-space: nowrap;">
+              记录整个过程与结果落地归档
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="o" style="opacity: 1;" transform="translate(225.0875015258789,51.16250228881836)">
+          <polygon class="label-container" points="43.16250228881836,0 86.32500457763672,-43.16250228881836 43.16250228881836,-86.32500457763672 0,-43.16250228881836" transform="translate(-43.16250228881836,43.16250228881836)">
+          </polygon>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-14.958335876464844,-13)">
+            <foreignobject height="26" width="29.916671752929688">
+             <div style="display: inline-block; white-space: nowrap;">
+              SAT
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="a" style="opacity: 1;" transform="translate(82,193.32500457763672)">
+          <rect class="label-container" height="46" rx="5" ry="5" width="84" x="-42" y="-23">
+          </rect>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-32,-13)">
+            <foreignobject height="26" width="64">
+             <div style="display: inline-block; white-space: nowrap;">
+              启动测试
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="b" style="opacity: 1;" transform="translate(82,289.3250045776367)">
+          <rect class="label-container" height="46" rx="5" ry="5" width="100" x="-50" y="-23">
+          </rect>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-40,-13)">
+            <foreignobject height="26" width="80">
+             <div style="display: inline-block; white-space: nowrap;">
+              环境初始化
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="c" style="opacity: 1;" transform="translate(82,385.3250045776367)">
+          <rect class="label-container" height="46" rx="5" ry="5" width="116" x="-58" y="-23">
+          </rect>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-48,-13)">
+            <foreignobject height="26" width="96">
+             <div style="display: inline-block; white-space: nowrap;">
+              执行测试用例
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="d" style="opacity: 1;" transform="translate(82,481.3250045776367)">
+          <rect class="label-container" height="46" rx="5" ry="5" width="148" x="-74" y="-23">
+          </rect>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-64,-13)">
+            <foreignobject height="26" width="128">
+             <div style="display: inline-block; white-space: nowrap;">
+              收集用例执行数据
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+         <g class="node default" id="e" style="opacity: 1;" transform="translate(82,577.3250045776367)">
+          <rect class="label-container" height="46" rx="5" ry="5" width="116" x="-58" y="-23">
+          </rect>
+          <g class="label" transform="translate(0,0)">
+           <g transform="translate(-48,-13)">
+            <foreignobject height="26" width="96">
+             <div style="display: inline-block; white-space: nowrap;">
+              生成测试报告
+             </div>
+            </foreignobject>
+           </g>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </svg>
+    </div>
+    <h5>
+     <a id="case_123">
+     </a>
+     用例模块（case）
+    </h5>
+    <p>
+     实际项目中每个人负责的模块与用例不同，所以自动化测试用例需要自己编写负责部分，不像其他模块中的代码都是公用的，那么在编写格式上需要做统一的约定：
+    </p>
+    <ul>
+     <li>
+      用例模块文件命名统一，测试人员A、B的用例模块文件：case_a.sh、case_b.sh。
+     </li>
+     <li>
+      测试用例最小单位统一：每一条测试用例为一条函数，通过函数来管理用例。
+     </li>
+     <li>
+      用例函数命名统一，测试人员A的第1、2条用例：test_a1(){}、test_a2(){}。
+     </li>
+     <li>
+      用例函数元素统一，需要包含变量：title、case_id、断言函数。
+     </li>
+    </ul>
+    <p>
+     格式统一之后，每人完成自己部分的用例文件，在启动测试时只要汇总全部用例模块文件，即可完成所有人的测试用例执行。
+    </p>
+    <p>
+     以下为测试人员A的用例模块文件 “case_a.sh” 部分内容：
+    </p>
+    <pre><code class="prism language-shell"><span class="token shebang important">#! /bin/bash</span>
+<span class="token comment"># 文件：case_a.sh</span>
+<span class="token comment"># 说明：基础镜像自动化测试用例</span>
+<span class="token comment"># 作者：黄先生</span>
+<span class="token comment"># 日期：2020/01/16</span>
+
+
+<span class="token comment"># 测试人员A的第一条用例</span>
+test_a1<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+	
+    title<span class="token operator">=</span><span class="token string">"检查内核启动信息"</span>   <span class="token comment"># 用例标题</span>
+	case_id<span class="token operator">=</span>xxxxx			<span class="token comment"># 用例编号</span>
+    a<span class="token operator">=</span><span class="token string">"error|fail|warning|call\ trace"</span>  <span class="token comment"># 用例执行命令结果</span>
+    b<span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">sudo</span> <span class="token function">dmesg</span><span class="token variable">`</span></span>						<span class="token comment"># 用例预期结果</span>
+    assertNoIn <span class="token string">"<span class="token variable">${a}</span>"</span> <span class="token string">"<span class="token variable">${b}</span>"</span>  			<span class="token comment"># 断言比较用例执行情况，若b中不包含a则通过</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 测试人员A的第二条用例</span>
+test_a2<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+	pass
+
+<span class="token punctuation">}</span>
+</code></pre>
+    <h5>
+     <a id="method_165">
+     </a>
+     方法封装模块（method）
+    </h5>
+    <p>
+     该模块主要用于存放公共方法函数，集中管理方便后期维护，封装的函数主要实现以下功能：
+    </p>
+    <ul>
+     <li>
+      用例断言：判断用例执行结果与预期是否一致，给出对应输出结果。
+     </li>
+     <li>
+      用例处理：批量处理不同的用例模块文件：执行不同的用例模块文件，输出用例执行结果。
+     </li>
+     <li>
+      用例统计：统计用例执行的数据：统计执行用例数量、通过用例数量、失败用例数量、失败用例编号。
+     </li>
+     <li>
+      测试报告：结合以上全部内容输出本地文档，方便测试结果归档保存。
+     </li>
+    </ul>
+    <p>
+     通过以上公共方法函数的封装，其他模块直接调用即可，代码更为清晰简洁，并减少冗余。
+    </p>
+    <h5>
+     <a id="run_repor_177">
+     </a>
+     启动测试模块（run_repor）
+    </h5>
+    <p>
+     该模块为执行测试的主模块，主要是对测试开始前环境做初始化并运行测试，主要包含：
+    </p>
+    <ul>
+     <li>
+      <p>
+       模块初始化：导入方法模块；根据对用例模块文件的分析，导入对应的模块文件。
+      </p>
+     </li>
+     <li>
+      <p>
+       变量初始化：针对一些数据统计相关的函数做初始化赋值：用例数量、用例通过/失败数量、定义数组变量等。
+      </p>
+     </li>
+     <li>
+      <p>
+       运行测试：调用测试执行函数、测试报告生成函数、提示用户测试报告生成路径。
+      </p>
+     </li>
+    </ul>
+    <h4>
+     <a id="_189">
+     </a>
+     关键技术
+    </h4>
+    <p>
+     这里主要选取了部分关键功能，其他部分则不细说了，针对这部分功能说明通过Shell是如何的实现，功能如下：
+    </p>
+    <ul>
+     <li>
+      初始化
+     </li>
+     <li>
+      断言
+     </li>
+     <li>
+      测试执行
+     </li>
+     <li>
+      测试报告
+     </li>
+    </ul>
+    <h5>
+     <a id="_199">
+     </a>
+     初始化功能的实现
+    </h5>
+    <p>
+     该功能是为后续测试提供良好的运行环境，主要分为两部分：
+    </p>
+    <ul>
+     <li>
+      <p>
+       导入模块
+      </p>
+      <ul>
+       <li>
+        首先会导入方法封装模块，然后判断存放用例模块的目录下是否有用例文件，根据判断结果对用例模块的导入和对应统计用例数量变量赋值。
+       </li>
+      </ul>
+     </li>
+     <li>
+      <p>
+       初始化变量
+      </p>
+      <ul>
+       <li>
+        对所有变量进行初始化定义与赋值，为后续的数据统计提供环境。
+       </li>
+      </ul>
+     </li>
+     <li>
+      <p>
+       代码实现如下：
+      </p>
+      <pre><code class="prism language-shell"><span class="token comment"># 初始化函数</span>
+setup<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable"><span class="token variable">`</span><span class="token function">whoami</span><span class="token variable">`</span></span>"</span> <span class="token operator">!=</span> <span class="token string">"root"</span> <span class="token punctuation">]</span>
+	<span class="token keyword">then</span>
+		<span class="token function">read</span> -p <span class="token string">"请已root用户运行该脚本，点击Enter退出"</span> end
+		<span class="token keyword">exit</span>
+	<span class="token keyword">fi</span>
+	<span class="token function">source</span> ./method/assertion.sh   <span class="token comment"># 导入方法封装模块</span>
+	<span class="token function">source</span> ./method/other.sh   	   <span class="token comment"># 导入方法封装模块</span>
+	<span class="token keyword">if</span> <span class="token function">test</span> -f ./case/case_a.sh	   <span class="token comment"># 判断是否存在用例模块</span>
+	<span class="token keyword">then</span>
+		<span class="token function">source</span> ./case/case_a.sh	   <span class="token comment"># 若存在用例模块则导入</span>
+		num_a<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">`</span><span class="token function">cat</span> ./case/case_a.sh<span class="token operator">|</span><span class="token function">grep</span> test_a<span class="token operator">|</span><span class="token function">wc</span> -l<span class="token variable">`</span></span>"</span>  <span class="token comment"># 若存在用例模块则获取用例数量并赋值给对应用例数量变量</span>
+	<span class="token keyword">else</span>
+		num_a<span class="token operator">=</span>0  <span class="token comment"># 若不存在用例模块则对应用例数量变量赋值为0</span>
+	<span class="token keyword">fi</span>
+	<span class="token keyword">if</span> <span class="token function">test</span> -f ./case/case_b.sh
+	<span class="token keyword">then</span>
+		<span class="token function">source</span> ./case/case_b.sh
+		num_b<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">`</span><span class="token function">cat</span> ./case/case_b.sh<span class="token operator">|</span><span class="token function">grep</span> test_b<span class="token operator">|</span><span class="token function">wc</span> -l<span class="token variable">`</span></span>"</span>
+	<span class="token keyword">else</span>
+		num_b<span class="token operator">=</span>0
+	<span class="token keyword">fi</span>
+	<span class="token keyword">if</span> <span class="token function">test</span> -f ./case/case_c.sh
+	<span class="token keyword">then</span>
+		<span class="token function">source</span> ./case/case_c.sh
+		num_c<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">`</span><span class="token function">cat</span> ./case/case_c.sh<span class="token operator">|</span><span class="token function">grep</span> test_c<span class="token operator">|</span><span class="token function">wc</span> -l<span class="token variable">`</span></span>"</span>
+	<span class="token keyword">else</span>
+		num_c<span class="token operator">=</span>0
+	<span class="token keyword">fi</span>
+	fail<span class="token operator">=</span>0 <span class="token comment"># 统计不通过用例数量</span>
+	pass<span class="token operator">=</span>0 <span class="token comment"># 统计通过用例数量</span>
+	total<span class="token operator">=</span>0 <span class="token comment"># 统计执行用例数量</span>
+	<span class="token keyword">declare</span> -a fail_id  <span class="token comment"># 定义失败用例ID数组变量</span>
+	
+<span class="token punctuation">}</span>
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="_255">
+     </a>
+     断言功能的实现
+    </h5>
+    <p>
+     该功能实现的是在每一条用例执行之后，对用例执行结果与预期结果对比，判断用例执行结果为通过、失败，并且对结果进行输出；与此同时也参与了一些数据收集工作，递增通过/失败/执行用例数量。
+    </p>
+    <p>
+     断言对比的方法多种多样，这里拿部分举例，详情见下方代码：
+    </p>
+    <pre><code class="prism language-shell"><span class="token comment"># assertEqual ${1}等于${2}则为true</span>
+assertEqual<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${1}</span>"</span> <span class="token operator">=</span> <span class="token string">"<span class="token variable">${2}</span>"</span> <span class="token punctuation">]</span>     <span class="token comment"># ${1}、${2}变量为用例执行的过程中传入的执行结果与预期结果</span>
+    <span class="token keyword">then</span>
+        r<span class="token operator">=</span><span class="token string">"pass"</span>   <span class="token comment"># 输出通过测试结果</span>
+    <span class="token keyword">else</span>
+        r<span class="token operator">=</span><span class="token string">"fail"</span>   <span class="token comment"># 输出失败测试结果</span>
+		fail_id<span class="token punctuation">[</span><span class="token variable">${fail}</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token variable">${case_id}</span>  <span class="token comment"># 提取结果为失败的测试用例ID，并添加进数组</span>
+    <span class="token keyword">fi</span>
+	case_pf   <span class="token comment"># 已封装函数：判断用例执行情况，操作对应数据统计变量，递增通过/失败/执行用例数量</span>
+	
+<span class="token punctuation">}</span>
+
+<span class="token comment"># assertNoIn ${1}不在${2}中则为true</span>
+assertNoIn<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+    result<span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token keyword">echo</span> <span class="token string">"<span class="token variable">${2}</span>"</span><span class="token operator">|</span><span class="token function">grep</span> -E <span class="token string">"<span class="token variable">${1}</span>"</span><span class="token variable">`</span></span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${result}</span>"</span> <span class="token punctuation">]</span>
+    <span class="token keyword">then</span>
+        r<span class="token operator">=</span><span class="token string">"fail"</span>
+		fail_id<span class="token punctuation">[</span><span class="token variable">${fail}</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token variable">${case_id}</span>
+    <span class="token keyword">else</span>
+        r<span class="token operator">=</span><span class="token string">"pass"</span>
+    <span class="token keyword">fi</span>
+	case_pf
+	
+<span class="token punctuation">}</span>
+</code></pre>
+    <h5>
+     <a id="_294">
+     </a>
+     测试执行功能的实现
+    </h5>
+    <p>
+     该功能主要是实现不同用例模块中用例的批量执行，与此同时会辅助做一些其他工作：
+    </p>
+    <ul>
+     <li>
+      创建测试报告文件，并初始化部分内容：记录测试开始时间、记录各测试模块中用例数量
+     </li>
+     <li>
+      实时输出结果至终端与测试报告文件
+     </li>
+     <li>
+      对输出结果进行排版设计
+     </li>
+     <li>
+      具体代码如下：
+     </li>
+    </ul>
+    <pre><code class="prism language-shell"><span class="token comment"># 执行测试</span>
+test_start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+	t_start<span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +<span class="token string">"%m%d%H%M%S"</span><span class="token variable">)</span></span>  <span class="token comment"># 获取当前时间戳并格式化</span>
+	report<span class="token operator">=</span><span class="token string">"report_<span class="token variable">${t_start}</span>"</span> <span class="token operator">&amp;&amp;</span> report_path<span class="token operator">=</span>./report/<span class="token variable">${report}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> <span class="token variable">${report_path}</span>  <span class="token comment"># 创建测试报告文件并赋值路径变量</span>
+	<span class="token comment"># sl</span>
+	<span class="token comment"># clear</span>
+	<span class="token keyword">echo</span> <span class="token string">"_____________________________________________________________________________"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span>
+	<span class="token keyword">echo</span> <span class="token string">""</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1    <span class="token comment"># 此类追加格式为追加内容进测试报告并展示在终端</span>
+	<span class="token keyword">echo</span> <span class="token string">" # 测试开始 #"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">" # 测试人员A：本轮测试，用例数量：<span class="token variable">${num_a}</span>条 #"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">" # 测试人员B：本轮测试，用例数量：<span class="token variable">${num_b}</span>条 #"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">" # 测试人员C：本轮测试，用例数量：<span class="token variable">${num_c}</span>条 #"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">"_____________________________________________________________________________"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">""</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token function">printf</span> <span class="token string">"%-20s %-20s%20s\n"</span> 用例ID 执行结果 用例标题 <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1   <span class="token comment"># 用例执行输出结果格式化</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${num_a}</span>"</span> <span class="token operator">!=</span> <span class="token string">"0"</span> <span class="token punctuation">]</span>
+	<span class="token keyword">then</span>
+		<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">seq</span> 1 $<span class="token punctuation">{<!-- --></span>num_a<span class="token punctuation">}</span><span class="token variable">`</span></span>  <span class="token comment"># 批量执行测试人员A用例</span>
+		<span class="token keyword">do</span>
+			test_a<span class="token variable">${i}</span>
+			test_result<span class="token punctuation">;</span><span class="token function">sleep</span> 1    <span class="token comment"># 已封装用例执行输出结果函数，输出用例ID、测试结果、用例标题，并格式化排版</span>
+		<span class="token keyword">done</span>
+	<span class="token keyword">fi</span>
+	
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${num_b}</span>"</span> <span class="token operator">!=</span> <span class="token string">"0"</span> <span class="token punctuation">]</span>
+	<span class="token keyword">then</span>
+		<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">seq</span> 1 $<span class="token punctuation">{<!-- --></span>num_b<span class="token punctuation">}</span><span class="token variable">`</span></span>  <span class="token comment"># 批量执行测试人员B用例</span>
+		<span class="token keyword">do</span>
+			test_b<span class="token variable">${i}</span>
+			test_result<span class="token punctuation">;</span><span class="token function">sleep</span> 1
+		<span class="token keyword">done</span>
+	<span class="token keyword">fi</span>
+	
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${num_c}</span>"</span> <span class="token operator">!=</span> <span class="token string">"0"</span> <span class="token punctuation">]</span>
+	<span class="token keyword">then</span>
+		<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">seq</span> 1 $<span class="token punctuation">{<!-- --></span>num_c<span class="token punctuation">}</span><span class="token variable">`</span></span>  <span class="token comment"># 批量执行测试人员C用例</span>
+		<span class="token keyword">do</span>
+			test_c<span class="token variable">${i}</span>
+			test_result<span class="token punctuation">;</span><span class="token function">sleep</span> 1
+		<span class="token keyword">done</span>
+	<span class="token keyword">fi</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <h5>
+     <a id="_352">
+     </a>
+     测试报告功能的实现
+    </h5>
+    <p>
+     该功能主要实现的是收集测试过程中与测试结束后的数据，并统一输出至文档文件中，并对每一次的测试结果做归档处理，方便后续跟踪某一次的测试结果。
+    </p>
+    <p>
+     具体实现代码如下：
+    </p>
+    <pre><code class="prism language-shell"><span class="token comment"># 测试报告统计通过、失败用例数量</span>
+case_pf<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${r}</span>"</span> <span class="token operator">==</span> <span class="token string">"pass"</span> <span class="token punctuation">]</span>
+	<span class="token keyword">then</span>
+		<span class="token keyword">let</span> pass+<span class="token operator">=</span>1
+	<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">${r}</span>"</span> <span class="token operator">==</span> <span class="token string">"fail"</span> <span class="token punctuation">]</span>
+	<span class="token keyword">then</span>
+		<span class="token keyword">let</span> fail+<span class="token operator">=</span>1
+	<span class="token keyword">fi</span>
+	<span class="token keyword">let</span> total+<span class="token operator">=</span>1
+
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 输出用例结果,并对结果进行格式化排版</span>
+test_result<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+	<span class="token function">printf</span> <span class="token string">"%-20s %-20s %-20s\n"</span> <span class="token variable">${case_id}</span> <span class="token variable">${r}</span> <span class="token variable">${title}</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 测试报告结束</span>
+test_report<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+	t_end<span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +<span class="token string">"%m%d%H%M%S"</span><span class="token variable">)</span></span>  <span class="token comment"># 获取测试结束时间</span>
+	<span class="token keyword">echo</span> <span class="token string">"_____________________________________________________________________________"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">""</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+	<span class="token keyword">echo</span> <span class="token string">"测试开始时间：<span class="token variable">${t_start}</span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>    <span class="token comment"># 依次输出各关键信息</span>
+	<span class="token keyword">echo</span> <span class="token string">"测试结束时间：<span class="token variable">${t_end}</span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>	
+	<span class="token keyword">echo</span> <span class="token string">"测试电脑架构：<span class="token variable"><span class="token variable">`</span><span class="token function">uname</span> -m<span class="token variable">`</span></span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>
+	<span class="token keyword">echo</span> <span class="token string">"执行用例合计：<span class="token variable">${total}</span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>
+	<span class="token keyword">echo</span> <span class="token string">"用例通过数量：<span class="token variable">${pass}</span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>
+	<span class="token keyword">echo</span> <span class="token string">"用例失败数量：<span class="token variable">${fail}</span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>
+	<span class="token keyword">echo</span> <span class="token string">"失败用例ID：<span class="token variable">${fail_id[*]}</span>"</span> <span class="token operator">&gt;&gt;</span> <span class="token variable">${report_path}</span>
+	<span class="token function">cat</span> <span class="token variable">${report_path}</span> <span class="token operator">|</span> <span class="token function">tail</span> -7
+	<span class="token keyword">echo</span> <span class="token string">"_____________________________________________________________________________"</span> <span class="token operator">&gt;&gt;</span>  <span class="token variable">${report_path}</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cat</span> <span class="token variable">${report_path}</span><span class="token operator">|</span> <span class="token function">tail</span> -1
+
+<span class="token punctuation">}</span>
+</code></pre>
+    <h3>
+     <a id="_400">
+     </a>
+     实验验证
+    </h3>
+    <p>
+     为了说明
+     <code>
+      SAT
+     </code>
+     的工作流程，这里拿一个实际场景举例，本次测试需要自动化执行：测试人员A、测试人员B的用例，无需执行测试人员C的用例：
+    </p>
+    <p>
+     <strong>
+      操作流程如下
+     </strong>
+    </p>
+    <ul>
+     <li>
+      收集测试人员A、测试人员B最新的测试用例模块文件，放入目录"SAT/case/"下。
+     </li>
+     <li>
+      SAT目录下启动终端，运行命令
+      <code>
+       su
+      </code>
+      进入Root。
+      <ul>
+       <li>
+        因部分命令需要root权限，使用sudo+命令需要提示用户输入密码，不友好。
+       </li>
+       <li>
+        若用户使用普通用户权限运行，则给出对应提示：
+        <code>
+         请已root用户运行该脚本，点击Enter退出
+        </code>
+        ，并关闭。
+       </li>
+      </ul>
+     </li>
+     <li>
+      终端实时查看测试过程，过程中会输出用例数据与用例执行结果。
+     </li>
+     <li>
+      等待测试完成后，终端可查看测试结果，重点关注失败用例ID，对其做二次验证并提交Bug单。
+     </li>
+     <li>
+      关闭终端后若还需查看测试结果，进入"SAT/report/"目录，根据文件命名中时间戳定位测试报告文件并查看。
+     </li>
+    </ul>
+    <p>
+     终端中与测试报告中内容展示一致，主要体现自动化测试流程与结果，可看到下方输入内容，展示各关键信息了：
+    </p>
+    <pre><code>_____________________________________________________________________________
+
+ # 测试开始 #
+ # 测试人员A：本轮测试，用例数量：5条 #
+ # 测试人员B：本轮测试，用例数量：1条 #
+ # 测试人员C：本轮测试，用例数量：0条 #
+_____________________________________________________________________________
+
+用例ID              执行结果                用例标题
+xxxxxx               pass                 检查内核信息与版本号
+xxxxxx               fail                 检查内核启动信息
+xxxxxx               pass                 验证perl环境    
+xxxxxx               pass                 验证python环境  
+xxxxxx               pass                 验证系统预装软件包状态
+xxxxxx               fail                 创建test文件夹 
+_____________________________________________________________________________
+
+测试开始时间：0818102422
+测试结束时间：0818102428
+测试电脑架构：x86_64
+执行用例合计：6
+用例通过数量：4
+用例失败数量：2
+失败用例ID：xxxxxx  xxxxxx 
+_____________________________________________________________________________
+
+#  测试完毕，测试报告生成在'./report'目录，点击Enter退出！ #
+
+</code></pre>
+    <h3>
+     <a id="_450">
+     </a>
+     小结
+    </h3>
+    <p>
+     如此一个简单的自动化测试框架就完成了，已经可以很好的满足日常测试，以上是初期的一个简单设计。经过后续的迭代，目前已经支持各种功能配置、环境检测、测试流程控制、邮件发送测试报告、自动代码提交、代码格式/规范扫描等。大家可根据自己的项目需要做相应的完善，这里仅提供一个思路。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

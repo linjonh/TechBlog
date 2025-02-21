@@ -1,0 +1,2140 @@
+---
+layout: post
+title: Eclipsepython的安装与使用详细阐述了eclipse编写Python程序的基本功能及技巧
+date: 2024-11-21 12:17:24 +0800
+categories: [Python]
+tags: [python,eclipse]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=32366125
+    alt: Eclipsepython的安装与使用详细阐述了eclipse编写Python程序的基本功能及技巧
+artid: 32366125
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Eclipse+python的安装与使用(详细阐述了eclipse编写Python程序的基本功能及技巧)
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p align="center" style="text-align:center">
+     <br/>
+    </p>
+    <p style="text-align:left">
+     <strong>
+      安装环境说明：
+     </strong>
+    </p>
+    <p style="text-align:left">
+     <strong>
+      操作系统
+     </strong>
+     ：win7
+    </p>
+    <p>
+     <strong>
+      JDK
+     </strong>
+     ：jdk1.7.0_11
+    </p>
+    <p>
+     下载网址：
+     <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.oracle.com/technetwork/java/javase/downloads/index.html
+     </a>
+    </p>
+    <p>
+     <strong>
+      Eclipse
+     </strong>
+     ：eclipse-jee-kepler-SR2-win32-x86_64
+    </p>
+    <p>
+     下载网址：
+    </p>
+    <p>
+     <a href="http://www.eclipse.org/downloads/" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.eclipse.org/downloads/
+     </a>
+    </p>
+    <p>
+     <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/eclipse-jee-kepler-SR2-win32-x86_64.zip" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/eclipse-jee-kepler-SR2-win32-x86_64.zip
+     </a>
+     <a name="1.PyDev_简介" target="_blank">
+     </a>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#00B0F0">
+       目录简介：eclipse+Python
+      </span>
+      的安装与使用
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:red">
+       第一部分：
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+      <span style="color:red">
+       简介
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第二部分：
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+      <span style="color:red">
+       安装和配置——安装
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第三部分：验证是否成功安装
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第四部分：配置
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第五部分：创建
+      </span>
+      <span style="color:red">
+       python
+      </span>
+      <span style="color:red">
+       项目
+      </span>
+      <span style="color:red">
+       PyDev Package Explorer
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第六部分：创建
+      </span>
+      <span style="color:red">
+       Python
+      </span>
+      <span style="color:red">
+       包和模块
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第七部分：编辑源程序
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      1、        语法错误提示
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      2、        源代码编辑助手 (Content Assistents)
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      PyDev
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       A
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Move import to global scope
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       B
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Create docstring
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       C
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Assign result to new local variable (orfield)
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       D
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Assign parameters to attributes
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       E
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Surround code with try..except ortry..finally
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      PyDev Extensions
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       A
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Make import for undefined token
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       B
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Ignore error
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       C
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Don't analyze module
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       D
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Quick Outline
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       E
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Globals Browser
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       F
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Hierarchy View
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第八部分：
+      </span>
+      <span style="color:red">
+       Python
+      </span>
+      <span style="color:red">
+       程序的运行和调试
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:red">
+       第九部分：总结
+      </span>
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      <span style="color:#00B0F0">
+       内容详细阐述：
+      </span>
+     </strong>
+    </p>
+    <p>
+     <strong>
+      <span style="color:red">
+       第一部分：
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+      <span style="color:red">
+       简介
+      </span>
+     </strong>
+    </p>
+    <p>
+     2003年7月16日，以
+     <a href="http://sourceforge.net/users/fabioz/" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:#5C81A7">
+       FabioZadrozny
+      </span>
+     </a>
+     为首的三人开发小组在全球最大的开放源代码软件开发平台和仓库SourceForge 上注册了一款新的项目，该项目实现了一个功能强大的 Eclipse插件，用户可以完全利用 Eclipse 来进行 Python应用程序的开发和调试。这个能够将 Eclipse当作 Python IDE 的项目就是 PyDev。
+    </p>
+    <p>
+     PyDev 插件的出现方便了众多的 Python 开发人员，它提供了一些很好的功能，如：语法错误提示、源代码编辑助手、QuickOutline、GlobalsBrowser、HierarchyView、运行和调试等等。基于Eclipse 平台，拥有诸多强大的功能，同时也非常易于使用，PyDev 的这些特性使得它越来越受到人们的关注。
+    </p>
+    <p>
+     如今，该项目还在不断地推进新的发布版本，本文接下来将介绍 PyDev 的安装配置方法，并在此基础上详细介绍如何使用 PyDev把 Eclipse 当作 Python IDE 进行Python的开发和调试。
+    </p>
+    <p>
+    </p>
+    <p align="left">
+     <a name="2.PyDev_安装和配置" target="_blank">
+      <strong>
+       <span style="color:red">
+        第二部分：
+       </span>
+      </strong>
+     </a>
+     <strong>
+      <span style="color:red">
+       PyDev
+      </span>
+      <span style="color:red">
+       安装和配置
+      </span>
+     </strong>
+     <a name="N10077" target="_blank">
+     </a>
+     <strong>
+      <span style="color:red">
+       ——安装
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      方法一：
+     </strong>
+    </p>
+    <p align="left">
+     将plugins目录下所有文件挪到Eclipse的相应目录下，将feature目录下所有文件挪到Eclipse的相应目录下，最后启动Eclipse，在Help à Eclipse Marketplace，然后通过搜索功能，安装pydev的插件。
+    </p>
+    <p align="left">
+     在安装 PyDev 之前，要保证您已经安装了 Java 1.4 或更高版本、Eclipse 以及 Python。接下来，开始安装 PyDev 插件。
+    </p>
+    <ol start="1" type="1">
+     <li>
+      启动 Eclipse，利用 Eclipse Marketplace 安装 PyDev。在 Eclipse 菜单栏中找到 Help栏，选择 Help &gt; Eclipse Marketplace。
+     </li>
+     <li>
+      通过搜索框，在Find中输入python,选择PyDev进行安装,之后一直单击next就可以把PyDev插件安装好。
+     </li>
+    </ol>
+    <div>
+     <img alt="" src="https://img-blog.csdn.net/20140619224719484?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvbmd3ZW43NzEw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+      <br/>
+     </img>
+    </div>
+    <p align="left">
+    </p>
+    <p align="left">
+     <strong>
+      方案二：
+     </strong>
+    </p>
+    <ol start="1" type="1">
+     <li>
+      启动 Eclipse，利用 Install NewSoftware 安装 PyDev。在 Eclipse 菜单栏中找到 Help栏，选择 Help &gt; Install NewSoftware。
+     </li>
+     <li>
+      在弹出的对话框中，单击Add按钮，新建一个站点，这里，名称项输入 PyDev，当然，您也可以输入其他的名称；链接里输入
+      <span style="color:windowtext">
+       <a href="http://pydev.org/updates" rel="nofollow noopener noreferrer" target="_blank">
+        <span style="color:rgb(0,102,170)">
+         http://pydev.org/updates
+        </span>
+       </a>
+      </span>
+      。然后，单击 Ok。
+     </li>
+    </ol>
+    <div>
+     <img alt="" src="https://img-blog.csdn.net/20140619224757578">
+      <br/>
+     </img>
+    </div>
+    <div>
+     <img alt="" src="https://img-blog.csdn.net/20140619224816781">
+      <br/>
+     </img>
+    </div>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       细节注解：
+      </span>
+     </strong>
+     其中连接
+     <a href="http://pydev.org/updates" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:rgb(0,102,170)">
+       http://pydev.org/updates
+      </span>
+     </a>
+     ，重定向到
+     <a href="http://update-production-pydev.s3.amazonaws.com/pydev/updates/site.xml" rel="nofollow noopener noreferrer" target="_blank">
+      http://update-production-pydev.s3.amazonaws.com/pydev/updates/site.xml
+     </a>
+    </p>
+    <p align="left">
+    </p>
+    <p align="left">
+    </p>
+    <p align="left">
+     <a name="N100C5" target="_blank">
+      <strong>
+       <span style="color:red">
+       </span>
+      </strong>
+     </a>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第三部分：验证是否成功安装
+      </span>
+      <span style="color:red">
+       PyDev
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     如何才能验证是否已经成功安装了所需的 PyDev 插件了呢？
+    </p>
+    <p align="left">
+     选择 Help à About Eclipse，将会出现 About Eclipse窗口，该窗口里列出了所有已经安装了的 Eclipse 插件，之后选择Installation Details。检查一下在 Plug-in Id 一栏中是否至少有五个以上分别以 com.python.pydev 和
+     <strong>
+      org.python.pydev
+     </strong>
+     开头的插件。如果是，那么 PyDev已经被成功安装，否则，安装出了一些问题，需要根据具体问题来做具体的分析。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619224901562">
+      <br/>
+     </img>
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619224911781">
+      <br/>
+     </img>
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619224921546">
+      <br/>
+     </img>
+    </p>
+    <p align="left">
+     <a name="N100E2" target="_blank">
+      <strong>
+       <span style="color:red">
+        第四部分：配置
+       </span>
+      </strong>
+     </a>
+     <strong>
+      <span style="color:red">
+       PyDev
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     安装好 PyDev 之后，需要配置 Python/Jython 解释器，配置过程很简单。
+    </p>
+    <p align="left">
+     在 Eclipse 菜单栏中，选择 Window &gt; Preferences &gt; Pydev &gt;Interpreter - (Python/Jython)，在这里配置 Python/Jython 解释器，下面以 Python 为例介绍如何配置。
+    </p>
+    <p align="left">
+     首先需要添加已安装的解释器。这里，Python 安装在 D:\Python27路径下。单击 New，选择 Python 解释器 python.exe，打开后显示出一个包含很多复选框的窗口，选择需要加入系统
+     <strong>
+      PYTHONPATH 的路径，单击 Ok。
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619224955265">
+      <br/>
+     </img>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225010750">
+      <br/>
+     </img>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225032937"/>
+     <br/>
+    </p>
+    <p align="left">
+     接下来，检查一下配置的结果是否正确。
+    </p>
+    <p align="left">
+     在 System
+     <strong>
+      PYTHONPATH 里，检查是否包含配置过程中加入的那些路径。这里列出了所有的系统所需的库文件夹。
+     </strong>
+    </p>
+    <p align="left">
+     另外，在 Forced builtin libs 里，列出了 Python 的内置库。对于 Python 而言，这样的内置库大约有50个，而对于 Jython 来说，则有30个左右。
+    </p>
+    <p align="left">
+     这样，Python 解释器就配置好了。
+    </p>
+    <p>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第五部分：创建
+      </span>
+      <span style="color:red">
+       python
+      </span>
+      <span style="color:red">
+       项目
+      </span>
+     </strong>
+     <a name="3.PyDev_Package_Explorer" target="_blank">
+      <strong>
+       <span style="color:red">
+        PyDevPackage Explorer
+       </span>
+      </strong>
+     </a>
+    </p>
+    <p align="left">
+     在开展工作之前，需要创建一个新的项目。在 Eclipse 菜单栏中，选择 File &gt; New &gt; Project &gt; other &gt; Pydev &gt; Pydev Project，单击 Next。
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225129546"/>
+     <br/>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225138421"/>
+     <br/>
+    </p>
+    <p align="left">
+     这时，显示出 Pydev Project 窗口，输入项目名称、选择工作路径、选择 Python 解释器的版本类型并选中复选框，然后单击 Next，进入关联项目的窗口，如果不需要关联其他项目，则可以直接单击 Finish，完成项目的创建。
+    </p>
+    <p align="left">
+     <strong>
+     </strong>
+    </p>
+    <p align="left">
+     <a name="N10137" target="_blank">
+      <strong>
+       <span style="color:red">
+        第六部分：创建
+       </span>
+      </strong>
+     </a>
+     <strong>
+      <span style="color:red">
+       Python
+      </span>
+      <span style="color:red">
+       包和模块
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     接下来，在刚创建的项目中开始创建 Python 包和模块。
+    </p>
+    <ol start="1" type="1">
+     <li>
+      进入 Pydev 透视图，在 Python Package Explorer 中，右键单击 src，选择 New-&gt;Pydev Package，输入 Package 名称并单击 Finish，Python 包就创建好了，此时，自动生成__init__.py 文件，该文件不包含任何内容。
+     </li>
+     <li>
+      创建完 Pydev Package 后，右键单击创建的包，选择 New-&gt;Pydev Module，输入模块名称，单击 Finish。这样，Python 模块就建成了。
+     </li>
+    </ol>
+    <p align="left">
+     <strong>
+      细节注意
+     </strong>
+     ：
+     <span style="color:red">
+      如果在创建项目的时候没有选中
+     </span>
+     <span style="color:red">
+      “Create default src folder and add it to the pythonpath”
+     </span>
+     <span style="color:red">
+      复选框，则需要通过
+     </span>
+     <span style="color:red">
+      File &gt; New &gt; Other &gt; Source Folder
+     </span>
+     <span style="color:red">
+      手动创建一个源代码文件夹。
+     </span>
+    </p>
+    <p align="left">
+     <span style="color:red">
+      <img alt="" src="https://img-blog.csdn.net/20140619225229515"/>
+      <br/>
+     </span>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第七部分：编辑源程序
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     对于源程序的一些基本编辑方法，就不做介绍了。下面介绍几点 Pydev 提供的非常实用的编辑功能。
+    </p>
+    <p align="left">
+     <strong>
+      3、        语法错误提示
+     </strong>
+    </p>
+    <p align="left">
+     Python 开发者在创建修改程序的过程中，如果能及时发现编辑过程中出现的语法错误，无疑对整个项目开发的质量和进展都是非常重要的。在 Python 透视图中，Pydev Package Explorer 中列出了项目的源代码，双击其中某一个 Python 文件，如果该文件包含语法错误，错误会以很醒目的方式展现出来。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619225304656"/>
+     <br/>
+    </p>
+    <p>
+     如果想把整个项目中所有包含语法错误的文件显示出来，可以从 Python 透视图自由切换到 Java 透视图。在 Java Package 里，一个个醒目的小红叉标记了所有包含语法错误的 Python文件。
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225326421"/>
+     <br/>
+    </p>
+    <p align="left">
+     <strong>
+      4、        源代码编辑助手 (ContentAssistents)
+     </strong>
+    </p>
+    <p align="left">
+     源代码编辑助手 (Content Assistents，以下简称 CA)，顾名思义，即用于帮助开发者编辑源程序，它提供了诸多方便实用的功能，引导开发者进行高效快速的项目开发。
+    </p>
+    <p align="left">
+     通过快捷键 Ctrl+1 可以激活 CA，它支持的功能如下：
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       细节注释
+      </span>
+      <span style="color:red">
+       ：
+      </span>
+      <span style="color:red">
+       Ctrl+1
+      </span>
+      <span style="color:red">
+       ，其中的
+      </span>
+      <span style="color:red">
+       1
+      </span>
+      <span style="color:red">
+       为阿拉伯数字壹，而不是英文字母
+      </span>
+      <span style="color:red">
+       L
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      PyDev
+     </strong>
+    </p>
+    <ol start="1" type="1">
+     <li>
+      Move import to global scope
+     </li>
+     <li>
+      Create docstring
+     </li>
+     <li>
+      Assign result to new local variable (or field)
+     </li>
+     <li>
+      Assign parameters to attributes
+     </li>
+     <li>
+      Surround code with try..except or try..finally
+     </li>
+    </ol>
+    <p align="left">
+     <strong>
+      PyDev Extensions
+     </strong>
+    </p>
+    <ol start="1" type="1">
+     <li>
+      Make import for undefined token
+     </li>
+     <li>
+      Ignore error
+     </li>
+     <li>
+      Don't analyze module
+     </li>
+    </ol>
+    <p align="left">
+     在安装 PyDev 时，PyDev 和 PyDev Extensions 包都已安装，所以 CA 的这几大功能现在都支持。首先，先介绍如何使用 PyDev 包含的 CA 功能。
+    </p>
+    <p align="left">
+     <span style="color:red">
+      ·
+     </span>
+     <strong>
+      <span style="color:red">
+       PyDev
+      </span>
+      <span style="color:red">
+       的
+      </span>
+      <span style="color:red">
+       CA
+      </span>
+      <span style="color:red">
+       功能
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       A
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Move import to global scope
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     以如下代码为例，将光标移至 import sys 后，启动快捷键 Ctrl+1 激活 CA，”Move import to global scope” 出现在标签中，按 Enter 应用此功能。如果不想应用该功能，可以按 Esc 键取消。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:silver">
+          #!/
+          <u>
+           usr
+          </u>
+          /bin/
+          <u>
+           python
+          </u>
+          –u
+         </span>
+        </p>
+        <p align="left">
+         <u>
+          sys
+         </u>
+         .path.append(
+         <em>
+          <span style="color:#00AA00">
+           "./VirtualFS"
+          </span>
+         </em>
+         )
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          import
+         </span>
+         sys
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     应用该功能后，import sys 被成功移至全局范围内，消除了之前的错误。改变后的代码如下。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:silver">
+          #!/
+          <u>
+           usr
+          </u>
+          /bin/
+          <u>
+           python
+          </u>
+          –u
+         </span>
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          import
+         </span>
+         sys
+        </p>
+        <p align="left">
+         sys.path.append(
+         <em>
+          <span style="color:#00AA00">
+           "./VirtualFS"
+          </span>
+         </em>
+         )
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       B
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Create docstring
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     Create docstring 功能可以自动为函数添加参数注解。将光标移至如下代码行，启动快捷键Ctrl+1 激活 CA，标签栏中出现 ”Make docstring”。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          __init__
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         , dbUser, dbPswd, dbHost):
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+    </p>
+    <p align="left">
+     按 Enter 应用该功能后，自动为该函数添加了参数注解。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          __init__
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         , dbUser, dbPswd, dbHost):
+        </p>
+        <p align="left">
+         <em>
+          <span style="color:#00AA00">
+           '''
+          </span>
+         </em>
+        </p>
+        <p align="left">
+         <em>
+          <span style="color:#00AA00">
+          </span>
+         </em>
+         <strong>
+          <span style="color:#00AA00">
+           :
+           <u>
+            param
+           </u>
+          </span>
+         </strong>
+         <em>
+          <span style="color:#00AA00">
+           dbUser:
+          </span>
+         </em>
+        </p>
+        <p align="left">
+         <em>
+          <span style="color:#00AA00">
+          </span>
+         </em>
+         <strong>
+          <span style="color:#00AA00">
+           :
+           <u>
+            param
+           </u>
+          </span>
+         </strong>
+         <em>
+          <span style="color:#00AA00">
+           dbPswd:
+          </span>
+         </em>
+        </p>
+        <p align="left">
+         <em>
+          <span style="color:#00AA00">
+          </span>
+         </em>
+         <strong>
+          <span style="color:#00AA00">
+           :
+           <u>
+            param
+           </u>
+          </span>
+         </strong>
+         <em>
+          <span style="color:#00AA00">
+           dbHost:
+          </span>
+         </em>
+        </p>
+        <p align="left">
+         <em>
+          <span style="color:#00AA00">
+           '''
+          </span>
+         </em>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     <br/>
+     <strong>
+      <span style="color:#00B050">
+       C
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Assign result to new local variable (orfield)
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     CA 还提供一种功能能够将函数返回结果赋给新的内部变量。以函数 callMethod 为例，将光标移至 a.callMethod() 行激活 CA。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         , a):
+        </p>
+        <p align="left">
+         a.callMethod()
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     选择 ”Assign to field(self, callMethod)” 或者 ”Assign to local(callMethod)”，可以将a.callMethod() 结果赋给新的内部变量 self.callMethod，改变后的代码如下。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          <span style="background:yellow">
+           self
+          </span>
+         </em>
+         , a):
+        </p>
+        <p align="left">
+         <em>
+          <span style="background:yellow">
+           self
+          </span>
+         </em>
+         .call_method = a.callMethod()
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     <br/>
+     <strong>
+      <span style="color:#00B050">
+       D
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Assign parameters to attributes
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     在程序编辑过程中，如果需要把函数参数赋给变量，可以使用 CA 的 Assign parameters to attributes 功能自动完成这样的需求。将光标移至函数 m1 所在行，激活 CA。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          class
+         </span>
+         <strong>
+          Foo
+         </strong>
+         (object):
+        </p>
+        <p align="left">
+         <u>
+          Def
+          <span style="background:yellow">
+           m1
+          </span>
+         </u>
+         (
+         <em>
+          <u>
+           self
+          </u>
+         </em>
+         ,
+         <u>
+          a
+         </u>
+         ,
+         <u>
+          b
+         </u>
+         ):
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     在标签栏中选择 ”Assign parameters to attributes”，自动生成两行代码将参数 a，b 赋给同名变量。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          class
+         </span>
+         <strong>
+          Foo
+         </strong>
+         (object):
+        </p>
+        <p align="left">
+         <u>
+          Def m1
+         </u>
+         (
+         <em>
+          <u>
+           self
+          </u>
+         </em>
+         ,
+         <u>
+          a
+         </u>
+         ,
+         <u>
+          <span style="background:yellow">
+           b
+          </span>
+         </u>
+         ):
+        </p>
+        <p align="left">
+         <em>
+          self
+         </em>
+         .a = a
+        </p>
+        <p align="left">
+         <em>
+          self
+         </em>
+         .b = b
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       <br/>
+       E
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Surround code with try..except ortry..finally
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     对可能产生异常的代码，要进行异常捕获，通常使用 try..except 或者 try..finally 语句来捕获异常。选中一段代码 print usage，激活 CA 的 ” Surround code with try..except ortry..finally”功能，可以自动对 print usage 进行异常捕获。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          import
+         </span>
+         sys
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         , usage):
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          try
+         </span>
+         :
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          print
+         </span>
+         usage
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          except
+         </span>
+         :
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          raise
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+    </p>
+    <p align="left">
+     下面，再介绍 PyDev Extensions 包含的 CA 功能是如何被运用的。
+    </p>
+    <p align="left">
+     <span style="color:red">
+      ·
+     </span>
+     <strong>
+      <span style="color:red">
+       PyDev Extension
+      </span>
+      <span style="color:red">
+       的
+      </span>
+      <span style="color:red">
+       CA
+      </span>
+      <span style="color:red">
+       功能
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       A
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Make import for undefined token
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     以如下一段代码为例，xmlreader 未定义，语法分析出错。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          class
+         </span>
+         <strong>
+          Test
+         </strong>
+         :
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         ):
+        </p>
+        <p align="left">
+         xmlreader
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     将鼠标移至出错行，启动快捷键 Ctrl+1 激活 CA，选择标签栏中的 ”Import xmlreader(xml.sax)”，自动生成一行代码 from xml.sax import xmlreader，语法错误消除。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          from
+         </span>
+         xml.sax
+         <span style="color:blue">
+          import
+         </span>
+         <span style="background:yellow">
+          xmlreader
+         </span>
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          class
+         </span>
+         <strong>
+          Test
+         </strong>
+         :
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         ):
+        </p>
+        <p align="left">
+         <span style="background:yellow">
+          xmlreader
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     <br/>
+     <strong>
+      <span style="color:#00B050">
+       B
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Ignore error
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     仍以上述代码为例，由于 xmlreader 没有被定义，包含语法错误，在这一行激活 CA，选择 ”UndefinedVariable”，语法错误被忽略，xmlreader 后自动生成一行注释标明 ”#@UndefinedVariable”。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:blue">
+          class
+         </span>
+         <strong>
+          Test
+         </strong>
+         :
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         ):
+        </p>
+        <p align="left">
+         xmlreader
+         <span style="color:silver">
+          # @UndefinedVariable
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       C
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Don't analyze module
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     语法分析器可以帮助显示包含语法错误的代码，但在程序编辑过程中，有时候需要刻意取消对程序的语法分析，CA 的 Don't analyze module 提供了这样的功能。
+    </p>
+    <p align="left">
+     将光标移至程序第一行，激活 CA，选择 ”@PydevCodeAnalysisIgnore”，自动生成一行代码 ”#@ PydevCodeAnalysisIgnore”，忽略对程序体的语法分析。
+    </p>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+      <tr>
+       <td>
+        <p align="left">
+         <span style="color:silver">
+          #@PydevCodeAnalysisIgnore
+         </span>
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          class
+         </span>
+         <strong>
+          Test
+         </strong>
+         :
+        </p>
+        <p align="left">
+         <span style="color:blue">
+          def
+         </span>
+         <strong>
+          method
+         </strong>
+         (
+         <em>
+          self
+         </em>
+         ):
+        </p>
+        <p align="left">
+         <span style="background:yellow">
+          xmlreader
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p align="left">
+     <br/>
+     <strong>
+      <span style="color:#00B050">
+       D
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Quick Outline
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     对特定的 Python 文件，Pydev Extensions 提供的 Quick Outline 能最简单快捷地获取该文件的组织结构，并能在该文件中方便地查询定位所需信息。
+    </p>
+    <p align="left">
+     在 Pydev 透视图中，选择 Source -&gt; Show Quick Outline，或者使用快捷键 Ctrl+O 启动该功能。
+    </p>
+    <p align="left">
+     Python 文件的类、函数等组织架构便以树状形式被形象地展现出来。同时，Filter 提供了查询定位的功能，可以方便地查询所需信息并定位到相应的代码段。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619225414171"/>
+     <br/>
+    </p>
+    <p align="center">
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       E
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Globals Browser
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     Globals Browser 是 Pydev Extensions 提供的另外一种强大的查询定位功能。它可以查询定位整个工程内的一些定义和属性，包括：
+    </p>
+    <p align="left">
+     ·        类定义
+    </p>
+    <p align="left">
+     ·        方法定义
+    </p>
+    <p align="left">
+     ·        全局变量
+    </p>
+    <p align="left">
+     ·        类以及实例属性
+    </p>
+    <p align="left">
+     通过三种方式可以启动该功能。
+    </p>
+    <p align="left">
+     ·        在 Pydev 透视图中，从菜单栏中选择 Pydev -&gt; Globals Browser。
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225437687"/>
+    </p>
+    <ul type="disc">
+     <li>
+      在Pydev 透视图中，工具栏有如下的一个小图标，鼠标移至该图标上方，显示 ”Pydev: Globals Browser” 标注。点击该图标按钮，可以启动 Globals Browser 功能。
+     </li>
+    </ul>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225459234"/>
+    </p>
+    <p align="left">
+     ·        通过快捷键 Ctrl + Shift + T，可以快速启动 Globals Browser 功能。
+    </p>
+    <p align="left">
+     在 Filter 中输入所要查询的定义、变量或者属性，Globals Browser 可以快速地定位到相应的代码段。
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225533781"/>
+     <br/>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:#00B050">
+       F
+      </span>
+      <span style="color:#00B050">
+       、
+      </span>
+      <span style="color:#00B050">
+       Hierarchy View
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     当某个 python 文件包含多个类时，如何才能简单直观地了解各个类之间的依存关系？Hierarchy View 提供了这样的功能，它能将多个类之间的层次关系以树状结构直观地显示出来。
+    </p>
+    <p align="left">
+     以一段 Python 代码为例，定义了 Super1, Super2, ToAnalyze 和 Sub1 四个类。在 Pydev透视图中，选择 Windows -&gt; Show View -&gt; Other，在弹出的 Show View 窗口中，选择 Pydev -&gt; Hierarchy View。按快捷键 F4 激活 Hierarchy View，可以看到树状图中显示出了类间的层次关系。
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225610015"/>
+    </p>
+    <p align="left">
+     Hierarchy View 还支持以下四个功能：
+    </p>
+    <p align="left">
+     ·        在层次图中，用鼠标单击某个类，图下方即显示出该类的方法。
+    </p>
+    <p align="left">
+     ·        如果双击某个类、方法或者属性，则会调出源程序，进入对该类、方法或者属性的编辑状态。
+    </p>
+    <p align="left">
+     ·        在 Hierarchy View 中，按住鼠标右键，并相左或向右移动鼠标，层次图则会相应地缩小或放大。
+    </p>
+    <p align="left">
+     ·        在 Hierarchy View 中，按住鼠标左键移动鼠标，层次图则会被随意拖动到相应的位置。
+    </p>
+    <p align="left">
+     <a name="4.运行和调试" target="_blank">
+     </a>
+    </p>
+    <p align="left">
+     <strong>
+      <span style="color:red">
+       第八部分：
+      </span>
+      <span style="color:red">
+       Python
+      </span>
+      <span style="color:red">
+       程序的运行和调试
+      </span>
+     </strong>
+    </p>
+    <p align="left">
+     <strong>
+      运行程序
+     </strong>
+    </p>
+    <p align="left">
+     要运行 Python 源程序，有两种方法可供选择。下面以一段代码 example.py 为例介绍这两种运行方式。
+    </p>
+    <p align="left">
+     ·        在 Pydev PackageExplorer 中双击 example.py，选择 Run -&gt; Run As -&gt; Python Run。程序example.py 立即被运行，在控制台 Console 里显示出程序的执行结果。
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225711718"/>
+     <br/>
+    </p>
+    <p align="left">
+     ·        在 Pydev PackageExplorer 中，用鼠标右键单击 example.py，在弹出的菜单栏中选择 Run As -&gt; Python Run。同样，example.py 被执行，Console 中显示程序的执行结果。
+    </p>
+    <p align="left">
+     以上两种方式是运行源程序的基本方法。Pydev 还提供一种特有的源程序运行功能 Run As Python Coverage，该功能不仅能显示出程序的运行结果，而且能将程序运行过程中代码的覆盖率显示出来。
+    </p>
+    <p align="left">
+     要查看代码的覆盖率，首先需要打开 Code Coverage Results View。在 Pydev 透视图中，选择 Windows -&gt; Show View -&gt; CodeCoverage。在弹出视图的左栏中，可以看到三个按钮，”Clear”, “Refresh”和 ”
+     <a name="OLE_LINK18" target="_blank">
+     </a>
+     <a name="OLE_LINK17" target="_blank">
+      Choose folder to analyze
+     </a>
+     ”。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619225725359"/>
+    </p>
+    <p>
+    </p>
+    <p align="left">
+     用鼠标左键单击 ” Choose folder to analyze”，在弹出的 Folder Selection 窗口中选择需要运行的程序所在的包，单击 Ok。这样，这个包中所有的源程序便显示在左栏中。
+    </p>
+    <p align="left">
+     接下来，仍以 example.py 为例，看看 Run As PythonCoverage 功能展现出的结果。选择Run As -&gt; Python Coverage，控制台 Console 中显示出了程序的运行结果。切换到刚才打开的 Code CoverageResults View 视图，单击左栏中的 example.py。
+    </p>
+    <p>
+     <img alt="" src="https://img-blog.csdn.net/20140619225836890"/>
+    </p>
+    <p align="left">
+     代码运行过程中的覆盖情况很清楚地显示在右栏中。
+    </p>
+    <p align="left">
+     双击左栏中的 example.py，没有覆盖到的代码便在编辑器中以醒目的错误标志被标注出来。
+    </p>
+    <p>
+    </p>
+    <p align="left">
+     如果关闭 Code Coverage Results View 视图，代码的覆盖信息并没有丢失，重新打开该视图同样可以显示出这些信息。只有通过单击左栏的 “Clear” 按钮，才可以清除程序运行后得到的这些覆盖信息。
+    </p>
+    <p align="left">
+    </p>
+    <p align="left">
+     <a name="N1038C" target="_blank">
+      <strong>
+       调试程序
+      </strong>
+     </a>
+     <strong>
+     </strong>
+    </p>
+    <p align="left">
+     调试是程序开发过程中必不可少的，熟练掌握调试技能是开发者进行高效开发的前提和基础。下面仍以 example.py 为例，介绍如何使用 Pydev 的调试功能。
+    </p>
+    <p align="left">
+     调试需从添加断点开始，有三种方式可以设置断点。
+    </p>
+    <p align="left">
+     ·        双击编辑器中标尺栏左边灰白的空白栏，在某行添加断点。
+    </p>
+    <ul type="disc">
+     <li>
+      鼠标右键单击标尺栏，在弹出的菜单栏中选择 ”Add Breakpoint” 添加断点。
+     </li>
+     <li>
+      将鼠标移至需要添加断点的代码行，使用快捷键 Ctrl+F10，在弹出的菜单栏中选择 ”Add Breakpoint” 添加断点。
+     </li>
+    </ul>
+    <p align="left">
+     添加好断点后，选择 Debug As -&gt; Python Run 启动调试器，弹出一个对话框，询问是否切换到调试器透视图，单击 Yes，即显示调试模式。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619225914281"/>
+    </p>
+    <p align="left">
+     程序调试过程中，常用的几个快捷键如下：
+    </p>
+    <p align="left">
+     ·        单步跳入 Step Into: F5
+    </p>
+    <p align="left">
+     ·        单步跳过 Step Over: F6
+    </p>
+    <p align="left">
+     ·        单步返回 Step Return: F7
+    </p>
+    <p align="left">
+     ·        重新开始 Resume: F8
+    </p>
+    <p align="left">
+     在控制台 Console 中，显示出断点之前代码的执行结果。如果要查看某个变量的值，以变量 a 为例，可以手动在控制台中键入一行代码 ”print ‘a is:’, a”，再连续按两次 Enter 键，即显示出变量的值。
+    </p>
+    <p align="left">
+     ·        在调试模式下，要查看表达式的值，选中后单击鼠标右键，选择 Watch。弹出 Expression面板，显示出了相应的变量或表达式的值。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619225944281"/>
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619230007593?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvbmd3ZW43NzEw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/>
+     <br/>
+    </p>
+    <p align="left">
+     ·        如果想要在满足一定条件下已经添加的断点才有效，可以设置断点的属性。在编辑器的标尺栏中单击鼠标右键，弹出的菜单栏中选择 Breakpoint Properties。在显示的窗口中，选中复选框 ”Enable Condition”，输入需要满足的条件，单击 Ok。
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619230051546?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvbmd3ZW43NzEw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/>
+     <br/>
+    </p>
+    <p align="left">
+     <img alt="" src="https://img-blog.csdn.net/20140619230103953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvbmd3ZW43NzEw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/>
+     <br/>
+    </p>
+    <p align="center">
+    </p>
+    <p align="left">
+     ·        这样，当重新执行程序调试的时候，只有满足条件的情况下，该断点才有效。
+    </p>
+    <p align="left">
+     <span style="color:red">
+     </span>
+    </p>
+    <h3>
+     <a name="5.总结" target="_blank">
+      <span style="color:red">
+       第九部分：总结
+      </span>
+     </a>
+     <span style="color:red">
+      及
+     </span>
+     <a href="http://www.cnblogs.com/sevenyuan/archive/2009/12/10/1621032.html" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:red">
+       Python
+      </span>
+      <span style="color:red">
+       学习
+      </span>
+      <span style="color:red">
+       资源
+      </span>
+     </a>
+    </h3>
+    <p align="left">
+     <strong>
+      综合总结：
+     </strong>
+    </p>
+    <p align="left">
+     Pydev 结合 Ecplise 实现了如此功能强大且易用的 Python IDE，本文不能一应俱全地介绍出来，对于一些基本的功能没有做过于详尽的介绍，主要突出 Pydev 特有的一些功能。Pydev for Eclipse 的出现为 Python 开发人员实现高效的项目开发提供了很好的条件，该项目也在不断的发展之中，其功能将会越来越强大。
+    </p>
+    <p>
+    </p>
+    <p>
+     参考文献及推荐阅读资料：
+    </p>
+    <p>
+     <a href="http://www.okpython.com/forum.php" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.okpython.com/forum.php
+     </a>
+    </p>
+    <p>
+     <a href="http://www.cnblogs.com/lanxuezaipiao/p/3543658.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.cnblogs.com/lanxuezaipiao/p/3543658.html
+     </a>
+    </p>
+    <p>
+     <a href="http://www.cnblogs.com/sevenyuan/archive/2009/12/10/1620939.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.cnblogs.com/sevenyuan/archive/2009/12/10/1620939.html
+     </a>
+    </p>
+    <p>
+     <a href="http://www.cnblogs.com/sevenyuan/archive/2009/12/10/1621032.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.cnblogs.com/sevenyuan/archive/2009/12/10/1621032.html
+     </a>
+    </p>
+    <p>
+     <a href="https://docs.python.org/2.7/" rel="nofollow noopener noreferrer" target="_blank">
+      https://docs.python.org/2.7/
+     </a>
+    </p>
+    <p>
+     <a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-ecl-pydev/index.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.ibm.com/developerworks/cn/opensource/os-cn-ecl-pydev/index.html
+     </a>
+    </p>
+    <p align="left">
+     官方主页 ：
+     <a href="http://www.python.org/" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.python.org/
+     </a>
+    </p>
+    <p align="left">
+     <span style="color:red">
+      For windows
+     </span>
+     <span style="color:red">
+      的
+     </span>
+     <span style="color:red">
+      python
+     </span>
+     <span style="color:red">
+      解释器
+     </span>
+     （包括tkInterGUI开发环境，一个简单的IDE，完整广泛的英文文档）9MB：
+     <a href="http://www.python.org/ftp/python/2.4.3/python-2.4.3.msi" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.python.org/ftp/python/2.4.3/python-2.4.3.msi
+     </a>
+    </p>
+    <p align="left">
+     <span style="color:red">
+      一份不错的
+     </span>
+     <span style="color:red">
+      python
+     </span>
+     <span style="color:red">
+      中文教程
+     </span>
+     ：
+     <a href="http://www.woodpecker.org.cn/obp/diveintopython-zh-5.4/zh-cn/dist/html/toc/index.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.woodpecker.org.cn/obp/diveintopython-zh-5.4/zh-cn/dist/html/toc/index.html
+     </a>
+    </p>
+    <p align="left">
+     该站致力于python研究，站内还有大量优秀教材下载。
+    </p>
+    <p align="left">
+     <span style="color:red">
+      python
+     </span>
+     <span style="color:red">
+      中文社区
+     </span>
+     ：
+     <a href="http://python.cn/" rel="nofollow noopener noreferrer" target="_blank">
+      http://python.cn/
+     </a>
+     国内python大牛尽会于此
+    </p>
+    <p align="left">
+     <span style="color:red">
+      ChinaUNIX
+     </span>
+     <span style="color:red">
+      论坛区的
+     </span>
+     <span style="color:red">
+      python
+     </span>
+     <span style="color:red">
+      版
+     </span>
+     <a href="http://bbs.chinaunix.net/forum-55-1.html" rel="nofollow noopener noreferrer" target="_blank">
+      http://bbs.chinaunix.net/forum-55-1.html
+     </a>
+     基本可以认为是国内论坛中python水平最高的
+    </p>
+    <p align="left">
+     <span style="color:red">
+      一本最佳的
+     </span>
+     <span style="color:red">
+      python
+     </span>
+     <span style="color:red">
+      入门书籍
+     </span>
+     <span style="color:red">
+      (
+     </span>
+     <span style="color:red">
+      英文）
+     </span>
+     <a href="http://china-pub.shop.eol.cn/computers/common/info.asp?id=25523" rel="nofollow noopener noreferrer" target="_blank">
+      http://china-pub.shop.eol.cn/computers/common/info.asp?id=25523
+     </a>
+    </p>
+    <p align="left">
+     <span style="color:red">
+      一个很好的开源
+     </span>
+     <span style="color:red">
+      pythonIDE
+     </span>
+     ：
+     <a href="http://stani.be/python/spe/blog/" rel="nofollow noopener noreferrer" target="_blank">
+      http://stani.be/python/spe/blog/
+     </a>
+    </p>
+    <p align="left">
+     欢迎大家光临python中国进行交流
+    </p>
+    <p align="left">
+     <span style="color:red">
+      一切关于
+     </span>
+     <span style="color:red">
+      python
+     </span>
+     <span style="color:red">
+      教程都在
+     </span>
+     <span style="color:red">
+      "python
+     </span>
+     <span style="color:red">
+      中国
+     </span>
+     <span style="color:red">
+      "
+     </span>
+    </p>
+    <p align="left">
+     网址：
+     <a href="http://www.okpython.com/" rel="nofollow noopener noreferrer" target="_blank">
+      http://www.okpython.com
+     </a>
+    </p>
+    <p align="left">
+    </p>
+    <p align="left">
+     《
+     <a href="http://www.baidu.com/link?url=nh1KwmvWuEhP2w8J0OwOxEDJq5wmedREJtjUnTyMv19UIa6TigK7HN34_4vowNw7" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:black">
+       Python
+      </span>
+      <span style="color:black">
+       核心编程
+      </span>
+      <span style="color:black">
+       (
+      </span>
+      <span style="color:black">
+       第二版
+      </span>
+      <span style="color:black">
+       )
+      </span>
+     </a>
+     》
+    </p>
+    <h4>
+     《
+     <a href="http://www.baidu.com/link?url=0nonQQLJZIkb74FRTwejOySwn11FIytZH24OFy8Js6lKquHO64M2pa4f2Xj52xZ9" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:black">
+       Python
+      </span>
+      <span style="color:black">
+       学习手册第
+      </span>
+      <span style="color:black">
+       4
+      </span>
+      <span style="color:black">
+       版
+      </span>
+     </a>
+     》
+    </h4>
+    <h4>
+     《
+     <a href="http://www.baidu.com/link?url=ZbtJd5PxVcyjWn-OZLJ0iVUIgoHypi381iqp9RKApVRwM58lWm_ehp9xA_HdZyU6" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:black">
+       Python
+      </span>
+      <span style="color:black">
+       入门教程
+      </span>
+     </a>
+     》
+    </h4>
+    <p>
+     《可爱的Python》
+    </p>
+    <p>
+     《
+     <a href="http://www.baidu.com/s?tn=baiduhome_pg&amp;f=0&amp;wd=python%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C&amp;ie=utf-8&amp;rsv_cq=%E5%8F%AF%E7%88%B1%E7%9A%84python&amp;rsv_dl=0_right_recom_20816" rel="nofollow noopener noreferrer" target="_blank" title="python学习手册">
+      <span style="color:black">
+       python
+      </span>
+      <span style="color:black">
+       学习手册
+      </span>
+     </a>
+     》
+    </p>
+    <p>
+     《
+     <a href="http://www.baidu.com/s?tn=baiduhome_pg&amp;f=0&amp;wd=python%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E8%AF%A6%E8%A7%A3&amp;ie=utf-8&amp;rsv_cq=%E5%8F%AF%E7%88%B1%E7%9A%84python&amp;rsv_dl=0_right_recom_20816" rel="nofollow noopener noreferrer" target="_blank" title="python开发技术详解">
+      <span style="color:black">
+       python
+      </span>
+      <span style="color:black">
+       开发技术详解
+      </span>
+     </a>
+     》
+    </p>
+    <p>
+     《
+     <a href="http://www.baidu.com/s?tn=baiduhome_pg&amp;f=0&amp;wd=python+cookbook&amp;ie=utf-8&amp;rsv_cq=%E5%8F%AF%E7%88%B1%E7%9A%84python&amp;rsv_dl=0_right_recom_20816" rel="nofollow noopener noreferrer" target="_blank" title="python cookbook">
+      <span style="color:black">
+       python cookbook
+      </span>
+     </a>
+     》
+    </p>
+    <p>
+     《
+     <a href="http://baike.baidu.com/view/4748508.htm?fr=aladdin" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="color:black">
+       自己动手写网络爬虫
+      </span>
+     </a>
+     》
+    </p>
+    <p>
+     《
+     <a href="http://www.baidu.com/s?tn=baiduhome_pg&amp;f=0&amp;wd=python%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B&amp;ie=utf-8&amp;rsv_cq=%E5%8F%AF%E7%88%B1%E7%9A%84python&amp;rsv_dl=0_right_recom_20816" rel="nofollow noopener noreferrer" target="_blank" title="python高级编程">
+      <span style="color:black">
+       python
+      </span>
+      <span style="color:black">
+       高级编程
+      </span>
+     </a>
+     》
+    </p>
+    <p>
+     《
+     <a href="http://www.baidu.com/s?usm=2&amp;tn=baiduhome_pg&amp;f=0&amp;wd=python%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80&amp;ie=utf-8&amp;rsv_cq=python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B&amp;rsv_dl=0_right_recom_20816" rel="nofollow noopener noreferrer" target="_blank" title="python网络编程基础">
+      <span style="color:black">
+       python
+      </span>
+      <span style="color:black">
+       网络编程基础
+      </span>
+     </a>
+     》
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

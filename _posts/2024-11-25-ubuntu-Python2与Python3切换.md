@@ -1,0 +1,67 @@
+---
+layout: post
+title: ubuntu-Python2与Python3切换
+date: 2024-11-25 15:38:33 +0800
+categories: [linux]
+tags: [ubuntuPython]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=83214068
+    alt: ubuntu-Python2与Python3切换
+artid: 83214068
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     ubuntu Python2与Python3切换
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-github-gist" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     在ubuntu上刚开始默认的是Python2,要想从Python2切换到Python3,进行如下配置即可:
+    </p>
+    <h3>
+     <a id="1_Python2Python3_2">
+     </a>
+     1 Python2切换到Python3
+    </h3>
+    <pre><code>echo alias python=python3 &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre>
+    <h3>
+     <a id="2_Python3Python2_6">
+     </a>
+     2 Python3切换到Python2
+    </h3>
+    <pre><code>gedit  ~/.bashrc
+alias python=python3 
+source ~/.bashrc
+</code></pre>
+    <h3>
+     <a id="3__11">
+     </a>
+     3 查看版本
+    </h3>
+    <pre><code>python -V
+</code></pre>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

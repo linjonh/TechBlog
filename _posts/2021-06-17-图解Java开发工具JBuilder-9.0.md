@@ -1,0 +1,45 @@
+---
+layout: post
+title: 图解Java开发工具JBuilder-9.0
+date: 2021-06-17 23:34:34 +0800
+categories: [Java]
+tags: [开发工具,servlet,jbuilder,java开发工具,ejb,applet]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=140589
+    alt: 图解Java开发工具JBuilder-9.0
+artid: 140589
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     图解Java开发工具JBuilder 9.0
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    Jbuilder 9是功能强大的可视化Java集成开发工具，可以快速开发包括复杂企业级应用系统的各种Java程序，包括独立运行程序、Applet程序、Servlet、JSP、EJB、Web Service等
+    <font color="#400800">
+     。
+    </font>
+    <br/>
+    <br/>
+    <br/>
+    全文阅读：
+    <a href="http://www.yesky.com/SoftChannel/72342371961929728/20040627/1824671.shtml">
+     图解Java开发工具JBuilder 9.0
+    </a>
+   </div>
+  </div>
+ </article>
+</div>
+
+

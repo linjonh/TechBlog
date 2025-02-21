@@ -1,0 +1,104 @@
+---
+layout: post
+title: ubuntu-卸载-python2-安装python3-opencv
+date: 2023-12-11 12:01:31 +0800
+categories: [win/ubuntu]
+tags: [深度学习,pytorch,python]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=121677687
+    alt: ubuntu-卸载-python2-安装python3-opencv
+artid: 121677687
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     ubuntu 卸载 python2 安装python3 opencv
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+    </p>
+    <h3>
+     1.卸载python2.7
+    </h3>
+    <p>
+     <code>
+      sudo apt-get remove python2.7
+     </code>
+    </p>
+    <h3>
+     2.卸载python2.7及其依赖
+    </h3>
+    <p>
+     <code>
+      sudo apt-get remove --auto-remove python2.7
+     </code>
+    </p>
+    <h3>
+     3.消除python2.7
+    </h3>
+    <p>
+     <code>
+      sudo apt-get purge python2.7 or sudo apt-get purge --auto-remove python2.7
+     </code>
+    </p>
+    <p>
+    </p>
+    <p>
+     安装python3：
+    </p>
+    <p>
+     sudo apt-get install python3.8:
+    </p>
+    <p>
+     安装opencv-python：
+    </p>
+    <p>
+     pip install opencv-python，结果报错：
+    </p>
+    <p>
+     No module named 'skbuild'
+    </p>
+    <p>
+     解决方法：
+    </p>
+    <p>
+     pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple scikit-build
+    </p>
+    <p>
+    </p>
+    <p>
+     安装完成后，再次安装opencv-python发现还会会报错:
+    </p>
+    <p>
+     Problem with the CMake installation, aborting build. CMake executable is cmake
+     <br/>
+     大致的意思是：CMake安装有问题，正在中止构建。
+     <br/>
+     然后在终端输入：
+    </p>
+    <p>
+     pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple cmake
+     <br/>
+     <br/>
+     再次尝试，opencv-python安装成功
+     <br/>
+     <br/>
+     原文链接：https://blog.csdn.net/weixin_44996884/article/details/108678298
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

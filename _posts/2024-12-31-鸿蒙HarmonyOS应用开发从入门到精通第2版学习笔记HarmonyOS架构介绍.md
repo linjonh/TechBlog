@@ -1,0 +1,193 @@
+---
+layout: post
+title: 鸿蒙HarmonyOS应用开发从入门到精通第2版学习笔记HarmonyOS架构介绍
+date: 2024-12-31 08:06:51 +0800
+categories: [鸿蒙]
+tags: [鸿蒙,华为,harmonyos,Harmonyosnext]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=144839001
+    alt: 鸿蒙HarmonyOS应用开发从入门到精通第2版学习笔记HarmonyOS架构介绍
+artid: 144839001
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     《鸿蒙HarmonyOS应用开发从入门到精通（第2版）》学习笔记——HarmonyOS架构介绍
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h3>
+     1.3 架构介绍
+    </h3>
+    <p>
+     HarmonyOS整体遵从分层架构设计，从下向上依次为：内核层、系统服务层、框架层和应用层。系统功能按照“系统 &gt; 子系统 &gt; 組件”逐级展开，在多设备部署场景下，支持根据实际需求裁剪某些非必要的组件。HarmonyOS技术架构如下图1-4所示。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_135.png" height="866" src="https://i-blog.csdnimg.cn/img_convert/20b58de279e0baf13f32128c9474f1b5.png" width="1200"/>
+    </p>
+    <p>
+     图1-4 架构图
+    </p>
+    <h4>
+     1.3.1 内核层
+    </h4>
+    <p>
+     内核层主要分为两部分：
+    </p>
+    <ul>
+     <li>
+      内核子系统：HarmonyOS采用多内核设计，支持针对不同资源受限设备选用适合的OS内核。内核抽象层（KAL，Kernel Abstract Layer）通过屏蔽多内核差异，对上层提供基础的内核能力，包括进程/线程管理、内存管理、文件系统、网络管理和外设管理等。如图1-5所示。
+     </li>
+     <li>
+      驱动子系统：硬件驱动框架（HDF）是HarmonyOS硬件生态开放的基础，提供统一外设访问能力和驱动开发、管理框架。
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_136.png" height="490" src="https://i-blog.csdnimg.cn/img_convert/62814378187cb0622fbe7d4f530e1ffd.png" width="815"/>
+    </p>
+    <p>
+     图1-5 内核子系统
+    </p>
+    <h4>
+     1.3.2 系统服务层
+    </h4>
+    <p>
+     系统服务层是HarmonyOS的核心能力集合，通过框架层对应用程序提供服务。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_137.png" height="477" src="https://i-blog.csdnimg.cn/img_convert/906fb7f87d0e081ad55213a4066875a3.png" width="927"/>
+    </p>
+    <p>
+     图1-6 系统服务层
+    </p>
+    <p>
+     图1-6展示了系统服务层的能力集合。该层包含以下几个部分：
+    </p>
+    <ul>
+     <li>
+      系统基本能力子系统集：为分布式应用在HarmonyOS多设备上的运行、调度、迁移等操作提供了基础能力，由分布式软总线、分布式数据管理、分布式任务调度、方舟多语言运行时、公共基础库、多模输入、图形、安全、AI等子系统组成。其中，方舟运行时提供了C/C++/JS/ArkTS多语言运行时和基础的系统类库，也为使用方舟编译器静态化的Java程序（即应用程序或框架层中使用Java语言开发的部分）提供运行时。
+     </li>
+     <li>
+      基础软件服务子系统集：为HarmonyOS提供公共的、通用的软件服务，由事件通知、电话、多媒体、DFX（Design For X） 、MSDP&amp;DV等子系统组成。
+     </li>
+     <li>
+      增强软件服务子系统集：为HarmonyOS提供针对不同设备的、差异化的能力增强型软件服务，由智慧屏专有业务、穿戴专有业务、IoT专有业务等子系统组成。
+     </li>
+     <li>
+      硬件服务子系统集：为HarmonyOS提供硬件服务，由位置服务、生物特征识别、穿戴专有硬件服务、IoT专有硬件服务等子系统组成。
+     </li>
+    </ul>
+    <p>
+     根据不同设备形态的部署环境，基础软件服务子系统集、增强软件服务子系统集、硬件服务子系统集内部可以按子系统粒度裁剪，每个子系统内部又可以按功能粒度裁剪。
+    </p>
+    <h4>
+     1.3.3 框架层
+    </h4>
+    <p>
+     框架层为HarmonyOS应用开发提供了Java/C/C++/JS等多语言的用户程序框架和Ability框架，适用于Java语言的Java UI框架，适用于JS语言的ArkUI框架，以及各种软硬件服务对外开放的多语言框架API。根据系统的组件化裁剪程度，HarmonyOS设备支持的API也会有所不同。
+    </p>
+    <p>
+     图1-7展示了框架层所涵盖的功能。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_138.png" height="474" src="https://i-blog.csdnimg.cn/img_convert/ad11f30040753e5572c9dd25e877e9e5.png" width="698"/>
+    </p>
+    <p>
+     图1-7 框架层
+    </p>
+    <h4>
+     1.3.4 应用层
+    </h4>
+    <p>
+     应用层包括系统应用和第三方非系统应用。HarmonyOS的应用由一个或多个FA（Feature Ability）或PA（Particle Ability）组成。其中，FA有UI界面，提供与用户交互的能力；而PA无UI界面，提供后台运行任务的能力以及统一的数据访问抽象。基于FA/PA开发的应用，能够实现特定的业务功能，支持跨设备调度与分发，为用户提供一致、高效的应用体验。
+    </p>
+    <p>
+     如下图1-8展示的是一个视频通话应用的组成情况。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_139.png" height="395" src="https://i-blog.csdnimg.cn/img_convert/059b075c3be46dd8c913d3e197d6c4b3.png" width="811"/>
+    </p>
+    <p>
+     图1-8 视频通话应用的组成
+    </p>
+    <p>
+     在一个视频通话应用中，往往会有一个作为视频通话的主界面FA，和若干个PA组成。FA提供UI界面用于与用户进行交互，PA1用于摄像头视频采集，PA2用于视频美颜处理，PA3用于超级夜景处理。这些FA、PA可以按需下载、加载和运行。
+    </p>
+    <p>
+     图1-9展示了不同设备下载相同应用时的不同表现。当手机下载该应用时，将同时拥有FA主界面、PA1摄像头视频采集、PA2视频美颜处理、PA3超级夜景处理；而当智慧屏下载该应用时，如果智慧屏不支持视频美颜处理、超级夜景处理功能时，则只会下载FA主界面、PA1摄像头视频采集。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_140.png" height="436" src="https://i-blog.csdnimg.cn/img_convert/46b6c95f10ff8ca26ca3032a4dd7228a.png" width="837"/>
+    </p>
+    <p>
+     图1-9 不同设备下载相同应用时的不同表现
+     <br/>
+     <br/>
+    </p>
+    <h3>
+     参考资料
+    </h3>
+    <p>
+    </p>
+    <ul>
+     <li>
+      《跟老卫学HarmonyOS开发》 开源免费教程，
+      <a href="https://github.com/waylau/harmonyos-tutorial" title="https://github.com/waylau/harmonyos-tutorial">
+       https://github.com/waylau/harmonyos-tutorial
+      </a>
+     </li>
+     <li>
+      《鸿蒙HarmonyOS手机应用开发实战》（清华大学出版社）
+     </li>
+     <li>
+      “鸿蒙系统实战短视频App 从0到1掌握HarmonyOS”（
+      <a href="https://coding.imooc.com/class/674.html" rel="nofollow" title="鸿蒙系统实战短视频App 从0到1掌握HarmonyOS_实战课程_慕课网">
+       鸿蒙系统实战短视频App 从0到1掌握HarmonyOS_实战课程_慕课网
+      </a>
+      ）
+     </li>
+     <li>
+      《鸿蒙HarmonyOS应用开发入门》（清华大学出版社）
+     </li>
+     <li>
+      “2024鸿蒙零基础快速实战-仿抖音App开发（ArkTS版）”（
+      <a href="https://coding.imooc.com/class/843.html" rel="nofollow" title="2024 鸿蒙零基础快速实战-仿抖音App开发（ ArkTS版 ）_实战课程_慕课网">
+       2024 鸿蒙零基础快速实战-仿抖音App开发（ ArkTS版 ）_实战课程_慕课网
+      </a>
+      ）
+     </li>
+     <li>
+      《鸿蒙HarmonyOS应用开发从入门到精通战（第2版）》（北京大学出版社）
+     </li>
+     <li>
+      《鸿蒙之光HarmonyOS NEXT原生应用开发入门》（清华大学出版社）
+     </li>
+    </ul>
+   </div>
+  </div>
+ </article>
+</div>
+
+

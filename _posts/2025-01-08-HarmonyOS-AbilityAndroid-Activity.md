@@ -1,0 +1,516 @@
+---
+layout: post
+title: HarmonyOS-AbilityAndroid-Activity
+date: 2025-01-08 09:56:50 +0800
+categories: [Harmony]
+tags: [移动开发,安卓,java,app,android]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=108686651
+    alt: HarmonyOS-AbilityAndroid-Activity
+artid: 108686651
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     HarmonyOS-Ability&amp;Android-Activity
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="_0">
+     </a>
+     概述
+    </h2>
+    <p>
+     HarmonyOS与Android免不了被比较，在应用开发层级中，尤其是HarmonyOS的Ability与Android的Activity定位很相似，由于Ability分类较多，篇幅有限，本文将简单介绍Page Ability与Activity的区别与联系。
+    </p>
+    <h3>
+     <a id="_2">
+     </a>
+     定义
+    </h3>
+    <ul>
+     <li>
+      Page Ability（以下简称“Page"）
+      <br/>
+      用于提供与用户交互的能力。一个应用可以由多个Page组成，一个Page可以由一个或多个AbilitySlice构成，AbilitySlice是指应用的单个页面及其控制逻辑的总和。
+     </li>
+     <li>
+      Activity
+      <br/>
+      用户与应用互动的入口点。一个应用可以由一个或多个Activity组成，一个Activity可以由零个，一个或多个Fragment构成。Fragment是FragmentActivity行为或界面的一部分。
+     </li>
+    </ul>
+    <h2>
+     <a id="_7">
+     </a>
+    </h2>
+    <h6>
+     <a id="_8">
+     </a>
+     共同：
+    </h6>
+    <ol>
+     <li>
+      两者均为用户与应用的交互入口。
+     </li>
+     <li>
+      均可以一个或多个组成应用。
+     </li>
+    </ol>
+    <h6>
+     <a id="_11">
+     </a>
+     区别：
+    </h6>
+    <p>
+     1.Ability：
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Ability</span> <span class="token keyword">extends</span> <span class="token class-name">AbilityContext</span> <span class="token keyword">implements</span> <span class="token class-name">ILifecycle</span> <span class="token punctuation">{<!-- --></span>
+   <span class="token keyword">public</span> <span class="token function">Ability</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     AbilitySlice:
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AbilitySlice</span> <span class="token keyword">extends</span> <span class="token class-name">AbilityContext</span> <span class="token keyword">implements</span> <span class="token class-name">ILifecycle</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">public</span> <span class="token function">AbilitySlice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">public</span> <span class="token keyword">final</span> Ability <span class="token function">getAbility</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     父类：
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Context</span> <span class="token punctuation">{<!-- --></span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span>
+</code></pre>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Context</span> <span class="token punctuation">{<!-- --></span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     两者都继承自AbilityContext,实现ILifecycle接口。而Android中Activity：
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppCompatActivity</span> <span class="token keyword">extends</span> <span class="token class-name">FragmentActivity</span> <span class="token keyword">implements</span> <span class="token class-name">AppCompatCallback</span><span class="token punctuation">,</span>
+        TaskStackBuilder<span class="token punctuation">.</span>SupportParentable<span class="token punctuation">,</span> ActionBarDrawerToggle<span class="token punctuation">.</span>DelegateProvider <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+        
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FragmentActivity</span> <span class="token keyword">extends</span> <span class="token class-name">ComponentActivity</span> <span class="token keyword">implements</span>
+        <span class="token class-name">ActivityCompat<span class="token punctuation">.</span>OnRequestPermissionsResultCallback</span><span class="token punctuation">,</span>
+        ActivityCompat<span class="token punctuation">.</span>RequestPermissionsRequestCodeValidator <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ComponentActivity</span> <span class="token keyword">extends</span> <span class="token class-name">androidx<span class="token punctuation">.</span>core<span class="token punctuation">.</span>app<span class="token punctuation">.</span>ComponentActivity</span> <span class="token keyword">implements</span>
+        <span class="token class-name">LifecycleOwner</span><span class="token punctuation">,</span>
+        ViewModelStoreOwner<span class="token punctuation">,</span>
+        HasDefaultViewModelProviderFactory<span class="token punctuation">,</span>
+        SavedStateRegistryOwner<span class="token punctuation">,</span>
+        OnBackPressedDispatcherOwner <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+        
+<span class="token annotation punctuation">@RestrictTo</span><span class="token punctuation">(</span>LIBRARY_GROUP_PREFIX<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ComponentActivity</span> <span class="token keyword">extends</span> <span class="token class-name">Activity</span> <span class="token keyword">implements</span>
+        <span class="token class-name">LifecycleOwner</span><span class="token punctuation">,</span>
+        KeyEventDispatcher<span class="token punctuation">.</span>Component <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Activity</span> <span class="token keyword">extends</span> <span class="token class-name">ContextThemeWrapper</span> <span class="token keyword">implements</span> <span class="token class-name">Factory2</span><span class="token punctuation">,</span> 
+        Callback<span class="token punctuation">,</span> android<span class="token punctuation">.</span>view<span class="token punctuation">.</span>KeyEvent<span class="token punctuation">.</span>Callback<span class="token punctuation">,</span> 
+        OnCreateContextMenuListener<span class="token punctuation">,</span> ComponentCallbacks2 <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+        
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ContextThemeWrapper</span> <span class="token keyword">extends</span> <span class="token class-name">ContextWrapper</span> <span class="token punctuation">{<!-- --></span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ContextWrapper</span> <span class="token keyword">extends</span> <span class="token class-name">Context</span> <span class="token punctuation">{<!-- --></span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Context</span> <span class="token punctuation">{<!-- --></span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     Fragment:
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Fragment</span> <span class="token keyword">implements</span> <span class="token class-name">ComponentCallbacks</span><span class="token punctuation">,</span> OnCreateContextMenuListener<span class="token punctuation">,</span> LifecycleOwner<span class="token punctuation">,</span>
+        ViewModelStoreOwner<span class="token punctuation">,</span> HasDefaultViewModelProviderFactory<span class="token punctuation">,</span> SavedStateRegistryOwner <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     Android中Activity与Fragment不太一样，相对于Activity，fragment轻量了不少，而AppCompatActivity具有多层父类，相对于Ability来讲，功能比较相对完善，但也复杂了不少。
+    </p>
+    <p>
+     2.虽然Page中可以由一个或多个AbilitySlice组成，Activity可以有零个，一个或多个Fragment，但是Page进入前台时界面默认只展示一个AbilitySlice。AlibitySlice对于Page是必不可少的，AlibitySlice更像是页面与页面，相互之间通过设置路由跳转，与Activity相似。Fragment是Android 在 Android 3.0（API 级别 11）中引入了的片段，主要目的是为大屏幕（如平板电脑）上更加动态和灵活的界面设计提供支持。由于平板电脑的屏幕尺寸远胜于手机屏幕尺寸，因而有更多空间可供组合和交换界面组件。Fragment更像是分页面，除了Activity本身的页面，还可以与一个或多个Fragment页面共显，提供更好的用户体验。Fragment是Activity的组件，AbilitySlice则是Page单个页面及其控制逻辑的总和。
+    </p>
+    <h2>
+     <a id="_94">
+     </a>
+     生命周期
+    </h2>
+    <p>
+     <img alt="生命周期" src="https://i-blog.csdnimg.cn/blog_migrate/389021f18bdf922accbbd2eafdcb06ca.png#pic_center">
+      <br/>
+      Ability生命周期：
+     </img>
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Lifecycle</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">public</span> <span class="token function">Lifecycle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addObserver</span><span class="token punctuation">(</span>ILifecycleObserver observer<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeObserver</span><span class="token punctuation">(</span>ILifecycleObserver observer<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> Lifecycle<span class="token punctuation">.</span>Event <span class="token function">getLifecycleState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Stub!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">enum</span> Event <span class="token punctuation">{<!-- --></span>
+        UNDEFINED<span class="token punctuation">,</span>
+        ON_START<span class="token punctuation">,</span>
+        ON_INACTIVE<span class="token punctuation">,</span>
+        ON_ACTIVE<span class="token punctuation">,</span>
+        ON_BACKGROUND<span class="token punctuation">,</span>
+        ON_FOREGROUND<span class="token punctuation">,</span>
+        ON_STOP<span class="token punctuation">;</span>
+
+        <span class="token keyword">private</span> <span class="token function">Event</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     Activity生命周期：
+    </p>
+    <pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Lifecycle</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token annotation punctuation">@RestrictTo</span><span class="token punctuation">(</span>RestrictTo<span class="token punctuation">.</span>Scope<span class="token punctuation">.</span>LIBRARY_GROUP<span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@NonNull</span>
+    AtomicReference<span class="token generics function"><span class="token punctuation">&lt;</span>Object<span class="token punctuation">&gt;</span></span> mInternalScopeRef <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AtomicReference</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@MainThread</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> LifecycleObserver observer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@MainThread</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">removeObserver</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> LifecycleObserver observer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@MainThread</span>
+    <span class="token annotation punctuation">@NonNull</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> State <span class="token function">getCurrentState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@SuppressWarnings</span><span class="token punctuation">(</span><span class="token string">"WeakerAccess"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">enum</span> Event <span class="token punctuation">{<!-- --></span>
+        ON_CREATE<span class="token punctuation">,</span>
+        ON_START<span class="token punctuation">,</span>
+        ON_RESUME<span class="token punctuation">,</span>
+        ON_PAUSE<span class="token punctuation">,</span>
+        ON_STOP<span class="token punctuation">,</span>
+        ON_DESTROY<span class="token punctuation">,</span>
+        ON_ANY
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@SuppressWarnings</span><span class="token punctuation">(</span><span class="token string">"WeakerAccess"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">enum</span> State <span class="token punctuation">{<!-- --></span>
+        DESTROYED<span class="token punctuation">,</span>
+        INITIALIZED<span class="token punctuation">,</span>
+        CREATED<span class="token punctuation">,</span>
+        STARTED<span class="token punctuation">,</span>
+        RESUMED<span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isAtLeast</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> State state<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+            <span class="token keyword">return</span> <span class="token function">compareTo</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     不管是流程图还是源代码，Ability和Activity的生命周期大致相同。
+    </p>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Ability
+       </th>
+       <th>
+        Activity
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        onStart()
+       </td>
+       <td>
+        onCreate(),onStart()
+       </td>
+      </tr>
+      <tr>
+       <td>
+        onActive()
+       </td>
+       <td>
+        onResume()
+       </td>
+      </tr>
+      <tr>
+       <td>
+        onInactive()
+       </td>
+       <td>
+        onPause()
+       </td>
+      </tr>
+      <tr>
+       <td>
+        onBackground()
+       </td>
+       <td>
+        onStop()
+       </td>
+      </tr>
+      <tr>
+       <td>
+        onForeground()
+       </td>
+       <td>
+        onRestart()
+       </td>
+      </tr>
+      <tr>
+       <td>
+        onStop()
+       </td>
+       <td>
+        onDestory()
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     虽部分生命周期名称可以对应，但是对于生命周期各阶段的具体定义存在很大不同：
+    </p>
+    <p>
+     1.创建。HarmonyOS首次创建Page实例时，触发onStart()。对于一个Page实例，该回调在其生命周期过程中仅触发一次，Page在调用onStart()后将进入INACTIVE状态。开发者必须重写该方法，并在此配置默认展示的AbilitySlice。
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span>Intent intent<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">setMainRoute</span><span class="token punctuation">(</span>FooSlice<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+    <p>
+     Android在系统首次创建 Activity 时onCreate()。Activity 会在创建后进入“已创建”状态。在 onCreate() 方法中，您需执行基本应用启动逻辑，该逻辑在 Activity 的整个生命周期中只应发生一次。用于将数据绑定到列表，进行相关关联，并实例化某些类作用域变量，或回复保存的状态。
+    </p>
+    <pre><code class="prism language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// recovering the instance state</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>savedInstanceState <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        gameState <span class="token operator">=</span> savedInstanceState<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>GAME_STATE_KEY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// set the user interface layout for this activity</span>
+    <span class="token comment">// the layout file is defined in the project res/layout/main_activity.xml file</span>
+    <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>main_activity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     2.可见。HarmonyOS Page调用onStart()后进入INACTIVE状态。Android中当 Activity 进入“已开始”状态时，系统会调用onStart() 。onStart() 调用使 Activity 对用户可见，因为应用会为 Activity 进入前台并支持互动做准备。此时只是可见，但不能与用户进行交互，应用通过此方法来初始化维护界面的代码。不管是哪种系统，此状态都是非常快速地完成，然后进入交互状态。
+    </p>
+    <pre><code class="prism language-java">   <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     3.交互。HarmonyOS Page会在进入INACTIVE状态后来到前台，然后系统调用onActive()。Page在此之后进入ACTIVE状态，该状态是应用与用户交互的状态。Page将保持在此状态，除非某类事件发生导致Page失去焦点，比如用户点击返回键或导航到其他Page。
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onActive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onActive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     Android Activity 会在进入“已恢复”状态时来到前台，然后系统调用 onResume() 回调。这时，生命周期组件可以启用在组件可见且位于前台时需要运行的任何功能。这是应用与用户互动的状态，应用会一直保持这种状态，直到某些事件发生，让焦点远离应用。此类事件包括接到来电、用户导航到另一个 Activity，或设备屏幕关闭。
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onResume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onResume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     4.失焦。HarmonyOS Page失去焦点时，系统将调用onInactive()，此后Page进入INACTIVE状态。开发者可以在此回调中实现Page失去焦点时应表现的恰当行为。此后，Page可能重新回到ACTIVE状态，系统将再次调用onActive()回调。因此，开发者通常需要成对实现onActive()和onInactive()，并在onActive()中获取在onInactive()中被释放的资源。
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onInactive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onInactive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     Android 用户将要离开Activity 的第一个标志（尽管这并不总是意味着 Activity 会被销毁）将调用onPause()；此方法表示 Activity 不再位于前台（尽管在用户处于多窗口模式时 Activity 仍然可见）。使用 onPause() 方法暂停或调整当 Activity 处于“已暂停”状态时不应继续（或应有节制地继续）的操作，以及希望很快恢复的操作。此时进入已暂停状态时，与 Activity 生命周期相关联的所有生命周期感知型组件都将收到 ON_PAUSE 事件。这时，生命周期组件可以停止在组件未位于前台时无需运行的任何功能。如果 Activity 及时恢复，系统将再次调用 onResume() 回调。如果 Activity 从“已暂停”状态返回“已恢复”状态，系统会让 Activity 实例继续驻留在内存中，并会在系统调用 onResume() 时重新调用该实例。在这种情况下，您无需重新初始化在任何回调方法导致 Activity 进入“已恢复”状态期间创建的组件。
+    </p>
+    <pre><code class="prism language-java">
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onPause</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onPause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     不管是哪种系统，此状态下不可交互，仍可能可见。
+     <br/>
+     5.不可见。HarmonyOS Page不再对用户可见，系统将调用此回调通知开发者用户进行相应的资源释放，此后Page进入BACKGROUND状态。开发者应该在此回调中释放Page不可见时无用的资源，或在此回调中执行较为耗时的状态保存操作。
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onBackground</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onBackground</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     Android Activity 不再对用户可见，说明其已进入“已停止”状态，因此系统将调用 onStop() 回调。例如，当新启动的 Activity 覆盖整个屏幕时，可能会发生这种情况。如果 Activity 已结束运行并即将终止，系统还可以调用 onStop()。当 Activity 进入已停止状态时，与 Activity 生命周期相关联的所有生命周期感知型组件都将收到 ON_STOP 事件。这时，生命周期组件可以停止在组件未显示在屏幕上时无需运行的任何功能。在 onStop() 方法中，应用应释放或调整在应用对用户不可见时的无用资源。
+    </p>
+    <pre><code class="prism language-java"> <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     6.重生。HarmonyOS 处于BACKGROUND状态的Page仍然驻留在内存中，当重新回到前台时（比如用户重新导航到此Page），系统将先调用onForeground()回调通知开发者，而后Page的生命周期状态回到INACTIVE状态。开发者应当在此回调中重新申请在onBackground()中释放的资源，最后Page的生命周期状态进一步回到ACTIVE状态，系统将通过onActive()回调通知开发者用户。
+    </p>
+    <pre><code class="prism language-java">   <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onForeground</span><span class="token punctuation">(</span>Intent intent<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onForeground</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre>
+    <p>
+     Android 用户快速返回，在Activity未被杀死的情况下，会调用onRestart()，然后调用onStart()，进入可见状态，再调用onResume()，进入交互状态，用户进行相关操作。
+    </p>
+    <pre><code class="prism language-java">
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onRestart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onRestart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     7.销毁。HarmonyOS 系统将要销毁Page时，将会触发onStop()，通知用户进行系统资源的释放。所有已实例化的AbilitySlice将联动销毁，而不仅是处于前台的AbilitySlice。
+    </p>
+    <pre><code class="prism language-java">  <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onStop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onStop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     Android 销毁 Ativity 之前，系统会先调用 onDestroy()。这时，生命周期组件可以在 Activity 被销毁之前清理所需的任何数据，释放所有资源。
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <h2>
+     <a id="_299">
+     </a>
+     小不同
+    </h2>
+    <p>
+     1.配置文件。Ability相关注册需要在config.json中注册。
+    </p>
+    <pre><code class="prism language-java"><span class="token punctuation">{<!-- --></span>
+    <span class="token string">"module"</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token string">"abilities"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{<!-- --></span>
+                <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                <span class="token string">"type"</span><span class="token operator">:</span> <span class="token string">"page"</span>
+                <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     Activity需要在AndroidManifest.xml中进行注册。
+    </p>
+    <pre><code class="prism language-java"><span class="token operator">&lt;</span>manifest xmlns<span class="token operator">:</span>android<span class="token operator">=</span><span class="token string">"http://schemas.android.com/apk/res/android"</span>
+    <span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"..."</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token operator">&lt;</span>application
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>&gt;
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>application<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>manifest<span class="token operator">&gt;</span>
+
+</code></pre>
+    <p>
+     2.添加布局。Ability：
+    </p>
+    <pre><code class="prism language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span>Intent intent<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 加载XML布局作为根布局</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">setUIContent</span><span class="token punctuation">(</span>ResourceTable<span class="token punctuation">.</span>Layout_first_layout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     Activity：
+    </p>
+    <pre><code class="prism language-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Nullable</span> Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+    <h2>
+     <a id="_349">
+     </a>
+     说明
+    </h2>
+    <ul>
+     <li>
+      本文中HarmonyOS相关素材来自于
+      <a href="https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ability-ability-overview-0000000000029852" rel="nofollow">
+       HarmonyOS Developer 开发文档
+      </a>
+      。
+     </li>
+     <li>
+      本文中Android相关素材来自于
+      <a href="https://developer.android.google.cn/guide/components/activities/activity-lifecycle#saras" rel="nofollow">
+       Android Developer 开发指南
+      </a>
+      。
+     </li>
+     <li>
+      若有侵权或错误，请发送邮件至alphabetadata@163.com。
+     </li>
+    </ul>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,160 @@
+---
+layout: post
+title: canvas之第19章-canvas游戏开发
+date: 2022-07-01 07:38:01 +0800
+categories: [整理,学习,canvas]
+tags: [前端,javascript,canvas]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=125401923
+    alt: canvas之第19章-canvas游戏开发
+artid: 125401923
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     《canvas》之第19章 canvas游戏开发
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      《canvas》之第19章 canvas游戏开发
+     </h4>
+     <ul>
+      <li>
+       <a href="#19_canvas_1" rel="nofollow">
+        第19章 canvas游戏开发
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#191_canvas_2" rel="nofollow">
+          19.1 canvas游戏开发简介
+         </a>
+        </li>
+        <li>
+         <a href="#192_Box2D_4" rel="nofollow">
+          19.2 Box2D简介
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#1921_Box2D_5" rel="nofollow">
+            19.2.1 Box2D
+           </a>
+          </li>
+          <li>
+           <a href="#1922_Box2DWeb_8" rel="nofollow">
+            19.2.2 Box2DWeb
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#193_html5_10" rel="nofollow">
+          19.3 html5游戏引擎
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="19_canvas_1">
+     </a>
+     第19章 canvas游戏开发
+    </h2>
+    <h3>
+     <a id="191_canvas_2">
+     </a>
+     19.1 canvas游戏开发简介
+    </h3>
+    <p>
+     网页游戏开发。
+    </p>
+    <h3>
+     <a id="192_Box2D_4">
+     </a>
+     19.2 Box2D简介
+    </h3>
+    <h4>
+     <a id="1921_Box2D_5">
+     </a>
+     19.2.1 Box2D
+    </h4>
+    <p>
+     C++物理引擎，遵循牛顿运动三大定律，衍生了JavaScript等版本。
+     <br/>
+     b2World是一个世界。
+    </p>
+    <h4>
+     <a id="1922_Box2DWeb_8">
+     </a>
+     19.2.2 Box2DWeb
+    </h4>
+    <p>
+     https://github.com/hecht-software/box2dweb
+    </p>
+    <h3>
+     <a id="193_html5_10">
+     </a>
+     19.3 html5游戏引擎
+    </h3>
+    <ol>
+     <li>
+      <p>
+       Cocos2d-JS
+       <br/>
+       Cocos2d-x的JavaScript版本，跨全平台。易于使用，高效，灵活，免费，社区支持等。
+      </p>
+     </li>
+     <li>
+      <p>
+       Egret
+       <br/>
+       TypeScript开发。
+      </p>
+     </li>
+     <li>
+      <p>
+       LayaAir
+       <br/>
+       性能更强。
+      </p>
+     </li>
+     <li>
+      <p>
+       Lufylegend
+       <br/>
+       不需要复杂配置，直接引用JavaScript文件。
+      </p>
+     </li>
+    </ol>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

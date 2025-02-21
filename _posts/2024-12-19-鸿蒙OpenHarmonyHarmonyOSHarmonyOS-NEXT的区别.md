@@ -1,0 +1,95 @@
+---
+layout: post
+title: 鸿蒙OpenHarmonyHarmonyOSHarmonyOS-NEXT的区别
+date: 2024-12-19 19:02:08 +0800
+categories: [鸿蒙]
+tags: [harmonyos]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=141597238
+    alt: 鸿蒙OpenHarmonyHarmonyOSHarmonyOS-NEXT的区别
+artid: 141597238
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     鸿蒙OpenHarmony、HarmonyOS、HarmonyOS NEXT的区别
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h3>
+     <a id="OpenHarmonyHarmonyOSHarmonyOS_NEXT_0">
+     </a>
+     鸿蒙OpenHarmony、HarmonyOS、HarmonyOS NEXT的区别
+    </h3>
+    <ul>
+     <li>
+      OpenHarmony：开源底层。
+     </li>
+     <li>
+      HarmonyOS：闭源手机系统，兼容安卓生态。
+     </li>
+     <li>
+      HarmonyOS NEXT：纯血鸿蒙，不兼容安卓。
+     </li>
+    </ul>
+    <h4>
+     <a id="OpenHarmony_5">
+     </a>
+     OpenHarmony（开源）
+    </h4>
+    <p>
+     开源地址：https://gitee.com/openharmony
+    </p>
+    <p>
+     OpenHarmony是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目，目标是面向全场景、全连接、全智能时代，基于开源的方式，搭建一个智能终端设备操作系统的框架和平台，促进万物互联产业的繁荣发展。
+    </p>
+    <h4>
+     <a id="HarmonyOS_10">
+     </a>
+     HarmonyOS（闭源）
+    </h4>
+    <p>
+     2012年，华为开始规划自研操作系统。 [10]2019年8月9日，华为HarmonyOS 1.0正式发布，在随后的几年内，鸿蒙系统陆续更新HarmonyOS 2.0、HarmonyOS 3.0、HarmonyOS 4.0几个大版本 。自2023年下半年始，华为鸿蒙系统开始转向软件生态，注重拓展鸿蒙原生应用 。
+    </p>
+    <p>
+     基于OpenHarmony和安卓（AOSP）打造的手机系统，包含UI界面，应用生态绑定安卓。
+    </p>
+    <p>
+     开发工具是DevEco Studio 版本，开发语言为Java，js等。
+    </p>
+    <h4>
+     <a id="HarmonyOS_NEXT_16">
+     </a>
+     HarmonyOS NEXT（闭源）
+    </h4>
+    <p>
+     2023年8月4日，华为推出HarmonyOS NEXT开发者预览版 。2024年1月18日，HarmonyOS NEXT星河版正式面向开发者开放申请。
+    </p>
+    <p>
+     在HarmonyOS基础上剔除安卓产品，不在兼容安卓，属于全新的手机系统，是鸿蒙系统的未来形态，也被称为纯血鸿蒙。。
+    </p>
+    <p>
+     开发工具也升级了到了DevEco Studio NEXT Developer Beta版本，开发语言变为ArkTs。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

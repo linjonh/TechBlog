@@ -1,0 +1,193 @@
+---
+layout: post
+title: JavaSE,JavaEE,JavaME区别
+date: 2024-12-12 11:12:16 +0800
+categories: [Java]
+tags: [Java三大版本]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=80612746
+    alt: JavaSE,JavaEE,JavaME区别
+artid: 80612746
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     JavaSE，JavaEE，JavaME区别
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div>
+     <span style="font-size:18px;">
+      <strong>
+       1.Java总共有三个版本：
+      </strong>
+     </span>
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     ①Java SE：标准版Java SE（Java Platform，Standard Edition）。JavaSE以前成为J2SE。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       它语序开发和部署在桌面，服务器，嵌入式环境和实时环境中使用Java应用程序
+      </strong>
+     </span>
+     。JavaSE包含了支持JavaWeb服务的开发的类，并为Java Platform,Enterprise Edition(Java EE)提供了基础。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     ②Java EE：企业版Java EE（Java Platform，Enterprise Edition）。这个版本以前成为J2EE。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       企业版本帮助开发和部署可移植，健壮，可伸缩切安全的服务器端Java应用程序
+      </strong>
+     </span>
+     。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     ③Java ME：微型版Java ME（Java Platform，Micro Edition）。这个版本以前称为J2ME。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       Java ME为在移动设备和嵌入式设备（笔记手机，PDA，电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境
+      </strong>
+     </span>
+     。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <span style="font-size:18px;">
+      <strong>
+       2.Java EE SDK 与 JDK的区别：
+      </strong>
+     </span>
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     Oracle官网有JavaSE JDK，有Java EE SDK，那么它们有什么区别呢？
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     SDK（Software Development Kit）
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       软件开发工具包，是一个相当广泛的名词
+      </strong>
+     </span>
+     ，
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       可以这么说辅助开发某一类软件的相关文档，范例和工具的集合都可以叫做“SDK”
+      </strong>
+     </span>
+     。SDK是一系列文件的组合，它为软件的开发提供了一个平台。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     JDK（Java Development Kit）Java 开发工具包，是针对Java开发的产品。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       JDK是SDK的一个子集
+      </strong>
+     </span>
+     ，因为它是开发java程序的一个平台，开发其他程序的SDK可以没有JDK。比如你下载了一个软件平台eclipse-SDK-3.2.2-win32.zip，它本身里面是没有JDK的。但是只要开发Java程序就必须使用JDK（Java EE和Java SE）。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <span style="font-size:18px;">
+      <span style="font-weight:bold;">
+       3.JDK 与 JRE 的区别：
+      </span>
+     </span>
+    </div>
+    <div>
+    </div>
+    <div>
+     <img alt="" height="500" src="https://i-blog.csdnimg.cn/blog_migrate/b54966ee3fbdf1d08cabd03e9f44c0a6.png" width="700">
+      <br/>
+     </img>
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       JRE(Java Runtime Enviroment)是Java的运行环境
+      </strong>
+     </span>
+     。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       面向Java程序的使用者，而不是开发者
+      </strong>
+     </span>
+     。如果你仅下载并安装了JRE，那么你的系统只能运行Java程序。JRE是运行Java程序所必须环境的集合，包含JVM标准实现及 Java核心类库。它包括Java虚拟机、Java平台核心类和支持文件。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       它不包含开发工具(编译器、调试器等)
+      </strong>
+     </span>
+     。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       JDK(Java Development Kit)又称J2SDK(Java2 Software Development Kit)，是Java开发工具包
+      </strong>
+     </span>
+     ，它提供了Java的开发环境(提供了编译器javac等工具，用于将java文件编译为class文件)和运行环境(提 供了JVM和Runtime辅助包，用于解析class文件使其得到运行)。如果你下载并安装了JDK，那么你不仅可以开发Java程序，也同时拥有了运行Java程序的平台。
+     <span style="color:rgb(255,24,1);">
+      <strong>
+       JDK是整个Java的核心，包括了Java运行环境(JRE)，一堆Java工具tools.jar和Java标准类库 (rt.jar)
+      </strong>
+     </span>
+     。
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <br/>
+    </div>
+    <div>
+     <br/>
+    </div>
+    <br/>
+   </div>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,110 @@
+---
+layout: post
+title: 华三服务器bios中查看硬盘,H3C服务器升级BIOS
+date: 2024-12-10 17:57:56 +0800
+categories: [服务器维护]
+tags: [服务器维护,固件更新,HDM管理,H3CUniServer,BIOS升级]
+image:
+    path: https://img-blog.csdnimg.cn/img_convert/7f52f1e9ea669d8787a831be20af4fb5.png?x-oss-process=image/resize,m_fixed,h_150
+    alt: 华三服务器bios中查看硬盘,H3C服务器升级BIOS
+artid: 119271602
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     华三服务器bios中查看硬盘,H3C服务器升级BIOS
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div style="font-size:16px;">
+     <p>
+      BIOS主要功能是为计算机提供最底层的、最直接的硬件设置和控制，服务器偶尔会出现难以用言语解释清楚的误报日志，一般情况下官方推荐的解决方案就是引导用户升级最新BIOS程序版本来解决相关问题。
+     </p>
+     <p>
+      实验环境
+     </p>
+     <p>
+      服务器：H3C UniServer R6900 G3
+     </p>
+     <p>
+      升级步骤
+     </p>
+     <p>
+      第一步查看HDM管理地址
+     </p>
+     <p>
+      服务器开机自检的过程中，在右上角可以看到HDM(H3C设备管理)的管理IP地址，默认IP地址为：192.168.1.2。
+     </p>
+     <p align="center">
+      <img alt="7f52f1e9ea669d8787a831be20af4fb5.png" src="https://i-blog.csdnimg.cn/blog_migrate/5558c71821252a09c985f32f12af4a7f.jpeg"/>
+     </p>
+     <p>
+      第二步修改本机IP地址
+     </p>
+     <p>
+      把电脑网线接入服务器背板的管理端口(HDM)，并把IP地址修改为和管理面板同一个网段，确保电脑可以和服务器管理面板正常通信。
+     </p>
+     <p>
+      第三步登陆管理面板
+     </p>
+     <p>
+      打开浏览器访问：https://192.168.1.2，默认用户名为admin，密码为Password@_
+     </p>
+     <p align="center">
+      <img alt="1f461f29acd44a95821c1b746f08cccc.png" src="https://i-blog.csdnimg.cn/blog_migrate/7c5c85845a814a1af44cd23c2965ebde.png"/>
+     </p>
+     <p>
+      第四步查看当前BIOS版本
+     </p>
+     <p>
+      进入HDM管理页面后，依次点击概况-整体概况，查看BIOS固件版本。如下图，当前版本是1.00.18。
+     </p>
+     <p align="center">
+      <img alt="ba9ad658587e42b3eeaecf13216a4e08.png" src="https://i-blog.csdnimg.cn/blog_migrate/ead7d284ecf1ac447356b3b276b7c225.png"/>
+     </p>
+     <p>
+      第五步下载固件
+     </p>
+     <p>
+      依次点击维护-固件更新，固件类型选择BIOS，载入最新固件程序，按需勾选更新后手动重启。如果固件版本跳跃不是很大，建议不勾选覆盖所有配置。
+     </p>
+     <p align="center">
+      <img alt="d5a0af4f5f5ae85081f06b49b2f5882b.png" src="https://i-blog.csdnimg.cn/blog_migrate/5039fe034a177c636b42c9867efa5a3f.png"/>
+     </p>
+     <p>
+      第六步固件更新
+     </p>
+     <p>
+      设备会对固件程序进行校验，验证通过后提示最新固件版本，确认无误后点击下一步。注意，固件烧录过程中，服务器风扇转速加快，声音会特别大，属于正常情况。
+     </p>
+     <p align="center">
+      <img alt="f9ed9bc3cb604798e799075db8732966.png" src="https://i-blog.csdnimg.cn/blog_migrate/ddd231e9512d6fafeaa057c9ea1fcefe.png"/>
+     </p>
+     <p>
+      第七步重启服务器
+     </p>
+     <p>
+      重启后再次登陆HDM确认BIOS版本，如下图，当前版本已是1.00.19。
+     </p>
+     <p align="center">
+      <img alt="6203891f3d9bc9cd957694076b6d3976.png" src="https://i-blog.csdnimg.cn/blog_migrate/7770c94e8e320ba77e8b23d5e5001012.png"/>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div id="recommendDown">
+  </div>
+ </article>
+</div>
+
+

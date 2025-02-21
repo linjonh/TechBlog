@@ -1,0 +1,226 @@
+---
+layout: post
+title: java-保存file_java保存文件
+date: 2023-09-19 07:00:00 +0800
+categories: [java保存file]
+tags: [java保存file]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=114069143
+    alt: java-保存file_java保存文件
+artid: 114069143
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     java 保存file_java保存文件
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div style="font-size:16px;">
+     <p>
+      package com.singlee.util;
+     </p>
+     <p>
+      import java.io.File;
+     </p>
+     <p>
+      import java.io.IOException;
+     </p>
+     <p>
+      import java.text.SimpleDateFormat;
+     </p>
+     <p>
+      import java.util.Date;
+     </p>
+     <p>
+      import java.util.Random;
+     </p>
+     <p>
+      import org.apache.commons.io.FileUtils;
+     </p>
+     <p>
+      /**
+     </p>
+     <p>
+      * 保存文件到服务器
+     </p>
+     <p>
+      *
+     </p>
+     <p>
+      * @author mingzl
+     </p>
+     <p>
+      *
+     </p>
+     <p>
+      */
+     </p>
+     <p>
+      public class SaveFile {
+      <!-- -->
+     </p>
+     <p>
+      /**
+     </p>
+     <p>
+      * 改名称的方法，(新名称=原名称+_+年月日时分秒时间+_+八位随机数)
+     </p>
+     <p>
+      *
+     </p>
+     <p>
+      * @param oldname
+     </p>
+     <p>
+      * 原名称
+     </p>
+     <p>
+      * @return newName 新名称
+     </p>
+     <p>
+      */
+     </p>
+     <p>
+      public String changName(String oldName) {
+      <!-- -->
+     </p>
+     <p>
+      // 第一步：得到系统时间
+     </p>
+     <p>
+      SimpleDateFormat ff = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss");
+     </p>
+     <p>
+      Date d = new Date();
+     </p>
+     <p>
+      String time = ff.format(d);
+     </p>
+     <p>
+      // 第二步：得到一个随机数
+     </p>
+     <p>
+      int rad = new Random().nextInt(900000000);
+     </p>
+     <p>
+      // 第三步：得到原文件的后缀名如:.jpg .doc .txt
+     </p>
+     <p>
+      String lastName = oldName.substring(oldName.lastIndexOf("."));
+     </p>
+     <p>
+      // 第四步：拼装新名(保证唯一性)
+     </p>
+     <p>
+      String newName = oldName + "_" + time + "_" + rad + lastName;
+     </p>
+     <p>
+      System.out.println("文件新名称：" + newName);
+     </p>
+     <p>
+      return newName;
+     </p>
+     <p>
+      }
+     </p>
+     <p>
+      /**
+     </p>
+     <p>
+      * 保存文件
+     </p>
+     <p>
+      *
+     </p>
+     <p>
+      * @param file
+     </p>
+     <p>
+      * 保存的文件
+     </p>
+     <p>
+      * @param filename
+     </p>
+     <p>
+      * 保存文件的名称(参考)
+     </p>
+     <p>
+      * @param savepath
+     </p>
+     <p>
+      * 文件保存的路径
+     </p>
+     <p>
+      * @param saveasnewname
+     </p>
+     <p>
+      * 是否以新名字保存
+     </p>
+     <p>
+      * @return boolean (true:保存成功;false:保存失败)
+     </p>
+     <p>
+      */
+     </p>
+     <p>
+      public boolean save(File file, String filename, String savepath,
+     </p>
+     <p>
+      boolean saveasnewname) {
+      <!-- -->
+     </p>
+     <p>
+      filename = saveasnewname ? changName(filename) : filename;
+     </p>
+     <p>
+      File f = new File(savepath, filename);
+     </p>
+     <p>
+      try {
+      <!-- -->
+     </p>
+     <p>
+      FileUtils.copyFile(file, f);
+     </p>
+     <p>
+      } catch (IOException e) {
+      <!-- -->
+     </p>
+     <p>
+      e.printStackTrace();
+     </p>
+     <p>
+      return false;
+     </p>
+     <p>
+      }
+     </p>
+     <p>
+      return true;
+     </p>
+     <p>
+      }
+     </p>
+     <p>
+      }
+     </p>
+    </div>
+   </div>
+  </div>
+  <div id="recommendDown">
+  </div>
+ </article>
+</div>
+
+

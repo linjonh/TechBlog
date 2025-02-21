@@ -1,0 +1,11207 @@
+---
+layout: post
+title: Unity小游戏算法分析与实现UnityXR游戏开发算法MVC斗地主耳轮跳见缝插针王者荣耀绝地求生立钻哥哥
+date: 2024-12-24 14:48:41 +0800
+categories: [Unity项目案例]
+tags: [算法分析,立钻哥哥,斗地主,XR游戏开发,Unity]
+image:
+    path: https://img-blog.csdnimg.cn/20190224214829258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSdW5Tb2Z0WWFubHo=,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
+    alt: Unity小游戏算法分析与实现UnityXR游戏开发算法MVC斗地主耳轮跳见缝插针王者荣耀绝地求生立钻哥哥
+artid: 87908365
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Unity小游戏算法分析与实现（Unity+XR+游戏开发+算法+MVC+斗地主+耳轮跳+见缝插针+王者荣耀+绝地求生+立钻哥哥+==）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h2>
+     <strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         《
+        </strong>
+       </span>
+      </strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         Unity小游戏算法分析与实现
+        </strong>
+       </span>
+      </strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         》
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h2>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h2>
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            《
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            Unity小游戏算法分析与实现
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            》
+           </strong>
+          </span>
+         </strong>
+        </h2>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:171.5pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            版本
+           </strong>
+          </span>
+         </strong>
+        </p>
+       </td>
+       <td style="width:58.75pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            作者
+           </strong>
+          </span>
+         </strong>
+        </p>
+       </td>
+       <td style="width:62.5pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            参与者
+           </strong>
+          </span>
+         </strong>
+        </p>
+       </td>
+       <td style="width:75.8pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            完成日期
+           </strong>
+          </span>
+         </strong>
+        </p>
+       </td>
+       <td style="width:57.55pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ffc000;">
+           <strong>
+            备注
+           </strong>
+          </span>
+         </strong>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td style="width:171.5pt;">
+        <p style="margin-left:0pt;">
+         Unity2017_GameDemo_V01_1.0
+        </p>
+       </td>
+       <td style="width:58.75pt;">
+        <p style="margin-left:0pt;">
+         严立钻
+        </p>
+       </td>
+       <td style="width:62.5pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+       <td style="width:75.8pt;">
+        <p style="margin-left:0pt;">
+         2019.02.24
+        </p>
+       </td>
+       <td style="width:57.55pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td style="width:171.5pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+       <td style="width:58.75pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+       <td style="width:62.5pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+       <td style="width:75.8pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+       <td style="width:57.55pt;">
+        <p style="margin-left:0pt;">
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <strong>
+       ##《Unity小游戏算法分析与实现》发布说明：
+      </strong>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        “Unity小游戏算法分析与实现”：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0070c0;">
+      是对“Unity小游戏算法分析与实现”的一个了解，Unity的应用很广，选择小游戏为切入点是因为麻雀虽小五脏俱全；当然到目前为止，中心主题是“XR游戏开发”，所以在选择Unity引擎后，对于游戏的相关了解是另一个重要的领域，当然我们最终目标是实现XR（VR、AR、MR）开发，这里只是借鉴小游戏开发思路和算法，快速提升游戏开发与设计水平
+     </span>
+     ；
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        “Unity小游戏算法分析与实现”：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0070c0;">
+      定位在一个科普类知识，让大家熟悉一下Unity经典小游戏中的算法分析与实现
+     </span>
+     ！
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <strong>
+       ##《Unity小游戏算法分析与实现》目录
+      </strong>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        #第一篇：Unity小游戏介绍篇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        #第二篇：Unity小游戏实战篇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        #第三篇：Unity中XR游戏实战篇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        #第四篇：Unity中游戏进阶篇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        #第五篇：立钻哥哥对Unity游戏开发的拓展
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        #推广：
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#7f7f7f;">
+       <strong>
+        【XR游戏开发QQ群：784477094】
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <img alt="" class="has" height="790" src="https://i-blog.csdnimg.cn/blog_migrate/45eb4ea3f7803e368c102d6321235e56.png" width="1135"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h2>
+     <strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         #第一篇：Unity小游戏介绍篇
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h2>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h2>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            #第一篇：Unity小游戏介绍篇
+           </strong>
+          </span>
+         </strong>
+        </h2>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        #第一篇：Unity小游戏介绍篇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        小游戏，一个是
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ，一个是小游戏，这就是知识点；一个是为什么选择
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ：该引擎是目前世界范围内使用最广泛的游戏开发与虚拟现实开发平台之一；一个是小游戏：借鉴经典小游戏开发思路和算法，快速提升游戏开发与设计水平
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        A.1、Unity引擎认知
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        A.2、经典小游戏认知
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        A.3、立钻哥哥对Unity中小游戏的拓展
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <img alt="" class="has" height="610" src="https://i-blog.csdnimg.cn/blog_migrate/10045f0c409497c99ea412f630cf676b.png" width="1194"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h3>
+     <strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         ##A.1、Unity引擎认知
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h3>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h3>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            ##A.1、Unity引擎认知
+           </strong>
+          </span>
+         </strong>
+        </h3>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++A.1、Unity引擎认知
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        引擎的认知，对于
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        的介绍非常多，已经有很多专题介绍过了；
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ++++这里比较推荐一个专题就是：“
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ”，这个虽然不是针对程序员开发者进阶篇，但是已经足以让我们认知
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        世界了
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训分类：
+       </strong>
+      </span>
+     </strong>
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/category/8037810">
+      <u>
+       <span style="color:#0c0c0c;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/category/8037810
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（目录）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82634668">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82634668
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        第1讲：Unity中C#基础
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82634733">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82634733
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        第2讲：Unity引擎基础
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82861180">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82861180
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        第3讲：Unity组件开发
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82927699">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82927699
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        第4讲：Unity物理系统
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83479776">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83479776
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        第5讲：UGUI
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83963811">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83963811
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        第6讲：Unity动画系统
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/84207696">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/84207696
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++A.1.1、熟悉Unity引擎的操作
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        是一个让用户轻松创建各种类型游戏和虚拟现实等互动内容的多平台综合型开发工具；
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        游戏引擎提供的功能日益完善，从单机游戏到网络游戏，从
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PC
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        到移动设备，从游戏到
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VR
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        、
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        AR
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        和体感游戏，其可扩展性、易用性、性价比等方面都吸引着越来越多的开发者投身到使用
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        游戏开发中
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++A.1.2、Unity游戏引擎的下载和安装
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        引擎下载：
+       </strong>
+      </span>
+     </strong>
+     <a href="https://unity3d.com/cn/get-unity/download/archive?_ga=2.57718698.1613897683.1551012011-303951547.1551012011" rel="nofollow">
+      <u>
+       <span style="color:#0c0c0c;">
+        <u>
+         https://unity3d.com/cn/get-unity/download/archive?_ga=2.57718698.1613897683.1551012011-303951547.1551012011
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        立钻哥哥Unity学习空间：
+       </strong>
+      </span>
+     </strong>
+     <a href="http://blog.csdn.net/VRunSoftYanlz/">
+      <u>
+       <span style="color:#800080;">
+        <u>
+         http://blog.csdn.net/VRunSoftYanlz/
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        Unity圣典用户手册：
+       </strong>
+      </span>
+     </strong>
+     <a href="http://www.ceeger.com/Manual/" rel="nofollow">
+      <u>
+       <span style="color:#800080;">
+        <u>
+         http://www.ceeger.com/Manual/
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        Unity官网：
+       </strong>
+      </span>
+     </strong>
+     <a href="https://unity3d.com/cn/" rel="nofollow">
+      <u>
+       <span style="color:#800080;">
+        <u>
+         https://unity3d.com/cn/
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        Unity引擎下载：
+       </strong>
+      </span>
+     </strong>
+     <a href="https://unity3d.com/cn/get-unity/download/archive?_ga=2.57718698.1613897683.1551012011-303951547.1551012011" rel="nofollow">
+      <u>
+       <span style="color:#0c0c0c;">
+        <u>
+         https://unity3d.com/cn/get-unity/download/archive?_ga=2.57718698.1613897683.1551012011-303951547.1551012011
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p>
+     <img alt="" class="has" height="793" src="https://i-blog.csdnimg.cn/blog_migrate/3197c18a08cf8872cb5360161b16b2de.png" width="994"/>
+    </p>
+    <p>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++A.1.3、Unity中定义的重要概念
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        要掌握
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        引擎的用法，对一些概念是必须清楚的，不然就没法继续认知和交流学习了
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [资源（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Assets
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      在
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      游戏的制作开发过程中，需要用到各种各样的资源，这些资源包括模型、贴图、声音、程序脚本等；在
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      中，可以把资源（
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Assets
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      ）比喻成游戏制作过程中的原材料，通过原材料的不同组合和利用，便形成了一个游戏产品
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [工程（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Project
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      在
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      中，工程就是一个游戏项目；这个工程包括了该游戏场景所需要的各种资源，还有关卡、场景和游戏对象等
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [场景（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Scenes
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      场景可以想象成一个游戏界面，或者一个游戏关卡
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [游戏对象（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        GameObject
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      游戏对象是组成游戏场景必不可少的对象
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [组件（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Component
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      组件是
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      中用于控制游戏对象属性的集合；每一个组件包括了游戏对象的某种特定的功能属性
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [脚本（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Scripts
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      互动性是游戏的最基本特征之一，而程序脚本是实现可互动性的最有利的工具；在编写游戏脚本的时候，不用关心
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      的底层原理，只要调用
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      的
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        API
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      ，就可以完成出色的游戏产品
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [预制体（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Prefabs
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        ）]：
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      提供的一种保存可反复利用设置好属性和行为的一种机制；Prefab可以在不同的地方不同的场景重复使用这些保存了的设置
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h3>
+     <strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         ##A.2、经典小游戏认知
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h3>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h3>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            ##A.2、经典小游戏认知
+           </strong>
+          </span>
+         </strong>
+        </h3>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++A.2、经典小游戏认知
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        对于小游戏的总结，先前也有“
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        U3D小项目参考
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ”，这里汇总了一些Unity小案例，也是一个不错的参考；那为什么，还需要再增加一个经典小游戏的认知呢？ 好吧，那就跟着立钻哥哥来看看到底有什么不同吧！（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <em>
+       <span style="color:#ff0000;">
+        <strong>
+         <em>
+          提示：增加了思路和算法分析
+         </em>
+        </strong>
+       </span>
+      </em>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ，还有... ...）
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        U3D小项目参考：
+       </strong>
+      </span>
+     </strong>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/80141811">
+      <u>
+       <span style="color:#0c0c0c;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/80141811
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p>
+     <img alt="" class="has" height="880" src="https://i-blog.csdnimg.cn/blog_migrate/a9e23e41eb8180709028530dda102877.png" width="641"/>
+    </p>
+    <p>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++经典小游戏拓展
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        在这篇博客中，我们将借鉴经典小游戏开发思路和算法，快速提升游戏开发与设计水平
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#385623;">
+      增加的经典小游戏有：打地鼠、俄罗斯方块、打砖块、三消、翻牌子、连连看、拼图、推箱子、炸弹人、华容道、横版跑酷、扫雷、贪吃蛇、五子棋、跳棋、吃豆人、斗地主、坦克大战、王者荣耀、绝地求生等
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#385623;">
+      还会推广实战至
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VR
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      领域，为什么？（我们最终的目的是“
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        XR游戏开发
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      ”，这是主战场，一个充满机遇的主题）
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#385623;">
+      ++++为此，我们还组建了一个XR游戏开发QQ群（
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        784477094
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      ），欢迎加入，讨论学习；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <h2>
+     <strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         #第二篇：Unity小游戏实战篇
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h2>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h2>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            #第二篇：Unity小游戏实战篇
+           </strong>
+          </span>
+         </strong>
+        </h2>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        #第二篇：Unity小游戏实战篇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        借鉴经典小游戏
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <em>
+       <span style="color:#ff0000;">
+        <strong>
+         <em>
+          开发思路
+         </em>
+        </strong>
+       </span>
+      </em>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        和
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <em>
+       <span style="color:#ff0000;">
+        <strong>
+         <em>
+          算法
+         </em>
+        </strong>
+       </span>
+      </em>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ，快速提升游戏开发与设计水平
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.1、MVC框架（提升等级案例）
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.2、打地鼠
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.3、俄罗斯方块
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.4、打砖块
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.5、三消
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.6、翻牌子
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.7、连连看
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.8、拼图
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.9、推箱子
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.10、炸弹人
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.11、华容道
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.12、横版跑酷
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.13、扫雷
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.14、贪吃蛇
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.15、五子棋
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.16、跳棋
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.17、吃豆人
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.18、斗地主
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.19、坦克大战
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.20、塔防
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.21、秘密行动
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.22、耳轮跳
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.23、飞机大战
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.24、见缝插针
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.25、切水果
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <img alt="" class="has" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/91d49bb4cff17028835049b2e9974059.png" width="1142"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.1、MVC框架（提升等级案例）
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.1、MVC框架（提升等级案例）
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.1、MVC框架（提升等级案例）
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        MVC
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        （
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Model View Controller
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ），是模型（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Model
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ）-视图（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        View
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ）-控制器（
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Controller
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ）的缩写，一种软件设计典范：用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        不同的开发人员可同时开发视图、控制器逻辑和业务逻辑
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Model
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        （模型）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      表示应用程序核心；是应用程序中用于处理应用程序数据逻辑的部分
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        View
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        （视图）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      显示数据；是应用程序中处理数据显示的部分
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Controller
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        （控制器）]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      处理输入；是应用程序中处理用户交互的部分
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#385623;">
+      B.1.1、[
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        PlayerMsgContrller
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      .cs]
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#385623;">
+      B.1.2、[
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        PlayerMsgView
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      .cs]
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#385623;">
+      B.1.3、[
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        PlayerScript
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      .cs]
+     </span>
+    </p>
+    <p>
+     <img alt="" class="has" height="388" src="https://i-blog.csdnimg.cn/blog_migrate/7a15c4585a00d76ea7220c44366e8498.png" width="887"/>
+    </p>
+    <p>
+     <img alt="" class="has" height="635" src="https://i-blog.csdnimg.cn/blog_migrate/34a6a278dff49cd4bc85dfdfe6b42303.png" width="1128"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.1.1、[PlayerMsgContrller.cs]
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.1.1、[PlayerMsgContrller.cs]
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.1.1、[PlayerMsgContrller.cs]
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <span style="color:#0070c0;">
+      /YanlzMVCDemo/Assets/MVCDemo/
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PlayerMsgController
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0070c0;">
+      .cs
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Generic
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：Controller层
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerMsgController
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            static
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerMsgController
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          controller
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          levelUpValue
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          20
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Awake
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          controller
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            this
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Start
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerLevel
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          1
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerExperience
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          100
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          GoldNum
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：提升经验按钮点击事件
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            OnExperienceUpButtonClick
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerExperience
+         </span>
+         <span style="color:#7030a0;">
+          +=
+         </span>
+         <span style="color:#0070c0;">
+          levelUpValue
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerExperience
+         </span>
+         <span style="color:#7030a0;">
+          &gt;=
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerLevel
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          1
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerFullExperience
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          200
+         </span>
+         <span style="color:#7030a0;">
+          *
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerLevel
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          levelUpValue
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          20
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerLevel
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            %
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            ==
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          GoldNum
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          100
+         </span>
+         <span style="color:#7030a0;">
+          *
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          PlayerLevel
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：if(){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public void OnExperienceUpButtonClick(){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class PlayerMsgController:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.1.2、[PlayerMsgView.cs]
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.1.2、[PlayerMsgView.cs]
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.1.2、[PlayerMsgView.cs]
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <span style="color:#0070c0;">
+      /YanlzMVCDemo/Assets/MVCDemo/
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PlayerMsgView
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0070c0;">
+      .cs
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Generic
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UI
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：UI视图层
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayMsgView
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Text
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerLevel
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Text
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Text
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          goldNum
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Button
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          experienceUpButton
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Start
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：委托事件绑定
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          OnLevelChange
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          SetLevel
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          OnExperienceChange
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          SetExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          OnFullExperienceChange
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          SetFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ().
+         </span>
+         <span style="color:#0070c0;">
+          OnGlodNumChange
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          SetGoldNum
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：View绑定按钮控制功能（添加观察者）
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          experienceUpButton
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          onClick
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            AddListener
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerMsgController
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          controller
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          OnExperienceUpButtonClick
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：void Start(){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：修改UILevel值
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            SetLevel
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          level
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          playerLevel
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          level
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            ToString
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：修改UI经验值
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            SetExperience
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          experience
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：将字符串以“/”拆开
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            string
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          []
+         </span>
+         <span style="color:#0070c0;">
+          str
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Split
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new char
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          []{
+          <!-- -->
+         </span>
+         <span style="color:#c00000;">
+          ‘
+         </span>
+         <span style="color:#c00000;">
+          /
+         </span>
+         <span style="color:#c00000;">
+          ’
+         </span>
+         <span style="color:#7030a0;">
+          });
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            SetFullExperience
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          fullExperience
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            string
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          []
+         </span>
+         <span style="color:#0070c0;">
+          str
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Split
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new char
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          []{
+          <!-- -->
+         </span>
+         <span style="color:#c00000;">
+          ‘
+         </span>
+         <span style="color:#c00000;">
+          /
+         </span>
+         <span style="color:#c00000;">
+          ’
+         </span>
+         <span style="color:#7030a0;">
+          });
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          str
+         </span>
+         <span style="color:#7030a0;">
+          [] +
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          /
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          fullExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            SetGoldNum
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          goldn
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          goldNum
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          goldn
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            ToString
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class PlayMsgView:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.1.3、[PlayerScript.cs]
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.1.3、[PlayerScript.cs]
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.1.3、[PlayerScript.cs]
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <span style="color:#0070c0;">
+      /YanlzMVCDemo/Assets/MVCDemo/
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PlayerScript
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0070c0;">
+      .cs
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Generic
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：模型委托（当用户信息发生变化时执行）
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            delegate void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7f6000;">
+           <strong>
+            OnValueChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          val
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerLevel
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //玩家等级
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //玩家经验
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //玩家升级经验
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          goldNum
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //金币数量
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：声明委托对象
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7f6000;">
+           <strong>
+            OnValueChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#385623;">
+          OnLevelChange
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //当等级发生变化时，触发的事件
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7f6000;">
+           <strong>
+            OnValueChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#385623;">
+          OnExperienceChange
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //当经验发生变化时，触发的事件
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7f6000;">
+           <strong>
+            OnValueChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#385623;">
+          OnFullExperienceChange
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //当升级经验发生变化时
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7f6000;">
+           <strong>
+            OnValueChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#385623;">
+          OnGoldNumChange
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //当金币数量发生变化时
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private static
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          mod
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#7f7f7f;">
+          //单例
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            static
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript GetMod
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          null
+         </span>
+         <span style="color:#7030a0;">
+          ==
+         </span>
+         <span style="color:#0070c0;">
+          mod
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          mod
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            return
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          mod
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerScript
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：玩家等级属性
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerLevel
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            get
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            return
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerLevel
+         </span>
+         <span style="color:#7030a0;">
+          ;  }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            set
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <span style="color:#0070c0;">
+          playerLevel
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          value
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          OnLevelChange
+         </span>
+         <span style="color:#7030a0;">
+          !=
+         </span>
+         <span style="color:#c00000;">
+          null
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：如果委托对象不为空
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#385623;">
+           <strong>
+            OnLevelChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          playerLevel
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+         <span style="color:#7f7f7f;">
+          //执行委托
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：玩家经验属性
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerExperience
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            get
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            return
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;  }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            set
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          value
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          OnExperienceChange
+         </span>
+         <span style="color:#7030a0;">
+          !=
+         </span>
+         <span style="color:#c00000;">
+          null
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#385623;">
+           <strong>
+            OnExperienceChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          playerExperience
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：玩家升级经验属性
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            PlayerFullExperience
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            get
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            return
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          playerFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          ;  }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            set
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <span style="color:#0070c0;">
+          playerFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          value
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          OnFullExperienceChange
+         </span>
+         <span style="color:#7030a0;">
+          !=
+         </span>
+         <span style="color:#c00000;">
+          null
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#385623;">
+           <strong>
+            OnFullExperienceChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          playerFullExperience
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：金币数量属性
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GoldNum
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            get
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            return
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          goldNum
+         </span>
+         <span style="color:#7030a0;">
+          ;  }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            set
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+         </span>
+         <span style="color:#0070c0;">
+          goldNum
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          value
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          OnGoldNumChange
+         </span>
+         <span style="color:#7030a0;">
+          !=
+         </span>
+         <span style="color:#c00000;">
+          null
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#385623;">
+           <strong>
+            OnGoldNumChange
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          goldNum
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class PlayerScript{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h3>
+     <strong>
+      <strong>
+       <span style="color:#7030a0;">
+        <strong>
+         ##B.2、打地鼠
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h3>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h3>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            ##B.2、打地鼠
+           </strong>
+          </span>
+         </strong>
+        </h3>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.2、打地鼠
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        《打地鼠》这款游戏能够提高人体大脑和身体的协调能力，增强臂力，锻炼身体，深受大众的喜欢
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.2.1、游戏认知
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.2.2、游戏开发
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        B.2.3、立钻哥哥对打地鼠的拓展
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p>
+     <img alt="" class="has" height="718" src="https://i-blog.csdnimg.cn/blog_migrate/20e6f4d0602a8d0e7791504216364045.png" width="1045"/>
+    </p>
+    <p>
+     <img alt="" class="has" height="791" src="https://i-blog.csdnimg.cn/blog_migrate/03ad58e950c56388640850e59bccdff0.png" width="907"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.2.1、游戏认知
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.2.1、游戏认知
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.2.1、游戏认知
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        《
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        打地鼠
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        》（原名：
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <em>
+       <span style="color:#ff0000;">
+        <strong>
+         <em>
+          Whac-A-Mole
+         </em>
+        </strong>
+       </span>
+      </em>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        ），在游戏中，玩家在规定时间内，敲打一只只从地洞里冒出头的地鼠，从而获得游戏胜利
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#385623;">
+      地鼠随机出现在洞口，玩家要在它出现的时候击中它，击中加分，反之地鼠会自动消失，时间耗尽则游戏结束；随着游戏时间的减少，老鼠出现的频率越来越高，存在的时间也越来越短，游戏难度逐步上升
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p>
+     <img alt="" class="has" height="1036" src="https://i-blog.csdnimg.cn/blog_migrate/eee70de176b02d65945144f6a8de1e90.png" width="1200"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.2.2、游戏开发
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.2.2、游戏开发
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++B.2.2、游戏开发
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        《
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        打地鼠
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        》主要的业务逻辑有：洞口的排列；地鼠出现频率；单个地鼠设置；游戏时间和分数
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [洞口的排列]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      利用一个3*3的二维数组或者一个一维数组来表示地图中的9个洞口
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [地鼠出现频率]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      利用改变随机数的取值范围来控制地鼠出现的频率和个数
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [单个地鼠设置]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      在地鼠上设置鼠标监听以及计时器
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#385623;">
+       <strong>
+        [游戏时间和分数]：
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#385623;">
+      利用整型变量记录游戏时长以及分数
+     </span>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#843c0b;">
+      2.2.1、
+     </span>
+     <strong>
+      <span style="color:#843c0b;">
+       <strong>
+        YanlzMole_Beaten
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#843c0b;">
+      .cs
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#843c0b;">
+      2.2.2、
+     </span>
+     <strong>
+      <span style="color:#843c0b;">
+       <strong>
+        YanlzMole_ChangeCursor
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#843c0b;">
+      .cs
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#843c0b;">
+      2.2.3、
+     </span>
+     <strong>
+      <span style="color:#843c0b;">
+       <strong>
+        YanlzMole_GameControl
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#843c0b;">
+      .cs
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#843c0b;">
+      2.2.4、
+     </span>
+     <strong>
+      <span style="color:#843c0b;">
+       <strong>
+        YanlzMole_Gophers
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#843c0b;">
+      .cs
+     </span>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++
+     </span>
+     <span style="color:#843c0b;">
+      2.2.5、
+     </span>
+     <strong>
+      <span style="color:#843c0b;">
+       <strong>
+        YanlzMole_Restart
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#843c0b;">
+      .cs
+     </span>
+    </p>
+    <p>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++2.2.1、YanlzMole_Beaten.cs
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        WhacAMole\Assets\YanlzDemo\
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        YanlzMole_Beaten.cs
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Generic
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：地鼠被击打以后调用该函数；
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_Beaten
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：在点击后3.5s销毁该地鼠，将洞口的isAppear值设置为false
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Update
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Destroy
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          gameObject
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          0.35f
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            FindObjectOfType
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_GameControl
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;().
+         </span>
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          isAppear
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class YanlzMole_Beaten:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++2.2.2、YanlzMole_ChangeCursor.cs
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        WhacAMole\Assets\YanlzDemo\
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        YanlzMole_ChangeCursor.cs
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：鼠标追踪
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_ChangeCursor
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Texture2D
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          UserCursor
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Texture2D
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          UserClickCursor
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            private bool
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          isClicked
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Start
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：在游戏界面内隐藏系统光标
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Cursor
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          visible
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：时时判断鼠标点击状态，便于切换图像
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Update
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Input
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GetMouseButton
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          )){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          isClicked
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          true
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            else
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          isClicked
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void OnGUI
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：获取鼠标当前位置
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Vector2
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          mouse_pos
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Input
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          mousePosition
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：鼠标点击与否显示相应的图片
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          isClicked
+         </span>
+         <span style="color:#7030a0;">
+          ==
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GUI
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            DrawTexture
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new Rect
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          mouse_pos
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          x
+         </span>
+         <span style="color:#7030a0;">
+          -
+         </span>
+         <span style="color:#c00000;">
+          40f
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Screen
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          height
+         </span>
+         <span style="color:#7030a0;">
+          -
+         </span>
+         <span style="color:#0070c0;">
+          mouse_pos
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          y
+         </span>
+         <span style="color:#7030a0;">
+          -
+         </span>
+         <span style="color:#c00000;">
+          60f
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          100
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          100
+         </span>
+         <span style="color:#7030a0;">
+          ),
+         </span>
+         <span style="color:#0070c0;">
+          UserCursor
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GUI
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            DrawTexture
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new Rect
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          mouse_pos
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          x
+         </span>
+         <span style="color:#7030a0;">
+          -
+         </span>
+         <span style="color:#c00000;">
+          40f
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Screen
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          height
+         </span>
+         <span style="color:#7030a0;">
+          -
+         </span>
+         <span style="color:#0070c0;">
+          mouse_pos
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          y
+         </span>
+         <span style="color:#7030a0;">
+          -
+         </span>
+         <span style="color:#c00000;">
+          60f
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          100
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          100
+         </span>
+         <span style="color:#7030a0;">
+          ),
+         </span>
+         <span style="color:#0070c0;">
+          UserClickCursor
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class YanlzMole_ChangeCursor:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++2.2.3、YanlzMole_GameControl.cs
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        WhacAMole\Assets\YanlzDemo\
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        YanlzMole_GameControl.cs
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            System
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Collections
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Generic
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：游戏总控制脚本
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_GameControl
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GameObject
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          Gophers
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          PosX
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#0070c0;">
+          PosY
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            TextMesh
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          timeLabel
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            float
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          time
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          30.0f
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          score
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：设定一个地洞类，存储地洞的坐标以及是否出现的布尔值
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Hole
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            bool
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          isAppear
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          HoleX
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          HoleY
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class Hole{}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public Hole[]
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：Awake函数实际上比Start函数调用的更早
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //在场景初始化的时候，将每个洞口的坐标值存入一维数组中，并将每一个洞口的isAppear值设定为false;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //  (-2,  0)    (0,  0)    (2,  0)
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //  (-2,  -1)    (0,  -1)    (2,  -1)
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //  (-2,  -2)    (0,  -2)    (2,  -2)
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Awake
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          PosX
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          -2
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          PosY
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          -2
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Hole
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#c00000;">
+          9
+         </span>
+         <span style="color:#7030a0;">
+          ];
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            for
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          ++){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            for
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          ++){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          *
+         </span>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          ] =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Hole
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          *
+         </span>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          HoleX
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          PosX
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          *
+         </span>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          HoleY
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          PosY
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          *
+         </span>
+         <span style="color:#c00000;">
+          3
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          j
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          isAppear
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          PosY
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            ++
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          PosY
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          -2
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          PosX
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          PosX
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#c00000;">
+          2
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：void Awake(){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：在游戏场景开始后延时调用canAppear函数，从第0秒开始，每隔十秒调用一次
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Start
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            InvokeRepeating
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          CanAppear
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          10
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：游戏时间控制
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Update
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：时间以秒的速度减少，并在timeLabel里显示当前剩余时间（一位小数）
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          time
+         </span>
+         <span style="color:#7030a0;">
+          -=
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Time
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          deltaTime
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          timeLabel
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          Time:
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          time
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            ToString
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          F1
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：当时间耗尽，调用GameOver函数
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            if
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          time
+         </span>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GameOver
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：从第0秒开始调用函数，每隔1秒调用一次
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            CanAppear
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            InvokeRepeating
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          Appear
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          1
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：地鼠生成函数
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            Appear
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：当前地洞可以生成地鼠的条件：isAppear = false;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //随机生成i值选择洞口，直到符合条件的洞口被选中
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Random
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Range
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          9
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            while
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          isAppear
+         </span>
+         <span style="color:#7030a0;">
+          ==
+         </span>
+         <span style="color:#c00000;">
+          true
+         </span>
+         <span style="color:#7030a0;">
+          ){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Random
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Range
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          9
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：debug只是用来打印当前的坐标，便于观察，并不会影响游戏运行（可写可不写）
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          Debug.Log(holes[i].HoleX +
+         </span>
+         <span style="color:#7f7f7f;">
+          “
+         </span>
+         <span style="color:#7f7f7f;">
+          ,
+         </span>
+         <span style="color:#7f7f7f;">
+          ”
+         </span>
+         <span style="color:#7f7f7f;">
+          + holes[i].HoleY);
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：选定洞口以后，在洞口的坐标上生成地鼠，传递洞口id，将当前洞口的isAppear值改为true
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Instantiate
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          Gophers
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            new Vector3
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          HoleX
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          HoleY
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#c00000;">
+          0.4F
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          -0.1F
+         </span>
+         <span style="color:#7030a0;">
+          ),
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Quaternion
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          identity
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          Gophers
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GetComponent
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_Gophers
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;().
+         </span>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          i
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          isAppear
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          true
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public void Appear(){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：游戏结束函数
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            GameOver
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          time
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          0
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          timeLabel
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          Time: 0
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：将所有延时调用函数全部取消
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            CancelInvoke
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          Debug.Log(
+         </span>
+         <span style="color:#7f7f7f;">
+          “
+         </span>
+         <span style="color:#7f7f7f;">
+          立钻哥哥：Game Over!
+         </span>
+         <span style="color:#7f7f7f;">
+          ”
+         </span>
+         <span style="color:#7f7f7f;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class YanlzMole_GameControl:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++2.2.4、YanlzMole_Gophers.cs
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        WhacAMole\Assets\YanlzDemo\
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        YanlzMole_Gophers.cs
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：地鼠类
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_Gophers
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GameObject
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          beaten
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：地鼠出现后，如果未被点击，将在三秒后自动销毁，将相应洞口的isAppear值设置为false;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void Update
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Destroy
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            this
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          gameObject
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          3.0f
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            FindObjectOfType
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_GameControl
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;().
+         </span>
+         <span style="color:#0070c0;">
+          holes
+         </span>
+         <span style="color:#7030a0;">
+          [
+         </span>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          ].
+         </span>
+         <span style="color:#0070c0;">
+          isAppear
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          false
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：鼠标点击
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            void OnMouseDown
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (){
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          Debug.Log(
+         </span>
+         <span style="color:#7f7f7f;">
+          “
+         </span>
+         <span style="color:#7f7f7f;">
+          立钻哥哥：点击！
+         </span>
+         <span style="color:#7f7f7f;">
+          ”
+         </span>
+         <span style="color:#7f7f7f;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：在相同的位置生成一个被击打图像的地鼠
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GameObject
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          g
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          g
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Instantiate
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#0070c0;">
+          beaten
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#0070c0;">
+          gameObject
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          transform
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          position
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Quaternion
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          identity
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#0070c0;">
+          g
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GetComponent
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_Beaten
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;().
+         </span>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#0070c0;">
+          id
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：增加分数
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            FindObjectOfType
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_GameControl
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;.
+         </span>
+         <span style="color:#0070c0;">
+          score
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            +=
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#c00000;">
+          1
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            int
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#0070c0;">
+          scores
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            FindObjectOfType
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_GameControl
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;().
+         </span>
+         <span style="color:#0070c0;">
+          score
+         </span>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GameObject
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Find
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          Score
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          ).
+         </span>
+         <span style="color:#0070c0;">
+          gameObject
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            GetComponent
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &lt;
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            TextMesh
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          &gt;().
+         </span>
+         <span style="color:#0070c0;">
+          text
+         </span>
+         <span style="color:#7030a0;">
+          =
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          Score:
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          +
+         </span>
+         <span style="color:#0070c0;">
+          scores
+         </span>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            ToString
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ();
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：在0.1s后摧毁当前生成的地鼠
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            Destroy
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            this
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <span style="color:#0070c0;">
+          gameObject
+         </span>
+         <span style="color:#7030a0;">
+          ,
+         </span>
+         <span style="color:#c00000;">
+          0.1f
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：void OnMouseDown(){}
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class YanlzMole_Gophers:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <span style="color:#0c0c0c;">
+       <strong>
+        ++2.2.5、YanlzMole_Restart.cs
+       </strong>
+      </span>
+     </strong>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#0c0c0c;">
+      ++++立钻哥哥：
+     </span>
+     <strong>
+      <span style="color:#0070c0;">
+       <strong>
+        WhacAMole\Assets\YanlzDemo\
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        YanlzMole_Restart.cs
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#0c0c0c;">
+      ；
+     </span>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEngine
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            using
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            UnityEditor
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            SceneManagement
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          ;
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：重新开始比赛
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            public
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            class
+           </strong>
+          </span>
+         </strong>
+         <strong>
+          <span style="color:#7030a0;">
+           <strong>
+            YanlzMole_Restart
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          :
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            MonoBehaviour
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          {
+          <!-- -->
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7f7f7f;">
+          Debug.Log(
+         </span>
+         <span style="color:#7f7f7f;">
+          “
+         </span>
+         <span style="color:#7f7f7f;">
+          立钻哥哥：Restart!
+         </span>
+         <span style="color:#7f7f7f;">
+          ”
+         </span>
+         <span style="color:#7f7f7f;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            EditorSceneManager
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          .
+         </span>
+         <strong>
+          <span style="color:#ff0000;">
+           <strong>
+            LoadScene
+           </strong>
+          </span>
+         </strong>
+         <span style="color:#7030a0;">
+          (
+         </span>
+         <span style="color:#c00000;">
+          “
+         </span>
+         <span style="color:#c00000;">
+          YanlzMoleScene_mole
+         </span>
+         <span style="color:#c00000;">
+          ”
+         </span>
+         <span style="color:#7030a0;">
+          );
+         </span>
+        </p>
+        <p style="margin-left:0pt;">
+        </p>
+        <p style="margin-left:0pt;">
+         <span style="color:#7030a0;">
+          }
+         </span>
+         <span style="color:#7f7f7f;">
+          //立钻哥哥：public class YanlzMole_Restart:MonoBehaviour{}
+         </span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <h4>
+     <strong>
+      <strong>
+       <span style="color:#00b050;">
+        <strong>
+         ###B.2.3、立钻哥哥对打地鼠的拓展
+        </strong>
+       </span>
+      </strong>
+     </strong>
+    </h4>
+    <table border="1" cellspacing="0" style="width:426.1pt;">
+     <tbody>
+      <tr>
+       <td style="width:426.1pt;">
+        <h4>
+         <strong>
+          <span style="color:#00b050;">
+           <strong>
+            ###B.2.3、立钻哥哥对打地鼠的拓展
+           </strong>
+          </span>
+         </strong>
+        </h4>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p style="margin-left:0pt;">
+    </p>
+    <p style="margin-left:0pt;">
+     <img alt="" class="has" height="269" src="https://i-blog.csdnimg.cn/blog_migrate/da54a1df474ddf80eae09ceeef7fecc8.jpeg" width="196"/>
+    </p>
+    <p style="margin-left:0pt;">
+     <strong>
+      <strong>
+       ++
+      </strong>
+     </strong>
+     <strong>
+      <span style="color:#ffff00;">
+       <strong>
+        立钻哥哥推荐的拓展学习链接（Link_Url）
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <strong>
+       ：
+      </strong>
+     </strong>
+    </p>
+    <table border="1" cellspacing="0" style="margin-left:5.65pt;width:415.3pt;">
+     <tbody>
+      <tr>
+       <td style="width:415.3pt;">
+        <p style="margin-left:0pt;">
+         <strong>
+          <span style="color:#ffff00;">
+           <strong>
+            立钻哥哥推荐的拓展学习链接（Link_Url）
+           </strong>
+          </span>
+         </strong>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        立钻哥哥
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity
+       </strong>
+      </span>
+     </strong>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        学习空间
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#000000;">
+      :
+     </span>
+     <a href="http://blog.csdn.net/VRunSoftYanlz/">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         http://blog.csdn.net/VRunSoftYanlz/
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity5.x用户手册
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81712741">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81712741
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity面试题ABC
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630687">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630687
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity面试题D
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/78630838">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/78630838
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity面试题E
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630913">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630913
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity面试题F
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/78630945">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/78630945
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Cocos2dx面试题
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/78630967">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/78630967
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        禅道[zentao]
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83964057">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83964057
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        框架知识点
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#810081;">
+      ：
+     </span>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/80862879">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/80862879
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        游戏框架（UI框架夯实篇）
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#810081;">
+      ：
+     </span>
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/80781140">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/80781140
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        游戏框架（初探篇）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/80630325">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/80630325
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        .Net框架设计
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#810081;">
+      ：
+     </span>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/87401225">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/87401225
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        设计模式简单整理
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/79839641">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/79839641
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        专题：设计模式（精华篇）
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#810081;">
+      ：
+     </span>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81322678">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81322678
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        U3D小项目参考
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/80141811">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/80141811
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity小游戏算法分析
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/87908365">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/87908365
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity案例（Vehicle）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82355876">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82355876
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UML类图
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/80289461">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/80289461
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PowerDesigner简介
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86500084">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86500084
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity知识点0001
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/80302012">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/80302012
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity知识点0008
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81153606">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81153606
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        U3D_Shader编程（第一篇：快速入门篇）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/80372071">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/80372071
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        U3D_Shader编程（第二篇：基础夯实篇）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/80372628">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/80372628
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Lua快速入门篇（Xlua拓展）:
+       </strong>
+      </span>
+     </strong>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81173818">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81173818
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Lua快速入门篇（XLua教程）
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#810081;">
+      :
+     </span>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81141502">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81141502
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     <span style="color:#810081;">
+      ++++
+     </span>
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Lua快速入门篇（基础概述）
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#810081;">
+      ：
+     </span>
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81041359">
+      <u>
+       <span style="color:#810081;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81041359
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity引擎基础
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78881685">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78881685
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity面向组件开发
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78881752">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78881752
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity物理系统
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78881879">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78881879
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity2D平台开发
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78882034">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78882034
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UGUI基础
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78884693">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78884693
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UGUI进阶
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78884882">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78884882
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UGUI综合
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78885013">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78885013
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity动画系统基础
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78886068">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78886068
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity动画系统进阶
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78886198">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78886198
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Navigation导航系统
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78886281">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78886281
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity特效渲染
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78886403">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78886403
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity数据存储
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/79251273">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/79251273
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity中Sqlite数据库
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/79254162">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/79254162
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        WWW类和协程
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/79254559">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/79254559
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity网络
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/79254902">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/79254902
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity资源加密
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/87644514">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/87644514
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PhotonServer简介
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86652770">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86652770
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        编写Photon游戏服务器
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86682935">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86682935
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#事件
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78631267">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78631267
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#委托
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78631183">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78631183
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#集合
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78631175">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78631175
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#泛型
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78631141">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78631141
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#接口
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78631122">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78631122
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#静态类
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630979">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630979
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#中System.String类
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630945">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630945
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        C#数据类型
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630913">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630913
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity3D默认的快捷键
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630838">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630838
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        游戏相关缩写
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/vrunsoftyanlz/article/details/78630687">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/vrunsoftyanlz/article/details/78630687
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        HTC_VIVE开发基础
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81989970">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81989970
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Oculus杂谈
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82469850">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82469850
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Oculus安装使用
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82718982">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82718982
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        SteamVR简介
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86484254">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86484254
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        SteamVR脚本功能分析
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86531480">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86531480
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        SteamVR2.0开发指南
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86618187">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86618187
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        SteamVR/Extras
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86584108">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86584108
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        SteamVR/Input
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/86601950">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/86601950
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        OpenXR简介
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/85726365">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/85726365
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK杂谈
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82562993">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82562993
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK快速入门（杂谈）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82955267">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82955267
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK官方示例（目录）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82955410">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82955410
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK代码结构（目录）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82780085">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82780085
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK（SceneResources）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82795400">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82795400
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK_ControllerEvents
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83099512">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83099512
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VRTK_InteractTouch
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83120220">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83120220
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.Rigidbody刚体
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81784053">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81784053
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.Material材质
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81814303">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81814303
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.Android安卓
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81843193">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81843193
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.AndroidJNI安卓JNI
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81879345">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81879345
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.Transform变换
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/81916293">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/81916293
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.WheelCollider轮碰撞器
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82356217">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82356217
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        UnityAPI.Resources资源
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83155518">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83155518
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        JSON数据结构
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82026644">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82026644
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        CocosStudio快速入门
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82356839">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82356839
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        VR实验：以太网帧的构成
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82598140">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82598140
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        实验四：存储器扩展实验
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/87834434">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/87834434
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        FrameVR示例V0913
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82808498">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82808498
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        FrameVR示例V1003
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83066516">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83066516
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        SwitchMachineV1022
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83280886">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83280886
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        PlaySceneManagerV1022
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83280886">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83280886
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（目录）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82634668">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82634668
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（第1讲）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82634733">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82634733
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（第2讲）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82861180">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82861180
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（第3讲）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82927699">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82927699
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（第4讲）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83479776">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83479776
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（第5讲）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83963811">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83963811
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        Unity企业内训（第6讲）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/84207696">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/84207696
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        钻哥带您了解产品原型
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/87303828">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/87303828
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        插件&lt;Obi Rope&gt;
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/83963905">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/83963905
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        计算机组成原理（教材篇）
+       </strong>
+      </span>
+     </strong>
+     ：
+     <a href="https://blog.csdn.net/VRunSoftYanlz/article/details/82719129">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         https://blog.csdn.net/VRunSoftYanlz/article/details/82719129
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p style="margin-left:0pt;">
+     ++++
+     <strong>
+      <span style="color:#ff0000;">
+       <strong>
+        立钻哥哥Unity 学习空间
+       </strong>
+      </span>
+     </strong>
+     <span style="color:#000000;">
+      :
+     </span>
+     <a href="http://blog.csdn.net/VRunSoftYanlz/">
+      <u>
+       <span style="color:#0000ff;">
+        <u>
+         http://blog.csdn.net/VRunSoftYanlz/
+        </u>
+       </span>
+      </u>
+     </a>
+    </p>
+    <p>
+     --_--VRunSoft:lovezuanzuan--_--
+    </p>
+    <p>
+     <img alt="" class="has" height="740" src="https://i-blog.csdnimg.cn/blog_migrate/98c9094479263f95c53d67c1c6454c2e.jpeg" width="540"/>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

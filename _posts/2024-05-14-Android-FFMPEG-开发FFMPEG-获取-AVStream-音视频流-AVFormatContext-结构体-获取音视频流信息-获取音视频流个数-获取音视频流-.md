@@ -1,0 +1,390 @@
+---
+layout: post
+title: Android-FFMPEG-开发FFMPEG-获取-AVStream-音视频流-AVFormatContext-结构体-获取音视频流信息-获取音视频流个数-获取音视频流-
+date: 2024-05-14 20:27:04 +0800
+categories: [AndroidFFMPEG开发]
+tags: [nb_streams,FFMPEG,Android,AVStream,AVFormatContext]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=104652321
+    alt: Android-FFMPEG-开发FFMPEG-获取-AVStream-音视频流-AVFormatContext-结构体-获取音视频流信息-获取音视频流个数-获取音视频流-
+artid: 104652321
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【Android FFMPEG 开发】FFMPEG 获取 AVStream 音视频流 ( AVFormatContext 结构体 | 获取音视频流信息 | 获取音视频流个数 | 获取音视频流  )
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-tomorrow-night-eighties" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <ul>
+          <li>
+           <ul>
+            <li>
+             <a href="#__FFMPEG___6" rel="nofollow">
+              博客简介 . FFMPEG 音视频流 获取流程
+             </a>
+            </li>
+            <li>
+             <a href="#I__FFMPEG___AVFormatContext___49" rel="nofollow">
+              I . FFMPEG 获取音视频流信息 ( AVFormatContext 结构体 )
+             </a>
+            </li>
+            <li>
+             <a href="#II__FFMPEG____65" rel="nofollow">
+              II . FFMPEG 获取 音视频流 数量
+             </a>
+            </li>
+            <li>
+             <a href="#III__FFMPEG__95" rel="nofollow">
+              III . FFMPEG 获取音视频流
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <br/>
+    <br/>
+    <h5>
+     <a id="__FFMPEG___6">
+     </a>
+     博客简介 . FFMPEG 音视频流 获取流程
+    </h5>
+    <hr/>
+    <br/>
+    <p>
+     <strong>
+      FFMPEG 音视频流 AVStream ( 结构体 ) 获取流程 :
+     </strong>
+    </p>
+    <br/>
+    <p>
+     <strong>
+      ① 获取音视频流信息 :
+     </strong>
+     <font color="red">
+      <strong>
+       avformat_find_stream_info ( )
+      </strong>
+      ,
+      <font color="blue">
+       在
+       <a href="https://hanshuliang.blog.csdn.net/article/details/104636151" rel="nofollow">
+        【Android FFMPEG 开发】FFMPEG 初始化 ( 网络初始化 | 打开音视频 | 查找音视频流 )
+       </a>
+       博客中 , FFMPEG 初始化完毕后 , 获取了音视频流 , 本博客中讲解获取该音视频流对应的编解码器 , 从获取该音视频流开始 ;
+      </font>
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token keyword">int</span> <span class="token function">avformat_find_stream_info</span><span class="token punctuation">(</span>AVFormatContext <span class="token operator">*</span>ic<span class="token punctuation">,</span> AVDictionary <span class="token operator">*</span><span class="token operator">*</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+    <br/>
+    <p>
+     <strong>
+      ② 音视频流数量 :
+     </strong>
+     <font color="purple">
+      获取的音视频流信息存储在
+      <font color="red">
+       <strong>
+        AVFormatContext *formatContext
+       </strong>
+       <font color="purple">
+        结构体中 , nb_streams 元素的值就是音视频流的个数 ;
+       </font>
+      </font>
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">//音视频流的个数</span>
+formatContext<span class="token operator">-</span><span class="token operator">&gt;</span>nb_streams
+</code></pre>
+    <br/>
+    <p>
+     <strong>
+      ③ 音视频流 :
+     </strong>
+     <font color="red">
+      <strong>
+       AVFormatContext *formatContext
+      </strong>
+      <font color="green">
+       结构体中的 音视频流数组元素
+       <font color="red">
+        <strong>
+         AVStream **streams
+        </strong>
+        <font color="green">
+         元素 , 通过数组下标可以获取指定位置索引的音视频流 ;
+        </font>
+       </font>
+      </font>
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">//取出一个媒体流 ( 视频流 / 音频流 )</span>
+AVStream <span class="token operator">*</span>stream <span class="token operator">=</span> formatContext<span class="token operator">-</span><span class="token operator">&gt;</span>streams<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+    <br/>
+    <br/>
+    <h5>
+     <a id="I__FFMPEG___AVFormatContext___49">
+     </a>
+     I . FFMPEG 获取音视频流信息 ( AVFormatContext 结构体 )
+    </h5>
+    <hr/>
+    <br/>
+    <p>
+     <strong>
+      1 . 获取音视频流信息 :
+     </strong>
+     <font color="red">
+      <strong>
+       avformat_find_stream_info ( )
+      </strong>
+      ,
+      <font color="blue">
+       在
+       <a href="https://hanshuliang.blog.csdn.net/article/details/104636151" rel="nofollow">
+        【Android FFMPEG 开发】FFMPEG 初始化 ( 网络初始化 | 打开音视频 | 查找音视频流 )
+       </a>
+       博客中 , FFMPEG 初始化完毕后 , 获取了音视频流 , 本博客中讲解获取该音视频流对应的编解码器 , 从获取该音视频流开始 ;
+      </font>
+     </font>
+    </p>
+    <br/>
+    <p>
+     <strong>
+      2 . 信息存放载体 :
+     </strong>
+     <font color="orange">
+      调用
+      <font color="red">
+       <strong>
+        avformat_find_stream_info ( )
+       </strong>
+       <font color="orange">
+        方法 , 获取音视频流信息存储在
+        <font color="red">
+         <strong>
+          AVFormatContext *formatContext
+         </strong>
+         <font color="orange">
+          结构体中 ;
+          <font color="green">
+           可以通过 formatContext-&gt;结构体元素 获取相应的 FFMPEG 数据 ;
+          </font>
+         </font>
+        </font>
+       </font>
+      </font>
+     </font>
+    </p>
+    <br/>
+    <br/>
+    <h5>
+     <a id="II__FFMPEG____65">
+     </a>
+     II . FFMPEG 获取 音视频流 数量
+    </h5>
+    <hr/>
+    <br/>
+    <p>
+     <strong>
+      1 . 结构体元素 :
+     </strong>
+     <font color="blue">
+      音视频流数量信息存储在
+      <font color="red">
+       <strong>
+        AVFormatContext *formatContext
+       </strong>
+       <font color="blue">
+        结构体中 的
+        <font color="red">
+         <strong>
+          unsigned int nb_streams
+         </strong>
+         <font color="blue">
+          元素中 ;
+         </font>
+        </font>
+       </font>
+      </font>
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">/**
+ * Number of elements in AVFormatContext.streams.
+ *
+ * Set by avformat_new_stream(), must not be modified by any other code.
+ */</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> nb_streams<span class="token punctuation">;</span>
+</code></pre>
+    <br/>
+    <p>
+     <strong>
+      2 . 获取示例 :
+     </strong>
+     <font color="green">
+      调用
+      <font color="red">
+       <strong>
+        AVFormatContext *formatContext
+       </strong>
+       <font color="green">
+        结构体指针的 “-&gt;” 运算符获取其结构体中的元素值 ;
+       </font>
+      </font>
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">//stream_count 是音视频流数量</span>
+<span class="token keyword">int</span> stream_count <span class="token operator">=</span> formatContext<span class="token operator">-</span><span class="token operator">&gt;</span>nb_streams<span class="token punctuation">;</span>
+</code></pre>
+    <br/>
+    <br/>
+    <h5>
+     <a id="III__FFMPEG__95">
+     </a>
+     III . FFMPEG 获取音视频流
+    </h5>
+    <hr/>
+    <br/>
+    <p>
+     <strong>
+      1 . 音视频流结构体 AVStream :
+     </strong>
+     音视频流在 FFMPEG 中被定义成了结构体 , typedef struct AVStream , 该结构体定义在了 avformat.h 中 ;
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">/**
+ * Stream structure.
+ * New fields can be added to the end with minor version bumps.
+ * Removal, reordering and changes to existing fields require a major
+ * version bump.
+ * sizeof(AVStream) must not be used outside libav*.
+ */</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> AVStream <span class="token punctuation">{<!-- --></span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span> AVStream
+</code></pre>
+    <br/>
+    <p>
+     <strong>
+      2 . 结构体元素 :
+     </strong>
+     <font color="blue">
+      音视频流结构体 AVStream 存储在
+      <font color="red">
+       <strong>
+        AVFormatContext *formatContext
+       </strong>
+       <font color="blue">
+        结构体中 的
+        <font color="red">
+         <strong>
+          AVStream **streams
+         </strong>
+         <font color="blue">
+          元素中 , 这是一个 AVStream 结构体指针数组 ;
+         </font>
+        </font>
+       </font>
+      </font>
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">/**
+ * A list of all streams in the file. New streams are created with
+ * avformat_new_stream().
+ *
+ * - demuxing: streams are created by libavformat in avformat_open_input().
+ *             If AVFMTCTX_NOHEADER is set in ctx_flags, then new streams may also
+ *             appear in av_read_frame().
+ * - muxing: streams are created by the user before avformat_write_header().
+ *
+ * Freed by libavformat in avformat_free_context().
+ */</span>
+AVStream <span class="token operator">*</span><span class="token operator">*</span>streams<span class="token punctuation">;</span>
+</code></pre>
+    <br/>
+    <p>
+     <strong>
+      2 . 使用 AVStream ** 数组下标获取音视频流 :
+     </strong>
+    </p>
+    <br/>
+    <p>
+     <strong>
+      ① 获取 AVStream **streams 数组 :
+     </strong>
+     <font color="green">
+      调用
+      <font color="red">
+       <strong>
+        AVFormatContext *formatContext
+       </strong>
+       <font color="green">
+        结构体指针的 “-&gt;” 运算符获取其结构体中的 AVStream **streams 元素值 ;
+       </font>
+      </font>
+     </font>
+    </p>
+    <p>
+     <strong>
+      ② 获取 AVStream *stream 音视频流 :
+     </strong>
+     <font color="blue">
+      再使用数组下标获取指定索引的 AVStream * 音视频流 ;
+     </font>
+    </p>
+    <p>
+     <strong>
+      ③ 常用使用场景 :
+     </strong>
+     <font color="magenta">
+      一般是在 for 循环中遍历解析音视频流 ;
+     </font>
+    </p>
+    <pre><code class="prism language-cpp"><span class="token comment">//formatContext-&gt;nb_streams 是 音频流 / 视频流 个数 ;</span>
+<span class="token comment">//  循环解析 视频流 / 音频流 , 一般是两个 , 一个视频流 , 一个音频流</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> formatContext<span class="token operator">-</span><span class="token operator">&gt;</span>nb_streams<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+
+    <span class="token comment">//取出一个媒体流 ( 视频流 / 音频流 )</span>
+    AVStream <span class="token operator">*</span>stream <span class="token operator">=</span> formatContext<span class="token operator">-</span><span class="token operator">&gt;</span>streams<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+<span class="token punctuation">}</span>
+</code></pre>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

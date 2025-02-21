@@ -1,0 +1,116 @@
+---
+layout: post
+title: HarmonyOSJava如何引用外部jar包
+date: 2023-08-10 09:38:41 +0800
+categories: [java]
+tags: [java,jar,harmonyos]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=132202500
+    alt: HarmonyOSJava如何引用外部jar包
+artid: 132202500
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【HarmonyOS】Java如何引用外部jar包
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     【关键字】
+    </p>
+    <p>
+     Java、引用jar包​
+    </p>
+    <p>
+    </p>
+    <p>
+     【写在前面】
+    </p>
+    <p>
+     使用API6和API7开发HarmonyOS应用时，因为应用中只能引用SDK中开放的功能接口，但是部分jdk自带的接口功能在SDK中并未封装，要想在工程中使用jdk开放的接口功能，需要将jdk中的jar包通过本地引用方式引入再使用，本篇文章介绍如何在支持Java的HarmonyOS应用中引用外部或本地jar包功能。
+    </p>
+    <p>
+     本篇文章以rt.jar为例，rt.jar中部分接口功能如javax.sound.sampled.AudioFileFormat 在SDK中没有封装，即在工程直接import会报错无法引用，但在jdk中存在，故用此包进行举例。开发者可自行替换成其他jar包。
+    </p>
+    <p>
+    </p>
+    <p>
+     【实现步骤】
+    </p>
+    <p>
+     步骤1：获取对应的jar包，在jdk中找到rt.jar，“右键 - Open In - Explorer”在文件夹中打开jar包。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_20393.png" height="756" src="https://i-blog.csdnimg.cn/blog_migrate/abd6e6e7ddb981e9a70529949c6ba2fd.png" width="672"/>
+    </p>
+    <p>
+     步骤2：将rt.jar置于工程目录“entry - libs”目录中，若无libs目录新建目录即可。此处entry为工程模块，若需要在其他模块引用jar包，在对应模块中新建libs目录即可。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_21957.png" height="212" src="https://i-blog.csdnimg.cn/blog_migrate/4d804e1d5bc2f0a9a113c4a60be29fe5.png" width="328"/>
+    </p>
+    <p>
+     步骤3：点击rt.jar，“右键 - Add As Library”将jar包作为库引入。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_23790.png" height="619" src="https://i-blog.csdnimg.cn/blog_migrate/ef2384452b13081e6877aa981ae9ad22.png" width="424"/>
+    </p>
+    <p>
+     步骤4:点击DevEco Studio 菜单栏，【File - Sync and Refresh Project】刷新引用。在entry目录下build.gradle配置文件中已经引用libs下jar和har包
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_25045.png" height="524" src="https://i-blog.csdnimg.cn/blog_migrate/949fbe5d1efc3fc16e1745f30df7c7d3.png" width="351"/>
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_26593.png" height="199" src="https://i-blog.csdnimg.cn/blog_migrate/c9ec41dc806e3b025cbddd9af70b9d8b.png" width="643"/>
+    </p>
+    <p>
+     步骤5：同步完成后，即可在工程的.java类中引用rt.jar中相关接口，点击import 引用类即可跳转到引用的包中。到这里就完成HarmonyOS工程引用外部jar包了。
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_28163.png" height="216" src="https://i-blog.csdnimg.cn/blog_migrate/9b54c71e74facfb978599c6a5f37c573.png" width="468"/>
+    </p>
+    <p>
+    </p>
+    <p class="img-center">
+     <img alt="cke_29727.png" height="768" src="https://i-blog.csdnimg.cn/blog_migrate/789867406c302c066c03c8f6ca8998f2.png" width="1051"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     【参考文档】
+    </p>
+    <p>
+     <a href="https://developer.huawei.com/consumer/cn/forum/topic/0202639127653710253?fid=26" rel="nofollow" title="华为开发者论坛">
+      华为开发者论坛
+     </a>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

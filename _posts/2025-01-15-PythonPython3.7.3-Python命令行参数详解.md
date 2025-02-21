@@ -1,0 +1,750 @@
+---
+layout: post
+title: PythonPython3.7.3-Python命令行参数详解
+date: 2025-01-15 17:36:09 +0800
+categories: [Python]
+tags: [选项,示例,命令行,参数,Python]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=88887356
+    alt: PythonPython3.7.3-Python命令行参数详解
+artid: 88887356
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【Python】Python3.7.3 - Python命令行参数详解
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-tomorrow-night-eighties" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#Python_1" rel="nofollow">
+        Python命令行参数概览
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#c_cmd_16" rel="nofollow">
+          -c cmd参数示例
+         </a>
+        </li>
+        <li>
+         <a href="#m_mod_22" rel="nofollow">
+          -m mod参数示例
+         </a>
+        </li>
+        <li>
+         <a href="#file_36" rel="nofollow">
+          file参数示例
+         </a>
+        </li>
+        <li>
+         <a href="#__46" rel="nofollow">
+          - 参数示例
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_61" rel="nofollow">
+        命令行选项详解
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#b__62" rel="nofollow">
+          -b 选项
+         </a>
+        </li>
+        <li>
+         <a href="#B_99" rel="nofollow">
+          -B选项
+         </a>
+        </li>
+        <li>
+         <a href="#d_149" rel="nofollow">
+          -d选项
+         </a>
+        </li>
+        <li>
+         <a href="#E_155" rel="nofollow">
+          -E选项
+         </a>
+        </li>
+        <li>
+         <a href="#h____help_160" rel="nofollow">
+          -h / -? / --help选项
+         </a>
+        </li>
+        <li>
+         <a href="#i_165" rel="nofollow">
+          -i选项
+         </a>
+        </li>
+        <li>
+         <a href="#I_183" rel="nofollow">
+          -I选项
+         </a>
+        </li>
+        <li>
+         <a href="#OOO_189" rel="nofollow">
+          -O与-OO选项
+         </a>
+        </li>
+        <li>
+         <a href="#q_210" rel="nofollow">
+          -q选项
+         </a>
+        </li>
+        <li>
+         <a href="#s_229" rel="nofollow">
+          -s选项
+         </a>
+        </li>
+        <li>
+         <a href="#S_236" rel="nofollow">
+          -S选项
+         </a>
+        </li>
+        <li>
+         <a href="#u_269" rel="nofollow">
+          -u选项
+         </a>
+        </li>
+        <li>
+         <a href="#v_276" rel="nofollow">
+          -v选项
+         </a>
+        </li>
+        <li>
+         <a href="#V__version_284" rel="nofollow">
+          -V / --version选项
+         </a>
+        </li>
+        <li>
+         <a href="#W_arg_307" rel="nofollow">
+          -W arg选项
+         </a>
+        </li>
+        <li>
+         <a href="#x_322" rel="nofollow">
+          -x选项
+         </a>
+        </li>
+        <li>
+         <a href="#X_opt_329" rel="nofollow">
+          -X opt选项
+         </a>
+        </li>
+        <li>
+         <a href="#checkhashbasedpycs_alwaysdefaultnever_335" rel="nofollow">
+          --check-hash-based-pycs always|default|never选项
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a href="#_348" rel="nofollow">
+        参考
+       </a>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="Python_1">
+     </a>
+     Python命令行参数概览
+    </h2>
+    <p>
+     使用–help选项可以列出Python 3.7.3支持的所有命令行参数。
+    </p>
+    <pre><code>C:\Users\tsu5&gt;py -3 --help
+usage: C:\Python\Python3.7.3\python.exe [option] ... [-c cmd | -m mod | file | -] [arg] ...
+</code></pre>
+    <p>
+     python.exe后面可以跟着
+    </p>
+    <ul>
+     <li>
+      [option] …：多个可选选项，后续章节详细讲解每个选项。
+     </li>
+     <li>
+      [-c cmd | -m mod | file | - ] [arg] …：各种方式指定要执行的Python程序以及可能的参数
+      <ul>
+       <li>
+        [-c cmd]：执行Python语句后退出
+       </li>
+       <li>
+        [-m mod]：把库模块当作脚本运行（同时也终止了选项列表，即其他选项必须放在-m之前）
+       </li>
+       <li>
+        [file]：执行Python脚本
+       </li>
+       <li>
+        [-]：Python执行后，出现交互提示界面，从标准输入读取Python语句，并执行。
+       </li>
+       <li>
+        [arg] …：指定的一个或多个arg，会作为参数传递给Python脚本/库模块
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <h3>
+     <a id="c_cmd_16">
+     </a>
+     -c cmd参数示例
+    </h3>
+    <p>
+     我经常用这种方式把Python当成个简单的计算器。
+    </p>
+    <pre><code>C:\Users\tsu5&gt;py -3  -c "print(1080/24)"
+45.0
+</code></pre>
+    <h3>
+     <a id="m_mod_22">
+     </a>
+     -m mod参数示例
+    </h3>
+    <pre><code class="prism language-bash">C:\Users\tsu5<span class="token operator">&gt;</span>py.exe -3 -m pydoc
+pydoc - the Python documentation tool
+<span class="token punctuation">..</span>.
+
+C:\Users\tsu5<span class="token operator">&gt;</span>py.exe -3 -m unittest
+----------------------------------------------------------------------
+Ran 0 tests <span class="token keyword">in</span> 0.000s
+OK
+</code></pre>
+    <p>
+     还可以使用
+     <code>
+      python -m venv
+     </code>
+     创建虚拟环境，详情参看
+     <br/>
+     <a href="https://blog.csdn.net/qq_43401808/article/details/89632033">
+      虚拟环境：pyvenv过时；使用python -m venv命令
+     </a>
+    </p>
+    <h3>
+     <a id="file_36">
+     </a>
+     file参数示例
+    </h3>
+    <pre><code class="prism language-bash"><span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ <span class="token function">cat</span> hello3.py
+<span class="token comment">#!/usr/bin/python3</span>
+
+print<span class="token punctuation">(</span><span class="token string">"Hello, Python!"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python hello3.py
+Hello, Python<span class="token operator">!</span>
+</code></pre>
+    <h3>
+     <a id="__46">
+     </a>
+     - 参数示例
+    </h3>
+    <pre><code class="prism language-bash"><span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python - <span class="token operator">&lt;&lt;</span>EOF
+<span class="token operator">&gt;</span> print<span class="token punctuation">(</span><span class="token string">"Hello, Standard in!"</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> EOF
+Hello, Standard in<span class="token operator">!</span>
+</code></pre>
+    <p>
+     或者省略 - 参数
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+print("Hello, Standard in!")
+EOF</span>
+
+Hello, Standard in<span class="token operator">!</span>
+</code></pre>
+    <h2>
+     <a id="_61">
+     </a>
+     命令行选项详解
+    </h2>
+    <h3>
+     <a id="b__62">
+     </a>
+     -b 选项
+    </h3>
+    <pre><code class="prism language-bash">-b     <span class="token keyword">:</span> issue warnings about str<span class="token punctuation">(</span>bytes_instance<span class="token punctuation">)</span>, str<span class="token punctuation">(</span>bytearray_instance<span class="token punctuation">)</span>
+         and comparing bytes/bytearray with str. <span class="token punctuation">(</span>-bb: issue errors<span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     对str(bytes_instance)，str(bytearray_instance) 以及将bytes/bytearray与str比较时，产生警告信息。如果使用了
+     <em>
+      -bb
+     </em>
+     选项，则产生错误信息。
+    </p>
+    <p>
+     下面是同一个Python脚本，未指定-b选项，指定-b选项，指定-bb选项，的运行效果。
+    </p>
+    <pre><code class="prism language-bash"><span class="token comment"># mybytes.py文件：定义了bytes示例，然后将其转换成字符串输出。</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ <span class="token function">cat</span> mybytes.py
+
+my_bytes<span class="token operator">=</span>b<span class="token string">'0\x300\x31'</span>
+print<span class="token punctuation">(</span><span class="token string">"my_bytes type is: "</span> + str<span class="token punctuation">(</span>type<span class="token punctuation">(</span>my_bytes<span class="token punctuation">))</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>str<span class="token punctuation">(</span>my_bytes<span class="token punctuation">))</span>
+
+<span class="token comment"># 不指定-b选项，python正常打印转换后的字符串</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python mybytes.py
+my_bytes <span class="token function">type</span> is: <span class="token operator">&lt;</span>class <span class="token string">'bytes'</span><span class="token operator">&gt;</span>
+b<span class="token string">'0001'</span>
+
+<span class="token comment"># 指定-b选项，python打印转换的字符串之前，产生警告信息，但是继续执行</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python -b mybytes.py
+my_bytes <span class="token function">type</span> is: <span class="token operator">&lt;</span>class <span class="token string">'bytes'</span><span class="token operator">&gt;</span>
+---<span class="token operator">&gt;</span> 警告信息行：mybytes.py:4: BytesWarning: str<span class="token punctuation">(</span><span class="token punctuation">)</span> on a bytes instance
+---<span class="token operator">&gt;</span> 警告信息行：  print<span class="token punctuation">(</span>str<span class="token punctuation">(</span>my_bytes<span class="token punctuation">))</span>
+b<span class="token string">'0001'</span>
+
+<span class="token comment"># 指定-bb选项，python产生错误信息，程序终止运行。</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python -bb mybytes.py
+my_bytes <span class="token function">type</span> is: <span class="token operator">&lt;</span>class <span class="token string">'bytes'</span><span class="token operator">&gt;</span>
+---<span class="token operator">&gt;</span> 错误信息行：Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+---<span class="token operator">&gt;</span> 错误信息行：  File <span class="token string">"mybytes.py"</span>, line 4, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+---<span class="token operator">&gt;</span> 错误信息行：    print<span class="token punctuation">(</span>str<span class="token punctuation">(</span>my_bytes<span class="token punctuation">))</span>
+---<span class="token operator">&gt;</span> 错误信息行：BytesWarning: str<span class="token punctuation">(</span><span class="token punctuation">)</span> on a bytes instance
+
+</code></pre>
+    <h3>
+     <a id="B_99">
+     </a>
+     -B选项
+    </h3>
+    <pre><code class="prism language-bash">-B     <span class="token keyword">:</span> don't <span class="token function">write</span> .pyc files on <span class="token function">import</span><span class="token punctuation">;</span> also PYTHONDONTWRITEBYTECODE<span class="token operator">=</span>x
+</code></pre>
+    <p>
+     在导入Python脚本时，不保存.pyc文件；等价于环境变量PYTHONDONTWRITEBYTECODE=x
+    </p>
+    <p>
+     下面的例子，在未指定-B选项时，在执行__main__.py脚本时，会在当前目录下创建__pycache__子目录，在该目录下保存生成的.pyc文件。
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ <span class="token function">cat</span> __main__.py
+print<span class="token punctuation">(</span><span class="token string">"Hello, Python!"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python <span class="token keyword">.</span>
+Hello, Python<span class="token operator">!</span>
+
+<span class="token comment"># 生成的__pycache__子目录</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ <span class="token function">ls</span>
+__main__.py __pycache__/ 
+
+<span class="token comment"># 保存的.pyc文件：</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ <span class="token function">ls</span> -l __pycache__
+total 4
+-rw-rw-r-- 1 tony tony 128 Mar 29 14:13 __main__.cpython-37.pyc 
+</code></pre>
+    <p>
+     如果在执行Python脚本时，指定了-B选项，则仅执行这个脚本，不会保存.pyc文件。
+     <br/>
+     如果定义了环境变量PYTHONDONTWRITEBYTECODE=x，也不会保存.pyc文件。
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ <span class="token function">cat</span> __main__.py
+print<span class="token punctuation">(</span><span class="token string">"Hello, Python!"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 使用-B选项，期望不生成__pycache__目录以及.pyc文件</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ python -B <span class="token keyword">.</span>
+Hello, Python<span class="token operator">!</span>
+
+<span class="token comment"># 没有生成__pycache__目录</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ <span class="token function">ls</span>
+__main__.py
+
+<span class="token comment"># 设置环境变量</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ <span class="token function">export</span> PYTHONDONTWRITEBYTECODE<span class="token operator">=</span>x
+
+<span class="token comment"># 未指定-B选项，但是设置了环境变量</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ python <span class="token keyword">.</span>
+Hello, Python<span class="token operator">!</span>
+
+<span class="token comment"># 依然没有生产__pycache__目录以及.pyc文件</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ <span class="token function">ls</span>
+__main__.py
+</code></pre>
+    <h3>
+     <a id="d_149">
+     </a>
+     -d选项
+    </h3>
+    <pre><code class="prism language-bash">-d     <span class="token keyword">:</span> debug output from parser<span class="token punctuation">;</span> also PYTHONDEBUG<span class="token operator">=</span>x
+</code></pre>
+    <p>
+     打印parser产生的调试信息；等价于环境变量PYTHONDEBUG=x
+    </p>
+    <h3>
+     <a id="E_155">
+     </a>
+     -E选项
+    </h3>
+    <pre><code class="prism language-bash">-E     <span class="token keyword">:</span> ignore PYTHON* environment variables <span class="token punctuation">(</span>such as PYTHONPATH<span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     忽略PYTHON*环境变量（例如PYTHONPATH）
+    </p>
+    <h3>
+     <a id="h____help_160">
+     </a>
+     -h / -? / --help选项
+    </h3>
+    <pre><code class="prism language-bash">-h     <span class="token keyword">:</span> print this <span class="token function">help</span> message and <span class="token keyword">exit</span> <span class="token punctuation">(</span>also --help<span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     打印出帮助信息，然后退出。（也支持--help。）
+    </p>
+    <h3>
+     <a id="i_165">
+     </a>
+     -i选项
+    </h3>
+    <pre><code class="prism language-bash">-i     <span class="token keyword">:</span> inspect interactively after running script<span class="token punctuation">;</span> forces a prompt even
+         <span class="token keyword">if</span> stdin does not appear to be a terminal<span class="token punctuation">;</span> also PYTHONINSPECT<span class="token operator">=</span>x
+</code></pre>
+    <p>
+     在运行脚本后，进入交互式检查；即便是标准输入不是终端，也显示提示符。等价于环境变量PYTHONINSPECT=x。
+    </p>
+    <pre><code class="prism language-bash"><span class="token comment"># 在Python脚本运行结束后，获得了&gt;&gt;&gt;提示符，可以继续输入并执行python语句</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python -i hello3.py
+Hello, world
+Hello, Python<span class="token operator">!</span>
+10
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> print<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+Hello, world
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+    <h3>
+     <a id="I_183">
+     </a>
+     -I选项
+    </h3>
+    <pre><code class="prism language-bash">-I     <span class="token keyword">:</span> isolate Python from the user's environment <span class="token punctuation">(</span>implies -E and -s<span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     将Python与用户的环境隔离（隐含-E与-s选项）
+    </p>
+    <h3>
+     <a id="OOO_189">
+     </a>
+     -O与-OO选项
+    </h3>
+    <pre><code class="prism language-bash">-O     <span class="token keyword">:</span> remove assert and __debug__-dependent statements<span class="token punctuation">;</span> add .opt-1 before
+         .pyc extension<span class="token punctuation">;</span> also PYTHONOPTIMIZE<span class="token operator">=</span>x
+-OO    <span class="token keyword">:</span> <span class="token keyword">do</span> -O changes and also discard docstrings<span class="token punctuation">;</span> add .opt-2 before
+         .pyc extension
+</code></pre>
+    <p>
+     -O：删掉assert与__debug__依赖的语句；在保存的.pyc文件扩展名之前，添加.opt-1字样；等价于PYTHONOPTMIZE=x
+     <br/>
+     -OO：执行-O的动作，额外还会丢掉docstrings；在.pyc文件扩展名之前，添加.opt-2字样
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ python -O <span class="token keyword">.</span>
+Hello, Python<span class="token operator">!</span>
+
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ python -OO <span class="token keyword">.</span>
+Hello, Python<span class="token operator">!</span>
+
+<span class="token comment"># 生成的.pyc文件扩展名前，添加了.opt-1与.opt-2</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ <span class="token function">ls</span> __pycache__/
+__main__.cpython-37.opt-1.pyc  __main__.cpython-37.opt-2.pyc  __main__.cpython-37.pyc
+</code></pre>
+    <h3>
+     <a id="q_210">
+     </a>
+     -q选项
+    </h3>
+    <pre><code class="prism language-bash">-q     <span class="token keyword">:</span> don't print version and copyright messages on interactive startup
+</code></pre>
+    <p>
+     在交互启动时，不打印版本与版权信息
+    </p>
+    <pre><code class="prism language-bash"><span class="token comment"># 未指定-q选项，交互执行时，先打印版本与版权信息</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ python
+Python 3.7.3 <span class="token punctuation">(</span>default, Mar 26 2019, 01:59:45<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC 5.4.0 20160609<span class="token punctuation">]</span> on linux
+Type <span class="token string">"help"</span>, <span class="token string">"copyright"</span>, <span class="token string">"credits"</span> or <span class="token string">"license"</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+
+<span class="token comment"># 指定-q选项，立即显示命令提示符&gt;&gt;&gt;</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~/opt-B$ python -q
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+    <h3>
+     <a id="s_229">
+     </a>
+     -s选项
+    </h3>
+    <pre><code class="prism language-bash">-s     <span class="token keyword">:</span> don't add user site directory to sys.path<span class="token punctuation">;</span> also PYTHONNOUSERSITE
+</code></pre>
+    <p>
+     不向sys.path中添加用于站点目录；等价于PYTHONNOUSERSITE。
+    </p>
+    <h3>
+     <a id="S_236">
+     </a>
+     -S选项
+    </h3>
+    <pre><code class="prism language-bash">-S     <span class="token keyword">:</span> don<span class="token string">'t imply '</span><span class="token function">import</span> site' on initialization
+</code></pre>
+    <p>
+     在初始化时，不要执行’import site’。测试了一下效果就是
+    </p>
+    <pre><code class="prism language-bash"><span class="token comment"># 指定-S选项</span>
+tony@ubtu-nas918:~/opt-B$ python3.7 -S
+Python 3.7.3 <span class="token punctuation">(</span>default, Mar 26 2019, 01:59:45<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC 5.4.0 20160609<span class="token punctuation">]</span> on linux
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> help<span class="token punctuation">(</span>quit<span class="token punctuation">)</span> <span class="token comment"># 没有help可用</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">"&lt;stdin&gt;"</span>, line 1, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+NameError: name <span class="token string">'help'</span> is not defined
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> quit<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 没有quit()可用</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">"&lt;stdin&gt;"</span>, line 1, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+NameError: name <span class="token string">'quit'</span> is not defined
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token function">import</span> sys
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sys.path <span class="token comment"># sys.path少了几个目录</span>
+<span class="token punctuation">[</span><span class="token string">''</span>, <span class="token string">'/usr/lib/python37.zip'</span>, <span class="token string">'/usr/lib/python3.7'</span>, <span class="token string">'/usr/lib/python3.7/lib-dynload'</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>  <span class="token comment"># &lt;CTRL+D&gt;退出Python</span>
+
+<span class="token comment"># 正常启动时的sys.path目录</span>
+tony@ubtu-nas918:~/opt-B$ python3.7
+Python 3.7.3 <span class="token punctuation">(</span>default, Mar 26 2019, 01:59:45<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC 5.4.0 20160609<span class="token punctuation">]</span> on linux
+Type <span class="token string">"help"</span>, <span class="token string">"copyright"</span>, <span class="token string">"credits"</span> or <span class="token string">"license"</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token function">import</span> sys
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sys.path
+<span class="token punctuation">[</span><span class="token string">''</span>, <span class="token string">'/usr/lib/python37.zip'</span>, <span class="token string">'/usr/lib/python3.7'</span>, <span class="token string">'/usr/lib/python3.7/lib-dynload'</span>, <span class="token string">'/usr/local/lib/python3.7/dist-packages'</span>, <span class="token string">'/usr/lib/python3/dist-packages'</span><span class="token punctuation">]</span>
+</code></pre>
+    <h3>
+     <a id="u_269">
+     </a>
+     -u选项
+    </h3>
+    <pre><code class="prism language-bash">-u     <span class="token keyword">:</span> force the stdout and stderr streams to be unbuffered<span class="token punctuation">;</span>
+         this option has no effect on stdin<span class="token punctuation">;</span> also PYTHONUNBUFFERED<span class="token operator">=</span>x
+</code></pre>
+    <p>
+     强制标准输出stdout与标准输入stderr流是无缓冲的；这个选项对标准输入stdin无效；等价于环境变量PYTHONUNBUFFERED=x
+    </p>
+    <h3>
+     <a id="v_276">
+     </a>
+     -v选项
+    </h3>
+    <pre><code class="prism language-bash">-v     <span class="token keyword">:</span> verbose <span class="token punctuation">(</span>trace <span class="token function">import</span> statements<span class="token punctuation">)</span><span class="token punctuation">;</span> also PYTHONVERBOSE<span class="token operator">=</span>x
+         can be supplied multiple <span class="token function">times</span> to increase verbosity
+</code></pre>
+    <p>
+     冗余输出(用于跟踪import语句)；等价于PYTHONVERBOSE=x
+     <br/>
+     可以多次使用增加跟踪冗余度。
+    </p>
+    <h3>
+     <a id="V__version_284">
+     </a>
+     -V / --version选项
+    </h3>
+    <pre><code class="prism language-bash">-V     <span class="token keyword">:</span> print the Python version number and <span class="token keyword">exit</span> <span class="token punctuation">(</span>also --version<span class="token punctuation">)</span>
+         when given twice, print <span class="token function">more</span> information about the build
+</code></pre>
+    <p>
+     打印Python版本号，然后退出（即–version）。当使用-VV时，会打印出更多信息。
+    </p>
+    <pre><code class="prism language-bash"><span class="token comment"># 打印版本号</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python -V
+Python 3.7.3
+
+<span class="token comment"># 打印更多信息</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python -VV
+Python 3.7.3 <span class="token punctuation">(</span>default, Mar 26 2019, 01:59:45<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC 5.4.0 20160609<span class="token punctuation">]</span>
+
+<span class="token comment"># 不报错，与-VV等价</span>
+<span class="token punctuation">(</span>py3.7_env<span class="token punctuation">)</span> tony@ubtu-nas918:~$ python -VVV
+Python 3.7.3 <span class="token punctuation">(</span>default, Mar 26 2019, 01:59:45<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC 5.4.0 20160609<span class="token punctuation">]</span>
+</code></pre>
+    <h3>
+     <a id="W_arg_307">
+     </a>
+     -W arg选项
+    </h3>
+    <pre><code class="prism language-bash">-W arg <span class="token keyword">:</span> warning control<span class="token punctuation">;</span> arg is action:message:category:module:lineno
+         also PYTHONWARNINGS<span class="token operator">=</span>arg
+</code></pre>
+    <p>
+     警告控制；参数是action:message:category:module:lineno；等价于环境变量PYTONWARNINGS=arg
+     <br/>
+     arg的选项很多，常用的包括
+    </p>
+    <ul>
+     <li>
+      ignore：忽略所有警告信息
+     </li>
+     <li>
+      default：明确地设置为默认警告信息
+     </li>
+     <li>
+      all：每次出现警告信息都打印（小心：如果在某个循环中产生了警告，则可能会产生许多信息）
+     </li>
+     <li>
+      module：模块产生的警告信息，只在第一次发生时打印
+     </li>
+     <li>
+      once：程序产生的警告信息，只在第一次发生时打印
+     </li>
+     <li>
+      error：把警告信息当作错误。
+     </li>
+    </ul>
+    <p>
+     完整的arg格式是：action:message:category:module:line，详情参看Python文档。
+    </p>
+    <h3>
+     <a id="x_322">
+     </a>
+     -x选项
+    </h3>
+    <pre><code class="prism language-bash">-x     <span class="token keyword">:</span> skip first line of source, allowing use of non-Unix forms of <span class="token comment">#!cmd</span>
+</code></pre>
+    <p>
+     略过Python源文件的第一行，允许使用非UNIX格式#!cmd。
+    </p>
+    <h3>
+     <a id="X_opt_329">
+     </a>
+     -X opt选项
+    </h3>
+    <pre><code class="prism language-bash">-X opt <span class="token keyword">:</span> <span class="token keyword">set</span> implementation-specific option
+</code></pre>
+    <p>
+     设置特定实现上的选项。详情参看：
+     <a href="https://docs.python.org/zh-cn/3/using/cmdline.html" rel="nofollow">
+      https://docs.python.org/zh-cn/3/using/cmdline.html
+     </a>
+    </p>
+    <h3>
+     <a id="checkhashbasedpycs_alwaysdefaultnever_335">
+     </a>
+     –check-hash-based-pycs always|default|never选项
+    </h3>
+    <pre><code class="prism language-bash">--check-hash-based-pycs always<span class="token operator">|</span>default<span class="token operator">|</span>never:
+    control how Python invalidates hash-based .pyc files
+</code></pre>
+    <p>
+     只是Python如何使基于哈希的.pyc文件无效。有三种选择：
+    </p>
+    <ul>
+     <li>
+      default：对checked与unchecked的基于哈希的字节码缓存文件，按照默认的语义验证有效性
+     </li>
+     <li>
+      always：所有基于哈希的.pyc文件，无论是checked还是unchecked，都与相应的源代码比较来验证有效性。
+     </li>
+     <li>
+      never：所有基于哈希的.pyc文件，都不与相应的源代码比较来验证有效性。
+     </li>
+    </ul>
+    <p>
+     这个选项并不影响基于时间戳的.pyc文件的有效性验证方法。
+    </p>
+    <h2>
+     <a id="_348">
+     </a>
+     参考
+    </h2>
+    <p>
+     Python 3.7.3的完整命令行参数里列表
+    </p>
+    <pre><code>C:\Users\tsu5&gt;py -3 --help
+usage: C:\Python\Python3.7.3\python.exe [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Options and arguments (and corresponding environment variables):
+-b     : issue warnings about str(bytes_instance), str(bytearray_instance)
+         and comparing bytes/bytearray with str. (-bb: issue errors)
+-B     : don't write .pyc files on import; also PYTHONDONTWRITEBYTECODE=x
+-c cmd : program passed in as string (terminates option list)
+-d     : debug output from parser; also PYTHONDEBUG=x
+-E     : ignore PYTHON* environment variables (such as PYTHONPATH)
+-h     : print this help message and exit (also --help)
+-i     : inspect interactively after running script; forces a prompt even
+         if stdin does not appear to be a terminal; also PYTHONINSPECT=x
+-I     : isolate Python from the user's environment (implies -E and -s)
+-m mod : run library module as a script (terminates option list)
+-O     : remove assert and __debug__-dependent statements; add .opt-1 before
+         .pyc extension; also PYTHONOPTIMIZE=x
+-OO    : do -O changes and also discard docstrings; add .opt-2 before
+         .pyc extension
+-q     : don't print version and copyright messages on interactive startup
+-s     : don't add user site directory to sys.path; also PYTHONNOUSERSITE
+-S     : don't imply 'import site' on initialization
+-u     : force the stdout and stderr streams to be unbuffered;
+         this option has no effect on stdin; also PYTHONUNBUFFERED=x
+-v     : verbose (trace import statements); also PYTHONVERBOSE=x
+         can be supplied multiple times to increase verbosity
+-V     : print the Python version number and exit (also --version)
+         when given twice, print more information about the build
+-W arg : warning control; arg is action:message:category:module:lineno
+         also PYTHONWARNINGS=arg
+-x     : skip first line of source, allowing use of non-Unix forms of #!cmd
+-X opt : set implementation-specific option
+--check-hash-based-pycs always|default|never:
+    control how Python invalidates hash-based .pyc files
+file   : program read from script file
+-      : program read from stdin (default; interactive mode if a tty)
+arg ...: arguments passed to program in sys.argv[1:]
+
+Other environment variables:
+PYTHONSTARTUP: file executed on interactive startup (no default)
+PYTHONPATH   : ';'-separated list of directories prefixed to the
+               default module search path.  The result is sys.path.
+PYTHONHOME   : alternate &lt;prefix&gt; directory (or &lt;prefix&gt;;&lt;exec_prefix&gt;).
+               The default module search path uses &lt;prefix&gt;\python{major}{minor}.
+PYTHONCASEOK : ignore case in 'import' statements (Windows).
+PYTHONIOENCODING: Encoding[:errors] used for stdin/stdout/stderr.
+PYTHONFAULTHANDLER: dump the Python traceback on fatal errors.
+PYTHONHASHSEED: if this variable is set to 'random', a random value is used
+   to seed the hashes of str, bytes and datetime objects.  It can also be
+   set to an integer in the range [0,4294967295] to get hash values with a
+   predictable seed.
+PYTHONMALLOC: set the Python memory allocators and/or install debug hooks
+   on Python memory allocators. Use PYTHONMALLOC=debug to install debug
+   hooks.
+PYTHONCOERCECLOCALE: if this variable is set to 0, it disables the locale
+   coercion behavior. Use PYTHONCOERCECLOCALE=warn to request display of
+   locale coercion and locale compatibility warnings on stderr.
+PYTHONBREAKPOINT: if this variable is set to 0, it disables the default
+   debugger. It can be set to the callable of your debugger of choice.
+PYTHONDEVMODE: enable the development mode.
+</code></pre>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

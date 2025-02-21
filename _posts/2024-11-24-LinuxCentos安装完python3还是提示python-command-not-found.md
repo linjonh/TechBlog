@@ -1,0 +1,70 @@
+---
+layout: post
+title: LinuxCentos安装完python3还是提示python-command-not-found
+date: 2024-11-24 13:11:44 +0800
+categories: [spark,python数据分析]
+tags: [python,linux,centos]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=122623930
+    alt: LinuxCentos安装完python3还是提示python-command-not-found
+artid: 122623930
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Linux/Centos安装完python3还是提示python: command not found
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     因安装的Python为Python3版本，因此直接输入python是会报错，可以输入python3即可。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/2c2a28bfba780b95be256e171f0fc9da.png">
+      <br/>
+      现在教大家怎么修改python3变为python，即输入python不会报错：
+     </img>
+    </p>
+    <ol>
+     <li>
+      查看python3路径 which python3
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/bed657699bfcd88757c4a49753389576.png"/>
+     </li>
+     <li>
+      更改默认版本
+     </li>
+    </ol>
+    <pre><code class="prism language-python">alternatives <span class="token operator">-</span><span class="token operator">-</span><span class="token builtin">set</span> python <span class="token operator">/</span>usr<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>python3
+</code></pre>
+    <p>
+     如果没有权限，可以加入sudo
+    </p>
+    <ol start="3">
+     <li>
+      之后在输入python就不会报错
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/43a2523d6312dd85245aa01d1c2ea449.png"/>
+     </li>
+    </ol>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

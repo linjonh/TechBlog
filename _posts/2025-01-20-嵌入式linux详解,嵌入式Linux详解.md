@@ -1,0 +1,74 @@
+---
+layout: post
+title: 嵌入式linux详解,嵌入式Linux详解
+date: 2025-01-20 12:42:15 +0800
+categories: [嵌入式linux详解]
+tags: [嵌入式linux详解]
+image:
+    path: https://img-blog.csdnimg.cn/img_convert/7e1089dfd6c115948c97408f619905ff.png?x-oss-process=image/resize,m_fixed,h_150
+    alt: 嵌入式linux详解,嵌入式Linux详解
+artid: 116775641
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     嵌入式linux详解,嵌入式Linux详解
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div style="font-size:16px;">
+     <p>
+      嵌入式Linux详解
+     </p>
+     <p>
+      嵌入式培训就是嵌入式系统相关技术的培训。嵌入式系统说白了就是硬件和软件相结合，嵌入到整机里使整机实现智能化的一个系统。下面是小编整理的关于嵌入式Linux详解，希望大家认真了解!
+     </p>
+     <p align="center">
+      <img alt="7e1089dfd6c115948c97408f619905ff.png" src="https://i-blog.csdnimg.cn/blog_migrate/5ee001c71f1129a5b92e4829b1d62674.jpeg"/>
+     </p>
+     <p>
+      嵌入式Linux优点
+     </p>
+     <p>
+      与其它嵌入式操作系统相比，Linux的源代码是开放的，不存在黑箱技术。Linux作为一种可裁剪的软件平台系统，很可能发展成为未来嵌入式设备产品的绝佳资源。Linux与生俱来的优秀网络血统更为今后的发展铺平了一条宽广平坦的大路。因此，在保持Linux内核系统更小、更稳定、更具价格竞争力等优势的同时，对系统内核进行实时性优化，更加使之能够适应对工业控制领域高实时性的要求。这也正是嵌入式Linux操作系统在嵌入式工控系统中的发展所在。同时也使Linux成为嵌入式操作系统中的新贵。
+     </p>
+     <p>
+      嵌入式Linux功能
+     </p>
+     <p>
+      标准的Linux内核通常驻留在内存中，每一个应用程序都是从磁盘运到内存上执行。当程序结束后，它所占用的内存就被释放，程序就被下载了。而在一个嵌入式系统里，可能没有磁盘。有两种途径可以消除对磁盘的依赖，一是在一个简单的系统里，当系统启动后，内核和所有的应用程序都存在内存里。这是大多数传统的嵌入式系统的工作模式，同样Linux。第二种就是Linux所特有的功能，因为Linux已经有能力“加载”和“卸载”程序，因此，一个嵌入式系统就可以利用它来节省内存。一个比较典型的系统有大约8MB到16MB的闪存和8MB RAM，而闪存可以被用作文件系统。用闪存驱动程序作为从闪存到文件系统的界面就是一种选择。当然，也可以用一个闪存磁盘。用闪存来摆脱系统对一个磁盘的需求(依赖)具有Disk On Chip技术以及CompactFlash卡等方式。
+     </p>
+     <p>
+      嵌入式LinuxCPU
+     </p>
+     <p>
+      运行嵌入式Linux的CPU可以是X86、Alpha、Sparc、MIPS、PPC等。与这些芯片搭配的主板都很小，通常只有一张PCI卡大小，有的甚至更小。嵌入式Linux所需的存储器不是软磁盘、硬盘、Zip盘、CD-ROM、DVD这些众所周知的常规存储器，它主要使用Rom、CompactFlash、M-Systems的Disk On Chip、Sony的Memory Stick、IBM的MicroDrive等体积极小(与主板上的BIOS大小相近)，且存储容量不太大的存储器。它的内存可以使用普通的内存，也可以使用专用的RAM。
+     </p>
+     <p>
+      嵌入式Linux运行
+     </p>
+     <p>
+      用来连接Flash Memory和文件系统的`程序都以文件形式存储在Flash文件中，需要时可以装入内存，这种动态的、根据需要加载的能力是支持其它一系列功能的重要特征。它能使初始化代码在系统引导后被释放。实际上，Linux同样还有很多内核外运行的公用程序，这些程序通常在初始化时运行一次，以后就不再运行。而且，这些公用程序可以用它们相互共有的方式一个接一个地按顺序运行。这样，相同内存空间可以被反复使用以“召入”每一个程序，就象系统引导一样。这样可以节省内存，特别是那些配置一次以后就不再更改的网络堆栈。如果将Linux可加载模块的功能包括在内核里，驱动程序和应用程序就都可以被加载。由于它可以检查硬件环境并且为硬件装上相应的软件，从而消除了用一个程序占用许多Flash Memory来处理多种硬件的复杂性。另外，软件的升级更加模块化，可以在系统运行时在Flashh上升级应用程序和加载驱动程序，其配置信息和运行时间参数可以作为数据文件储存在Flash中。
+     </p>
+     <p>
+      【嵌入式Linux详解】相关文章：
+     </p>
+    </div>
+   </div>
+  </div>
+  <div id="recommendDown">
+  </div>
+ </article>
+</div>
+
+

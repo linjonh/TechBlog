@@ -1,0 +1,959 @@
+---
+layout: post
+title: scala与java之间的关系
+date: 2024-12-09 12:00:33 +0800
+categories: [Scala]
+tags: []
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=78098873
+    alt: scala与java之间的关系
+artid: 78098873
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     scala与java之间的关系
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     FROM： http://www.cnblogs.com/vikings-blog/p/3942417.html
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     scala与java之间的关系，我认为可以用一句话来开头：scala来源于java，但又高于java。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     scala的设计者Martin Odersky就是一个JAVA控，这位牛人设计了javac和编写了jdk中的通用代码。可以说java语言本身就是Martin Odersky一步一步看着长大的。所以scala可以说打根起就和JAVA有着远远悠长的血缘关系。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     Martin Odersky还在写java那会，就立志开发达成一个目标：让写程序这样一个基础工作变得高效、简单、且令人愉悦！因此可以说scala是这个目标实现过程中的一个重要里程碑。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     因此可以说java是职业装，scala就是休闲服。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <strong>
+      scala简练，高效。java成熟，稳重。
+     </strong>
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     但是尺有所长，寸有所短。scala的简练高效有其独有的使用范围：scala最适合用在算法描述领域，java适合用在指令编程领域。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     scala独有的两招：函数式编程、简单的并发编程.
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <strong>
+      1、scala独有的函数式编程。
+     </strong>
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     函数是scala语言中的一等公民。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     一等公民的特权表现在：1.函数可以传递、赋值
+     <br/>
+     2.scala中有嵌套函数和匿名函数
+     <br/>
+     3.scala支持高阶函数
+     <br/>
+     4.scala支持偏应用(偏函数)
+     <br/>
+     5.scala支持闭包
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     举例来说：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     1.可传递
+     <br/>
+     <span style="line-height:1.5">
+     </span>
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> def  func(f:()  =&gt;  String)  =<span style="line-height:1.5!important">  println(f())
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> func(()  =&gt;  "hi"<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">output:  hi</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span>         
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> def  foo()  =  "ok"
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> <span style="line-height:1.5!important">func(foo)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">output:  ok</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span>         
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> val  fun  =  (x:Int)  =&gt;<span style="line-height:1.5!important">  print(x)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span> fun(2<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">11</span> <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">output:2</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <span style="line-height:1.5">
+      2.嵌套函数
+     </span>
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important">1</span> <span style="line-height:1.5!important">def foo(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">2</span> <span style="line-height:1.5!important">    def bar(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">3</span>         println("hi"<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">4</span> <span style="line-height:1.5!important">        }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">5</span> <span style="line-height:1.5!important">    bar  //exec
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">6</span> <span style="line-height:1.5!important">}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">7</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">8</span> foo <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">output:hi        </span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <br/>
+     嵌套函数在实际中应用场景不多，其中一个场景是将递归函数转为尾递归方式！
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="line-height:1.5!important">def fun1(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> <span style="line-height:1.5!important">  .....
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span>   <span style="color:rgb(0,0,255); line-height:1.5!important">this</span>      
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> <span style="line-height:1.5!important">}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> <span style="line-height:1.5!important">def fun2(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> <span style="line-height:1.5!important">  ....
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span>   <span style="color:rgb(0,0,255); line-height:1.5!important">this</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> <span style="line-height:1.5!important">}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">11</span> <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">两个函数可以如下方式使用</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important">12</span> fun1().fun2()</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     3.匿名函数
+     <br/>
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important">1</span> <span style="line-height:1.5!important">lambda:函数字面量(Function literal)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">2</span> (x:Int,y:Int) =&gt; x +<span style="line-height:1.5!important">y
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">3</span> <span style="line-height:1.5!important">参数 右箭头 函数体
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">4</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">5</span> 上面语句产生一段匿名函数，类型为(Int,Int) =&gt;<span style="line-height:1.5!important"> Int
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">6</span> 注意：scala中函数的参数个数为0到22个</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     4.高阶函数
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="line-height:1.5!important">第一种：用函数做参数的函数。eg：
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> def f2(f:() =&gt;<span style="line-height:1.5!important"> Unit) {f()}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> def f1(){println(1<span style="line-height:1.5!important">)}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> <span style="line-height:1.5!important">f2(f1)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> f2(() =&gt; println("hi")) <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">传入匿名函数</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important">10</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">11</span> <span style="line-height:1.5!important">第二种：产生的结果是一个函数的函数。eg：
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">12</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">13</span> def hf():Int =&gt; Int = x =&gt; x +1
+<span style="color:rgb(0,128,128); line-height:1.5!important">14</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">15</span> val fun =<span style="line-height:1.5!important"> hf
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">16</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">17</span> fun(2) <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">output:3</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <br/>
+     5.函数柯里化
+     <br/>
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="line-height:1.5!important">当函数具有多个参数时
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> def sum(x:Int,y:Int) = x +<span style="line-height:1.5!important"> y
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">参数被打散后，两个参数分开</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> def sum2(x:Int)(y:Int) = x +<span style="line-height:1.5!important"> y
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> sum2(1)(2) <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">output：3</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> scala&gt; def first(x:Int)=(y:Int) =&gt; x+<span style="line-height:1.5!important">y
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span> first: (x: Int)Int =&gt;<span style="line-height:1.5!important"> Int
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">11</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">12</span> scala&gt; first(1<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">13</span> res10: Int =&gt; Int = &lt;function1&gt;
+<span style="color:rgb(0,128,128); line-height:1.5!important">14</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">15</span> scala&gt; val second=first(1<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">16</span> second: Int =&gt; Int = &lt;function1&gt;
+<span style="color:rgb(0,128,128); line-height:1.5!important">17</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">18</span> scala&gt; second(2<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">19</span> res11: Int = 3
+<span style="color:rgb(0,128,128); line-height:1.5!important">20</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">21</span> <span style="line-height:1.5!important">函数链
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">22</span> <span style="line-height:1.5!important">把一个带有多个参数的函数，转换为多个只有一个参数的函数来执行
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">23</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">24</span> f(1)(2)(3) 相当于 ((f(1))(2))(3<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">25</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">26</span> 带入参数 1执行 fa(1) 然后 带入参数2执行 fb(2) 接着带入参数3执行fc(3<span style="line-height:1.5!important">) 最后得到结果
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">27</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">28</span> <span style="line-height:1.5!important">柯里化的实际用途？
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">29</span> 控制抽象，可改变代码的书写风格 foo(res,()=&gt;println(res)) foo(res)(()=&gt; println(res)) foo(res){()=&gt;<span style="line-height:1.5!important"> println(res)}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">30</span> <span style="line-height:1.5!important">实现部分应用函数
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">31</span> scala&gt; def log(time:java.util.Date,msg:String){println(time+<span style="line-height:1.5!important">msg)}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">32</span> <span style="line-height:1.5!important">log: (time: java.util.Date, msg: String)Unit
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">33</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">34</span> scala&gt; val log2 = log(<span style="color:rgb(0,0,255); line-height:1.5!important">new</span><span style="line-height:1.5!important"> java.util.Date,_:String)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">35</span> log2: String =&gt; Unit = &lt;function1&gt;
+<span style="color:rgb(0,128,128); line-height:1.5!important">36</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">37</span> scala&gt; log2("test1"<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">38</span> Mon Sep 09 23:46:15<span style="line-height:1.5!important"> CST 2013test1
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">39</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">40</span> scala&gt; log2("test2"<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">41</span> Mon Sep 09 23:46:19<span style="line-height:1.5!important"> CST 2013test2
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">42</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">43</span> scala&gt; log2("test3"<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">44</span> Mon Sep 09 23:46:22 CST 2013test3</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <br/>
+     6.闭包
+     <br/>
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="line-height:1.5!important">在java中匿名内部类访问局部变量是，局部变量必须声明为final（类似闭包的实现）
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="line-height:1.5!important">scala中没有那么麻烦：
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> scala&gt; val more = 1
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> more: Int = 1
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span> scala&gt; val addMore = (x: Int) =&gt; x +<span style="line-height:1.5!important"> more
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> addMore: Int =&gt; Int = &lt;function1&gt;
+<span style="color:rgb(0,128,128); line-height:1.5!important">10</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">11</span> scala&gt; addMore(10<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">12</span> res19: Int = 11</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     (以上案例部分参考互联网已公开的案例和&lt;Programming in Scala&gt;中部分说明)
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <strong>
+      2、scala简单的并发编程模型
+     </strong>
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     scala的并发编程采用的是actor模型，即参与者模型(国内有个通俗术语叫做观察者模式)。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     简而言之就是每个参与者将自身的状态变化通过某种方式广播出去，其他参与者获取到这种状态变化后，再决定是否继续参与。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     scala使用精炼的函数式编程实现了actor模型，从而可以实现同一JVM单核并发，同一JVM多核并发，多个JVM之间并发，并且还可以实现某种意义上的IPC。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     典型的actor编程模型如下：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="line-height:1.5!important">Scala写法1：
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> actors.Actor,actors.Actor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> <span style="color:rgb(0,0,255); line-height:1.5!important">class</span> A1 <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> <span style="line-height:1.5!important">def act { 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span> <span style="line-height:1.5!important">    react { 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span>         <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> n:Int=&gt;<span style="line-height:1.5!important">println(perfect(n)) 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span> <span style="line-height:1.5!important">        }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">11</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">12</span> <span style="line-height:1.5!important">}
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">13</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">14</span> n to n+10 foreach (i=&gt;<span style="line-height:1.5!important">{ 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">15</span>     (<span style="color:rgb(0,0,255); line-height:1.5!important">new</span> A1).start !<span style="line-height:1.5!important"> i
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">16</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">17</span> )</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important">1</span> val aa = Array.fill(11<span style="line-height:1.5!important">)(actor { 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">2</span> <span style="line-height:1.5!important">    react { 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">3</span>         <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> n:Int=&gt;<span style="line-height:1.5!important">println(perfect(n)) 
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">4</span> <span style="line-height:1.5!important">        }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">5</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">6</span> <span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">7</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">8</span> n to n+10 foreach (i=&gt;aa(i-n) ! i)</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     两种写法只是区别在声明类方式上面，一种需要显式调用start,另外一个不需要而已。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     不同JVM之间的通讯模型如下：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     服务端：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> <span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorServer <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span>   
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> <span style="line-height:1.5!important">    def act(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">11</span>       alive(9999) <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">绑定端口</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important">12</span>       register('ActorServer, self) //注册服务类
+<span style="color:rgb(0,128,128); line-height:1.5!important">13</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">14</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">15</span>       <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">16</span> <span style="line-height:1.5!important">        receive  {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">17</span>           <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> str:String =&gt;print("There is say "+<span style="line-height:1.5!important">str)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">18</span>           <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> _=&gt;println("There is no message "<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">19</span> <span style="line-height:1.5!important">        }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">20</span> <span style="line-height:1.5!important">      }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">21</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">22</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">23</span> }</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     客户端：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span> <span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorClient <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> <span style="line-height:1.5!important">    def act(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span>       val actServer = select(Node("127.0.0.1", 9999), 'ActorServer)
+<span style="color:rgb(0,128,128); line-height:1.5!important">11</span>           <span style="color:rgb(0,128,0); line-height:1.5!important">//</span><span style="color:rgb(0,128,0); line-height:1.5!important">每隔5秒发送一次   </span>
+<span style="color:rgb(0,128,128); line-height:1.5!important">12</span>       <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">13</span>         actServer ! "Hello "
+<span style="color:rgb(0,128,128); line-height:1.5!important">14</span>         print("===Send Hello==  "<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">15</span>         Thread.sleep(5000<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">16</span> <span style="line-height:1.5!important">      }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">17</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">18</span> }</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     其中后的效果如下：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="line-height:1.5!important">客户端
+client init success
+</span>===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==
+===Send Hello==  ===Send ad==<span style="line-height:1.5!important">
+服务端
+server init success
+There is say Hello
+There is say Hello
+There is say Hello
+There is say Hello
+There is say Hello</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     这个模型是最简单的不同JVM之间的通讯，我们再添加一点难度！传递一个对象尝试一下：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     对象定义如下：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important">1</span> <span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorDeal <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Serializable {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">2</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">3</span>   var msg: String = ""
+<span style="color:rgb(0,128,128); line-height:1.5!important">4</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important">5</span>   def dealPrint() =<span style="line-height:1.5!important"> {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">6</span>     println("From deal " +<span style="line-height:1.5!important"> msg)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">7</span> <span style="line-height:1.5!important">  }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">8</span> }</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     客户端：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span> <span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorClient <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span> <span style="line-height:1.5!important">    def act(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">10</span>       val actServer = select(Node("127.0.0.1", 9999), 'ActorServer)
+<span style="color:rgb(0,128,128); line-height:1.5!important">11</span>       <span style="background-color:rgb(255,204,0); line-height:1.5!important">var ad = <span style="color:rgb(0,0,255); line-height:1.5!important">new</span><span style="line-height:1.5!important"> ActorDeal()
+</span></span><span style="color:rgb(0,128,128); line-height:1.5!important">12</span>       <span style="background-color:rgb(255,204,0); line-height:1.5!important">ad.msg ="WORLD"</span>
+<span style="color:rgb(0,128,128); line-height:1.5!important">13</span>       <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">14</span>         actServer ! "Hello "
+<span style="color:rgb(0,128,128); line-height:1.5!important">15</span>         print("===Send Hello==  "<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">16</span>         <span style="background-color:rgb(255,204,0); line-height:1.5!important">actServer!<span style="line-height:1.5!important">ad
+</span></span><span style="color:rgb(0,128,128); line-height:1.5!important">17</span>         <span style="background-color:rgb(255,204,0); line-height:1.5!important">println("===Send ad=="<span style="line-height:1.5!important">)
+</span></span><span style="color:rgb(0,128,128); line-height:1.5!important">18</span>         Thread.sleep(5000<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">19</span> <span style="line-height:1.5!important">      }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">20</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">21</span> }</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     高亮部分为新增的对象操作
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     服务端：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important"> 1</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 2</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 3</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 4</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 5</span> <span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 6</span> 
+<span style="color:rgb(0,128,128); line-height:1.5!important"> 7</span> <span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorServer <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important"> 8</span>     <span style="background-color:rgb(255,102,0); line-height:1.5!important">RemoteActor.classLoader=<span style="line-height:1.5!important"> getClass().getClassLoader()
+</span></span><span style="color:rgb(0,128,128); line-height:1.5!important"> 9</span>   
+<span style="color:rgb(0,128,128); line-height:1.5!important">10</span> <span style="line-height:1.5!important">    def act(){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">11</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">12</span>       alive(9999<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">13</span>       register('ActorServer, self)
+<span style="color:rgb(0,128,128); line-height:1.5!important">14</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">15</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">16</span>       <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">17</span> <span style="line-height:1.5!important">        receive  {
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">18</span>           <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> ad:ActorDeal =&gt;<span style="line-height:1.5!important"> dealAD(ad)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">19</span>           <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> str:String =&gt;print("There is say "+<span style="line-height:1.5!important">str)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">20</span>           <span style="color:rgb(0,0,255); line-height:1.5!important">case</span> _=&gt;println("There is no message "<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">21</span> <span style="line-height:1.5!important">        }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">22</span> <span style="line-height:1.5!important">      }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">23</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">24</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">25</span>     
+<span style="color:rgb(0,128,128); line-height:1.5!important">26</span>     def dealAD(adm:ActorDeal)=<span style="line-height:1.5!important">{
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">27</span>       println("Receive AD"<span style="line-height:1.5!important">)
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">28</span> <span style="line-height:1.5!important">      adm.dealPrint
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">29</span>       
+<span style="color:rgb(0,128,128); line-height:1.5!important">30</span> <span style="line-height:1.5!important">    }
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">31</span> }</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     标红的语句是最重要的一句，如果没有这句，scala actor将会报ClassNotFound异常。所以一定要添加上去
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     好，运行后的结果如下：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,128,128); line-height:1.5!important">1</span> <span style="line-height:1.5!important">server init success
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">2</span> <span style="line-height:1.5!important">There is say Hello Receive AD
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">3</span> <span style="line-height:1.5!important">From deal WORLD
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">4</span> <span style="line-height:1.5!important">There is say Hello Receive AD
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">5</span> <span style="line-height:1.5!important">From deal WORLD
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">6</span> <span style="line-height:1.5!important">There is say Hello Receive AD
+</span><span style="color:rgb(0,128,128); line-height:1.5!important">7</span> From deal WORLD</pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     既然写到分布式编程了，那么就再添加一点reply的东西。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     下面的代码表示的服务端如何给客户端回复响应，请看代码：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     服务端
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorServer <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+    RemoteActor.classLoader</span>=<span style="line-height:1.5!important"> getClass().getClassLoader()
+  
+    def act(){
+      
+      alive(</span>9999<span style="line-height:1.5!important">)
+      register(</span>'ActorServer, self)
+      
+      
+      <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+        receive  {
+          </span><span style="color:rgb(0,0,255); line-height:1.5!important">case</span> ad:ActorDeal =&gt;<span style="line-height:1.5!important"> dealAD(ad)
+          </span><span style="color:rgb(0,0,255); line-height:1.5!important">case</span> str:String =&gt;print("There is say "+<span style="line-height:1.5!important">str)
+          </span><span style="color:rgb(0,0,255); line-height:1.5!important">case</span> _=&gt;println("There is no message "<span style="line-height:1.5!important">)
+        }
+      }
+      
+    }
+    
+    def dealAD(adm:ActorDeal)</span>=<span style="line-height:1.5!important">{
+      println(</span>"Receive AD"<span style="line-height:1.5!important">)
+      adm.dealPrint
+<span style="background-color:rgb(255,102,0); line-height:1.5!important">      reply(</span></span><span style="background-color:rgb(255,102,0); line-height:1.5!important">"Yet I receive"</span><span style="line-height:1.5!important"><span style="background-color:rgb(255,102,0); line-height:1.5!important">)</span>
+    }
+}</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     高亮部分就服务端的回复语句。既然服务端有回复，那么客户端是不是也要关心一下呢？
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     客户端
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorClient <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+    def act(){
+      val actServer </span>= select(Node("127.0.0.1", 9999), 'ActorServer)
+      var ad = <span style="color:rgb(0,0,255); line-height:1.5!important">new</span><span style="line-height:1.5!important"> ActorDeal()
+      ad.msg </span>="WORLD"
+      <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+        actServer </span>! "Hello "<span style="line-height:1.5!important">
+        print(</span>"===Send Hello==  "<span style="line-height:1.5!important">)
+        <span style="background-color:rgb(255,102,0); line-height:1.5!important">var fu </span></span><span style="background-color:rgb(255,102,0); line-height:1.5!important">=actServer!!</span><span style="line-height:1.5!important"><span style="background-color:rgb(255,102,0); line-height:1.5!important">ad</span>
+        println(</span>"===Send ad=="<span style="line-height:1.5!important">)
+        <span style="background-color:rgb(255,102,0); line-height:1.5!important">var result </span></span><span style="background-color:rgb(255,102,0); line-height:1.5!important">=</span><span style="line-height:1.5!important"><span style="background-color:rgb(255,102,0); line-height:1.5!important"> fu()</span> 
+        <span style="background-color:rgb(255,102,0); line-height:1.5!important">println(</span></span><span style="background-color:rgb(255,102,0); line-height:1.5!important">"===Receive=="+</span><span style="line-height:1.5!important"><span style="background-color:rgb(255,102,0); line-height:1.5!important">result)</span>
+        Thread.sleep(</span>5000<span style="line-height:1.5!important">)
+      }
+    }
+}</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     首先客户端调用“!!”就是一个等待响应的阻塞方法，这里只要收到服务端回复的确认字符串即可。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     结果如下：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="line-height:1.5!important">client init success
+</span>===Send Hello==  ===Send ad==
+===Receive==Yet I receive</pre>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     如果我们增加点难度，回复一个对象。那又该如何处理呢？请看代码：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     服务端：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorServer <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+    RemoteActor.classLoader</span>=<span style="line-height:1.5!important"> getClass().getClassLoader()
+  
+    def act(){
+      
+      alive(</span>9999<span style="line-height:1.5!important">)
+      register(</span>'ActorServer, self)
+      
+      
+      <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+        receive  {
+          </span><span style="color:rgb(0,0,255); line-height:1.5!important">case</span> ad:ActorDeal =&gt;<span style="line-height:1.5!important"> dealAD(ad)
+          </span><span style="color:rgb(0,0,255); line-height:1.5!important">case</span> str:String =&gt;print("There is say "+<span style="line-height:1.5!important">str)
+          </span><span style="color:rgb(0,0,255); line-height:1.5!important">case</span> _=&gt;println("There is no message "<span style="line-height:1.5!important">)
+        }
+      }
+      
+    }
+    
+    def dealAD(adm:ActorDeal)</span>=<span style="line-height:1.5!important">{
+      println(</span>"Receive AD"<span style="line-height:1.5!important">)
+      adm.dealPrint
+      <span style="background-color:rgb(0,255,0); line-height:1.5!important">adm.msg </span></span><span style="background-color:rgb(0,255,0); line-height:1.5!important">="I have achieve target"</span><span style="line-height:1.5!important"><span style="background-color:rgb(0,255,0); line-height:1.5!important">
+      reply(adm)</span>
+    }
+}</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     我们修改了对象数据，然后reply回去。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     这次客户端会有大动作，请看：
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.remote.RemoteActor._
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> scala.actors.Actor
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">import</span><span style="line-height:1.5!important"> org.andy.scala.actor.model.ActorDeal
+
+</span><span style="color:rgb(0,0,255); line-height:1.5!important">class</span> ActorClient <span style="color:rgb(0,0,255); line-height:1.5!important">extends</span><span style="line-height:1.5!important"> Actor {
+    <span style="background-color:rgb(0,255,0); line-height:1.5!important">RemoteActor.classLoader </span></span><span style="background-color:rgb(0,255,0); line-height:1.5!important">=</span><span style="line-height:1.5!important"><span style="background-color:rgb(0,255,0); line-height:1.5!important"> getClass().getClassLoader()</span>
+    def act(){
+      val actServer </span>= select(Node("127.0.0.1", 9999), 'ActorServer)
+      var ad = <span style="color:rgb(0,0,255); line-height:1.5!important">new</span><span style="line-height:1.5!important"> ActorDeal()
+      ad.msg </span>="WORLD"
+      <span style="color:rgb(0,0,255); line-height:1.5!important">while</span>(<span style="color:rgb(0,0,255); line-height:1.5!important">true</span><span style="line-height:1.5!important">){
+        actServer </span>! "Hello "<span style="line-height:1.5!important">
+        print(</span>"===Send Hello==  "<span style="line-height:1.5!important">)
+        var fu </span>=actServer!!<span style="line-height:1.5!important">ad
+        println(</span>"===Send ad=="<span style="line-height:1.5!important">)
+        var result </span>=<span style="line-height:1.5!important"> fu()
+        **********************</span><span style="line-height:1.5!important">
+        Thread.sleep(</span>5000<span style="line-height:1.5!important">)
+      }
+    }
+}</span></pre>
+     <div class="cnblogs_code_toolbar" style="margin-top:5px">
+      <span class="cnblogs_code_copy" style="padding-right:5px; line-height:1.5!important">
+       <a style="color:rgb(29,88,209); border:none!important" target="_blank" title="复制代码">
+        <img alt="复制代码" src="https://i-blog.csdnimg.cn/blog_migrate/69c5a8ac3fa60e0848d784a6dd461da6.gif" style="max-width:900px; border:none!important"/>
+       </a>
+      </span>
+     </div>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     首先一定要重置classloader，否则又会报ClassNotFound。后面result就应该是接受回复的ActorDeal对象了，但fu()返回的是any对象，又如何转换为ActorDeal对象呢？
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     <a href="http://www.cnblogs.com/vikings-blog/p/3941535.html" rel="nofollow noopener noreferrer" style="color:rgb(29,88,209)" target="_blank">
+      请点击这里查看Scala如何类型强转
+     </a>
+     ,具体代码里面写的较为详细了。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     我们看看效果：
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <div class="cnblogs_code" style='background-color:rgb(245,245,245); border:1px solid rgb(204,204,204); padding:5px; overflow:auto; margin:5px 0px; font-family:"Courier New"!important'>
+     <pre style='margin-top:0px; margin-bottom:0px; margin-left:22px; white-space:pre-wrap; word-wrap:break-word; font-family:"Courier New"!important'><span style="line-height:1.5!important">client init success
+</span>===Send Hello==  ===Send ad==<span style="line-height:1.5!important">
+From deal I have achieve target</span></pre>
+    </div>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     scala其他的特点，比如：强类型，扩展性这里就不一一描述了。
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+    </p>
+    <p style="margin:10px auto; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px">
+     上述的两点，应该属于scala与java之间最根本的特征了。
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

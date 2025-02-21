@@ -1,0 +1,531 @@
+---
+layout: post
+title: 到底什么是云原生Cloud-Native什么是CNCFCloud-Native-Computing-Foundation
+date: 2022-04-09 10:39:13 +0800
+categories: [软件架构/技术选型,云原生(CloudNative)、云计算、虚拟化]
+tags: [系统架构,云原生]
+image:
+    path: https://img-blog.csdnimg.cn/fea181b3c2b64a538f690fe0e966d134.png?x-oss-process=image/resize,m_fixed,h_150
+    alt: 到底什么是云原生Cloud-Native什么是CNCFCloud-Native-Computing-Foundation
+artid: 120904009
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     到底什么是云原生(Cloud Native)？什么是CNCF（Cloud Native Computing Foundation）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-dracula" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#Cloud_NativeCNCFCloud_Native_Computing_Foundation_1" rel="nofollow">
+        到底什么是云原生(Cloud Native)？什么是CNCF（Cloud Native Computing Foundation）
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#Cloud_Native_2" rel="nofollow">
+          一、云原生(Cloud Native)
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#1_Cloud_Native_3" rel="nofollow">
+            1. 什么是云原生(Cloud Native)？
+           </a>
+          </li>
+          <li>
+           <a href="#2_CNCF_36" rel="nofollow">
+            2. CNCF重新定义云原生
+           </a>
+          </li>
+          <li>
+           <a href="#3__90" rel="nofollow">
+            3. 云原生应用和传统应用的区别
+           </a>
+          </li>
+          <li>
+           <a href="#4__101" rel="nofollow">
+            4. 云原生必须掌握的核心项目
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#CNCFCloud_Native_Computing_Foundation_105" rel="nofollow">
+          二、CNCF（Cloud Native Computing Foundation）
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#1_CNCF_106" rel="nofollow">
+            1. 什么是CNCF
+           </a>
+          </li>
+          <li>
+           <a href="#2_Landscape_128" rel="nofollow">
+            2. 云原生Landscape（景观）指南
+           </a>
+          </li>
+          <li>
+           <ul>
+            <li>
+             <a href="#21_cloud_native_landscape_138" rel="nofollow">
+              2.1 什么是cloud native landscape？
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#3_CNCF__143" rel="nofollow">
+            3. CNCF 发展历程
+           </a>
+          </li>
+          <li>
+           <a href="#4_CNCF_2021__159" rel="nofollow">
+            4. CNCF 2021 年报
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="Cloud_NativeCNCFCloud_Native_Computing_Foundation_1">
+     </a>
+     到底什么是云原生(Cloud Native)？什么是CNCF（Cloud Native Computing Foundation）
+    </h2>
+    <h3>
+     <a id="Cloud_Native_2">
+     </a>
+     一、云原生(Cloud Native)
+    </h3>
+    <h4>
+     <a id="1_Cloud_Native_3">
+     </a>
+     1. 什么是云原生(Cloud Native)？
+    </h4>
+    <p>
+     云原生之所以解释不清楚，是因为云原生没有确切的定义，云原生一直在发展变化之中，解释权不归某个人或组织所有。
+    </p>
+    <p>
+     Pivotal公司的Matt Stine于2013年首次提出云原生（CloudNative）的概念；2015年，云原生刚推广时，Matt Stine在《迁移到云原生架构》一书中定义了符合云原生架构的几个特征：符合 12 因素应用、面向微服务架构、自敏捷架构、基于API协作、扛脆弱性；
+    </p>
+    <blockquote>
+     <p>
+      Pivotal 推出过 Pivotal Cloud Foundry 云原生应用平台和 Spring 开源 Java 开发框架，成为云原生应用架构中先驱者和探路者。Pivotal 是云原生应用平台第一股，2018 年在纽交所上市，2019 年底被 VMWare 以 27 亿美元收购，加入到 VMware 新的产品线 Tanzu。
+     </p>
+    </blockquote>
+    <p>
+     到了 2015 年 Google 主导成立了云原生计算基金会（CNCF），开始围绕云原生的概念打造云原生生态体系，起初CNCF对云原生的定义包含以下三个方面：
+    </p>
+    <ul>
+     <li>
+      应用容器化(software stack to be Containerized)
+     </li>
+     <li>
+      面向微服务架构(Microservices oriented)
+     </li>
+     <li>
+      应用支持容器的编排调度(Dynamically Orchestrated)
+     </li>
+    </ul>
+    <p>
+     2017年, 云原生应用的提出者之一的Pivotal在其官网上将云原生的定义概况为DevOps、持续交付、微服务、容器这四大特征，这也成了很多人对 Cloud Native的基础印象。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/4aeea0bb7130aa9a8829411e91d05301.png">
+      云原生的四要素：持续交付、DevOps、微服务、容器：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/8e8ac731e4183add37729988f86d2914.png">
+       <br/>
+       1） DevOps
+       <br/>
+       DevOps（Development和Operations的组合词）即开发、运维一体化。涉及软件在整个开发生命周期中的持续开发，持续测试，持续集成，持续部署和持续监控。
+       <br/>
+       最佳实践：Git，Jenkins，Bamboo，Docker，Kubernetes
+      </img>
+     </img>
+    </p>
+    <p>
+     2） 持续交付
+     <br/>
+     持续交付：持续交付是不误时开发，不停机更新，小步快跑，反传统瀑布式开发模型，这要求开发版本和稳定版本并存，其实需要很多流程和工具支撑。
+     <br/>
+     最佳实践：CI/CD, gitlab， Jenkins，流水线pipeline，tekton等
+    </p>
+    <p>
+     3） 微服务 （Microservice）
+     <br/>
+     几乎每个云原生的定义都包含微服务，跟微服务相对的是单体应用，微服务有理论基础，那就是康威定律，指导服务怎么切分。
+    </p>
+    <p>
+     4） 容器 （Container）
+     <br/>
+     2013年，Docker项目正式发布，2014年，K8s项目也正式发布。
+     <br/>
+     Docker是应用最为广泛的容器引擎，在思科谷歌等公司的基础设施中大量使用。K8S是容器编排系统，用于容器管理，容器间的负载均衡
+    </p>
+    <h4>
+     <a id="2_CNCF_36">
+     </a>
+     2. CNCF重新定义云原生
+    </h4>
+    <p>
+     到了 2018 年，随着近几年来云原生生态的不断壮大，所有主流云计算供应商都加入了该基金会，且从 Cloud Native Landscape 中可以看出云原生有意蚕食原先非云原生应用的部分。CNCF 基金会中的会员以及容纳的项目越来越多，该定义已经限制了云原生生态的发展，CNCF 为云原生进行了重新定位。
+    </p>
+    <p>
+     2018年6月，CNCF正式对外公布了更新之后的云原生的定义（包含中文版本）v1.0版本：
+    </p>
+    <p>
+     <a href="https://github.com/cncf/toc/blob/main/DEFINITION.md">
+      CNCF官方对Cloud Native的定义
+     </a>
+     :
+     <br/>
+     Cloud native technologies empower organizations to build and run scalable applications in modern, dynamic environments such as public, private, and hybrid clouds. Containers, service meshes, microservices, immutable infrastructure, and declarative APIs exemplify this approach.
+    </p>
+    <p>
+     These techniques enable loosely coupled systems that are resilient, manageable, and observable. Combined with robust automation, they allow engineers to make high-impact changes frequently and predictably with minimal toil.
+    </p>
+    <p>
+     The Cloud Native Computing Foundation seeks to drive adoption of this paradigm by fostering and sustaining an ecosystem of open source, vendor-neutral projects. We democratize state-of-the-art patterns to make these innovations accessible for everyone.
+    </p>
+    <p>
+     中文版本：
+     <br/>
+     云原生技术有利于各组织在公有云、私有云和混合云等新型动态环境中，构建和运行可弹性扩展的应用。
+     <strong>
+      云原生的代表技术包括容器、服务网格、微服务、不可变基础设施和声明式API。
+     </strong>
+    </p>
+    <p>
+     这些技术能够构建容错性好、易于管理和便于观察的松耦合系统。结合可靠的自动化手段，云原生技术使工程师能够轻松地对系统作出频繁和可预测的重大变更。
+    </p>
+    <p>
+     云原生计算基金会（CNCF）致力于培育和维护一个厂商中立的开源生态系统，来推广云原生技术。我们通过将最前沿的模式民主化，让这些创新为大众所用。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c7377bed7303d6ebd5979585f4999e77.png">
+      新的定义中，继续保持原有的核心内容：容器和微服务，但是非常特别的将服务网格单独列出来，而不是将服务网格作为微服务的一个子项或者实现模式，体现了云原生中服务网格这一个新生技术的重要性。而不可变基础设施和声明式API这两个设计指导理念的加入，则强调了这两个概念对云原生架构的影响和对未来发展的指导作用。
+     </img>
+    </p>
+    <p>
+     1、服务网格 （Service Mesh）
+     <br/>
+     微服务技术架构实践中主要有侵入式架构和非侵入式架构两种实现形式。侵入式架构是指服务框架嵌入程序代码，开发者组合各种组件，如RPC、负载均衡、熔断等，实现微服务架构。非侵入式架构则是以代理的形式，与应用程序部署在一起，接管应用程序的网络且对其透明，开发者只需要关注自身业务即可，以服务网格为代表。为了解决微服务框架的侵入性问题，引入Service Mesh。
+     <br/>
+     Serice Mesh提供了专业化的解决方案，其中所涉及的服务通信、容错、认证等功能，都是专业度极高的领城，这些领城应该出现工业级成熟度的制成品，这对于中小企业来说是一个降低成本的选择。
+    </p>
+    <pre><code>Service Mesh的开源软件包括Istio、Linkerd、 Envoy、 Dubbo Mesh等。同时，为了让Service Mesh有更好的底层支撑，我们又将Service Mesh运行在Kubernetes上。
+</code></pre>
+    <p>
+     2、不可变基础设施（Immutable Infrastructure）
+     <br/>
+     What is “Immutable Infrastructure”?
+     <br/>
+     参考URL: https://www.armory.io/blog/what-is-immutable-infrastructure/
+    </p>
+    <p>
+     不可变基础设施里的“不可变”非常类似于程序设计中的“不可变”概念。程序设计中，不可变变量（Immutable Variable）就是在完成赋值后就不能发生更改，只能创建新的来整体替换旧的。
+     <strong>
+      对于基础设施的不可变性，最基本的就是指运行服务的服务器在完成部署后，就不再进行更改。
+     </strong>
+    </p>
+    <pre><code>可变基础设施通常会导致以下问题：
+- 在灾难发生的时候，难以重新构建服务。持续过多的手工操作，缺乏记录，会导致很难由标准初始化后的服务器来重新构建起等效的服务。
+- 在服务运行过程中，持续的修改服务器，就犹如程序中的可变变量的值发生变化而引入的状态不一致的并发风险。这些对于服务器的修改，同样会引入中间状态，从而导致不可预知的问题。
+</code></pre>
+    <p>
+     总结：不可变基础设施其实就是生产环境下基础设施不能改动，如果改动，已切都是被记录的，是可以回溯的。
+    </p>
+    <p>
+     3、声明式API ( declarative APIs)
+     <br/>
+     Declarative APIs
+     <br/>
+     https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/
+    </p>
+    <p>
+     声明式 API 的 “声明式” 是什么意思？对于我们使用 Kubernetes API 对象的方式，一般会编写对应 API 对象的 YAML 文件交给 Kubernetes（而不是使用一些命令来直接操作 API）。
+     <br/>
+     所谓“声明式”，指的就是我只需要提交一个定义好的 API 对象来“声明”（这个 YAML 文件其实就是一种“声明”），表示所期望的最终状态是什么样子就可以了。而如果提交的是一个个命令，去指导怎么一步一步达到期望状态，这就是“命令式”了。
+     <br/>
+     “命令式 API”接收的请求只能一个一个实现，否则会有产生冲突的可能；“声明式API”一次能处理多个写操作，并且具备 Merge 能力。
+     <br/>
+     Kubernetes 有很多能力，这些能力都是通过各种 API 对象来提供。也就是说，API 对象正是我们使用 Kubernetes 的接口，我们正是通过操作这些提供的 API 对象来使用 Kubernetes 能力的。
+    </p>
+    <p>
+     总结：声明式API其实就是所有资源抽象，抽象成api。这些api 标准化，相当于规范标准了。
+    </p>
+    <h4>
+     <a id="3__90">
+     </a>
+     3. 云原生应用和传统应用的区别
+    </h4>
+    <p>
+     荔枝微课基础架构的演进与实践
+     <br/>
+     参考URL: https://www.upyun.com/opentalk/449.html
+    </p>
+    <p>
+     云原生是一个很宽泛的概念，想要开发一个支持云原生的应用并不难，可能就是简单的实现可基于容器部署、使用Kubernetes进行编排与调度，集成CI/CD工具以及Prometheus监控工具等。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/87cd8f63d689103c418f76cea74e7ede.png">
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6298e3c2b2c1d648c6f63556565afb20.png">
+       <br/>
+       <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/ce588dfd7d974fe658ae941c53b95aa2.png">
+        云原生在一个更好的基础平台与设施上提供了更多的应用。因为做了容器化就不需要指定操作系统，K8S 的资源调度更有弹性，之前需要通过代码来协调实现伸缩策略，比较麻烦，借助DevOps 会容易达成协作，因为它整个流程都是自动的，能够敏捷开发。还有微服是都是各自独立的，具有高内聚、低耦合的原则，具有自动化运维、快速恢复的特点，自愈能力强。当集群宕掉了，它会自动拉起。
+       </img>
+      </img>
+     </img>
+    </p>
+    <blockquote>
+     <p>
+      总结： 云原生与传统应用有比较明显的区别，云原生更倡导敏捷、自动化、容错，而传统应用则大多还处于原生的瀑布开发模型和人工运维阶段。
+     </p>
+    </blockquote>
+    <h4>
+     <a id="4__101">
+     </a>
+     4. 云原生必须掌握的核心项目
+    </h4>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/50f21c4f8fde4dda4b7954dfbbcd7dc7.png"/>
+    </p>
+    <h3>
+     <a id="CNCFCloud_Native_Computing_Foundation_105">
+     </a>
+     二、CNCF（Cloud Native Computing Foundation）
+    </h3>
+    <h4>
+     <a id="1_CNCF_106">
+     </a>
+     1. 什么是CNCF
+    </h4>
+    <p>
+     cncf官网：https://www.cncf.io/
+    </p>
+    <p>
+     2015年由Linux基金会发起了一个 The Cloud Native Computing Foundation（CNCF）基金组织，CNCF基金会的成立标志着云原生正式进入高速发展轨道，Google、Cisco、Docker各大厂纷纷加入，并逐步构建出围绕 Cloud Native 的具体工具，而云原生这个的概念也逐渐变得更具体化。CNCF最初对云原生定义是也是狭窄的，当时把云原生定位为容器化封装+自动化管理+面向微服务。
+    </p>
+    <p>
+     CNCF的目的不一样，他成立的目的是希望打破云巨头的垄断，实际上是希望通过容器和k8s，将提供底层资源的云服务商变得无差异化。这主要因为CNCF基金会在当时的核心拳头软件就是k8s，因此在概念定义上主要是围绕着容器编排建立起来的生态。这也是为什么我们感觉CNCF 定义云原生的时候就是在说容器生态。
+    </p>
+    <p>
+     CNCF 是非营利性 Linux 基金会的一部分。
+    </p>
+    <p>
+     官网介绍：
+     <br/>
+     Building sustainable ecosystems for cloud native software
+     <br/>
+     为云原生软件建立可持续的生态系统
+    </p>
+    <p>
+     Cloud Native Computing Foundation (CNCF) serves as the vendor-neutral home for many of the fastest-growing open source projects, including Kubernetes, Prometheus, and Envoy.
+     <br/>
+     云本地计算基金会(CNCF)是许多增长最快的开放源码项目的供应商中立主机，其中包括 Kubernetes、 Prometheus 和 truster。
+    </p>
+    <blockquote>
+     <p>
+      CNCF 致力于培育和维护一个厂商中立的开源社区生态，
+      <strong>
+       用以推广云原生技术
+      </strong>
+      。
+     </p>
+    </blockquote>
+    <p>
+     从 2015 年 Google 牵头成立 CNCF 以来，云原生技术开始进入公众的视线并取得快速的发展，到 2018 年包括 Google、AWS、Azure、Alibaba Cloud 等大型云计算供应商都加入了云原生基金会 CNCF，云原生技术也从原来的应用容器化发展出包括容器、Service Mesh、微服务、不可变基础设施、Serverless、FaaS 等众多技术方向。
+    </p>
+    <h4>
+     <a id="2_Landscape_128">
+     </a>
+     2. 云原生Landscape（景观）指南
+    </h4>
+    <p>
+     https://landscape.cncf.io/guide
+    </p>
+    <p>
+     如果您研究过云原生应用程序和技术，那么您可能见过
+     <a href="https://landscape.cncf.io/" rel="nofollow">
+      CNCF Cloud Native Interactive Landscape
+     </a>
+     。毫不奇怪，它的庞大规模可能是巨大的，拥有如此多的类别和如此多的技术。
+    </p>
+    <p>
+     如此多的类别和如此多的技术。你怎么理解它？
+     <br/>
+     <strong>
+      2021 年，CNCF为了帮助理解这一重要工具，推出了Cloud Native Landscape Guide。这拆解分析了我们庞大的Landscape，并提供了对其分层、列和类别的高级概述。
+     </strong>
+    </p>
+    <p>
+     云原生Landscape（景观）指南 提供了您如何学习认识了解以及使用 cloud native landscape。推荐阅读！
+    </p>
+    <h5>
+     <a id="21_cloud_native_landscape_138">
+     </a>
+     2.1 什么是cloud native landscape？
+    </h5>
+    <p>
+     cloud native landscape的目标是将所有云原生开源项目和专有产品编译和组织到类别中，
+     <strong>
+      提供当前生态系统的概览。拥有云原生项目或产品的组织可以 提交 PR以请求将其添加到环境中。
+     </strong>
+    </p>
+    <p>
+     CNCF 目前托管了非常多的开源项目，其中有很多我们耳熟能详的项目，例如 Kubernetes、Prometheus、Envoy、Istio、etcd 等。更多的项目，你可以参考 CNCF 公布的
+     <a href="https://landscape.cncf.io/images/landscape.png" rel="nofollow">
+      Cloud Native Landscape
+     </a>
+     ，它给出了云原生生态的参考体系，如下图所示：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/1a8cd70679b440628732ee1f343d9f27.png"/>
+    </p>
+    <h4>
+     <a id="3_CNCF__143">
+     </a>
+     3. CNCF 发展历程
+    </h4>
+    <ul>
+     <li>
+      2000年：应⽤程序的运⾏还是在物理机上运⾏的时代，以sun的⾮虚拟化的硬件为代表，当我们需要启动⼀个新的应⽤时，往往需要
+      <br/>
+      购买⼀台或者多台新的物理服务器来解决所需要的资源问题，物理机器是构建应⽤的最⼩单元。
+      <br/>
+      <strong>
+       在2000年前后虚拟化技术成熟之前，市场处于物理机时代。当时如果要启用一个新的应用，需要购买一台或者一个机架的新服务器。
+      </strong>
+     </li>
+     <li>
+      2001年：vmware的虚拟技术使得构建应⽤的最⼩单元变成了⼀台虚拟机，可以通过在⼀台物理机器上运⾏多个VM，意味着使⽤者需要更少的硬件资源投⼊。
+     </li>
+     <li>
+      2004 年— 2007 年，Google 已在内部大规模地使用像 Cgroups 这样的容器技术；
+     </li>
+     <li>
+      2008 年，Google 将 Cgroups 合并进入了 Linux 内核主干；
+     </li>
+     <li>
+      2013 年，Docker 项目正式发布。
+      <strong>
+       2013年，Docker发布，容器逐步替代VM，云计算进入容器时代。
+      </strong>
+     </li>
+     <li>
+      2014 年，Kubernetes 项目也正式发布。这样的原因也非常容易理解，因为有了容器和 Docker 之后，就需要有一种方式去帮助大家方便、快速、优雅地管理这些容器，这就是 Kubernetes 项目的初衷。在 Google 和 Redhat 发布了 Kubernetes 之后，这个项目的发展速度非常之快。
+     </li>
+     <li>
+      <strong>
+       2015 年，由Google、Redhat 以及微软等大型云计算厂商以及一些开源公司共同牵头成立了 CNCF 云原生基金会。
+      </strong>
+      CNCF 成立之初，就有 22 个创始会员，而且 Kubernetes 也成为了 CNCF 托管的第一个开源项目。在这之后，CNCF 的发展速度非常迅猛；
+     </li>
+     <li>
+      2017 年，CNCF 达到 170 个成员和 14 个基金项目；
+      <strong>
+       2017年底，Kubernetes 赢得容器编排的胜利，云计算进入 Kubernetes 时代。
+      </strong>
+      <br/>
+      <strong>
+       2017年，Pivotal最新官网对云原生概括为4个要点：DevOps+持续交付+微服务+容器；
+      </strong>
+     </li>
+     <li>
+      2018 年，CNCF 成立三周年有了 195 个成员，19 个基金会项目和 11 个孵化项目，如此之快的发展速度在整个云计算领域都是非常罕见的。
+      <br/>
+      <strong>
+       2018年，CNCF又更新了云原生的定义，把服务网格（Service Mesh）和声明式API给加了进来
+      </strong>
+     </li>
+     <li>
+      <strong>
+       2018年3月，Kubernetes 从 CNCF 毕业，成为 CNCF 第一个毕业项目
+      </strong>
+     </li>
+    </ul>
+    <h4>
+     <a id="4_CNCF_2021__159">
+     </a>
+     4. CNCF 2021 年报
+    </h4>
+    <p>
+     https://www.cncf.io/reports/cncf-annual-report-2021/
+    </p>
+    <p>
+     CNCF 每年都会有相关年报。我们在线浏览，也可以下载。这个东西比较有用，会分析整个云原生当年的发展情况。
+    </p>
+    <p>
+     官网：
+     <br/>
+     我们在所有领域都看到了创纪录的增长——从项目、活动和云原生生态系统，到会员和社区。最重要的是，今年“我们”的定义已经演变为包含一个真正全球性的、热情的行动者社区，通过协作从根本上改变技术的构建和交付方式。
+    </p>
+    <p>
+     本着我们发展的精神，今年的年度报告略有不同。这个网络版本分享了 2021 年的所有重要亮点，但如果您想要更多，请
+     <a href="https://www.cncf.io/wp-content/uploads/2022/03/CNCF-AR_FINAL-24.03.pdf" rel="nofollow">
+      下载 PDF 版本
+     </a>
+     ，其中对过去 12 个月进行了深入分析。
+    </p>
+    <p>
+     年报内容包括：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a97e406e9592e2bad7789e575cc0ec30.png"/>
+    </p>
+    <ul>
+     <li>
+      2021 发展趋势
+     </li>
+     <li>
+      虚拟和混合事件， 即在线或者面对面结合分享交流事件相关统计分析
+     </li>
+     <li>
+      培训和证书
+     </li>
+     <li>
+      项目更新&amp;满意度
+     </li>
+     <li>
+      社区和多样性
+     </li>
+     <li>
+      辅导和生态系统
+     </li>
+    </ul>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,79 @@
+---
+layout: post
+title: Android界面开发工具DroidDraw
+date: 2022-04-26 12:01:58 +0800
+categories: [android杂类]
+tags: [开发工具,工具,android]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=6550816
+    alt: Android界面开发工具DroidDraw
+artid: 6550816
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Android界面开发工具DroidDraw
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     <span style="font-size: small;">
+      用Eclipes开发Android程序设计界面，如果界面的布局需要一行一行输入，那么将会使人很郁闷。现在有个工具可以帮你完成这些操作——Android界面开发工具DroidDraw。DroidDraw就是专门为Android开发程序设计界面的工具， 赶快下载，下载后解压，不需要安装，直接运行droiddraw.exe就可以看到如下界面：
+      <br/>
+     </span>
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" src="http://hi.csdn.net/attachment/201106/17/0_13082805015ATz.gif"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     <span style="font-size: small;">
+      下载地址：
+     </span>
+    </p>
+    <p>
+     <a href="http://droiddraw.googlecode.com/files/droiddraw-r1b13.zip" rel="nofollow noopener noreferrer" target="_self">
+      <span style="font-size: small;">
+       下载Android界面开发工具DroidDraw（Window）
+      </span>
+     </a>
+    </p>
+    <p>
+     <span style="font-size: small;">
+      到其官方网站：
+     </span>
+    </p>
+    <p>
+     <a href="http://www.droiddraw.org" rel="nofollow noopener noreferrer" target="_blank">
+      <span style="font-size: small;">
+       http://www.droiddraw.org
+      </span>
+     </a>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

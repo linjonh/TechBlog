@@ -1,0 +1,1496 @@
+---
+layout: post
+title: Android基础-数据库SQLite
+date: 2021-08-03 17:08:41 +0800
+categories: [Android之基础总结]
+tags: [数据库,sqlite,android]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=50252681
+    alt: Android基础-数据库SQLite
+artid: 50252681
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Android基础-数据库SQLite
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <h3 style="font-size:1.4em">
+     <span style="font-size:1.4em; line-height:1.5">
+      <span style="font-size:16pt">
+       一、创建数据库
+      </span>
+     </span>
+    </h3>
+    <div>
+     <span style="font-family:Microsoft YaHei UI">
+     </span>
+     <span style="font-family:'Microsoft YaHei UI'; font-size:10.5pt; line-height:1.5">
+     </span>
+     <span style="font-family:'Microsoft YaHei UI'; font-size:10.5pt; line-height:1.5">
+      安卓中使用的数据库是：
+     </span>
+     <span style="font-size:10.5pt; line-height:1.5">
+      SQLite（轻量级，嵌入式的数据库）
+     </span>
+    </div>
+    <div>
+     <span style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; font-size:10.5pt; line-height:1.5">
+     </span>
+     <span style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; font-size:10.5pt; line-height:1.5">
+      创建文件时：
+     </span>
+    </div>
+    <div>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">	1.声明文件对象，文件是不会被创建出来的。
+	File file = new File("文件名称");
+	2.写文件（文件才会被创建出来）
+	FileOutputStream fos = new FileOutputStream(file);
+	fos.write("hdahfdsaklfh".getbytes());</pre>
+    </div>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong><span style="font-size:12pt">数据库的创建流程：</span></strong></pre>
+    </blockquote>
+    <div>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-family:Consolas; font-size:10.5pt; line-height:1.5">    </span><strong><span style="font-family:'Microsoft YaHei UI','Microsoft YaHei',SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif,'Microsoft YaHei',Georgia,Helvetica,Arial,sans-serif,宋体,PMingLiU,serif; font-size:10.5pt; line-height:1.5"><span style="font-size:12pt">1.创建一个类，继承SQLiteOpenHelper，覆写父类的方法：</span></span><span style="font-family:'Microsoft YaHei UI'; font-size:10.5pt; line-height:1.5"> </span></strong></pre>
+    </div>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <div>
+      <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">   
+   <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+    
+    <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="kwd" style="color:rgb(30,52,123)">public</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">class</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">MySQLLiteOpenHelper</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">extends</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">SQLiteOpenHelper</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"> </code>
+    
+    </div>
+    
+    <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="kwd" style="color:rgb(30,52,123)">public</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">MySQLLiteOpenHelper</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">Context</span><span class="pln" style="color:rgb(72,72,76)"> context </span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//context 上下文</span></code>
+    
+    </div>
+    
+    <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//name 数据库名字</span></code>
+    
+    </div>
+    
+    <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//factory 游标工程</span></code>
+    
+    </div>
+    
+    <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// version 数据库版本 （int 类型，从1开始）</span></code>
+    
+    </div>
+    
+    <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">super</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="pln" style="color:rgb(72,72,76)">context </span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="str" style="color:rgb(221,17,68)">"person.db"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="lit" style="color:rgb(25,95,145)">1</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+    
+    </div>
+    
+    <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+    
+    </div>
+    
+    <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	 </span></code>
+    
+    </div>
+    
+    <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="com" style="color:rgb(147,161,161)">//onCreate 方法在数据库第一次被创建时执行，当数据库创建完毕后，就不会再执行了</span></code>
+    
+    </div>
+    
+    <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="com" style="color:rgb(147,161,161)">//该方法适合做数据库表结构的初始化操作</span></code>
+    
+    </div>
+    
+    <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="com" style="color:rgb(147,161,161)">//db 代表当前数据库</span></code>
+    
+    </div>
+    
+    <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="kwd" style="color:rgb(30,52,123)">public</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">void</span><span class="pln" style="color:rgb(72,72,76)"> onCreate</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">System</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">out</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">println</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"--------数据库被创建了----------"</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+    
+    </div>
+    
+    <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//执行sql语句</span></code>
+    
+    </div>
+    
+    <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">execSQL</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"creat table info (_id integer primary key autoincrement,name varchar(20),phone varchar(20) )"</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+    
+    </div>
+    
+    <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+    
+    </div>
+    
+    <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"> </code>
+    
+    </div>
+    
+    <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="com" style="color:rgb(147,161,161)">//当数据库的版本号发生升级时调用</span></code>
+    
+    </div>
+    
+    <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="com" style="color:rgb(147,161,161)">//数据库只能升级不能降级</span></code>
+    
+    </div>
+    
+    <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="com" style="color:rgb(147,161,161)">//db 当前数据库，oldVersion 老版本号，newVersion 新版本号</span></code>
+    
+    </div>
+    
+    <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="kwd" style="color:rgb(30,52,123)">public</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">void</span><span class="pln" style="color:rgb(72,72,76)"> onUpgrade</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">int</span><span class="pln" style="color:rgb(72,72,76)"> oldVersion</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">int</span><span class="pln" style="color:rgb(72,72,76)"> newVersion</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">System</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">out</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">println</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"-------数据库升级了--------"</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+    
+    </div>
+    
+    <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">execSQL</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"alter table info add money varchar(20)"</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+    
+    </div>
+    
+    <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+    
+    </div>
+    
+    <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"> </code>
+    
+    </div>
+    
+    <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+    
+    </div>
+   
+   </div></pre>
+     </div>
+     <div>
+      <br/>
+     </div>
+    </blockquote>
+    <div>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-family:Consolas; font-size:10.5pt; line-height:1.5">    </span><strong><span style="font-size:12pt">2.创建</span><span class="typ" style="color:teal; font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"><span style="font-size:12pt">MySQLLiteOpenHelper</span></span><span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"><span style="font-size:12pt"> 对象，并执行</span></span><span style="font-size:10.5pt; line-height:1.5"><span style="font-size:12pt">getWritableDatabase/getReadableDatabase()方法，</span></span></strong></pre>
+    </div>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="color:#ff0000">只是创建对象，不会创建数据库，只有执行了getWritableDatabase<span style="font-size:10.5pt; line-height:1.5">/getReadableDatabase()</span><span style="font-size:10.5pt; line-height:1.5">方式时</span></span><span style="color:rgb(255,0,0); font-size:10.5pt; line-height:1.5">才会真正创建</span></pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">可读、可写数据库返回的是同一个数据库的实例，区别就是：操作数据库的时候是否加锁。</pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"></pre>
+     </blockquote>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5"><span style="color:#ff0000"><span style="font-size:12pt">注意细节</span>：</span></span></pre>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5"><span style="color:#ff0000"><span style="background-color:rgb(255,255,255)">1）</span></span></span><span style="font-size:10.5pt; line-height:1.5; background-color:rgb(255,255,255)">sqlite数据库是一个嵌入式轻量级的数据库，内部<span style="color:#ff0000">不区分数据类型的</span>，<span style="color:#ff0000">不对数据的长度校验</span>。</span></pre>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5">2）</span><span style="font-size:10.5pt; line-height:18px">onCreate 方法在数据库第一次被创建时执行，当数据库创建完毕后，就不会再执行了</span></pre>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:18px">3）</span><span style="font-size:10.5pt; line-height:18px">数据库只能升级不能降级</span></pre>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5; background-color:rgb(255,255,255)"><span style="line-height:18px; font-size:10.5pt">4）</span></span><span style="font-size:10.5pt; line-height:1.5">数据库文件是在 /data/data/包名/databases/xxx.db</span></pre>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5">5）</span><span style="font-size:10.5pt; line-height:1.5">定义为INTEGER PRIMARY KEY的字段只能存储</span><span style="color:#ff0000; font-size:10.5pt; line-height:1.5">64位整数</span><span style="font-size:10.5pt; line-height:1.5">， 当向这种字段保存除整数以外的数据时，将会产生错误</span></pre>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     </blockquote>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+       <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"></pre>
+      </blockquote>
+     </blockquote>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:12pt"><strong>利用sqlite3工具查看数据库的内容</strong></span></pre>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">&gt; sqlite3 xxx.db</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5">如果出现中文乱码 需要修改cmd的编码集：</span><span style="font-size:10.5pt; line-height:1.5">&gt;chcp 65001</span><span style="font-size:10.5pt; line-height:1.5">65001 utf-8 (</span><span style="font-size:10.5pt; line-height:1.5"> 默认是gb2312 </span><span style="font-size:10.5pt; line-height:1.5">)</span></pre><pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5">
+</span></pre></pre>
+     </div>
+    </blockquote>
+    <div>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><h3 style="font-size:1.4em">二、数据库的增删改查</h3></pre>
+    </div>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><h4 style="font-size:1.3em">方法一：用Sql语句</h4></pre>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong>复习sql语法：</strong></pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:10.5pt; line-height:1.5"><strong>查询语句：</strong>select * from 表名 where 条件子句 group by 分组字句 having ... order by 排序子句</span>
+</pre>
+     </div>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+       <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">如：select * from person</pre>
+      </blockquote>
+     </blockquote>
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+       <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">        select * from person order by id desc</pre>
+      </blockquote>
+     </blockquote>
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+       <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">        select name from person group by name having count(*)&gt;1</pre>
+      </blockquote>
+     </blockquote>
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+       <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">分页SQL与mysql类似，下面SQL语句获取5条记录，跳过前面3条记录</pre>
+      </blockquote>
+     </blockquote>
+     <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+      <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+       <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">select * from Account limit 5 offset 3 或者 select * from Account limit 3,5</pre>
+      </blockquote>
+     </blockquote>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong>插入语句</strong>：insert into 表名(字段列表) values(值列表)。如： insert into person(name, age) values(‘传智’,3)</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong>更新语句</strong>：update 表名 set 字段名=值 where 条件子句。如：update person set name=‘传智‘ where id=10</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong>删除语句</strong>：delete from 表名 where 条件子句。如：delete from person  where id=10</pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="color:#ff0000">注意sql语句不能写错！</span></pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="color:#ff0000">
+</span></pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong>1）增、删、改使用的语句是：</strong></pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">   
+   <div>
+    
+    <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">     
+     <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+      
+      <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> hepler</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+      
+      <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">execSQL</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"insert into info (name , phone) values (?,?)"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">Object</span><span class="pun" style="color:rgb(147,161,161)">[]{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> name</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)">phone</span><span class="pun" style="color:rgb(147,161,161)">});</span></code>
+      
+      </div>
+      
+      <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+     
+     </div></pre>
+   
+   </div>
+   
+   <div>
+    
+    其中：1、heler是自定义的
+    
+    <span style="font-size:10.5pt; line-height:1.5"><span class="typ" style="color:teal; font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"><span style="font-size:12pt">MySQLLiteOpenHelper</span></span><span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"><span style="font-size:12pt"> 类的实例，用于获取数据库连接的。</span></span></span>
+   
+   </div>
+   
+   <div>
+    
+    <span style="font-family:Consolas">     </span>
+    
+    <span style="font-family:Consolas; font-size:10.5pt; line-height:1.5"> 2、</span>
+    
+    <span style="font-size:10.5pt; line-height:1.5">增、删、改使用的是：</span>
+    
+    <span style="font-family:Consolas; font-size:10.5pt; line-height:1.5">execSQL ，其中：</span>
+    
+    <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)">new</span>
+    
+    <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"> </span>
+    
+    <span class="typ" style="color:teal; font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)">Object</span>
+    
+    <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)">[]{<!-- --></span>
+    
+    <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"> name</span>
+    
+    <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)">,</span>
+    
+    <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)">phone</span>
+    
+    <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)">}是sql语句的参数</span>
+   
+   </div>
+   
+   <div>
+    
+    <strong><span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; line-height:18px; background-color:rgb(247,247,249)"><br/></span></strong>
+   
+   </div>
+   
+   <div>
+    
+    <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; line-height:18px; background-color:rgb(255,255,255)"><strong><span style="color:#000000"><span style="font-family:宋体">2）查询使用的是</span>：</span></strong></span>
+   
+   </div>
+   
+   <div>
+    
+    <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; line-height:18px; background-color:rgb(255,255,255)"></span>
+    
+    <div>
+     
+     <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">      
+      <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+       
+       <div class="L0" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="typ" style="color:teal"><span style="font-family:Consolas">    </span><span style="font-family:Consolas">    </span><span style="font-family:Consolas">    </span><span style="font-family:Consolas">    </span>String</span><span class="pln" style="color:rgb(72,72,76)"> phone </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> hepler</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">Cursor</span><span class="pln" style="color:rgb(72,72,76)"> c</span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">rawQuery</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"select phone from info where name =? "</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]{<!-- --></span><span class="pln" style="color:rgb(72,72,76)">name</span><span class="pun" style="color:rgb(147,161,161)">});</span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">if</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="pln" style="color:rgb(72,72,76)">c</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">moveToNext</span><span class="pun" style="color:rgb(147,161,161)">()){<!-- --></span></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			phone </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> c</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getString</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="lit" style="color:rgb(25,95,145)">0</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <span style="color:#93a1a1"><span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="font-family:Courier New">    </span><span style="font-family:Courier New">    </span><span style="font-family:Courier New">    </span><span style="font-family:Courier New">    </span><span style="font-family:Courier New">    </span><span style="font-family:Courier New">  // </span>phone = c.getString(c.getColumnIndex(<span style="color:rgb(42,0,255)">"phone"</span>));</span>
+</span>
+       
+       </div>
+       
+       <div class="L6" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+       
+       </div>
+       
+       <div class="L7" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		c</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span><span class="com" style="color:rgb(147,161,161)">//注意释放游标资源</span></code>
+       
+       </div>
+       
+       <div class="L8" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L9" style="color:rgb(190,190,197); padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">return</span><span class="pln" style="color:rgb(72,72,76)"> phone</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+      
+      </div></pre>
+    
+    </div>
+    
+    <div>
+     
+     <span style="color:#000000">其中:1、使用的SQL语句是 rawQuery（和增删改不同），参数是<span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt; background-color:rgb(247,247,249)">new</span><span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; background-color:rgb(247,247,249)"> </span><span class="typ" style="color:teal; font-size:10.5pt; background-color:rgb(247,247,249)">String</span><span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; background-color:rgb(247,247,249)">[]{<!-- --></span><span class="pln" style="color:rgb(72,72,76); font-size:10.5pt; background-color:rgb(247,247,249)">name</span><span class="pun" style="color:rgb(147,161,161); font-size:10.5pt; background-color:rgb(247,247,249)">} 注意这里是String类型的数组</span><span style="font-size:10.5pt">（和增删改不同）</span></span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="color:#000000"><span style="font-family:Consolas">    2、查询有结果集，是cursor（游标），需要通过游标获取结果中的信息。</span><span style="font-size:10.5pt"><br/></span></span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="color:#000000"><span style="font-family:Consolas">    3、游标中是通过c.getString(列号)来获取每一行中具体信息的，如果不知道具体的列号，可以用</span><span style="font-family:'Courier New'; font-size:15px; background-color:rgb(247,247,249)">c.getColumnIndex(</span><span style="font-family:'Courier New'; font-size:15px; background-color:rgb(247,247,249)">"phone"</span><span style="font-family:'Courier New'; font-size:15px; background-color:rgb(247,247,249)">)来获取</span><span style="font-family:Consolas"><br/></span></span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-family:Consolas; color:#000000">    3、需要注意释放游标资源</span>
+     
+     <br/>
+    
+    </div>
+    
+    <div>
+     
+     <br/>
+    
+    </div>
+   
+   </div></pre>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><h4 style="font-size:1.3em">方法二：用Google提供的api</h4>
+   
+   <div>
+    
+    <strong>1）增</strong>
+   
+   </div>
+   
+   <div>
+    
+    <span style="color:rgb(127,0,85); font-family:'Courier New'; font-size:15px; line-height:22px"><strong>long</strong></span>
+    
+    <span style="font-family:'Courier New'; font-size:15px; line-height:22px; color:windowtext"> <span style="text-decoration:underline">result</span> = db.insert(<span style="text-decoration:underline">table</span>, <span style="text-decoration:underline">nullColumnHack</span>, values);</span>
+
+    
+    <div>
+     
+     <span style="font-size:11pt; color:rgb(63,127,95); font-family:'Courier New'">// 通过拼<span style="text-decoration:underline">sql</span>语句实现的</span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// table 表名</span></span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// nullColumnHack 设置没有传值的参数为空</span></span>
+    
+    </div>
+    
+    <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// values 列名和值的map集合</span></span>
+   
+   </div>
+   
+   <div>
+    
+    <span style="color:rgb(147,161,161); line-height:18px; background-color:rgb(247,247,249)">// result 是插入信息的行号，如果没有成功，返回-1</span>
+
+   
+   </div>
+   
+   <div>
+    
+    <div>
+     
+     <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">      
+      <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt">	</span>
+        
+        <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt">public</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt">boolean</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> add</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">(</span>
+        
+        <span class="typ" style="color:teal; font-size:10.5pt">String</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> name</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">,</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="typ" style="color:teal; font-size:10.5pt">String</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> phone</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">)</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">{<!-- --></span>
+
+       
+       </div>
+       
+       <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> helper</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// ContentValues 是一个map，用来存放数据 其中：key 列名 values 值，相当于sql中的参数数组</span></code>
+       
+       </div>
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">ContentValues</span><span class="pln" style="color:rgb(72,72,76)"> values </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">ContentValues</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		values</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">put</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"name"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> name</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		values</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">put</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"phone"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> phone</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong><span style="color:#32cd32"><span class="pln" style="color:rgb(72,72,76)"> </span><span class="com" style="color:rgb(147,161,161)">// 通过拼sql语句实现的</span></span></strong></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong><span style="color:#32cd32"><span class="pln" style="color:rgb(72,72,76)"> </span><span class="com" style="color:rgb(147,161,161)">// table 表名</span></span></strong></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong><span style="color:#32cd32"><span class="pln" style="color:rgb(72,72,76)"> </span><span class="com" style="color:rgb(147,161,161)">// nullColumnHack 设置没有传值的参数为空</span></span></strong></code>
+       
+       </div>
+       
+       <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong><span style="color:#32cd32"><span class="pln" style="color:rgb(72,72,76)"> </span><span class="com" style="color:rgb(147,161,161)">// values 列名和值的map集合</span></span></strong></code>
+       
+       </div>
+       
+       <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><strong><span style="color:#32cd32"><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">long</span><span class="pln" style="color:rgb(72,72,76)"> result </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">insert</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"info"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> values</span><span class="pun" style="color:rgb(147,161,161)">);</span></span></strong></code>
+       
+       </div>
+       
+       <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="color:#ff6820"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span></span></code>
+       
+       </div>
+       
+       <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// result 是插入信息的行号，如果没有成功，返回-1</span></code>
+       
+       </div>
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">if</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="pln" style="color:rgb(72,72,76)">result </span><span class="pun" style="color:rgb(147,161,161)">==</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">-</span><span class="lit" style="color:rgb(25,95,145)">1</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span><span class="kwd" style="color:rgb(30,52,123)">return</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">false</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">else</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span><span class="kwd" style="color:rgb(30,52,123)">return</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">true</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+       
+       </div>
+      
+      </div></pre>
+    
+    </div>
+    
+    <div>
+     
+     <br/>
+    
+    </div>
+   
+   </div>
+   
+   <div>
+    
+    <strong>2）删</strong>
+   
+   </div>
+   
+   <div>
+    
+    <span style="font-size:11pt; color:rgb(127,0,85); font-family:'Courier New'"><strong>int<span style="font-weight:normal; color:windowtext"> <span style="text-decoration:underline">result</span> = db.delete(<span style="text-decoration:underline">table</span>, <span style="text-decoration:underline">whereClause</span>, <span style="text-decoration:underline">whereArgs</span>);</span></strong></span>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:rgb(63,127,95); font-family:'Courier New'">// table 表名</span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// whereClause 条件</span></span>
+    
+    </div>
+    
+    <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// whereArgs 条件的值</span></span>
+    
+    <span style="color:rgb(147,161,161); line-height:18px; background-color:rgb(247,247,249)">// result </span>
+    
+    <span style="color:rgb(63,95,191); font-family:'Courier New'; font-size:11pt; line-height:1.5">成功删除的行数</span>
+   
+   </div>
+   
+   <div>
+    
+    <div>
+     
+     <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">      
+      <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt">	</span>
+        
+        <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt">public</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt">int</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> deleteByName</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">(</span>
+        
+        <span class="typ" style="color:teal; font-size:10.5pt">String</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> name</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">)</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">{<!-- --></span>
+
+       
+       </div>
+       
+       <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> helper</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// table 表名</span></code>
+       
+       </div>
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// whereClause 条件</span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// whereArgs 条件的值</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">int</span><span class="pln" style="color:rgb(72,72,76)"> result </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="kwd" style="color:rgb(30,52,123)">delete</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"info"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="str" style="color:rgb(221,17,68)">"name = ?"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> name </span><span class="pun" style="color:rgb(147,161,161)">});</span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">return</span><span class="pln" style="color:rgb(72,72,76)"> result</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"> </code>
+       
+       </div>
+       
+       <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+       
+       </div>
+      
+      </div></pre>
+    
+    </div>
+    
+    <div>
+     
+     <br/>
+    
+    </div>
+   
+   </div>
+   
+   <div>
+    
+    <strong>3）改</strong>
+   
+   </div>
+   
+   <div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:rgb(127,0,85); font-family:'Courier New'"><strong>int<span style="font-weight:normal; color:windowtext"> <span style="text-decoration:underline">result</span> = db.update(<span style="text-decoration:underline">table</span>, values, <span style="text-decoration:underline">whereClause</span>, <span style="text-decoration:underline">whereArgs</span>);</span></strong></span>
+    
+    </div>
+   
+   </div>
+   
+   <div>
+    
+    <span style="font-size:11pt; color:rgb(63,127,95); font-family:'Courier New'">// table 表名</span>
+   
+   </div>
+   
+   <div>
+    
+    <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// values 键值对</span></span>
+   
+   </div>
+   
+   <div>
+    
+    <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// whereClause 条件</span></span>
+   
+   </div><span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// whereArgs 条件的值</span></span>
+   
+   <div>
+    
+    <span style="font-size:11pt; color:windowtext; font-family:'Courier New'">//</span>
+    
+    <span style="color:rgb(63,95,191); font-family:'Courier New'; font-size:11pt; line-height:1.5">result 更新了多少行</span>
+   
+   </div>
+   
+   <div>
+    
+    <div>
+     
+     <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">      
+      <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <span style="color:#93a1a1"> </span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt">	</span>
+        
+        <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt">public</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="kwd" style="color:rgb(30,52,123); font-size:10.5pt">int</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> updata</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">(</span>
+        
+        <span class="typ" style="color:teal; font-size:10.5pt">String</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> name</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">,</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="typ" style="color:teal; font-size:10.5pt">String</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> newphone</span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">)</span>
+        
+        <span class="pln" style="color:rgb(72,72,76); font-size:10.5pt"> </span>
+        
+        <span class="pun" style="color:rgb(147,161,161); font-size:10.5pt">{<!-- --></span>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> helper</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">ContentValues</span><span class="pln" style="color:rgb(72,72,76)"> values </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">ContentValues</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		values</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">put</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"phone"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> newphone</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// table 表名</span></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// values 键值对</span></code>
+       
+       </div>
+       
+       <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// whereClause 条件</span></code>
+       
+       </div>
+       
+       <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// whereArgs 条件的值</span></code>
+       
+       </div>
+       
+       <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">int</span><span class="pln" style="color:rgb(72,72,76)"> result </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">update</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"info"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> values</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="str" style="color:rgb(221,17,68)">"name = ?"</span><span class="pun" style="color:rgb(147,161,161)">,</span></code>
+       
+       </div>
+       
+       <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">				</span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> name </span><span class="pun" style="color:rgb(147,161,161)">});</span></code>
+       
+       </div>
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">return</span><span class="pln" style="color:rgb(72,72,76)"> result</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+       
+       </div>
+      
+      </div></pre>
+    
+    </div>
+    
+    <div>
+     
+     4）查
+    
+    </div>
+   
+   </div>
+   
+   <div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'">Cursor <span style="text-decoration:underline">cursor</span> = db.query(<span style="text-decoration:underline">table</span>, <span style="text-decoration:underline">columns</span>, <span style="text-decoration:underline">selection</span>, <span style="text-decoration:underline">selectionArgs</span>, <span style="text-decoration:underline">groupBy</span>, <span style="text-decoration:underline">having</span>, <span style="text-decoration:underline">orderBy</span>);</span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:rgb(63,127,95); font-family:'Courier New'">//table 表名</span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">//columns 需要的查询结果</span></span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// <span style="text-decoration:underline">selction</span> 查询条件</span></span>
+    
+    </div>
+    
+    <div>
+     
+     <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">// selectionArgs 查询条件参数</span></span>
+    
+    </div>
+    
+    <span style="font-size:11pt; color:windowtext; font-family:'Courier New'"><span style="color:rgb(63,127,95)">//groupBy 是否分组查询, having, orderBy 结果集排序方式</span></span>//
+    
+    <span style="background-color:rgb(255,255,255); font-family:Consolas; line-height:18px; font-size:10.5pt">查询有结果集，是cursor（游标），需要通过游标获取结果中的信息。</span>
+   
+   </div>
+   
+   <div>
+    
+    <div>
+     
+     <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">      
+      <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="kwd" style="color:rgb(30,52,123)">public</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pln" style="color:rgb(72,72,76)"> findPhone</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">String</span><span class="pln" style="color:rgb(72,72,76)"> name</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">String</span><span class="pln" style="color:rgb(72,72,76)"> phone </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> helper</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//table 表名</span></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//columns 需要的查询结果</span></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// selction 查询条件</span></code>
+       
+       </div>
+       
+       <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// selectionArgs 查询条件参数</span></code>
+       
+       </div>
+       
+       <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">//groupBy 是否分组查询, having, orderBy 结果集排序方式</span></code>
+       
+       </div>
+       
+       <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">Cursor</span><span class="pln" style="color:rgb(72,72,76)"> cursor </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">query</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"info"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> phone </span><span class="pun" style="color:rgb(147,161,161)">},</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="str" style="color:rgb(221,17,68)">"name = ?"</span><span class="pun" style="color:rgb(147,161,161)">,</span></code>
+       
+       </div>
+       
+       <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">				</span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> name </span><span class="pun" style="color:rgb(147,161,161)">},</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">null</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+       
+       </div>
+       
+       <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">if</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="pln" style="color:rgb(72,72,76)">cursor</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">moveToNext</span><span class="pun" style="color:rgb(147,161,161)">())</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+       
+       </div>
+       
+       <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			phone </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> cursor</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getString</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="lit" style="color:rgb(25,95,145)">0</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+       
+       </div>
+       
+       <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+       
+       </div>
+       
+       <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		cursor</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span><span class="com" style="color:rgb(147,161,161)">// 释放资源</span></code>
+       
+       </div>
+       
+       <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">close</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+       
+       </div>
+       
+       <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">return</span><span class="pln" style="color:rgb(72,72,76)"> name</span><span class="pun" style="color:rgb(147,161,161)">;</span></code>
+       
+       </div>
+       
+       <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"> </code>
+       
+       </div>
+       
+       <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+        
+        <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+       
+       </div>
+      
+      </div></pre>
+    
+    </div>
+    
+    <div>
+     
+     <br/>
+    
+    </div>
+   
+   </div></pre>
+     </div>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><h4 style="font-size:1.3em">两种数据库增删改查方式的优缺点</h4></pre>
+    </blockquote>
+    <blockquote style="margin:0px 0px 0px 40px; border:none; padding:0px">
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">1. 直接利用sql语句增删改查</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">&gt;优点：非常的灵活，多表查询，级联查询。</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">&gt;缺点：代码容易出错，方法没有返回值。</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"></pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">2. 利用google包装的api 执行增删改查</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">&gt;优点： 代码不容易出错，写起来简单，方法有返回值</pre>
+     </div>
+     <div>
+      <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace">&gt;缺点： 不容易多表查询。复杂表的操作，视图都无法实现。</pre>
+     </div>
+    </blockquote>
+    <div>
+     <pre style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span style="font-size:14px; line-height:21px; widows:auto">
+</span><h4 style="font-size:1.3em; widows:auto">三、sqlite事务</h4>
+  
+  <div style="font-size:14px; line-height:21px; widows:auto">
+   
+   <span style="font-family:Consolas; font-size:10.5pt; line-height:1.5">    </span>sqlite 事务和jdbc中的事务是类似的（几条操作语句的要么同时成功，要么同时失败），在事务的写法上有些不同：
+  
+  </div>
+  
+  <div style="font-size:14px; line-height:21px; widows:auto">
+   
+   <span style="font-family:Consolas; font-size:10.5pt; line-height:1.5">    </span>SQLite事务的写法为:
+  
+  </div>
+  
+  <div style="font-size:14px; line-height:21px; widows:auto">
+   
+   <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+    
+    <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">                 db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">beginTransaction</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+    
+    </div>
+    
+    <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">try</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			 .....</span></code>
+    
+    </div>
+    
+    <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">
+</span></code>
+    
+    </div>
+    
+    <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span><span class="com" style="color:rgb(147,161,161)">// 事务的sql语句都执行成功了。 设置一个标记</span></code>
+    
+    </div>
+    
+    <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">setTransactionSuccessful</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+    
+    </div>
+    
+    <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">catch</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">Exception</span><span class="pln" style="color:rgb(72,72,76)"> e</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span></code>
+    
+    </div>
+    
+    <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">finally</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+    
+    </div>
+    
+    <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">endTransaction</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+    
+    </div>
+    
+    <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+     
+     <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+    
+    </div>
+   
+   </div>
+  
+  </div>
+  
+  <div style="font-size:14px; line-height:21px; widows:auto">
+   
+   <span style="font-family:Consolas; font-size:10.5pt; line-height:1.5">    </span>以银行转账为例：
+  
+  </div>
+  
+  <div style="font-size:14px; line-height:21px; widows:auto">
+   
+   <div>
+    
+    <pre class="prettyprint linenums prettyprinted" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace; background-color:rgb(247,247,249); padding:10px; border:1px solid rgb(225,225,232)">     
+     <div class="linenums" style="color:rgb(30,52,123); margin:0px">
+      
+      <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="com" style="color:rgb(147,161,161)"><span style="font-family:Consolas">    </span><span style="font-family:Consolas">    </span><span style="font-family:Consolas"> </span>/**</span></code>
+      
+      </div>
+      
+      <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="com" style="color:rgb(147,161,161)">	 * 银行转账</span></code>
+      
+      </div>
+      
+      <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="com" style="color:rgb(147,161,161)">	 * </span></code>
+      
+      </div>
+      
+      <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="com" style="color:rgb(147,161,161)">	 * @param view</span></code>
+      
+      </div>
+      
+      <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="com" style="color:rgb(147,161,161)">	 */</span></code>
+      
+      </div>
+      
+      <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="kwd" style="color:rgb(30,52,123)">public</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">void</span><span class="pln" style="color:rgb(72,72,76)"> click</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">View</span><span class="pln" style="color:rgb(72,72,76)"> view</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+      
+      </div>
+      
+      <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">PersonDBOpenHelper</span><span class="pln" style="color:rgb(72,72,76)"> helper </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">PersonDBOpenHelper</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="kwd" style="color:rgb(30,52,123)">this</span><span class="pun" style="color:rgb(147,161,161)">);</span></code>
+      
+      </div>
+      
+      <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="typ" style="color:teal">SQLiteDatabase</span><span class="pln" style="color:rgb(72,72,76)"> db </span><span class="pun" style="color:rgb(147,161,161)">=</span><span class="pln" style="color:rgb(72,72,76)"> helper</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">getWritableDatabase</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+      
+      <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="com" style="color:rgb(147,161,161)">// 开启事务</span></code>
+      
+      </div>
+      
+      <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">beginTransaction</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+      
+      <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="kwd" style="color:rgb(30,52,123)">try</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+      
+      </div>
+      
+      <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">execSQL</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"update info set money= money -500 where name=?"</span><span class="pun" style="color:rgb(147,161,161)">,</span></code>
+      
+      </div>
+      
+      <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">					</span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="str" style="color:rgb(221,17,68)">"zhangsan"</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">});</span></code>
+      
+      </div>
+      
+      <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span><span class="com" style="color:rgb(147,161,161)">// s.equals("haha");</span></code>
+      
+      </div>
+      
+      <div class="L4" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">execSQL</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="str" style="color:rgb(221,17,68)">"update info set money= money +500 where name=?"</span><span class="pun" style="color:rgb(147,161,161)">,</span></code>
+      
+      </div>
+      
+      <div class="L5" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">					</span><span class="kwd" style="color:rgb(30,52,123)">new</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="typ" style="color:teal">String</span><span class="pun" style="color:rgb(147,161,161)">[]</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="str" style="color:rgb(221,17,68)">"lisi"</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">});</span></code>
+      
+      </div>
+      
+      <div class="L6" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span><span class="com" style="color:rgb(147,161,161)">// 事务的sql语句都执行成功了。 设置一个标记</span></code>
+      
+      </div>
+      
+      <div class="L7" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">setTransactionSuccessful</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+      
+      <div class="L8" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">catch</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="typ" style="color:teal">Exception</span><span class="pln" style="color:rgb(72,72,76)"> e</span><span class="pun" style="color:rgb(147,161,161)">)</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+      
+      </div>
+      
+      <div class="L9" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			</span><span class="typ" style="color:teal">Toast</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">makeText</span><span class="pun" style="color:rgb(147,161,161)">(</span><span class="kwd" style="color:rgb(30,52,123)">this</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="str" style="color:rgb(221,17,68)">"产生异常，事务回滚"</span><span class="pun" style="color:rgb(147,161,161)">,</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="lit" style="color:rgb(25,95,145)">0</span><span class="pun" style="color:rgb(147,161,161)">).</span><span class="pln" style="color:rgb(72,72,76)">show</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+      
+      <div class="L0" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="kwd" style="color:rgb(30,52,123)">finally</span><span class="pln" style="color:rgb(72,72,76)"> </span><span class="pun" style="color:rgb(147,161,161)">{<!-- --></span></code>
+      
+      </div>
+      
+      <div class="L1" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">			db</span><span class="pun" style="color:rgb(147,161,161)">.</span><span class="pln" style="color:rgb(72,72,76)">endTransaction</span><span class="pun" style="color:rgb(147,161,161)">();</span></code>
+      
+      </div>
+      
+      <div class="L2" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">		</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+      
+      </div>
+      
+      <div class="L3" style="color:rgb(190,190,197); line-height:18px; padding-left:12px">
+       
+       <code class="language-java" style="font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace"><span class="pln" style="color:rgb(72,72,76)">	</span><span class="pun" style="color:rgb(147,161,161)">}</span></code>
+      
+      </div>
+     
+     </div></pre>
+   
+   </div>
+   
+   <div>
+    
+    <strong>注意：SQlite事务不用关闭数据库连接</strong>
+   
+   </div>
+  
+  </div>
+  
+  <div style="font-size:14px; line-height:21px; widows:auto">
+   
+   <br/>
+  
+  </div></pre>
+    </div>
+   </div>
+  </div>
+ </article>
+</div>
+
+
