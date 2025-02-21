@@ -132,7 +132,8 @@ script_includes:
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         {% for category in page.categories %}
-          <a href="{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/">{{ category }}</a>
+          {% assign safe_tag_name = category | default: "" | to_s %}
+          <a href="{{ site.baseurl }}/categories/{{ safe_tag_name | slugify | url_encode }}/">{{ category }}</a>
           {%- unless forloop.last -%},{%- endunless -%}
         {% endfor %}
       </div>
@@ -143,8 +144,9 @@ script_includes:
       <div class="post-tags">
         <i class="fa fa-tags fa-fw me-1"></i>
         {% for tag in page.tags %}
+          {% assign safe_tag_name = tag | default: "" | to_s %}
           <a
-            href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
+            href="{{ site.baseurl }}/tags/{{ safe_tag_name | slugify | url_encode }}/"
             class="post-tag no-text-decoration"
           >
             {{- tag -}}
