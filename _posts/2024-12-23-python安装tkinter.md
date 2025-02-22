@@ -1,0 +1,53 @@
+---
+layout: post
+title: python安装tkinter
+date: 2024-12-23 19:13:00 +0800
+categories: [嵌入式]
+tags: [嵌入式,python]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=99437814
+    alt: python安装tkinter
+artid: 99437814
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     python安装tkinter
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div class="blogpost-body" id="cnblogs_post_body">
+     <p>
+      python2安装tkinter
+     </p>
+     <p>
+      sudo apt-get install python-tk
+     </p>
+     <p>
+      python3 安装tkinter
+     </p>
+     <p>
+      sudo apt-get install python3-tk
+     </p>
+    </div>
+    <p>
+     转载于:https://www.cnblogs.com/wangshuyi/p/6129364.html
+    </p>
+   </div>
+  </div>
+  <div id="recommendDown">
+  </div>
+ </article>
+</div>
+
+

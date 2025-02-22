@@ -1,0 +1,509 @@
+---
+layout: post
+title: Ollama部署-DeepSeek-R170B-模型的详细步骤
+date: 2025-02-14 14:57:58 +0800
+categories: [前端]
+tags: [前端,chrome]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=145522684
+    alt: Ollama部署-DeepSeek-R170B-模型的详细步骤
+artid: 145522684
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Ollama部署 DeepSeek-R1:70B 模型的详细步骤
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-light" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h4>
+     <a id="1__0">
+     </a>
+     <strong>
+      1. 确认环境准备
+     </strong>
+    </h4>
+    <h5>
+     <a id="1__1">
+     </a>
+     <strong>
+      (1) 硬件要求
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      <strong>
+       显存需求
+      </strong>
+      ：70B 参数的模型需要大量显存。若使用 NVIDIA T4（16GB 显存），需多卡并行（如 8 卡）或开启量化（如
+      <code>
+       q4_0
+      </code>
+      、
+      <code>
+       q8_0
+      </code>
+      ）。
+     </li>
+     <li>
+      <strong>
+       内存需求
+      </strong>
+      ：建议至少 64GB 系统内存。
+     </li>
+     <li>
+      <strong>
+       存储空间
+      </strong>
+      ：模型文件约 40-140GB（取决于量化方式）。
+     </li>
+    </ul>
+    <h5>
+     <a id="2__6">
+     </a>
+     <strong>
+      (2) 软件依赖
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      安装
+      <strong>
+       Ollama
+      </strong>
+      （确保版本支持自定义模型）：
+      <pre><code class="prism language-bash"><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://ollama.com/install.sh <span class="token operator">|</span> <span class="token function">sh</span>
+</code></pre>
+     </li>
+    </ul>
+    <hr/>
+    <h4>
+     <a id="2__DeepSeekR170B__14">
+     </a>
+     <strong>
+      2. 下载 DeepSeek-R1:70B 模型
+     </strong>
+    </h4>
+    <h5>
+     <a id="1__15">
+     </a>
+     <strong>
+      (1) 若模型已存在于本地
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      直接通过 Ollama 加载：
+      <pre><code class="prism language-bash">ollama run deepseek-r1:70b
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="2__21">
+     </a>
+     <strong>
+      (2) 若需自定义模型
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      创建
+      <code>
+       Modelfile
+      </code>
+      定义模型参数（示例）：
+      <pre><code class="prism language-dockerfile">FROM deepseek-r1:70b
+PARAMETER num_gpu 8  # 使用 8 卡 GPU
+PARAMETER num_ctx 4096  # 上下文长度
+PARAMETER quantize q4_0  # 量化方式（可选）
+</code></pre>
+     </li>
+     <li>
+      构建自定义模型：
+      <pre><code class="prism language-bash">ollama create deepseek-r1-custom <span class="token parameter variable">-f</span> Modelfile
+</code></pre>
+     </li>
+    </ul>
+    <hr/>
+    <h4>
+     <a id="3__Ollama__36">
+     </a>
+     <strong>
+      3. 启动 Ollama 服务
+     </strong>
+    </h4>
+    <h5>
+     <a id="1__37">
+     </a>
+     <strong>
+      (1) 启动模型
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      前台运行（调试模式）：
+      <pre><code class="prism language-bash">ollama serve
+</code></pre>
+     </li>
+     <li>
+      后台运行（生产环境）：
+      <pre><code class="prism language-bash">systemctl start ollama
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="2__47">
+     </a>
+     <strong>
+      (2) 检查模型状态
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      查看已加载模型：
+      <pre><code class="prism language-bash">ollama list
+</code></pre>
+      输出应包含：
+      <pre><code>NAME            ID              SIZE      MODIFIED
+deepseek-r1:70b 0c1615a8ca32    42 GB     2 hours ago
+</code></pre>
+     </li>
+    </ul>
+    <hr/>
+    <h4>
+     <a id="4__60">
+     </a>
+     <strong>
+      4. 配置外部访问
+     </strong>
+    </h4>
+    <p>
+     默认情况下，Ollama 仅监听
+     <code>
+      127.0.0.1:11434
+     </code>
+     ，需修改为允许外部访问：
+    </p>
+    <h5>
+     <a id="1__62">
+     </a>
+     <strong>
+      (1) 修改监听地址
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      编辑 Ollama 环境变量：
+      <pre><code class="prism language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /etc/systemd/system/ollama.service
+</code></pre>
+      添加：
+      <pre><code class="prism language-ini">[Service]
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+</code></pre>
+     </li>
+     <li>
+      重启服务：
+      <pre><code class="prism language-bash"><span class="token function">sudo</span> systemctl daemon-reload
+<span class="token function">sudo</span> systemctl restart ollama
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="2__78">
+     </a>
+     <strong>
+      (2) 开放防火墙端口
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      开放
+      <code>
+       11434
+      </code>
+      端口：
+      <pre><code class="prism language-bash"><span class="token function">sudo</span> ufw allow <span class="token number">11434</span>/tcp
+<span class="token function">sudo</span> ufw reload
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="3__85">
+     </a>
+     <strong>
+      (3) 验证监听状态
+     </strong>
+    </h5>
+    <pre><code class="prism language-bash"><span class="token function">netstat</span> <span class="token parameter variable">-tuln</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token number">11434</span>
+</code></pre>
+    <p>
+     输出应为：
+    </p>
+    <pre><code>tcp  0  0 0.0.0.0:11434  0.0.0.0:*  LISTEN
+</code></pre>
+    <hr/>
+    <h4>
+     <a id="5__API_96">
+     </a>
+     <strong>
+      5. 调用模型 API
+     </strong>
+    </h4>
+    <h5>
+     <a id="1__Curl__97">
+     </a>
+     <strong>
+      (1) 通过 Curl 测试
+     </strong>
+    </h5>
+    <pre><code class="prism language-bash"><span class="token function">curl</span> http://<span class="token operator">&lt;</span>服务器IP<span class="token operator">&gt;</span>:11434/api/generate <span class="token parameter variable">-d</span> <span class="token string">'{
+  "model": "deepseek-r1:70b",
+  "prompt": "你好，DeepSeek！",
+  "stream": false
+}'</span>
+</code></pre>
+    <h5>
+     <a id="2__Python__106">
+     </a>
+     <strong>
+      (2) 使用 Python 客户端
+     </strong>
+    </h5>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> requests
+
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>
+    <span class="token string">"http://&lt;服务器IP&gt;:11434/api/generate"</span><span class="token punctuation">,</span>
+    json<span class="token operator">=</span><span class="token punctuation">{<!-- --></span>
+        <span class="token string">"model"</span><span class="token punctuation">:</span> <span class="token string">"deepseek-r1:70b"</span><span class="token punctuation">,</span>
+        <span class="token string">"prompt"</span><span class="token punctuation">:</span> <span class="token string">"如何部署大模型？"</span><span class="token punctuation">,</span>
+        <span class="token string">"stream"</span><span class="token punctuation">:</span> <span class="token boolean">False</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">"response"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+    <hr/>
+    <h4>
+     <a id="6__123">
+     </a>
+     <strong>
+      6. 性能优化
+     </strong>
+    </h4>
+    <h5>
+     <a id="1__GPU__124">
+     </a>
+     <strong>
+      (1) 多 GPU 并行
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      启动时指定 GPU 数量：
+      <pre><code class="prism language-bash"><span class="token assign-left variable">OLLAMA_NUM_GPU</span><span class="token operator">=</span><span class="token number">8</span> ollama serve
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="2__130">
+     </a>
+     <strong>
+      (2) 量化模型
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      使用
+      <code>
+       q4_0
+      </code>
+      或
+      <code>
+       q8_0
+      </code>
+      量化减少显存占用：
+      <pre><code class="prism language-bash">ollama run deepseek-r1:70b <span class="token parameter variable">--quantize</span> q4_0
+</code></pre>
+     </li>
+    </ul>
+    <h5>
+     <a id="3__136">
+     </a>
+     <strong>
+      (3) 调整批处理大小
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      在
+      <code>
+       Modelfile
+      </code>
+      中设置：
+      <pre><code class="prism language-dockerfile">PARAMETER num_batch 512  # 根据显存调整
+</code></pre>
+     </li>
+    </ul>
+    <hr/>
+    <h4>
+     <a id="7__144">
+     </a>
+     <strong>
+      7. 常见问题解决
+     </strong>
+    </h4>
+    <h5>
+     <a id="1__145">
+     </a>
+     <strong>
+      (1) 显存不足
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      <strong>
+       现象
+      </strong>
+      ：
+      <code>
+       CUDA out of memory
+      </code>
+     </li>
+     <li>
+      <strong>
+       解决
+      </strong>
+      ：
+      <ul>
+       <li>
+        减少
+        <code>
+         num_batch
+        </code>
+        。
+       </li>
+       <li>
+        启用量化（
+        <code>
+         quantize q4_0
+        </code>
+        ）。
+       </li>
+       <li>
+        增加 GPU 数量。
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <h5>
+     <a id="2__152">
+     </a>
+     <strong>
+      (2) 服务无法启动
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      <strong>
+       现象
+      </strong>
+      ：
+      <code>
+       Failed to bind port 11434
+      </code>
+     </li>
+     <li>
+      <strong>
+       解决
+      </strong>
+      ：
+      <ul>
+       <li>
+        检查端口占用：
+        <code>
+         lsof -i :11434
+        </code>
+        。
+       </li>
+       <li>
+        关闭冲突进程或更换端口。
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <h5>
+     <a id="3__158">
+     </a>
+     <strong>
+      (3) 模型加载失败
+     </strong>
+    </h5>
+    <ul>
+     <li>
+      <strong>
+       现象
+      </strong>
+      ：
+      <code>
+       Model deepseek-r1:70b not found
+      </code>
+     </li>
+     <li>
+      <strong>
+       解决
+      </strong>
+      ：
+      <ul>
+       <li>
+        确认模型文件路径正确。
+       </li>
+       <li>
+        重新下载模型：
+        <code>
+         ollama pull deepseek-r1:70b
+        </code>
+        。
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <hr/>
+    <h4>
+     <a id="_166">
+     </a>
+     <strong>
+      总结
+     </strong>
+    </h4>
+    <p>
+     通过上述步骤，你可以在 Ollama 上成功部署 DeepSeek-R1:70B 模型，并支持外部网络访问。如果遇到性能问题，优先通过
+     <strong>
+      量化
+     </strong>
+     和
+     <strong>
+      多 GPU 并行
+     </strong>
+     优化资源占用。若需进一步扩展，可结合 Kubernetes 或 Docker Swarm 实现集群化部署。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

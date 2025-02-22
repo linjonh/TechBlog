@@ -1,0 +1,105 @@
+---
+layout: post
+title: Dynamics-365-Business-Central开发系列课程-第二课开发环境搭建
+date: 2019-06-05 17:36:52 +0800
+categories: [微软ERP-Nav&amp;BC]
+tags: [ BusinessCentral,Dynamics365BusinessCentral,Dynamics365]
+image:
+    path: https://img-blog.csdnimg.cn/20190605170845212.png?x-oss-process&#61;image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXpob25neW9uZzE5ODA&#61;,size_16,color_FFFFFF,t_70
+    alt: Dynamics-365-Business-Central开发系列课程-第二课开发环境搭建
+artid: 90905496
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Dynamics 365 Business Central开发系列课程-第二课(开发环境搭建)
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     Dynamics 365 Business Central开发环境是：Visual Studio Code(免费) + 报表开发工具（Visual Studio 2017或Report Builder）
+    </p>
+    <p>
+     1.首先下载Dynamics 365 Business Central本地版（需要下载地址的私下联系我）
+    </p>
+    <p>
+     2.如果使用报表开发工具Visual Studio 2017，那么请下载Visual Studio 2017。
+    </p>
+    <p>
+     3.安装Dynamics 365 Business Central，除了打叉的都选择安装。
+    </p>
+    <p>
+     <img alt="" class="has" height="656" src="https://i-blog.csdnimg.cn/blog_migrate/8a694b286b7c2286c91fd67106368eba.png" width="766"/>
+    </p>
+    <p>
+     4.安装成功后，在管理工具中可以看到一个实例BC130，并且已经在运行。
+    </p>
+    <p>
+     <img alt="" class="has" height="701" src="https://i-blog.csdnimg.cn/blog_migrate/3a2abb50922aa3e0856f4acb10837bae.png" width="1200"/>
+    </p>
+    <p>
+     5.在Development页签下，红色框的部分必须选择(默认没有选择)，否则在编写代码的时候会报错。
+    </p>
+    <p>
+     <img alt="" class="has" height="702" src="https://i-blog.csdnimg.cn/blog_migrate/d29610e88e4a2e20ac3d07c6a6cb56e1.png" width="1200"/>
+    </p>
+    <p>
+     6.打开安装好的VSCODE,输入AL查找扩展 AL Language并且安装，安装后重新启动VSCODE.
+    </p>
+    <p>
+     <img alt="" class="has" height="960" src="https://i-blog.csdnimg.cn/blog_migrate/103cc158987b42ef651a2196d1aa76b1.png" width="1200"/>
+    </p>
+    <p>
+     7.通过命令面板下载reference symbols。
+    </p>
+    <p>
+     <img alt="" class="has" height="960" src="https://i-blog.csdnimg.cn/blog_migrate/3013ca240648014e804ec68f941b0152.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" class="has" height="960" src="https://i-blog.csdnimg.cn/blog_migrate/e65c6b588bdba7d5ac7f32f90cfc0dd0.png" width="1200"/>
+    </p>
+    <p>
+     8.通过AL:GO! 新建项目
+    </p>
+    <p>
+     <img alt="" class="has" height="603" src="https://i-blog.csdnimg.cn/blog_migrate/7b53839ea95feb50b47a84f27b66549f.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" class="has" height="406" src="https://i-blog.csdnimg.cn/blog_migrate/1d2405ddf7cd6ee476403524f3304ede.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" class="has" height="404" src="https://i-blog.csdnimg.cn/blog_migrate/d037214021f94289541be1e57ae69e94.png" width="1200"/>
+    </p>
+    <p>
+     9.修改配置文件launch.json的登录权限为"authentication":"Windows",
+    </p>
+    <p>
+     <img alt="" class="has" height="956" src="https://i-blog.csdnimg.cn/blog_migrate/ce4d545ed03fd4a07d6e094853ddd462.png" width="1200"/>
+    </p>
+    <p>
+     10.通过命令红色框中的命令，运行程序。
+    </p>
+    <p>
+     <img alt="" class="has" height="528" src="https://i-blog.csdnimg.cn/blog_migrate/586491284d842daa3e85a5a8db403ce5.png" width="1200"/>
+    </p>
+    <p>
+    </p>
+    <p>
+     <img alt="" class="has" height="1003" src="https://i-blog.csdnimg.cn/blog_migrate/e704eb5be655446f8d2f9dda2e1f2071.png" width="1200"/>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,898 @@
+---
+layout: post
+title: JavaParser-手动安装和配置
+date: 2024-03-22 23:58:38 +0800
+categories: [源代码管理]
+tags: [源代码管理,测试工具,数据分析,开发语言,java]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=136953645
+    alt: JavaParser-手动安装和配置
+artid: 136953645
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     JavaParser 手动安装和配置
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p id="main-toc">
+     <strong>
+      目录
+     </strong>
+    </p>
+    <p id="%E5%89%8D%E8%A8%80-toc" style="margin-left:40px;">
+     <a href="#%E5%89%8D%E8%A8%80" rel="nofollow">
+      前言
+     </a>
+    </p>
+    <p id="%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%20Maven%20%E5%B7%A5%E5%85%B7-toc" style="margin-left:40px;">
+     <a href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%20Maven%20%E5%B7%A5%E5%85%B7" rel="nofollow">
+      一、安装 Maven 工具
+     </a>
+    </p>
+    <p id="1.1%20Maven%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD-toc" style="margin-left:80px;">
+     <a href="#1.1%20Maven%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD" rel="nofollow">
+      1.1 Maven 软件的下载
+     </a>
+    </p>
+    <p id="1.2%C2%A0Maven%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85-toc" style="margin-left:80px;">
+     <a href="#1.2%C2%A0Maven%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85" rel="nofollow">
+      1.2 Maven 软件的安装
+     </a>
+    </p>
+    <p id="1.3%C2%A0Maven%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE-toc" style="margin-left:80px;">
+     <a href="#1.3%C2%A0Maven%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE" rel="nofollow">
+      1.3 Maven 环境变量配置
+     </a>
+    </p>
+    <p id="1.4%20%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E6%A3%80%E6%9F%A5%20Maven%20%E7%89%88%E6%9C%AC-toc" style="margin-left:80px;">
+     <a href="#1.4%20%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E6%A3%80%E6%9F%A5%20Maven%20%E7%89%88%E6%9C%AC" rel="nofollow">
+      1.4 通过命令检查 Maven 版本
+     </a>
+    </p>
+    <p id="%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%20Maven%20%E4%BB%93%E5%BA%93-toc" style="margin-left:40px;">
+     <a href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%20Maven%20%E4%BB%93%E5%BA%93" rel="nofollow">
+      二、配置 Maven 仓库
+     </a>
+    </p>
+    <p id="2.1%20%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E7%9B%AE%E5%BD%95-toc" style="margin-left:80px;">
+     <a href="#2.1%20%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E7%9B%AE%E5%BD%95" rel="nofollow">
+      2.1 修改仓库目录
+     </a>
+    </p>
+    <p id="2.2%20%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F-toc" style="margin-left:80px;">
+     <a href="#2.2%20%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F" rel="nofollow">
+      2.2 添加国内镜像
+     </a>
+    </p>
+    <p id="%E4%B8%89%E3%80%81%E4%BB%8E%20Github%20%E4%B8%8B%E8%BD%BD%C2%A0JavaParser-toc" style="margin-left:40px;">
+     <a href="#%E4%B8%89%E3%80%81%E4%BB%8E%20Github%20%E4%B8%8B%E8%BD%BD%C2%A0JavaParser" rel="nofollow">
+      三、从 Github 下载 JavaParser
+     </a>
+    </p>
+    <p id="3.1%20%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%C2%A0JavaParser-toc" style="margin-left:80px;">
+     <a href="#3.1%20%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%C2%A0JavaParser" rel="nofollow">
+      3.1 下载并解压 JavaParser
+     </a>
+    </p>
+    <p id="3.2%20%E4%BB%8E%E8%B7%AF%E5%BE%84%E6%89%93%E5%BC%80%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6-toc" style="margin-left:80px;">
+     <a href="#3.2%20%E4%BB%8E%E8%B7%AF%E5%BE%84%E6%89%93%E5%BC%80%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6" rel="nofollow">
+      3.2 从路径打开命令提示符
+     </a>
+    </p>
+    <p id="%E5%9B%9B%E3%80%81%E7%BC%96%E8%AF%91%E5%B9%B6%E5%AE%89%E8%A3%85%C2%A0JavaParser-toc" style="margin-left:40px;">
+     <a href="#%E5%9B%9B%E3%80%81%E7%BC%96%E8%AF%91%E5%B9%B6%E5%AE%89%E8%A3%85%C2%A0JavaParser" rel="nofollow">
+      四、编译并安装 JavaParser
+     </a>
+    </p>
+    <p id="4.1%20%E4%BF%AE%E5%A4%8D%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E5%AF%BC%E8%87%B4%E7%9A%84%E6%B5%8B%E8%AF%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98-toc" style="margin-left:80px;">
+     <a href="#4.1%20%E4%BF%AE%E5%A4%8D%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E5%AF%BC%E8%87%B4%E7%9A%84%E6%B5%8B%E8%AF%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98" rel="nofollow">
+      4.1 修复缺少依赖导致的测试失败问题
+     </a>
+    </p>
+    <p id="4.2%20%E7%BC%96%E8%AF%91%C2%A0JavaParser-toc" style="margin-left:80px;">
+     <a href="#4.2%20%E7%BC%96%E8%AF%91%C2%A0JavaParser" rel="nofollow">
+      4.2 编译 JavaParser
+     </a>
+    </p>
+    <p id="%E4%BA%94%E3%80%81%E9%85%8D%E7%BD%AE%20IDEA%20%E9%A1%B9%E7%9B%AE-toc" style="margin-left:40px;">
+     <a href="#%E4%BA%94%E3%80%81%E9%85%8D%E7%BD%AE%20IDEA%20%E9%A1%B9%E7%9B%AE" rel="nofollow">
+      五、配置 IDEA 项目
+     </a>
+    </p>
+    <p id="%E5%85%AD%E3%80%81%E9%85%8D%E7%BD%AE%20Eclipse%20%E9%A1%B9%E7%9B%AE-toc" style="margin-left:40px;">
+     <a href="#%E5%85%AD%E3%80%81%E9%85%8D%E7%BD%AE%20Eclipse%20%E9%A1%B9%E7%9B%AE" rel="nofollow">
+      六、配置 Eclipse 项目
+     </a>
+    </p>
+    <p id="6.1%C2%A0Eclipse%20%E6%8F%92%E4%BB%B6-toc" style="margin-left:80px;">
+     <a href="#6.1%C2%A0Eclipse%20%E6%8F%92%E4%BB%B6" rel="nofollow">
+      6.1 Eclipse 插件
+     </a>
+    </p>
+    <p id="6.2%20%E5%85%8B%E9%9A%86%E9%A1%B9%E7%9B%AE-toc" style="margin-left:80px;">
+     <a href="#6.2%20%E5%85%8B%E9%9A%86%E9%A1%B9%E7%9B%AE" rel="nofollow">
+      6.2 克隆项目
+     </a>
+    </p>
+    <p id="6.3%20%E7%BC%96%E8%AF%91%E6%BA%90-toc" style="margin-left:80px;">
+     <a href="#6.3%20%E7%BC%96%E8%AF%91%E6%BA%90" rel="nofollow">
+      6.3 编译源
+     </a>
+    </p>
+    <p id="6.4%20%E5%AF%BC%E5%85%A5%20%EF%BC%88Core%20%26%20Test%EF%BC%89%E9%A1%B9%E7%9B%AE-toc" style="margin-left:80px;">
+     <a href="#6.4%20%E5%AF%BC%E5%85%A5%20%EF%BC%88Core%20%26%20Test%EF%BC%89%E9%A1%B9%E7%9B%AE" rel="nofollow">
+      6.4 导入 （Core &amp; Test）项目
+     </a>
+    </p>
+    <p id="6.5%20%E5%B0%86%20JavaCC%20%E6%BA%90%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%A0%B8%E5%BF%83%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E8%B7%AF%E5%BE%84-toc" style="margin-left:80px;">
+     <a href="#6.5%20%E5%B0%86%20JavaCC%20%E6%BA%90%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%A0%B8%E5%BF%83%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E8%B7%AF%E5%BE%84" rel="nofollow">
+      6.5 将 JavaCC 源添加到核心项目构建路径
+     </a>
+    </p>
+    <p id="6.6%20%E6%A0%B8%E5%BF%83%E9%A1%B9%E7%9B%AE%E5%8F%98%E6%9B%B4%E5%90%8E%E7%9A%84%E6%B8%85%E7%90%86%E5%92%8C%E6%9E%84%E5%BB%BA-toc" style="margin-left:80px;">
+     <a href="#6.6%20%E6%A0%B8%E5%BF%83%E9%A1%B9%E7%9B%AE%E5%8F%98%E6%9B%B4%E5%90%8E%E7%9A%84%E6%B8%85%E7%90%86%E5%92%8C%E6%9E%84%E5%BB%BA" rel="nofollow">
+      6.6 核心项目变更后的清理和构建
+     </a>
+    </p>
+    <hr id="hr-toc"/>
+    <p>
+    </p>
+    <h3 id="%E5%89%8D%E8%A8%80">
+     <strong>
+      前言
+     </strong>
+    </h3>
+    <p>
+     JavaParser 是一款流行的 Java 代码分析工具。它是一套简单而轻量级的开源工具，可以来分析、转换和生成 Java 代码。
+    </p>
+    <p>
+     JavaParser 官网链接为：
+     <a href="https://javaparser.org/" rel="nofollow" title="https://javaparser.org/">
+      https://javaparser.org/
+     </a>
+     。
+    </p>
+    <p>
+     我们可以通过流行的构建工具 Maven 或者 Gradle ，添加依赖项来部署本地仓库、编译和使用 JavaParser。
+    </p>
+    <p>
+     下面分析使用 JavaParser 从 Github 上手动下载和部署的方法。
+    </p>
+    <h3 id="%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%20Maven%20%E5%B7%A5%E5%85%B7">
+     一、安装 Maven 工具
+    </h3>
+    <p>
+     Maven 是一个跨平台的项目管理工具。作为 Apache 组织的一个颇为成功的开源项目，其主要服务于基于 Java 平台的项目创建，依赖管理和项目信息管理。Maven 是 Apache 的顶级项目，解释为“专家，内行”，它是一个项目管理的工具，Maven 自身是纯 Java 开发的，可以使用 Maven 对 Java 项目进行构建、依赖管理。
+    </p>
+    <p>
+     首先，我们需要安装 Maven 工具，以便于后面编译部署 JavaParser。
+    </p>
+    <h4 id="1.1%20Maven%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD">
+     1.1 Maven 软件的下载
+    </h4>
+    <p>
+     使用 Maven 管理工具，我们首先要到官网去下载它的安装软件。
+    </p>
+    <p>
+     <a class="link-info" href="http://maven.apache.org/download.cgi" rel="nofollow" title="Maven – Download Apache Maven：http://maven.apache.org/download.cgi">
+      Maven – Download Apache Maven：http://maven.apache.org/download.cgi
+     </a>
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="240" src="https://i-blog.csdnimg.cn/blog_migrate/d2d5af8db5b8a9048d920c2658b8a211.png" width="603">
+       <figcaption>
+        Maven 下载页面
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <h4 id="1.2%C2%A0Maven%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85">
+     1.2 Maven 软件的安装
+    </h4>
+    <p>
+     Maven 下载后，将 Maven 解压到一个没有中文没有空格的路径下面。 解压后目录结构如下：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="327" src="https://i-blog.csdnimg.cn/blog_migrate/4a2932e1146579d6b8a71697de190588.png" width="488">
+       <figcaption>
+        Maven 文件夹结构
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <p>
+     关于目录结构的解释如下：
+    </p>
+    <ol>
+     <li>
+      bin：存放了 Maven 的命令；
+     </li>
+     <li>
+      boot：存放了一些 Maven 本身的引导程序，如类加载器等；
+     </li>
+     <li>
+      conf：存放了 Maven 的一些配置文件，如 setting.xml 文件；
+     </li>
+     <li>
+      lib：存放了 Maven 本身运行所需的一些 jar 包；
+     </li>
+    </ol>
+    <h4 id="1.3%C2%A0Maven%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE">
+     1.3 Maven 环境变量配置
+    </h4>
+    <p>
+     （1）在系统环境变量中新建并配置 MAVEN_HOME 变量，变量值就是这台计算机上 Maven 安装的路径（bin 目录的上一级目录）。
+    </p>
+    <p>
+     右键此电脑的属性选项：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="324" src="https://i-blog.csdnimg.cn/blog_migrate/778db3a570a70419b2704df2eefd09d6.png" width="334">
+       <figcaption>
+        如何打开系统属性设置
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <p>
+     在打开窗口中，点击“高级系统设置”：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="50" src="https://i-blog.csdnimg.cn/blog_migrate/f6b5e526c3187b12e68a148a218ed7c0.png" width="560">
+       <figcaption>
+        高级系统设置
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <p>
+     点击环境变量设置：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="168" src="https://i-blog.csdnimg.cn/blog_migrate/f8c17f50c21d30fd00be8475beb49a34.png" width="462">
+       <figcaption>
+        打开环境变量设置
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <p>
+     然后在系统变量中新建环境变量：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="170" src="https://i-blog.csdnimg.cn/blog_migrate/ad41d29f9c9d5ee532ea65d67ed644ff.png" width="556">
+       <figcaption>
+        添加 Maven Home 系统环境变量
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <p>
+     （2）在 Path 系统变量中添加引用 MAVEN_HOME 环境变量，并指向 \bin 子目录。
+    </p>
+    <p>
+     点击编辑 Path 变量的内容：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="375" src="https://i-blog.csdnimg.cn/blog_migrate/59b14c56196091cb21dcda1d5b45a36b.png" width="930">
+       <figcaption>
+        点击编辑 Path 变量
+       </figcaption>
+      </img>
+     </figure>
+    </div>
+    <p>
+     通过新建功能真正添加 Maven 环境变量（%JAVA_HOME%\bin）到系统 Path 路径：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="364" src="https://i-blog.csdnimg.cn/blog_migrate/86f25252069c3f1cbc634c43f36db815.png" width="379"/>
+      <figcaption>
+       添加 Path 变量
+      </figcaption>
+     </figure>
+    </div>
+    <h4 id="1.4%20%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E6%A3%80%E6%9F%A5%20Maven%20%E7%89%88%E6%9C%AC">
+     1.4 通过命令检查 Maven 版本
+    </h4>
+    <p>
+     通过 Win + R 打开 “运行” 选项卡，输入 cmd 打开 命令提示符 窗口。随后，输入 mvn -v 命令检查 Maven 的安装版本。通过回显信息检查安装是否成功，看到 Maven 的版本为 3.9.6 及 Java 版本为 jdk-11 （你的电脑上环境变量配置的 JDK 版本）即为安装成功。 如下图所示：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="178" src="https://i-blog.csdnimg.cn/blog_migrate/42e50523b1d71dd2c13c6b5f28c0ac54.png" width="591"/>
+      <figcaption>
+       检查 Maven 安装配置
+      </figcaption>
+     </figure>
+    </div>
+    <h3 id="%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%20Maven%20%E4%BB%93%E5%BA%93">
+     二、配置 Maven 仓库
+    </h3>
+    <h4 id="2.1%20%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E7%9B%AE%E5%BD%95">
+     2.1 修改仓库目录
+    </h4>
+    <p>
+     Maven 仓库默认路径在系统用户路径下的 .m2 目录下，我们不要将仓库放在 C 盘，所以这里要重新配置一下。
+    </p>
+    <p>
+     在 Maven 安装目录中，打开 conf 文件夹，可以看到一个 settings.xml 文件。用文本编辑器打开这个文件， 修改本地仓库的配置。
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="232" src="https://i-blog.csdnimg.cn/blog_migrate/bc44c937a6cf9f94bce60c8cdac40b2c.png" width="518"/>
+      <figcaption>
+       修改 Maven 仓库目录
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     打开 settings.xml 文件，相关配置如下所示：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="188" src="https://i-blog.csdnimg.cn/blog_migrate/32440df888341f502e184cfdac3bdd36.png" width="558"/>
+      <figcaption>
+       修改 settings .xml 文件
+      </figcaption>
+     </figure>
+    </div>
+    <h4 id="2.2%20%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F">
+     2.2 添加国内镜像
+    </h4>
+    <p>
+     Maven 默认的远程仓库是在国外，所以下载 jar 包时速度会非常慢，这里推荐大家使用阿里云国内镜像仓库。
+    </p>
+    <p>
+     在刚刚修改的 settings.xml 文件中，找到 mirrors 标签，将下面的内容复制并添加到 mirrors 中即可。
+    </p>
+    <pre><code class="language-XML">&lt;mirror&gt;
+    &lt;id&gt;alimaven&lt;/id&gt;
+    &lt;name&gt;aliyun maven&lt;/name&gt;
+    &lt;url&gt;
+        http://maven.aliyun.com/nexus/content/groups/public/
+    &lt;/url&gt;
+    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;        
+&lt;/mirror&gt;</code></pre>
+    <p>
+     效果如下图所示：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="212" src="https://i-blog.csdnimg.cn/blog_migrate/023e71578fc286a0207ad82c352c4bc8.png" width="573"/>
+      <figcaption>
+       添加国内镜像
+      </figcaption>
+     </figure>
+    </div>
+    <h3 id="%E4%B8%89%E3%80%81%E4%BB%8E%20Github%20%E4%B8%8B%E8%BD%BD%C2%A0JavaParser">
+     三、从 Github 下载 JavaParser
+    </h3>
+    <h4 id="3.1%20%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%C2%A0JavaParser">
+     3.1 下载并解压 JavaParser
+    </h4>
+    <p>
+     配置完 Maven 后，我们就可以下载并部署 JavaParser 工具了。
+    </p>
+    <p>
+     可以在主页标题栏右侧点击按钮 “DownLoad” 跳转到源代码页面，也可以从 Github 打开 Release 发布页面。
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="104" src="https://i-blog.csdnimg.cn/blog_migrate/246c4d7a021d0ce32b86f8da88258b0e.png" width="1200"/>
+      <figcaption>
+       从官网下载
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     在 Github 上点击 Release 下载最新的压缩文件：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="1192" src="https://i-blog.csdnimg.cn/blog_migrate/0f660768128b61fd5a1f900b3a03c1cf.png" width="1200"/>
+      <figcaption>
+       点击 Github Release 下载文件
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     下载压缩文件：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="324" src="https://i-blog.csdnimg.cn/blog_migrate/94f76240b95d8c6f0ebce937559234bf.png" width="591"/>
+      <figcaption>
+       下载第一个 zip 文件
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     在下载完成后将其解压到英文路径：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="431" src="https://i-blog.csdnimg.cn/blog_migrate/72a6f144a709cd000c3912a1c2c5c15a.png" width="567"/>
+      <figcaption>
+       解压后的文件目录结构
+      </figcaption>
+     </figure>
+    </div>
+    <h4 id="3.2%20%E4%BB%8E%E8%B7%AF%E5%BE%84%E6%89%93%E5%BC%80%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6">
+     3.2 从路径打开命令提示符
+    </h4>
+    <p>
+     切换到该路径打开终端命令提示符：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="351" src="https://i-blog.csdnimg.cn/blog_migrate/c50ace56378df8fc660182a9b000cf18.png" width="545"/>
+      <figcaption>
+       右键打开终端
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     如果不是，请选择打开命令提示符：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="209" src="https://i-blog.csdnimg.cn/blog_migrate/690f8b8a299f9a239d6159f70d8beec9.png" width="612"/>
+      <figcaption>
+       切换到命令提示符
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     <span style="color:#fe2c24;">
+      <strong>
+       提示：不要关闭该命令提示符，以便于接下来通过 Maven 的命令构建 JavaParser。
+      </strong>
+     </span>
+    </p>
+    <h3 id="%E5%9B%9B%E3%80%81%E7%BC%96%E8%AF%91%E5%B9%B6%E5%AE%89%E8%A3%85%C2%A0JavaParser">
+     四、编译并安装 JavaParser
+    </h3>
+    <h4 id="4.1%20%E4%BF%AE%E5%A4%8D%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E5%AF%BC%E8%87%B4%E7%9A%84%E6%B5%8B%E8%AF%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98">
+     4.1 修复缺少依赖导致的测试失败问题
+    </h4>
+    <p>
+     编译过程中会遇到 javaparser-core-testing-bdd 编译失败的问题。（如果还没开始构建，那么你来对了，先按照下面说明进行修复，然后再进行构建）
+    </p>
+    <p>
+     你可能会遇到下面的构建失败日志：
+    </p>
+    <pre><code class="language-XML">[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:42 min
+[INFO] Finished at: 2024-03-21T23:13:18+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project javaparser-core-testing-bdd: There are test failures.
+[ERROR]
+[ERROR] Please refer to H:\MuJava\Downloads\javaparser-javaparser-parent-3.25.9\javaparser-core-testing-bdd\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -&gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn &lt;args&gt; -rf :javaparser-core-testing-bdd
+
+</code></pre>
+    <p>
+     窗口中显示的结果如图：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="323" src="https://i-blog.csdnimg.cn/blog_migrate/03c45b8c81c82a06d06e2597913ef4e8.png" width="603"/>
+      <figcaption>
+       构建失败的提示
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     这种错误是因为缺少依赖导致的，这里提示我们缺少 org.apache.maven.plugins:maven-surefire-plugin:3.2.5 依赖。
+    </p>
+    <p>
+     进入源代码文件夹的 javaparser-core-testing-bdd 目录：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="273" src="https://i-blog.csdnimg.cn/blog_migrate/47855644e2d1822c7f599acb357aac39.png" width="605"/>
+      <figcaption>
+       打开对应目录
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     找到并用文本编辑器打开 pom.xml 配置文件：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="238" src="https://i-blog.csdnimg.cn/blog_migrate/6010cf39d558760421c95f2e25f7cb5c.png" width="441"/>
+      <figcaption>
+       找到 POM 配置文件
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     找到 build -&gt; plugins  标签，并在最后一个 &lt;/plugin&gt; 标签后面追加新的插件依赖项：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="148" src="https://i-blog.csdnimg.cn/blog_migrate/0b7eec40923e759c25b9eaa01fb945a1.png" width="534"/>
+      <figcaption>
+       找到 plugins 标签
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     追加下面的依赖项，注意需要根据你的错误日志中显示的版本合理修改 &lt;version&gt; 标签：
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       <span style="color:#0d0016;">
+        &lt;plugin&gt;
+        <br/>
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        <br/>
+        &lt;artifactId&gt;
+       </span>
+       <span style="color:#fe2c24;">
+        maven-surefire-plugin
+       </span>
+       <span style="color:#0d0016;">
+        &lt;/artifactId&gt;
+        <br/>
+        &lt;version&gt;
+       </span>
+       <span style="color:#fe2c24;">
+        3.2.5
+       </span>
+       <span style="color:#0d0016;">
+        &lt;/version&gt;
+        <br/>
+        &lt;configuration&gt;
+        <br/>
+        &lt;skipTests&gt;true&lt;/skipTests&gt;
+        <br/>
+        &lt;/configuration&gt;
+        <br/>
+        &lt;/plugin&gt;
+       </span>
+      </strong>
+     </p>
+    </blockquote>
+    <p>
+     效果如图所示：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="151" src="https://i-blog.csdnimg.cn/blog_migrate/c2dfc3a03647c0f2b2f2eb8fa49cbbda.png" width="554"/>
+      <figcaption>
+       追加依赖项
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     修改完依赖缺失问题后，构建应该能够继续执行。
+    </p>
+    <p>
+     如果你之前已经开始构建，并因为此问题而导致构建失败。此时应该从中断的地方开始恢复构建，需要指定从 javaparser-core-testing-bdd 开始：
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       <span style="color:#0d0016;">
+        mvn package -rf :javaparser-core-testing-bdd
+       </span>
+      </strong>
+     </p>
+    </blockquote>
+    <p>
+     完成后效果如图所示：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="306" src="https://i-blog.csdnimg.cn/blog_migrate/53888869e4ded1ff34a9217664e08df4.png" width="573"/>
+      <figcaption>
+       恢复构建过程
+      </figcaption>
+     </figure>
+    </div>
+    <h4 id="4.2%20%E7%BC%96%E8%AF%91%C2%A0JavaParser">
+     4.2 编译 JavaParser
+    </h4>
+    <p>
+     请运行以下 maven 命令，以便于从源文件编译并生成打包的 jar 文件：
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       <span style="color:#0d0016;">
+        mvnw package
+       </span>
+      </strong>
+     </p>
+    </blockquote>
+    <p>
+     注意：常用的两个模块的 jar 文件可以在编译完成后，在以下位置找到：
+    </p>
+    <ul>
+     <li>
+      javaparser/javaparser-core/target/javaparser-core-\&lt;version\&gt;.jar
+     </li>
+     <li>
+      javaparser-symbol-solver-core/target/javaparser-symbol-solver-core-\&lt;version\&gt;.jar
+     </li>
+    </ul>
+    <p>
+     构建完成后，其实几个目录下都会新增一个 target 文件夹，里面包含对应打包好的 jar 文件。
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="251" src="https://i-blog.csdnimg.cn/blog_migrate/4c9f3c44deb35019abd899d7d8101e0f.png" width="422"/>
+      <figcaption>
+       包含 jar 的文件夹
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     我们可以将这些 jar 文件手动复制到一个 bin 目录下（手动创建）：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="323" src="https://i-blog.csdnimg.cn/blog_migrate/de7bc76add89e7645b5b79ed447117c7.png" width="493"/>
+      <figcaption>
+       所有的 jar 文件
+      </figcaption>
+     </figure>
+    </div>
+    <h3 id="%E4%BA%94%E3%80%81%E9%85%8D%E7%BD%AE%20IDEA%20%E9%A1%B9%E7%9B%AE">
+     五、配置 IDEA 项目
+    </h3>
+    <p>
+     IDEA 的项目只需要在项目的 pom.xml 配置文件中加上 maven 的配置即可。
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="389" src="https://i-blog.csdnimg.cn/blog_migrate/2e22ceebeb54875a07bea81a39f7dfb6.png" width="242"/>
+      <figcaption>
+       一个 IDEA 项目的结构
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     在配置中添加  JavaParser 的依赖项。
+    </p>
+    <p>
+     内容如下所示：
+    </p>
+    <pre><code class="language-XML">&lt;dependency&gt;
+    &lt;groupId&gt;com.github.javaparser&lt;/groupId&gt;
+    &lt;artifactId&gt;javaparser-core&lt;/artifactId&gt;
+    &lt;version&gt;3.25.9&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+    <p>
+     插入效果如图：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="292" src="https://i-blog.csdnimg.cn/blog_migrate/553e8610778322941a81c40e38046c63.png" width="1200"/>
+      <figcaption>
+       追加 IDEA 项目的 JavaParser 依赖项
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     构建项目：
+    </p>
+    <div class="img-center">
+     <figure class="image">
+      <img alt="" height="138" src="https://i-blog.csdnimg.cn/blog_migrate/770689bbddce50be8fc94c84b5d3f5f2.png" width="479"/>
+      <figcaption>
+       重新构建项目
+      </figcaption>
+     </figure>
+    </div>
+    <p>
+     如果你还不熟悉如何构建和在 IDEA 项目中使用 JavaParser ，你可以参考官方提供的两个快速入门项目 （
+     <a href="https://github.com/javaparser/javaparser-maven-sample" title="javaparser-maven-sample">
+      javaparser-maven-sample
+     </a>
+     、
+     <a href="https://github.com/javaparser/javasymbolsolver-maven-sample" title="javasymbolsolver-maven-sample">
+      javasymbolsolver-maven-sample
+     </a>
+     ）。
+    </p>
+    <h3 id="%E5%85%AD%E3%80%81%E9%85%8D%E7%BD%AE%20Eclipse%20%E9%A1%B9%E7%9B%AE">
+     六、配置 Eclipse 项目
+    </h3>
+    <h4 id="6.1%C2%A0Eclipse%20%E6%8F%92%E4%BB%B6">
+     6.1 Eclipse 插件
+    </h4>
+    <p>
+     在继续下一节之前，请通过 Eclipse Marketplace 安装以下插件。您可以通过选择 IDE 菜单栏中的 Help-&gt;Installation Details 菜单项来检查它们是否已经安装。如上所述，这些插件可能取决于 PATH 变量中所需的条目。
+    </p>
+    <ul>
+     <li>
+      EGit（Eclipse 的 Git 集成）
+     </li>
+     <li>
+      m2e（Maven 对 Eclipse 的支持）
+     </li>
+     <li>
+      m2e-connector for maven-dependency-plugin
+     </li>
+    </ul>
+    <p>
+     您可能会发现这些插件也很有用，但不是必需的：
+    </p>
+    <ul>
+     <li>
+      m2e javacc connector （更新站点）
+     </li>
+     <li>
+      Maven SCM Handler for EGit（支持 Maven SCM 命令）
+     </li>
+     <li>
+      GitHub Mylyn Connector（查看问题、拉取请求等）
+     </li>
+     <li>
+      JavaCC Eclipse（支持 JavaCC 文件）
+     </li>
+     <li>
+      SF JavaCC Eclipse Plugin-in Feature（支持 JavaCC 文件）
+     </li>
+     <li>
+      JBehaveEclipse（支持 JBehave 测试）
+     </li>
+     <li>
+      JBehaveEditor（支持 JBehave 测试）
+     </li>
+    </ul>
+    <h4 id="6.2%20%E5%85%8B%E9%9A%86%E9%A1%B9%E7%9B%AE">
+     6.2 克隆项目
+    </h4>
+    <p>
+     要将项目克隆到 Eclipse 中，请在 Eclipse 中执行以下步骤：
+    </p>
+    <ol>
+     <li>
+      在 IDE 菜单栏中选择 Window-&gt;Show View 菜单项。在筛选文本字段中键入 git，然后选择 git 存储库视图。
+     </li>
+     <li>
+      在存储库视图中，选择向下箭头，这是视图工具栏中的最后一个按钮。选择克隆存储库。
+     </li>
+     <li>
+      在
+      <strong>
+       Select Repository Source
+      </strong>
+      提示中，选择 Clone URI，然后按下 Next。
+     </li>
+     <li>
+      转到 GitHub 上的分叉存储库主页。按下绿色按钮上的向下箭头，上面写着 Clone or download。将 web URL 复制到剪贴板。URL 的形式为 https://github.com/＜您的配置文件名称＞/javaparser。在 Eclipse 中，将此 URL 粘贴到 URI 文本字段中，主机和存储库路径字段将自动填充。
+     </li>
+     <li>
+      使用您的配置文件凭据填写“身份验证”面板。还要选中“安全存储中的存储”，以防止 Eclipse 稍后再次提示您使用相同的凭据进行存储库更新。
+     </li>
+     <li>
+      按下 Next。
+     </li>
+     <li>
+      在“分支选择”提示中，使两个分支都处于选中状态，然后按下 Next。
+     </li>
+     <li>
+      在 Local Destination 提示符中，选择要将项目下载到的目录。理想情况下，这应该是 Eclipse 工作区目录。路径应该是：＜path to workspace＞/javaparser。保留所有其他选项不变。
+     </li>
+     <li>
+      祝贺您已经克隆了该项目，它在 Eclipse 中作为存储库存在。
+     </li>
+    </ol>
+    <h4 id="6.3%20%E7%BC%96%E8%AF%91%E6%BA%90">
+     6.3 编译源
+    </h4>
+    <p>
+     要构建项目（并在接下来的部分中防止 IDE 错误），请执行以下步骤：
+    </p>
+    <ol>
+     <li>
+      打开操作系统命令提示符并导航到项目的根目录。
+     </li>
+     <li>
+      键入 mvn-javacc:javacc。
+     </li>
+     <li>
+      键入 mvn clean install。安装可能需要一些时间。在 Maven 结果摘要中验证 javaparser 核心模块是否已成功构建。不要担心其他模块构建是否失败或暂时跳过。
+     </li>
+    </ol>
+    <h4 id="6.4%20%E5%AF%BC%E5%85%A5%20%EF%BC%88Core%20%26%20Test%EF%BC%89%E9%A1%B9%E7%9B%AE">
+     6.4 导入 （Core &amp; Test）项目
+    </h4>
+    <p>
+     要将项目导入 Eclipse，请在 Eclipse 中执行以下步骤：
+    </p>
+    <ol>
+     <li>
+      在 IDE 菜单栏中选择 File-&gt;Import 菜单项。在 filter 文本字段中键入 maven，然后选择 Existing maven Projects 选项。
+     </li>
+     <li>
+      在 Select Project 提示符中，单击 Browse 按钮并导航到 javaparser 核心项目的根文件夹。按“OK”。确保已选择 Projects 文本区域中显示的 POM 文件。按 Finish。请注意，如果您还没有安装 m2e connector for javacc-maven-plugin，Eclipse 将提醒您一个未解决的错误。如果是这样的话，您仍然可以为了我们的目的毫无问题地继续。
+     </li>
+     <li>
+      在 Package Explorer 视图中，项目应该显示为带有 Maven、Java 和 Git Nature 图标的注释。
+     </li>
+     <li>
+      对 javaparser 测试项目重复步骤 1-3。
+     </li>
+     <li>
+      祝贺您已经导入了项目，几乎可以开始测试了。
+     </li>
+    </ol>
+    <h4 id="6.5%20%E5%B0%86%20JavaCC%20%E6%BA%90%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%A0%B8%E5%BF%83%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E8%B7%AF%E5%BE%84">
+     6.5 将 JavaCC 源添加到核心项目构建路径
+    </h4>
+    <p>
+     建议打开 Problems view ，在 Eclipse 中执行以下步骤时查看项目错误的解决方法：
+    </p>
+    <ol>
+     <li>
+      右键单击 javaparser 核心项目。在上下文菜单中，选择 Build Path-&gt;Configure Build Path。
+     </li>
+     <li>
+      在主面板中，确保已选择“源”选项卡。按添加文件夹。展开 target-&gt;generated sources 并选择 javacc。不要取消选择任何其他选定的目录。按 OK。
+     </li>
+     <li>
+      按“Apply”和“OK”。清理并构建您的工作区。应解决所有错误。
+     </li>
+    </ol>
+    <h4 id="6.6%20%E6%A0%B8%E5%BF%83%E9%A1%B9%E7%9B%AE%E5%8F%98%E6%9B%B4%E5%90%8E%E7%9A%84%E6%B8%85%E7%90%86%E5%92%8C%E6%9E%84%E5%BB%BA">
+     6.6 核心项目变更后的清理和构建
+    </h4>
+    <p>
+     由于 javaparser-core 在测试项目的 POM 文件中被指定为 Maven 依赖项，因此它应该已经列在 javaparser-testing 项目的 Maven Dependencies 目录下。但是，在对核心项目进行更改后，您需要重新构建 javaparser 测试。我建议在 Eclipse 的 Project 菜单中应用 Clean 选项。
+    </p>
+    <hr/>
+    <p>
+     转载请注明原文出处链接：
+    </p>
+    <p>
+     <a class="link-info" href="https://blog.csdn.net/qq_59075481/article/details/136953645" title="https://blog.csdn.net/qq_59075481/article/details/136953645">
+      https://blog.csdn.net/qq_59075481/article/details/136953645
+     </a>
+    </p>
+    <p>
+     本文发布于：2024.03.22，更新于：2024.03.23.
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,43 @@
+---
+layout: post
+title: sql-developer-中一个数据库链接另外一个数据库
+date: 2024-08-02 11:19:04 +0800
+categories: [OracleORMysql]
+tags: []
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=8139398
+    alt: sql-developer-中一个数据库链接另外一个数据库
+artid: 8139398
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     sql developer 中一个数据库链接另外一个数据库
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     sql developer 中一个数据库链接另外一个数据库以便在这个数据库中用到另外数据库进行查询，进行两个数据库间的数据迁移
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     服务名：(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=**.**.**.**)(PORT=1521)))(CONNECT_DATA=(SERVER = DEDICATED)(SID=**)))
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

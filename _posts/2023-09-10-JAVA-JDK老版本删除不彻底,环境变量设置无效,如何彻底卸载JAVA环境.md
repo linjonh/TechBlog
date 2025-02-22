@@ -1,0 +1,67 @@
+---
+layout: post
+title: JAVA-JDK老版本删除不彻底,环境变量设置无效,如何彻底卸载JAVA环境
+date: 2023-09-10 15:47:47 +0800
+categories: []
+tags: []
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=105391945
+    alt: JAVA-JDK老版本删除不彻底,环境变量设置无效,如何彻底卸载JAVA环境
+artid: 105391945
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     JAVA JDK老版本删除不彻底，环境变量设置无效，如何彻底卸载JAVA环境？
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     <strong>
+      一、现象
+     </strong>
+    </p>
+    <p>
+     我电脑以前安装的是JAVA JDK11，最近删除JDK11，安装JDK14版本。JAVA_HOME也改成了“C:\Program Files\Java\jdk-14”。。
+    </p>
+    <p>
+     但是每次启动电脑时，JAVA_HOME又变成了JKD11了，导致eclipse无法启动。。。无比郁闷。。。
+    </p>
+    <p>
+     <strong>
+      二、原因
+     </strong>
+    </p>
+    <p>
+     JAVA JDK11删除不彻底，导致环境变量JAVA_HOME和PATH没有生效。。。
+    </p>
+    <p>
+     <strong>
+      三、解决
+     </strong>
+    </p>
+    <p>
+     网上也有很大解决方法，大多不适用。Oracle官方的小工具（Uninstall Java Versions）特别好，安全，放心使用。。小工具下载地址：
+     <a href="https://java.com/en/download/uninstalltool.jsp" rel="nofollow">
+      https://java.com/en/download/uninstalltool.jsp
+     </a>
+    </p>
+    <p>
+     至此，旧版本JDK11彻底删除，问题完美解决~~~
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

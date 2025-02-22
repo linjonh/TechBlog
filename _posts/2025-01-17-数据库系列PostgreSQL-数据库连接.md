@@ -1,0 +1,367 @@
+---
+layout: post
+title: 数据库系列PostgreSQL-数据库连接
+date: 2025-01-17 09:33:44 +0800
+categories: [s40Cpolar]
+tags: [运维,服务器]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=144437807
+    alt: 数据库系列PostgreSQL-数据库连接
+artid: 144437807
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【数据库系列】PostgreSQL 数据库连接
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <blockquote>
+     <p>
+      💝💝💝欢迎来到我的博客，很高兴能够在这里和您见面！希望您在这里可以感受到一份轻松愉快的氛围，不仅可以获得有趣的内容和知识，也可以畅所欲言、分享您的想法和见解。
+      <br/>
+      <img alt="img" src="https://img-blog.csdnimg.cn/img_convert/5ce5e68e322584b3aa8304269fb6a2f7.jpeg#pic_center"/>
+     </p>
+     <ul>
+      <li>
+       推荐:
+       <a href="https://qinyingjie.blog.csdn.net/?type=blog" rel="nofollow">
+        kwan 的首页
+       </a>
+       ,持续学习,不断总结,共同进步,活到老学到老
+      </li>
+      <li>
+       导航
+       <ul>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11763029.html">
+          檀越剑指大厂系列
+         </a>
+         :全面总结 java 核心技术,jvm,并发编程 redis,kafka,Spring,微服务等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474211.html">
+          常用开发工具系列
+         </a>
+         :常用的开发工具,IDEA,Mac,Alfred,Git,typora 等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474265.html">
+          数据库系列
+         </a>
+         :详细总结了常用数据库 mysql 技术点,以及工作中遇到的 mysql 问题等
+        </li>
+        <li>
+         <a href="https://meihua150.cn/" rel="nofollow">
+          新空间代码工作室
+         </a>
+         :提供各种软件服务,承接各种毕业设计,毕业论文等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_7540627.html">
+          懒人运维系列
+         </a>
+         :总结好用的命令,解放双手不香吗?能用一个命令完成绝不用两个操作
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11480075.html">
+          数据结构与算法系列
+         </a>
+         :总结数据结构和算法,不同类型针对性训练,提升编程思维,剑指大厂
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      非常期待和您一起在这个小小的网络世界里共同探索、学习和成长。💝💝💝 ✨✨ 欢迎订阅本专栏 ✨✨
+     </p>
+    </blockquote>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      博客目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <a href="#_PostgreSQL_19" rel="nofollow">
+          确认安装和运行 PostgreSQL
+         </a>
+        </li>
+        <li>
+         <a href="#_23" rel="nofollow">
+          打开命令行工具
+         </a>
+        </li>
+        <li>
+         <a href="#psql_27" rel="nofollow">
+          使用`psql`命令行工具
+         </a>
+        </li>
+        <li>
+         <a href="#_52" rel="nofollow">
+          输入密码
+         </a>
+        </li>
+        <li>
+         <a href="#_PostgreSQL_56" rel="nofollow">
+          使用 PostgreSQL
+         </a>
+        </li>
+        <li>
+         <a href="#_60" rel="nofollow">
+          注意事项
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <p>
+     在当今信息技术飞速发展的时代，数据库作为数据存储和管理的核心组件，扮演着至关重要的角色。PostgreSQL，作为一种高级的开源对象关系型数据库系统，因其强大的功能和灵活性而广受欢迎。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/07a3e712ec0346baa7feb873b9be702d.png#pic_center"/>
+    </p>
+    <h3>
+     <a id="_PostgreSQL_19">
+     </a>
+     确认安装和运行 PostgreSQL
+    </h3>
+    <p>
+     在开始连接之前，首先需要确保你的系统上已经安装了 PostgreSQL，并且服务正在运行。PostgreSQL 支持多种操作系统，包括 Windows、macOS 和 Linux。安装过程可能因操作系统而异，但通常都包括下载安装包、运行安装程序和配置数据库。安装完成后，你需要确认 PostgreSQL 服务是否已经启动。在 Windows 上，你可以通过服务管理器来检查；而在 Linux 或 macOS 上，你可以使用系统服务管理命令，如
+     <code>
+      systemctl
+     </code>
+     或
+     <code>
+      brew services
+     </code>
+     。
+    </p>
+    <h3>
+     <a id="_23">
+     </a>
+     打开命令行工具
+    </h3>
+    <p>
+     连接 PostgreSQL 数据库，我们通常使用命令行工具。在 Windows 上，你可以使用
+     <code>
+      cmd
+     </code>
+     （命令提示符）或
+     <code>
+      PowerShell
+     </code>
+     ；而在 macOS 或 Linux 上，你可以使用终端（Terminal）。这些工具为我们提供了一个与操作系统交互的界面，通过输入命令来执行各种操作。
+    </p>
+    <h3>
+     <a id="psql_27">
+     </a>
+     使用
+     <code>
+      psql
+     </code>
+     命令行工具
+    </h3>
+    <p>
+     <code>
+      psql
+     </code>
+     是 PostgreSQL 自带的一个命令行工具，它允许用户直接与数据库进行交互。使用
+     <code>
+      psql
+     </code>
+     连接数据库的基本命令格式如下：
+    </p>
+    <pre><code class="prism language-sh">psql <span class="token parameter variable">-h</span> <span class="token punctuation">[</span>主机名<span class="token punctuation">]</span> <span class="token parameter variable">-p</span> <span class="token punctuation">[</span>端口号<span class="token punctuation">]</span> <span class="token parameter variable">-U</span> <span class="token punctuation">[</span>用户名<span class="token punctuation">]</span> <span class="token parameter variable">-d</span> <span class="token punctuation">[</span>数据库名<span class="token punctuation">]</span>
+</code></pre>
+    <ul>
+     <li>
+      <code>
+       -h
+      </code>
+      ：指定数据库服务器的主机名。如果 PostgreSQL 安装在本地，通常可以省略或使用
+      <code>
+       localhost
+      </code>
+      。
+     </li>
+     <li>
+      <code>
+       -p
+      </code>
+      ：指定数据库服务器的端口号。PostgreSQL 的默认端口号是 5432。
+     </li>
+     <li>
+      <code>
+       -U
+      </code>
+      ：指定要登录的用户名。
+     </li>
+     <li>
+      <code>
+       -d
+      </code>
+      ：指定要连接的数据库名。
+     </li>
+    </ul>
+    <p>
+     例如，如果你要连接到本地主机上的一个名为
+     <code>
+      mydatabase
+     </code>
+     的数据库，并且你的 PostgreSQL 用户名是
+     <code>
+      myuser
+     </code>
+     ，你可以使用以下命令：
+    </p>
+    <pre><code class="prism language-sh">psql <span class="token parameter variable">-h</span> localhost <span class="token parameter variable">-p</span> <span class="token number">5432</span> <span class="token parameter variable">-U</span> myuser <span class="token parameter variable">-d</span> mydatabase
+</code></pre>
+    <p>
+     如果 PostgreSQL 安装在本地并且使用默认端口，你可以简化命令为：
+    </p>
+    <pre><code class="prism language-sh">psql <span class="token parameter variable">-U</span> myuser <span class="token parameter variable">-d</span> mydatabase
+</code></pre>
+    <h3>
+     <a id="_52">
+     </a>
+     输入密码
+    </h3>
+    <p>
+     在执行连接命令后，如果设置了密码，系统会提示你输入。这是为了确保数据库的安全性，防止未授权的访问。正确输入密码后，你将成功登录到数据库。
+    </p>
+    <h3>
+     <a id="_PostgreSQL_56">
+     </a>
+     使用 PostgreSQL
+    </h3>
+    <p>
+     连接成功后，你将看到
+     <code>
+      psql
+     </code>
+     的命令提示符，通常是
+     <code>
+      mydatabase=#
+     </code>
+     ，这表明你已经成功连接到名为
+     <code>
+      mydatabase
+     </code>
+     的数据库。在这里，你可以输入 SQL 命令来执行数据库操作，如查询、更新、插入和删除数据等。
+    </p>
+    <h3>
+     <a id="_60">
+     </a>
+     注意事项
+    </h3>
+    <p>
+     在连接 PostgreSQL 数据库的过程中，有几个注意事项需要考虑：
+    </p>
+    <ol>
+     <li>
+      <p>
+       <strong>
+        图形界面工具
+       </strong>
+       ：如果你更习惯使用图形界面，可以选择如 pgAdmin、DBeaver 等工具来连接和管理 PostgreSQL 数据库。这些工具提供了一个用户友好的界面，使得数据库管理更加直观和方便。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        配置
+        <code>
+         pg_hba.conf
+        </code>
+        文件
+       </strong>
+       ：在某些配置中，你可能需要配置
+       <code>
+        pg_hba.conf
+       </code>
+       文件来控制对数据库的访问权限。这个文件定义了哪些主机、用户和认证方法是被允许的，可以根据需要进行调整。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        防火墙设置
+       </strong>
+       ：如果你在远程服务器上运行 PostgreSQL，确保防火墙设置允许来自你所在位置的连接。否则，即使你的连接命令正确，也无法成功连接到数据库。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        检查服务状态
+       </strong>
+       ：如果在连接过程中遇到问题，首先检查 PostgreSQL 服务是否运行正常。你可以通过服务管理器或系统服务命令来检查服务状态。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        网络连接
+       </strong>
+       ：确保你的网络连接通畅，特别是在尝试连接远程数据库时。网络问题可能会导致连接失败。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        凭据检查
+       </strong>
+       ：如果连接失败，检查提供的用户名、密码和数据库名是否正确。错误的凭据会导致连接被拒绝。
+      </p>
+     </li>
+    </ol>
+    <blockquote>
+     <p>
+      觉得有用的话点个赞
+      <code>
+       👍🏻
+      </code>
+      呗。
+      <br/>
+      ❤️❤️❤️本人水平有限，如有纰漏，欢迎各位大佬评论批评指正！😄😄😄
+     </p>
+     <p>
+      💘💘💘如果觉得这篇文对你有帮助的话，也请给个点赞、收藏下吧，非常感谢!👍 👍 👍
+     </p>
+     <p>
+      🔥🔥🔥Stay Hungry Stay Foolish 道阻且长,行则将至,让我们一起加油吧！🌙🌙🌙
+     </p>
+     <p>
+      <img alt="img" src="https://img-blog.csdnimg.cn/img_convert/a08571f736dc04b5bef51cd09e8e3a0a.gif#pic_center"/>
+     </p>
+    </blockquote>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

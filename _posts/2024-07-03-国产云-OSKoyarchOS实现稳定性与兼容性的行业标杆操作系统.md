@@ -1,0 +1,788 @@
+---
+layout: post
+title: 国产云-OSKoyarchOS实现稳定性与兼容性的行业标杆操作系统
+date: 2024-07-03 21:06:37 +0800
+categories: [02OS]
+tags: [系统架构,操作系统,云计算]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=133824119
+    alt: 国产云-OSKoyarchOS实现稳定性与兼容性的行业标杆操作系统
+artid: 133824119
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【国产云 OS】KoyarchOS：实现稳定性与兼容性的行业标杆操作系统
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-dracula" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <a href="#_4" rel="nofollow">
+          一、前言
+         </a>
+        </li>
+        <li>
+         <a href="#CentOS__13" rel="nofollow">
+          二、CentOS 谢幕、国内操作系统崛起
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#21_CentOS__17" rel="nofollow">
+            2.1 CentOS 的前世今生
+           </a>
+          </li>
+          <li>
+           <a href="#22__33" rel="nofollow">
+            2.2 创新操作系统崛起
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#_KeyarchOS__58" rel="nofollow">
+          三、浪潮信息 KeyarchOS 操作系统
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#31__KeyarchOS__61" rel="nofollow">
+            3.1 认识 KeyarchOS 操作系统
+           </a>
+          </li>
+          <li>
+           <a href="#32_KeyarchOS__82" rel="nofollow">
+            3.2 KeyarchOS 产品优势
+           </a>
+          </li>
+          <li>
+           <ul>
+            <li>
+             <a href="#321__85" rel="nofollow">
+              3.2.1 稳定可靠
+             </a>
+            </li>
+            <li>
+             <a href="#322__91" rel="nofollow">
+              3.2.2 广泛兼容
+             </a>
+            </li>
+            <li>
+             <a href="#323__97" rel="nofollow">
+              3.2.3 平滑迁移
+             </a>
+            </li>
+            <li>
+             <a href="#324__103" rel="nofollow">
+              3.2.4 场景增强
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#33_KeyarchOS__110" rel="nofollow">
+            3.3 KeyarchOS 支持多场景优化，确保行业业务稳定运行
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#_120" rel="nofollow">
+          四、兼容性案例及兼容性迁移案例
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#41_x86_KeyarchOS__134" rel="nofollow">
+            4.1 在`x86`架构系统中做原地 KeyarchOS 迁移
+           </a>
+          </li>
+          <li>
+           <ul>
+            <li>
+             <a href="#411__138" rel="nofollow">
+              4.1.1 查看目标源机器的信息
+             </a>
+            </li>
+            <li>
+             <a href="#412__X2Keyarch__187" rel="nofollow">
+              4.1.2 向目标源机器传输 X2Keyarch 迁移工具
+             </a>
+            </li>
+            <li>
+             <a href="#413__X2Keyarch__192" rel="nofollow">
+              4.1.3 安装 X2Keyarch 迁移工具
+             </a>
+            </li>
+            <li>
+             <a href="#414__X2Keyarch__244" rel="nofollow">
+              4.1.4 使用 X2Keyarch 迁移工具进行迁移
+             </a>
+            </li>
+            <li>
+             <a href="#415__274" rel="nofollow">
+              4.1.5 验证迁移结果
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#42__KeyarchOS__301" rel="nofollow">
+            4.2 在 KeyarchOS 系统中，安装主流数据库软件
+           </a>
+          </li>
+          <li>
+           <ul>
+            <li>
+             <a href="#421__KeyarchOS__mariadb_308" rel="nofollow">
+              4.2.1 清理 KeyarchOS 中的 mariadb
+             </a>
+            </li>
+            <li>
+             <a href="#422_yum__MySQL_332" rel="nofollow">
+              4.2.2 yum 安装 MySQL
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#_357" rel="nofollow">
+          五、文末总结
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h3>
+     <a id="_4">
+     </a>
+     一、前言
+    </h3>
+    <p>
+     2020 年 12 月 08 日，CentOS 官方宣布了停止维护 CentOS 7 和 CentOS Linux 8 的计划。这一决定在整个行业引起了巨大的震动。具体信息，请阅读 CentOS 官方公告（
+     <a href="https://blog.centos.org/2020/12/future-is-centos-stream/" rel="nofollow">
+      点击这里
+     </a>
+     ）。
+    </p>
+    <p>
+     长期以来，Linux 一直是服务器操作系统市场的主要支柱。然而，CentOS 发行版生命周期的意外改变不仅迫使许多行业用户重新思考他们应该选择什么替代方案，还加速了服务器操作系统市场的变革进程。
+    </p>
+    <p>
+     在这样的背景下，今天本博主将介绍又一个操作系统的重量级产品 ——
+     <code>
+      浪潮信息 KeyarchOS
+     </code>
+     操作系统。
+    </p>
+    <h3>
+     <a id="CentOS__13">
+     </a>
+     二、CentOS 谢幕、国内操作系统崛起
+    </h3>
+    <p>
+     要说起 Linux 操作系统，版本可谓称得上五花八门，种类超级的多，这里因为篇幅问题，对各大类 Linux 版本不做过多介绍，但是因为涉及到 CentOS、RHEL、以及各操作系统，这里会简单介绍 RHEL 基线所关联的 CentOS 相关的一些介绍，如果您对此处的知识已经足够清晰了解，可以跳过此节，直接阅读后续内容。
+    </p>
+    <h4>
+     <a id="21_CentOS__17">
+     </a>
+     2.1 CentOS 的前世今生
+    </h4>
+    <p>
+     CentOS 发展历史可追溯到 2003 年，当时 Fedora 项目成立，由 Red Hat Linux 和 Fedora Linux 合并而成，得到红帽公司的赞助。在 2004 年，红帽公司发布了商业 Linux 发行版本 RHEL，使用 Fedora 作为上游，但发布周期更长。同时，CentOS 项目也在同年成立，作为一个社区支持的发行版本，使用 RHEL 作为上游开发项目，与 RHEL 不同，CentOS 完全开源，更新相对较慢但更稳定。
+    </p>
+    <p>
+     然而，2014 年发生了变故，红帽公司收购了 CentOS，拥有了 CentOS 项目商标和核心开发人员的所有权。此后，红帽公司管理三个主要 Linux 发行版产品线：Fedora、RHEL 和 CentOS。Fedora 作为实验版本，CentOS Linux 为去商标版本的免费 RHEL。
+    </p>
+    <p>
+     在 2019 年，CentOS 团队与红帽合作推出了 CentOS Stream，一个介于 Fedora 和 RHEL 之间的滚动版本。CentOS Stream 的目标是通过发布多个小版本，以社区的力量帮助 RHEL 更快、更稳定地发布版本。然而，到了 2020 年末，官方宣布将不再维护 CentOS，这一决定引起了广泛关注和讨论，到此大家也就知道后面的事情了。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/dc7e3f7db00dc1659f9d7a25f827e09d.png"/>
+    </p>
+    <p>
+     在上述的历史中，还有一个引人注目的插曲发生在2018年10月29日。当时，我的前雇主 IBM 宣布以 340 亿美元的天价收购红帽公司。这一收购事件背后可能存在一些商业战略的考虑。
+    </p>
+    <p>
+     可以大胆推测，其中一部分原因是 IBM 感受到自家产品（CentOS）对红帽旗下的 REHL 构成了竞争压力。这种竞争局面可能导致了对 REHL 业务的直接影响，最终引发了停止支持 CentOS 的决定。这样的商业动态不仅呼应了公司战略调整的可能性，也突显了在竞争激烈的科技行业中，企业不断调整自身定位以适应市场需求的不断变化。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/72c45d97b1bc8a3a8e5b87c6923c8920.png"/>
+    </p>
+    <h4>
+     <a id="22__33">
+     </a>
+     2.2 创新操作系统崛起
+    </h4>
+    <p>
+     就在红帽公司宣布CentOS社区版停服前后，市场出现了两家开源操作系统上游社区：
+    </p>
+    <ul>
+     <li>
+      <strong>
+       OpenAnolis（龙蜥）
+      </strong>
+      <br/>
+      OpenAnolis 成立于 2020年9月，是由阿里云公司、统信软件、浪潮信息、主流芯片厂商等联合发起成立理事会。
+     </li>
+     <li>
+      <strong>
+       OpenEuler（欧拉）
+      </strong>
+      <br/>
+      OpenEuler 成立于2019年9月，是由华为公司、麒麟、中科院软件所、三大运营商和百度公司等联合组建理事会。
+     </li>
+    </ul>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9d3577e8c94e37949fe4fffa709d775b.png"/>
+    </p>
+    <p>
+     随着时代的进步，云计算的蓬勃发展推动了计算产业的迅速升级，服务器操作系统不再受限于物理服务器层面，市场范围不断拓展。新技术如人工智能、大数据和云计算对操作系统提出了更高的灵活性和智能化要求。
+    </p>
+    <p>
+     就在 2023年11月1日 开放数据中心委员会制定了《
+     <strong>
+      国产服务器操作系统发展报告（2023年）
+     </strong>
+     》
+    </p>
+    <p>
+     根据报告，国内已经涌现出多个成熟的国产服务器操作系统，整个产业正迎来2.0时代，迎头赶上云计算、智能计算等前沿领域。其中，龙蜥操作系统以其卓越的兼容性、出色的产品性能和技术实力脱颖而出。实际应用中，龙蜥操作系统得到了广泛用户认可，成为国产操作系统的典范。
+    </p>
+    <p>
+     最近的信通院用户调研显示，国内服务器操作系统逐渐成为各行业替代的首选，而在用户意愿迁移系统方面，
+     <strong>
+      龙蜥操作系统更是位居榜首
+     </strong>
+     。这表明国产操作系统在用户眼中已经成为一种可靠的选择，为各行业提供了可靠的替代方案。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/85f3f672ee29a6bcd43b7d2561560f34.png"/>
+    </p>
+    <h3>
+     <a id="_KeyarchOS__58">
+     </a>
+     三、浪潮信息 KeyarchOS 操作系统
+    </h3>
+    <h4>
+     <a id="31__KeyarchOS__61">
+     </a>
+     3.1 认识 KeyarchOS 操作系统
+    </h4>
+    <p>
+     近年来，国产基础软件取得了显著进展。特别是操作系统，作为数字基础设施的核心组成部分，已成为推动产业数字化和智能化发展的不可或缺的支撑力量，引发了广泛期待。然而，值得注意的是，2022 年国产化率仅为
+     <code>
+      4.7%
+     </code>
+     ，预计 2023 年国产化率将达
+     <code>
+      5.1%
+     </code>
+     ，可以说是在操作系统领域，国产化率非常低。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f6c9aa552da7a6de7add78521d0bcb09.png"/>
+    </p>
+    <p>
+     在现在的时代大背景下，浪潮信息为了让更多行业和个人能够广泛采用出色的国产操作系统，推出了浪潮信息服务器操作系统——云峦 KeyarchOS。
+    </p>
+    <p>
+     KeyarchOS 是浪潮信息基于 Linux Kernel、OpenAnolis 等开源技术自主研发的一款服务器操作系统，支持 x86、ARM 等主流架构处理器，性能和稳定性居于行业领先地位，具备成熟的 CentOS 迁移和替换能力，可满足云计算、大数据、分布式存储、人工智能、边缘计算等应用场景需求。
+    </p>
+    <p>
+     浪潮信息自主研发的服务器操作系统的历史可以追溯至 2008年，最初以产品名 K-UX 为主要服务关键应用主机 K1。在过去十余年里，K-UX持续进行迭代和演进，从最初的安腾架构逐步拓展到 x86、Power 以及 ARM 架构。K-UX 专注于关键应用主机，同时支持 Power 架构。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/6eaefb45b0d7f8d6f938c06e28b431f8.png"/>
+    </p>
+    <h4>
+     <a id="32_KeyarchOS__82">
+     </a>
+     3.2 KeyarchOS 产品优势
+    </h4>
+    <h5>
+     <a id="321__85">
+     </a>
+     3.2.1 稳定可靠
+    </h5>
+    <ul>
+     <li>
+      KeyarchOS 具备稳定可靠、高效软硬件协同、全天候运维、安全可信等特性，增强了对云计算、人工智能等场景的支持，性能稳定性领先，生态完善，符合金融、能源、交通、通信、教育、医疗等关键行业的应用要求。
+     </li>
+     <li>
+      极端情况可恢复，针对断电、断网、硬件故障等情况设计 400 多项用户，用于验证并完善产品的可靠性，LTP 7*24 小时高负荷无宕机。
+     </li>
+     <li>
+      在服务器操作系统领域，从最早的 KUX 开始，浪潮信息已经有 10 余年的研发和技术经验，相关产品在关键行业广泛应用，累计超 20 万台。
+     </li>
+    </ul>
+    <h5>
+     <a id="322__91">
+     </a>
+     3.2.2 广泛兼容
+    </h5>
+    <ul>
+     <li>
+      支持350+主流CPU、GPU、FPGA、网卡、服务器、网络设备兼容认证。
+     </li>
+     <li>
+      支持主流数据库、中间件、虚拟化、容器、云平台、办公软件兼容认证全覆盖。
+     </li>
+     <li>
+      继承了龙蜥社区的生态，实现全产业链生态覆盖。
+     </li>
+    </ul>
+    <h5>
+     <a id="323__97">
+     </a>
+     3.2.3 平滑迁移
+    </h5>
+    <ul>
+     <li>
+      提供 CentOS到 KeyarchOS的迁移工具，实现原系统及应用向 KeyarchOS的平滑迁移，迁移过程自动化率达95%。
+     </li>
+     <li>
+      可以实现基于专家规则的自动化运维与诊断，以及面向不同应用场景的一键式性能优化。
+     </li>
+     <li>
+      依托 ISPIM 深度监控与管理从底层芯片、部件、整机系统到软件的全方位运行情况；支持无缝接入浪潮信息 InService 云端运维服务，实现运维远程托管。
+     </li>
+    </ul>
+    <h5>
+     <a id="324__103">
+     </a>
+     3.2.4 场景增强
+    </h5>
+    <ul>
+     <li>
+      简化 GPU、AIPU 使用，大幅提升 AI 开发效率。
+     </li>
+     <li>
+      支持基于 DPU 的高性能虚拟化网络、存储，性能提升10倍。
+     </li>
+     <li>
+      容器密度提升 10%、网络性能最高提升 300%。
+     </li>
+    </ul>
+    <h4>
+     <a id="33_KeyarchOS__110">
+     </a>
+     3.3 KeyarchOS 支持多场景优化，确保行业业务稳定运行
+    </h4>
+    <p>
+     另一方面，我们的 KeyarchOS 主要定位于通用服务器操作系统，除了上述我们提到的广泛支持 x86 和 ARM 架构外，KeyarchOS 提供多场景优化解决方案且支撑多行业业务稳定运行。
+    </p>
+    <p>
+     在行业领域，广泛支持：医疗、教育、能源、通信及金融等众多行业。
+     <br/>
+     在支持场景方面，拥有多场景的优化解决方案，其中包括但不限于办公OA、安全、数据库、DevOps、高性能及量化交易等场景。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/74d8506be0c3e1c2e41d4d34a1cb444c.png"/>
+    </p>
+    <h3>
+     <a id="_120">
+     </a>
+     四、兼容性案例及兼容性迁移案例
+    </h3>
+    <p>
+     KeyarchOS 展现了强大的兼容性，支持超过350种主流 CPU、GPU、FPGA、网卡、服务器、网络设备，并通过认证确保了良好的兼容性。不仅如此，它还实现了对主流数据库、中间件、虚拟化、容器、云平台、办公软件的全覆盖兼容认证，为用户提供了更广泛的选择空间。
+    </p>
+    <p>
+     这个操作系统不仅是技术的融合，更是生态的延伸。借鉴并继承了龙蜥社区的生态，KeyarchOS 在全产业链上建立了强大的生态系统，为用户提供了全方位的支持，使其能够适应多变的业务需求。这种全面而深入的生态覆盖确保了 KeyarchOS 在行业中能够稳定运行，成为一个值得信赖的多场景优化解决方案。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/95a2f46e07cebbc9ea2f897fe5a1a608.png"/>
+    </p>
+    <p>
+     下面针对兼容性，提供两个案例来尝试体验 KeyarchOS 的兼容性。两个例子的主要内容是：
+    </p>
+    <ol>
+     <li>
+      在
+      <code>
+       x86
+      </code>
+      架构系统中，做 KeyarchOS 原地迁移，查看是否能够将原 CentOS 成功迁移成 KeyarchOS
+     </li>
+     <li>
+      在 KeyarchOS 系统中，安装主流数据库软件，查看主流数据库软件是否能够正常运行
+     </li>
+    </ol>
+    <h4>
+     <a id="41_x86_KeyarchOS__134">
+     </a>
+     4.1 在
+     <code>
+      x86
+     </code>
+     架构系统中做原地 KeyarchOS 迁移
+    </h4>
+    <p>
+     KeyarchOS 迁移方案同步推出可视化迁移工具
+     <code>
+      X2Keyarch
+     </code>
+     ，该工具具备迁移风险评估，硬件兼容性评估、应用评估、系统配置评估等功能，其原地升级技术将存量 CentOS 系统批量升级至 KeyarchOS 操作系统，升级后系统参数无需重新配置，大大提高了迁移效率，降低了客户的迁移成本。
+    </p>
+    <h5>
+     <a id="411__138">
+     </a>
+     4.1.1 查看目标源机器的信息
+    </h5>
+    <p>
+     目标源机器是一台阿里云上的 CentOS 服务器，现在预讲其升级成 KeyarchOS，现在先查看其机器信息，直接使用下面命令查看
+    </p>
+    <pre><code class="prism language-bash">lscpu
+</code></pre>
+    <p>
+     在目标源机器执行上述命令后得到的信息：
+    </p>
+    <pre><code>
+[root@aliyun-bluetata-hub-01 ~]# lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum
+Stepping:              4
+CPU MHz:               2500.002
+BogoMIPS:              5000.00
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              33792K
+NUMA node0 CPU(s):     0,1
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single rsb_ctxsw fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat
+[root@aliyun-bluetata-hub-01 ~]#
+</code></pre>
+    <p>
+     从得到的信息中可以看出，这是一台
+     <code>
+      x86_64
+     </code>
+     的机器。
+    </p>
+    <p>
+     执行下面命令进行查看源机器操作系统版本
+    </p>
+    <pre><code class="prism language-bash"><span class="token function">cat</span> /etc/os-release
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/01b01ae4738349a91f7a39f11a093f86.png"/>
+    </p>
+    <h5>
+     <a id="412__X2Keyarch__187">
+     </a>
+     4.1.2 向目标源机器传输 X2Keyarch 迁移工具
+    </h5>
+    <p>
+     推荐使用 WinsSCP 或者 filemozila，直接将工具移动到服务器中。这里步骤直接跳过，上传到服务器后，查看文件位置如下图所示
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9f64ce30efe6a7d578a691559776898f.png"/>
+    </p>
+    <h5>
+     <a id="413__X2Keyarch__192">
+     </a>
+     4.1.3 安装 X2Keyarch 迁移工具
+    </h5>
+    <p>
+     <strong>
+      步骤1：安装 X2Keyarch
+     </strong>
+    </p>
+    <p>
+     直接使用如下命令进行安装即可
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">609428</span>
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">624046996</span> Nov <span class="token number">13</span> 02:36 X2Keyarch-2.1-1.kos5.x86_64.rpm
+<span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment">#</span>
+<span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment"># rpm -ivh X2Keyarch-2.1-1.kos5.x86_64.rpm</span>
+Preparing<span class="token punctuation">..</span>.                          <span class="token comment">################################# [100%]</span>
+Updating / installing<span class="token punctuation">..</span>.
+   <span class="token number">1</span>:X2Keyarch-2.1-1.kos5                 <span class="token comment">################################# [100%]</span>
+/usr/local/x2keyarch/server /
+virtualenv/
+virtualenv/include/
+<span class="token punctuation">..</span>.
+</code></pre>
+    <p>
+     安装效果如图所示：
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/4b693d8536d7a9d769e5299b8b8d1881.png"/>
+    </p>
+    <p>
+     <strong>
+      步骤2：关闭防火墙或打开80端口
+     </strong>
+    </p>
+    <p>
+     如果是打开端口执行下面命令
+    </p>
+    <pre><code class="prism language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">SERVER_PORT</span><span class="token operator">=</span><span class="token number">80</span>
+</code></pre>
+    <p>
+     如果想要直接关闭防火墙，可以直接使用：
+    </p>
+    <pre><code class="prism language-bash">systemctl stop firewalld
+</code></pre>
+    <p>
+     <strong>
+      步骤3：启动 X2Keyarch
+     </strong>
+    </p>
+    <p>
+     执行下面命令，启动 X2Keyarch
+    </p>
+    <pre><code class="prism language-bash"><span class="token function">bash</span> <span class="token parameter variable">-x</span> /usr/local/x2keyarch/init_scripts/server/init.sh
+</code></pre>
+    <blockquote>
+     <p>
+      此步骤可能会等待数分钟
+     </p>
+    </blockquote>
+    <p>
+     当服务日志输出下列日志表示部署成功：
+    </p>
+    <h5>
+     <a id="414__X2Keyarch__244">
+     </a>
+     4.1.4 使用 X2Keyarch 迁移工具进行迁移
+    </h5>
+    <p>
+     <strong>
+      步骤1：访问和登陆 X2Keyarch
+     </strong>
+    </p>
+    <p>
+     打开本地PC机的浏览器，在地址栏输⼊
+     <code>
+      https://部署服务器的ip
+     </code>
+     （例如：https://10.18.18.18）
+    </p>
+    <p>
+     打开登录界面，如图所示，默认用户名和密码为
+     <code>
+      admin/123456a?
+     </code>
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/540c715c0f6da1301473fc2ed1e5a4b2.png"/>
+    </p>
+    <p>
+     <strong>
+      步骤2：创建集群导入主机
+     </strong>
+    </p>
+    <p>
+     进入“主机管理”菜单，下拉菜单中选择点击”集群列表“进入“集群管理”页面。点击“新建集群”打开新建集群弹出框，输入相应的参数，之后点确定后，进入主机列表页面。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/72dbc83516fd33b030cf8f386b37960f.png"/>
+    </p>
+    <p>
+     <strong>
+      步骤3：进行迁移前评估
+     </strong>
+    </p>
+    <p>
+     在迁移评估页面，直接点击开始评估按钮，进行迁移前的评估
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/9dcd278e39cb7892f7d84694774e77bc.png"/>
+    </p>
+    <p>
+     <strong>
+      步骤4：批量迁移
+     </strong>
+    </p>
+    <p>
+     点击批量实施按钮后，输入相应信息进行等待迁移
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/ad1faa543cc7b7feada754bfd848fc95.png"/>
+    </p>
+    <p>
+     在新弹窗页面选择所要迁移的主机，以及目标的 KeyarchOS 系统版本后，点击确定，等待迁移完成
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/8db6e86275a0cc30f0922c688f7417c5.png"/>
+    </p>
+    <h5>
+     <a id="415__274">
+     </a>
+     4.1.5 验证迁移结果
+    </h5>
+    <p>
+     直接使用命令查看系统迁移后的版本
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment"># uname -r</span>
+<span class="token number">4.19</span>.91-26.6.8.kos5.x86_64
+<span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment">#</span>
+<span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment"># cat /etc/os-release</span>
+<span class="token assign-left variable">NAME</span><span class="token operator">=</span><span class="token string">"kos"</span>
+<span class="token assign-left variable">VERSION</span><span class="token operator">=</span><span class="token string">"5.8"</span>
+<span class="token assign-left variable">ID</span><span class="token operator">=</span><span class="token string">"kos"</span>
+<span class="token assign-left variable">ID_LIKE</span><span class="token operator">=</span><span class="token string">"anolis rhel fedora centos"</span>
+<span class="token assign-left variable">VERSION_ID</span><span class="token operator">=</span><span class="token string">"5.8"</span>
+<span class="token assign-left variable">PLATFORM_ID</span><span class="token operator">=</span><span class="token string">"platform:an8"</span>
+<span class="token assign-left variable">PRETTY_NAME</span><span class="token operator">=</span><span class="token string">"kos 5.8"</span>
+<span class="token assign-left variable">ANSI_COLOR</span><span class="token operator">=</span><span class="token string">"0;31"</span>
+<span class="token assign-left variable">HOME_URL</span><span class="token operator">=</span><span class="token string">"https://openanolis.cn/"</span>
+</code></pre>
+    <p>
+     执行结果如下图：
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/dd350a3ca5c396d823ec96899517aeb9.png"/>
+    </p>
+    <p>
+     到此处为止，我们成功的讲 X86 版本的 CentOS 升级成为 KeyarchOS，可以看出，KeyarchOS可以兼容 X86 架构的 CentOS7。
+    </p>
+    <h4>
+     <a id="42__KeyarchOS__301">
+     </a>
+     4.2 在 KeyarchOS 系统中，安装主流数据库软件
+    </h4>
+    <p>
+     为了进一步验证 KeyarchOS 的兼容性，这里在我们之前迁移好的 KeyarchOS 5 中直接安装 MySQL，之后验证安装后的 MySQL 是否可以正常运行使用，近一步查看 KeyarchOS 是否能够兼容主流的数据库软件。
+    </p>
+    <p>
+     因为这里是演示测试用，而非生产环境，我们直接使用 yum 进行默认安装。
+    </p>
+    <h5>
+     <a id="421__KeyarchOS__mariadb_308">
+     </a>
+     4.2.1 清理 KeyarchOS 中的 mariadb
+    </h5>
+    <p>
+     注意：如果是你使用的 X2Keyarch 进行的迁移，那么会在你的系统中安装 mariadb，这样会导致你无法直接安装 MySQL，可以参看下面的命令提示，这样需要你手动先清理本机的 mariadb。
+    </p>
+    <blockquote>
+     <p>
+      保证已经完成迁移 KeyarchOS，之后 X2Keyarch 不再使用后，在清理 mariadb。
+     </p>
+    </blockquote>
+    <pre><code class="prism language-bash"><span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 data<span class="token punctuation">]</span><span class="token comment"># yum -y install mysql</span>
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Package <span class="token number">1</span>:mariadb-5.5.68-1.el7.x86_64 already installed and latest version
+Nothing to <span class="token keyword">do</span>
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/2b2a9769e7e426389a1d31390044eb8b.png"/>
+    </p>
+    <p>
+     清理 KeyarchOS 系统所安装的 mariadb，直接使用下面的命令：
+    </p>
+    <pre><code class="prism language-bash"><span class="token function">sudo</span> yum remove <span class="token parameter variable">-y</span>  mariadb *
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/f8e777b0297d961749d24d4b3e7cf3ae.png"/>
+    </p>
+    <p>
+     完成清理残余的 mariadb 后，才可以重新安装 MySQL 数据库
+    </p>
+    <h5>
+     <a id="422_yum__MySQL_332">
+     </a>
+     4.2.2 yum 安装 MySQL
+    </h5>
+    <p>
+     因为 CentOS 在默认使用 yum 的时候大概率会安装 mariadb，所以这里测试也使用 mariadb 进行测试。
+    </p>
+    <p>
+     直接使用命令安装 mariadb 服务器端
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 ~<span class="token punctuation">]</span><span class="token comment"># yum install -y mariadb-server</span>
+</code></pre>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/fad728f9c6554047a0fec52c77f46f20.png"/>
+    </p>
+    <p>
+     安装完后使用命令启动 mariadb，并好看其运行状态是否正常
+    </p>
+    <pre><code class="prism language-bash"><span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 ~<span class="token punctuation">]</span><span class="token comment"># systemctl start mariadb</span>
+<span class="token punctuation">[</span>root@aliyun-bluetata-hub-01 ~<span class="token punctuation">]</span><span class="token comment"># systemctl status mariadb</span>
+</code></pre>
+    <p>
+     运行状态如下图所示：
+    </p>
+    <p>
+     从状态来看，我们在浪潮 KeyarchOS 操作系统上，直接安装主流数据库也是没有问题的。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/b32374425dd5556084f449bf17c8795d.png"/>
+    </p>
+    <h3>
+     <a id="_357">
+     </a>
+     五、文末总结
+    </h3>
+    <p>
+     在全文介绍了 CentOS 的过往和创新操作系统的兴起之后，本文深入探讨了浪潮的 KeyarchOS 操作系统。我们深入了解了这一操作系统的特点和优势，包括其稳定可靠、广泛兼容、平滑迁移和场景增强等方面。KeyarchOS 不仅是一个技术创新，更是对生态的延伸和发展，支持多场景优化，确保行业业务的稳定运行。
+    </p>
+    <p>
+     兼容性案例和兼容性迁移案例为读者提供了在不同场景下应用 KeyarchOS 的指南和方法。我们介绍了在
+     <code>
+      x86
+     </code>
+     架构系统中进行原地KeyarchOS 迁移的步骤，并详细阐述了在 KeyarchOS 系统中安装主流数据库软件的过程。
+    </p>
+    <p>
+     KeyarchOS 的全面兼容性和稳定性，以及其对行业业务的持续支持，使其成为当今可靠的多场景优化解决方案。这篇文章为读者提供了深入了解和使用 KeyarchOS 的指南，希望能够为业界带来更多的价值和便利。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

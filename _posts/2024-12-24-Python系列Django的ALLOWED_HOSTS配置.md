@@ -1,0 +1,337 @@
+---
+layout: post
+title: Python系列Django的ALLOWED_HOSTS配置
+date: 2024-12-24 15:16:36 +0800
+categories: [s1Python]
+tags: [开发语言,python,django]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=139455789
+    alt: Python系列Django的ALLOWED_HOSTS配置
+artid: 139455789
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【Python系列】Django的ALLOWED_HOSTS配置
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <blockquote>
+     <p>
+      💝💝💝欢迎来到我的博客，很高兴能够在这里和您见面！希望您在这里可以感受到一份轻松愉快的氛围，不仅可以获得有趣的内容和知识，也可以畅所欲言、分享您的想法和见解。
+      <br/>
+      <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/5b7d56665d406fee3159289ac61fa974.jpeg#pic_center"/>
+     </p>
+     <ul>
+      <li>
+       推荐:
+       <a href="https://qinyingjie.blog.csdn.net/?type=blog" rel="nofollow">
+        kwan 的首页
+       </a>
+       ,持续学习,不断总结,共同进步,活到老学到老
+      </li>
+      <li>
+       导航
+       <ul>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11763029.html">
+          檀越剑指大厂系列
+         </a>
+         :全面总结 java 核心技术点,如集合,jvm,并发编程 redis,kafka,Spring,微服务,Netty 等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474211.html">
+          常用开发工具系列
+         </a>
+         :罗列常用的开发工具,如 IDEA,Mac,Alfred,electerm,Git,typora,apifox 等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474265.html">
+          数据库系列
+         </a>
+         :详细总结了常用数据库 mysql 技术点,以及工作中遇到的 mysql 问题等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_7540627.html">
+          懒人运维系列
+         </a>
+         :总结好用的命令,解放双手不香吗?能用一个命令完成绝不用两个操作
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11480075.html">
+          数据结构与算法系列
+         </a>
+         :总结数据结构和算法,不同类型针对性训练,提升编程思维,剑指大厂
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      非常期待和您一起在这个小小的网络世界里共同探索、学习和成长。💝💝💝 ✨✨ 欢迎订阅本专栏 ✨✨
+     </p>
+    </blockquote>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      博客目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <ul>
+          <li>
+           <a href="#1_15" rel="nofollow">
+            1.问题描述
+           </a>
+          </li>
+          <li>
+           <a href="#2_20" rel="nofollow">
+            2.解决方案
+           </a>
+          </li>
+          <li>
+           <a href="#3_24" rel="nofollow">
+            3.操作步骤
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h4>
+     <a id="1_15">
+     </a>
+     1.问题描述
+    </h4>
+    <p>
+     Django 抛出的
+     <code>
+      DisallowedHost
+     </code>
+     错误表明你的应用尝试访问一个主机名，但该主机名没有被包含在 Django 设置中的
+     <code>
+      ALLOWED_HOSTS
+     </code>
+     列表里。Django 出于安全考虑，默认只允许本地主机名（
+     <code>
+      localhost
+     </code>
+     和
+     <code>
+      127.0.0.1
+     </code>
+     ）。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/69971362de2653e6d4206e81013d1bb8.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="2_20">
+     </a>
+     2.解决方案
+    </h4>
+    <p>
+     要解决这个问题，你需要将你的服务器的公网 IP 地址
+     <code>
+      '47.104.164.9'
+     </code>
+     添加到
+     <code>
+      ALLOWED_HOSTS
+     </code>
+     列表中。
+    </p>
+    <h4>
+     <a id="3_24">
+     </a>
+     3.操作步骤
+    </h4>
+    <p>
+     以下是你需要做的步骤：
+    </p>
+    <ol>
+     <li>
+      <p>
+       <strong>
+        编辑 Django 设置文件
+       </strong>
+       (
+       <code>
+        settings.py
+       </code>
+       )。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        添加 IP 到
+        <code>
+         ALLOWED_HOSTS
+        </code>
+       </strong>
+       ：
+       <br/>
+       找到
+       <code>
+        ALLOWED_HOSTS
+       </code>
+       设置，然后添加你的公网 IP 地址。例如：
+      </p>
+      <pre><code class="prism language-python">ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'47.104.164.8'</span><span class="token punctuation">,</span>
+    <span class="token comment"># 其他允许的主机名...</span>
+<span class="token punctuation">]</span>
+</code></pre>
+     </li>
+     <li>
+      <p>
+       <strong>
+        保存设置文件
+       </strong>
+       。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        重启 Django 服务器
+       </strong>
+       ：
+       <br/>
+       保存更改后，你需要重启 Django 服务器以使更改生效。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        检查网络安全设置
+       </strong>
+       ：
+       <br/>
+       确保服务器的防火墙或网络安全组允许从外部网络访问 8000 端口。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        使用正确的 URL 访问
+       </strong>
+       ：
+       <br/>
+       如果你的服务器使用默认的 8000 端口，你可以尝试直接使用 IP 地址访问，而不需要在 IP 地址后面加上端口号，例如
+       <code>
+        http://47.104.164.8/
+       </code>
+       。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        考虑使用域名
+       </strong>
+       ：
+       <br/>
+       出于安全和方便的考虑，建议为你的服务器配置一个域名，并将该域名添加到
+       <code>
+        ALLOWED_HOSTS
+       </code>
+       。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        检查代理设置
+       </strong>
+       ：
+       <br/>
+       如果你的 Django 应用位于像 Nginx 或 Apache 这样的反向代理后面，你可能需要设置
+       <code>
+        X-Forwarded-Host
+       </code>
+       头部，并在 Django 中配置以正确处理它。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        调试
+       </strong>
+       ：
+       <br/>
+       如果更改
+       <code>
+        ALLOWED_HOSTS
+       </code>
+       后问题仍然存在，检查 Django 的日志文件以获取更多信息。
+       <br/>
+       <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/ca61cd406d04f6d5d47155cf90a39d49.png#pic_center"/>
+      </p>
+     </li>
+    </ol>
+    <p>
+     请注意，将
+     <code>
+      DEBUG
+     </code>
+     设置为
+     <code>
+      True
+     </code>
+     会允许 Django 显示详细的错误页面，这对于开发很有帮助，但在生产环境中应该将其设置为
+     <code>
+      False
+     </code>
+     以避免安全风险。同时，确保你的生产服务器使用专业的 WSGI 服务器，如 Gunicorn，而不是 Django 的开发服务器。
+    </p>
+    <blockquote>
+     <p>
+      觉得有用的话点个赞
+      <code>
+       👍🏻
+      </code>
+      呗。
+      <br/>
+      ❤️❤️❤️本人水平有限，如有纰漏，欢迎各位大佬评论批评指正！😄😄😄
+     </p>
+     <p>
+      💘💘💘如果觉得这篇文对你有帮助的话，也请给个点赞、收藏下吧，非常感谢!👍 👍 👍
+     </p>
+     <p>
+      🔥🔥🔥Stay Hungry Stay Foolish 道阻且长,行则将至,让我们一起加油吧！🌙🌙🌙
+     </p>
+     <p>
+      <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/101469850485989da7dda6f53e80e19d.gif#pic_center"/>
+     </p>
+    </blockquote>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

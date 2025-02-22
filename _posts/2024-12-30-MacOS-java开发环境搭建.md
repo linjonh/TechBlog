@@ -1,0 +1,257 @@
+---
+layout: post
+title: MacOS-java开发环境搭建
+date: 2024-12-30 15:43:59 +0800
+categories: [开发语言]
+tags: [开发语言,macos,java]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=133774985
+    alt: MacOS-java开发环境搭建
+artid: 133774985
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     MacOS java开发环境搭建
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-dracula" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      Mac版Java开发环境搭建
+     </h4>
+     <ul>
+      <li>
+       <a href="#JDK_1" rel="nofollow">
+        JDK安装
+       </a>
+      </li>
+      <li>
+       <ul>
+        <li>
+         <a href="#_jdk_2" rel="nofollow">
+          一. 下载jdk
+         </a>
+        </li>
+        <li>
+         <a href="#__7" rel="nofollow">
+          二. 配置环境变量
+         </a>
+        </li>
+        <li>
+         <ul>
+          <li>
+           <a href="#1_Shell_11" rel="nofollow">
+            1. 查看系统所使用的Shell类型
+           </a>
+          </li>
+          <li>
+           <a href="#2__16" rel="nofollow">
+            2. 创建配置文件
+           </a>
+          </li>
+          <li>
+           <a href="#3__24" rel="nofollow">
+            3. 修改配置文件
+           </a>
+          </li>
+          <li>
+           <a href="#4_java_31" rel="nofollow">
+            4. 不同java版本之间的切换
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#_Java_34" rel="nofollow">
+          三. 卸载Java版本
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h2>
+     <a id="JDK_1">
+     </a>
+     JDK安装
+    </h2>
+    <h3>
+     <a id="_jdk_2">
+     </a>
+     一. 下载jdk
+    </h3>
+    <p>
+     <a href="https://www.oracle.com/java/technologies/downloads/" rel="nofollow">
+      官网
+     </a>
+     下载所需要的版本，本次我们下载的是
+     <strong>
+      Java8
+     </strong>
+     ，所以触控板往下滑动到Java8的下载：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/ee4bbe05ce0a6c0affdade9e8257bdf9.png">
+      <br/>
+      下载后双击点开安装即可，之后返回桌面推出：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c573038ad22930949025800e00d0a57b.png"/>
+     </img>
+    </p>
+    <h3>
+     <a id="__7">
+     </a>
+     二. 配置环境变量
+    </h3>
+    <p>
+     默认情况下macOS版Java8安装目录是
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/1a419e2d7382b8d0620f52cd6839bc75.png">
+      <br/>
+      使用快捷键Command+option+C复制当前路径/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home
+     </img>
+    </p>
+    <h4>
+     <a id="1_Shell_11">
+     </a>
+     1. 查看系统所使用的Shell类型
+    </h4>
+    <p>
+     不同类型的Shell所使用的配置文件不同，例如zsh使用的
+     <strong>
+      .zshrc
+     </strong>
+     ,而bash使用的
+     <strong>
+      .bash_profile
+     </strong>
+     。
+     <br/>
+     使用echo $SHELL 命令查看当前系统所使用的Shell类型
+     <br/>
+     macOS Ventura默认使用的zsh
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/d5ffffcb5af97c9b62bf792d354edff0.png"/>
+    </p>
+    <h4>
+     <a id="2__16">
+     </a>
+     2. 创建配置文件
+    </h4>
+    <p>
+     如果你使用的是bash shell，在用户家目录下创建
+     <strong>
+      .bash_profile
+     </strong>
+     文件
+     <br/>
+     如果你使用的是zsh shell，在用户家目录下创建
+     <strong>
+      .zshrc
+     </strong>
+     文件
+    </p>
+    <p>
+     macOS的用户家目录指的就是/Users/jeff，其中jeff表示用户名，每个系统的用户名不尽相同。
+     <br/>
+     当启动终端后默认就是在家目录下，可以使用pwd命令查看当前所在的目录，如上图。
+     <br/>
+     本次使用的Shell是zsh,因此使用touch .zshrc命令创建.zshrc文件，并用ls -al查看，
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/bdd554bbfbae1bedbaf858f0e172e9cf.png"/>
+    </p>
+    <h4>
+     <a id="3__24">
+     </a>
+     3. 修改配置文件
+    </h4>
+    <p>
+     首先，在终端输入vim .zshrc打开文件，英文状态下，输入i进行编辑模式：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/00cda1014e7626c5897dd7b74f15800f.png">
+      <br/>
+      配置完成后按esc退出编辑模式回到命令模式，最后输入:wq回车后保存并退出vim编辑器，返回后也可以通过cat .zshrc查看是否添加成功；
+      <br/>
+      再用
+      <strong>
+       source .zshrc
+      </strong>
+      命令将.zshrc配置文件中的环境变量加载到shell会话中；
+      <br/>
+      在终端上输入
+      <strong>
+       echo $PATH
+      </strong>
+      命令查看系统的PATH环境变量中如果包含了Java8的PATH环境变量则表示配置成功：
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/08dd88b50a04f5917161ab4b22a1f322.png"/>
+     </img>
+    </p>
+    <h4>
+     <a id="4_java_31">
+     </a>
+     4. 不同java版本之间的切换
+    </h4>
+    <p>
+     若要将Java8切换到Java其他版本，只需要将.zshrc 文件中的JAVA_HOME改成Java其他版本的家目录即可，修改的过程和之前配置JAVA_HOME环境变量类似。
+    </p>
+    <h3>
+     <a id="_Java_34">
+     </a>
+     三. 卸载Java版本
+    </h3>
+    <p>
+     终端中输入/usr/libexec/java_home -V查看目前安装的jdk版本，如：
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/7a09dec3f776764ce662506a6ea4fd4a.png"/>
+     <br/>
+     删除命令如下，之后上面的配置的文件如.zshrc也需要删除或注释。
+    </p>
+    <pre><code class="prism language-powershell"><span class="token comment"># 下面前三个不是所有版本jdk都有内容，可能会为空，不过jdk8（镜像dmg安装的）是有的</span>
+sudo <span class="token function">rm</span> <span class="token operator">-</span>rf <span class="token operator">/</span>Library/Internet\ Plug-Ins/JavaAppletPlugin<span class="token punctuation">.</span>plugin
+sudo <span class="token function">rm</span> <span class="token operator">-</span>rf <span class="token operator">/</span>Library/PreferencePanes/JavaControlPanel<span class="token punctuation">.</span>prefPane
+sudo <span class="token function">rm</span> <span class="token operator">-</span>rf <span class="token operator">/</span>Library/Application\ Support/Oracle/Java
+<span class="token comment"># 下面地址路径更换成对应的实际jdk路径</span>
+sudo <span class="token function">rm</span> <span class="token operator">-</span>rf <span class="token operator">/</span>Library/Java/JavaVirtualMachines/jdk-1<span class="token punctuation">.</span>8<span class="token punctuation">.</span>jdk
+</code></pre>
+    <p>
+     参考：
+     <br/>
+     <a href="https://blog.csdn.net/Tony_CTO/article/details/131863195">
+      macOS版Java开发环境搭建
+     </a>
+     <br/>
+     <a href="https://blog.csdn.net/zzj1990/article/details/132157330">
+      MAC M2下安装Java及maven环境变量
+     </a>
+     <br/>
+     <a href="https://zhuanlan.zhihu.com/p/636741346" rel="nofollow">
+      2022版Mac M2芯片安装Java JDK并在 IDEA 创建第一个 Java 项目
+     </a>
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

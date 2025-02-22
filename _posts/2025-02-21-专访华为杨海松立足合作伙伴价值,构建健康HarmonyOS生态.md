@@ -1,0 +1,200 @@
+---
+layout: post
+title: 专访华为杨海松立足合作伙伴价值,构建健康HarmonyOS生态
+date: 2025-02-21 18:07:46 +0800
+categories: [人物志]
+tags: [编程语言,大数据,区块链,分布式,人工智能]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=109396531
+    alt: 专访华为杨海松立足合作伙伴价值,构建健康HarmonyOS生态
+artid: 109396531
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     专访华为杨海松：立足合作伙伴价值，构建健康HarmonyOS生态
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div id="js_content">
+     <p style="text-align: center">
+      <img src="https://i-blog.csdnimg.cn/blog_migrate/5c91f7a45030319be425aa9a426f01f9.png"/>
+     </p>
+     <p style="text-align: center">
+      <img src="https://i-blog.csdnimg.cn/blog_migrate/9d35616f9775e40d9ea6a48b0514fc6d.png"/>
+     </p>
+     <p>
+      从华为开发者大会HDC.2020 HarmonyOS 2.0 推出到现在，已经有大批的开发者和合作伙伴相继与HarmonyOS牵手，成为HarmonyOS生态中重要的一环。HarmonyOS以打通未来万物互联的场景为己任，那么面对当前的发展形势，其生态应该如何建设呢？华为消费者业务软件部副总裁杨海松在接受CSDN专访时表示，
+      <strong>
+       HarmonyOS立足给生态伙伴创造价值，构建健康可持续的HarmonyOS生态
+      </strong>
+      。
+      <br/>
+     </p>
+     <p style="text-align: center">
+      <img src="https://i-blog.csdnimg.cn/blog_migrate/249039e7d0d01b29bc257d48fe9b4903.png"/>
+     </p>
+     <p style="text-align: center">
+      <strong>
+       HarmonyOS热度不减，生态建设无捷径
+       <br/>
+      </strong>
+     </p>
+     <p>
+      在今年正式开源后，OpenHarmony开源项目的关注度持续飙升。从数据来看，其开源两小时内访问量达到40.49万次，总下周量6.3万次，Star数达到了3000+。那么这种超高的热度，是否可以成为其生态发展的捷径呢？
+     </p>
+     <p>
+      而面对这一系列的数字，杨海松却表现出一份淡然：“无论是国内还是国外的开源项目，其在开源的那一刻都会是一个非常高的点，但只有该项目能够给使用者带来生态价值，才会在波谷后迎来长期有序的发展波峰。未来，HarmonyOS需要持续给生态合作伙伴带来价值”
+      <br/>
+     </p>
+     <p>
+      从一个开源项目自身的生态健康角度来看，真正健康的生态，是让开发者们能够基于HarmonyOS创造出新的商业价值。只有这条生态链里每一环的人都能够获利，那么这个生态才能实现正循环。
+     </p>
+     <p>
+      那么如何才能让伙伴们获利呢？对于硬件厂商而言，HarmonyOS能够给合作伙伴带来的是差异化的产品竞争力。目前，全球人均智能设备保有量正在高速增长，在未来诸多的IoT智能硬件竞争中，HarmonyOS生态能够帮助设备厂商给用户带来新的差异化体验，提升产品竞争力，避免低成本血拼，同时软硬件的接入能够更好的连接用户，提升智能化进程和用户使用率。
+     </p>
+     <p>
+      对于应用厂商而言，HarmonyOS能够帮助其低成本、快速获取IoT设备带来的入口和流量。HarmonyOS将各种设备组合连接成一个一个超级终端，帮助应用厂商一次开发多端部署，用极少的研发投入即可享受众多智能化IoT设备带来的流量。
+     </p>
+     <p>
+      杨海松说：“
+      <strong>
+       无论是应用开发者还是设备开发者，在鸿蒙生态里都能找到新的商业价值
+      </strong>
+      。”通过商业赋能更多合作伙伴，雪球正向越滚越大，这样才能让HarmonyOS和众多合作伙伴一起实现整个生态的升级。
+     </p>
+     <p style="text-align: center">
+      <img src="https://i-blog.csdnimg.cn/blog_migrate/2f844daf7a4cb517d538f1671a730d06.png"/>
+     </p>
+     <p style="text-align: center">
+      <strong>
+       开放的HarmonyOS生态，正在汇聚新的力量
+       <br/>
+      </strong>
+     </p>
+     <p>
+      杨海松在本次采访中提到，目前HarmonyOS 正在获得越来越多的企业支持。有120多家应用厂商、20多家硬件厂商已经共同参与到HarmonyOS生态建设当中。围绕HarmonyOS的开发者课程也迅速上线，已经形成10万+人才生态圈。在实践操作方面，HarmonyOS得到了业界KOL的支持，目前已完成7款芯片移植、7款开发板的上线，让开发者有更多渠道获取HarmonyOS的开发工具，提升开发效率。
+     </p>
+     <p>
+      想要聚集开发者到厂商，那么必然需要为其提供切实的支持，那么HarmonyOS表现如何呢？杨海松表示，HarmonyOS能够为大家提供三个方面的差异化提升。
+     </p>
+     <p>
+      <strong>
+       第一，HarmonyOS差异化的生态定位使其具有更广的产品形态范围
+      </strong>
+      。目前HarmonyOS开源的主要是128KB~128MB内存的设备，在未来还将面向平板电脑、手机等内存更大内存设备开源。HarmonyOS是面向多设备的，而并非像Android或者iOS之类面向单一设备而推出的操作系统，所以HarmonyOS可以被称为是万物互联时代的全场景操作系统，其在产品形态上范围更广，也更有创新空间。
+     </p>
+     <p>
+      <strong>
+       第二，HarmonyOS分布式技术架构能够给伙伴带来差异化产品竞争力
+      </strong>
+      。HarmonyOS在搭载于不同的设备上时，能够实现很好的适配，这套软件架构设计的DNA就是为多设备而来的；无论是基于跨设备的分布式软总线、数据管理、任务调度还是分布式安全，都能够实现跨终端的协同，这种便捷的跨终端技术能力能够为伙伴带来差异化的产品竞争力。
+     </p>
+     <p>
+      <strong>
+       第三，HarmonyOS能够给合作伙伴带来新的商业价值
+      </strong>
+      。华为始终坚信万物互联的市场空间足够大，其相比如今的手机市场绝对不是一个数量级的。在足够大的市场空间下，企业之间的竞争并不是非此即彼，而是如何更好的帮助伙伴一起去获取市场，一通帮助用户提升体验，而HarmonyOS能够帮助合作伙伴让更多终端互联，让用户在多设备之间的体验顺畅如一。
+     </p>
+     <p style="text-align: center">
+      <img src="https://i-blog.csdnimg.cn/blog_migrate/8e2e2d795de1860ce99a14a10ab67321.png"/>
+     </p>
+     <p style="text-align: center">
+      <strong>
+       一横一纵，实现商业赋能
+       <br/>
+      </strong>
+     </p>
+     <p>
+      支持有了，那么要如何才能将这些力量聚集起来，构筑成完整的生态呢？杨海松向CSDN记者表示：“
+      <strong>
+       HarmonyOS的生态拓展主要从一纵一横两条线入手
+      </strong>
+      ”。这两条线横向覆盖所有的应用场景，主要在智能家居、智慧出行、社交购物、智慧教育、影音娱乐、移动办公、运动健康等七大场景共同打造场景化超级终端，为消费者提供无缝的全场景智慧生活体验；纵向则主要为了做深产业链，从芯片到模组、开发板、硬件的解决方案、软硬件集成解决方案到品牌厂家，实现全产业链的打通。
+     </p>
+     <p>
+      横向覆盖的场景中，HarmonyOS会找到每个场景下核心交互业务点。比如在出行场景中，硬件设备用户用到最多的是手机、手表和车机，其代表的主要能力不外乎导航、娱乐、查找地点、相关服务等，那么HarmonyOS联合相关硬件及应用合作伙伴，在该场景下，对消费者就导航、音乐和出行等服务进行进一步创新，打造出行场景下的虚拟化超级终端。正是基于这种方式，HarmonyOS逐渐与合作伙伴覆盖了一横一纵两条线核心的硬件到应用，再加上HarmonyOS的技术能力，一起构建消费者差异化体验。
+     </p>
+     <p>
+      在一横一纵的赋能中，会有大量的企业加入，其中不乏以生存为第一要素的中小型企业甚至创业公司。那么HarmonyOS能够给他们提供了什么支持和帮助呢？杨海松表示，主要包括了以下四个方面。
+     </p>
+     <p>
+      <strong>
+       第一，是商业价值
+      </strong>
+      。开源的HarmonyOS完全免费，能够降低企业接入时的成本。同时，HarmonyOS还可以提供一个很好的平台，基于HarmonyOS能够进行大量的创新，对现有产品进行升级，提升产品竞争力。
+     </p>
+     <p>
+      <strong>
+       第二，HarmonyOS能够带来新的流量
+      </strong>
+      。HarmonyOS有望在明年年实现3亿设备的目标，当企业加入HarmonyOS后，这意味着接入了一个亿级增长的巨大生态群体，其将带来的无限的流量入口。
+     </p>
+     <p style="text-align: left">
+      <strong>
+       第三，Harmony能够降低企业TTM（产品上市周期，Time To Marketing）时间
+      </strong>
+      。接入HarmonyOS生态后，应用伙伴可以获得分布式开发框架、大量APIs、编译器以及DevEco 2.0的帮助；设备厂商也能够通过官方提供的SDK、源代码、开发板/模组和HUAWEI DevEco等开发平台与工具链加速开发。仅第一阶段，HarmonyOS就开源了50多万行的完全自主研发的源代码，这种开放可以为接入HarmonyOS生态带来实质性帮助。
+     </p>
+     <p>
+      <strong>
+       第四，HarmonyOS为硬件厂家和开发者提供了实体工具
+      </strong>
+      。HarmonyOS已经推出了预集成的开发板和模组了，在做做智能硬件的时候，可以直接拿来使用，开发成本会非常低。这将让开发者在学习和使用成本方面大幅的降低。
+     </p>
+     <p style="text-align: center">
+      <img src="https://i-blog.csdnimg.cn/blog_migrate/0a9d611a1f039a47bb756a95c96dc500.png"/>
+     </p>
+     <p style="text-align: center">
+      <strong>
+       给开发者建议：抓住机遇，
+       <br/>
+      </strong>
+     </p>
+     <p style="text-align: center">
+      <strong>
+       立足自己擅长的领域融入HarmonyOS生态
+       <br/>
+      </strong>
+     </p>
+     <p>
+      HarmonyOS要做的是平台，并且对外多次声明了HarmonyOS生态建设的边线意识。但杨海松同时表示，这并不代表HarmonyOS不会去参与基础软件的打造，相反，HarmonyOS会持续不断的进行一些case类应用软件的打造，并且将这些能力持续不断的开放给合作伙伴，让大家都能基于这些能力进行创新。
+     </p>
+     <p>
+      举例来看，HarmonyOS已经打造成功的全场景音视频通话产品畅连，就已经开放给了诸多的合作伙伴。这一能力已经搭载于诸多的应用之中，比如京东商城的APP里就内嵌了畅连能力，两台华为手机之间可以自由的分享当前页面的商品，实时通信互连沟通。这类应用能力的研发和开放对于HarmonyOS的生态持续迭代发展将会起到很好的促进作用，而HarmonyOS也会持续聚焦在平台上做赋能。
+     </p>
+     <p>
+      在采访的最后，杨海松还为开发者提出了几条未来发展的建议。
+     </p>
+     <p>
+      <strong>
+       第一，建议大家去抓新的趋势、新的技术和新的生态
+      </strong>
+      。带来新机会。万物互联的趋势已然出现，不可阻挡的新技术趋势会带来新的产业机会，无论就业还是创业，会带来更多的新机会。对于个人开发者来讲，在新的生态和新的产业机会到来之际，建议大家抓紧时间先上车。
+     </p>
+     <p>
+      <strong>
+       第二个，对于个人开发者来讲，希望大家能够立足自己
+      </strong>
+      。自己擅长什么，就以自己擅长的部分为契机融入到HarmonyOS的生态里面。不管是使用者、开发者还是共建者，每个人都能在HarmonyOS生态里找到自己的位置，找到参与的机会。所以希望大家能够积极的参与其中，HarmonyOS生态建设仅靠华为一家公司是不可能成功的，万物互联的时代是属于大家的，鸿蒙也是大家的。
+      <br/>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,267 @@
+---
+layout: post
+title: Python系列Python字典非空判断
+date: 2024-04-29 10:04:29 +0800
+categories: [s1Python]
+tags: [开发语言,python]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=137995742
+    alt: Python系列Python字典非空判断
+artid: 137995742
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【Python系列】Python字典非空判断
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <blockquote>
+     <p>
+      💝💝💝欢迎来到我的博客，很高兴能够在这里和您见面！希望您在这里可以感受到一份轻松愉快的氛围，不仅可以获得有趣的内容和知识，也可以畅所欲言、分享您的想法和见解。
+      <br/>
+      <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/5b7d56665d406fee3159289ac61fa974.jpeg"/>
+     </p>
+     <ul>
+      <li>
+       推荐:
+       <a href="https://qinyingjie.blog.csdn.net/?type=blog" rel="nofollow">
+        kwan 的首页
+       </a>
+       ,持续学习,不断总结,共同进步,活到老学到老
+      </li>
+      <li>
+       导航
+       <ul>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11763029.html">
+          檀越剑指大厂系列
+         </a>
+         :全面总结 java 核心技术点,如集合,jvm,并发编程 redis,kafka,Spring,微服务,Netty 等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474211.html">
+          常用开发工具系列
+         </a>
+         :罗列常用的开发工具,如 IDEA,Mac,Alfred,electerm,Git,typora,apifox 等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474265.html">
+          数据库系列
+         </a>
+         :详细总结了常用数据库 mysql 技术点,以及工作中遇到的 mysql 问题等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_7540627.html">
+          懒人运维系列
+         </a>
+         :总结好用的命令,解放双手不香吗?能用一个命令完成绝不用两个操作
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11480075.html">
+          数据结构与算法系列
+         </a>
+         :总结数据结构和算法,不同类型针对性训练,提升编程思维,剑指大厂
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      非常期待和您一起在这个小小的网络世界里共同探索、学习和成长。💝💝💝 ✨✨ 欢迎订阅本专栏 ✨✨
+     </p>
+    </blockquote>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      博客目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <a href="#1result___15" rel="nofollow">
+          1.result = {}
+         </a>
+        </li>
+        <li>
+         <a href="#2_20" rel="nofollow">
+          2.简单使用
+         </a>
+        </li>
+        <li>
+         <a href="#3_60" rel="nofollow">
+          3.判断字典非空
+         </a>
+        </li>
+        <li>
+         <a href="#4_66" rel="nofollow">
+          4.使用案例
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h3>
+     <a id="1result___15">
+     </a>
+     1.result = {}
+    </h3>
+    <p>
+     在 Python 中，
+     <code>
+      result = {}
+     </code>
+     是创建一个空字典（Dictionary）的语法。字典是 Python 中的一种数据结构，用于存储键-值对（Key-Value Pairs）的集合。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/c16dd2beae19ff544870dd92949deed9.png"/>
+    </p>
+    <h3>
+     <a id="2_20">
+     </a>
+     2.简单使用
+    </h3>
+    <p>
+     在这个语句中，
+     <code>
+      result
+     </code>
+     是一个变量名，
+     <code>
+      {}
+     </code>
+     表示一个空的字典。你可以通过将键与相应的值关联来填充字典。以下是一些常见的操作和用法：
+    </p>
+    <ol>
+     <li>
+      <p>
+       添加键值对：
+      </p>
+      <pre><code class="prism language-python">result<span class="token punctuation">[</span><span class="token string">'key1'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'value1'</span>
+result<span class="token punctuation">[</span><span class="token string">'key2'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'value2'</span>
+</code></pre>
+     </li>
+     <li>
+      <p>
+       访问值：
+      </p>
+      <pre><code class="prism language-python">value <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string">'key1'</span><span class="token punctuation">]</span>
+</code></pre>
+     </li>
+     <li>
+      <p>
+       更新值：
+      </p>
+      <pre><code class="prism language-python">result<span class="token punctuation">[</span><span class="token string">'key1'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'new value'</span>
+</code></pre>
+     </li>
+     <li>
+      <p>
+       删除键值对：
+      </p>
+      <pre><code class="prism language-python"><span class="token keyword">del</span> result<span class="token punctuation">[</span><span class="token string">'key2'</span><span class="token punctuation">]</span>
+</code></pre>
+     </li>
+     <li>
+      <p>
+       遍历字典：
+      </p>
+      <pre><code class="prism language-python"><span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> result<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+</code></pre>
+     </li>
+    </ol>
+    <p>
+     字典是一种灵活且常用的数据结构，它可以用于存储和操作各种类型的数据。键必须是唯一的且不可变的（如字符串、数字或元组），而值可以是任何类型的对象。
+    </p>
+    <p>
+     通过使用字典，你可以方便地组织和检索数据，例如存储配置信息、建立映射关系、缓存计算结果等。在 Python 中，字典是一个非常有用的工具，可以提高程序的灵活性和效率。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/473d443caeff26f6ccda4e40222dbd57.png"/>
+    </p>
+    <h3>
+     <a id="3_60">
+     </a>
+     3.判断字典非空
+    </h3>
+    <pre><code class="prism language-apl">if result is None or len(result) == 0:
+</code></pre>
+    <h3>
+     <a id="4_66">
+     </a>
+     4.使用案例
+    </h3>
+    <pre><code class="prism language-apl">#### 集合非空
+def abc():
+    response_data = json.loads(content)
+    rows = response_data['datas']['getOpeningRoom']['rows']
+    desired_conditions = ['B', 'C']
+    result = {}
+    for row in rows:
+        if row['text'] == '可预约':
+            cdmc = row['CDMC']
+            if any(condition in cdmc for condition in desired_conditions):
+                result = {
+                    'WID': row['WID'],
+                    'XMDM': row['XMDM']
+                }
+                break
+                # 如果未找到符合条件的场地，则选择第一个可预约的场地
+    if result is None or len(result) == 0:
+        for row in rows:
+            if row['text'] == '可预约':
+                print(f"其他场地可预约信息={row}")
+            result = {
+                'WID': row['WID'],
+                'XMDM': row['XMDM']
+            }
+            break
+    return result
+</code></pre>
+    <blockquote>
+     <p>
+      觉得有用的话点个赞
+      <code>
+       👍🏻
+      </code>
+      呗。
+      <br/>
+      ❤️❤️❤️本人水平有限，如有纰漏，欢迎各位大佬评论批评指正！😄😄😄
+     </p>
+     <p>
+      💘💘💘如果觉得这篇文对你有帮助的话，也请给个点赞、收藏下吧，非常感谢!👍 👍 👍
+     </p>
+     <p>
+      🔥🔥🔥Stay Hungry Stay Foolish 道阻且长,行则将至,让我们一起加油吧！🌙🌙🌙
+     </p>
+     <p>
+      <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/101469850485989da7dda6f53e80e19d.gif"/>
+     </p>
+    </blockquote>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

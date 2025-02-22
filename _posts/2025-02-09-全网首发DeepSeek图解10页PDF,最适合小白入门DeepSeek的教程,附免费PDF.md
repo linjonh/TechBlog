@@ -1,0 +1,372 @@
+---
+layout: post
+title: 全网首发DeepSeek图解10页PDF,最适合小白入门DeepSeek的教程,附免费PDF
+date: 2025-02-09 21:52:19 +0800
+categories: [自动驾驶]
+tags: [自动驾驶,大数据,人工智能,pdf,elasticsearch,DeepSeek,3d]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=145450633
+    alt: 全网首发DeepSeek图解10页PDF,最适合小白入门DeepSeek的教程,附免费PDF
+artid: 145450633
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     全网首发《DeepSeek图解10页PDF》，最适合小白入门DeepSeek的教程，附免费PDF！
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+     很多朋友已在本地搭建了DeepSeek，接下来最好了解下DeepSeek基本知识，懂一些基本原理，于是有了今天这个教程《DeepSeek图解10页PDF》，我原创的一个精简小册子。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/ccef452bff3be255d2142ff352e2d40a.png"/>
+    </p>
+    <p>
+     <strong>
+      1
+     </strong>
+     为什么要学习这个小册子？
+    </p>
+    <p>
+     1）通俗讲解DeepSeek-R1的教程较少。R1刚发布两周左右，目前介绍DeepSeek部署的文章已有一些，但关于DeepSeek背后基本原理讲解的教程，目前平台相对匮乏。
+    </p>
+    <p>
+     2）懂一些DeepSeek的基本原理非常重要。只懂工具使用，不懂背后基本原理，
+     <strong>
+      很难高效使用好DeepSeek
+     </strong>
+     ，比如有朋友反馈DeepSeek回复怎么答非所问，和预想的不一样。要想解决这些问题，最好知道一些基本原理。
+    </p>
+    <p>
+     3）定制专属DeepSeek模型。想针对自己的业务微调DeepSeek的，或者想学习这个技能的，学习其基本原理应是当务之急。
+    </p>
+    <p>
+     基于以上三个原因，于是最近这几天我编写了这个图解10页小册子。
+    </p>
+    <p>
+     <strong>
+      2
+     </strong>
+     这个小册子有哪些特点？
+    </p>
+    <p>
+     1）压缩只保留精华。我从20多页DeepSeek英文论文，提炼下面小册子，其目录第一章DeepSeek本地部署；到第二章零基础必知，充分照顾到非计算机专业的朋友；再到第三章DeepSeek-R1精华图解。没有废话。
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/a552be0e92f44b43d941f5190cf9d980.png"/>
+    </p>
+    <p>
+     2）
+     <strong>
+      一图胜千言
+     </strong>
+     ，图形解释理解起来相对容易。相比于原论文晦涩的专业术语和公式，这个小册子梳理出了最核心的精华，通过图形让大家更易于理解。如下图介绍DeepSeek最核心的创新R1-Zero，通过示意图大家更容易理解DeepSeek训练是基于V3模型，跳过监督微调，直接大规模强化学习，得到R1-Zero
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/2a7995967eddc67792c0121d9cdb6117.png"/>
+    </p>
+    <p>
+     3）
+     <strong>
+      小册子开源免费
+     </strong>
+     。这个小册子使用overleaf的tex语言，计算机专业的学生编写专业论文的利器，保证了PDF的排版、格式、字体、章节全篇统一，再结合更多tex包突出核心知识，如下是2.2节介绍Transformer的部分PDF截图：
+    </p>
+    <p>
+     <img alt="" src="https://i-blog.csdnimg.cn/img_convert/e96d510ed284fbb312ea26201f961ae8.png"/>
+    </p>
+    <p>
+     大家想要这个图解DeepSeek小册子的，可以添加下方，免费获取：
+     <br/>
+     <img src="https://img-blog.csdnimg.cn/img_convert/889b2f9e52944e7410c04936159de6cb.jpeg"/>
+    </p>
+    <p>
+     <strong>
+      3
+     </strong>
+     学完这个小册子你会有哪些收获？
+    </p>
+    <p>
+     1）理解DeepSeek-R1这么牛的背后两个核心创新。R1推理能力令人印象深刻，目前开源和闭源大模型中的佼佼者。学完这个小册子后，你将会学习到R1首次验证了纯强化学习（无任何监督微调）也能大幅提升LLM推理能力，这有可能是提升推理能力的新范式。
+    </p>
+    <p>
+     2）掌握基本的大模型知识。如今资料太多，学习大模型到底需要了解哪些知识成了第一个难题，学完这个小册子你将会了解LLM的必知知识。
+    </p>
+    <p>
+     3）本地部署DeepSeek。还没有部署的朋友，参考小册子第一章步骤将DeepSeek部署到自己电脑。
+    </p>
+    <p>
+     <strong>
+      最后总结一下
+     </strong>
+    </p>
+    <p>
+     这个小册子是关于DeepSeek-R1图解的，主要有三个特点：
+    </p>
+    <p>
+     1）我本人编写，免费开源，PDF专业排版，阅读学习体验更好些
+    </p>
+    <p>
+     2）直观图解，更容易理解大模型基础和DeepSeek-R1的核心创新
+    </p>
+    <p>
+     3）学完小册子能实现本地部署DeepSeek，为后期微调专属推理大模型做铺垫。
+    </p>
+    <p>
+     小册子一共10页，6280字，15幅图。若觉得对你有用，可否点个关注。
+    </p>
+    <h2>
+     <a id="AI___55">
+     </a>
+     如何学习AI大模型 ？
+    </h2>
+    <h4>
+     <a id="AIAI_56">
+     </a>
+     “最先掌握AI的人，将会比较晚掌握AI的人有竞争优势”。
+    </h4>
+    <p>
+     这句话，放在计算机、互联网、移动互联网的开局时期，都是一样的道理。
+    </p>
+    <p>
+     我在一线互联网企业工作十余年里，指导过不少同行后辈。帮助很多人得到了学习和成长。
+    </p>
+    <p>
+     我意识到有很多经验和知识值得分享给大家，故此将并将重要的AI大模型资料包括
+     <strong>
+      AI大模型入门学习思维导图、精品AI大模型学习书籍手册、视频教程、实战学习等录播视频免费分享出来。【保证100%免费】🆓
+     </strong>
+    </p>
+    <h2>
+     <a id="font_color__redCSDNfont_64">
+     </a>
+     <font color="red">
+      CSDN粉丝独家福利
+     </font>
+    </h2>
+    <p>
+     这份完整版的 AI 大模型学习资料已经上传CSDN，朋友们如果需要可以
+     <strong>
+      扫描下方二维码
+     </strong>
+     &amp;
+     <strong>
+      点击下方CSDN官方认证链接
+     </strong>
+     免费领取
+     <font color="red">
+      <strong>
+       【保证100%免费】
+      </strong>
+     </font>
+     <br/>
+     <img src="https://img-blog.csdnimg.cn/img_convert/889b2f9e52944e7410c04936159de6cb.jpeg">
+      <br/>
+      读者福利：
+      <font size="4">
+       <a href="https://mp.weixin.qq.com/s/6Gojoxcdpe4s8EDPev2r0A" rel="nofollow">
+        👉👉CSDN大礼包：《最新AI大模型学习资源包》免费分享 👈👈
+       </a>
+      </font>
+     </img>
+    </p>
+    <center>
+     （👆👆👆安全链接，放心点击）
+    </center>
+    <p>
+     对于0基础小白入门：
+    </p>
+    <blockquote>
+     <p>
+      如果你是零基础小白，想快速入门大模型是可以考虑的。
+     </p>
+     <p>
+      一方面是学习时间相对较短，学习内容更全面更集中。
+      <br/>
+      二方面是可以根据这些资料规划好学习计划和方向。
+     </p>
+    </blockquote>
+    <h4>
+     <a id="1_81">
+     </a>
+     👉1.大模型入门学习思维导图👈
+    </h4>
+    <p>
+     要学习一门新的技术，作为新手一定要先学习成长路线图，方向不对，努力白费。
+    </p>
+    <p>
+     对于从来没有接触过AI大模型的同学，我们帮你准备了详细的学习成长路线图&amp;学习规划。可以说是最科学最系统的学习路线，大家跟着这个大的方向学习准没问题。
+     <font color="red">
+      <strong>
+       （全套教程文末领取哈）
+      </strong>
+      <br/>
+      <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/1a01ecf96fb142ae925bedad049ca7ba.png#pic_center"/>
+     </font>
+    </p>
+    <h4>
+     <a id="2AGI_87">
+     </a>
+     👉2.AGI大模型配套视频👈
+    </h4>
+    <p>
+     很多朋友都不喜欢晦涩的文字，我也为大家准备了视频教程，每个章节都是当前板块的精华浓缩。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/50ece67c703340608cbfaf2daeea1358.png#pic_center"/>
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/bd4618f1675b4870a7299d0212047e25.png"/>
+    </p>
+    <h4>
+     <a id="3_93">
+     </a>
+     👉3.大模型实际应用报告合集👈
+    </h4>
+    <p>
+     这套包含640份报告的合集，涵盖了AI大模型的理论研究、技术实现、行业应用等多个方面。无论您是科研人员、工程师，还是对AI大模型感兴趣的爱好者，这套报告合集都将为您提供宝贵的信息和启示。
+     <font color="red">
+      <strong>
+       （全套教程文末领取哈）
+      </strong>
+     </font>
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/dc21268d8e9c4bda953ab1687bbca43d.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="4PPT_98">
+     </a>
+     👉4.大模型落地应用案例PPT👈
+    </h4>
+    <p>
+     光学理论是没用的，要学会跟着一起做，要动手实操，才能将自己的所学运用到实际当中去，这时候可以搞点实战案例来学习。
+     <font color="red">
+      <strong>
+       （全套教程文末领取哈）
+      </strong>
+     </font>
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/a7511f74c1e14c4dbd1c846267399c2b.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="5_102">
+     </a>
+     👉5.大模型经典学习电子书👈
+    </h4>
+    <p>
+     随着人工智能技术的飞速发展，AI大模型已经成为了当今科技领域的一大热点。这些大型预训练模型，如GPT-3、BERT、XLNet等，以其强大的语言理解和生成能力，正在改变我们对人工智能的认识。 那以下这些PDF籍就是非常不错的学习资源。
+     <font color="red">
+      <strong>
+       （全套教程文末领取哈）
+      </strong>
+      <br/>
+      <img alt="img" src="https://img-blog.csdnimg.cn/direct/f3f83643ea7e4954ad51c4b3099dddc6.png"/>
+     </font>
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/direct/348db3f6b65a4a8f8b94c3a6ab560457.jpeg"/>
+    </p>
+    <h4>
+     <a id="6_107">
+     </a>
+     👉6.大模型面试题&amp;答案👈
+    </h4>
+    <p>
+     截至目前大模型已经超过200个，在大模型纵横的时代，不仅大模型技术越来越卷，就连大模型相关的岗位和面试也开始越来越卷了。为了让大家更容易上车大模型算法赛道，我总结了大模型常考的面试题。
+     <font color="red">
+      <strong>
+       （全套教程文末领取哈）
+      </strong>
+     </font>
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/77792b8008fb4d849647c0db9adb148a.png"/>
+     <br/>
+     <strong>
+      👉学会后的收获：👈
+     </strong>
+     <br/>
+     •
+     <strong>
+      基于大模型全栈工程实现
+     </strong>
+     （前端、后端、产品经理、设计、数据分析等），通过这门课可获得不同能力；
+    </p>
+    <p>
+     •
+     <strong>
+      能够利用大模型解决相关实际项目需求
+     </strong>
+     ： 大数据时代，越来越多的企业和机构需要处理海量数据，利用大模型技术可以更好地处理这些数据，提高数据分析和决策的准确性。因此，掌握大模型应用开发技能，可以让程序员更好地应对实际项目需求；
+    </p>
+    <p>
+     •
+     <strong>
+      基于大模型和企业数据AI应用开发，实现大模型理论、掌握GPU算力、硬件、LangChain开发框架和项目实战技能
+     </strong>
+     ， 学会Fine-tuning垂直训练大模型（数据准备、数据蒸馏、大模型部署）一站式掌握；
+    </p>
+    <p>
+     •
+     <strong>
+      能够完成时下热门大模型垂直领域模型训练能力，提高程序员的编码能力
+     </strong>
+     ： 大模型应用开发需要掌握机器学习算法、深度学习
+    </p>
+    <h2>
+     <a id="font_color__redCSDNfont_121">
+     </a>
+     <font color="red">
+      CSDN粉丝独家福利
+     </font>
+    </h2>
+    <p>
+     这份完整版的 AI 大模型学习资料已经上传CSDN，朋友们如果需要可以
+     <strong>
+      扫描下方二维码&amp;点击下方CSDN官方认证链接免费领取
+     </strong>
+     <font color="red">
+      <strong>
+       【保证100%免费】
+      </strong>
+     </font>
+     <br/>
+     <img src="https://img-blog.csdnimg.cn/img_convert/889b2f9e52944e7410c04936159de6cb.jpeg"/>
+    </p>
+    <p>
+     读者福利：
+     <font size="4">
+      <a href="https://mp.weixin.qq.com/s/6Gojoxcdpe4s8EDPev2r0A" rel="nofollow">
+       👉👉CSDN大礼包：《最新AI大模型学习资源包》免费分享 👈👈
+      </a>
+     </font>
+    </p>
+    <center>
+     （👆👆👆安全链接，放心点击）
+    </center>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

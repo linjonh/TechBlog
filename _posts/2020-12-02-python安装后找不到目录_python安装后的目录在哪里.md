@@ -1,0 +1,98 @@
+---
+layout: post
+title: python安装后找不到目录_python安装后的目录在哪里
+date: 2020-12-02 13:03:05 +0800
+categories: [python安装后找不到目录]
+tags: [python安装后找不到目录]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=110485132
+    alt: python安装后找不到目录_python安装后的目录在哪里
+artid: 110485132
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     python安装后找不到目录_python安装后的目录在哪里
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <div style="font-size:16px;">
+     <p>
+      从官网下载python的安装包，安装过程中可选择装在C盘或D盘或者其他的磁盘。
+     </p>
+     <p>
+      如果忘记了安装在哪里，可以在命令行中使用以下命令
+     </p>
+     <p>
+      where python
+     </p>
+     <p>
+      会显示python的绝对路径
+     </p>
+     <p>
+      C:\Users\Administrator&gt;where python
+     </p>
+     <p>
+      C:\Users\Administrator\AppData\Local\Programs\Python\Python37\python.exe
+     </p>
+     <p>
+      C:\Users\Administrator&gt;
+     </p>
+     <p>
+      使用python
+     </p>
+     <p>
+      同样打开命令行，输入Python，如下
+     </p>
+     <p>
+      C:\Users\Administrator&gt;python
+     </p>
+     <p>
+      Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32
+     </p>
+     <p>
+      Type "help", "copyright", "credits" or "license" for more information.
+     </p>
+     <p>
+      &gt;&gt;&gt;
+     </p>
+     <p>
+      此时便进入了python的交互模式，可以编写代码了。
+     </p>
+     <p>
+      方法扩展：
+     </p>
+     <p>
+      找不到python安装路径解决方法
+     </p>
+     <p>
+      解决方法一：使用python的命令行
+     </p>
+     <p>
+      解决方法二：再安装一次python，就可以看到原本安装的路径 。同时，配置好python环境变量
+     </p>
+     <p>
+      解决方法之三：显示隐藏文件
+     </p>
+     <p>
+      到此这篇关于python安装后的目录在哪里的文章就介绍到这了,更多相关python安装后在哪内容请搜索python博客以前的文章或继续浏览下面的相关文章希望大家以后多多支持python博客！
+     </p>
+    </div>
+   </div>
+  </div>
+  <div id="recommendDown">
+  </div>
+ </article>
+</div>
+
+

@@ -1,0 +1,234 @@
+---
+layout: post
+title: HarmonyOS简介
+date: 2024-10-31 14:42:40 +0800
+categories: [HarmonyOS鸿蒙应用开发学习笔记]
+tags: [华为,harmonyos]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=140259350
+    alt: HarmonyOS简介
+artid: 140259350
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     HarmonyOS简介
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      文章目录
+     </h4>
+     <ul>
+      <li>
+       <a href="#_6" rel="nofollow">
+        一、应用开发的机遇、挑战和趋势
+       </a>
+      </li>
+      <li>
+       <a href="#HarmonyOS_33" rel="nofollow">
+        二、HarmonyOS核心技术理念
+       </a>
+      </li>
+      <li>
+       <a href="#_81" rel="nofollow">
+        三、高效开发与测试
+       </a>
+      </li>
+      <li>
+       <a href="#_105" rel="nofollow">
+        四、上架与分发
+       </a>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <hr/>
+    <h2>
+     <a id="_6">
+     </a>
+     一、应用开发的机遇、挑战和趋势
+    </h2>
+    <p>
+     随着万物互联时代的开启，应用的设备底座将从几十亿手机扩展到数百亿IoT设备。但是更多的只能设备并没有带来更好的全场景体验，新的场景存在连接步骤复杂数据难以互通，生态难以共享和能力难以协同等问题，而这些给开发者带来了新的挑战
+    </p>
+    <p>
+     当前移动应用开发中遇到的主要挑战包括：
+    </p>
+    <ul>
+     <li>
+      针对不同设备上的不同操作系统、重复开发、维护多套版本。
+     </li>
+     <li>
+      多种语言栈，对人员技能要求高。
+     </li>
+     <li>
+      多种开发框架，不同的编程范式。
+     </li>
+     <li>
+      命令式编程、需关注细节，变更频繁，维护成本高。
+     </li>
+    </ul>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/32d5bf5d69fc42a2a4f33863d23b8047.png#pic_center">
+      <br/>
+      为了更好的抓住机遇，应对万物互联所带来的一系列挑战，新的应用生态应该具备如下特征：
+     </img>
+    </p>
+    <ul>
+     <li>
+      单一设备延伸到多设备：应用一次开发就能在多个设备上运行，软件实体能够从单一设备转移到其他设备上，且多个设备间能够协同运行，给消费者提供全新的分布式体验。
+     </li>
+     <li>
+      厚重应用模式到轻量化服务模式：提供轻量化的服务，最小化资源消耗，一步直达，快速完成消费者特定场景的任务。
+     </li>
+     <li>
+      集中化分发到AI加持下的智慧分发：为消费者提供智慧场景服务，实现“服务找人”。
+     </li>
+     <li>
+      纯软件到软硬芯协同的AI能力：提供软硬芯协同优化的原生AI能力，全面满足应用高性能诉求。
+     </li>
+    </ul>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/a470882665df4f3b82a8a78cc3dad7e9.png#pic_center"/>
+    </p>
+    <p>
+     HarmonyOS是新一代的智能终端操作系统，为不同设备的智能化、互联与协同提供了统一的语言，为用户带来简捷、流畅、连续、安全可靠的全场景交互体验。
+    </p>
+    <h2>
+     <a id="HarmonyOS_33">
+     </a>
+     二、HarmonyOS核心技术理念
+    </h2>
+    <p>
+     提出了三大技术理念：一次开发，多端部署；可分可合，自由流转；统一生态，原生智能。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/13bd0573fb834ef3a6773c88f08ddcfe.png"/>
+    </p>
+    <p>
+     <strong>
+      一次开发多端部署
+     </strong>
+     ：指的是一个工程一次开发上架多端按需部署，目的是为了支撑开发者高效开发多种终端设备上的应用。为了实现这一目的HarmonyOS提供了几个核心能力，包括多端开发环境、多端开发能力、多端分发机制。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/2e85a53cc5b44852a06e3b34b21ebd88.png"/>
+    </p>
+    <p>
+     <strong>
+      可分可合，自由流转
+     </strong>
+     ：元服务是支撑可分可合，自由流转的轻量化程序实体，帮助开发者的服务更快触达用户。可分可合是指在开发态开发者通过业务解耦把不同的业务拆分成多个模块，在部署态开发者可以将一个或多个模块自由组合打包成多个APP Pack，不同的APP Pack包名是不一样的，每个APP Pack都需要单独上架。在运行态应用和云服务的生命周期完全独立。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/de83bbbba2404458aef9a99b37954490.png"/>
+    </p>
+    <p>
+     自由流转可分为跨端迁移和多端协同两种情况，他们分别是时间上的串行交互和时间上的并行交互。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/9dfef5b5b46a4a2c9826178b036114c2.png"/>
+    </p>
+    <p>
+     <strong>
+      统一生态，原生智能
+     </strong>
+     ：HarmonyOS支持业界主流跨平台开发框架，通过多层次的开放能力提供统一接入标准实现三方框架快速接入。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/8c7f7cdfd9b34429a46f7b52a4ca9e1d.png"/>
+    </p>
+    <p>
+     HarmonyOS内置强大的AI能力，面向HarmonyOS生态应用的开发，通过不同层次的AI能力开放，满足开发者的不同开发场景下的诉求，降低应用的开发门槛，帮助开发者快速实现应用智能化。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/f14734ae0e5d40269fecf2a20c0cb2f7.png"/>
+    </p>
+    <h2>
+     <a id="_81">
+     </a>
+     三、高效开发与测试
+    </h2>
+    <p>
+     <strong>
+      ArkUI框架
+     </strong>
+    </p>
+    <p>
+     ArkUI框架提供给开发者两种开发方式。基于ArkTS的声明式开发范式和基于JavaScript扩展的类web开发范式。声明式开发范式更加简洁高效。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/b772a2785d4a42cd9909fb89cd067a60.png"/>
+    </p>
+    <p>
+     <strong>
+      集成开发环境
+     </strong>
+    </p>
+    <p>
+     华为DevEco Studio是面向HarmonyOS生态的集成开发环境，提供了一站式的HarmonyOS生态应用，元服务开发能力。
+    </p>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/c3b5298f298a4435a7dcc3618b5ed975.png"/>
+    </p>
+    <p>
+     <strong>
+      测试工具
+     </strong>
+    </p>
+    <p>
+     测试套件包括测试标准和测试工具两部分。测试标准覆盖HarmonyOS生态应用性能、功耗、稳定性、兼容性、UX、安全、分布式、游戏等测试规范。测试工具平台提供了HarmonyOS生态应用开发、调试、单元测试、集成测试、上架测试等各开发阶段所需的测试工具集。支持多种设备，帮助开发者全面高效测试。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/9d2e2622c089458d8e1ac0fb6bc20492.png"/>
+    </p>
+    <h2>
+     <a id="_105">
+     </a>
+     四、上架与分发
+    </h2>
+    <p>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/direct/55aa08850d184fa08417748989a7c22a.png"/>
+    </p>
+    <p>
+     <strong>
+      快速上架
+     </strong>
+     即HUAWEI APPGallery Connect作为开发者统一提交HarmonyOS生态应用与元服务的入口集成证书管理，项目管理，版本管理等功能。支持HarmonyOS生态应用与元服务的快速上架与分发。
+    </p>
+    <p>
+     <strong>
+      上架审核
+     </strong>
+     是指为了给用户提供更安全且出色的体验。HUAWEI APPGallery Connect对开发者提交的HarmonyOS生态应用与元服务进行审核与测试。
+    </p>
+    <p>
+     <strong>
+      应用/服务分发
+     </strong>
+     是指HUAWEI APPGallery Connect提供了灵活的分发能力，支持按阶段、维度、场景等多种形式，高效精准的分发到用户设备上。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

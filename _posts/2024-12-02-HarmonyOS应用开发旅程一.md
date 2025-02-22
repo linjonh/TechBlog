@@ -1,0 +1,276 @@
+---
+layout: post
+title: HarmonyOS应用开发旅程一
+date: 2024-12-02 21:16:23 +0800
+categories: [转战HarmonyOSNEXT鸿蒙应用API：12小白必看]
+tags: [鸿蒙,华为,harmonyos]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=144197893
+    alt: HarmonyOS应用开发旅程一
+artid: 144197893
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     HarmonyOS应用开发旅程（一）
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     从HarmonyOS NEXT Developer Preview1（API 11）版本开始，HarmonyOS SDK以Kit维度提供丰富、完备的开放能力，涵盖应用框架、系统、媒体、图形、应用服务、AI六大领域，例如：
+    </p>
+    <ul>
+     <li>
+      应用框架相关Kit开放能力：Ability Kit（程序框架服务）、ArkUI（方舟UI框架）等。
+     </li>
+     <li>
+      系统相关Kit开放能力：Universal Keystore Kit（密钥管理服务）、Network Kit（网络服务）等。
+     </li>
+     <li>
+      媒体相关Kit开放能力：Audio Kit（音频服务）、Media Library Kit（媒体文件管理服务）等。
+     </li>
+     <li>
+      图形相关Kit开放能力：ArkGraphics 2D（方舟2D图形服务）、Graphics Accelerate Kit（图形加速服务）等。
+     </li>
+     <li>
+      应用服务相关Kit开放能力：Game Service Kit（游戏服务）、Location Kit（位置服务）等。
+     </li>
+     <li>
+      AI相关Kit开放能力：Intents Kit（意图框架服务）、HiAI Foundation Kit（HiAI Foundation服务）等。
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     本讲解了DevEco Studio工具的详细用法，包括使用该工具进行工程创建、应用签名、应用调试、应用安装运行的指导。
+    </p>
+    <h3>
+     DevEco Studio工具是HarmonyOS应用开发的推荐IDE工具。
+    </h3>
+    <p>
+     HUAWEI DevEco Studio（获取工具请单击
+     <a href="https://developer.huawei.com/consumer/cn/download/" rel="nofollow" title="链接下载">
+      链接下载
+     </a>
+     ，以下简称DevEco Studio）是基于IntelliJ IDEA Community开源版本打造，为运行在HarmonyOS系统上的应用和元服务（以下简称应用/元服务）提供一站式的开发平台。
+    </p>
+    <p>
+    </p>
+    <p id="ZH-CN_TOPIC_0000002010856236__p952512174019">
+     作为一款开发工具，除了具有基本的代码开发、编译构建及调测等功能外，DevEco Studio还具有如下特点：
+    </p>
+    <ul id="ZH-CN_TOPIC_0000002010856236__ul1122610456918">
+     <li id="li622764515910">
+      高效智能代码编辑：支持ArkTS、JS、C/C++等语言的代码高亮、代码智能补齐、代码错误检查、代码自动跳转、代码格式化、代码查找等功能，提升代码编写效率。
+     </li>
+     <li id="li89142704517">
+      多端双向实时预览：支持UI界面代码的双向预览、实时预览、动态预览、组件预览以及多端设备预览，便于快速查看代码运行效果。
+     </li>
+     <li id="li13653183815458">
+      多端设备模拟仿真：提供HarmonyOS本地模拟器，支持Phone等设备的模拟仿真，便捷获取调试环境。
+     </li>
+     <li id="li162319572396">
+      DevEco Profiler性能调优：提供实时监控能力和场景化调优模板，便于全方位的设备资源监测，采集数据覆盖多个维度，为开发者带来高效、直通代码行的调优体验，
+     </li>
+    </ul>
+    <p>
+    </p>
+    <h3 id="section14184632165614">
+     应用/元服务开发流程
+    </h3>
+    <h5>
+     1.下载
+    </h5>
+    <p>
+     DevEco Studio 5.0.1 Release
+    </p>
+    <p>
+     面向HarmonyOS应用及元服务开发者提供的集成开发环境（IDE），助力高效开发。
+    </p>
+    <p>
+     <img alt="" height="565" src="https://i-blog.csdnimg.cn/direct/f3bf8967b4c64eec91c365badc6b0f67.png" width="1200"/>
+    </p>
+    <h5>
+     2.下载完毕之后安装
+     <img alt="" height="540" src="https://i-blog.csdnimg.cn/direct/d449ca38117d4ffaadd95d947070e8cf.png" width="750"/>
+    </h5>
+    <h5>
+     3.安装完成后
+    </h5>
+    <p>
+     正式开始鸿蒙之旅
+    </p>
+    <p>
+     <img alt="" height="975" src="https://i-blog.csdnimg.cn/direct/1b8dd311be8941e0a9e82ad07af026a2.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="994" src="https://i-blog.csdnimg.cn/direct/4e1be5348e2644fb82b7baede03dc84a.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="994" src="https://i-blog.csdnimg.cn/direct/8033abf690594a93970f31e0a8ec75a5.png" width="1200"/>
+    </p>
+    <h3 id="arkts工程目录结构stage模型">
+     ArkTS工程目录结构（Stage模型）
+    </h3>
+    <p>
+     <img alt="" height="582" src="https://i-blog.csdnimg.cn/direct/a21d3c1c36db448982fb5e36ca8b465a.png" width="351"/>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       AppScope &gt; app.json5
+      </strong>
+      ：应用的全局配置信息
+     </li>
+     <li>
+      <strong>
+       entry
+      </strong>
+      ：HarmonyOS工程模块，编译构建生成一个HAP包。
+      <ul>
+       <li>
+        <strong>
+         src &gt; main &gt; ets
+        </strong>
+        ：用于存放ArkTS源码。
+       </li>
+       <li>
+        <strong>
+         src &gt; main &gt; ets &gt; entryability
+        </strong>
+        ：应用/服务的入口。
+       </li>
+       <li>
+        <strong>
+         src &gt; main &gt; ets &gt; entrybackupability
+        </strong>
+        ：应用提供扩展的备份恢复能力。
+       </li>
+       <li>
+        <strong>
+         src &gt; main &gt; ets &gt; pages
+        </strong>
+        ：应用/服务包含的页面。
+       </li>
+       <li>
+        <strong>
+         src &gt; main &gt; resources
+        </strong>
+        ：用于存放应用/服务所用到的资源文件，如图形、多媒体、字符串、布局文件等。
+       </li>
+       <li>
+        <strong>
+         src &gt; main &gt; module.json5
+        </strong>
+        ：模块配置文件。主要包含HAP包的配置信息、应用/服务在具体设备上的配置信息以及应用/服务的全局配置信息。
+       </li>
+       <li>
+        <strong>
+         build-profile.json5
+        </strong>
+        ：当前的模块信息 、编译信息配置项，包括buildOption、targets配置等。
+       </li>
+       <li>
+        <strong>
+         hvigorfile.ts
+        </strong>
+        ：模块级编译构建任务脚本。
+       </li>
+       <li>
+        <strong>
+         obfuscation-rules.txt
+        </strong>
+        ：混淆规则文件。混淆开启后，在使用Release模式进行编译时，会对代码进行编译、混淆及压缩处理，保护代码资产。
+       </li>
+       <li>
+        <strong>
+         oh-package.json5
+        </strong>
+        ：用来描述包名、版本、入口文件（类型声明文件）和依赖项等信息。
+       </li>
+      </ul>
+     </li>
+     <li>
+      <strong>
+       oh_modules
+      </strong>
+      ：用于存放三方库依赖信息。
+     </li>
+     <li>
+      <p>
+       <strong>
+        build-profile.json5
+       </strong>
+       ：工程级配置信息，包括签名signingConfigs、产品配置products等。其中products中可配置当前运行环境，默认为HarmonyOS。
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>
+        hvigorfile.ts
+       </strong>
+       ：工程级编译构建任务脚本。
+      </p>
+     </li>
+     <li>
+      <strong>
+       oh-package.json5
+      </strong>
+      ：主要用来描述全局配置，如：依赖覆盖（overrides）、依赖关系重写（overrideDependencyMap）和参数化配置（parameterFile）等。
+     </li>
+    </ul>
+    <p>
+     项目建立完成之后
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/direct/572b08c0363143c986b23b4b5e1046c9.png" width="1200"/>
+    </p>
+    <p>
+     如果你不习惯英文可以切换
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/direct/0ea9becd16544ec3b966d02a4f4f0f9f.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="253" src="https://i-blog.csdnimg.cn/direct/f203e78e132b44d4b52594a6659a1403.png" width="745"/>
+    </p>
+    <p>
+     <img alt="" height="1075" src="https://i-blog.csdnimg.cn/direct/739a0a35465e4607839fcbadb783a3d4.png" width="1200"/>
+    </p>
+    <p>
+     <img alt="" height="219" src="https://i-blog.csdnimg.cn/direct/9c7bfd19485449ab840a2b0fdd8956e8.png" width="555"/>
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/direct/2c047c0f5b474cae96f1bddf5397d92c.png" width="1200"/>
+    </p>
+    <p>
+     好了第一个  你好鸿蒙   以经完成
+    </p>
+    <p>
+     <img alt="" height="1200" src="https://i-blog.csdnimg.cn/direct/d1c6561cc80b4e10ba227c68e6db8f64.png" width="1200"/>
+    </p>
+    <p>
+     下一节我们继续学习
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

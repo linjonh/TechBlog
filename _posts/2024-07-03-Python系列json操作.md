@@ -1,0 +1,235 @@
+---
+layout: post
+title: Python系列json操作
+date: 2024-07-03 08:30:00 +0800
+categories: [s1Python]
+tags: [开发语言,python,json]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=140068788
+    alt: Python系列json操作
+artid: 140068788
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     【Python系列】json操作
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <blockquote>
+     <p>
+      💝💝💝欢迎来到我的博客，很高兴能够在这里和您见面！希望您在这里可以感受到一份轻松愉快的氛围，不仅可以获得有趣的内容和知识，也可以畅所欲言、分享您的想法和见解。
+      <br/>
+      <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/5b7d56665d406fee3159289ac61fa974.jpeg#pic_center"/>
+     </p>
+     <ul>
+      <li>
+       推荐:
+       <a href="https://qinyingjie.blog.csdn.net/?type=blog" rel="nofollow">
+        kwan 的首页
+       </a>
+       ,持续学习,不断总结,共同进步,活到老学到老
+      </li>
+      <li>
+       导航
+       <ul>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11763029.html">
+          檀越剑指大厂系列
+         </a>
+         :全面总结 java 核心技术,jvm,并发编程 redis,kafka,Spring,微服务等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474211.html">
+          常用开发工具系列
+         </a>
+         :常用的开发工具,IDEA,Mac,Alfred,Git,typora 等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11474265.html">
+          数据库系列
+         </a>
+         :详细总结了常用数据库 mysql 技术点,以及工作中遇到的 mysql 问题等
+        </li>
+        <li>
+         <a href="https://meihua150.cn/" rel="nofollow">
+          新空间代码工作室
+         </a>
+         :提供各种软件服务,承接各种毕业设计,毕业论文等
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_7540627.html">
+          懒人运维系列
+         </a>
+         :总结好用的命令,解放双手不香吗?能用一个命令完成绝不用两个操作
+        </li>
+        <li>
+         <a href="https://blog.csdn.net/qyj19920704/category_11480075.html">
+          数据结构与算法系列
+         </a>
+         :总结数据结构和算法,不同类型针对性训练,提升编程思维,剑指大厂
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      非常期待和您一起在这个小小的网络世界里共同探索、学习和成长。💝💝💝 ✨✨ 欢迎订阅本专栏 ✨✨
+     </p>
+    </blockquote>
+    <p>
+    </p>
+    <div class="toc">
+     <h4>
+      博客目录
+     </h4>
+     <ul>
+      <li>
+       <ul>
+        <li>
+         <ul>
+          <li>
+           <a href="#1_16" rel="nofollow">
+            1.引言
+           </a>
+          </li>
+          <li>
+           <a href="#2_json__21" rel="nofollow">
+            2.转 json 对象
+           </a>
+          </li>
+          <li>
+           <a href="#3_44" rel="nofollow">
+            3.转字符串
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <p>
+    </p>
+    <h4>
+     <a id="1_16">
+     </a>
+     1.引言
+    </h4>
+    <p>
+     在 Python 中，字符串可以很容易地转换成 JSON 格式。通常，这意味着将一个字符串转换成一个 Python 字典或列表，然后使用
+     <code>
+      json
+     </code>
+     模块的
+     <code>
+      loads
+     </code>
+     函数来解析这个字符串。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/3e6100b0ad11d99fdcd8d0a7bf288654.png#pic_center"/>
+    </p>
+    <h4>
+     <a id="2_json__21">
+     </a>
+     2.转 json 对象
+    </h4>
+    <pre><code class="prism language-python"><span class="token keyword">import</span> json
+
+<span class="token comment"># 假设我们有一个JSON格式的字符串</span>
+json_string <span class="token operator">=</span> <span class="token string">'{"app_id": "11", "words": ["111"]}'</span>
+<span class="token comment"># 使用json.loads()函数将字符串转换为Python字典</span>
+json_object <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>json_string<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>json_object<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>json_object<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     这段代码将输出：
+    </p>
+    <pre><code>{'app_id': '11', 'words': ['111']}
+&lt;class 'dict'&gt;
+</code></pre>
+    <p>
+     这表明字符串已经被成功转换为一个 Python 字典。
+    </p>
+    <h4>
+     <a id="3_44">
+     </a>
+     3.转字符串
+    </h4>
+    <p>
+     如果你需要将 Python 字典或列表转换回 JSON 格式的字符串，可以使用
+     <code>
+      json.dumps()
+     </code>
+     函数：
+    </p>
+    <pre><code class="prism language-python"><span class="token comment"># 假设我们有一个Python字典</span>
+data <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token string">"app_id"</span><span class="token punctuation">:</span> <span class="token string">"11"</span><span class="token punctuation">,</span>
+    <span class="token string">"words"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"111"</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 使用json.dumps()函数将字典转换为JSON格式的字符串</span>
+json_string <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>json_string<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>json_string<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     这段代码将输出：
+    </p>
+    <pre><code>{"app_id": "11", "words": ["111"]}
+&lt;class 'str'&gt;
+</code></pre>
+    <p>
+     这表明 Python 字典已经被转换为一个 JSON 格式的字符串。
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/dc5ad8d6b72af0bafb91fdd4dddf7b16.png#pic_center"/>
+    </p>
+    <blockquote>
+     <p>
+      觉得有用的话点个赞
+      <code>
+       👍🏻
+      </code>
+      呗。
+      <br/>
+      ❤️❤️❤️本人水平有限，如有纰漏，欢迎各位大佬评论批评指正！😄😄😄
+     </p>
+     <p>
+      💘💘💘如果觉得这篇文对你有帮助的话，也请给个点赞、收藏下吧，非常感谢!👍 👍 👍
+     </p>
+     <p>
+      🔥🔥🔥Stay Hungry Stay Foolish 道阻且长,行则将至,让我们一起加油吧！🌙🌙🌙
+     </p>
+     <p>
+      <img alt="img" src="https://i-blog.csdnimg.cn/blog_migrate/101469850485989da7dda6f53e80e19d.gif#pic_center"/>
+     </p>
+    </blockquote>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+  <div class="blog-extension-box" id="blogExtensionBox" style="width:400px;margin:auto;margin-top:12px">
+  </div>
+ </article>
+</div>
+
+

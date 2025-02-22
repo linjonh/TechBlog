@@ -1,0 +1,114 @@
+---
+layout: post
+title: Unity为什么使用c作为编程语言而不是java或者c
+date: 2024-11-18 22:04:21 +0800
+categories: [Unity]
+tags: [unity,java,c]
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=139130773
+    alt: Unity为什么使用c作为编程语言而不是java或者c
+artid: 139130773
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     Unity为什么使用c#作为编程语言而不是java或者c++
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h2>
+     <a id="Unitycjavac_0">
+     </a>
+     Unity为什么使用c#作为编程语言而不是java或者c++
+    </h2>
+    <p>
+     C++太难学了，门槛高，且不支持垃圾回收等多种特性，不利于快速创建项目。
+     <br/>
+     不用java是.net 的momo 不支持java，dotnet mono是微软的项目，是使用c#写的。 mono的诞生是为了跨平台，
+    </p>
+    <h3>
+     <a id="_5">
+     </a>
+     编译速度：
+    </h3>
+    <p>
+     C#的编译速度通常比C++快，特别是在大型项目中。这主要得益于C#的编译模型和.NET运行时环境。
+    </p>
+    <h3>
+     <a id="Tooling_7">
+     </a>
+     Tooling：
+    </h3>
+    <p>
+     Visual Studio、ReSharper和Rider等开发工具提供了丰富的功能，如代码分析、重构、智能提示等，这些都能极大地提高开发效率。
+    </p>
+    <h3>
+     <a id="_9">
+     </a>
+     门槛：
+    </h3>
+    <p>
+     C#在内存安全和类型安全方面提供了强大的支持，降低了编程门槛，使得开发者可以更加专注于业务逻辑的实现，而不用过多关注底层的内存管理等问题。
+    </p>
+    <h3>
+     <a id="_11">
+     </a>
+     标准库：
+    </h3>
+    <p>
+     C#的标准库提供了丰富的功能，如文件操作、日期时间处理、编码转换等，这些都能减少开发者在基础功能上的重复工作。
+    </p>
+    <h3>
+     <a id="MonoUnity_13">
+     </a>
+     Mono与Unity：
+    </h3>
+    <p>
+     Unity选择C#作为脚本语言，确实是因为Mono对C#的良好支持。Mono使得C#能够在多个平台上运行，并且与C++有着良好的互操作性，这使得Unity能够充分利用C#的优势，同时保持与C++引擎的紧密集成。
+    </p>
+    <h3>
+     <a id="CC_15">
+     </a>
+     C++与C#在游戏开发中的比较：
+    </h3>
+    <p>
+     C++作为一种底层语言，确实具有强大的底层操作能力，但这也带来了学习曲线陡峭、开发效率相对较低等问题。相比之下，C#在游戏逻辑开发方面更加方便快捷，能够大大加快开发速度。同时，C#的丰富库和工具支持也使得开发者能够更加高效地完成工作。
+    </p>
+    <h3>
+     <a id="_17">
+     </a>
+     代码复用：
+    </h3>
+    <p>
+     随着.NET Core和.NET Standard的发展，C#编写的代码可以在多个平台和框架上复用，这进一步提高了开发效率。例如，Unity的某些逻辑可以在服务器端复用，从而减少了重复开发的工作量。
+    </p>
+    <h3>
+     <a id="_19">
+     </a>
+     快速开发：
+    </h3>
+    <p>
+     在快速开发产品方面，C#具有显著的优势。通过利用现有的库和框架，开发者可以更快地构建出功能完善、性能稳定的游戏产品。
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+

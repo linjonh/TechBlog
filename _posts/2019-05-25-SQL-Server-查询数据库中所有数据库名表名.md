@@ -1,0 +1,48 @@
+---
+layout: post
+title: SQL-Server-查询数据库中所有数据库名表名
+date: 2019-05-25 21:37:05 +0800
+categories: [SQLServer]
+tags: []
+image:
+    path: https://api.vvhan.com/api/bing?rand=sj&artid=90551854
+    alt: SQL-Server-查询数据库中所有数据库名表名
+artid: 90551854
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     SQL Server 查询数据库中所有数据库名表名
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="htmledit_views" id="content_views">
+    <p>
+     1.查询数据库中的所有数据库名：
+    </p>
+    <p>
+     SELECT Name FROM Master..SysDatabases ORDER BY Name
+    </p>
+    <p>
+     2.查询某个数据库中所有的表名：
+    </p>
+    <p>
+     SELECT Name FROM SysObjects Where XType='U' ORDER BY Name
+    </p>
+    <p>
+    </p>
+   </div>
+  </div>
+ </article>
+</div>
+
+

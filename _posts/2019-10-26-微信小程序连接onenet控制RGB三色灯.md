@@ -1,0 +1,593 @@
+---
+layout: post
+title: 微信小程序连接onenet控制RGB三色灯
+date: 2019-10-26 23:38:15 +0800
+categories: [物联网项目开发]
+tags: []
+image:
+    path: https://img-blog.csdnimg.cn/20190706132322381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTAwNjA3Ng==,size_16,color_FFFFFF,t_70,image/resize,m_fixed,h_150
+    alt: 微信小程序连接onenet控制RGB三色灯
+artid: 102762293
+render_with_liquid: false
+---
+<p class="artid" style="display:none">$url</p>
+<div class="blog-content-box">
+ <div class="article-header-box">
+  <div class="article-header">
+   <div class="article-title-box">
+    <h1 class="title-article" id="articleContentId">
+     微信小程序连接onenet控制RGB三色灯
+    </h1>
+   </div>
+  </div>
+ </div>
+ <article class="baidu_pl">
+  <div class="article_content clearfix" id="article_content">
+   <link href="../../assets/css/kdoc_html_views-1a98987dfd.css" rel="stylesheet"/>
+   <link href="../../assets/css/ck_htmledit_views-704d5b9767.css" rel="stylesheet"/>
+   <div class="markdown_views prism-atom-one-dark" id="content_views">
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+     <path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+     </path>
+    </svg>
+    <h3>
+     <a id="_0">
+     </a>
+     前言
+    </h3>
+    <p>
+     本文研究如何使用小程序连接云平台，进而控制上一节中连接到onenet云平台的RGB三色灯设备。
+    </p>
+    <h3>
+     <a id="__4">
+     </a>
+     一、 理论基础
+    </h3>
+    <h4>
+     <a id="1_5">
+     </a>
+     1.先睹为快
+    </h4>
+    <p>
+     本节要实现的内容如下视频所示，通过小程序控制RGB三色灯。
+     <br/>
+     <strong>
+      视频链接
+     </strong>
+     ：
+     <a href="https://www.bilibili.com/video/av73284149" rel="nofollow">
+      https://www.bilibili.com/video/av73284149
+     </a>
+    </p>
+    <h4>
+     <a id="2_10">
+     </a>
+     2.功能点简述
+    </h4>
+    <p>
+     (1) 小程序开机页面
+     <br/>
+     (2) 小程序界面布局
+     <br/>
+     (3) 小程序访问onenet接口
+     <br/>
+     (4) 小程序3秒刷新数据状态
+     <br/>
+     (5)小程序控制弹出编辑框设置房间号
+     <br/>
+     (6) 小程序调用storage接口存取数据
+    </p>
+    <h3>
+     <a id="_19">
+     </a>
+     二、使用实例
+    </h3>
+    <h4>
+     <a id="1_21">
+     </a>
+     1.云端创建产品
+    </h4>
+    <p>
+     接下来咱们进入正题，首先需要在云端创建一个产品，步骤如下：
+    </p>
+    <p>
+     <strong>
+      创建产品
+     </strong>
+    </p>
+    <p>
+     登录onenet官网，注册一个账号，地址：https://open.iot.10086.cn，点进开发者中心，创建产品，产品配置信息如下：
+     <br/>
+     <img alt="创建" src="https://i-blog.csdnimg.cn/blog_migrate/b57bb639014fa3182bf7152696a09f35.png">
+      <br/>
+      注意；操作系统这里使用RT_Thread，没有此选项，选用linux即可
+     </img>
+    </p>
+    <p>
+     <strong>
+      创建数据点
+     </strong>
+    </p>
+    <p>
+     数据流模板-&gt;添加数据流模板
+     <br/>
+     <img alt="数据点" src="https://i-blog.csdnimg.cn/blog_migrate/10d15f6730171b1c1af0286715ae7afa.png"/>
+    </p>
+    <p>
+     创建产品数据点，此处创建power和color两个数据点，power表示总开关，power为0时候，灯关闭;power不为0的时候，color数值起作用，用以选择不同模式。
+    </p>
+    <p>
+     <strong>
+      创建后台显示数据面板
+     </strong>
+    </p>
+    <p>
+     应用管理-&gt;独立应用-&gt;添加应用
+     <br/>
+     <img alt="在这里插入图片描述" src="https://i-blog.csdnimg.cn/blog_migrate/a5f88196d6ffbb148de4bbae4f93dd82.png">
+      <br/>
+      注意：红色、绿色、蓝色按钮和颜色显示图片均链接color数据点，颜色显示图片仅显示左右，按钮可以下发选择不同的灯颜色，其中红色按钮开状态数值为2，关数值为0，绿色按钮开状态数值为3，关数值为0，蓝色按钮开状态数值为4，关数值为0；颜色显示图片中白色状态数值为1，红色为2，绿色为3，蓝色为4，数据流同样选择color,具体如下图所示
+      <br/>
+      <img alt="set_back" src="https://i-blog.csdnimg.cn/blog_migrate/a99de5e6c95e9c2f92c58df8a09f0f1a.png">
+       <br/>
+       到此为止，我们已经完成了产品的创建工作，接下来将要处理设备接入问题。
+      </img>
+     </img>
+    </p>
+    <h4>
+     <a id="2_46">
+     </a>
+     2.小程序开机页面
+    </h4>
+    <p>
+     start.wxml文件：
+    </p>
+    <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>view<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>image src<span class="token operator">=</span><span class="token string">"../../image/start/start.png"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'welcome-img'</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>image<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>button <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'welcome-btn'</span> bindtap<span class="token operator">=</span><span class="token string">'goToIndex'</span><span class="token operator">&gt;</span>点击开启<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+</code></pre>
+    <p>
+     start.wxss文件：
+    </p>
+    <pre><code class="prism language-javascript"><span class="token punctuation">.</span>hahahh <span class="token punctuation">{<!-- --></span>
+  height<span class="token punctuation">:</span> <span class="token number">1198</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+image <span class="token punctuation">{<!-- --></span>
+  height<span class="token punctuation">:</span> <span class="token number">1198</span>rpx<span class="token punctuation">;</span>
+  width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>welcome<span class="token operator">-</span>img <span class="token punctuation">{<!-- --></span>
+  position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  z<span class="token operator">-</span>index<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>welcome<span class="token operator">-</span>btn <span class="token punctuation">{<!-- --></span>
+  background<span class="token operator">-</span>color<span class="token punctuation">:</span> #<span class="token number">27e4</span>b5<span class="token punctuation">;</span>
+  color<span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">38</span>rpx<span class="token punctuation">;</span>
+  width<span class="token punctuation">:</span> <span class="token number">330</span>rpx<span class="token punctuation">;</span>
+  height<span class="token punctuation">:</span> <span class="token number">90</span>rpx<span class="token punctuation">;</span>
+  text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token punctuation">:</span> <span class="token number">90</span>rpx<span class="token punctuation">;</span>
+  border<span class="token operator">-</span>radius<span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  bottom<span class="token punctuation">:</span> <span class="token number">120</span>rpx<span class="token punctuation">;</span>
+  left<span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  right<span class="token punctuation">:</span><span class="token number">20</span>px<span class="token punctuation">;</span>
+  z<span class="token operator">-</span>index<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     start.js文件：
+    </p>
+    <pre><code class="prism language-javascript"><span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>
+    remind<span class="token punctuation">:</span> <span class="token string">'加载中'</span><span class="token punctuation">,</span>
+    angle<span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  goToIndex<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    wx<span class="token punctuation">.</span><span class="token function">switchTab</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+      url<span class="token punctuation">:</span> <span class="token string">'/pages/index/index'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  onLoad<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  onShow<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  onReady<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+      that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+        remind<span class="token punctuation">:</span> <span class="token string">''</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    wx<span class="token punctuation">.</span><span class="token function">onAccelerometerChange</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+      <span class="token keyword">var</span> angle <span class="token operator">=</span> <span class="token operator">-</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>x <span class="token operator">*</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">&gt;</span> <span class="token number">14</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> angle <span class="token operator">=</span> <span class="token number">14</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">14</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> angle <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">14</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>angle <span class="token operator">!==</span> angle<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+          angle<span class="token punctuation">:</span> angle
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+    <h4>
+     <a id="3_133">
+     </a>
+     3.小程序主页布局
+    </h4>
+    <p>
+     .js文件调用https接口访问onenet提供的接口获取所有绑定的设备信息，然后小程序通过 wx:for 遍历设备，逐个显示在主页，主要程序如下：
+    </p>
+    <p>
+     index.wxml
+    </p>
+    <pre><code class="prism language-javascript">  <span class="token operator">&lt;</span>view  wx<span class="token punctuation">:</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"{<!-- -->{devices}}"</span> wx<span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"id"</span> wx<span class="token punctuation">:</span><span class="token keyword">for</span><span class="token operator">-</span>item<span class="token operator">=</span><span class="token string">"item"</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"{<!-- -->{item.id}}"</span> bindtap<span class="token operator">=</span><span class="token string">"toDetailsTap"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"single_image_wrap"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>image src<span class="token operator">=</span><span class="token string">"../../image/led/led.jpg"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device_image"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>image<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device_info"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>navigator url<span class="token operator">=</span><span class="token string">"../led/led?id={<!-- -->{item.id}}"</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device_name"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>text<span class="token operator">&gt;</span><span class="token constant">LED</span><span class="token operator">&lt;</span><span class="token operator">/</span>text<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device_d"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"room"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>text<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>room_name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>text<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device_status"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>text<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>item<span class="token punctuation">.</span>online <span class="token operator">===</span> <span class="token boolean">true</span> <span class="token operator">?</span> <span class="token string">' 在线'</span> <span class="token punctuation">:</span> <span class="token string">'离线'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>text<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+
+        <span class="token operator">&lt;</span><span class="token operator">/</span>navigator<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+</code></pre>
+    <p>
+     采用flex布局，具体内容参考index.wxss实现：
+    </p>
+    <pre><code class="prism language-javascript"><span class="token punctuation">.</span>device <span class="token punctuation">{<!-- --></span>
+  position<span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  height<span class="token punctuation">:</span> <span class="token number">120</span>rpx<span class="token punctuation">;</span>
+  background<span class="token operator">-</span>color<span class="token punctuation">:</span> #<span class="token constant">FFF</span><span class="token punctuation">;</span>
+  padding<span class="token operator">-</span>left<span class="token punctuation">:</span> <span class="token number">80</span>rpx<span class="token punctuation">;</span>
+  border<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token number">1</span>rpx solid #<span class="token constant">E7E7EB</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>single_image_wrap <span class="token punctuation">{<!-- --></span>
+  position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  left<span class="token punctuation">:</span> <span class="token number">10</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>device_image <span class="token punctuation">{<!-- --></span>
+  width<span class="token punctuation">:</span> <span class="token number">100</span>rpx<span class="token punctuation">;</span>
+  height<span class="token punctuation">:</span> <span class="token number">100</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>device_info <span class="token punctuation">{<!-- --></span>
+  position<span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  height<span class="token punctuation">:</span> <span class="token number">100</span>rpx<span class="token punctuation">;</span>
+  margin<span class="token operator">-</span>left<span class="token punctuation">:</span> <span class="token number">40</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>device_name <span class="token punctuation">{<!-- --></span>
+  font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">14</span>px<span class="token punctuation">;</span>
+  margin<span class="token operator">-</span>top<span class="token punctuation">:</span> <span class="token number">20</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>device_d<span class="token punctuation">{<!-- --></span>
+  display<span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  flex<span class="token operator">-</span>direction<span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+  justify<span class="token operator">-</span>content<span class="token punctuation">:</span> space<span class="token operator">-</span>between
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>room <span class="token punctuation">{<!-- --></span>
+  color<span class="token punctuation">:</span> #<span class="token number">929292</span><span class="token punctuation">;</span>
+  font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>device_status <span class="token punctuation">{<!-- --></span>
+  font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">14</span>px<span class="token punctuation">;</span>
+  color<span class="token punctuation">:</span> #<span class="token constant">FF1493</span><span class="token punctuation">;</span>
+  margin<span class="token operator">-</span>right<span class="token punctuation">:</span> <span class="token number">40</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <h4>
+     <a id="4onenet_208">
+     </a>
+     4.小程序访问onenet接口
+    </h4>
+    <p>
+     首先打开Onenet文档：https://open.iot.10086.cn/doc/
+    </p>
+    <p>
+     由于上一篇中设备是通过mqtt协议连接onenet,因此本篇小程序访问onenet接口也需要访问MQTT相关接口，如下所示：
+     <br/>
+     <img alt="doc_stream" src="https://i-blog.csdnimg.cn/blog_migrate/1408190eced5b2cf50f4fd2987bc0c62.png">
+      <br/>
+      由上图可知查询数据需要调用URL:
+     </img>
+    </p>
+    <p>
+     http(s): //api.heclouds.com/devices/device_id/datastreams/datastream_id
+    </p>
+    <p>
+     device_id：需要替换为设备ID
+     <br/>
+     datastream_id：需要替换为数据流ID
+     <br/>
+     小程序调用实例：
+    </p>
+    <pre><code class="prism language-javascript">    <span class="token comment">//查看设备连接状态，并刷新按钮状态</span>
+    wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+      url<span class="token punctuation">:</span> <span class="token string">"http://api.heclouds.com/devices/"</span> <span class="token operator">+</span> id <span class="token operator">+</span> <span class="token string">"/datapoints?datastream_id=color"</span><span class="token punctuation">,</span>
+      header<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token string">'content-type'</span><span class="token punctuation">:</span> <span class="token string">'application/x-www-form-urlencoded'</span><span class="token punctuation">,</span>
+        <span class="token string">"api-key"</span><span class="token punctuation">:</span> <span class="token constant">API_KEY</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">success</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+        deviceConnected <span class="token operator">=</span> <span class="token boolean">true</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>switchFlag <span class="token operator">!=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{<!-- --></span>
+          color_value <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">.</span>datastreams<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>datapoints<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>color_value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+            <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">true</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"color_value is "</span><span class="token punctuation">,</span> color_value<span class="token punctuation">)</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"blueSwitchChecked is "</span><span class="token punctuation">,</span> that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>blueSwitchChecked<span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"color_value is "</span><span class="token punctuation">,</span> color_value<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span>
+          that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+            switchFlag<span class="token punctuation">:</span><span class="token boolean">false</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">fail</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"请求失败"</span><span class="token punctuation">)</span>
+        deviceConnected <span class="token operator">=</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+    <h4>
+     <a id="53_286">
+     </a>
+     5.小程序3秒刷新数据状态
+    </h4>
+    <p>
+     在onLoad()中调用setInterval函数设置每隔3秒访问一次onenet设备的数据，及时更新显示页面，
+    </p>
+    <pre><code class="prism language-javascript">that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>myintervalid <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+that<span class="token punctuation">.</span><span class="token function">onShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+     onShow()中正式调用onenet接口访问onenet设备的数据
+    </p>
+    <pre><code class="prism language-javascript">onShow<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span>
+    that<span class="token punctuation">.</span><span class="token function">getDataPoints</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ getDataPoints<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">var</span> deviceConnected
+    <span class="token keyword">var</span> color_value <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment">//查看设备连接状态，并刷新按钮状态</span>
+    wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+      url<span class="token punctuation">:</span> <span class="token string">"http://api.heclouds.com/devices/"</span> <span class="token operator">+</span> id <span class="token operator">+</span> <span class="token string">"/datapoints?datastream_id=color"</span><span class="token punctuation">,</span>
+      header<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>
+        <span class="token string">'content-type'</span><span class="token punctuation">:</span> <span class="token string">'application/x-www-form-urlencoded'</span><span class="token punctuation">,</span>
+        <span class="token string">"api-key"</span><span class="token punctuation">:</span> <span class="token constant">API_KEY</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{<!-- --></span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">success</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+        deviceConnected <span class="token operator">=</span> <span class="token boolean">true</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>switchFlag <span class="token operator">!=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{<!-- --></span>
+          color_value <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">.</span>datastreams<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>datapoints<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>color_value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+            <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
+              that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+                redSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                greenSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                blueSwitchChecked<span class="token punctuation">:</span> <span class="token boolean">true</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"color_value is "</span><span class="token punctuation">,</span> color_value<span class="token punctuation">)</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"blueSwitchChecked is "</span><span class="token punctuation">,</span> that<span class="token punctuation">.</span>data<span class="token punctuation">.</span>blueSwitchChecked<span class="token punctuation">)</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"color_value is "</span><span class="token punctuation">,</span> color_value<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span>
+          that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+            switchFlag<span class="token punctuation">:</span><span class="token boolean">false</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">fail</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"请求失败"</span><span class="token punctuation">)</span>
+        deviceConnected <span class="token operator">=</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+    <p>
+     当页面切换到其他页面隐藏起来或者退出后，应该删除定时器，停止数据更新
+    </p>
+    <pre><code class="prism language-javascript">  onHide<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token comment">// 页面隐藏</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>myintervalid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  onUnload<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token comment">// 页面关闭</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>myintervalid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+    <h4>
+     <a id="6storage_386">
+     </a>
+     6.小程序调用storage接口存取数据
+    </h4>
+    <p>
+     存储房间号：
+    </p>
+    <pre><code class="prism language-javascript"><span class="token keyword">try</span> <span class="token punctuation">{<!-- --></span>
+  wx<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'room_name'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>room_name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"setStorageSync error"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+</code></pre>
+    <p>
+     读取房间号：
+    </p>
+    <pre><code class="prism language-javascript"><span class="token keyword">try</span> <span class="token punctuation">{<!-- --></span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token string">'room_name'</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+    <span class="token comment">// Do something with return value</span>
+    that<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>
+      room_name<span class="token punctuation">:</span>value
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>
+  <span class="token comment">// Do something when catch error</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"get stroage data error!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <h3>
+     <a id="_415">
+     </a>
+     三、运行
+    </h3>
+    <p>
+     如视频中介绍首先设备上电，onenet后台列表将会刷新出来设备状态，然后点开小程序，小程序设备主页如下图：
+     <br/>
+     <img alt="zhuye" src="https://i-blog.csdnimg.cn/blog_migrate/182ec207e947b96de8ab8d61fbae37ca.png">
+      <br/>
+      点进去在线的设备：
+      <br/>
+      <img alt="device_online" src="https://i-blog.csdnimg.cn/blog_migrate/41e418dd4d826d804c9200262deb0b91.png">
+       <br/>
+       最后设置房间号：
+       <br/>
+       <img alt="room_name" src="https://i-blog.csdnimg.cn/blog_migrate/a41e263cbc65feb3ee7787ecbdff7ce4.png">
+        <br/>
+        设置完成后退出到主页面，可以看到房间号已经刷新为了我们设置的。
+       </img>
+      </img>
+     </img>
+    </p>
+    <h3>
+     <a id="_425">
+     </a>
+     四、结语
+    </h3>
+    <h4>
+     <a id="1_427">
+     </a>
+     1.总结：
+    </h4>
+    <p>
+     本节完，实际操作过程中需要注意的地方有如下几点：
+    </p>
+    <p>
+     (1) 设备连云
+    </p>
+    <p>
+     首先需要设备通过mqtt方式连接到onenet，可以参考上一篇
+     <a href="https://blog.csdn.net/weixin_45006076/article/details/94848724">
+      onenet三色灯项目mqtt篇①
+     </a>
+    </p>
+    <p>
+     (2) 修改房间号
+    </p>
+    <p>
+     现在房间号只是存在了本地，如果本地清理数据后，房间号将会消失，这点需要注意，后期抽空做一个后台，mqtt部分还是基于onenet，增加房间号存储，权限认证等功能。
+    </p>
+    <h4>
+     <a id="2_439">
+     </a>
+     2.获取资料
+    </h4>
+    <p>
+     如您在使用过程中有任何问题，请加QQ群进一步交流,也可以github提Issue。
+    </p>
+    <p>
+     QQ交流群：906015840 (备注：物联网项目交流)
+    </p>
+    <p>
+     获取资料：扫码二维码，关注公众号，回复wechat即可获取资料
+     <br/>
+     <img alt="二维码" src="https://i-blog.csdnimg.cn/blog_migrate/3dbdc74e65816de7a460c122991f4495.png"/>
+     <br/>
+     一叶孤沙出品：一沙一世界，一叶一菩提
+    </p>
+   </div>
+   <link href="../../assets/css/markdown_views-a5d25dd831.css" rel="stylesheet"/>
+   <link href="../../assets/css/style-e504d6a974.css" rel="stylesheet"/>
+  </div>
+ </article>
+</div>
+
+
