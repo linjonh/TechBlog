@@ -7,34 +7,36 @@ if ('serviceWorker' in navigator) {
   const baseUrl = src.searchParams.get('baseurl');
   if (register) {
     const swUrl = `${baseUrl}/sw.min.js`;
-    console.log(`swUrl=${swUrl}`)
+    // console.log(`swUrl=${swUrl}`)
     const notification = document.getElementById('notification');
     const btnRefresh = notification.querySelector('.toast-body>button');
     const popupWindow = Toast.getOrCreateInstance(notification);
 
-    navigator.serviceWorker.register(swUrl, { scope: "{{site.baseurl}}/" }).then((registration) => {
-      // Restore the update window that was last manually closed by the user
-      if (registration.waiting) {
-        popupWindow.show();
-      }
+    navigator.serviceWorker
+      .register(swUrl, { scope: '{{site.baseurl}}/' })
+      .then((registration) => {
+        // Restore the update window that was last manually closed by the user
+        if (registration.waiting) {
+          popupWindow.show();
+        }
 
-      registration.addEventListener('updatefound', () => {
-        registration.installing.addEventListener('statechange', () => {
-          if (registration.waiting) {
-            if (navigator.serviceWorker.controller) {
-              popupWindow.show();
+        registration.addEventListener('updatefound', () => {
+          registration.installing.addEventListener('statechange', () => {
+            if (registration.waiting) {
+              if (navigator.serviceWorker.controller) {
+                popupWindow.show();
+              }
             }
+          });
+        });
+
+        btnRefresh.addEventListener('click', () => {
+          if (registration.waiting) {
+            registration.waiting.postMessage('SKIP_WAITING');
           }
+          popupWindow.hide();
         });
       });
-
-      btnRefresh.addEventListener('click', () => {
-        if (registration.waiting) {
-          registration.waiting.postMessage('SKIP_WAITING');
-        }
-        popupWindow.hide();
-      });
-    });
 
     let refreshing = false;
 
