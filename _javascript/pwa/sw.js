@@ -150,7 +150,7 @@ function getAllCacheEntries(event, origin_request) {
                 referrer: proxyHost,
                 integrity: origin_request.integrity
               });
-              console.log(modifiedRequest);
+              // console.log(modifiedRequest);
               let response;
               const fetchResponse = await fetch(modifiedRequest);
               if (fetchResponse.redirected) {

@@ -20,7 +20,7 @@ tagline: 开发者，深耕于Android客户开发，多媒体应用，网页，p
 
 description: >- # used by seo meta and the atom feed
   林建有个人博客，开发者，深耕于Android客户开发，多媒体应用，网页，python，js，java，html技术
-
+max_length_post_description: 50 # the max length of the post description
 # The base URL of your site
 baseurl: "/TechBlog"
 base_url: "" # the subpath of your site, e.g. /blog

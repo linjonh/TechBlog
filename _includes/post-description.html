@@ -13,4 +13,4 @@
 {%- endif -%}
 {%- endcapture -%}
 
-{{- description | strip | truncate: max_length | escape -}}
+{{- description | strip | truncate: site.max_length_post_description | escape -}}
