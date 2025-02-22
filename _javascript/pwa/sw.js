@@ -60,8 +60,10 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
-const proxyUrl = 'https://api.allorigins.win/raw?url=';
-const proxyHost = 'https://api.allorigins.win';
+// const proxyUrl = 'https://api.allorigins.win/raw?url=';
+// const proxyHost = 'https://api.allorigins.win';
+const proxyUrl = 'https://cors-proxy-rho-red.vercel.app/';
+const proxyHost = 'https://cors-proxy-rho-red.vercel.app';
 const cloudflare = 'https://www.cloudflare-terms-of-service-abuse.com/';
 self.addEventListener('fetch', (event) => {
   let origin_request = event.request;
@@ -105,6 +107,7 @@ self.addEventListener('fetch', (event) => {
     cacheOrFetch(event, origin_request);
   }
 });
+
 function getAllCacheEntries(event, origin_request) {
   event.waitUntil(
     (async () => {
