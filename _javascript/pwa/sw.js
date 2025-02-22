@@ -96,7 +96,7 @@ self.addEventListener('fetch', (event) => {
 
     cacheOrFetch(event, modifiedRequest);
     // 打印headers
-    console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
+    // console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
   } else if (
     origin_request.url.includes(proxyHost) &&
     origin_request.url.endsWith('.ts')
@@ -117,7 +117,7 @@ function getAllCacheEntries(event, origin_request) {
       }
 
       let ts_file_name = origin_request.url.replace(proxyHost + '/', '');
-      console.log('handle ts file：' + ts_file_name);
+      // console.log('handle ts file：' + ts_file_name);
 
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -128,17 +128,17 @@ function getAllCacheEntries(event, origin_request) {
           const m3u8Content = await response.text();
           let url = request.url;
           if (url.endsWith('.m3u8')) {
-            console.log('macth m3u8:' + url);
+            // console.log('macth m3u8:' + url);
             if (m3u8Content.includes(ts_file_name)) {
               let m3u8Url = decodeURIComponent(url);
-              console.log('m3u8Url: ' + m3u8Url);
+              // console.log('m3u8Url: ' + m3u8Url);
               m3u8Url = m3u8Url.replace(proxyUrl, '');
               let tsUrl = new URL(
                 ts_file_name,
                 m3u8Url.substring(0, m3u8Url.lastIndexOf('/') + 1)
               );
               tsUrl = proxyUrl + tsUrl.href;
-              console.log('tsUrl:' + tsUrl);
+              // console.log('tsUrl:' + tsUrl);
               const modifiedRequest = new Request(tsUrl, {
                 method: origin_request.method,
                 headers: origin_request.headers,
@@ -157,9 +157,9 @@ function getAllCacheEntries(event, origin_request) {
                 const finalUrl = proxyUrl + fetchResponse.url;
                 response = await fetch(finalUrl);
                 if (response.status === 200) {
-                  console.log('重定向的response：success,' + response.url);
+                  // console.log('重定向的response：success,' + response.url);
                 } else {
-                  console.log('重定向的response：failed' + response.url);
+                  // console.log('重定向的response：failed' + response.url);
                 }
               } else {
                 response = fetchResponse;

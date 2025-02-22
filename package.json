@@ -21,7 +21,15 @@
     "lint:scss": "stylelint _sass/**/*.scss",
     "lint:fix:scss": "npm run lint:scss -- --fix",
     "test": "npm run lint:scss",
-    "prepare": "husky"
+    "prepare": "husky",
+    "jek_win_prod": "set JEKYLL_ENV=production && bundle exec jekyll s --incremental",
+    "jek_win_dev": "set JEKYLL_ENV=develop && bundle exec jekyll s --incremental",
+    "jek_linux_prod": "JEKYLL_ENV=\"production\" bundle exec jekyll s --incremental",
+    "jek_linux_dev": "JEKYLL_ENV=\"develop\" bundle exec jekyll s --incremental",
+    "pub_win": "npm run build && npm run jek_win_prod",
+    "pub_linux": "npm run build && npm run jek_win_dev",
+    "dev_win": "npm run build && npm run jek_linux_prod",
+    "dev_linux": "npm run build && npm run jek_linux_dev"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
