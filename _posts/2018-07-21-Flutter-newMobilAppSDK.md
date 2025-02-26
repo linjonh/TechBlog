@@ -2,8 +2,8 @@
 layout:  post
 title:  "Flutter new mobil app sdk"
 date:  2018-07-21 02:19:34 +0800
-categories:  Android Flutter
-tags:  Android Flutter SDK
+categories: ['Androidflutter']
+tags: ['Androidfluttersdk']
 
 render_with_liquid: false
 ---
