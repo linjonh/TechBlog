@@ -1,7 +1,7 @@
 ---
 title: 2025-02-13-本地部署DeepSeek教程Mac版本
 date: 2025-02-13 23:26:42 +0800
-categories: []
+categories: ['未分类']
 tags: [macos,ollama,deepseekr1,deepseek,AI编程]
 image:
   path: /assets/images/fec7ae270567357c22e1b61dfba57d84.png
