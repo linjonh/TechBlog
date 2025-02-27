@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubunteu-latest
 
     steps:
       - name: Checkout
@@ -40,9 +40,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1.2.0
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.0
+          ruby-version: 3.3
           bundler-cache: true
 
       - name: Build site
