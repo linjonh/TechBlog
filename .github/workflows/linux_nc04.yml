@@ -1,4 +1,4 @@
-name: "MyPc Build and Deploy"
+name: "zp-nc04 Build and Deploy"
 on:
   # push:
   #   branches:
