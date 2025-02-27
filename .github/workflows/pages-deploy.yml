@@ -40,9 +40,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1.2.0
         with:
-          ruby-version: 3.3
+          ruby-version: 2.7.0
           bundler-cache: true
 
       - name: Build site
