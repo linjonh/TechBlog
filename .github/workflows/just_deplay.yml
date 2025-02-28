@@ -1,0 +1,53 @@
+name: "zp-nc04 Build and Deploy"
+on:
+  # push:
+  #   branches:
+  #     - chirpy_theme
+  #   paths-ignore:
+  #     - .github/workflows/pages-deploy.yml
+  #     - .gitignore
+  #     - README.md
+  #     - LICENSE
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: [self-hosted,X64,Linux]
+
+    steps:
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4        
+
+      - name: Display Build outputs.base_path
+        run: echo path "_site${{ steps.pages.outputs.base_path }}"
+   
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site${{ steps.pages.outputs.base_path }}"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: [self-hosted,X64,Linux]
+    needs: build
+    steps:
+      - name: Display deployed URL
+        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
