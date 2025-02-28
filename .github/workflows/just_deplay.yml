@@ -1,4 +1,4 @@
-name: "zp-nc04 Build and Deploy"
+name: "zp-nc04 just Deploy"
 on:
   # push:
   #   branches:
