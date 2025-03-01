@@ -156,6 +156,9 @@ assets:
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development | production]
 
+incremental: true
+cache: true
+
 pwa:
   enabled: true # The option for PWA feature (installable)
   cache:
