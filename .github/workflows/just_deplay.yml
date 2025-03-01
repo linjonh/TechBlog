@@ -33,7 +33,15 @@ jobs:
 
       - name: Display Build outputs.base_path
         run: echo path "_site${{ steps.pages.outputs.base_path }}"
-   
+        
+      - name: Set UTF-8 Encoding
+        run: chcp 65001
+        shell: pwsh
+      - name: Force UTF-8 in PowerShell
+        run: |
+          $OutputEncoding = [System.Text.Encoding]::UTF8
+        shell: pwsh
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
