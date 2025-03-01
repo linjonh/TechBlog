@@ -1,4 +1,4 @@
-name: "zp-nc04 just Deploy"
+name: "my pc just Deploy"
 on:
   # push:
   #   branches:
@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: [self-hosted,X64,Linux]
+    runs-on: [self-hosted,Windows,X64]
 
     steps:
       - name: Setup Pages
@@ -43,7 +43,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: [self-hosted,X64,Linux]
+    runs-on: [self-hosted,Windows,X64]
     needs: build
     steps:
       - name: Display deployed URL
