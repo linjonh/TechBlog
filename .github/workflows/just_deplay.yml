@@ -36,11 +36,11 @@ jobs:
         
       - name: Set UTF-8 Encoding
         run: chcp 65001
-        shell: pwsh
+        # shell: pwsh
       - name: Force UTF-8 in PowerShell
         run: |
           $OutputEncoding = [System.Text.Encoding]::UTF8
-        shell: pwsh
+        # shell: pwsh
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
