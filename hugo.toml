@@ -2,6 +2,7 @@ baseURL = "https://linjonh.github.io/TechBlog/"
 # languageCode = "zh-cn"
 title = "林建有个人博客"
 theme = 'loveIt'
+ignoreFiles = ["\\.git", "\\.DS_Store"] 
 # [markup]
 #   [markup.goldmark]
 #     [markup.goldmark.extensions]
@@ -37,7 +38,7 @@ copyright = "林建有保留部分版权"
 enableRobotsTXT = true
 # whether to use git commit log
 # 是否使用 git 信息
-enableGitInfo = true
+enableGitInfo = false
 # whether to use emoji code
 # 是否使用 emoji 代码
 enableEmoji = true
@@ -50,7 +51,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 # 分页配置
 [pagination]
   disableAliases = false
-  pagerSize = 10
+  pagerSize = 20
   path = "page"
 
 # Menu config
@@ -165,7 +166,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     author = true
     # site creation time
     # 网站创立年份
-    since = 2019
+    since = 2018
     # ICP info only in China (HTML format is supported)
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
@@ -288,7 +289,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       enable = true
       # special amount of posts in each home posts page
       # 主页每页显示文章数量
-      paginate = 6
+      paginate = 10
   # Social config in home page
   # 主页的社交信息设置
   [params.social]
@@ -876,14 +877,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           social = true
           disclaimer = ""
       [languages.en.params.social]
-        GitHub = "xxxx"
-        Twitter = "xxxx"
-        Instagram = "xxxx"
-        Facebook = "xxxx"
-        Telegram = "xxxx"
-        Youtubelegacy = "xxxx"
-        Phone = "555-555-555"
-        Email = "xxxx@xxxx.com"
+        GitHub = "linjonh"
+        Twitter = "linjonh"
+        # Instagram = "xxxx"
+        # Facebook = "xxxx"
+        # Telegram = "xxxx"
+        # Youtubelegacy = "xxxx"
+        # Phone = "555-555-555"
+        Email = "jaysen.lin@foxmail.com"
         RSS = true
         [languages.en.params.social.Mastodon]
           id = "@xxxx"
@@ -969,13 +970,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           social = true
           disclaimer = ""
       [languages.zh-cn.params.social]
-        GitHub = "xxxx"
-        Weibo = "xxxx"
-        Steam = "xxxx"
-        Zhihu = "xxxx"
-        Douban = "xxxx"
-        Devto = "xxxx"
-        Bilibili = "xxxx"
-        Email = "xxxx@xxxx.com"
-        Phone = "555-555-555"
+        GitHub = "linjonh"
+        # Weibo = "xxxx"
+        # Steam = "xxxx"
+        # Zhihu = "xxxx"
+        # Douban = "xxxx"
+        # Devto = "xxxx"
+        # Bilibili = "xxxx"
+        Email = "jaysen.lin@foxmail.com"
+        # Phone = "555-555-555"
         RSS = true
