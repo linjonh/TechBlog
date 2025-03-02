@@ -1,0 +1,15 @@
+baseURL = "https://linjonh.github.io/TechBlog/"
+languageCode = "zh-cn"
+title = "林建有个人博客"
+theme = 'loveIt'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+    [markup.goldmark.renderer]
+      unsafe = true  # ✅ 直接使用布尔值
