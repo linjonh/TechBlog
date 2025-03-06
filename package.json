@@ -1,0 +1,27 @@
+{
+  "name": "techblog",
+  "version": "1.0.0",
+  "description": "hugo的构建网页",
+  "main": "index.js",
+  "scripts": {
+    "build": "hugo build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linjonh/TechBlog.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "blog"
+  ],
+  "author": "linjonh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linjonh/TechBlog/issues"
+  },
+  "homepage": "https://github.com/linjonh/TechBlog#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
