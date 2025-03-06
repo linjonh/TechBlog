@@ -267,13 +267,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "/images/avatar.png"
+      avatarURL = "/TechBlog/assets/images/boy.webp"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # subtitle shown in home page (HTML format is supported)
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+      subtitle = "闻道有先后-术业有专攻"
       # whether to use typeit animation for subtitle
       # 是否为副标题显示打字机动画
       typeit = true
@@ -618,7 +618,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # 出版者信息
       [params.page.seo.publisher]
         name = "xxxx"
-        logoUrl = "/images/avatar.png"
+        logoUrl = "/TechBlog/assets/images/boy.webp"
 
   # TypeIt config
   # TypeIt 配置
@@ -803,6 +803,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     hasCJKLanguage = false
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [languages.en.menu]
+      [[languages.zh-cn.menu.main]]
+        weight = 0
+        identifier = "home"
+        pre = ""
+        name = "Home"
+        url = "/"
+        title = ""
       [[languages.en.menu.main]]
         weight = 1
         identifier = "posts"
@@ -870,9 +877,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         [languages.en.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar.png"
+          avatarURL = "/TechBlog/assets/images/boy.webp"
           title = ""
-          subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+          subtitle = "闻道有先后-术业有专攻"
           typeit = true
           social = true
           disclaimer = ""
@@ -897,6 +904,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     hasCJKLanguage = true
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        weight = 0
+        identifier = "home"
+        pre = ""
+        name = "首页"
+        url = "/"
+        title = ""
       [[languages.zh-cn.menu.main]]
         weight = 1
         identifier = "posts"
@@ -963,9 +977,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         [languages.zh-cn.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar.png"
+          avatarURL = "/TechBlog/assets/images/boy.webp"
           title = ""
-          subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+          subtitle = "闻道有先后-术业有专攻"
           typeit = true
           social = true
           disclaimer = ""
