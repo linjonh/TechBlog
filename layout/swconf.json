@@ -1,0 +1,26 @@
+{{- $cacheEnabled := .Site.Params.pwa.cache.enabled -}}
+{{- $json := dict "cacheName" (printf "hugo-loveit-%d" (now.Unix)) -}}
+
+{{- if $cacheEnabled -}}
+  {{- $resources := slice (printf "/assets/css/%s" .Site.Params.theme) "/" }}
+  {{- range .Site.Menus.main }}
+    {{- $resources = append $resources ( .URL | relURL ) -}}
+  {{- end }}
+  {{- range where .Site.Params.static_files "swcache" true }}
+    {{- $resources = append $resources ( .Path | relURL ) -}}
+  {{- end }}
+
+  {{- $json = merge $json (dict "resources" $resources) -}}
+
+  {{- $interceptorPaths := slice }}
+  {{- range .Site.Params.pwa.cache.deny_paths }}
+    {{- $interceptorPaths = append $interceptorPaths ( . | relURL ) -}}
+  {{- end }}
+
+  {{- $json = merge $json (dict "interceptor" (dict "paths" $interceptorPaths "urlPrefixes" (slice))) -}}
+  {{- $json = merge $json (dict "purge" false) -}}
+{{- else -}}
+  {{- $json = merge $json (dict "purge" true) -}}
+{{- end -}}
+
+{{- $json | jsonify | safeJS -}}

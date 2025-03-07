@@ -4,7 +4,8 @@
   "description": "hugo的构建网页",
   "main": "index.js",
   "scripts": {
-    "build": "hugo build"
+    "build": "hugo build",
+    "build:js": "rollup --config"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,11 @@
   "homepage": "https://github.com/linjonh/TechBlog#readme",
   "dependencies": {
     "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.34.9"
   }
 }

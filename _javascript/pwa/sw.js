@@ -1,13 +1,22 @@
-importScripts('./assets/js/data/swconf.js');
+// importScripts('./assets/js/data/swconf.js');
+var purge = false
+var interceptor = {}
 
-const purge = swconf.purge;
-const interceptor = swconf.interceptor;
+async function load_config(params) {
+  swconf = await fetch("./swconfig.json");
+  console.log("swconf=")
+  console.log(swconf)
+  purge = swconf.purge;
+  interceptor = swconf.interceptor;
+}
+
+load_config()
 
 function verifyUrl(url) {
   const requestUrl = new URL(url);
   const requestPath = requestUrl.pathname;
 
-  if (!requestUrl.protocol.startsWith('http')) {
+  if (!requestUrl.protocol.startsWith("http")) {
     return false;
   }
 
@@ -25,7 +34,7 @@ function verifyUrl(url) {
   return true;
 }
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   if (purge) {
     return;
   }
@@ -37,7 +46,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
       return Promise.all(
@@ -55,25 +64,25 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-self.addEventListener('message', (event) => {
-  if (event.data === 'SKIP_WAITING') {
+self.addEventListener("message", (event) => {
+  if (event.data === "SKIP_WAITING") {
     self.skipWaiting();
   }
 });
 // const proxyUrl = 'https://api.allorigins.win/raw?url=';
 // const proxyHost = 'https://api.allorigins.win';
-const proxyUrl = 'https://cors-proxy-rho-red.vercel.app/';
-const proxyHost = 'https://cors-proxy-rho-red.vercel.app';
-const cloudflare = 'https://www.cloudflare-terms-of-service-abuse.com/';
-self.addEventListener('fetch', (event) => {
+const proxyUrl = "https://cors-proxy-rho-red.vercel.app/";
+const proxyHost = "https://cors-proxy-rho-red.vercel.app";
+const cloudflare = "https://www.cloudflare-terms-of-service-abuse.com/";
+self.addEventListener("fetch", (event) => {
   let origin_request = event.request;
 
-  if (origin_request.headers.has('range')) {
+  if (origin_request.headers.has("range")) {
     return;
   }
 
   if (
-    (origin_request.url.includes('csdnimg.cn') ||
+    (origin_request.url.includes("csdnimg.cn") ||
       origin_request.url.includes(cloudflare)) &&
     !origin_request.url.includes(proxyHost)
   ) {
@@ -91,7 +100,7 @@ self.addEventListener('fetch', (event) => {
       cache: origin_request.cache,
       redirect: origin_request.redirect,
       referrer: proxyHost,
-      integrity: origin_request.integrity
+      integrity: origin_request.integrity,
     });
 
     cacheOrFetch(event, modifiedRequest);
@@ -99,7 +108,7 @@ self.addEventListener('fetch', (event) => {
     // console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
   } else if (
     origin_request.url.includes(proxyHost) &&
-    origin_request.url.endsWith('.ts')
+    origin_request.url.endsWith(".ts")
   ) {
     // 处理 ts 的代理
     getAllCacheEntries(event, origin_request);
@@ -116,7 +125,7 @@ function getAllCacheEntries(event, origin_request) {
         return response;
       }
 
-      let ts_file_name = origin_request.url.replace(proxyHost + '/', '');
+      let ts_file_name = origin_request.url.replace(proxyHost + "/", "");
       // console.log('handle ts file：' + ts_file_name);
 
       const cacheNames = await caches.keys();
@@ -127,15 +136,15 @@ function getAllCacheEntries(event, origin_request) {
           const response = await cache.match(request);
           const m3u8Content = await response.text();
           let url = request.url;
-          if (url.endsWith('.m3u8')) {
+          if (url.endsWith(".m3u8")) {
             // console.log('macth m3u8:' + url);
             if (m3u8Content.includes(ts_file_name)) {
               let m3u8Url = decodeURIComponent(url);
               // console.log('m3u8Url: ' + m3u8Url);
-              m3u8Url = m3u8Url.replace(proxyUrl, '');
+              m3u8Url = m3u8Url.replace(proxyUrl, "");
               let tsUrl = new URL(
                 ts_file_name,
-                m3u8Url.substring(0, m3u8Url.lastIndexOf('/') + 1)
+                m3u8Url.substring(0, m3u8Url.lastIndexOf("/") + 1)
               );
               tsUrl = proxyUrl + tsUrl.href;
               // console.log('tsUrl:' + tsUrl);
@@ -148,7 +157,7 @@ function getAllCacheEntries(event, origin_request) {
                 cache: origin_request.cache,
                 redirect: origin_request.redirect,
                 referrer: proxyHost,
-                integrity: origin_request.integrity
+                integrity: origin_request.integrity,
               });
               // console.log(modifiedRequest);
               let response;
@@ -165,7 +174,7 @@ function getAllCacheEntries(event, origin_request) {
                 response = fetchResponse;
               }
               const final_url = request.url;
-              if (purge || request.method !== 'GET' || !verifyUrl(final_url)) {
+              if (purge || request.method !== "GET" || !verifyUrl(final_url)) {
                 return response;
               }
 
@@ -195,7 +204,7 @@ function cacheOrFetch(event, request) {
       return fetch(request).then((response) => {
         const url = request.url;
 
-        if (purge || request.method !== 'GET' || !verifyUrl(url)) {
+        if (purge || request.method !== "GET" || !verifyUrl(url)) {
           return response;
         }
 
