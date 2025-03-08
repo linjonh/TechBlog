@@ -56,8 +56,7 @@ jobs:
         run: hugo version
 
       - name: Build site
-        working-directory: ~/wk_space/TechBlog
-        run: pwd && rm -rf public && HUGO_ENVIRONMENT=production hugo build
+        run: cd ~/wk_space/TechBlog/ && pwd && rm -rf public && HUGO_ENVIRONMENT=production hugo build
 
       # - name: Test site
       #   run: |
@@ -68,7 +67,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "public"
+          path: "/home/linj/wk_space/TechBlog/public"
 
   deploy:
     environment:
