@@ -1,18 +1,7 @@
-// importScripts('./assets/js/data/swconf.js');
-var purge = false
-var interceptor = {}
-
-async function load_config(params) {
-  swconf = await fetch("./swconfig.json");
-  console.log("swconf=")
-  console.log(swconf)
-  purge = swconf.purge;
-  interceptor = swconf.interceptor;
-}
-
-load_config()
+importScripts('./js/swconfig.js');
 
 function verifyUrl(url) {
+  console.log("verifyUrl=" + url);
   const requestUrl = new URL(url);
   const requestPath = requestUrl.pathname;
 
@@ -33,6 +22,14 @@ function verifyUrl(url) {
   }
   return true;
 }
+
+console.log("swconf=" + swconf);
+const purge = swconf.purge;
+const interceptor = swconf.interceptor;
+console.log("purge=");
+console.log(purge);
+console.log("interceptor=");
+console.log(interceptor);
 
 self.addEventListener("install", (event) => {
   if (purge) {
@@ -68,6 +65,7 @@ self.addEventListener("message", (event) => {
   if (event.data === "SKIP_WAITING") {
     self.skipWaiting();
   }
+  console.log("event.data=" + event.data);
 });
 // const proxyUrl = 'https://api.allorigins.win/raw?url=';
 // const proxyHost = 'https://api.allorigins.win';
@@ -75,6 +73,8 @@ const proxyUrl = "https://cors-proxy-rho-red.vercel.app/";
 const proxyHost = "https://cors-proxy-rho-red.vercel.app";
 const cloudflare = "https://www.cloudflare-terms-of-service-abuse.com/";
 self.addEventListener("fetch", (event) => {
+  console.log(`fetch=${event}`);
+
   let origin_request = event.request;
 
   if (origin_request.headers.has("range")) {
@@ -83,7 +83,8 @@ self.addEventListener("fetch", (event) => {
 
   if (
     (origin_request.url.includes("csdnimg.cn") ||
-      origin_request.url.includes(cloudflare)) &&
+      origin_request.url.includes(cloudflare) ||
+      origin_request.url.includes("info-database.csdn.net")) &&
     !origin_request.url.includes(proxyHost)
   ) {
     // 设置代理 URL
@@ -105,7 +106,7 @@ self.addEventListener("fetch", (event) => {
 
     cacheOrFetch(event, modifiedRequest);
     // 打印headers
-    // console.log('Request Headers:', [...modifiedRequest.headers.entries()]);
+    console.log("Request Headers:", [...modifiedRequest.headers.entries()]);
   } else if (
     origin_request.url.includes(proxyHost) &&
     origin_request.url.endsWith(".ts")
@@ -126,7 +127,7 @@ function getAllCacheEntries(event, origin_request) {
       }
 
       let ts_file_name = origin_request.url.replace(proxyHost + "/", "");
-      // console.log('handle ts file：' + ts_file_name);
+      console.log("handle ts file：" + ts_file_name);
 
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -204,7 +205,12 @@ function cacheOrFetch(event, request) {
       return fetch(request).then((response) => {
         const url = request.url;
 
-        if (purge || request.method !== "GET" || !verifyUrl(url)) {
+        if (
+          purge ||
+          request.method !== "GET" ||
+          !verifyUrl(url) ||
+          response.status != 200
+        ) {
           return response;
         }
 
@@ -212,6 +218,8 @@ function cacheOrFetch(event, request) {
         let responseToCache = response.clone();
 
         caches.open(swconf.cacheName).then((cache) => {
+          console.log("cache=" + url);
+
           cache.put(request, responseToCache);
         });
         return response;

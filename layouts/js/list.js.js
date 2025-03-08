@@ -1,20 +1,23 @@
 {{- $cacheEnabled := .Site.Params.pwa.cache.enabled -}}
-{{- $json := dict "cacheName" (printf "hugo-loveit-%d" (now.Unix)) -}}
+{{- $json := dict "cacheName" (printf "hugo-blog-%s" (now.Format "20060102-150405")) -}}
 
 {{- if $cacheEnabled -}}
-  {{- $resources := slice (printf "/assets/css/%s" .Site.Params.theme) "/" }}
+  {{- $resources := slice  "/" }}
   {{- range .Site.Menus.main }}
-    {{- $resources = append $resources ( .URL | relURL ) -}}
+    {{- $resources = append $resources (slice (.URL | relURL)) -}}
   {{- end }}
-  {{- range where .Site.Params.static_files "swcache" true }}
-    {{- $resources = append $resources ( .Path | relURL ) -}}
+  {{- $static_file :=.Site.Params.pwa.cache.static_files -}}
+  {{- if $static_file -}}
+    {{- range $static_file }}
+      {{- $resources = append $resources (slice (. | relURL)) -}}
+    {{- end }}
   {{- end }}
 
   {{- $json = merge $json (dict "resources" $resources) -}}
 
   {{- $interceptorPaths := slice }}
   {{- range .Site.Params.pwa.cache.deny_paths }}
-    {{- $interceptorPaths = append $interceptorPaths ( . | relURL ) -}}
+    {{- $interceptorPaths = append $interceptorPaths (slice ( . | relURL )) -}}
   {{- end }}
 
   {{- $json = merge $json (dict "interceptor" (dict "paths" $interceptorPaths "urlPrefixes" (slice))) -}}
@@ -23,4 +26,4 @@
   {{- $json = merge $json (dict "purge" true) -}}
 {{- end -}}
 
-{{- $json | jsonify | safeJS -}}
+const swconf={{- $json | jsonify  -}};

@@ -1,0 +1,5 @@
+---
+title: "JS"
+outputs:
+  - JS
+---

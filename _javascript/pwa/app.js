@@ -6,22 +6,29 @@ if ('serviceWorker' in navigator) {
   const register = src.searchParams.get('register');
   const baseUrl = src.searchParams.get('baseurl');
   if (register) {
-    const swUrl = `./sw.min.js`;
+    const swUrl = `${baseUrl}/sw.min.js`;
+
     console.log(`swUrl=${swUrl}`)
     const notification = document.getElementById('notification');
     const btnRefresh = notification.querySelector('.toast-body>button');
     const popupWindow = Toast.getOrCreateInstance(notification);
 
-    navigator.serviceWorker.register(swUrl).then((registration) => {
+    navigator.serviceWorker.register(swUrl, { scope: `${baseUrl}/` }).then((registration) => {
       // Restore the update window that was last manually closed by the user
+      console.log("registration.waiting="+registration.waiting)
+      
       if (registration.waiting) {
+        console.log("popupWindow.show")
         popupWindow.show();
       }
 
       registration.addEventListener('updatefound', () => {
         registration.installing.addEventListener('statechange', () => {
+        console.log("statechange="+registration.waiting)
+
           if (registration.waiting) {
             if (navigator.serviceWorker.controller) {
+              console.log("statechange  popupWindow.show")
               popupWindow.show();
             }
           }
@@ -29,6 +36,8 @@ if ('serviceWorker' in navigator) {
       });
 
       btnRefresh.addEventListener('click', () => {
+        console.log("click  SKIP_WAITING")
+
         if (registration.waiting) {
           registration.waiting.postMessage('SKIP_WAITING');
         }
