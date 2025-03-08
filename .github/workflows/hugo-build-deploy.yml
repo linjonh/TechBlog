@@ -27,12 +27,16 @@ jobs:
     runs-on:  [self-hosted,wsl]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          submodules: true
-          path: ~/wk_space/TechBlog
+      - name: update theme
+        run: cd ~/wk_space/TechBlog/themes/loveIt && git pull
+      - name: update blog
+        run: cd ~/wk_space/TechBlog/ && pwd && git pull
+
+      # - name: Checkout
+      #   uses: actions/checkout@v4
+      #   with:
+      #     fetch-depth: 0
+      #     submodules: true
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
