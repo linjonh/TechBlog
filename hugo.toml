@@ -132,9 +132,8 @@ link = ""
 enabled = true
 cache = { enabled = true, deny_paths = ["/admin", "/private"], static_files = [
   "/TechBlog/assets/images/boy.webp",
-  "/TechBlog/assets/css/",
   "/TechBlog/js/theme.min.js",
-  "/TechBlog/css/",
+  "/TechBlog/css/style.min.css",
 ] }
 
 # Header config
@@ -935,7 +934,7 @@ identifier = "github"
 pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
 post = ""
 name = ""
-url = "https://github.com/linjonh"
+url = "https://github.com/linjonh/"
 title = "GitHub"
 
 [languages.zh-cn.params]

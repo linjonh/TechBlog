@@ -1,7 +1,7 @@
 importScripts('./js/swconfig.js');
 
 function verifyUrl(url) {
-  console.log("verifyUrl=" + url);
+  // console.log("verifyUrl=" + url);
   const requestUrl = new URL(url);
   const requestPath = requestUrl.pathname;
 
@@ -23,26 +23,59 @@ function verifyUrl(url) {
   return true;
 }
 
-console.log("swconf=" + swconf);
+// console.log("swconf=" + swconf);
 const purge = swconf.purge;
 const interceptor = swconf.interceptor;
-console.log("purge=");
-console.log(purge);
-console.log("interceptor=");
-console.log(interceptor);
+// console.log("purge=");
+// console.log(purge);
+// console.log("interceptor=");
+// console.log(interceptor);
 
 self.addEventListener("install", (event) => {
-  if (purge) {
-    return;
-  }
-
   event.waitUntil(
     caches.open(swconf.cacheName).then((cache) => {
       return cache.addAll(swconf.resources);
     })
   );
 });
+//for debug , beacuse it fecth the url
+// self.addEventListener('install', function (event) {
+//   if (purge) {
+//     return;
+//   }
+//   event.waitUntil(
+//       caches.open(swconf.cacheName)
+//           .then(function (cache) {
+//               // const urlsToCache = [
+//               //     '/',
+//               //     '/index.html',
+//               //     '/style.css',
+//               //     '/app.js',
+//               //     '/image.png'
+//               // ];
+//               const urlsToCache=[...swconf.resources];
 
+//               return Promise.all(urlsToCache.map(url => {
+//                   return fetch(url) // Try to fetch the resource.
+//                       .then(response => {
+//                           if (response.ok) {
+//                               return cache.put(url, response); // Cache the resource if fetch is successful.
+//                           } else {
+//                               console.warn(`Failed to cache ${url}: HTTP status ${response.status}`); // Log a warning if the resource cannot be cached.
+//                               return Promise.resolve(); // Resolve the promise so it does not block the cache operation.
+//                           }
+//                       })
+//                       .catch(error => {
+//                           console.error(`Failed to fetch ${url}:`, error); // Log error if resource cannot be fetched.
+//                           return Promise.resolve(); // Resolve the promise so it does not block the cache operation.
+//                       });
+//               }));
+//           })
+//           .catch(error => {
+//               console.error('Failed to open cache:', error);
+//           })
+//   );
+// });
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -72,19 +105,18 @@ self.addEventListener("message", (event) => {
 const proxyUrl = "https://cors-proxy-rho-red.vercel.app/";
 const proxyHost = "https://cors-proxy-rho-red.vercel.app";
 const cloudflare = "https://www.cloudflare-terms-of-service-abuse.com/";
+const blockedUrls = ["csdnimg.cn", cloudflare, "info-database.csdn.net"];
+
 self.addEventListener("fetch", (event) => {
-  console.log(`fetch=${event}`);
+  // console.log(`fetch=${event}`);
 
   let origin_request = event.request;
 
   if (origin_request.headers.has("range")) {
     return;
   }
-
   if (
-    (origin_request.url.includes("csdnimg.cn") ||
-      origin_request.url.includes(cloudflare) ||
-      origin_request.url.includes("info-database.csdn.net")) &&
+    blockedUrls.some(blockedUrl => origin_request.url.includes(blockedUrl)) &&
     !origin_request.url.includes(proxyHost)
   ) {
     // 设置代理 URL
@@ -106,7 +138,7 @@ self.addEventListener("fetch", (event) => {
 
     cacheOrFetch(event, modifiedRequest);
     // 打印headers
-    console.log("Request Headers:", [...modifiedRequest.headers.entries()]);
+    // console.log("Request Headers:", [...modifiedRequest.headers.entries()]);
   } else if (
     origin_request.url.includes(proxyHost) &&
     origin_request.url.endsWith(".ts")
@@ -127,7 +159,7 @@ function getAllCacheEntries(event, origin_request) {
       }
 
       let ts_file_name = origin_request.url.replace(proxyHost + "/", "");
-      console.log("handle ts file：" + ts_file_name);
+      // console.log("handle ts file：" + ts_file_name);
 
       const cacheNames = await caches.keys();
       for (const cacheName of cacheNames) {
@@ -218,7 +250,7 @@ function cacheOrFetch(event, request) {
         let responseToCache = response.clone();
 
         caches.open(swconf.cacheName).then((cache) => {
-          console.log("cache=" + url);
+          // console.log("cache=" + url);
 
           cache.put(request, responseToCache);
         });
