@@ -32,6 +32,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
+          path: ~/wk_space/TechBlog
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
@@ -44,14 +45,15 @@ jobs:
       # - name: show veresion
       #   run: node -v && nvm current && npm -v
       
-      - name: install hugo
-        run: curl https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_linux-amd64.deb && sudo apt install ./hugo_extended_0.145.0_linux-amd64.deb
+      # - name: install hugo
+      #   run: curl https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_linux-amd64.deb && sudo apt install ./hugo_extended_0.145.0_linux-amd64.deb
 
       - name: show veresion
         run: hugo version
 
       - name: Build site
-        run: HUGO_ENVIRONMENT=production hugo build
+        working-directory: ~/wk_space/TechBlog
+        run: rm -rf public && HUGO_ENVIRONMENT=production hugo build
 
       # - name: Test site
       #   run: |
