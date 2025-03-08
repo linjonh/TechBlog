@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubunteu-latest
+    runs-on:  [self-hosted,X64,Linux]
 
     steps:
       - name: Checkout
@@ -68,7 +68,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted,X64,Linux]
     needs: build
     steps:
       - name: Deploy to GitHub Pages
