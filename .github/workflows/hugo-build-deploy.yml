@@ -28,9 +28,9 @@ jobs:
 
     steps:
       - name: update theme
-        run: cd ~/wk_space/TechBlog/themes/loveIt && pwd && git checkout hugo-blog && git pull
+        run: cd ~/wk_space/TechBlog/themes/loveIt && pwd && git checkout master && git pull
       - name: update blog
-        run: cd ~/wk_space/TechBlog/ && pwd &&  git checkout master && git pull
+        run: cd ~/wk_space/TechBlog/ && pwd &&  git checkout hugo-blog && git pull
 
       # - name: Checkout
       #   uses: actions/checkout@v4
