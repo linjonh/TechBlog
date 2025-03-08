@@ -28,9 +28,9 @@ jobs:
 
     steps:
       - name: update theme
-        run: cd ~/wk_space/TechBlog/themes/loveIt && git pull
+        run: cd ~/wk_space/TechBlog/themes/loveIt && pwd && git checkout hugo-blog && git pull
       - name: update blog
-        run: cd ~/wk_space/TechBlog/ && pwd && git pull
+        run: cd ~/wk_space/TechBlog/ && pwd &&  git checkout master && git pull
 
       # - name: Checkout
       #   uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
 
       - name: Build site
         working-directory: ~/wk_space/TechBlog
-        run: rm -rf public && HUGO_ENVIRONMENT=production hugo build
+        run: pwd && rm -rf public && HUGO_ENVIRONMENT=production hugo build
 
       # - name: Test site
       #   run: |
