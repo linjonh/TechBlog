@@ -48,9 +48,12 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       
-      - name: install hugo
-        run: curl https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_linux-amd64.deb && sudo su && apt install ./hugo_extended_0.145.0_linux-amd64.deb
-
+      - name: 安装 Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'  # 也可以指定具体版本，如 '0.123.4'
+          extended: true  # 是否安装扩展版（支持 SCSS/SASS）
+          
       - name: show veresion
         run: hugo version
 
