@@ -49,7 +49,7 @@ jobs:
         uses: actions/configure-pages@v4
       
       - name: install hugo
-        run: curl https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_linux-amd64.deb && sudo apt install ./hugo_extended_0.145.0_linux-amd64.deb
+        run: curl https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_linux-amd64.deb && sudo su && apt install ./hugo_extended_0.145.0_linux-amd64.deb
 
       - name: show veresion
         run: hugo version
