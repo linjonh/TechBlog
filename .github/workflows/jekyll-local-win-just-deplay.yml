@@ -1,4 +1,4 @@
-name: "my pc just Deploy"
+name: "jekyll-local-win-just-deplay"
 on:
   # push:
   #   branches:

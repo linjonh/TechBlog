@@ -1,4 +1,4 @@
-name: "zp-nc04 Build and Deploy"
+name: "jekyll-local-win-build-deploy"
 on:
   # push:
   #   branches:
@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: [self-hosted,X64,Linux]
+    runs-on: [self-hosted,windows]
 
     steps:
       - name: Checkout
@@ -37,21 +37,18 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4        
+        uses: actions/configure-pages@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
           bundler-cache: true
-      
-      - name: Display Build outputs.base_path
-        run: echo path "_site${{ steps.pages.outputs.base_path }}"
-        
-      # - name: Build site        
-      #   run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}" --trace --profile
-      #   env:
-      #     JEKYLL_ENV: "production"
+
+      - name: Build site
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}" --trace --profile
+        env:
+          JEKYLL_ENV: "production"
 
       # - name: Test site
       #   run: |
@@ -68,11 +65,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: [self-hosted,X64,Linux]
+    runs-on: [self-hosted,windows]
     needs: build
     steps:
-      - name: Display deployed URL
-        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
