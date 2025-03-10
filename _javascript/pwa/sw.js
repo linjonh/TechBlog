@@ -20,6 +20,11 @@ function verifyUrl(url) {
       return false;
     }
   }
+  for (const hostname of interceptor.hostNames) {
+    if (requestUrl.hostname.includes(hostname)) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -115,10 +120,7 @@ self.addEventListener("fetch", (event) => {
   if (origin_request.headers.has("range")) {
     return;
   }
-  if (
-    blockedUrls.some(blockedUrl => origin_request.url.includes(blockedUrl)) &&
-    !origin_request.url.includes(proxyHost)
-  ) {
+  if (blockedUrls.some(blockedUrl => origin_request.url.includes(blockedUrl)) && !origin_request.url.includes(proxyHost)) {
     // 设置代理 URL
     const originalUrl = origin_request.url;
     const modifiedUrl = proxyUrl + originalUrl;
@@ -139,10 +141,7 @@ self.addEventListener("fetch", (event) => {
     cacheOrFetch(event, modifiedRequest);
     // 打印headers
     // console.log("Request Headers:", [...modifiedRequest.headers.entries()]);
-  } else if (
-    origin_request.url.includes(proxyHost) &&
-    origin_request.url.endsWith(".ts")
-  ) {
+  } else if (origin_request.url.includes(proxyHost) && origin_request.url.endsWith(".ts")) {
     // 处理 ts 的代理
     getAllCacheEntries(event, origin_request);
   } else {
@@ -228,34 +227,42 @@ function getAllCacheEntries(event, origin_request) {
 }
 
 function cacheOrFetch(event, request) {
+  const url = request.url;
+
   event.respondWith(
-    caches.match(request).then((response) => {
+    caches.match(url).then((response) => {
       if (response) {
+        // console.log("respose from cache=" + url);
+        // console.log(request);
         return response;
+      } else {
+        // console.log("not hit from cache=" + url);
+        // console.log(request);
       }
 
-      return fetch(request).then((response) => {
-        const url = request.url;
+      return fetch(request)
+        .then((response) => {
 
-        if (
-          purge ||
-          request.method !== "GET" ||
-          !verifyUrl(url) ||
-          response.status != 200
-        ) {
+          if (purge || request.method !== "GET" || !verifyUrl(url)) {
+            // console.log(`fetch ${url} 直接返回，没有缓存:`, request, response)
+            return response;
+          }
+
+          // See: <https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests>
+          let responseToCache = response.clone();
+
+          caches.open(swconf.cacheName).then((cache) => {
+            // console.log("cache=" + url);
+            // console.log(request);
+
+            cache.put(url, responseToCache);
+          });
           return response;
-        }
-
-        // See: <https://developers.google.com/web/fundamentals/primers/service-workers#cache_and_return_requests>
-        let responseToCache = response.clone();
-
-        caches.open(swconf.cacheName).then((cache) => {
-          // console.log("cache=" + url);
-
-          cache.put(request, responseToCache);
+        })
+        .catch((error) => {
+          // console.log(`请求失败 ${url}:`, error); // Log error if resource cannot be fetched.
+          return Promise.resolve(new Response("请求失败", { status: 500, statusText: `${error}` }));
         });
-        return response;
-      });
     })
   );
 }

@@ -23,9 +23,16 @@ const swconf={
     interceptor: {
       paths:{{- $interceptorPaths | jsonify -}},
       urlPrefixes: [
+        "https://www.google-analytics.com",
+        "https://pagead2.googlesyndication.com",
         {{- if and .Site.Params.analytics.goatcounter.id (eq .Site.Params.pageviews.provider "goatcounter") -}}
           "https://{{ .Site.Params.analytics.goatcounter.id }}.goatcounter.com/counter/"
         {{- end -}}
+      ],
+      hostNames:[
+        "doubleclick.net",
+        "googlesyndication.com",
+        "googleads.g.doubleclick.net",
       ]
     },
     purge: false
