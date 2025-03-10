@@ -14,4 +14,4 @@ math:
 ![Hugo 主题 LoveIt](https://bing.ee123.net/img/rand?artid=Apple-Devices-Preview.png "Hugo 主题 LoveIt")
 
 
-<P style="margin:auto">若有疑问，请致电：jaysen.lin@foxmail.com</p>
+<P style="text-align:center">若有疑问，请致电：jaysen.lin@foxmail.com</p>

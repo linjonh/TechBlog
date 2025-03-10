@@ -11,6 +11,9 @@
 .pagination li:before, .pagination li:after {
   background: 0;
 }
+[theme=dark] .pagination li:before, [theme=dark] .pagination li:after {
+    background: 0;
+}
 .home[data-home=posts] {
   .summary {
     padding-top: 1rem;

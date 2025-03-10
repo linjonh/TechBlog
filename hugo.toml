@@ -1,6 +1,6 @@
 baseURL = "https://linjonh.github.io/TechBlog/"
 # languageCode = "zh-cn"
-title = "林建有个人博客"
+title = "JAY.LIN个人博客"
 theme = 'loveIt'
 ignoreFiles = ["\\.git", "\\.DS_Store", "node_modules"]
 # [markup]
@@ -28,7 +28,7 @@ languageName = "简体中文"
 hasCJKLanguage = true
 # copyright description used only for seo schema
 # 版权描述，仅仅用于 SEO
-copyright = "林建有保留部分版权"
+copyright = "JAY.LIN保留部分版权"
 # whether to use robots.txt
 # 是否使用 robots.txt
 enableRobotsTXT = true
@@ -96,7 +96,7 @@ url = "/categories/documentation/"
 title = ""
 
 [params]
-BaseURL="/TechBlog"
+BaseURL = "/TechBlog"
 # site default theme ["auto", "light", "dark"]
 # 网站默认主题 ["auto", "light", "dark"]
 defaultTheme = "auto"
@@ -124,13 +124,16 @@ images = ["/logo.png"]
 # Author config
 # 作者配置
 [params.author]
-name = "林建有"
+name = "JAY.LIN"
 email = ""
 link = ""
 
 [params.pwa]
 enabled = true
-cache = { enabled = true, deny_paths = ["/admin", "/private"], static_files = [
+cache = { enabled = true, deny_paths = [
+  "/admin",
+  "/private",
+], static_files = [
   "/TechBlog/assets/images/boy.webp",
   "/TechBlog/js/theme.min.js",
   "/TechBlog/css/style.min.css",
@@ -698,14 +701,14 @@ thumbnailUrl = "/TechBlog/assets/images/screenshot.png"
 # Analytics config
 # 网站分析配置
 [params.analytics]
-enable = false
+enable = true
 
 # Google Analytics
 [params.analytics.google]
-id = ""
+id = "G-75ZRFNZ5Y8"
 # whether to anonymize IP
 # 是否匿名化用户 IP
-anonymizeIP = true
+anonymizeIP = false
 
 # Fathom Analytics
 [params.analytics.fathom]
@@ -844,15 +847,15 @@ isHTML = false
 
 [outputFormats.JSONData]
 mediaType = "application/json"
-baseName = "swconfig" # 输出文件名为 data.json
+baseName = "swconfig"          # 输出文件名为 data.json
 isPlainText = true
-path = "/" # 输出到 json 目录
+path = "/"                     # 输出到 json 目录
 
 [outputFormats.JS]
 mediaType = "text/javascript"
-baseName = "swconfig" # 输出文件名为 data.js
+baseName = "swconfig"         # 输出文件名为 data.js
 isPlainText = true
-path = "/" # 输出到 json 目录
+path = "/"                    # 输出到 json 目录
 
 # Options to make hugo output files
 # 用于 Hugo 输出文档的设置
@@ -861,12 +864,13 @@ home = ["HTML", "RSS", "JSON"]
 page = ["HTML", "MarkDown"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
-json = ["JSONData"] # 启用自定义 JSON 输出
-js = ["JS"] # 启用自定义 JS 输出
+json = ["JSONData"]            # 启用自定义 JSON 输出
+js = ["JS"]                    # 启用自定义 JS 输出
 
 # Multilingual
 # 多语言
 [languages]
+
 [languages.zh-cn]
 weight = 2
 languageCode = "zh-CN"
@@ -918,7 +922,6 @@ title = ""
 # name = "归档"
 # url = "/categories/documentation/"
 # title = ""
-
 [[languages.zh-cn.menu.main]]
 weight = 6
 identifier = "about"
@@ -960,8 +963,8 @@ rss = 10
 [languages.zh-cn.params.home.profile]
 enable = true
 gravatarEmail = ""
-avatarURL = "/TechBlog/assets/images/boy.webp"
-title = ""
+avatarURL = "https://api.vvhan.com/api/avatar/boy"
+title = "技术博客分享"
 subtitle = "闻道有先后-术业有专攻"
 typeit = true
 social = true
