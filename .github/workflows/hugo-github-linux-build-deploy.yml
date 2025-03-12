@@ -58,7 +58,7 @@ jobs:
         run: hugo version
 
       - name: Build site
-        run: pwd && HUGO_ENVIRONMENT=production hugo #--noChmod --noTimes --ignoreCache --gc --minify &
+        run: pwd && HUGO_ENVIRONMENT=production hugo --noChmod --noTimes --ignoreCache --gc --minify &
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
