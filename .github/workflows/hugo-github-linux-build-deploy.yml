@@ -34,15 +34,15 @@ jobs:
           submodules: true
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
-      #- name: Cache Hugo Resources
-        #uses: actions/cache@v3
-        #with:
-          #path: |
-            #resources
-            #public
-          #key: ${{ runner.os }}-hugo-${{ github.sha }}
-          #restore-keys: |
-            #${{ runner.os }}-hugo-
+      - name: Cache Hugo Resources
+        uses: actions/cache@v3
+        with:
+          path: |
+            resources
+            public
+          key: ${{ runner.os }}-hugo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
               
       - name: Setup Pages
         id: pages
@@ -58,7 +58,7 @@ jobs:
         run: hugo version
 
       - name: Build site
-        run: pwd && HUGO_ENVIRONMENT=production hugo --gc --minify
+        run: pwd && HUGO_ENVIRONMENT=production hugo --minify
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
