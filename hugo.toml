@@ -116,7 +116,7 @@ dateFormat = "2006-01-02"
 title = "技术博客"
 # website description for RSS, SEO, Open Graph and Twitter Cards
 # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-description = "技术博客"
+description = "分享软件开发、游戏开发、通信协议与 CI/CD 技术的博客，涵盖实践经验、最佳实践与前沿趋势。"
 # website images for Open Graph and Twitter Cards
 # 网站图片, 用于 Open Graph 和 Twitter Cards
 images = ["/logo.png"]
@@ -134,7 +134,6 @@ cache = { enabled = true, deny_paths = [
   "/admin",
   "/private",
 ], static_files = [
-  "/TechBlog/assets/images/boy.webp",
   "/TechBlog/js/theme.min.js",
   "/TechBlog/css/style.min.css",
 ] }
@@ -177,7 +176,7 @@ enable = true
 custom = ""
 # whether to show Hugo and theme info
 # 是否显示 Hugo 和主题信息
-hugo = true
+hugo = false
 # whether to show copyright info
 # 是否显示版权信息
 copyright = true
@@ -931,14 +930,14 @@ name = "关于"
 url = "/about/"
 title = ""
 
-[[languages.zh-cn.menu.main]]
-weight = 7
-identifier = "github"
-pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-post = ""
-name = ""
-url = "https://github.com/linjonh/"
-title = "GitHub"
+# [[languages.zh-cn.menu.main]]
+# weight = 7
+# identifier = "github"
+# pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+# post = ""
+# name = ""
+# url = "https://github.com/linjonh/"
+# title = "GitHub"
 
 [languages.zh-cn.params]
 
