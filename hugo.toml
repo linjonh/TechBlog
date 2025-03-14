@@ -952,10 +952,9 @@ highlightTag = "em"
 absoluteURL = false
 
 [languages.zh-cn.params.search.algolia]
-index = "techblog_index"
+index = "dev_techblog_index"
 appID = "LWD9RXY9DT"
 searchKey = "496be2c0d0b37c0789b0c2ffc9602471"
-writeKey="de60dc346bebc5d2c11efae86a8fb239"
 
 [languages.zh-cn.params.home]
 rss = 10
