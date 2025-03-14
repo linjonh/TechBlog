@@ -247,7 +247,7 @@ tileColor = "#da532c"
 enable = true
 # type of search engine ["lunr", "algolia"]
 # 搜索引擎的类型 ["lunr", "algolia"]
-type = "lunr"
+type = "algolia"
 # max index length of the chunked content
 # 文章内容最长索引长度
 contentLength = 4000
@@ -546,7 +546,7 @@ clientSecret = ""
 # Valine comment config (https://github.com/xCss/Valine)
 # Valine 评论系统设置 (https://github.com/xCss/Valine)
 [params.page.comment.valine]
-enable = true
+enable = false
 appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
 appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
 placeholder = ""
@@ -617,11 +617,11 @@ darkTheme = "github-dark"
 [params.page.comment.giscus]
 # You can refer to the official documentation of giscus to use the following configuration.
 # 你可以参考官方文档来使用下列配置
-enable = false
-repo = ""
-repoId = ""
+enable = true
+repo = "linjonh/blog_comment_repo"
+repoId = "R_kgDON5YUqQ"
 category = "Announcements"
-categoryId = ""
+categoryId = "DIC_kwDON5YUqc4Cm9Ln"
 # automatically adapt the current theme i18n configuration when empty
 # 为空时自动适配当前主题 i18n 配置
 lang = ""
@@ -943,7 +943,7 @@ title = ""
 
 [languages.zh-cn.params.search]
 enable = true
-type = "lunr"
+type = "algolia"
 contentLength = 4000
 placeholder = ""
 maxResultLength = 10
@@ -952,9 +952,10 @@ highlightTag = "em"
 absoluteURL = false
 
 [languages.zh-cn.params.search.algolia]
-index = "index"
-appID = "GZT24PWKNT"
-searchKey = "634ab679e825b815de2663de38908f9d"
+index = "techblog_index"
+appID = "LWD9RXY9DT"
+searchKey = "496be2c0d0b37c0789b0c2ffc9602471"
+writeKey="de60dc346bebc5d2c11efae86a8fb239"
 
 [languages.zh-cn.params.home]
 rss = 10

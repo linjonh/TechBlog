@@ -7,7 +7,7 @@
     "build": "hugo build",
     "build:js": "rollup --config",
     "pro":"HUGO_ENVIRONMENT=production hugo server",
-    "test": "rm -rf public && hugo server  --gc --minify"
+    "test": "rm -rf public && hugo server  #--gc --minify"
   },
   "repository": {
     "type": "git",
