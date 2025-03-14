@@ -1,3 +1,14 @@
+/**
+ * 上传网站的搜索数据到algoliasearch 平台 https://www.algolia.com/
+ * 需要提供appId,writeKey在本地时用dotenv：npm install dotenv
+ * 在github actions时用secrets env：
+ *    - name: Run script
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
+        run: npm run upload
+ */
+
 import dotenv from "dotenv";
 import { algoliasearch } from "algoliasearch";
 import fs from "fs";
@@ -15,7 +26,7 @@ const processRecords = async () => {
   const jsondata = JSON.parse(datasetRequest);
 
   return await client.saveObjects({
-    indexName: "dev_techblog_index",
+    indexName: "prod_techblog_index",
     objects: jsondata,
   });
 };

@@ -65,6 +65,21 @@ jobs:
         with:
           path: public
 
+      # node js 上传搜索数据
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run script
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
+        run: npm run upload
+
   deploy:
     environment:
       name: github-pages

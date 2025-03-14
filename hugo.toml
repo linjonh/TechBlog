@@ -250,7 +250,7 @@ enable = true
 type = "algolia"
 # max index length of the chunked content
 # 文章内容最长索引长度
-contentLength = 4000
+contentLength = 3000
 # placeholder of the search bar
 # 搜索框的占位提示语
 placeholder = ""
@@ -944,7 +944,7 @@ title = ""
 [languages.zh-cn.params.search]
 enable = true
 type = "algolia"
-contentLength = 4000
+contentLength = 3000
 placeholder = ""
 maxResultLength = 10
 snippetLength = 50
@@ -952,7 +952,7 @@ highlightTag = "em"
 absoluteURL = false
 
 [languages.zh-cn.params.search.algolia]
-index = "dev_techblog_index"
+index = "prod_techblog_index"
 appID = "LWD9RXY9DT"
 searchKey = "496be2c0d0b37c0789b0c2ffc9602471"
 
