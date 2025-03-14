@@ -6,8 +6,9 @@
   "scripts": {
     "build": "hugo build",
     "build:js": "rollup --config",
-    "pro":"HUGO_ENVIRONMENT=production hugo server",
-    "test": "rm -rf public && hugo server  #--gc --minify"
+    "pro": "HUGO_ENVIRONMENT=production hugo server",
+    "test": "rm -rf public && hugo server  #--gc --minify",
+    "upload": "node ./upload_index_json.js"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,15 @@
   },
   "homepage": "https://github.com/linjonh/TechBlog#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "algoliasearch": "^5.21.0",
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.7"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.34.9"
-  }
+  },
+  "type": "module"
 }

@@ -2,3 +2,5 @@ public
 resources/_gen
 node_modules
 .idea
+.env
+instantsearch-app
