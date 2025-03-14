@@ -1,0 +1,59 @@
+name: "hugo-local-wsl-build-deploy"
+on:
+  # push:
+  #   branches:
+  #     - hugo-blog
+  #   paths-ignore:
+  #     - .github/workflows/pages-deploy.yml
+  #     - .gitignore
+  #     - README.md
+  #     - LICENSE
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-local-wsl-hugo:
+    runs-on:  [self-hosted,wsl]
+
+    steps:
+      - name: update theme
+        run: cd ~/wk_space/TechBlog/themes/loveIt && pwd && git checkout master && git pull
+      - name: update blog
+        run: cd ~/wk_space/TechBlog/ && pwd &&  git checkout hugo-blog && git pull
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: show veresion
+        run: hugo version
+
+      - name: Build site
+        run: cd ~/wk_space/TechBlog/ && pwd && HUGO_ENVIRONMENT=production hugo --noChmod --noTimes --ignoreCache --gc --minify
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "/home/linj/wk_space/TechBlog/public"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: [self-hosted,wsl]
+    needs: build-local-wsl-hugo
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
