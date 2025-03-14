@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "hugo build",
-    "build:js": "rollup --config"
+    "build:js": "rollup --config",
+    "test": "rm -rf public && hugo server --gc --minify"
+
   },
   "repository": {
     "type": "git",
