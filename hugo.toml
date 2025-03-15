@@ -250,7 +250,7 @@ enable = true
 type = "algolia"
 # max index length of the chunked content
 # 文章内容最长索引长度
-contentLength = 4000
+contentLength = 3000
 # placeholder of the search bar
 # 搜索框的占位提示语
 placeholder = ""
@@ -944,7 +944,7 @@ title = ""
 [languages.zh-cn.params.search]
 enable = true
 type = "algolia"
-contentLength = 4000
+contentLength = 3000
 placeholder = ""
 maxResultLength = 10
 snippetLength = 50
@@ -970,7 +970,7 @@ social = true
 disclaimer = ""
 
 [languages.zh-cn.params.social]
-GitHub = "linjonh"
+# GitHub = "linjonh"
 # Weibo = "xxxx"
 # Steam = "xxxx"
 # Zhihu = "xxxx"
