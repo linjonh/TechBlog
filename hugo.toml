@@ -970,7 +970,7 @@ social = true
 disclaimer = ""
 
 [languages.zh-cn.params.social]
-GitHub = "linjonh"
+# GitHub = "linjonh"
 # Weibo = "xxxx"
 # Steam = "xxxx"
 # Zhihu = "xxxx"
