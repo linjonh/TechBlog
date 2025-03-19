@@ -1,7 +1,7 @@
 ---
 title: Writing a New Post
 author: cotes
-date: 2019-08-08 14:10:00 +0800
+date: 2019-08-08 14:10:00 +08:00
 categories: ['Blogging', 'Tutorial']
 tags: ['Writing']
 render_with_liquid: false
@@ -26,7 +26,7 @@ tags: [TAG] # TAG names should always be lowercase
 > The posts' \_layout\_ has been set to `post` by default, so there is no need to add the variable \_layout\_ in the Front Matter block.
 > {: .prompt-tip }
 ### Timezone of Date
-To accurately record the release date of a post, you should not only set up the `timezone` of `\_config.yml`{: .filepath} but also provide the post's timezone in variable `date` of its Front Matter block. Format: `+/-TTTT`, e.g. `+0800`.
+To accurately record the release date of a post, you should not only set up the `timezone` of `\_config.yml`{: .filepath} but also provide the post's timezone in variable `date` of its Front Matter block. Format: `+/-TTTT`, e.g. `+08:00`.
 ### Categories and Tags
 The `categories` of each post are designed to contain up to two elements, and the number of elements in `tags` can be zero to infinity. For instance:
 ```yaml

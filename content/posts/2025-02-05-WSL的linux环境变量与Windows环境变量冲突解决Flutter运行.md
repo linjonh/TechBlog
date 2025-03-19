@@ -1,6 +1,6 @@
 ---
 title: WSL的linux环境变量与Windows环境变量冲突解决Flutter程序
-date: 2025-02-05 17:46:00 +0800
+date: 2025-02-05 17:46:00 +08:00
 author: 林建有
 categories: ['Flutter', 'Cli', '环境变量']
 tags: ['Cli']
