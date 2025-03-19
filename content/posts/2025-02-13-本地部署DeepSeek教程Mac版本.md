@@ -1,6 +1,6 @@
 ---
 title: 2025-02-13-本地部署DeepSeek教程Mac版本
-date: 2025-02-13 23:26:42 +0800
+date: 2025-02-13 23:26:42 +08:00
 categories: ['未分类']
 tags: ['Macos', 'Ollama', 'Deepseekr', 'Deepseek', 'Ai']
 image:
