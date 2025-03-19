@@ -49,7 +49,7 @@ Sun
 Moon
 : the natural satellite of the earth, visible by reflected light from the sun
 ## Block Quote
-> This line shows the \_block quote\_.
+> This line shows the _block quote_.
 ## Prompts
 
 > An example showing the `tip` type prompt.
@@ -91,12 +91,12 @@ fi;
 "colors/light-typography",
 "colors/dark-typography";
 ```
-{: file='\\_sass/jekyll-theme-chirpy.scss'}
+{: file='\_sass/jekyll-theme-chirpy.scss'}
 ## Mathematics
-The mathematics powered by [\*\*MathJax\*\*](https://www.mathjax.org/):
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
 $$
 \begin{equation}
-\sum\_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
 \label{eq:series}
 \end{equation}
 $$
@@ -113,7 +113,7 @@ cherry :active, c, after b a, 1d
 ```
 ## Images
 ### Default (with caption)
-\_Full screen width and center alignment\_
+_Full screen width and center alignment_
 ### Left aligned
 ### Float to left
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.

@@ -10,7 +10,7 @@ featuredImage: https://bing.ee123.net/img/rand?artid=120827494
 featuredImagePreview: https://bing.ee123.net/img/rand?artid=120827494
 ---
 
-\* content
+* content
 {:toc}
 ## What is Flutter ?
 A new mobile app SDK to help developers and designers build modern mobile apps for iOS and Android. Flutter is an open-source project currently in beta.

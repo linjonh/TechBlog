@@ -10,23 +10,23 @@ featuredImage: https://bing.ee123.net/img/rand?artid=143559240
 featuredImagePreview: https://bing.ee123.net/img/rand?artid=143559240
 ---
 
-This tutorial will guide you how to write a post in the \_Chirpy\_ template, and it's worth reading even if you've used Jekyll before, as many features require specific variables to be set.
+This tutorial will guide you how to write a post in the _Chirpy_ template, and it's worth reading even if you've used Jekyll before, as many features require specific variables to be set.
 ## Naming and Path
-Create a new file named `YYYY-MM-DD-TITLE.EXTENSION`{: .filepath} and put it in the `\_posts`{: .filepath} of the root directory. Please note that the `EXTENSION`{: .filepath} must be one of `md`{: .filepath} and `markdown`{: .filepath}. If you want to save time of creating files, please consider using the plugin [`Jekyll-Compose`](https://github.com/jekyll/jekyll-compose) to accomplish this.
+Create a new file named `YYYY-MM-DD-TITLE.EXTENSION`{: .filepath} and put it in the `_posts`{: .filepath} of the root directory. Please note that the `EXTENSION`{: .filepath} must be one of `md`{: .filepath} and `markdown`{: .filepath}. If you want to save time of creating files, please consider using the plugin [`Jekyll-Compose`](https://github.com/jekyll/jekyll-compose) to accomplish this.
 ## Front Matter
 Basically, you need to fill the [Front Matter](https://jekyllrb.com/docs/front-matter/) as below at the top of the post:
 ```yaml
 ---
 title: TITLE
 date: YYYY-MM-DD HH:MM:SS +/-TTTT
-categories: [TOP\_CATEGORIE, SUB\_CATEGORIE]
+categories: [TOP_CATEGORIE, SUB_CATEGORIE]
 tags: [TAG] # TAG names should always be lowercase
 ---
 ```
-> The posts' \_layout\_ has been set to `post` by default, so there is no need to add the variable \_layout\_ in the Front Matter block.
+> The posts' _layout_ has been set to `post` by default, so there is no need to add the variable _layout_ in the Front Matter block.
 > {: .prompt-tip }
 ### Timezone of Date
-To accurately record the release date of a post, you should not only set up the `timezone` of `\_config.yml`{: .filepath} but also provide the post's timezone in variable `date` of its Front Matter block. Format: `+/-TTTT`, e.g. `+08:00`.
+To accurately record the release date of a post, you should not only set up the `timezone` of `_config.yml`{: .filepath} but also provide the post's timezone in variable `date` of its Front Matter block. Format: `+/-TTTT`, e.g. `+08:00`.
 ### Categories and Tags
 The `categories` of each post are designed to contain up to two elements, and the number of elements in `tags` can be zero to infinity. For instance:
 ```yaml
@@ -36,15 +36,15 @@ tags: [bee]
 ---
 ```
 ### Author Information
-The author information of the post usually does not need to be filled in the \_Front Matter\_ , they will be obtained from variables `social.name` and the first entry of `social.links` of the configuration file by default. But you can also override it as follows:
-Adding author information in `\_data/authors.yml` (If your website doesn't have this file, don't hesitate to create one).
+The author information of the post usually does not need to be filled in the _Front Matter_ , they will be obtained from variables `social.name` and the first entry of `social.links` of the configuration file by default. But you can also override it as follows:
+Adding author information in `_data/authors.yml` (If your website doesn't have this file, don't hesitate to create one).
 ```yaml
 :
 name: 
 twitter: 
 url: 
 ```
-{: file="\\_data/authors.yml" }
+{: file="\_data/authors.yml" }
 And then use `author` to specify a single entry or `authors` to specify multiple entries:
 ```yaml
 ---
@@ -54,10 +54,10 @@ authors: [, ] # for multiple entries
 ---
 ```
 Having said that, the key `author` can also identify multiple entries.
-> The benefit of reading the author information from the file `\_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
+> The benefit of reading the author information from the file `_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
 > {: .prompt-info }
 ### Post Description
-By default, the first words of the post are used to display on the home page for a list of posts, in the \_Further Reading\_ section, and in the XML of the RSS feed. If you don't want to display the auto-generated description for the post, you can customize it using the `description` field in the \_Front Matter\_ as follows:
+By default, the first words of the post are used to display on the home page for a list of posts, in the _Further Reading_ section, and in the XML of the RSS feed. If you don't want to display the auto-generated description for the post, you can customize it using the `description` field in the _Front Matter_ as follows:
 ```yaml
 ---
 description: Short summary of the post.
@@ -65,14 +65,14 @@ description: Short summary of the post.
 ```
 Additionally, the `description` text will also be displayed under the post title on the post's page.
 ## Table of Contents
-By default, the **T**able **o**f **C**ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to `\_config.yml`{: .filepath} and set the value of variable `toc` to `false`. If you want to turn off TOC for a specific post, add the following to the post's [Front Matter](https://jekyllrb.com/docs/front-matter/):
+By default, the **T**able **o**f **C**ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to `_config.yml`{: .filepath} and set the value of variable `toc` to `false`. If you want to turn off TOC for a specific post, add the following to the post's [Front Matter](https://jekyllrb.com/docs/front-matter/):
 ```yaml
 ---
 toc: false
 ---
 ```
 ## Comments
-The global setting for comments is defined by the `comments.provider` option in the `\_config.yml`{: .filepath} file. Once a comment system is selected for this variable, comments will be enabled for all posts.
+The global setting for comments is defined by the `comments.provider` option in the `_config.yml`{: .filepath} file. Once a comment system is selected for this variable, comments will be enabled for all posts.
 If you want to close the comment for a specific post, add the following to the **Front Matter** of the post:
 ```yaml
 ---
@@ -80,28 +80,28 @@ comments: false
 ---
 ```
 ## Media
-We refer to images, audio and video as media resources in \_Chirpy\_.
+We refer to images, audio and video as media resources in _Chirpy_.
 ### URL Prefix
 From time to time we have to define duplicate URL prefixes for multiple resources in a post, which is a boring task that you can avoid by setting two parameters.
-- If you are using a CDN to host media files, you can specify the `cdn` in `\_config.yml`{: .filepath }. The URLs of media resources for site avatar and posts are then prefixed with the CDN domain name.
+- If you are using a CDN to host media files, you can specify the `cdn` in `_config.yml`{: .filepath }. The URLs of media resources for site avatar and posts are then prefixed with the CDN domain name.
 ```yaml
 cdn: https://cdn.com
 ```
-{: file='\\_config.yml' .nolineno }
-- To specify the resource path prefix for the current post/page range, set `media\_subpath` in the \_front matter\_ of the post:
+{: file='\_config.yml' .nolineno }
+- To specify the resource path prefix for the current post/page range, set `media_subpath` in the _front matter_ of the post:
 ```yaml
 ---
-media\_subpath: /path/to/media/
+media_subpath: /path/to/media/
 ---
 ```
 {: .nolineno }
-The option `site.cdn` and `page.media\_subpath` can be used individually or in combination to flexibly compose the final resource URL: `[site.cdn/][page.media\_subpath/]file.ext`
+The option `site.cdn` and `page.media_subpath` can be used individually or in combination to flexibly compose the final resource URL: `[site.cdn/][page.media_subpath/]file.ext`
 ### Images
 #### Caption
 Add italics to the next line of an image, then it will become the caption and appear at the bottom of the image:
 ```markdown
 ![img-description](/path/to/image)
-\_Image Caption\_
+_Image Caption_
 ```
 {: .nolineno}
 #### Size
@@ -110,9 +110,9 @@ To prevent the page content layout from shifting when the image is loaded, we sh
 ![Desktop View](/assets/img/sample/mockup.png){: width="700" height="400" }
 ```
 {: .nolineno}
-> For an SVG, you have to at least specify its \_width\_, otherwise it won't be rendered.
+> For an SVG, you have to at least specify its _width_, otherwise it won't be rendered.
 > {: .prompt-info }
-Starting from \_Chirpy v5.0.0\_, `height` and `width` support abbreviations (`height` → `h`, `width` → `w`). The following example has the same effect as the above:
+Starting from _Chirpy v5.0.0_, `height` and `width` support abbreviations (`height` → `h`, `width` → `w`). The following example has the same effect as the above:
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: w="700" h="400" }
 ```
@@ -159,7 +159,7 @@ path: /path/to/image
 alt: image alternative text
 ---
 ```
-Note that the [`media\_subpath`](#url-prefix) can also be passed to the preview image, that is, when it has been set, the attribute `path` only needs the image file name.
+Note that the [`media_subpath`](#url-prefix) can also be passed to the preview image, that is, when it has been set, the attribute `path` only needs the image file name.
 For simple use, you can also just use `image` to define the path.
 ```yml
 ---
@@ -304,7 +304,7 @@ This product's title contains the word Pack.
 ```
 {% endraw %}
 ````
-Or adding `render\_with\_liquid: false` (Requires Jekyll 4.0 or higher) to the post's YAML block.
+Or adding `render_with_liquid: false` (Requires Jekyll 4.0 or higher) to the post's YAML block.
 ## Mathematics
 We use [**MathJax**][mathjax] to generate mathematics. For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
 [mathjax]: https://www.mathjax.org/
@@ -316,24 +316,24 @@ math: true
 After enabling the mathematical feature, you can add math equations with the following syntax:
 - **Block math** should be added with `$$ math $$` with **mandatory** blank lines before and after `$$`
 - **Inserting equation numbering** should be added with `$$\begin{equation} math \end{equation}$$`
-- **Referencing equation numbering** should be done with `\label{eq:label\_name}` in the equation block and `\eqref{eq:label\_name}` inline with text (see example below)
+- **Referencing equation numbering** should be done with `\label{eq:label_name}` in the equation block and `\eqref{eq:label_name}` inline with text (see example below)
 - **Inline math** (in lines) should be added with `$$ math $$` without any blank line before or after `$$`
 - **Inline math** (in lists) should be added with `\$$ math $$`
 ```markdown
 $$
-LaTeX\_math\_expression
+LaTeX_math_expression
 $$
 $$
 \begin{equation}
-LaTeX\_math\_expression
-\label{eq:label\_name}
+LaTeX_math_expression
+\label{eq:label_name}
 \end{equation}
 $$
-Can be referenced as \eqref{eq:label\_name}.
-"Lorem ipsum dolor sit amet, $$ LaTeX\_math\_expression $$ consectetur adipiscing elit."
-1. \$$ LaTeX\_math\_expression $$
-2. \$$ LaTeX\_math\_expression $$
-3. \$$ LaTeX\_math\_expression $$
+Can be referenced as \eqref{eq:label_name}.
+"Lorem ipsum dolor sit amet, $$ LaTeX_math_expression $$ consectetur adipiscing elit."
+1. \$$ LaTeX_math_expression $$
+2. \$$ LaTeX_math_expression $$
+3. \$$ LaTeX_math_expression $$
 ```
 > Starting with `v7.0.0`, configuration options for **MathJax** have been moved to file `assets/js/data/mathjax.js`{: .filepath }, and you can change the options as needed, such as adding [extensions][mathjax-exts].
 > If you are building the site via `chirpy-starter`, copy that file from the gem installation directory (check with command `bundle info --path jekyll-theme-chirpy`) to the same directory in your repository.
