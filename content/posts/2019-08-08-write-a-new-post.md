@@ -65,7 +65,7 @@ description: Short summary of the post.
 ```
 Additionally, the `description` text will also be displayed under the post title on the post's page.
 ## Table of Contents
-By default, the \*\*T\*\*able \*\*o\*\*f \*\*C\*\*ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to `\_config.yml`{: .filepath} and set the value of variable `toc` to `false`. If you want to turn off TOC for a specific post, add the following to the post's [Front Matter](https://jekyllrb.com/docs/front-matter/):
+By default, the **T**able **o**f **C**ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to `\_config.yml`{: .filepath} and set the value of variable `toc` to `false`. If you want to turn off TOC for a specific post, add the following to the post's [Front Matter](https://jekyllrb.com/docs/front-matter/):
 ```yaml
 ---
 toc: false
@@ -73,7 +73,7 @@ toc: false
 ```
 ## Comments
 The global setting for comments is defined by the `comments.provider` option in the `\_config.yml`{: .filepath} file. Once a comment system is selected for this variable, comments will be enabled for all posts.
-If you want to close the comment for a specific post, add the following to the \*\*Front Matter\*\* of the post:
+If you want to close the comment for a specific post, add the following to the **Front Matter** of the post:
 ```yaml
 ---
 comments: false
@@ -121,18 +121,18 @@ Starting from \_Chirpy v5.0.0\_, `height` and `width` support abbreviations (`he
 By default, the image is centered, but you can specify the position by using one of the classes `normal`, `left`, and `right`.
 > Once the position is specified, the image caption should not be added.
 > {: .prompt-warning }
-- \*\*Normal position\*\*
+- **Normal position**
 Image will be left aligned in below sample:
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: .normal }
 ```
 {: .nolineno}
-- \*\*Float to the left\*\*
+- **Float to the left**
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: .left }
 ```
 {: .nolineno}
-- \*\*Float to the right\*\*
+- **Float to the right**
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: .right }
 ```
@@ -190,9 +190,9 @@ Where `Platform` is the lowercase of the platform name, and `ID` is the video ID
 The following table shows how to get the two parameters we need in a given video URL, and you can also know the currently supported video platforms.
 | Video URL | Platform | ID |
 | -------------------------------------------------------------------------------------------------- | ---------- | :------------- |
-| [https://www.\*\*youtube\*\*.com/watch?v=\*\*H-B46URT4mg\*\*](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube` | `H-B46URT4mg` |
-| [https://www.\*\*twitch\*\*.tv/videos/\*\*1634779211\*\*](https://www.twitch.tv/videos/1634779211) | `twitch` | `1634779211` |
-| [https://www.\*\*bilibili\*\*.com/video/\*\*BV1Q44y1B7Wf\*\*](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf` |
+| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube` | `H-B46URT4mg` |
+| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211) | `twitch` | `1634779211` |
+| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf` |
 #### Video Files
 If you want to embed a video file directly, use the following syntax:
 ```liquid
@@ -294,7 +294,7 @@ You may have noticed that the code language will be displayed at the top of the 
 {: file="path/to/file" }
 ````
 #### Liquid Codes
-If you want to display the \*\*Liquid\*\* snippet, surround the liquid code with `{% raw %}` and `{% endraw %}`:
+If you want to display the **Liquid** snippet, surround the liquid code with `{% raw %}` and `{% endraw %}`:
 ````markdown
 {% raw %}
 ```liquid
@@ -306,7 +306,7 @@ This product's title contains the word Pack.
 ````
 Or adding `render\_with\_liquid: false` (Requires Jekyll 4.0 or higher) to the post's YAML block.
 ## Mathematics
-We use [\*\*MathJax\*\*][mathjax] to generate mathematics. For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
+We use [**MathJax**][mathjax] to generate mathematics. For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
 [mathjax]: https://www.mathjax.org/
 ```yaml
 ---
@@ -314,11 +314,11 @@ math: true
 ---
 ```
 After enabling the mathematical feature, you can add math equations with the following syntax:
-- \*\*Block math\*\* should be added with `$$ math $$` with \*\*mandatory\*\* blank lines before and after `$$`
-- \*\*Inserting equation numbering\*\* should be added with `$$\begin{equation} math \end{equation}$$`
-- \*\*Referencing equation numbering\*\* should be done with `\label{eq:label\_name}` in the equation block and `\eqref{eq:label\_name}` inline with text (see example below)
-- \*\*Inline math\*\* (in lines) should be added with `$$ math $$` without any blank line before or after `$$`
-- \*\*Inline math\*\* (in lists) should be added with `\$$ math $$`
+- **Block math** should be added with `$$ math $$` with **mandatory** blank lines before and after `$$`
+- **Inserting equation numbering** should be added with `$$\begin{equation} math \end{equation}$$`
+- **Referencing equation numbering** should be done with `\label{eq:label\_name}` in the equation block and `\eqref{eq:label\_name}` inline with text (see example below)
+- **Inline math** (in lines) should be added with `$$ math $$` without any blank line before or after `$$`
+- **Inline math** (in lists) should be added with `\$$ math $$`
 ```markdown
 $$
 LaTeX\_math\_expression
@@ -335,12 +335,12 @@ Can be referenced as \eqref{eq:label\_name}.
 2. \$$ LaTeX\_math\_expression $$
 3. \$$ LaTeX\_math\_expression $$
 ```
-> Starting with `v7.0.0`, configuration options for \*\*MathJax\*\* have been moved to file `assets/js/data/mathjax.js`{: .filepath }, and you can change the options as needed, such as adding [extensions][mathjax-exts].
+> Starting with `v7.0.0`, configuration options for **MathJax** have been moved to file `assets/js/data/mathjax.js`{: .filepath }, and you can change the options as needed, such as adding [extensions][mathjax-exts].
 > If you are building the site via `chirpy-starter`, copy that file from the gem installation directory (check with command `bundle info --path jekyll-theme-chirpy`) to the same directory in your repository.
 > {: .prompt-tip }
 [mathjax-exts]: https://docs.mathjax.org/en/latest/input/tex/extensions/index.html
 ## Mermaid
-[\*\*Mermaid\*\*](https://github.com/mermaid-js/mermaid) is a great diagram generation tool. To enable it on your post, add the following to the YAML block:
+[**Mermaid**](https://github.com/mermaid-js/mermaid) is a great diagram generation tool. To enable it on your post, add the following to the YAML block:
 ```yaml
 ---
 mermaid: true
