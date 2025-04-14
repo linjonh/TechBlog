@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Android 接入firebase
-date: 218-08-15 16:04
+date: 2018-08-15 16:04
 categories: Android firebase gradle
 tags: Android Firebase
 ---

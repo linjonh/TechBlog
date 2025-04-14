@@ -4,3 +4,6 @@ _site
 .vscode
 .idea
 .DS_Store
+node_modules
+public
+.firebase

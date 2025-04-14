@@ -10,10 +10,11 @@
         {{ content }}
     {% include footer.html %}
     {% include backToTop.html %}
-    <!--百度分享script-->
+    <!--百度分享script
     <script>
       window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
     </script>
+    -->
     <script src="{{ '/js/main.js' | prepend: site.baseurl }}" charset="utf-8"></script>
     <script src="{{ '/js/smooth-scroll.min.js' | prepend: site.baseurl }}" charset="utf-8"></script>
     <script type="text/javascript">
@@ -22,8 +23,33 @@
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
       });
-    </script>
+    </script> 
     <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+    <!--  Firebase SDK  -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAbGsSsqc9PZb9Ymrw7XCpeqwAfONX19MM",
+        authDomain: "deepseeksblog.firebaseapp.com",
+        projectId: "deepseeksblog",
+        storageBucket: "deepseeksblog.firebasestorage.app",
+        messagingSenderId: "1065254276862",
+        appId: "1:1065254276862:web:94dd0201579a13c4395faf",
+        measurementId: "G-YE6ZMLCJDC"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <!--Firebase SDK  -->
   </body>
 
 </html>
