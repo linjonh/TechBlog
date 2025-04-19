@@ -4,6 +4,9 @@ _site
 .vscode
 .idea
 .DS_Store
-node_modules
+themes
 public
-.firebase
+resources/_gen
+node_modules
+.env
+instantsearch-app
