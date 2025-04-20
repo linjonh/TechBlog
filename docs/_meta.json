@@ -1,0 +1,16 @@
+[
+  {
+    "text": "博客",
+    "link": "/blog/2018-07-14-Android学习之路",
+    "activeMatch": "^/blog/"
+  },
+  {
+    "text": "指南",
+    "link": "/guide/",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "API",
+    "link": "https://rspress.dev/api/index.html"
+  }
+]
