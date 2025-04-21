@@ -21,9 +21,17 @@ jobs:
     # if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: git check out
+        uses: actions/checkout@v4
+
+      - name: install node
+        run: npm install
+        
+      - name: build
+        run: npm run build  
+
+      - name: firebase deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AI_TAICHI }}
