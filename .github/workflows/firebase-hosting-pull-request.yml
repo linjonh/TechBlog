@@ -24,11 +24,8 @@ jobs:
       - name: git check out
         uses: actions/checkout@v4
 
-      - name: install node
-        run: npm install
-
       - name: build
-        run: npm run build  
+        run: npm ci && npm run build  
 
       - name: firebase deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
