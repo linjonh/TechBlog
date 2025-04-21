@@ -11,6 +11,7 @@
     "preview": "rspress preview"
   },
   "dependencies": {
+    "firebase": "^11.6.0",
     "rspress": "^1.40.2"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "eslint": "^9.19.0",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
+    "rsbuild-plugin-google-analytics": "^1.0.3",
     "typescript-eslint": "^8.22.0"
   }
 }
