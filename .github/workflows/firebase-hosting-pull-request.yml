@@ -26,7 +26,7 @@ jobs:
 
       - name: install node
         run: npm install
-        
+
       - name: build
         run: npm run build  
 
@@ -35,4 +35,5 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AI_TAICHI }}
+          channelId: live
           projectId: ai-taichi
