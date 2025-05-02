@@ -34,6 +34,8 @@ jobs:
       #     fetch-depth: 0
       #     submodules: true
       - name: 手动Checkout
+        env: 
+          token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [[ -e ".git" ]]; then
             echo "目录已存在，直接更新"
@@ -58,6 +60,7 @@ jobs:
           git config --global --add safe.directory $(pwd)
           git config --global --add safe.directory $(pwd)/themes/loveIt
           git status
+
         #uses: actions/cache@v3
         #with:
         #path: |
@@ -86,7 +89,10 @@ jobs:
         # --minify：压缩 HTML、CSS 和 JS，提高构建效率。
         # --templateMetrics：输出模板渲染耗时。
         # --templateMetricsHints：提供优化建议，帮你找出构建瓶颈。
-        run: pwd && GOMAXPROCS=$(nproc) HUGO_ENVIRONMENT=production hugo --gc --minify --templateMetrics --templateMetricsHints
+        run: |
+          echo "开始构建"
+          echo "pwd && GOMAXPROCS=$(nproc) HUGO_ENVIRONMENT=production hugo --gc --minify --templateMetrics --templateMetricsHints"
+          pwd && GOMAXPROCS=$(nproc) HUGO_ENVIRONMENT=production hugo --gc --minify --templateMetrics --templateMetricsHints
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
