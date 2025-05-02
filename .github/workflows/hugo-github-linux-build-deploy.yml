@@ -39,6 +39,7 @@ jobs:
             echo "目录已存在，直接更新"
             git checkout hugo-blog
             git pull
+            git log -n2
           else
             echo "目录不存在，开始克隆"
             git clone https://gh-proxy.com/github.com/linjonh/TechBlog.git .
@@ -47,7 +48,8 @@ jobs:
           pwd && cd themes
           if [[ -e "loveIt" ]]; then
             echo "目录已存在，直接更新"
-            cd loveIt && git pull &&  cd ..
+            cd loveIt && git pull
+            git log -n2  &&  cd ..
           else
             echo "目录不存在，开始克隆"
             git clone https://gh-proxy.com/github.com/linjonh/hugo-theme-loveIt.git loveIt
