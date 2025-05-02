@@ -24,9 +24,9 @@ concurrency:
 
 jobs:
   build-hugo-blog:
-    runs-on: ['self-hosted','zp-nc10']
+    runs-on: ["self-hosted", "zp-nc10"]
     environment:
-          name: github-pages
+      name: github-pages
     steps:
       # - name: Auto Checkout
       #   uses: actions/checkout@v4
@@ -35,34 +35,47 @@ jobs:
       #     submodules: true
       - name: 手动Checkout
         run: |
-          git clone https://gh-proxy.com/github.com/linjonh/TechBlog.git
-          cd TechBlog
-          git checkout hugo-blog
-          cd themes
-          git clone https://gh-proxy.com/github.com/linjonh/hugo-theme-loveIt.git loveIt
-          git config --global --add safe.directory /home/linjonh/TechBlog
-          git config --global --add safe.directory /home/linjonh/TechBlog/themes/loveIt
+          if [[ -e "TechBlog" ]]; then
+            echo "目录已存在，直接更新"
+            cd TechBlog &&  git checkout hugo-blog
+            git pull
+          else
+            echo "目录不存在，开始克隆"
+            git clone https://gh-proxy.com/github.com/linjonh/TechBlog.git .
+            cd TechBlog &&  git checkout hugo-blog
+          fi
+          pwd && cd themes
+          if [[ -e "loveIt" ]]; then
+            echo "目录已存在，直接更新"
+            cd loveIt && git pull &&  cd ..
+          else
+            echo "目录不存在，开始克隆"
+            git clone https://gh-proxy.com/github.com/linjonh/hugo-theme-loveIt.git loveIt
+          fi
+          pwd && cd ..
+          git config --global --add safe.directory $(pwd)/TechBlog
+          git config --global --add safe.directory $(pwd)/TechBlog/themes/loveIt
           git status
-      #- name: Cache Hugo Resources
         #uses: actions/cache@v3
         #with:
-          #path: |
-            #resources
-            #public
-          #key: ${{ runner.os }}-hugo-${{ github.sha }}
-          #restore-keys: |
-            #${{ runner.os }}-hugo-
-              
+        #path: |
+        #resources
+        #public
+        #key: ${{ runner.os }}-hugo-${{ github.sha }}
+        #restore-keys: |
+        #${{ runner.os }}-hugo-
+
+      #- name: Cache Hugo Resources
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-      
+
       - name: 安装 Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.145.0'  # 也可以指定具体版本，如 '0.123.4'
-          extended: true  # 是否安装扩展版（支持 SCSS/SASS）
-          
+          hugo-version: "0.145.0" # 也可以指定具体版本，如 '0.123.4'
+          extended: true # 是否安装扩展版（支持 SCSS/SASS）
+
       - name: show veresion
         run: hugo version
 
@@ -93,7 +106,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ['self-hosted','zp-nc10']
+    runs-on: ["self-hosted", "zp-nc10"]
     needs: build-hugo-blog
     steps:
       - name: Deploy to GitHub Pages
