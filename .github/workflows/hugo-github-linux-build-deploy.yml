@@ -35,14 +35,14 @@ jobs:
       #     submodules: true
       - name: 手动Checkout
         run: |
-          if [[ -e "TechBlog" ]]; then
+          if [[ -e ".git" ]]; then
             echo "目录已存在，直接更新"
-            cd TechBlog &&  git checkout hugo-blog
+            git checkout hugo-blog
             git pull
           else
             echo "目录不存在，开始克隆"
             git clone https://gh-proxy.com/github.com/linjonh/TechBlog.git .
-            cd TechBlog &&  git checkout hugo-blog
+            git checkout hugo-blog
           fi
           pwd && cd themes
           if [[ -e "loveIt" ]]; then
@@ -52,9 +52,9 @@ jobs:
             echo "目录不存在，开始克隆"
             git clone https://gh-proxy.com/github.com/linjonh/hugo-theme-loveIt.git loveIt
           fi
-          pwd && cd ..
-          git config --global --add safe.directory $(pwd)/TechBlog
-          git config --global --add safe.directory $(pwd)/TechBlog/themes/loveIt
+          pwd && cd .. && pwd
+          git config --global --add safe.directory $(pwd)
+          git config --global --add safe.directory $(pwd)/themes/loveIt
           git status
         #uses: actions/cache@v3
         #with:
