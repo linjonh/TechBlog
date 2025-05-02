@@ -48,7 +48,7 @@ jobs:
             git checkout hugo-blog
           fi
           pwd && cd themes
-          if [[ -e "loveIt" ]]; then
+          if [[ -e "loveIt/.git" ]]; then
             echo "目录已存在，直接更新"
             cd loveIt && git pull
             git log -n2  &&  cd ..
