@@ -7,7 +7,7 @@
     "build": "hugo build",
     "build:js": "rollup --config",
     "pro": "rm -rf public && HUGO_ENVIRONMENT=production hugo server",
-    "test": "rm -rf public && hugo server  #--gc --minify",
+    "test": "hugo server  #--gc --minify",
     "upload": "node ./upload_index_json.js"
   },
   "repository": {
