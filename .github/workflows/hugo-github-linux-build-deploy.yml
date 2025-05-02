@@ -41,7 +41,7 @@ jobs:
             git pull
           else
             echo "目录不存在，开始克隆"
-            git clone https://gh-proxy.com/github.com/linjonh/TechBlog.git .
+            git clone https://gh-proxy.com/github.com/linjonh/TechBlog.git
             git checkout hugo-blog
           fi
           pwd && cd themes
