@@ -1,4 +1,4 @@
-baseURL = "https://linjonh.github.io/TechBlog/"
+baseURL = "https://blog.codelin.vip"
 # languageCode = "zh-cn"
 title = "JAY.LIN个人博客"
 theme = 'loveIt'
