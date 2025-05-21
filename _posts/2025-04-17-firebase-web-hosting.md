@@ -19,7 +19,7 @@ Firebase Hosting 是面向开发者的生产级 Web 内容托管服务。您只�
 无论您是在部署一个简单的应用着陆页，还是部署复杂的渐进式 Web 应用 (PWA)，Hosting 均为您提供了专为部署和管理网站和应用而特别开发的基础架构、功能和工具。
 
 <!-- truncate -->
-
+<!-- more -->
 使用 [Firebase CLI](https://firebase.google.com/docs/cli?authuser=0)，您可以从计算机上的本地目录将文件部署到我们的 Hosting 服务器。除了提供静态内容之外，您还可以使用 `Cloud Functions for Firebase` 或 `Cloud Run` 在您的网站上[提供动态内容和托管微服务](https://firebase.google.com/docs/hosting/serverless-overview?authuser=0)。所有内容都可从我们的全球级 CDN 上最近的边缘服务器通过 SSL 连接提供。
 
 您还可以在[上线前查看和测试更改](https://firebase.google.com/docs/hosting/test-preview-deploy?authuser=0)。 使用 `Firebase Local Emulator Suite`，您可以通过本地托管的网址模拟您的应用和后端资源。您还可以使用临时预览网址共享更改，并设置 GitHub 集成，以便在开发期间轻松迭代。

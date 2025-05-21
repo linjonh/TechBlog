@@ -27,7 +27,7 @@ image: "https://api.vvhan.com/api/bing?rand=sj&t=1744977029292"
   让你的社区在文档中轻松找到他们需要的内容。我们支持 Algolia 文档搜索。
 
 <!-- truncate -->
-
+<!-- more -->
 ## 开始上手
 ### 安装构建工具
 Docusaurus由一组`npm`包组成，因而需要安装`Node.js`工具集。安装`Node.js`推荐使用[nvm](https://github.com/nvm-sh/nvm)安装，`nvm`可以方便选择不同版本的`Node.js`，但版本要求在18.0 或以上。
