@@ -11,7 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.2' # 替换为你项目实际使用的版本
+          bundler-cache: true
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
       - run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
@@ -22,3 +30,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEEPSEEKSBLOG }}
           channelId: live
           projectId: deepseeksblog
+          target: _site
