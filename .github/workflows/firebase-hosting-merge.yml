@@ -25,7 +25,7 @@ jobs:
           #同步触发linjonh.github.io去部署
           echo 部署到github pages && curl -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer {{ secrets.PAT_TOKEN}}" \
+            -H "Authorization: Bearer ${{ secrets.PAT_TOKEN}}" \
             https://api.github.com/repos/linjonh/linjonh.github.io/actions/workflows/deploy_web_site.yml/dispatches \
             -d "{\"ref\":\"main\"}"
         env:
