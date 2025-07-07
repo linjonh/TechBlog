@@ -6,8 +6,8 @@ categories: ["Android","utils"]
 tags: ["Android","utils"]
 image: "https://api.vvhan.com/api/bing?rand=sj&t=mylog"
 ---
-![](https://api.vvhan.com/api/bing?rand=sj&t=mylog)
 # MyLog 库的的使用
+![](https://api.vvhan.com/api/bing?rand=sj&t=mylog)
 
 #### SDK简介
 

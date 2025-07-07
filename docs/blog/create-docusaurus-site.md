@@ -5,8 +5,8 @@ categories: ['docs','website']
 tags: ['docusaurus','website','文档构建']
 image: "https://api.vvhan.com/api/bing?rand=sj&t=1744977029292"
 ---
-![](https://api.vvhan.com/api/bing?rand=sj&t=1744977029292)
 # 如何创建Docusaurus的文档网站
+![](https://api.vvhan.com/api/bing?rand=sj&t=1744977029292)
 ## 首先了解下什么是Docusaurus？
 [Docusaurus](https://docusaurus.io/)是指一个开源的构建文档项目，由Meta公司（旧名Facebook）开源维护。是一个静态网页生成器，类似于jekyll，hugo，Docsify，VitePress等的静态生成器工具。
 ## Docusaurus有哪些特点
@@ -44,15 +44,15 @@ npx create-docusaurus@latest my-website classic --typescript
 
 除了上述方式创建模版项目外，也可以使用如下命令初始化项目：
 - npm
-```npm
+```bash
 npm init docusaurus
 ```
 - yarn
-```yarn
+```bash
 yarn create docusaurus
 ```
 - pnpm
-```pnpm
+```bash
 pnpm create docusaurus
 ```
 - bunx

@@ -2,16 +2,16 @@
 pageType: home
 
 hero:
-  name: TechBlog
-  text: A cool website!
-  tagline: This is the tagline
+  name: 技术博客
+  text: 
+  tagline:  Android/Web/JS/Kotlin...
   actions:
     - theme: brand
-      text: Quick Start
-      link: /guide/
+      text: 快速开始
+      link: /blog/
     - theme: alt
       text: GitHub
-      link: https://github.com
+      link: https://github.com/linjonh
   image:
     src: /rspress-icon.png
     alt: Logo

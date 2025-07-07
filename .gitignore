@@ -12,6 +12,9 @@ doc_build/
 .vscode/*
 !.vscode/extensions.json
 .idea
+# build out
+build
 _site
 public
 out
+.firebase/

@@ -5,8 +5,8 @@ categories: ['docs','website']
 tags: ["hugo",'website','文档构建']
 image: "https://api.vvhan.com/api/bing?rand=sj&t=1744977000331"
 ---
-![](https://api.vvhan.com/api/bing?rand=sj&t=1744977000331)
 # 如何使用hugo框架生成静态网页
+![](https://api.vvhan.com/api/bing?rand=sj&t=1744977000331)
 ## hugo介绍
 `hugo`是一个静态网页生成器工具，官方声称是世界上最快的构建网页的框架。也是一个最流行的开源静态网站生成器。凭借器惊人的速度和灵活性，让构建网站变得再次有趣。它的底层实现使用`go语言`开发，相比`jekyll`框架，`hugo`更适合构建拥有大量文章的大型网站。因为正如官方所说的，是世界上最快的构建框架。得益于`go语言`的运行效率。
 

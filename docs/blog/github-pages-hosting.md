@@ -5,9 +5,9 @@ categories: ['docs','website']
 tags: ['github pages','hosting','web']
 image: "https://api.vvhan.com/api/bing?rand=sj&t=1744977060652"
 ---
+# 使用github pages托管静态网站
 ![](https://api.vvhan.com/api/bing?rand=sj&t=1744977060652)
 
-# 使用github pages托管静态网站
 ## 介绍
 Github pages默认支持Jekyll静态网页生成器，也就是说你的github上的某个仓库如果包含了docs或public网页内容或markdown文件内容，会以Jekyll方式编译网站自动托管到Github pages上。域名将会是 **_username_**.gihub.io/**_repo_**/，username替换成你的github账号名,repo替换成你的仓库名。
 
