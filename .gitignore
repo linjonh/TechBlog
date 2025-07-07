@@ -10,3 +10,5 @@ resources/_gen
 node_modules
 .env
 instantsearch-app
+out
+doc_build
