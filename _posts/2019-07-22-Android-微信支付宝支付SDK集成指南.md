@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  "Android-微信支付-支付宝SDK集成指南"
-date:  2019-07-22 10:25:00 +0800
+date:  2019-07-22T10:25:00+08:00
 categories:  Android Pay WeiXinPay AliPay 微信支付 支付宝
 tags:  Android  Pay WeiXinPay AliPay
 

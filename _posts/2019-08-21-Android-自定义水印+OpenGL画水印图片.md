@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  "Android-自定义水印+OpenGL画水印图片"
-date:  2019-08-21 15:46:00 +0800
+date:  2019-08-21T15:46:00+08:00
 categories:  Android 水印 自定义水印 OpenGL 
 tags:  Android OpenGL DrawImage
 

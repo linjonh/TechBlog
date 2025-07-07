@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  "Firebase 云消息传递"
-date:  2020-08-06 16:48:00 +0800
+date:  2020-08-06T16:48:00+08:00
 categories: Firebase massage 云消息传递
 tags:  Firebase massage 云消息传递
 author: 林建有

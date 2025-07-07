@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "bundle-install-for-jekyll"
-date: 2018-07-27 16:03:18 +0800
+date: 2018-07-27T16:03:18+08:00
 categories: gem jekyll gem-bundle
 tags: gem jekyll gem-bundle
 ---
