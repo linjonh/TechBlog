@@ -17,6 +17,8 @@
         <script defer src='{{ "app.min.js" | relURL }}?baseurl={{ .Site.Params.BaseURL | default "" }}&register={{ .Site.Params.pwa.cache.enabled }}'></script>
         {{ end }}
     {{ end }}
+    {{- /* Load JavaScript scripts and CSS */ -}}
+    {{- partial "assets.html" . -}}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5363852791482518"
      crossorigin="anonymous"></script>
 </head>
@@ -54,8 +56,6 @@
         </a>
     </div>
 
-    {{- /* Load JavaScript scripts and CSS */ -}}
-    {{- partial "assets.html" . -}}
 
     {{- /* Load alter notification dialog */ -}}
     {{- partial "notification.html" . -}}

@@ -1,4 +1,4 @@
-baseURL = "https://blog.codelin.vip"
+baseURL = "https://tech-blogs.web.app"
 # languageCode = "zh-cn"
 title = "JAY.LIN个人博客"
 theme = 'loveIt'
@@ -809,8 +809,8 @@ priority = 0.5
 # Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
 # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
 [permalinks]
-# posts = ":year/:month/:filename"
-posts = ":filename"
+# posts = ":year/:month/:contentbasename"
+posts = ":contentbasename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 # 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
