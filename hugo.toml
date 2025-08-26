@@ -96,7 +96,7 @@ url = "/categories/documentation/"
 title = ""
 
 [params]
-BaseURL = "/TechBlog"
+BaseURL = ""
 # site default theme ["auto", "light", "dark"]
 # 网站默认主题 ["auto", "light", "dark"]
 defaultTheme = "auto"
