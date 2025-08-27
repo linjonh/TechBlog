@@ -94,10 +94,19 @@ jobs:
           echo "pwd && GOMAXPROCS=$(nproc) HUGO_ENVIRONMENT=production hugo --gc --minify --templateMetrics --templateMetricsHints"
           pwd && GOMAXPROCS=$(nproc) HUGO_ENVIRONMENT=production hugo --gc --minify --templateMetrics --templateMetricsHints
 
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+      # #上传到github pages
+      # - name: Upload site artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: public
+
+      #上传到firebase hosting
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          path: public
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEEPSEEKSBLOG }}
+          channelId: live
+          projectId: deepseeksblog
 
       # node js 上传搜索数据
       - name: Setup Node.js

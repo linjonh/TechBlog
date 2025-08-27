@@ -4,7 +4,7 @@
   "description": "hugo的构建网页",
   "main": "index.js",
   "scripts": {
-    "build": "hugo build",
+    "build": "HUGO_ENVIRONMENT=production hugo build",
     "build:js": "rollup --config",
     "pro": "rm -rf public && HUGO_ENVIRONMENT=production hugo server",
     "test": "hugo server  #--gc --minify",

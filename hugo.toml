@@ -134,8 +134,8 @@ cache = { enabled = true, deny_paths = [
   "/admin",
   "/private",
 ], static_files = [
-  "/TechBlog/js/theme.min.js",
-  "/TechBlog/css/style.min.css",
+  "/js/theme.min.js",
+  "/css/style.min.css",
 ] }
 
 # Header config
@@ -288,7 +288,7 @@ enable = true
 gravatarEmail = ""
 # URL of avatar shown in home page
 # 主页显示头像的 URL
-avatarURL = "/TechBlog/assets/images/boy.webp"
+avatarURL = "/assets/images/boy.webp"
 # title shown in home page (HTML format is supported)
 # 主页显示的网站标题 (支持 HTML 格式)
 title = ""
@@ -660,7 +660,7 @@ images = []
 # 出版者信息
 [params.page.seo.publisher]
 name = "jaysen.lin"
-logoUrl = "/TechBlog/assets/images/boy.webp"
+logoUrl = "/assets/images/boy.webp"
 
 # TypeIt config
 # TypeIt 配置
@@ -692,10 +692,10 @@ baidu = ""
 [params.seo]
 # image URL
 # 图片 URL
-image = "/TechBlog/assets/images/Apple-Devices-Preview.png"
+image = "/assets/images/Apple-Devices-Preview.png"
 # thumbnail URL
 # 缩略图 URL
-thumbnailUrl = "/TechBlog/assets/images/screenshot.png"
+thumbnailUrl = "/assets/images/screenshot.png"
 
 # Analytics config
 # 网站分析配置
