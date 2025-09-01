@@ -138,13 +138,13 @@ jobs:
           ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
         run: npm run upload
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ["self-hosted", "4090"]
-    needs: build-hugo-blog
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ["self-hosted", "4090"]
+  #   needs: build-hugo-blog
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
