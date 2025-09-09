@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build-hugo-blog:
-    runs-on: ["self-hosted", "zp-nc10"]
+    runs-on: ["self-hosted", "4090"]
     environment:
       name: github-pages
     steps:
